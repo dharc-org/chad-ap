@@ -1,0 +1,36 @@
+@prefix ex: <http://purl.org/changes/process/development/01/data/> .
+@prefix process: <http://purl.org/changes/process/development/01/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/process/development/01/data/> .
+
+<http://purl.org/changes/process/development/01/data/> rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/changes/process/development/01/schema/> .
+
+ex:ALD-15 a process:CulturalObject ;
+                rdfs:label "Corno lavorato"@en .
+
+ex:ALD-15-acq a process:DigitizationProcess ;
+                rdfs:label "Digitization of Corno Lavorato"@en ;
+                process:digitizes ex:ALD-15 ;
+                process:hasOutput ex:ALD-15-acq-output ;
+                process:hasTimeSpan ex:ALD-15-acq-timespan .
+
+ex:ALD-15-proc a process:SoftwareActivity ;
+                rdfs:label "Processing activity of Corno Lavorato"@en ;
+                process:hasInput ex:ALD-15-acq ;
+                process:hasTimeSpan ex:ALD-15-proc-timespan .
+
+ex:ALD-15-acq-output a process:DigitalObject;
+                rdfs:label "Output of the digitization of Corno Lavorato"@en .
+
+ex:ALD-15-acq-timespan a process:TimeSpan ;
+                process:hasStartDate "2023-04-17" ;
+                process:hasEndDate "2023-04-17" .
+
+ex:ALD-15-proc-timespan a process:TimeSpan ;
+                process:hasStartDate "2023-04-18" ;
+                process:hasEndDate "2023-04-19" .

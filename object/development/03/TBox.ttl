@@ -1,0 +1,66 @@
+@prefix : <http://purl.org/changes/object/development/03/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/object/development/03/schema/> .
+
+<http://purl.org/changes/object/development/03/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:curates rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "curates"@en .
+
+
+:isCarriedOutBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "is carried out by"@en .
+
+
+:hasPlace rdf:type owl:ObjectProperty;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "has place"@en .
+
+
+:hasCurator rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "has curator"@en .
+
+
+:occurredInThePresenceOf rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "occurred in the presence of"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:CurationEvent rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "Curation event"@en .
+
+
+:CulturalResource rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Cultural resource"@en .
+
+
+:Collection rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Collection"@en .
+
+
+:Agent rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Agent"@en .
+
+
+:Place rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Place"@en .

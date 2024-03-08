@@ -1,0 +1,65 @@
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix ex: <http://purl.org/changes/object/data/04/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/object/data/04/> .
+
+<https://purl.org/changes/object/data/04/> rdf:type owl:Ontology ;
+                                                        owl:imports <https://purl.org/changes/object/model/> .
+
+
+ex:ALD-L1-work-conception a frbroo:F27_Work_Conception ;
+                rdfs:label "Conception event of 'Amerigo Vespucci sveglia l America'"@en ;
+                frbroo:R16_initiated ex:ALD-L1-work ;
+                crm:P14_carried_out_by ex:jan-van-der-straet ;
+                crm:P4_has_time-span ex:1589-1593 .            
+
+ex:1589-1593 a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "1589-01-01" ;
+                crm:P82b_end_of_the_end "1593-12-31" .
+
+ex:ALD-L1-work a frbroo:F1_Work ;
+                rdfs:label "Amerigo Vespucci sveglia l'America"@en .
+
+ex:jan-van-der-straet a crm:E39_Actor ;
+                rdfs:label "Jan van der Straet" ;
+                owl:sameAs <http://vocab.getty.edu/page/ulan/500011304> .
+
+ex:ALD-1-work-conception a frbroo:F27_Work_Conception ;
+                rdfs:label "Conception event of 'Carta nautica'"@en ;
+                frbroo:R16_initiated ex:ALD-1-work ;
+                crm:P14_carried_out_by ex:grazioso-benincasa ;
+                crm:P4_has_time-span ex:1482 .            
+
+ex:1482 a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "1482-01-01" ;
+                crm:P82b_end_of_the_end "1482-12-31" .
+
+ex:ALD-1-work a frbroo:F1_Work ;
+                rdfs:label "Carta nautica"@en .
+
+ex:grazioso-benincasa a crm:E39_Actor ;
+                rdfs:label "Grazioso Benincasa" ;
+                owl:sameAs <http://vocab.getty.edu/page/ulan/500114874> .
+
+ex:ALD-26-work-conception a frbroo:F27_Work_Conception ;
+                rdfs:label "Conception event of 'Chrysanthemi'"@en ;
+                frbroo:R16_initiated ex:ALD-26-work ;
+                crm:P14_carried_out_by ex:ulisse-aldrovandi ;
+                crm:P4_has_time-span ex:1500-1599 .            
+
+ex:1500-1599 a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "1500-01-01" ;
+                crm:P82b_end_of_the_end "1599-12-31" .
+
+ex:ALD-26-work a frbroo:F1_Work ;
+                rdfs:label "Carta nautica"@en .
+
+ex:ulisse-aldrovandi a crm:E39_Actor ;
+                rdfs:label "Ulisse Aldrovandi" ;
+                owl:sameAs <http://viaf.org/viaf/100190422> .

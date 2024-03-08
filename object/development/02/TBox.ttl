@@ -1,0 +1,101 @@
+@prefix : <http://purl.org/changes/object/development/02/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/object/development/02/schema/> .
+
+<http://purl.org/changes/object/development/02/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:creates rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "creates"@en .
+
+
+:hasType rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "has role"@en .
+
+
+:hasLabel rdf:type owl:ObjectProperty;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "has descriptive label"@en .
+
+
+:hasIdentifier rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "has identifier"@en .
+
+
+#################################################################
+#    Data Properties
+#################################################################
+
+:hasLabel rdf:type owl:ObjectProperty;
+            rdfs:subPropertyOf owl:topDatatypeProperty ;
+            rdfs:label "has descriptive label"@en .
+
+:hasContent rdf:type owl:ObjectProperty;
+            rdfs:subPropertyOf owl:topDatatypeProperty ;
+            rdfs:label "has content"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+:CreationEvent rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "Creation event"@en .
+
+
+:CulturalResource rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Cultural resource"@en .
+
+
+:Type rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Type"@en .
+
+
+:Label rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Descriptive label"@en .
+
+
+:Identifier rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Identifier"@en .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:volume-number rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "volume number"@en .
+
+:changes-id rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "project id"@en .
+
+:shelf-mark rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "shelf mark"@en .
+
+:print rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "print"@en .
+
+:printed-volume rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "printed volume"@en .
+
+:specimen rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "specimen"@en .

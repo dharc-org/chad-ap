@@ -1,0 +1,38 @@
+@prefix ex: <http://purl.org/changes/process/data/01/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/process/data/01/> .
+
+<https://purl.org/changes/process/data/01/> rdf:type owl:Ontology ;
+                                                        owl:imports <https://purl.org/changes/process/model/> .
+
+
+ex:ALD-15 a crm:E24_Physical_Human-Made_Thing ;
+                rdfs:label "Corno lavorato"@en .
+
+ex:ALD-15-acq a crmdig:D2_Digitization_Process ;
+                rdfs:label "Digitization of Corno Lavorato"@en ;
+                crmdig:L1_digitized ex:ALD-15 ;
+                crmdig:L11_had_output ex:ALD-15-acq-output;
+                crm:P4_has_time-span ex:ALD-15-acq-timespan .
+
+ex:ALD-15-proc a crmdig:D10_Software_Execution ;
+                rdfs:label "Processing activity of Corno Lavorato"@en ;
+                crmdig:L10_had_input ex:ALD-15-acq-output ;
+                crm:P4_has_time-span ex:ALD-15-proc-timespan .
+
+ex:ALD-15-acq-output a crmdig:D9_Data_Object;
+                rdfs:label "Output of the Digitization of Corno Lavorato"@en .
+
+ex:ALD-15-acq-timespan a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "2023-04-17" ;
+                crm:P82b_end_of_the_end "2023-04-17" .
+
+ex:ALD-15-proc-timespan a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "2023-04-18" ;
+                crm:P82b_end_of_the_end "2023-04-19" .

@@ -1,0 +1,98 @@
+@prefix : <http://purl.org/changes/process/development/03/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/process/development/03/schema/> .
+
+<http://purl.org/changes/process/development/03/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+
+:digitizes rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:label "digitizes"@en .
+
+
+:hasInput rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "has input"@en .
+
+
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "has output"@en .
+
+
+:hasTechnique rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "has technique"@en .
+
+
+:hasTool rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "has tool"@en .
+
+
+:hasType rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:label "has type"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:CulturalObject rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "Cultural Object"@en .
+
+
+:DigitalObject rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Digital Object"@en .
+
+
+:Tool rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Tool"@en .
+
+
+:Type rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Type"@en .
+
+
+:SoftwareActivity rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Software activity"@en .
+
+
+:DigitizationProcess rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Digitization process"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+:processing rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "Processing"@en .
+
+:structured-light-scanning rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "Structured light scanning"@en .
+
+:3d-scanner rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "3D scanner"@en .
+
+:3d-scanning-and-processing-software rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "3D scanning and processing software"@en .

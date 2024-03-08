@@ -1,0 +1,70 @@
+@prefix : <http://purl.org/changes/process/development/01/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/process/development/01/schema/> .
+
+<http://purl.org/changes/process/development/01/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:digitizes rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "digitizes"@en .
+
+
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "has output"@en .
+
+
+:hasTimeSpan rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "has time span"@en .
+
+
+#################################################################
+#    Datatype Properties
+#################################################################
+
+:hasEndDate rdf:type owl:ObjectProperty;
+            rdfs:subPropertyOf owl:topDatatypeProperty ;
+            rdfs:label "has end date"@en .
+
+
+:hasStartDate rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topDatatypeProperty ;
+              rdfs:label "has start date"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:CulturalObject rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "Cultural Object"@en .
+
+
+:DigitalObject rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Digital Object"@en .
+
+
+:TimeSpan rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Time Span"@en .
+
+
+:DigitizationProcess rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Digitization Process"@en .
+
+
+:SoftwareActivity rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Software Activity"@en .

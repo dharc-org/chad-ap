@@ -1,0 +1,45 @@
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix ex: <http://purl.org/changes/process/data/03/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/process/data/03/> .
+
+<https://purl.org/changes/process/data/03/> rdf:type owl:Ontology ;
+                                                        owl:imports <https://purl.org/changes/process/model/> .
+
+
+ex:ALD-15 a crm:E24_Physical_Human-Made_Thing ;
+                rdfs:label "Corno lavorato"@en .
+
+ex:ALD-15-acq a crmdig:D2_Digitization_Process ;
+                rdfs:label "Digitization process of Corno Lavorato"@en ;
+                crmdig:L1_digitized ex:ALD-15 ;
+                crmdig:L11_had_output ex:ALD-15-acq-output ;
+                crm:P32_used_general_technique aat:300391312 ;
+                crm:P16_used_specific_object ex:artec-spider .
+
+ex:ALD-15-proc a crmdig:D10_Software_Execution ;
+                rdfs:label "Processing activity of Corno Lavorato"@en ;
+                crm:P2_has_type aat:300054636 ;
+                crmdig:L10_had_input ex:ALD-15-acq-output ;
+                crmdig:L11_had_output ex:ALD-15-proc-output ;
+                crmdig:L23_used_software_or_firmware ex:artec-studio-14 .
+
+ex:ALD-15-acq-output a crmdig:D9_Data_Object ;
+                rdfs:label "Output of the Digitization process of Corno Lavorato"@en .
+
+ex:ALD-15-proc-output a crmdig:D9_Data_Object ;
+                rdfs:label "Output of the Processing activity of Corno Lavorato"@en .
+
+ex:artec-spider a crmdig:D8_Digital_Device ;
+                rdfs:label "Artec Spider" ;
+                crm:P2_has_type aat:300237891 .
+
+ex:artec-studio-14 a crmdig:D14_Software ;
+                rdfs:label "Artec Studio 14" ;
+                crm:P2_has_type aat:300426696 .

@@ -1,0 +1,124 @@
+@prefix : <http://purl.org/changes/object/development/05/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/object/development/05/schema/> .
+
+<http://purl.org/changes/object/development/05/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:createsWork rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "creates work"@en .
+
+
+:createsExpression rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "creates expression"@en .
+
+
+:createsManifestation rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "creates manifestation"@en .
+
+
+:hasMember rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "has member"@en .
+
+
+:hasType rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "has type"@en .
+
+
+:hasTitle rdf:type owl:ObjectProperty;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "has title"@en .
+
+
+:isAbout rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "is about"@en .
+
+
+:depicts rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "depicts"@en .
+
+
+:isComposedOf rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "is composed of"@en .
+
+
+#################################################################
+#    Data Properties
+#################################################################
+
+:hasContent rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topDatatypeProperty ;
+              rdfs:label "has content"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:CreationEvent rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "Creation event"@en .
+
+
+:Work rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Work"@en .
+
+
+:Expression rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Expression"@en .
+
+
+:Manifestation rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Manifestation"@en .
+
+
+:Type rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Type"@en .
+
+
+:Title rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Title"@en .
+
+
+:ParentWork rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Parent work"@en .
+
+
+:Subject rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Subject"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+:original-title rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "original title"@en .
+
+
+:museum-title rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "museum title"@en .

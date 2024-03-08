@@ -1,0 +1,66 @@
+@prefix : <http://purl.org/changes/object/development/04/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/object/development/04/schema/> .
+
+<http://purl.org/changes/object/development/04/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:initiates rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "initiates"@en .
+
+
+:isCarriedOutBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "is carried out by"@en .
+
+
+:hasTimeInterval rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "has time interval"@en .
+
+
+#################################################################
+#    Data Properties
+#################################################################
+
+:hasBeginning rdf:type owl:ObjectProperty;
+            rdfs:subPropertyOf owl:topDatatypeProperty ;
+            rdfs:label "has beginning"@en .
+
+
+:hasEnd rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topDatatypeProperty ;
+              rdfs:label "has end"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:ConceptionEvent rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "Conception event"@en .
+
+
+:CulturalResource rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Cultural resource"@en .
+
+
+:TimeInterval rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Time interval"@en .
+
+
+:Agent rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Agent"@en .
+

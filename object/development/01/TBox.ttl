@@ -1,0 +1,106 @@
+@prefix : <http://purl.org/changes/object/development/01/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/object/development/01/schema/> .
+
+<http://purl.org/changes/object/development/01/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:creates rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "creates"@en .
+
+
+:isCarriedOutBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "is carried out by"@en .
+
+
+:hasType rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "has role"@en .
+
+
+:usesTechnique rdf:type owl:ObjectProperty;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "uses technique"@en .
+
+
+:consistsOf rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "consists of"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:CreationEvent rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "Creation event"@en .
+
+
+:CulturalResource rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Cultural resource"@en .
+
+
+:Type rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Type"@en .
+
+
+:Agent rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Agent"@en .
+
+
+:Activity rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Activity"@en .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:illustration rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "illustration"@en .
+
+:engraving-process rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "engraving process"@en .
+
+:commission rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "commission"@en .
+
+:translation rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "translation"@en .
+
+:discovery rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "discovery"@en .
+
+:museum-preparation rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "museum preparation"@en .
+
+:engraving rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "engraving"@en .
+
+:watercolor rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "watercolor"@en .
+
+:taxidermy rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "taxidermy"@en .

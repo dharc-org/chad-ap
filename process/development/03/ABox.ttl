@@ -1,0 +1,42 @@
+@prefix ex: <http://purl.org/changes/process/development/03/data/> .
+@prefix process: <http://purl.org/changes/process/development/03/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/process/development/03/data/> .
+
+<http://purl.org/changes/process/development/03/data/> rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/changes/process/development/03/schema/> .
+
+ex:ALD-15 a process:CulturalObject ;
+               rdfs:label "Corno lavorato"@it .
+
+ex:ALD-15-acq-output a process:DigitalObject ;
+                rdfs:label "Output of the Digitization process of Corno Lavorato"@en .
+
+ex:ALD-15-proc-output a process:DigitalObject ;
+                rdfs:label "Output of the Processing activity of Corno Lavorato"@en .
+
+ex:ALD-15-acq a process:DigitizationProcess ;
+                rdfs:label "Digitization process of Corno Lavorato"@en ;
+                process:digitizes ex:ALD-15 ;
+                process:hasOutput ex:ALD-15-acq-output ;
+                process:hasTechnique process:structured-light-scanning ;
+                process:hasTool ex:artec-spider .
+
+ex:ALD-15-proc a process:SoftwareActivity ;
+                rdfs:label "Processing activity of Corno Lavorato"@en ;
+                process:hasType process:processing ;
+                process:hasInput ex:ALD-15-acq-output ;
+                process:hasOutput ex:ALD-15-proc-output ;
+                process:hasTool ex:artec-studio-14 .
+
+ex:artec-spider a process:Tool ;
+                rdfs:label "Artec Spider" ;
+                process:hasType process:3d-scanner .
+
+ex:artec-studio-14 a process:Tool ;
+                rdfs:label "Artec Studio 14" ;
+                process:hasType process:3d-scanning-and-processing-software .

@@ -1,0 +1,65 @@
+@prefix ex: <http://purl.org/changes/object/development/03/data/> .
+@prefix obj: <http://purl.org/changes/object/development/03/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/object/development/03/data/> .
+
+<http://purl.org/changes/object/development/03/data/> rdf:type owl:Ontology ;
+                                                        owl:imports <http://purl.org/changes/object/development/03/schema/> .
+
+
+ex:ALD-L1-curation a obj:CurationEvent ;
+                rdfs:label "Curation event of 'Amerigo Vespucci sveglia l America'"@en ;
+                obj:curates ex:nova-reperta ;
+                obj:isCarriedOutBy ex:rijksmuseum ;
+                obj:occurredInThePresenceOf ex:ALD-L1-man .
+
+ex:ALD-L1-man a obj:CulturalResource ;
+                rdfs:label "Amerigo Vespucci sveglia l'America"@en ;
+                obj:hasCurator ex:rijksmuseum .
+
+ex:nova-reperta a obj:Collection ;
+                rdfs:label "Nova Reperta" .
+
+ex:rijksmuseum a obj:Agent ;
+                rdfs:label "Rijksmuseum" ;
+                obj:hasPlace ex:amsterdam .
+
+ex:amsterdam a obj:Place ;
+               rdfs:label "Amsterdam" .
+
+ex:ALD-1-curation a obj:CurationEvent ;
+                rdfs:label "Curation event of 'Panthera leo (Linnaeus, 1758)'"@en ;
+                obj:curates ex:collezione-di-zoologia ;
+                obj:isCarriedOutBy ex:sistema-museale-di-ateneo ;
+                obj:occurredInThePresenceOf ex:ALD-1-man .
+
+ex:ALD-1-man a obj:CulturalResource ;
+                rdfs:label "Panthera leo (Linnaeus, 1758)"@en ;
+                obj:hasCurator ex:sistema-museale-di-ateneo .
+
+ex:collezione-di-zoologia a obj:Collection ;
+                rdfs:label "Collezione di Zoologia" .
+
+ex:sistema-museale-di-ateneo a obj:Agent ;
+                rdfs:label "Sistema museale di Ateneo" ;
+                obj:hasPlace ex:bologna .
+
+ex:bologna a obj:Place ;
+               rdfs:label "Bologna" .
+
+ex:ALD-14-curation a obj:CurationEvent ;
+                rdfs:label "Curation event of 'Limulus polyphemus (Linnaeus, 1758)'"@en ;
+                obj:curates ex:collezione-di-anatomia-comparata ;
+                obj:isCarriedOutBy ex:sistema-museale-di-ateneo ;
+                obj:occurredInThePresenceOf ex:ALD-14-man .
+
+ex:ALD-14-man a obj:CulturalResource ;
+                rdfs:label "Limulus polyphemus (Linnaeus, 1758)"@en ;
+                obj:hasCurator ex:sistema-museale-di-ateneo .
+
+ex:collezione-di-anatomia-comparata a obj:Collection ;
+                rdfs:label "Collezione di Anatomia comparata" .

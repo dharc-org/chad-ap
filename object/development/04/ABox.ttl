@@ -1,0 +1,63 @@
+@prefix ex: <http://purl.org/changes/object/development/04/data/> .
+@prefix obj: <http://purl.org/changes/object/development/04/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/object/development/04/data/> .
+
+<http://purl.org/changes/object/development/04/data/> rdf:type owl:Ontology ;
+                                                        owl:imports <http://purl.org/changes/object/development/04/schema/> .
+
+
+ex:ALD-L1-work-conception a obj:ConceptionEvent ;
+                rdfs:label "Conception event of 'Amerigo Vespucci sveglia l America'"@en ;
+                obj:initiates ex:ALD-L1-work ;
+                obj:isCarriedOutBy ex:jan-van-der-straet ;
+                obj:hasTimeInterval ex:1589-1593 .            
+
+ex:1589-1593 a obj:TimeInterval ;
+                obj:hasBeginning "1589-01-01" ;
+                obj:hasEnd "1593-12-31" .
+
+ex:ALD-L1-work a obj:CulturalResource ;
+                rdfs:label "Amerigo Vespucci sveglia l'America"@en .
+
+ex:jan-van-der-straet a obj:Agent ;
+                rdfs:label "Jan van der Straet" ;
+                owl:sameAs <http://vocab.getty.edu/page/ulan/500011304> .
+
+ex:ALD-1-work-conception a obj:ConceptionEvent ;
+                rdfs:label "Conception event of 'Carta nautica'"@en ;
+                obj:initiates ex:ALD-1-work ;
+                obj:isCarriedOutBy ex:grazioso-benincasa ;
+                obj:hasTimeInterval ex:1482 .            
+
+ex:1482 a obj:TimeInterval ;
+                obj:hasBeginning "1482-01-01" ;
+                obj:hasEnd "1482-12-31" .
+
+ex:ALD-1-work a obj:CulturalResource ;
+                rdfs:label "Carta nautica"@en .
+
+ex:grazioso-benincasa a obj:Agent ;
+                rdfs:label "Grazioso Benincasa" ;
+                owl:sameAs <http://vocab.getty.edu/page/ulan/500114874> .
+
+ex:ALD-26-work-conception a obj:ConceptionEvent ;
+                rdfs:label "Conception event of 'Chrysanthemi'"@en ;
+                obj:initiates ex:ALD-26-work ;
+                obj:isCarriedOutBy ex:ulisse-aldrovandi ;
+                obj:hasTimeInterval ex:1500-1599 .            
+
+ex:1500-1599 a obj:TimeInterval ;
+                obj:hasBeginning "1500-01-01" ;
+                obj:hasEnd "1599-12-31" .
+
+ex:ALD-26-work a obj:CulturalResource ;
+                rdfs:label "Carta nautica"@en .
+
+ex:ulisse-aldrovandi a obj:Agent ;
+                rdfs:label "Ulisse Aldrovandi" ;
+                owl:sameAs <http://viaf.org/viaf/100190422> .

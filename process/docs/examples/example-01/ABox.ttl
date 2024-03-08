@@ -1,0 +1,121 @@
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix ex: <http://purl.org/changes/process/data/example/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/changes/process/data/example/> .
+
+
+ex:alice-bordignon a crm:E21_Person ;
+               rdfs:label "Alice Bordignon" .
+
+ex:unibo-ficlit a crm:E74_Group ;
+               rdfs:label "UNIBO FICLIT" .
+
+ex:ALD-32 a crm:E24_Physical_Human-Made_Thing ;
+                rdfs:label "Essere umano ermafrodita"@en .
+
+ex:panasonic-dmc-lx100 a crmdig:D8_Digital_Device ;
+                rdfs:label "Panasonic DMC LX100" ;
+                crm:P2_has_type aat:300266792 .
+
+ex:ALD-32-acq a crmdig:D2_Digitization_Process ;
+                rdfs:label "Digitization process of Essere umano ermafrodita"@en ;
+                crmdig:L1_digitized ex:ALD-32 ;
+                crmdig:L11_had_output ex:ALD-32-acq-output ;
+                crm:P4_has_time-span ex:ALD-32-acq-timespan ;
+                crm:P11_had_participant ex:unibo-ficlit ;
+                crm:P14_carried_out_by ex:alice-bordignon ;
+                crm:P32_used_general_technique aat:300391312 ;
+                crm:P16_used_specific_object ex:panasonic-dmc-lx100 .
+
+ex:3df-zephyr a crmdig:D14_Software ;
+                rdfs:label "3DF Zephyr" ;
+                crm:P2_has_type aat:300426696 .
+
+ex:ALD-32-proc a crmdig:D10_Software_Execution ;
+                rdfs:label "Processing activity of Essere umano ermafrodita"@en ;
+                crm:P2_has_type aat:300054636 ;
+                crmdig:L10_had_input ex:ALD-32-acq-output ;
+                crmdig:L11_had_output ex:ALD-32-proc-output ;
+                crm:P4_has_time-span ex:ALD-32-proc-timespan ;
+                crm:P11_had_participant ex:unibo-ficlit ;
+                crm:P14_carried_out_by ex:alice-bordignon ;
+                crmdig:L23_used_software_or_firmware ex:3df-zephyr .
+
+ex:blender a crmdig:D14_Software ;
+                rdfs:label "Blender" ;
+                crm:P2_has_type aat:300426696 .
+
+ex:ALD-32-mod a crmdig:D10_Software_Execution ;
+                rdfs:label "Modelling activity of Essere umano ermafrodita"@en ;
+                crm:P2_has_type aat:300237968 ;
+                crmdig:L10_had_input ex:ALD-32-proc-output ;
+                crmdig:L11_had_output ex:ALD-32-mod-output ;
+                crm:P4_has_time-span ex:ALD-32-mod-timespan ;
+                crm:P11_had_participant ex:unibo-ficlit ;
+                crm:P14_carried_out_by ex:alice-bordignon ;
+                crmdig:L23_used_software_or_firmware ex:blender .
+
+ex:instantmeshes-3df-zephyr a crmdig:D14_Software ;
+                rdfs:label "InstantMeshes-3DF Zephyr" ;
+                crm:P2_has_type aat:300426696 .
+
+ex:ALD-32-opt a crmdig:D10_Software_Execution ;
+                rdfs:label "Optimization activity of Essere umano ermafrodita"@en ;
+                crm:P2_has_type aat:300236367 ;
+                crmdig:L10_had_input ex:ALD-32-mod-output ;
+                crmdig:L11_had_output ex:ALD-32-opt-output ;
+                crm:P4_has_time-span ex:ALD-32-opt-timespan ;
+                crm:P11_had_participant ex:unibo-ficlit ;
+                crm:P14_carried_out_by ex:alice-bordignon ;
+                crmdig:L23_used_software_or_firmware ex:instantmeshes-3df-zephyr .
+
+ex:ALD-32-exp a crmdig:D10_Software_Execution ;
+                rdfs:label "Export activity of Essere umano ermafrodita"@en ;
+                crm:P2_has_type aat:300417260 ;
+                crmdig:L10_had_input ex:ALD-32-opt-output ;
+                crmdig:L11_had_output ex:ALD-32-exp-output ;
+                crm:P4_has_time-span ex:ALD-32-exp-timespan ;
+                crm:P11_had_participant ex:unibo-ficlit ;
+                crm:P14_carried_out_by ex:alice-bordignon ;
+                crmdig:L23_used_software_or_firmware ex:blender .
+
+ex:ALD-32-acq-output a crmdig:D9_Data_Object;
+                rdfs:label "Output of the Digitization process of Essere umano ermafrodita"@en .
+
+ex:ALD-32-proc-output a crmdig:D9_Data_Object ;
+                rdfs:label "Output of the Processing activity of Essere umano ermafrodita"@en .
+
+ex:ALD-32-mod-output a crmdig:D9_Data_Object ;
+                rdfs:label "Output of the Modelling activity of Essere umano ermafrodita"@en .
+
+ex:ALD-32-opt-output a crmdig:D9_Data_Object ;
+                rdfs:label "Output of the Optimization activity of Essere umano ermafrodita"@en .
+
+ex:ALD-32-exp-output a crmdig:D9_Data_Object ;
+                rdfs:label "Output of the Export activity of Essere umano ermafrodita"@en .
+
+ex:ALD-32-acq-timespan a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "2023-05-08" ;
+                crm:P82b_end_of_the_end "2023-05-08" .
+
+ex:ALD-32-proc-timespan a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "2023-05-10" ;
+                crm:P82b_end_of_the_end "2023-05-10" .
+
+ex:ALD-32-mod-timespan a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "2023-05-17" ;
+                crm:P82b_end_of_the_end "2023-05-18" .
+
+ex:ALD-32-opt-timespan a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "2023-05-18" ;
+                crm:P82b_end_of_the_end "2023-05-19" .
+
+ex:ALD-32-exp-timespan a crm:E52_Time-Span ;
+                crm:P82a_begin_of_the_begin "2023-05-19" ;
+                crm:P82b_end_of_the_end "2023-05-19" .
