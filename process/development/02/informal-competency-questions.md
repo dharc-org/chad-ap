@@ -6,10 +6,10 @@
 CQ_2.1
 
 ### Question
-Return the input (the result of the digitization process) ingested and the output (the processed digital object) produced by the processing activity, as well as the activities themselves.
+What are the digitization process, its output, the processing activity and its output?
 
 ### Expected outcome
-A list of objects.
+A list of: `acq_activity`, `acq_output`, `proc_activity`, `proc_output`
 
 ### Result
 * `ALD-15-acq`, `ALD-15-acq-output`, `ALD-15-proc`, `ALD-15-proc-output`
@@ -25,10 +25,10 @@ Example 1
 CQ_2.2
 
 ### Question
-Return the agents (people and institutions) who either carried out or were participants in the processing activity.
+What are the people and institutions who either carried out or were participants in the processing activity?
 
 ### Expected outcome
-A list of objects.
+A list of: `person`, `institution`
 
 ### Result
 * `federica-collina`, `unibo-dbc`

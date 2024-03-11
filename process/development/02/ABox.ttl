@@ -10,26 +10,20 @@
 <http://purl.org/changes/process/development/02/data/> rdf:type owl:Ontology ;
     owl:imports <http://purl.org/changes/process/development/02/schema/> .
 
-ex:ALD-15-acq-output a process:DigitalObject;
-                rdfs:label "Output of the Digitization process of Corno Lavorato"@en .
+ex:ALD-15-acq-output a process:DigitalObject .
 
-ex:ALD-15-proc-output a process:DigitalObject ;
-                rdfs:label "Output of the Processing activity of Corno Lavorato"@en .
+ex:ALD-15-proc-output a process:DigitalObject .
 
 ex:ALD-15-acq a process:DigitizationProcess ;
-                rdfs:label "Digitization of Corno Lavorato"@en ;
                 process:hasOutput ex:ALD-15-acq-output .
 
 ex:ALD-15-proc a process:SoftwareActivity ;
-                rdfs:label "Processing activity of Corno Lavorato"@en ;
                 process:hasType process:processing ;
                 process:hasInput ex:ALD-15-acq-output ;
                 process:hasOutput ex:ALD-15-proc-output ;
                 process:carriedOutBy ex:federica-collina ;
                 process:hasParticipant ex:unibo-dbc .
 
-ex:federica-collina a process:Person ;
-                rdfs:label "Federica Collina" .
+ex:federica-collina a process:Person .
 
-ex:unibo-dbc a process:Institution ;
-                rdfs:label "UNIBO DBC" .
+ex:unibo-dbc a process:Institution .

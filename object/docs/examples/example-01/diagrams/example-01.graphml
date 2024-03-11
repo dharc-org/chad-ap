@@ -75,7 +75,7 @@
           <y:Geometry height="44.0" width="224.95233154296903" x="983.4471310013574" y="-978.2163691267727"/>
           <y:Fill color="#FFFF0032" transparent="false"/>
           <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="76.03125" x="74.46054077148449" xml:space="preserve" y="10.19921875">illustration</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="197.90625" x="13.523040771484489" xml:space="preserve" y="10.19921875">aat:300054200 (illustration)</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -83,10 +83,10 @@
     <node id="n6">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="44.0" width="224.95233154296903" x="1276.0375244140623" y="-345.85183011968047"/>
+          <y:Geometry height="44.0" width="284.7449484420668" x="1246.1412159645135" y="-345.85183011968047"/>
           <y:Fill color="#FFFF0032" transparent="false"/>
           <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="135.625" x="44.6636657714846" xml:space="preserve" y="10.19921875">engraving-process</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="256.6171875" x="14.063880471033372" xml:space="preserve" y="10.19921875">aat:300053225 (engraving process)</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -97,7 +97,7 @@
           <y:Geometry height="44.0" width="224.95233154296903" x="1276.0375244140625" y="-978.2163691267727"/>
           <y:Fill color="#FFFF0032" transparent="false"/>
           <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="88.4609375" x="68.2456970214846" xml:space="preserve" y="10.19921875">commission</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="210.3359375" x="7.308197021484602" xml:space="preserve" y="10.19921875">aat:300417639 (commission)</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -108,7 +108,7 @@
           <y:Geometry height="44.0" width="224.95233154296903" x="861.2423176895478" y="-345.85183011968047"/>
           <y:Fill color="#FFFF0032" transparent="false"/>
           <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="74.2734375" x="75.33944702148449" xml:space="preserve" y="10.19921875">engraving</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="196.1484375" x="14.401947021484489" xml:space="preserve" y="10.19921875">aat:300053225 (engraving)</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -193,32 +193,15 @@
     <node id="n16">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="187.86695035460986" width="397.0714804791391" x="227.93518174624677" y="-178.15154449246364"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="141.2109375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="349.9453125" x="23.56308398956955" xml:space="preserve" y="23.328006427304928">"Amerigo Vespucci sveglia l'America
- Amerigo Vespucci awakens a sleeping America 
-In Jan van del Straet (Stradano), 
-Nova Reperta, 
-c. 1589 - c.1593, 
-Antwerp Amsterdam, 
-Rijksmuseum"</y:NodeLabel>
+          <y:Geometry height="44.0" width="224.95233154296903" x="649.3974164671913" y="-106.21806931515871"/>
+          <y:Fill color="#FFFF0032" transparent="false"/>
+          <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="157.0" x="33.97616577148449" xml:space="preserve" y="10.19921875">aat:300041273 (print)</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
     <node id="n17">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="44.0" width="224.95233154296903" x="649.3974164671913" y="-106.21806931515871"/>
-          <y:Fill color="#FFFF0032" transparent="false"/>
-          <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="35.125" x="94.91366577148449" xml:space="preserve" y="10.19921875">print</y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n18">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="442.79321125713767" x="-542.9095388509231" y="-569.9903230274821"/>
@@ -229,7 +212,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n19">
+    <node id="n18">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="258.12370771103855" x="-450.57478707787357" y="-696.3174684175533"/>
@@ -240,7 +223,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n20">
+    <node id="n19">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="258.12370771103855" x="-450.57478707787357" y="-419.96237186945905"/>
@@ -251,10 +234,10 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n21">
+    <node id="n20">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="44.0" width="258.12370771103855" x="-450.57478707787357" y="-269.934420711436"/>
+          <y:Geometry height="44.0" width="258.12370771103855" x="-896.9191709367917" y="-110.69243000867425"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="85.796875" x="86.1634163555193" xml:space="preserve" y="10.19921875">Amsterdam</y:NodeLabel>
@@ -262,7 +245,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n22">
+    <node id="n21">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="397.97051622167675" x="-68.14386250347468" y="-1062.527659574468"/>
@@ -273,7 +256,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n23">
+    <node id="n22">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="547.8364775179502" x="-143.07684315161143" y="-1255.6697556515956"/>
@@ -284,43 +267,21 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n24">
+    <node id="n23">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="224.95233154296903" x="18.365229835879205" y="-1405.7820644946805"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="37.796875" x="93.57772827148452" xml:space="preserve" y="10.19921875">Date</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="80.515625" x="72.21835327148452" xml:space="preserve" y="10.19921875">1589-1593</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n25">
+    <node id="n24">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="44.0" width="224.95233154296903" x="536.8045218769024" y="-1526.665196974734"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="85.84375" x="69.55429077148449" xml:space="preserve" y="10.19921875">1589-01-01</y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n26">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="44.0" width="224.95233154296903" x="536.8045218769024" y="-1405.7820644946805"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="85.84375" x="69.55429077148449" xml:space="preserve" y="10.19921875">1593-12-31</y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n27">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="44.0" width="258.12370771103855" x="-840.4425751921113" y="-1310.845390070922"/>
+          <y:Geometry height="44.0" width="258.12370771103855" x="-896.9191709367922" y="-1121.9778724335142"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="102.71875" x="77.7024788555193" xml:space="preserve" y="10.19921875">Nova Reperta</y:NodeLabel>
@@ -328,51 +289,41 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n28">
+    <node id="n25">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="44.0" width="224.95233154296903" x="-823.8568871080765" y="-1162.652525556848"/>
+          <y:Geometry height="44.0" width="258.12370771103855" x="-896.9191709367922" y="-973.7850079194404"/>
           <y:Fill color="#FFFF0032" transparent="false"/>
           <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="100.9296875" x="62.01132202148449" xml:space="preserve" y="10.19921875">printed-series</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="221.921875" x="18.100916355519303" xml:space="preserve" y="10.19921875">aat:300189634 (printed series)</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n29">
+    <node id="n26">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="44.0" width="371.0768992004001" x="-896.919170936792" y="-1430.4782662898933"/>
+          <y:Geometry height="44.0" width="397.97051622167675" x="-896.919170936792" y="-1354.045053506482"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="268.2890625" x="51.39391835020001" xml:space="preserve" y="10.19921875">"Amerigo Vespucci sveglia l'America"</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="268.2890625" x="64.84072686083834" xml:space="preserve" y="10.19921875">"Amerigo Vespucci sveglia l'America"</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n30">
+    <node id="n27">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="44.0" width="371.0768992004002" x="-896.919170936792" y="-1514.5153978280136"/>
+          <y:Geometry height="61.281995077932606" width="397.97051622167675" x="-896.919170936792" y="-1603.394229657382"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="268.7890625" x="51.143918350200124" xml:space="preserve" y="10.19921875">"Amerigo Vespucci sveglia l’America"</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="43.203125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="386.453125" x="5.758695610838345" xml:space="preserve" y="9.039435038966303">"Amerigo Vespucci sveglia l’America"@it
+"Amerigo Vespucci awakens a sleeping America"@en</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n31">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="44.0" width="371.0768992004002" x="-896.919170936792" y="-1598.552529366134"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="352.4140625" x="9.331418350200124" xml:space="preserve" y="10.19921875">"Amerigo Vespucci awakens a sleeping America"</y:NodeLabel>
-          <y:Shape type="roundrectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n32">
+    <node id="n28">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="258.12370771103855" x="-896.919170936792" y="-844.3174684175533"/>
@@ -383,7 +334,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n33">
+    <node id="n29">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="258.12370771103855" x="-896.919170936792" y="-770.3174684175533"/>
@@ -394,7 +345,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n34">
+    <node id="n30">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="258.12370771103855" x="-896.919170936792" y="-696.3174684175533"/>
@@ -405,7 +356,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n35">
+    <node id="n31">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="258.12370771103855" x="-896.919170936792" y="-622.3174684175533"/>
@@ -416,7 +367,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n36">
+    <node id="n32">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="258.12370771103855" x="-896.9191709367919" y="-548.3174684175533"/>
@@ -427,13 +378,85 @@ Rijksmuseum"</y:NodeLabel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n37">
+    <node id="n33">
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="44.0" width="258.12370771103855" x="-896.9191709367918" y="-474.3174684175533"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="158.71875" x="49.7024788555193" xml:space="preserve" y="10.19921875">vessillo-croce-del-sud</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n34">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="44.0" width="258.12370771103855" x="-826.995766681473" y="-1215.206511326986"/>
+          <y:Fill color="#FFFF0032" transparent="false"/>
+          <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="222.8203125" x="17.651697605519303" xml:space="preserve" y="10.19921875">aat:300417207 (exhibition title)</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n35">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="44.0" width="258.12370771103855" x="-826.9957666814729" y="-1445.3900796459188"/>
+          <y:Fill color="#FFFF0032" transparent="false"/>
+          <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="206.8046875" x="25.659510105519303" xml:space="preserve" y="10.19921875">aat:300417204 (original title)</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n36">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="43.0" width="224.95233154296903" x="18.365229835879205" y="-1593.8083182936832"/>
+          <y:Fill color="#CCFFCC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="85.84375" x="69.55429077148452" xml:space="preserve" y="9.69921875">1589-01-01</y:NodeLabel>
+          <y:Shape type="parallelogram"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n37">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="43.0" width="224.9523315429691" x="506.69423626422673" y="-1405.2820644946805"/>
+          <y:Fill color="#CCFFCC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="85.84375" x="69.55429077148455" xml:space="preserve" y="9.69921875">1589-01-01</y:NodeLabel>
+          <y:Shape type="parallelogram"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n38">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="159.24199070276177" width="453.5831060286009" x="-250.03867852415954" y="-225.93442071143602"/>
+          <y:Fill color="#CCFFCC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="141.2109375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="349.9453125" x="51.81889676430046" xml:space="preserve" y="9.015526601380884">"Amerigo Vespucci sveglia l'America
+ Amerigo Vespucci awakens a sleeping America 
+In Jan van del Straet (Stradano), 
+Nova Reperta, 
+c. 1589 - c.1593, 
+Antwerp Amsterdam, 
+Rijksmuseum"</y:NodeLabel>
+          <y:Shape type="parallelogram"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n39">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="44.0" width="284.7449484420668" x="284.0984477647829" y="-106.21806931515871"/>
+          <y:Fill color="#FFFF0032" transparent="false"/>
+          <y:BorderStyle color="#000000" type="dotted" width="3.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="255.71875" x="14.513099221033372" xml:space="preserve" y="10.19921875">aat:300312355 (accession number)</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
         </y:ShapeNode>
       </data>
@@ -622,21 +645,6 @@ Rijksmuseum"</y:NodeLabel>
     <edge id="e15" source="n14" target="n16">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="-205.70659182993472" sy="21.994289574738843" tx="0.0" ty="0.0">
-            <y:Point x="220.76433015588157" y="-383.80218472960945"/>
-            <y:Point x="138.3463651151543" y="-383.80218472960945"/>
-            <y:Point x="138.3463651151543" y="-84.21806931515871"/>
-          </y:Path>
-          <y:LineStyle color="#000080" type="line" width="1.0"/>
-          <y:Arrows source="circle" target="delta"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="129.40625" x="-147.1210878877754" xml:space="preserve" y="187.66473870027215">crm:P3_has_note<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e16" source="n14" target="n17">
-      <data key="d10">
-        <y:PolyLineEdge>
           <y:Path sx="188.3175619736055" sy="21.999017004848668" tx="0.0" ty="0.0">
             <y:Point x="614.7884839594218" y="-362.28729111258815"/>
             <y:Point x="761.8735822386758" y="-362.28729111258815"/>
@@ -648,7 +656,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e17" source="n18" target="n14">
+    <edge id="e16" source="n17" target="n14">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-206.31890730511353" ty="-22.001349399054618">
@@ -661,7 +669,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e18" source="n18" target="n19">
+    <edge id="e17" source="n17" target="n18">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -672,7 +680,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e19" source="n18" target="n20">
+    <edge id="e18" source="n17" target="n19">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -683,7 +691,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e20" source="n14" target="n20">
+    <edge id="e19" source="n14" target="n19">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -697,18 +705,21 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e21" source="n20" target="n21">
+    <edge id="e20" source="n19" target="n20">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="-321.51293322235426" y="-247.93442071143602"/>
+            <y:Point x="-767.8573170812724" y="-247.93442071143602"/>
+          </y:Path>
           <y:LineStyle color="#000080" type="line" width="1.0"/>
           <y:Arrows source="circle" target="delta"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="313.484375" x="-156.74218126922926" xml:space="preserve" y="41.19982758650559">crm:P74_has_current_or_former_residence<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="313.484375" x="-379.9143731986883" xml:space="preserve" y="116.2138031655171">crm:P74_has_current_or_former_residence<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e22" source="n23" target="n22">
+    <edge id="e21" source="n22" target="n21">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -719,7 +730,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e23" source="n23" target="n9">
+    <edge id="e22" source="n22" target="n9">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -732,7 +743,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e24" source="n23" target="n24">
+    <edge id="e23" source="n22" target="n23">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -743,31 +754,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e25" source="n24" target="n25">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="130.84139560736372" y="-1504.665196974734"/>
-          </y:Path>
-          <y:LineStyle color="#000080" type="line" width="1.0"/>
-          <y:Arrows source="circle" target="delta"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="256.6171875" x="70.11046484564872" xml:space="preserve" y="-110.69705732629654">crm:P82a_begin_of_the_begin<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e26" source="n24" target="n26">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000080" type="line" width="1.0"/>
-          <y:Arrows source="circle" target="delta"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="213.9140625" x="39.771673952094034" xml:space="preserve" y="-11.800741252493026">crm:P82b_end_of_the_end<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e27" source="n1" target="n22">
+    <edge id="e24" source="n1" target="n21">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-193.21723030549356" sy="-22.01365850509319" tx="0.0" ty="0.0">
@@ -781,13 +768,13 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e28" source="n22" target="n27">
+    <edge id="e25" source="n21" target="n24">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-137.48430148405018" sy="20.29976359338025" tx="0.0" ty="0.0">
             <y:Point x="-6.642905876686484" y="-970.0264775413715"/>
             <y:Point x="-519.4936170212769" y="-970.0264775413715"/>
-            <y:Point x="-519.4936170212769" y="-1288.845390070922"/>
+            <y:Point x="-575.9702127659577" y="-1099.9778724335142"/>
           </y:Path>
           <y:LineStyle color="#000080" type="line" width="1.0"/>
           <y:Arrows source="circle" target="delta"/>
@@ -796,50 +783,37 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e29" source="n27" target="n28">
+    <edge id="e26" source="n24" target="n25">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000080" type="line" width="1.0"/>
           <y:Arrows source="circle" target="delta"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="128.5078125" x="-64.25389028190455" xml:space="preserve" y="40.2621505845525">crm:P2_has_type<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="128.5078125" x="-64.25392352658537" xml:space="preserve" y="40.26211451102267">crm:P2_has_type<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e30" source="n22" target="n29">
+    <edge id="e27" source="n21" target="n26">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
             <y:Point x="-291.34609929078044" y="-1040.527659574468"/>
-            <y:Point x="-291.34609929078044" y="-1408.4782662898933"/>
+            <y:Point x="-291.34609929078044" y="-1332.045053506482"/>
           </y:Path>
           <y:LineStyle color="#000080" type="line" width="1.0"/>
           <y:Arrows source="circle" target="delta"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="140.9609375" x="-293.6595377063078" xml:space="preserve" y="-195.7760342212432">crm:P102_has_title<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="140.9609375" x="-293.6595377063078" xml:space="preserve" y="-157.55942782953753">crm:P102_has_title<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e31" source="n22" target="n31">
+    <edge id="e28" source="n21" target="n27">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
             <y:Point x="-291.34609929078044" y="-1040.527659574468"/>
-            <y:Point x="-291.34609929078044" y="-1576.552529366134"/>
-          </y:Path>
-          <y:LineStyle color="#000080" type="line" width="1.0"/>
-          <y:Arrows source="circle" target="delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e32" source="n22" target="n30">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="-291.34609929078044" y="-1040.527659574468"/>
-            <y:Point x="-291.34609929078044" y="-1492.5153978280136"/>
+            <y:Point x="-291.34609929078044" y="-1572.7532321184158"/>
           </y:Path>
           <y:LineStyle color="#000080" type="line" width="1.0"/>
           <y:Arrows source="circle" target="delta"/>
@@ -847,7 +821,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e33" source="n0" target="n32">
+    <edge id="e29" source="n0" target="n28">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -858,7 +832,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e34" source="n0" target="n33">
+    <edge id="e30" source="n0" target="n29">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -871,7 +845,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e35" source="n0" target="n34">
+    <edge id="e31" source="n0" target="n30">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -885,7 +859,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e36" source="n0" target="n35">
+    <edge id="e32" source="n0" target="n31">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -898,7 +872,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e37" source="n0" target="n36">
+    <edge id="e33" source="n0" target="n32">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -911,7 +885,7 @@ Rijksmuseum"</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e38" source="n0" target="n37">
+    <edge id="e34" source="n0" target="n33">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -920,6 +894,75 @@ Rijksmuseum"</y:NodeLabel>
           </y:Path>
           <y:LineStyle color="#000080" type="line" width="1.0"/>
           <y:Arrows source="circle" target="delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e35" source="n26" target="n34">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000080" type="line" width="1.0"/>
+          <y:Arrows source="circle" target="delta"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="128.5078125" x="-64.25392015017246" xml:space="preserve" y="35.619945122328545">crm:P2_has_type<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e36" source="n27" target="n35">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000080" type="line" width="1.0"/>
+          <y:Arrows source="circle" target="delta"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="128.5078125" x="-64.25392015017246" xml:space="preserve" y="36.53375499669073">crm:P2_has_type<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e37" source="n23" target="n36">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#008000" type="line" width="1.0"/>
+          <y:Arrows source="transparent_circle" target="white_delta"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#008000" verticalTextPosition="bottom" visible="true" width="221.9453125" x="-110.97266078912065" xml:space="preserve" y="-84.35903416761948">crm:P82a_begin_of_the_begin<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e38" source="n23" target="n37">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#008000" type="line" width="1.0"/>
+          <y:Arrows source="transparent_circle" target="white_delta"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#008000" verticalTextPosition="bottom" visible="true" width="197.0390625" x="33.189813006107784" xml:space="preserve" y="-11.800741252493026">crm:P82b_end_of_the_end<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e39" source="n14" target="n38">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-183.87991296202597" sy="3.6710699337355663" tx="0.0" ty="0.0">
+            <y:Point x="242.59100902379032" y="-305.25907574514633"/>
+            <y:Point x="-23.247125509859075" y="-305.25907574514633"/>
+          </y:Path>
+          <y:LineStyle color="#008000" type="line" width="1.0"/>
+          <y:Arrows source="transparent_circle" target="white_delta"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#008000" verticalTextPosition="bottom" visible="true" width="129.40625" x="-197.62218666100313" xml:space="preserve" y="116.42824114938492">crm:P3_has_note<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e40" source="n15" target="n39">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000080" type="line" width="1.0"/>
+          <y:Arrows source="circle" target="delta"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" distance="2.0" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000080" verticalTextPosition="bottom" visible="true" width="128.5078125" x="-64.25390101223059" xml:space="preserve" y="59.041815272122335">crm:P2_has_type<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>

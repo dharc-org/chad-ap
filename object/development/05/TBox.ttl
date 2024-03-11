@@ -57,6 +57,16 @@
               rdfs:label "is composed of"@en .
 
 
+:refersTo rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "refers to"@en .
+
+
+:isDocumentedIn rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "is documented in"@en .
+
+
 #################################################################
 #    Data Properties
 #################################################################
@@ -105,9 +115,9 @@
       rdfs:label "Parent work"@en .
 
 
-:Subject rdf:type owl:Class ;
+:Concept rdf:type owl:Class ;
       rdfs:subClassOf owl:Thing ;
-      rdfs:label "Subject"@en .
+      rdfs:label "Concept"@en .
 
 
 #################################################################
@@ -118,7 +128,14 @@
                           :Type ;
       rdfs:label "original title"@en .
 
-
 :museum-title rdf:type owl:NamedIndividual ,
                           :Type ;
       rdfs:label "museum title"@en .
+
+:subject rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "subject"@en .
+
+:license rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "license"@en .

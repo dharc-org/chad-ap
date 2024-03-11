@@ -1,6 +1,6 @@
 # Formal Competency Questions
 ## CQ_2.1
-Return all `identifiers` of the `cultural resources` with `type` `printed volume`, as well as their `types`.
+What are the identifiers of the printed volumes? What are their types?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/development/02/data/>
@@ -16,7 +16,7 @@ WHERE {
 }
 ```
 ## CQ_2.2
-Return the `identifier` with `type` `shelf mark` of the `cultural resource` with an `identifier` with `type` `project id` equal to "ALD-45".
+What is the shelf mark of the cultural resource with the project ID "ALD-45"?
 
 ```SPARQL
 PREFIX obj: <http://purl.org/changes/object/development/02/schema/>
@@ -34,7 +34,7 @@ WHERE {
 ```
 
 ## CQ_2.3
-Return the `descriptive labels` of the `cultural resources` that either have `identifiers` with `type` `shelf mark` or have `type` `print`.
+What are the descriptive labels of the cultural resources that either have shelf marks or are prints?
 
 ```SPARQL
 PREFIX obj: <http://purl.org/changes/object/development/02/schema/>

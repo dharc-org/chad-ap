@@ -4,7 +4,7 @@
 CQ_4.1
 
 ### Question
-Return all `cultural resources` and both the beginning and the end time of the `time interval` of their `conception events`
+What are the cultural resources and the time spans of their conception events?
 
 ### Expected outcome
 List of triples: `cultural resource`, `beginning label`, `end label`
@@ -24,7 +24,7 @@ Example 1, Example 2, Example 3
 CQ_4.2
 
 ### Question
-Return the `agents` who carried out the `conception` of a `cultural resource` in a `time interval` that comprises "1590".
+What are the agents who carried out the conception of a cultural resource in a time interval that includes the year 1590?
 
 ### Expected outcome
 List of objects: `agent`, `beginning`, `end`

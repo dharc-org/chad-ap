@@ -12,7 +12,6 @@
 
 
 ex:ALD-L1-exp-creation a obj:CreationEvent ;
-                rdfs:label "Creation event of 'Amerigo Vespucci sveglia l America'"@en ;
                 obj:createsWork ex:ALD-L1-work ;
                 obj:createsExpression ex:ALD-L1-exp ;
                 obj:createsManifestation ex:ALD-L1-man .
@@ -40,26 +39,37 @@ ex:ALD-L1-exp a obj:Expression ;
 
 ex:ALD-L1-man a obj:Manifestation .
 
+ex:ALD-L1-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:ALD-L1-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
 ex:nova-reperta a obj:ParentWork ;
                 obj:hasMember ex:ALD-L1-work ;
                 obj:hasType obj:print-series .
 
-ex:sub-amerigo-vespucci a obj:Subject .
+ex:sub-amerigo-vespucci a obj:Concept ;
+    obj:hasType obj:subject .
 
-ex:sub-astrolabio a obj:Subject .
+ex:sub-astrolabio a obj:Concept ;
+    obj:hasType obj:subject .
 
-ex:sub-vessillo-croce-del-sud a obj:Subject .
+ex:sub-vessillo-croce-del-sud a obj:Concept ;
+    obj:hasType obj:subject .
 
-ex:sub-formichiere a obj:Subject .
+ex:sub-formichiere a obj:Concept ;
+    obj:hasType obj:subject .
 
-ex:sub-bradipo a obj:Subject .
+ex:sub-bradipo a obj:Concept ;
+    obj:hasType obj:subject .
 
-ex:sub-tapiro a obj:Subject .
+ex:sub-tapiro a obj:Concept ;
+    obj:hasType obj:subject .
 
-ex:sub-gruppo-di-cannibali a obj:Subject .
+ex:sub-gruppo-di-cannibali a obj:Concept ;
+    obj:hasType obj:subject .
 
 ex:ALD-1-exp-creation a obj:CreationEvent ;
-                rdfs:label "Creation event of 'Carta nautica'"@en ;
                 obj:createsWork ex:ALD-1-work ;
                 obj:createsExpression ex:ALD-1-exp ;
                 obj:createsManifestation ex:ALD-1-man .
@@ -84,16 +94,24 @@ ex:ALD-1-exp a obj:Expression ;
 
 ex:ALD-1-man a obj:Manifestation .
 
-ex:sub-europa a obj:Subject .
+ex:ALD-1-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:ALD-1-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
 
-ex:sub-africa a obj:Subject .
+ex:sub-europa a obj:Concept ;
+    obj:hasType obj:subject .
 
-ex:sub-asia a obj:Subject .
+ex:sub-africa a obj:Concept ;
+    obj:hasType obj:subject .
 
-ex:sub-mar-mediterraneo a obj:Subject .
+ex:sub-asia a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-mar-mediterraneo a obj:Concept ;
+    obj:hasType obj:subject .
 
 ex:ALD-7-exp-creation a obj:CreationEvent ;
-                rdfs:label "Creation event of 'Profilo incompleto delle coste del continente americano'"@en ;
                 obj:createsWork ex:ALD-7-work ;
                 obj:createsExpression ex:ALD-7-exp ;
                 obj:createsManifestation ex:ALD-7-man .
@@ -117,13 +135,20 @@ ex:ALD-7-exp a obj:Expression ;
 
 ex:ALD-7-man a obj:Manifestation .
 
+ex:ALD-7-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:ALD-7-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
 ex:atlante-nautico a obj:ParentWork ;
                 obj:hasMember ex:ALD-7-work ;
                 obj:hasType obj:marine-chart .
 
-ex:sub-amerigo-vespucci a obj:Subject .
+ex:sub-amerigo-vespucci a obj:Concept ;
+    obj:hasType obj:subject .
 
-ex:sub-america a obj:Subject .
+ex:sub-america a obj:Concept ;
+    obj:hasType obj:subject .
 
 ex:ALD-PTa-exp-creation a obj:CreationEvent ;
                 obj:createsWork ex:ALD-PTa-work ;
@@ -138,6 +163,11 @@ ex:ALD-PTa-man a obj:Manifestation ;
                 obj:isComposedOf ex:ALD-PTa-1-man , 
                                  ex:ALD-PTa-2-man .
 
+ex:ALD-PTa-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:ALD-PTa-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
 ex:ALD-PTa-1-exp-creation a obj:CreationEvent ;
                 obj:createsWork ex:ALD-PTa-1-work ;
                 obj:createsExpression ex:ALD-PTa-1-exp ;
@@ -148,6 +178,11 @@ ex:ALD-PTa-1-work a obj:Work .
 ex:ALD-PTa-1-exp a obj:Expression .
 
 ex:ALD-PTa-1-man a obj:Manifestation .
+
+ex:ALD-PTa-1-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:ALD-PTa-1-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
 
 ex:ALD-PTa-2-exp-creation a obj:CreationEvent ;
                 obj:createsWork ex:ALD-PTa-2-work ;
@@ -160,6 +195,11 @@ ex:ALD-PTa-2-exp a obj:Expression .
 
 ex:ALD-PTa-2-man a obj:Manifestation .
 
+ex:ALD-PTa-2-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:ALD-PTa-2-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
 ex:ALD-PTa-3-exp-creation a obj:CreationEvent ;
                 obj:createsWork ex:ALD-PTa-3-work ;
                 obj:createsExpression ex:ALD-PTa-3-exp ;
@@ -171,3 +211,8 @@ ex:ALD-PTa-3-exp a obj:Expression .
 
 ex:ALD-PTa-3-man a obj:Manifestation ;
                     obj:depicts ex:ALD-PTa-man .
+
+ex:ALD-PTa-3-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:ALD-PTa-3-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .

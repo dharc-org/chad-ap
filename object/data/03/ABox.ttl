@@ -10,58 +10,45 @@
 @base <http://purl.org/changes/object/data/03/> .
 
 <https://purl.org/changes/object/data/03/> rdf:type owl:Ontology ;
-                                                        owl:imports <https://purl.org/changes/object/model/> .
+    owl:imports <https://purl.org/changes/object/model/> .
 
 
 ex:ALD-L1-curation a crm:E87_Curation_Activity ;
-                rdfs:label "Curation event of 'Amerigo Vespucci sveglia l America'"@en ;
-                crm:P147_curated ex:nova-reperta ;
-                crm:P14_carried_out_by ex:rijksmuseum ;
-                crm:P12_occurred_in_the_presence_of ex:ALD-L1-man .
+    crm:P147_curated ex:nova-reperta ;
+    crm:P14_carried_out_by ex:rijksmuseum ;
+    crm:P12_occurred_in_the_presence_of ex:ALD-L1-man .
 
 ex:ALD-L1-man a frbroo:F4_Manifestation_Singleton ;
-                rdfs:label "Amerigo Vespucci sveglia l'America"@en ;
-                crm:P74_has_current_or_former_residence ex:rijksmuseum .
+    crm:P74_has_current_or_former_residence ex:rijksmuseum .
 
-ex:nova-reperta a crm:E78_Curated_Holding ;
-                rdfs:label "Nova Reperta" .
+ex:nova-reperta a crm:E78_Curated_Holding .
 
 ex:rijksmuseum a crm:E39_Actor ;
-                rdfs:label "Rijksmuseum" ;
-                crm:P74_has_current_or_former_residence ex:amsterdam .
+    crm:P74_has_current_or_former_residence ex:amsterdam .
 
-ex:amsterdam a crm:E53_Place ;
-               rdfs:label "Amsterdam" .
+ex:amsterdam a crm:E53_Place .
 
 ex:ALD-1-curation a crm:E87_Curation_Activity ;
-                rdfs:label "Curation event of 'Panthera leo (Linnaeus, 1758)'"@en ;
-                crm:P147_curated ex:collezione-di-zoologia ;
-                crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
-                crm:P12_occurred_in_the_presence_of ex:ALD-1-man .
+    crm:P147_curated ex:collezione-di-zoologia ;
+    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
+    crm:P12_occurred_in_the_presence_of ex:ALD-1-man .
 
 ex:ALD-1-man a frbroo:F4_Manifestation_Singleton ;
-                rdfs:label "Panthera leo (Linnaeus, 1758)"@en ;
-                crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
+    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
 
-ex:collezione-di-zoologia a crm:E78_Curated_Holding ;
-                rdfs:label "Collezione di Zoologia" .
+ex:collezione-di-zoologia a crm:E78_Curated_Holding .
 
 ex:sistema-museale-di-ateneo a crm:E39_Actor ;
-                rdfs:label "Sistema museale di Ateneo" ;
-                crm:P74_has_current_or_former_residence ex:bologna .
+    crm:P74_has_current_or_former_residence ex:bologna .
 
-ex:bologna a crm:E53_Place ;
-               rdfs:label "Bologna" .
+ex:bologna a crm:E53_Place .
 
 ex:ALD-14-curation a crm:E87_Curation_Activity ;
-                rdfs:label "Curation event of 'Limulus polyphemus (Linnaeus, 1758)'"@en ;
-                crm:P147_curated ex:collezione-di-anatomia-comparata ;
-                crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
-                crm:P12_occurred_in_the_presence_of ex:ALD-14-man .
+    crm:P147_curated ex:collezione-di-anatomia-comparata ;
+    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
+    crm:P12_occurred_in_the_presence_of ex:ALD-14-man .
 
 ex:ALD-14-man a frbroo:F4_Manifestation_Singleton ;
-                rdfs:label "Limulus polyphemus (Linnaeus, 1758)"@en ;
-                crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
+    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
 
-ex:collezione-di-anatomia-comparata a crm:E78_Curated_Holding ;
-                rdfs:label "Collezione di Anatomia comparata" .
+ex:collezione-di-anatomia-comparata a crm:E78_Curated_Holding .

@@ -10,93 +10,79 @@
 @base <http://purl.org/changes/object/data/01/> .
 
 <https://purl.org/changes/object/data/01/> rdf:type owl:Ontology ;
-                                                        owl:imports <https://purl.org/changes/object/model/> .
+    owl:imports <https://purl.org/changes/object/model/> .
 
 
 ex:ALD-L1-exp-creation-00 a frbroo:F28_Expression_Creation ;
-                rdfs:label "Creation event of 'Amerigo Vespucci sveglia l America'"@en ;
-                frbroo:R17_created ex:ALD-L1-exp ;
-                crm:P32_used_general_technique aat:300053225 ;
-                crm:P9_consists_of ex:ALD-L1-exp-creation-01 ,
-                               ex:ALD-L1-exp-creation-02 ,
-                               ex:ALD-L1-exp-creation-03 .
+    frbroo:R17_created ex:ALD-L1-exp ;
+    crm:P32_used_general_technique aat:300053225 ;
+    crm:P9_consists_of ex:ALD-L1-exp-creation-01 ,
+        ex:ALD-L1-exp-creation-02 ,
+        ex:ALD-L1-exp-creation-03 .
 
 ex:ALD-L1-exp-creation-01 a crm:E7_Activity ;
-                crm:P2_has_type aat:300054200 ;
-                crm:P14_carried_out_by ex:jan-van-der-straet .
+    crm:P2_has_type aat:300054200 ;
+    crm:P14_carried_out_by ex:jan-van-der-straet .
 
 ex:ALD-L1-exp-creation-02 a crm:E7_Activity ;
-                crm:P2_has_type aat:300053225 ;
-                crm:P14_carried_out_by ex:philip-galle ,
-                                   ex:theodor-galle ,
-                                   ex:jan-collaert .
+    crm:P2_has_type aat:300053225 ;
+    crm:P14_carried_out_by ex:philip-galle ,
+        ex:theodor-galle ,
+        ex:jan-collaert .
 
 ex:ALD-L1-exp-creation-03 a crm:E7_Activity ;
-                crm:P2_has_type aat:300417639 ;
-                crm:P14_carried_out_by ex:luigi-alamanni .
+    crm:P2_has_type aat:300417639 ;
+    crm:P14_carried_out_by ex:luigi-alamanni .
 
-ex:ALD-L1-exp a frbroo:F2_Expression ;
-                rdfs:label "Amerigo Vespucci sveglia l'America"@en .
+ex:ALD-L1-exp a frbroo:F2_Expression .
 
 ex:jan-van-der-straet a crm:E39_Actor ;
-                rdfs:label "Jan van der Straet" ;
-                owl:sameAs <http://vocab.getty.edu/page/ulan/500011304> .
+    owl:sameAs <http://vocab.getty.edu/page/ulan/500011304> .
 
-ex:philip-galle a crm:E39_Actor ;
-                rdfs:label "Philip Galle" .
+ex:philip-galle a crm:E39_Actor .
 
-ex:theodor-galle a crm:E39_Actor ;
-                rdfs:label "Theodor Galle" .
+ex:theodor-galle a crm:E39_Actor .
 
-ex:jan-collaert a crm:E39_Actor ;
-                rdfs:label "Jan Collaert" .
+ex:jan-collaert a crm:E39_Actor .
 
-ex:luigi-alamanni a crm:E39_Actor ;
-                rdfs:label "Luigi Alamanni" .
+ex:luigi-alamanni a crm:E39_Actor .
 
 ex:ALD-35-exp-creation-00 a frbroo:F28_Expression_Creation ;
-                rdfs:label "Creation event of 'De plantis epitome utilissima'"@en ;
-                crm:P32_used_general_technique aat:300015045 ;
-                frbroo:R17_created ex:ALD-35-exp ;
-                crm:P9_consists_of ex:ALD-35-exp-creation-01 ,
-                               ex:ALD-35-exp-creation-02 .
+    crm:P32_used_general_technique aat:300015045 ;
+    frbroo:R17_created ex:ALD-35-exp ;
+    crm:P9_consists_of ex:ALD-35-exp-creation-01 ,
+        ex:ALD-35-exp-creation-02 .
 
-ex:ALD-35-exp a frbroo:F2_Expression ;
-                rdfs:label "De plantis epitome utilissima"@en .
+ex:ALD-35-exp a frbroo:F2_Expression .
 
 ex:ALD-35-exp-creation-01 a crm:E7_Activity ;
-                crm:P2_has_type aat:300069831 ;
-                crm:P14_carried_out_by ex:pietro-andrea-mattioli .
+    crm:P2_has_type aat:300069831 ;
+    crm:P14_carried_out_by ex:pietro-andrea-mattioli .
 
 ex:ALD-35-exp-creation-02 a crm:E7_Activity ;
-                crm:P2_has_type aat:300054200 ;
-                crm:P14_carried_out_by ex:pietro-andrea-mattioli .
+    crm:P2_has_type aat:300054200 ;
+    crm:P14_carried_out_by ex:pietro-andrea-mattioli .
 
 ex:pietro-andrea-mattioli a crm:E39_Actor ;
-                rdfs:label "Pietro Andrea Mattioli" ;
-                owl:sameAs <http://viaf.org/viaf/61549376> .
+    owl:sameAs <http://viaf.org/viaf/61549376> .
 
 ex:ALD-24-exp-creation-00 a frbroo:F28_Expression_Creation ;
-                rdfs:label "Creation event of 'Panthera onca (Linnaeus, 1758)'"@en ;
-                frbroo:R17_created ex:ALD-24-exp ;
-                crm:P32_used_general_technique aat:300053628 ;
-                crm:P9_consists_of ex:ALD-24-exp-creation-01 ,
-                               ex:ALD-24-exp-creation-02 .
+    frbroo:R17_created ex:ALD-24-exp ;
+    crm:P32_used_general_technique aat:300053628 ;
+    crm:P9_consists_of ex:ALD-24-exp-creation-01 ,
+        ex:ALD-24-exp-creation-02 .
 
-ex:ALD-24-exp a frbroo:F2_Expression ;
-                rdfs:label "Panthera onca (Linnaeus, 1758)"@en .
+ex:ALD-24-exp a frbroo:F2_Expression .
 
 ex:ALD-24-exp-creation-01 a crm:E7_Activity ;
-                crm:P2_has_type aat:300404386 ;
-                crm:P14_carried_out_by ex:carl-linnaeus .
+    crm:P2_has_type aat:300404386 ;
+    crm:P14_carried_out_by ex:carl-linnaeus .
 
 ex:ALD-24-exp-creation-02 a crm:E7_Activity ;
-                crm:P2_has_type aat:300077565 ;
-                crm:P14_carried_out_by ex:naturaliter .
+    crm:P2_has_type aat:300077565 ;
+    crm:P14_carried_out_by ex:naturaliter .
 
 ex:carl-linnaeus a crm:E39_Actor ;
-                rdfs:label "Carl Linnaeus" ;
-                owl:sameAs <http://viaf.org/viaf/34594730> .
+    owl:sameAs <http://viaf.org/viaf/34594730> .
 
-ex:naturaliter a crm:E39_Actor ;
-                rdfs:label "Naturaliter" .
+ex:naturaliter a crm:E39_Actor .

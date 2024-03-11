@@ -1,6 +1,6 @@
 # Formal Competency Questions
 ## CQ_5.1
-Return the `title` of the `work` `ALD-L1-work` and its `subjects`.
+What are the titles of the work `ALD-L1-work`? What are their types?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/data/05/>
@@ -17,7 +17,7 @@ WHERE {
 }
 ```
 ## CQ_5.2
-Return the `subjects` of the `works` that are not members of any `parent work`.
+What are the subjects of the works that are not part of any parent work?
 
 ```SPARQL
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 
@@ -38,7 +38,7 @@ WHERE {
 ```
 
 ## CQ_5.3
-Return the `manifestations` of the `works` which are members of `parent works` whose types is `marine charts`.
+What are the manifestations of the works which are members of parent works that are marine charts?
 
 ```SPARQL
 PREFIX aat: <http://vocab.getty.edu/page/aat/>
@@ -57,7 +57,7 @@ WHERE {
 ```
 
 ## CQ_5.4
-Return the `parent works` of the `works` that have either `europa` or `tapiro` as their `subject`.
+What are the parent works of the works that have either "Europa" or "tapiro" as their subject?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/data/05/>
@@ -78,7 +78,7 @@ FILTER (?subject IN (ex:sub-tapiro, ex:sub-europa))
 ```
 
 ## CQ_5.5
-Return the `manifestations` that compose another `manifestation`.
+What are the manifestations that compose another manifestation?
 
 ```SPARQL
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 
@@ -90,7 +90,7 @@ WHERE {
 ```
 
 ## CQ_5.6
-Return the `manifestations` that depict other `expressions`.
+What are the manifestations that depict other expressions?
 
 ```SPARQL
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 
@@ -98,5 +98,20 @@ PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 SELECT ?manifestation ?expression
 WHERE {
   ?manifestation crm:P62_depicts ?expression .
+}
+```
+
+## CQ_5.7
+What are the license statements referring to the manifestations?
+
+```SPARQL
+PREFIX aat: <http://vocab.getty.edu/page/aat/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 
+
+SELECT ?manifestation ?license_link
+WHERE {
+  ?license crm:P67_refers_to ?manifestation ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P70i_is_documented_in ?license_link .
 }
 ```

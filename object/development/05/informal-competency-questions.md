@@ -4,10 +4,10 @@
 CQ_5.1
 
 ### Question
-Return the `titles` of the `work` `ALD-L1-work` and their `types`.
+What are the titles of the work `ALD-L1-work`? What are their types?
 
 ### Expected outcome
-List of tuples: `title`, `type`, `content`
+List of: `title`, `type`, `content`
 
 ### Result
 * `ALD-L1-work-title-01`, `original-title`, "Amerigo Vespucci sveglia l'America"
@@ -23,10 +23,10 @@ Example 1
 CQ_5.2
 
 ### Question
-Return the `subjects` of the `works` that are not members of any `parent work`.
+What are the subjects of the works that are not part of any parent work?
 
 ### Expected outcome
-List of tuples: `work`, `subject`
+List of: `work`, `subject`
 
 ### Result
 * `ALD-1-work`, `sub-europa`
@@ -44,10 +44,10 @@ Example 2
 CQ_5.3
 
 ### Question
-Return the `manifestations` of the `works` which are members of `parent works` whose types is `marine charts`.
+What are the manifestations of the works which are members of parent works that are marine charts?
 
 ### Exprected outcome
-List of objects: `manifestation`
+List of: `manifestation`
 
 ### Result
 * `ALD-7-man`
@@ -62,10 +62,10 @@ Example 3
 CQ_5.4
 
 ### Question
-Return the `parent works` of the `works` that have either `europa` or `tapiro` as their `subject`.
+What are the parent works of the works that have either "Europa" or "tapiro" as their subject?
 
 ### Expected outcome
-List of triples: `parent work`, `work`, `subject`
+List of: `parent work`, `work`, `subject`
 
 ### Result
 * `nova-reperta-work`, `ALD-L1-work`, `sub-tapiro`
@@ -81,10 +81,10 @@ Example 1, Example 2, Example 3
 CQ_5.5
 
 ### Question
-Return the `manifestations` that compose another `manifestation`.
+What are the manifestations that compose another manifestation?
 
 ### Expected outcome
-List of tuples: `manifestation1`, `manifestation2`
+List of: `manifestation1`, `manifestation2`
 
 ### Result
 * `ALD-PTa-1-man`, `ALD-PTa-man`
@@ -100,13 +100,37 @@ Example 4
 CQ_5.6
 
 ### Question
-Return the `manifestations` that depict other `expressions`.
+What are the manifestations that depict other expressions?
 
 ### Expected outcome
-List of tuples: `manifestation`, `expression`
+List of: `manifestation`, `expression`
 
 ### Result
 * `ALD-PTa-3-man`, `ALD-PTa-exp`
 
 ### Based on
 Example 4
+
+***
+
+## Question 7
+### Identifier 
+CQ_5.7
+
+### Question
+What are the license statements referring to the manifestations?
+
+### Expected outcome
+List of: `manifestation`, `license_link`
+
+### Result
+* `ALD-L1-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `ALD-1-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `ALD-7-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `ALD-PTa-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `ALD-PTa-1-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `ALD-PTa-2-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `ALD-PTa-3-man`, http://rightsstatements.org/vocab/InC/1.0/
+
+### Based on
+Example 1, Example 2, Example 3, Example 4

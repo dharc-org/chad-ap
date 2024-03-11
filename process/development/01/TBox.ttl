@@ -27,6 +27,21 @@
              rdfs:label "has time span"@en .
 
 
+:hasType rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "has type"@en .
+
+
+:refersTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "refers to"@en .
+
+
+:isDocumentedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "is documented in"@en .
+
+
 #################################################################
 #    Datatype Properties
 #################################################################
@@ -68,3 +83,22 @@
 :SoftwareActivity rdf:type owl:Class ;
       rdfs:subClassOf owl:Thing ;
       rdfs:label "Software Activity"@en .
+
+
+:Document rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Document"@en .
+
+
+:Type rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Type"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+:license rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "License"@en .

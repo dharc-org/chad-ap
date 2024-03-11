@@ -1,6 +1,6 @@
 # Formal Competency Questions (Iteration 2)
 ## CQ_2.1
-Return the input (the result of the digitization process) ingested and the output (the processed digital object) produced by the processing activity, as well as the activities themselves.
+What are the digitization process, its output, the processing activity and its output?
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/process/development/02/data/>
 PREFIX process: <http://purl.org/changes/process/development/02/schema/>

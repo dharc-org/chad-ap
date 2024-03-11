@@ -4,10 +4,10 @@
 CQ_1.1
 
 ### Question
-Return the `cultural resources` whose `creation` involved some `agent` in the role of `illustration`.
+What are the cultural resources whose creation involved some illustrator?
 
 ### Expected outcome
-List of tuples: `cultural resource`, `agent`
+List of: `cultural resource`, `agent`
 
 ### Result
 * `ALD-01-exp`, `Jan van der Straet (ULAN:500011304)`
@@ -23,10 +23,10 @@ Example 1, Example 2
 CQ_1.2
 
 ### Question
-Return the `agents` and the role `types` of their respective `activities` that contributed to the `creation` of `ALD-24-exp`.
+What are the agents and the types of  activities they carried out to contribute to the creation of `ALD-24-exp`?
 
 ### Expected outcome
-List of tuples: `agent`, `type`
+List of: `agent`, `type`
 
 ### Result
 * `Carl Linnaeus (VIAF:34594730)`, `discovery`
@@ -42,10 +42,10 @@ Example 3
 CQ_1.3
 
 ### Question
-Return the `agents` involved in the `creation` of the `cultural resources` that have been created through the technique `engraving`, as well as the role `types` of the `activities` they carried out.
+What are the agents involved in the creation of the cultural resources that have been created through the engraving technique? What are  the types of the activities they carried out?
 
 ### Exprected outcome
-List of triples: `cultural resource`, `agent`, `type`
+List of: `cultural resource`, `agent`, `type`
 
 ### Result
 * `ALD-01-exp`, `Jan van der Straet (ULAN:500011304)`, `illustration`
@@ -64,7 +64,7 @@ Example 1
 CQ_1.4
 
 ### Question
-Return the `cultural resources` whose `creation` involved at least one `agent` in more than one role `type`.
+What are the cultural resources whose creation involved at least one agent carrying out more than one activity with different types?
 
 ### Expected outcome
 List of: `cultural resource`

@@ -12,54 +12,41 @@
 
 
 ex:ALD-L1-curation a obj:CurationEvent ;
-                rdfs:label "Curation event of 'Amerigo Vespucci sveglia l America'"@en ;
                 obj:curates ex:nova-reperta ;
                 obj:isCarriedOutBy ex:rijksmuseum ;
                 obj:occurredInThePresenceOf ex:ALD-L1-man .
 
 ex:ALD-L1-man a obj:CulturalResource ;
-                rdfs:label "Amerigo Vespucci sveglia l'America"@en ;
                 obj:hasCurator ex:rijksmuseum .
 
-ex:nova-reperta a obj:Collection ;
-                rdfs:label "Nova Reperta" .
+ex:nova-reperta a obj:Collection .
 
 ex:rijksmuseum a obj:Agent ;
-                rdfs:label "Rijksmuseum" ;
                 obj:hasPlace ex:amsterdam .
 
-ex:amsterdam a obj:Place ;
-               rdfs:label "Amsterdam" .
+ex:amsterdam a obj:Place .
 
 ex:ALD-1-curation a obj:CurationEvent ;
-                rdfs:label "Curation event of 'Panthera leo (Linnaeus, 1758)'"@en ;
                 obj:curates ex:collezione-di-zoologia ;
                 obj:isCarriedOutBy ex:sistema-museale-di-ateneo ;
                 obj:occurredInThePresenceOf ex:ALD-1-man .
 
 ex:ALD-1-man a obj:CulturalResource ;
-                rdfs:label "Panthera leo (Linnaeus, 1758)"@en ;
                 obj:hasCurator ex:sistema-museale-di-ateneo .
 
-ex:collezione-di-zoologia a obj:Collection ;
-                rdfs:label "Collezione di Zoologia" .
+ex:collezione-di-zoologia a obj:Collection .
 
 ex:sistema-museale-di-ateneo a obj:Agent ;
-                rdfs:label "Sistema museale di Ateneo" ;
                 obj:hasPlace ex:bologna .
 
-ex:bologna a obj:Place ;
-               rdfs:label "Bologna" .
+ex:bologna a obj:Place .
 
 ex:ALD-14-curation a obj:CurationEvent ;
-                rdfs:label "Curation event of 'Limulus polyphemus (Linnaeus, 1758)'"@en ;
                 obj:curates ex:collezione-di-anatomia-comparata ;
                 obj:isCarriedOutBy ex:sistema-museale-di-ateneo ;
                 obj:occurredInThePresenceOf ex:ALD-14-man .
 
 ex:ALD-14-man a obj:CulturalResource ;
-                rdfs:label "Limulus polyphemus (Linnaeus, 1758)"@en ;
                 obj:hasCurator ex:sistema-museale-di-ateneo .
 
-ex:collezione-di-anatomia-comparata a obj:Collection ;
-                rdfs:label "Collezione di Anatomia comparata" .
+ex:collezione-di-anatomia-comparata a obj:Collection .

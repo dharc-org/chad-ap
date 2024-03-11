@@ -4,10 +4,10 @@
 CQ_2.1
 
 ### Question
-Return all `identifiers` of the `cultural resources` with `type` `printed volume`, as well as their `types`.
+What are the identifiers of the printed volumes? What are their types?
 
 ### Expected outcome
-List of triples: `cultural resource`, `identifier`, `type`
+List of: `cultural resource`, `identifier`, `type`
 
 ### Result
 * `ALD-05-exp`, "ALD-05", `project id`
@@ -24,10 +24,10 @@ Example 2
 CQ_2.2
 
 ### Question
-Return the `identifier` with `type` `shelf mark` of the `cultural resource` with an `identifier` with `type` `project id` equal to "ALD-45".
+What is the shelf mark of the cultural resource with the project ID "ALD-45"?
 
 ### Expected outcome
-List of strings
+List of `identifier text`
 
 ### Result
 * "Erbario Aldrovandi, vol.13, carta 77"
@@ -42,10 +42,10 @@ Example 3
 CQ_2.3
 
 ### Question
-Return the `descriptive labels` of the `cultural resources` that either have `identifiers` with `type` `shelf mark` or have `type` `print`.
+What are the descriptive labels of the cultural resources that either have shelf marks or are prints?
 
 ### Exprected outcome
-List of tuples: `cultural resource`, `descriptive label`
+List of: `cultural resource`, `descriptive label`
 
 ### Result
 * `ALD-01-exp`, "Amerigo Vespucci sveglia l’America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 – c.1593, Antwerp Amsterdam, Rijksmuseum"

@@ -1,6 +1,6 @@
 # Formal Competency Questions
 ## CQ_2.1
-Return all `identifiers` of the `cultural resources` with `type` `printed volume`, as well as their `types`.
+What are the identifiers of the printed volumes? What are their types?
 
 ```SPARQL
 PREFIX aat: <http://vocab.getty.edu/page/aat/>
@@ -17,7 +17,7 @@ WHERE {
 }
 ```
 ## CQ_2.2
-Return the `identifier` with `type` `shelf mark` of the `cultural resource` with an `identifier` with `type` `project id` equal to "ALD-45".
+What is the shelf mark of the cultural resource with the project ID "ALD-45"?
 
 ```SPARQL
 PREFIX aat: <http://vocab.getty.edu/page/aat/>
@@ -29,7 +29,7 @@ WHERE {
     ?resource a frbroo:F4_Manifestation_Singleton ;
     crm:P48_has_preferred_identifier ?identifier1 ,
                       ?identifier2 .
-    ?identifier1 crm:P2_has_type aat:300404012 ;
+    ?identifier1 crm:P2_has_type aat:300312355 ;
                  crm:P190_has_symbolic_content "ALD-45" .
     ?identifier2 crm:P2_has_type aat:300404704 ;
                  crm:P190_has_symbolic_content ?identifier_text.
@@ -37,7 +37,7 @@ WHERE {
 ```
 
 ## CQ_2.3
-Return the `descriptive labels` of the `cultural resources` that either have `identifiers` with `type` `shelf mark` or have `type` `print`.
+What are the descriptive labels of the cultural resources that either have shelf marks or are prints?
 
 ```SPARQL
 PREFIX aat: <http://vocab.getty.edu/page/aat/>

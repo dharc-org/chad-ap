@@ -4,7 +4,7 @@
 CQ_3.1
 
 ### Question
-Return the `cultural resources` whose `collections` have been curated by `curation events` carried out by `agents` located in `Bologna`.
+What are the cultural resources whose collections have been curated during curation events carried out by agents located in Bologna?
 
 ### Expected outcome
 List of triples: `cultural resource`, `collection`, `agent`
@@ -23,7 +23,7 @@ Example 2, Example 3
 CQ_3.2
 
 ### Question
-Return all `collections` curated by `curation events` carried out by `Rijksmuseum`.
+What are the collections curated during curation events carried out by the Rijksmuseum?
 
 ### Expected outcome
 List of objects: `collection`

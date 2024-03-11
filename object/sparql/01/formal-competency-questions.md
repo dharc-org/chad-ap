@@ -1,6 +1,6 @@
 # Formal Competency Questions
 ## CQ_1.1
-Return the `cultural resources` whose `creation` involved some `agent` in the role of `illustration`.
+What are the cultural resources whose creation involved some illustrator?
 
 ```SPARQL
 PREFIX aat: <http://vocab.getty.edu/page/aat/>
@@ -18,7 +18,7 @@ WHERE {
 ```
 
 ## CQ_1.2
-Return the `agents` and the role `types` of their respective `activities` that contributed to the `creation` of `ALD-24-exp`.
+What are the agents and the types of  activities they carried out to contribute to the creation of `ALD-24-exp`?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/data/01/>
@@ -36,7 +36,7 @@ WHERE {
 ```
 
 ## CQ_1.3
-Return the `agents` involved in the `creation` of the `cultural resources` that have been created through the technique `engraving`, as well as the role `types` of the `activities` they carried out.
+What are the agents involved in the creation of the cultural resources that have been created through the engraving technique? What are  the types of the activities they carried out?
 
 ```SPARQL
 PREFIX aat: <http://vocab.getty.edu/page/aat/>
@@ -55,7 +55,7 @@ WHERE {
 ```
 
 ## CQ_1.4
-Return the `cultural resources` whose `creation` involved at least one `agent` in more than one role `type`.
+What are the cultural resources whose creation involved at least one agent carrying out more than one activity with different types?
 
 ```SPARQL
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 

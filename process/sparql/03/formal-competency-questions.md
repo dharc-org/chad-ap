@@ -13,7 +13,7 @@ WHERE {
 }
 ```
 ## CQ_3.2
-Return the tools and their types used in processing activities.
+What are the tools and their types used in processing activities?
 
 ```SPARQL
 PREFIX aat: <http://vocab.getty.edu/page/aat/>

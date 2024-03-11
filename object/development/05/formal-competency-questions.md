@@ -1,23 +1,22 @@
 # Formal Competency Questions
 ## CQ_5.1
-Return the `title` of the `work` `ALD-L1-work` and its `subjects`.
+What are the titles of the work `ALD-L1-work`? What are their types?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/development/05/data/>
 PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
 
-SELECT ?title ?subject
+SELECT ?title ?type ?content
 WHERE {
     ?creation a obj:CreationEvent ;
-              obj:createsWork ex:ALD-L1-work ;
-              obj:createsExpression ?expression .
+              obj:createsWork ex:ALD-L1-work .
     ex:ALD-L1-work obj:hasTitle ?title .
-    ?expression a obj:Expression ;
-                obj:isAbout ?subject .
+    ?title obj:hasType ?type ;
+        obj:hasContent ?content .
 }
 ```
 ## CQ_5.2
-Return the `subjects` of the `works` that are not members of any `parent work`.
+What are the subjects of the works that are not part of any parent work?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/development/05/data/>
@@ -38,7 +37,7 @@ WHERE {
 ```
 
 ## CQ_5.3
-Return the `manifestations` of the `works` which are members of `parent works` whose types is `marine charts`.
+What are the manifestations of the works which are members of parent works that are marine charts?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/development/05/data/>
@@ -56,7 +55,7 @@ WHERE {
 ```
 
 ## CQ_5.4
-Return the `parent works` of the `works` that have either `europa` or `tapiro` as their `subject`.
+What are the parent works of the works that have either "Europa" or "tapiro" as their subject?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/development/05/data/>
@@ -78,7 +77,7 @@ WHERE {
 ```
 
 ## CQ_5.5
-Return the `manifestations` that compose another `manifestation`.
+What are the manifestations that compose another manifestation?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/development/05/data/>
@@ -91,7 +90,7 @@ WHERE {
 ```
 
 ## CQ_5.6
-Return the `manifestations` that depict other `expressions`.
+What are the manifestations that depict other expressions?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/development/05/data/>
@@ -100,5 +99,20 @@ PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
 SELECT ?manifestation ?expression
 WHERE {
   ?manifestation obj:depicts ?expression .
+}
+```
+
+## CQ_5.7
+What are the license statements referring to the manifestations?
+
+```SPARQL
+PREFIX ex: <http://purl.org/changes/object/development/05/data/>
+PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
+
+SELECT ?manifestation ?license_link
+WHERE {
+  ?license obj:refersTo ?manifestation ;
+    obj:hasType obj:license ;
+    obj:isDocumentedIn ?license_link .
 }
 ```

@@ -7,4 +7,4 @@ An object or cultural resource that is part of Aldrovandi's exhibition is concep
 * `frbroo:F4_Manifestation_Singleton` (the object itself). It is characterized by a series of descriptive components, such as descriptive labels, types (`crm:E55_Type`) and identifiers (`crm:E42_Identifier`). When applicable, it is also related to a curation activity (`crm:E87_Curation_Activity`) carried out by a keeper (`crm:E39_Actor`), who curates a collection (`crm:E78_Curated_Holding`) the object is part of, located in a certain place (`crm:E53_Place`). A Manifestation can be composed of other Manifestations and can also depict the Expression of another object that is somehow related to it (e.g. a video displaying a manuscript is a Manifestation that is depicting another object's Expression; a tablet displaying the picture of a speciment is a Manifestation that is depicting another object's Expression; and so on).
 
 ## Complete model
-![Final model](final-model.png)
+![Final graph](final-graph.png)

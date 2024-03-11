@@ -1,6 +1,6 @@
 # Formal Competency Questions
 ## CQ_3.1
-Return the `cultural resources` whose `collections` have been curated by `curation events` carried out by `agents` located in `Bologna`.
+What are the cultural resources whose collections have been curated during curation events carried out by agents located in Bologna?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/data/03/>
@@ -17,7 +17,7 @@ WHERE {
 ```
 
 ## CQ_3.2
-Return all `collections` curated by `curation events` carried out by `Rijksmuseum`.
+What are the collections curated during curation events carried out by the Rijksmuseum?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/data/03/>

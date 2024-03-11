@@ -6,10 +6,10 @@
 CQ_3.1
 
 ### Question
-Return the techniques used in digitization processes.
+What are the techniques used in digitization processes?
 
 ### Expected outcome
-A list of tuples.
+A list of: `digitization`, `technique`
 
 ### Result
 * `ALD-15-acq`, `structured-light-scanning`
@@ -25,10 +25,10 @@ Example 1
 CQ_3.2
 
 ### Question
-Return the tools and their types used in processing activities.
+What are the tools and their types used in processing activities?
 
 ### Expected outcome
-A list of tuples.
+A list of: `tool`, `tool_type`
 
 ### Result
 * `artec-studio-14`, `3d-scanning-and-processing-software`

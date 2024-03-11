@@ -1,6 +1,6 @@
 # Formal Competency Questions
 ## CQ_4.1
-Return all `cultural resources` and both the beginning and the end time of the `time interval` of their `conception events`.
+What are the cultural resources and the time spans of their conception events?.
 
 ```SPARQL
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 
@@ -17,7 +17,7 @@ WHERE {
 ```
 
 ## CQ_4.2
-Return the `agents` who carried out the `conception` of a `cultural resource` in a `time interval` that comprises "1590".
+What are the agents who carried out the conception of a cultural resource in a time interval that includes the year 1590?
 
 ```SPARQL
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 

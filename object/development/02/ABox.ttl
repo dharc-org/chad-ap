@@ -11,22 +11,18 @@
                                                         owl:imports <http://purl.org/changes/object/development/02/schema/> .
 
 ex:ALD-01-exp-creation-00 a obj:CreationEvent ;
-                rdfs:label "Creation event of 'Amerigo Vespucci sveglia l America'"@en ;
                 obj:creates ex:ALD-01-man .
 
 ex:ALD-01-man a obj:CulturalResource ;
                 obj:hasIdentifier ex:ALD-01-identifier-0 ;
                 obj:hasType obj:print ;
-                obj:hasLabel "Amerigo Vespucci sveglia l'America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum" ;
-                rdfs:label "Amerigo Vespucci sveglia l'America"@en .
+                obj:hasLabel "Amerigo Vespucci sveglia l'America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum" .
 
 ex:ALD-01-identifier-0 a obj:Identifier ;
-                rdfs:label "ALD-01" ;
                 obj:hasContent "ALD-01" ;
                 obj:hasType obj:changes-id .
 
 ex:ALD-05-exp-creation-00 a obj:CreationEvent ;
-                rdfs:label "Creation event of 'De Historia Animalium lib. 9'"@en ;
                 obj:creates ex:ALD-05-man .
 
 ex:ALD-05-man a obj:CulturalResource ;
@@ -34,26 +30,21 @@ ex:ALD-05-man a obj:CulturalResource ;
                                   ex:ALD-05-identifier-1 ,
                                   ex:ALD-05-identifier-2 ;
                 obj:hasType obj:printed-volume ;
-                obj:hasLabel "Aristoteles De Historia Animalium lib. 9 Venezia, Girolamo Scoto, 1545 BUB, A.V.GG.VII.28" ;
-                rdfs:label "De Historia Animalium lib. 9"@en .
+                obj:hasLabel "Aristoteles De Historia Animalium lib. 9 Venezia, Girolamo Scoto, 1545 BUB, A.V.GG.VII.28" .
 
 ex:ALD-05-identifier-0 a obj:Identifier ;
-                rdfs:label "ALD-05" ;
                 obj:hasContent "ALD-05" ;
                 obj:hasType obj:changes-id .
 
 ex:ALD-05-identifier-1 a obj:Identifier ;
-                rdfs:label "9" ;
                 obj:hasContent "9" ;
                 obj:hasType obj:volume-number .
 
 ex:ALD-05-identifier-2 a obj:Identifier ;
-                rdfs:label "A.V.GG.VII.28" ;
                 obj:hasContent "A.V.GG.VII.28" ;
                 obj:hasType obj:shelf-mark .
 
 ex:ALD-45-exp-creation-00 a obj:CreationEvent ;
-                rdfs:label "Creation event of 'Dryas octopetala L.'"@en ;
                 obj:creates ex:ALD-45-man .
 
 ex:ALD-45-man a obj:CulturalResource ;
@@ -61,21 +52,17 @@ ex:ALD-45-man a obj:CulturalResource ;
                                   ex:ALD-45-identifier-1 ,
                                   ex:ALD-45-identifier-2 ;
                 obj:hasType obj:specimen ;
-                obj:hasLabel "Dryas octopetala L. Camedrio alpino Mountain avens Erbario Aldrovandi, vol.13, carta 77 sec. XVI 16th century Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo" ;
-                rdfs:label "Dryas octopetala L."@en .
+                obj:hasLabel "Dryas octopetala L. Camedrio alpino Mountain avens Erbario Aldrovandi, vol.13, carta 77 sec. XVI 16th century Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo" .
 
 ex:ALD-45-identifier-0 a obj:Identifier ;
-                rdfs:label "ALD-45" ;
                 obj:hasContent "ALD-45" ;
                 obj:hasType obj:changes-id .
 
 ex:ALD-45-identifier-1 a obj:Identifier ;
-                rdfs:label "13" ;
                 obj:hasContent "13" ;
                 obj:hasType obj:volume-number .
 
 ex:ALD-45-identifier-2 a obj:Identifier ;
-                rdfs:label "Erbario Aldrovandi, vol.13, carta 77" ;
                 obj:hasContent "Erbario Aldrovandi, vol.13, carta 77" ;
                 obj:hasType obj:shelf-mark .
 

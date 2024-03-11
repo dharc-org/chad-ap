@@ -1,16 +1,19 @@
 # Formal Competency Questions (Iteration 1)
 ## CQ_1.1
-Return the input (the cultural object) ingested and the output (the digital object) produced by the Digitization Process, as well as the activity itself.
+What is the cultural object digitized and the digital object produced by the digitization process? What is the latter's license?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/process/development/01/data/>
 PREFIX process: <http://purl.org/changes/process/development/01/schema/>
 
-SELECT ?input ?output ?activity
+SELECT ?input ?output ?license_link
 WHERE {
     ?activity a process:DigitizationProcess ;
-    process:digitizes ?input ;
-    process:hasOutput ?output .
+        process:digitizes ?input ;
+        process:hasOutput ?output .
+    ?license process:hasType process:license ;
+        process:refersTo ?output ;
+        process:isDocumentedIn ?license_link .
 }
 ```
 

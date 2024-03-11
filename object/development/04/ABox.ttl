@@ -12,7 +12,6 @@
 
 
 ex:ALD-L1-work-conception a obj:ConceptionEvent ;
-                rdfs:label "Conception event of 'Amerigo Vespucci sveglia l America'"@en ;
                 obj:initiates ex:ALD-L1-work ;
                 obj:isCarriedOutBy ex:jan-van-der-straet ;
                 obj:hasTimeInterval ex:1589-1593 .            
@@ -21,15 +20,12 @@ ex:1589-1593 a obj:TimeInterval ;
                 obj:hasBeginning "1589-01-01" ;
                 obj:hasEnd "1593-12-31" .
 
-ex:ALD-L1-work a obj:CulturalResource ;
-                rdfs:label "Amerigo Vespucci sveglia l'America"@en .
+ex:ALD-L1-work a obj:CulturalResource .
 
 ex:jan-van-der-straet a obj:Agent ;
-                rdfs:label "Jan van der Straet" ;
                 owl:sameAs <http://vocab.getty.edu/page/ulan/500011304> .
 
 ex:ALD-1-work-conception a obj:ConceptionEvent ;
-                rdfs:label "Conception event of 'Carta nautica'"@en ;
                 obj:initiates ex:ALD-1-work ;
                 obj:isCarriedOutBy ex:grazioso-benincasa ;
                 obj:hasTimeInterval ex:1482 .            
@@ -38,15 +34,12 @@ ex:1482 a obj:TimeInterval ;
                 obj:hasBeginning "1482-01-01" ;
                 obj:hasEnd "1482-12-31" .
 
-ex:ALD-1-work a obj:CulturalResource ;
-                rdfs:label "Carta nautica"@en .
+ex:ALD-1-work a obj:CulturalResource .
 
 ex:grazioso-benincasa a obj:Agent ;
-                rdfs:label "Grazioso Benincasa" ;
                 owl:sameAs <http://vocab.getty.edu/page/ulan/500114874> .
 
 ex:ALD-26-work-conception a obj:ConceptionEvent ;
-                rdfs:label "Conception event of 'Chrysanthemi'"@en ;
                 obj:initiates ex:ALD-26-work ;
                 obj:isCarriedOutBy ex:ulisse-aldrovandi ;
                 obj:hasTimeInterval ex:1500-1599 .            
@@ -55,9 +48,7 @@ ex:1500-1599 a obj:TimeInterval ;
                 obj:hasBeginning "1500-01-01" ;
                 obj:hasEnd "1599-12-31" .
 
-ex:ALD-26-work a obj:CulturalResource ;
-                rdfs:label "Carta nautica"@en .
+ex:ALD-26-work a obj:CulturalResource .
 
 ex:ulisse-aldrovandi a obj:Agent ;
-                rdfs:label "Ulisse Aldrovandi" ;
                 owl:sameAs <http://viaf.org/viaf/100190422> .

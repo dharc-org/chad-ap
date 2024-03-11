@@ -1,16 +1,21 @@
 # Formal Competency Questions
 
 ## CQ_1.1
-Return the input (the cultural object) ingested and the output (the digital object) produced by the digitization process, as well as the activity itself.
+What is the cultural object digitized and the digital object produced by the digitization process? What is the latter's license?
 
 ```SPARQL
-PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/> 
+PREFIX aat: <http://vocab.getty.edu/page/aat/>
+PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 
-SELECT ?input ?output ?activity
+SELECT ?input ?output ?license_link
 WHERE {
     ?activity a crmdig:D2_Digitization_Process ;
         crmdig:L1_digitized ?input ;
         crmdig:L11_had_output ?output .
+    ?license crm:P2_has_type aat:300027759 ;
+        crm:P67_refers_to ?output ;
+        crm:P70i_is_documented_in ?license_link .
 }
 ```
 

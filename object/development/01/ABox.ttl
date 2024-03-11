@@ -11,7 +11,6 @@
                                                         owl:imports <http://purl.org/changes/object/development/01/schema/> .
 
 ex:ALD-01-exp-creation-00 a obj:CreationEvent ;
-                rdfs:label "Creation event of 'Amerigo Vespucci sveglia l America'"@en ;
                 obj:creates ex:ALD-01-exp ;
                 obj:usesTechnique obj:engraving ;
                 obj:consistsOf ex:ALD-01-exp-creation-01 ,
@@ -32,34 +31,26 @@ ex:ALD-01-exp-creation-03 a obj:Activity ;
                 obj:hasType obj:commission ;
                 obj:isCarriedOutBy ex:luigi-alamanni .
 
-ex:ALD-01-exp a obj:CulturalResource ;
-                rdfs:label "Amerigo Vespucci sveglia l'America"@en .
+ex:ALD-01-exp a obj:CulturalResource .
 
 ex:jan-van-der-straet a obj:Agent ;
-                rdfs:label "Jan van der Straet" ;
                 owl:sameAs <http://vocab.getty.edu/page/ulan/500011304> .
 
-ex:philip-galle a obj:Agent ;
-                rdfs:label "Philip Galle" .
+ex:philip-galle a obj:Agent .
 
-ex:theodor-galle a obj:Agent ;
-                rdfs:label "Theodor Galle" .
+ex:theodor-galle a obj:Agent .
 
-ex:jan-collaert a obj:Agent ;
-                rdfs:label "Jan Collaert" .
+ex:jan-collaert a obj:Agent .
 
-ex:luigi-alamanni a obj:Agent ;
-                rdfs:label "Luigi Alamanni" .
+ex:luigi-alamanni a obj:Agent .
 
 ex:ALD-35-exp-creation-00 a obj:CreationEvent ;
-                rdfs:label "Creation event of 'De plantis epitome utilissima'"@en ;
                 obj:usesTechnique obj:watercolor ;
                 obj:creates ex:ALD-35-exp ;
                 obj:consistsOf ex:ALD-35-exp-creation-01 ,
                                ex:ALD-35-exp-creation-02 .
 
-ex:ALD-35-exp a obj:CulturalResource ;
-                rdfs:label "De plantis epitome utilissima"@en .
+ex:ALD-35-exp a obj:CulturalResource .
 
 ex:ALD-35-exp-creation-01 a obj:Activity ;
                 obj:hasType obj:translation ;
@@ -70,18 +61,15 @@ ex:ALD-35-exp-creation-02 a obj:Activity ;
                 obj:isCarriedOutBy ex:pietro-andrea-mattioli .
 
 ex:pietro-andrea-mattioli a obj:Agent ;
-                rdfs:label "Pietro Andrea Mattioli" ;
                 owl:sameAs <http://viaf.org/viaf/61549376> .
 
 ex:ALD-24-exp-creation-00 a obj:CreationEvent ;
-                rdfs:label "Creation event of 'Panthera onca (Linnaeus, 1758)'"@en ;
                 obj:creates ex:ALD-24-exp ;
                 obj:usesTechnique obj:taxidermy ;
                 obj:consistsOf ex:ALD-24-exp-creation-01 ,
                                ex:ALD-24-exp-creation-02 .
 
-ex:ALD-24-exp a obj:CulturalResource ;
-                rdfs:label "Panthera onca (Linnaeus, 1758)"@en .
+ex:ALD-24-exp a obj:CulturalResource .
 
 ex:ALD-24-exp-creation-01 a obj:Activity ;
                 obj:hasType obj:discovery ;
@@ -92,8 +80,6 @@ ex:ALD-24-exp-creation-02 a obj:Activity ;
                 obj:isCarriedOutBy ex:naturaliter .
 
 ex:carl-linnaeus a obj:Agent ;
-                rdfs:label "Carl Linnaeus" ;
                 owl:sameAs <http://viaf.org/viaf/34594730> .
 
-ex:naturaliter a obj:Agent ;
-                rdfs:label "Naturaliter" .
+ex:naturaliter a obj:Agent .

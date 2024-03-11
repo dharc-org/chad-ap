@@ -1,5 +1,5 @@
 @prefix aat: <http://vocab.getty.edu/page/aat/> .
-@prefix ex: <http://purl.org/changes/object/data/02> .
+@prefix ex: <http://purl.org/changes/object/data/02/> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,67 +10,62 @@
 @base <http://purl.org/changes/object/data/02/> .
 
 <https://purl.org/changes/object/data/02/> rdf:type owl:Ontology ;
-                                                        owl:imports <https://purl.org/changes/object/model/> .
+    owl:imports <https://purl.org/changes/object/model/> .
 
 
 ex:ALD-L1-exp-creation-00 a frbroo:F28_Expression_Creation ;
-                rdfs:label "Creation event of 'Amerigo Vespucci sveglia l America'"@en ;
-                frbroo:R18_created ex:ALD-L1-man .
+    frbroo:R18_created ex:ALD-L1-man .
 
 ex:ALD-L1-man a frbroo:F4_Manifestation_Singleton ;
-                crm:P48_has_preferred_identifier ex:ALD-L1-identifier-00 ;
-                crm:P2_has_type aat:300041273 ;
-                crm:P3_has_note "Amerigo Vespucci sveglia l'America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum" ;
-                rdfs:label "Amerigo Vespucci sveglia l'America"@en .
+    crm:P48_has_preferred_identifier ex:ALD-L1-identifier-00 ;
+    crm:P2_has_type aat:300041273 ;
+    crm:P3_has_note "Amerigo Vespucci sveglia l'America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum" .
 
 ex:ALD-L1-identifier-00 a crm:E42_Identifier ;
-                crm:P190_has_symbolic_content "ALD-L1" ;
-                crm:P2_has_type aat:300404012 .
+    crm:P190_has_symbolic_content "ALD-L1" ;
+    crm:P2_has_type aat:300312355 .
 
 ex:ALD-05-exp-creation-00 a frbroo:F28_Expression_Creation ;
-                rdfs:label "Creation event of 'De Historia Animalium lib. 9'"@en ;
-                frbroo:R18_created ex:ALD-05-man .
+    frbroo:R18_created ex:ALD-05-man .
 
 ex:ALD-05-man a frbroo:F4_Manifestation_Singleton ;
-                crm:P48_has_preferred_identifier ex:ALD-05-identifier-00 ,
-                                  ex:ALD-05-identifier-01 ,
-                                  ex:ALD-05-identifier-02 ;
-                crm:P2_has_type aat:300265632 ;
-                crm:P3_has_note "Aristoteles De Historia Animalium lib. 9 Venezia, Girolamo Scoto, 1545 BUB, A.V.GG.VII.28" ;
-                rdfs:label "De Historia Animalium lib. 9"@en .
+    crm:P48_has_preferred_identifier ex:ALD-05-identifier-00 ,
+        ex:ALD-05-identifier-01 ,
+        ex:ALD-05-identifier-02 ;
+    crm:P2_has_type aat:300265632 ;
+    crm:P3_has_note "Aristoteles De Historia Animalium lib. 9 Venezia, Girolamo Scoto, 1545 BUB, A.V.GG.VII.28" .
 
 ex:ALD-05-identifier-00 a crm:E42_Identifier ;
-                crm:P190_has_symbolic_content "ALD-05" ;
-                crm:P2_has_type aat:300404012 .
+    crm:P190_has_symbolic_content "ALD-05" ;
+    crm:P2_has_type aat:300312355 .
 
 ex:ALD-05-identifier-01 a crm:E42_Identifier ;
-                crm:P190_has_symbolic_content "9" ;
-                crm:P2_has_type aat:300404622 .
+    crm:P190_has_symbolic_content "9" ;
+    crm:P2_has_type aat:300445021 .
 
 ex:ALD-05-identifier-02 a crm:E42_Identifier ;
-                crm:P190_has_symbolic_content "A.V.GG.VII.28" ;
-                crm:P2_has_type aat:300404704 .
+    crm:P190_has_symbolic_content "A.V.GG.VII.28" ;
+    crm:P2_has_type aat:300404704 .
 
 ex:ALD-45-exp-creation-00 a frbroo:F28_Expression_Creation ;
-                crm:P190_has_symbolic_content "Creation event of 'Dryas octopetala L.'"@en ;
-                frbroo:R18_created ex:ALD-45-man .
+    crm:P190_has_symbolic_content "Creation event of 'Dryas octopetala L.'"@en ;
+    frbroo:R18_created ex:ALD-45-man .
 
 ex:ALD-45-man a frbroo:F4_Manifestation_Singleton ;
-                crm:P48_has_preferred_identifier ex:ALD-45-identifier-00 ,
-                                  ex:ALD-45-identifier-01 ,
-                                  ex:ALD-45-identifier-02 ;
-                crm:P2_has_type aat:300235576 ;
-                crm:P3_has_note "Dryas octopetala L. Camedrio alpino Mountain avens Erbario Aldrovandi, vol.13, carta 77 sec. XVI 16th century Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo" ;
-                rdfs:label "Dryas octopetala L."@en .
+    crm:P48_has_preferred_identifier ex:ALD-45-identifier-00 ,
+        ex:ALD-45-identifier-01 ,
+        ex:ALD-45-identifier-02 ;
+    crm:P2_has_type aat:300235576 ;
+    crm:P3_has_note "Dryas octopetala L. Camedrio alpino Mountain avens Erbario Aldrovandi, vol.13, carta 77 sec. XVI 16th century Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo" .
 
 ex:ALD-45-identifier-00 a crm:E42_Identifier ;
-                crm:P190_has_symbolic_content "ALD-45" ;
-                crm:P2_has_type aat:300404012 .
+    crm:P190_has_symbolic_content "ALD-45" ;
+    crm:P2_has_type aat:300312355 .
 
 ex:ALD-45-identifier-01 a crm:E42_Identifier ;
-                crm:P190_has_symbolic_content "13" ;
-                crm:P2_has_type aat:300404622 .
+    crm:P190_has_symbolic_content "13" ;
+    crm:P2_has_type aat:300445021 .
 
 ex:ALD-45-identifier-02 a crm:E42_Identifier ;
-                crm:P190_has_symbolic_content "Erbario Aldrovandi, vol.13, carta 77" ;
-                crm:P2_has_type aat:300404704 .
+    crm:P190_has_symbolic_content "Erbario Aldrovandi, vol.13, carta 77" ;
+    crm:P2_has_type aat:300404704 .
