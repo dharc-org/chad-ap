@@ -34,7 +34,7 @@ ex:ALD-01-exp-creation-03 a obj:Activity ;
 ex:ALD-01-exp a obj:CulturalResource .
 
 ex:jan-van-der-straet a obj:Agent ;
-                owl:sameAs <http://vocab.getty.edu/page/ulan/500011304> .
+                obj:isDocumentedIn <http://vocab.getty.edu/page/ulan/500011304> .
 
 ex:philip-galle a obj:Agent .
 
@@ -61,7 +61,7 @@ ex:ALD-35-exp-creation-02 a obj:Activity ;
                 obj:isCarriedOutBy ex:pietro-andrea-mattioli .
 
 ex:pietro-andrea-mattioli a obj:Agent ;
-                owl:sameAs <http://viaf.org/viaf/61549376> .
+                obj:isDocumentedIn <http://viaf.org/viaf/61549376> .
 
 ex:ALD-24-exp-creation-00 a obj:CreationEvent ;
                 obj:creates ex:ALD-24-exp ;
@@ -80,6 +80,6 @@ ex:ALD-24-exp-creation-02 a obj:Activity ;
                 obj:isCarriedOutBy ex:naturaliter .
 
 ex:carl-linnaeus a obj:Agent ;
-                owl:sameAs <http://viaf.org/viaf/34594730> .
+                obj:isDocumentedIn <http://viaf.org/viaf/34594730> .
 
 ex:naturaliter a obj:Agent .

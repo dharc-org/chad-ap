@@ -23,7 +23,7 @@ ex:1589-1593 a obj:TimeInterval ;
 ex:ALD-L1-work a obj:CulturalResource .
 
 ex:jan-van-der-straet a obj:Agent ;
-                owl:sameAs <http://vocab.getty.edu/page/ulan/500011304> .
+                obj:isDocumentedIn <http://vocab.getty.edu/page/ulan/500011304> .
 
 ex:ALD-1-work-conception a obj:ConceptionEvent ;
                 obj:initiates ex:ALD-1-work ;
@@ -37,7 +37,7 @@ ex:1482 a obj:TimeInterval ;
 ex:ALD-1-work a obj:CulturalResource .
 
 ex:grazioso-benincasa a obj:Agent ;
-                owl:sameAs <http://vocab.getty.edu/page/ulan/500114874> .
+                obj:isDocumentedIn <http://vocab.getty.edu/page/ulan/500114874> .
 
 ex:ALD-26-work-conception a obj:ConceptionEvent ;
                 obj:initiates ex:ALD-26-work ;
@@ -51,4 +51,4 @@ ex:1500-1599 a obj:TimeInterval ;
 ex:ALD-26-work a obj:CulturalResource .
 
 ex:ulisse-aldrovandi a obj:Agent ;
-                owl:sameAs <http://viaf.org/viaf/100190422> .
+                obj:isDocumentedIn <http://viaf.org/viaf/100190422> .

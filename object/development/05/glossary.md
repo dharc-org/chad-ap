@@ -18,6 +18,7 @@
 | `is about` | This property links a expression with a subject. |
 | `depicts` | This property links a manifestation to the expression it depicts. |
 | `is composed of` | This property links a manifestation to other manifestations that are part of it. |
+| `is documented in` | This property links a entity to an external resource referring to the same concepts it represents. |
 | `has content` | This property links a title to some textual content. |
 | `original title` | A type of title representing the denomination of an object as originally intended. |
 | `museum title` | A type of title representing the denomination of an object assigned to it by an institution (e.g. a museum). |

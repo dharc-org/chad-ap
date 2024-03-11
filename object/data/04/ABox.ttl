@@ -25,7 +25,7 @@ ex:1589-1593 a crm:E52_Time-Span ;
 ex:ALD-L1-work a frbroo:F1_Work .
 
 ex:jan-van-der-straet a crm:E39_Actor ;
-    owl:sameAs <http://vocab.getty.edu/page/ulan/500011304> .
+    crm:P70i_is_documented_in <http://vocab.getty.edu/page/ulan/500011304> .
 
 ex:ALD-1-work-conception a frbroo:F27_Work_Conception ;
     frbroo:R16_initiated ex:ALD-1-work ;
@@ -39,7 +39,7 @@ ex:1482 a crm:E52_Time-Span ;
 ex:ALD-1-work a frbroo:F1_Work .
 
 ex:grazioso-benincasa a crm:E39_Actor ;
-    owl:sameAs <http://vocab.getty.edu/page/ulan/500114874> .
+    crm:P70i_is_documented_in <http://vocab.getty.edu/page/ulan/500114874> .
 
 ex:ALD-26-work-conception a frbroo:F27_Work_Conception ;
     frbroo:R16_initiated ex:ALD-26-work ;
@@ -53,4 +53,4 @@ ex:1500-1599 a crm:E52_Time-Span ;
 ex:ALD-26-work a frbroo:F1_Work .
 
 ex:ulisse-aldrovandi a crm:E39_Actor ;
-    owl:sameAs <http://viaf.org/viaf/100190422> .
+    crm:P70i_is_documented_in <http://viaf.org/viaf/100190422> .
