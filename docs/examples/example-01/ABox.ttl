@@ -10,7 +10,7 @@
 @base <http://purl.org/changes/cidoc-profile/data/example/> .
 
 <http://purl.org/changes/cidoc-profile/data/example/> rdf:type owl:Ontology ;
-    owl:imports <https://purl.org/changes/cidoc-profile/model/> .
+    owl:imports <http://purl.org/changes/cidoc-profile/model/> .
 
 
 ex:32-exp-creation-00 a frbroo:F28_Expression_Creation ;

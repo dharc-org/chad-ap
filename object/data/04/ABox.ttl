@@ -9,8 +9,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://purl.org/changes/object/data/04/> .
 
-<https://purl.org/changes/object/data/04/> rdf:type owl:Ontology ;
-    owl:imports <https://purl.org/changes/object/model/> .
+<http://purl.org/changes/object/data/04/> rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/changes/object/model/> .
 
 
 ex:L1-work-conception a frbroo:F27_Work_Conception ;

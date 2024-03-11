@@ -9,8 +9,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://purl.org/changes/object/data/05/> .
 
-<https://purl.org/changes/object/data/05/> rdf:type owl:Ontology ;
-    owl:imports <https://purl.org/changes/object/model/> .
+<http://purl.org/changes/object/data/05/> rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/changes/object/model/> .
 
 
 ex:L1-exp-creation a frbroo:F28_Expression_Creation ;

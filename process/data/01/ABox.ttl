@@ -9,8 +9,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://purl.org/changes/process/data/01/> .
 
-<https://purl.org/changes/process/data/01/> rdf:type owl:Ontology ;
-    owl:imports <https://purl.org/changes/process/model/> .
+<http://purl.org/changes/process/data/01/> rdf:type owl:Ontology ;
+    owl:imports <http://purl.org/changes/process/model/> .
 
 
 ex:15 a crm:E24_Physical_Human-Made_Thing .
