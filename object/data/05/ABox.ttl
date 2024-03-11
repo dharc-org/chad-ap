@@ -13,24 +13,24 @@
     owl:imports <https://purl.org/changes/object/model/> .
 
 
-ex:ALD-L1-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:ALD-L1-work ;
-    frbroo:R17_created ex:ALD-L1-exp ;
-    frbroo:R18_created ex:ALD-L1-man .
+ex:L1-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:L1-work ;
+    frbroo:R17_created ex:L1-exp ;
+    frbroo:R18_created ex:L1-man .
 
-ex:ALD-L1-work a frbroo:F1_Work ;
-    crm:P102_has_title ex:ALD-L1-work-title-01 ,
-        ex:ALD-L1-work-title-02 .
+ex:L1-work a frbroo:F1_Work ;
+    crm:P102_has_title ex:L1-work-title-01 ,
+        ex:L1-work-title-02 .
 
-ex:ALD-L1-work-title-01 a crm:E35_Title ;
+ex:L1-work-title-01 a crm:E35_Title ;
     crm:P2_has_type aat:300417204 ;
     crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@it .
 
-ex:ALD-L1-work-title-02 a crm:E35_Title ;
+ex:L1-work-title-02 a crm:E35_Title ;
     crm:P2_has_type aat:300417207 ;
     crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@en .
 
-ex:ALD-L1-exp a frbroo:F2_Expression ;
+ex:L1-exp a frbroo:F2_Expression ;
     crm:P129_is_about ex:sub-amerigo-vespucci ,
         ex:sub-astrolabio ,
         ex:sub-vessillo-croce-del-sud ,
@@ -39,45 +39,45 @@ ex:ALD-L1-exp a frbroo:F2_Expression ;
         ex:sub-tapiro ,
         ex:sub-gruppo-di-cannibali .
 
-ex:ALD-L1-man a frbroo:F4_Manifestation_Singleton .
+ex:L1-man a frbroo:F4_Manifestation_Singleton .
 
-ex:ALD-L1-man-license a crm:E73_Information_Object ;
+ex:L1-man-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:ALD-L1-man ;
+    crm:P67_refers_to ex:L1-man ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
-ex:ALD-1-man-license a crm:E73_Information_Object ;
+ex:1-man-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:ALD-1-man ;
+    crm:P67_refers_to ex:1-man ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
-ex:ALD-7-man-license a crm:E73_Information_Object ;
+ex:7-man-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:ALD-7-man ;
+    crm:P67_refers_to ex:7-man ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
-ex:ALD-PTa-man-license a crm:E73_Information_Object ;
+ex:PTa-man-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:ALD-PTa-man ;
+    crm:P67_refers_to ex:PTa-man ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
-ex:ALD-PTa-1-man-license a crm:E73_Information_Object ;
+ex:PTa-1-man-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:ALD-PTa-1-man ;
+    crm:P67_refers_to ex:PTa-1-man ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
-ex:ALD-PTa-2-man-license a crm:E73_Information_Object ;
+ex:PTa-2-man-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:ALD-PTa-2-man ;
+    crm:P67_refers_to ex:PTa-2-man ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
-ex:ALD-PTa-3-man-license a crm:E73_Information_Object ;
+ex:PTa-3-man-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:ALD-PTa-3-man ;
+    crm:P67_refers_to ex:PTa-3-man ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
 ex:nova-reperta a frbroo:F15_Complex_Work ;
-    frbroo:R10_has_member ex:ALD-L1-work ;
+    frbroo:R10_has_member ex:L1-work ;
     crm:P2_has_type aat:300189634 .
 
 ex:sub-amerigo-vespucci a crm:E73_Information_Object ;
@@ -101,30 +101,30 @@ ex:sub-tapiro a crm:E73_Information_Object ;
 ex:sub-gruppo-di-cannibali a crm:E73_Information_Object ;
     crm:P2_has_type aat:300404126 .
 
-ex:ALD-1-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:ALD-1-work ;
-    frbroo:R17_created ex:ALD-1-exp ;
-    frbroo:R18_created ex:ALD-1-man .
+ex:1-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:1-work ;
+    frbroo:R17_created ex:1-exp ;
+    frbroo:R18_created ex:1-man .
 
-ex:ALD-1-work a frbroo:F1_Work ;
-    crm:P102_has_title ex:ALD-1-work-title-01 ,
-        ex:ALD-1-work-title-02 .
+ex:1-work a frbroo:F1_Work ;
+    crm:P102_has_title ex:1-work-title-01 ,
+        ex:1-work-title-02 .
 
-ex:ALD-1-work-title-01 a crm:E35_Title ;
+ex:1-work-title-01 a crm:E35_Title ;
     crm:P2_has_type aat:300417204 ;
     crm:P190_has_symbolic_content "Carta nautica"@it .
 
-ex:ALD-1-work-title-02 a crm:E35_Title ;
+ex:1-work-title-02 a crm:E35_Title ;
     crm:P2_has_type aat:300417207 ;
     crm:P190_has_symbolic_content "Carta nautica"@it .
 
-ex:ALD-1-exp a frbroo:F2_Expression ;
+ex:1-exp a frbroo:F2_Expression ;
     crm:P129_is_about ex:sub-europa ,
         ex:sub-africa ,
         ex:sub-asia ,
         ex:sub-mar-mediterraneo .
 
-ex:ALD-1-man a frbroo:F4_Manifestation_Singleton .
+ex:1-man a frbroo:F4_Manifestation_Singleton .
 
 ex:sub-europa a crm:E73_Information_Object ;
     crm:P2_has_type aat:300404126 .
@@ -138,79 +138,79 @@ ex:sub-asia a crm:E73_Information_Object ;
 ex:sub-mar-mediterraneo a crm:E73_Information_Object ;
     crm:P2_has_type aat:300404126 .
 
-ex:ALD-7-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:ALD-7-work ;
-    frbroo:R17_created ex:ALD-7-exp ;
-    frbroo:R18_created ex:ALD-7-man .
+ex:7-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:7-work ;
+    frbroo:R17_created ex:7-exp ;
+    frbroo:R18_created ex:7-man .
 
-ex:ALD-7-work a frbroo:F1_Work ;
-    crm:P102_has_title ex:ALD-7-work-title-01 ,
-        ex:ALD-7-work-title-02 .
+ex:7-work a frbroo:F1_Work ;
+    crm:P102_has_title ex:7-work-title-01 ,
+        ex:7-work-title-02 .
 
-ex:ALD-7-work-title-01 a crm:E35_Title ;
+ex:7-work-title-01 a crm:E35_Title ;
     crm:P2_has_type aat:300417204 ;
     crm:P190_has_symbolic_content "Profilo incompleto delle coste del continente americano"@it .
 
-ex:ALD-7-work-title-02 a crm:E35_Title ;
+ex:7-work-title-02 a crm:E35_Title ;
     crm:P2_has_type aat:300417207 ;
     crm:P190_has_symbolic_content "Profilo incompleto delle coste del continente americano"@it .
 
-ex:ALD-7-exp a frbroo:F2_Expression ;
+ex:7-exp a frbroo:F2_Expression ;
     crm:P129_is_about ex:sub-america ,
         ex:sub-europa .
 
-ex:ALD-7-man a frbroo:F4_Manifestation_Singleton .
+ex:7-man a frbroo:F4_Manifestation_Singleton .
 
 ex:atlante-nautico a frbroo:F15_Complex_Work ;
-    frbroo:R10_has_member ex:ALD-7-work ;
+    frbroo:R10_has_member ex:7-work ;
     crm:P2_has_type aat:300028309 .
 
 ex:sub-america a crm:E73_Information_Object ;
     crm:P2_has_type aat:300404126 .
 
-ex:ALD-PTa-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:ALD-PTa-work ;
-    frbroo:R17_created ex:ALD-PTa-exp ;
-    frbroo:R18_created ex:ALD-PTa-man .
+ex:PTa-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:PTa-work ;
+    frbroo:R17_created ex:PTa-exp ;
+    frbroo:R18_created ex:PTa-man .
 
-ex:ALD-PTa-work a frbroo:F1_Work .
+ex:PTa-work a frbroo:F1_Work .
 
-ex:ALD-PTa-exp a frbroo:F2_Expression .
+ex:PTa-exp a frbroo:F2_Expression .
 
-ex:ALD-PTa-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P46_is_composed_of ex:ALD-PTa-1-man , 
-        ex:ALD-PTa-2-man .
+ex:PTa-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P46_is_composed_of ex:PTa-1-man , 
+        ex:PTa-2-man .
 
-ex:ALD-PTa-1-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:ALD-PTa-1-work ;
-    frbroo:R17_created ex:ALD-PTa-1-exp ;
-    frbroo:R18_created ex:ALD-PTa-1-man .
+ex:PTa-1-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:PTa-1-work ;
+    frbroo:R17_created ex:PTa-1-exp ;
+    frbroo:R18_created ex:PTa-1-man .
 
-ex:ALD-PTa-1-work a frbroo:F1_Work .
+ex:PTa-1-work a frbroo:F1_Work .
 
-ex:ALD-PTa-1-exp a frbroo:F2_Expression .
+ex:PTa-1-exp a frbroo:F2_Expression .
 
-ex:ALD-PTa-1-man a frbroo:F4_Manifestation_Singleton .
+ex:PTa-1-man a frbroo:F4_Manifestation_Singleton .
 
-ex:ALD-PTa-2-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:ALD-PTa-2-work ;
-    frbroo:R17_created ex:ALD-PTa-2-exp ;
-    frbroo:R18_created ex:ALD-PTa-2-man .
+ex:PTa-2-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:PTa-2-work ;
+    frbroo:R17_created ex:PTa-2-exp ;
+    frbroo:R18_created ex:PTa-2-man .
 
-ex:ALD-PTa-2-work a frbroo:F1_Work .
+ex:PTa-2-work a frbroo:F1_Work .
 
-ex:ALD-PTa-2-exp a frbroo:F2_Expression .
+ex:PTa-2-exp a frbroo:F2_Expression .
 
-ex:ALD-PTa-2-man a frbroo:F4_Manifestation_Singleton .
+ex:PTa-2-man a frbroo:F4_Manifestation_Singleton .
 
-ex:ALD-PTa-3-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:ALD-PTa-3-work ;
-    frbroo:R17_created ex:ALD-PTa-3-exp ;
-    frbroo:R18_created ex:ALD-PTa-3-man .
+ex:PTa-3-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:PTa-3-work ;
+    frbroo:R17_created ex:PTa-3-exp ;
+    frbroo:R18_created ex:PTa-3-man .
 
-ex:ALD-PTa-3-work a frbroo:F1_Work .
+ex:PTa-3-work a frbroo:F1_Work .
 
-ex:ALD-PTa-3-exp a frbroo:F2_Expression .
+ex:PTa-3-exp a frbroo:F2_Expression .
 
-ex:ALD-PTa-3-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P62_depicts ex:ALD-PTa-man .
+ex:PTa-3-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P62_depicts ex:PTa-man .

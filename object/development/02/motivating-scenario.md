@@ -8,15 +8,15 @@ Labels, types, and identifiers are all important components of managing and iden
 `Descriptive labels` are textual descriptions assigned to a `cultural  resource` to help identify and distinguish it from other resources. `Types` are used to classify `cultural resources` into categories based on their characteristics. `Identifiers` are unique codes or numbers assigned to a `cultural resource` that provide a standardized reference to the resource. With respect to the collection, possible `types of identifiers` used for cultural resources include `volume number`, `project id`, `shelf mark`, and so on.
 
 ## Example 1
-The creation event `ALD-01-exp-creation-00` created the cultural resource `ALD-01-man` ("Amerigo Vespucci sveglia l’America"). The cultural resource has the `identifier` "ALD-01" with `type` equal to `project id`. Its `type` is `print`. Its `descriptive label` is "Amerigo Vespucci sveglia l’America
+The creation event `01-exp-creation-00` created the cultural resource `01-man` ("Amerigo Vespucci sveglia l’America"). The cultural resource has the `identifier` "01" with `type` equal to `project id`. Its `type` is `print`. Its `descriptive label` is "Amerigo Vespucci sveglia l’America
  Amerigo Vespucci awakens a sleeping America
  In
  Jan van del Straet (Stradano), Nova Reperta, c. 1589 – c.1593, Antwerp
  Amsterdam, Rijksmuseum"
 
 ## Example 2
-The creation event `ALD-05-exp-creation-00` created the cultural resource `ALD-05-exp` ("De Historia Animalium lib. 9"). The cultural resource has the `identifiers`:
-* "ALD-05" with `type` equal to `project id`
+The creation event `05-exp-creation-00` created the cultural resource `05-exp` ("De Historia Animalium lib. 9"). The cultural resource has the `identifiers`:
+* "05" with `type` equal to `project id`
 * "9" with `type` equal to `volume number`
 * "A.V.GG.VII.28" with `type` equal to `shelf mark`
 
@@ -26,8 +26,8 @@ Its `type` is `printed volume`. Its `descriptive label` is "Aristoteles
  BUB, A.V.GG.VII.28"
 
 ## Example 3
-The creation event `ALD-45-exp-creation-00` created the cultural resource `ALD-45-exp` ("Dryas octopetala L."). The cultural resource has the `identifiers`:
-* "ALD-45" with `type` equal to `project id`
+The creation event `45-exp-creation-00` created the cultural resource `45-exp` ("Dryas octopetala L."). The cultural resource has the `identifiers`:
+* "45" with `type` equal to `project id`
 * "13" with `type` equal to `volume number`
 * "Erbario Aldrovandi, vol.13, carta 77" with `type` equal to `shelf mark`
 

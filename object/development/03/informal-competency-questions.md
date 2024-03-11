@@ -10,8 +10,8 @@ What are the cultural resources whose collections have been curated during curat
 List of triples: `cultural resource`, `collection`, `agent`
 
 ### Result
-* `ALD-1-man`, `Collezione di Zoologia`, `Sistema museale di Ateneo`
-* `ALD-14-man`, `Collezione di Anatomia Comparata`, `Sistema museale di Ateneo`
+* `1-man`, `Collezione di Zoologia`, `Sistema museale di Ateneo`
+* `14-man`, `Collezione di Anatomia Comparata`, `Sistema museale di Ateneo`
 
 ### Based on 
 Example 2, Example 3

@@ -80,7 +80,7 @@
                           :Type ;
       rdfs:label "volume number"@en .
 
-:changes-id rdf:type owl:NamedIndividual ,
+:project-id rdf:type owl:NamedIndividual ,
                           :Type ;
       rdfs:label "project id"@en .
 

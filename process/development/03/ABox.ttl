@@ -10,22 +10,22 @@
 <http://purl.org/changes/process/development/03/data/> rdf:type owl:Ontology ;
     owl:imports <http://purl.org/changes/process/development/03/schema/> .
 
-ex:ALD-15 a process:CulturalObject .
+ex:15 a process:CulturalObject .
 
-ex:ALD-15-acq-output a process:DigitalObject .
+ex:15-acq-output a process:DigitalObject .
 
-ex:ALD-15-proc-output a process:DigitalObject .
+ex:15-proc-output a process:DigitalObject .
 
-ex:ALD-15-acq a process:DigitizationProcess ;
-                process:digitizes ex:ALD-15 ;
-                process:hasOutput ex:ALD-15-acq-output ;
+ex:15-acq a process:DigitizationProcess ;
+                process:digitizes ex:15 ;
+                process:hasOutput ex:15-acq-output ;
                 process:hasTechnique process:structured-light-scanning ;
                 process:hasTool ex:artec-spider .
 
-ex:ALD-15-proc a process:SoftwareActivity ;
+ex:15-proc a process:SoftwareActivity ;
                 process:hasType process:processing ;
-                process:hasInput ex:ALD-15-acq-output ;
-                process:hasOutput ex:ALD-15-proc-output ;
+                process:hasInput ex:15-acq-output ;
+                process:hasOutput ex:15-proc-output ;
                 process:hasTool ex:artec-studio-14 .
 
 ex:artec-spider a process:Tool ;

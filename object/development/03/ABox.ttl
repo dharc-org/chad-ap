@@ -11,12 +11,12 @@
                                                         owl:imports <http://purl.org/changes/object/development/03/schema/> .
 
 
-ex:ALD-L1-curation a obj:CurationEvent ;
+ex:L1-curation a obj:CurationEvent ;
                 obj:curates ex:nova-reperta ;
                 obj:isCarriedOutBy ex:rijksmuseum ;
-                obj:occurredInThePresenceOf ex:ALD-L1-man .
+                obj:occurredInThePresenceOf ex:L1-man .
 
-ex:ALD-L1-man a obj:CulturalResource ;
+ex:L1-man a obj:CulturalResource ;
                 obj:hasCurator ex:rijksmuseum .
 
 ex:nova-reperta a obj:Collection .
@@ -26,12 +26,12 @@ ex:rijksmuseum a obj:Agent ;
 
 ex:amsterdam a obj:Place .
 
-ex:ALD-1-curation a obj:CurationEvent ;
+ex:1-curation a obj:CurationEvent ;
                 obj:curates ex:collezione-di-zoologia ;
                 obj:isCarriedOutBy ex:sistema-museale-di-ateneo ;
-                obj:occurredInThePresenceOf ex:ALD-1-man .
+                obj:occurredInThePresenceOf ex:1-man .
 
-ex:ALD-1-man a obj:CulturalResource ;
+ex:1-man a obj:CulturalResource ;
                 obj:hasCurator ex:sistema-museale-di-ateneo .
 
 ex:collezione-di-zoologia a obj:Collection .
@@ -41,12 +41,12 @@ ex:sistema-museale-di-ateneo a obj:Agent ;
 
 ex:bologna a obj:Place .
 
-ex:ALD-14-curation a obj:CurationEvent ;
+ex:14-curation a obj:CurationEvent ;
                 obj:curates ex:collezione-di-anatomia-comparata ;
                 obj:isCarriedOutBy ex:sistema-museale-di-ateneo ;
-                obj:occurredInThePresenceOf ex:ALD-14-man .
+                obj:occurredInThePresenceOf ex:14-man .
 
-ex:ALD-14-man a obj:CulturalResource ;
+ex:14-man a obj:CulturalResource ;
                 obj:hasCurator ex:sistema-museale-di-ateneo .
 
 ex:collezione-di-anatomia-comparata a obj:Collection .

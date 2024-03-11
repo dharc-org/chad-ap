@@ -10,24 +10,22 @@ WHERE {
   ?conception_event a obj:ConceptionEvent ;
                     obj:initiates ?resource ;
                     obj:hasTimeInterval ?timeInterval .
-  
   ?timeInterval obj:hasBeginning ?beginning ;
                  obj:hasEnd ?end .
 }
 ```
 
 ## CQ_4.2
-What are the agents who carried out the conception of a cultural resource in a time interval that includes the year 1590?
+What are the cultural resources created in a time interval that includes the year 1590?
 
 ```SPARQL
 PREFIX obj: <http://purl.org/changes/object/development/04/schema/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?agent ?beginning ?end
+SELECT ?resource ?beginning ?end
 WHERE {
     ?conception_event a obj:ConceptionEvent ;
                     obj:initiates ?resource ;
-                    obj:isCarriedOutBy ?agent ;
                     obj:hasTimeInterval ?timeInterval .
     ?timeInterval obj:hasBeginning ?beginning ;
                         obj:hasEnd ?end .

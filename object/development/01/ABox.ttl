@@ -10,28 +10,28 @@
 <http://purl.org/changes/object/development/01/data/> rdf:type owl:Ontology ;
                                                         owl:imports <http://purl.org/changes/object/development/01/schema/> .
 
-ex:ALD-01-exp-creation-00 a obj:CreationEvent ;
-                obj:creates ex:ALD-01-exp ;
+ex:01-exp-creation-00 a obj:CreationEvent ;
+                obj:creates ex:01-exp ;
                 obj:usesTechnique obj:engraving ;
-                obj:consistsOf ex:ALD-01-exp-creation-01 ,
-                               ex:ALD-01-exp-creation-02 ,
-                               ex:ALD-01-exp-creation-03 .
+                obj:consistsOf ex:01-exp-creation-01 ,
+                               ex:01-exp-creation-02 ,
+                               ex:01-exp-creation-03 .
 
-ex:ALD-01-exp-creation-01 a obj:Activity ;
+ex:01-exp-creation-01 a obj:Activity ;
                 obj:hasType obj:illustration ;
                 obj:isCarriedOutBy ex:jan-van-der-straet .
 
-ex:ALD-01-exp-creation-02 a obj:Activity ;
+ex:01-exp-creation-02 a obj:Activity ;
                 obj:hasType obj:engraving-process ;
                 obj:isCarriedOutBy ex:philip-galle ,
                                    ex:theodor-galle ,
                                    ex:jan-collaert .
 
-ex:ALD-01-exp-creation-03 a obj:Activity ;
+ex:01-exp-creation-03 a obj:Activity ;
                 obj:hasType obj:commission ;
                 obj:isCarriedOutBy ex:luigi-alamanni .
 
-ex:ALD-01-exp a obj:CulturalResource .
+ex:01-exp a obj:CulturalResource .
 
 ex:jan-van-der-straet a obj:Agent ;
                 obj:isDocumentedIn <http://vocab.getty.edu/page/ulan/500011304> .
@@ -44,38 +44,38 @@ ex:jan-collaert a obj:Agent .
 
 ex:luigi-alamanni a obj:Agent .
 
-ex:ALD-35-exp-creation-00 a obj:CreationEvent ;
+ex:35-exp-creation-00 a obj:CreationEvent ;
                 obj:usesTechnique obj:watercolor ;
-                obj:creates ex:ALD-35-exp ;
-                obj:consistsOf ex:ALD-35-exp-creation-01 ,
-                               ex:ALD-35-exp-creation-02 .
+                obj:creates ex:35-exp ;
+                obj:consistsOf ex:35-exp-creation-01 ,
+                               ex:35-exp-creation-02 .
 
-ex:ALD-35-exp a obj:CulturalResource .
+ex:35-exp a obj:CulturalResource .
 
-ex:ALD-35-exp-creation-01 a obj:Activity ;
+ex:35-exp-creation-01 a obj:Activity ;
                 obj:hasType obj:translation ;
                 obj:isCarriedOutBy ex:pietro-andrea-mattioli .
 
-ex:ALD-35-exp-creation-02 a obj:Activity ;
+ex:35-exp-creation-02 a obj:Activity ;
                 obj:hasType obj:illustration ;
                 obj:isCarriedOutBy ex:pietro-andrea-mattioli .
 
 ex:pietro-andrea-mattioli a obj:Agent ;
                 obj:isDocumentedIn <http://viaf.org/viaf/61549376> .
 
-ex:ALD-24-exp-creation-00 a obj:CreationEvent ;
-                obj:creates ex:ALD-24-exp ;
+ex:24-exp-creation-00 a obj:CreationEvent ;
+                obj:creates ex:24-exp ;
                 obj:usesTechnique obj:taxidermy ;
-                obj:consistsOf ex:ALD-24-exp-creation-01 ,
-                               ex:ALD-24-exp-creation-02 .
+                obj:consistsOf ex:24-exp-creation-01 ,
+                               ex:24-exp-creation-02 .
 
-ex:ALD-24-exp a obj:CulturalResource .
+ex:24-exp a obj:CulturalResource .
 
-ex:ALD-24-exp-creation-01 a obj:Activity ;
+ex:24-exp-creation-01 a obj:Activity ;
                 obj:hasType obj:discovery ;
                 obj:isCarriedOutBy ex:carl-linnaeus .
 
-ex:ALD-24-exp-creation-02 a obj:Activity ;
+ex:24-exp-creation-02 a obj:Activity ;
                 obj:hasType obj:museum-preparation ;
                 obj:isCarriedOutBy ex:naturaliter .
 

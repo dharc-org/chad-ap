@@ -18,7 +18,7 @@ WHERE {
 ```
 
 ## CQ_1.2
-What are the agents and the types of  activities they carried out to contribute to the creation of `ALD-24-exp`?
+What are the agents and the types of  activities they carried out to contribute to the creation of `24-exp`?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/data/01/>
@@ -28,7 +28,7 @@ PREFIX frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/>
 SELECT ?agent ?type
 WHERE {
     ?creation_event a frbroo:F28_Expression_Creation ;
-            frbroo:R17_created ex:ALD-24-exp ;
+            frbroo:R17_created ex:24-exp ;
             crm:P9_consists_of ?activity .
     ?activity crm:P2_has_type ?type ;
             crm:P14_carried_out_by ?agent .

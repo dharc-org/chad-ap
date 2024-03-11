@@ -16,7 +16,7 @@ WHERE {
 }
 ```
 ## CQ_1.2
-What are the agents and the types of  activities they carried out to contribute to the creation of `ALD-24-exp`?
+What are the agents and the types of  activities they carried out to contribute to the creation of `24-exp`?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/development/01/data/>
@@ -25,7 +25,7 @@ PREFIX obj: <http://purl.org/changes/object/development/01/schema/>
 SELECT ?agent ?type
 WHERE {
     ?creation_event a obj:CreationEvent ;
-            obj:creates ex:ALD-24-exp ;
+            obj:creates ex:24-exp ;
             obj:consistsOf ?activity .
     ?activity obj:hasType ?type ;
             obj:isCarriedOutBy ?agent .

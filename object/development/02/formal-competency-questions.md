@@ -16,7 +16,7 @@ WHERE {
 }
 ```
 ## CQ_2.2
-What is the shelf mark of the cultural resource with the project ID "ALD-45"?
+What is the shelf mark of the cultural resource with the project ID "45"?
 
 ```SPARQL
 PREFIX obj: <http://purl.org/changes/object/development/02/schema/>
@@ -26,8 +26,8 @@ WHERE {
     ?resource a obj:CulturalResource ;
     obj:hasIdentifier ?identifier1 ,
                       ?identifier2 .
-    ?identifier1 obj:hasType obj:changes-id ;
-                 obj:hasContent "ALD-45" .
+    ?identifier1 obj:hasType obj:project-id ;
+                 obj:hasContent "45" .
     ?identifier2 obj:hasType obj:shelf-mark ;
                  obj:hasContent ?identifier_text.
 }

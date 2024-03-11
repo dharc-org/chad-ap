@@ -10,17 +10,17 @@
 <http://purl.org/changes/process/development/02/data/> rdf:type owl:Ontology ;
     owl:imports <http://purl.org/changes/process/development/02/schema/> .
 
-ex:ALD-15-acq-output a process:DigitalObject .
+ex:15-acq-output a process:DigitalObject .
 
-ex:ALD-15-proc-output a process:DigitalObject .
+ex:15-proc-output a process:DigitalObject .
 
-ex:ALD-15-acq a process:DigitizationProcess ;
-                process:hasOutput ex:ALD-15-acq-output .
+ex:15-acq a process:DigitizationProcess ;
+                process:hasOutput ex:15-acq-output .
 
-ex:ALD-15-proc a process:SoftwareActivity ;
+ex:15-proc a process:SoftwareActivity ;
                 process:hasType process:processing ;
-                process:hasInput ex:ALD-15-acq-output ;
-                process:hasOutput ex:ALD-15-proc-output ;
+                process:hasInput ex:15-acq-output ;
+                process:hasOutput ex:15-proc-output ;
                 process:carriedOutBy ex:federica-collina ;
                 process:hasParticipant ex:unibo-dbc .
 

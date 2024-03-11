@@ -1,6 +1,6 @@
-# Example 1: ALD-32 (*Essere umano ermafrodita*)
+# Example 1: 32 (*Essere umano ermafrodita*)
 
-On 08/05/2023, Alice Bordignon acquired digital data of the object "ALD-32" ("Essere umano ermafrodita") on behalf of UNIBO FICLIT, leveraging photogrammetry and using the "Panasonic DMC-LX100" camera, resulting in a digital model.
+On 08/05/2023, Alice Bordignon acquired digital data of the object "32" ("Essere umano ermafrodita") on behalf of UNIBO FICLIT, leveraging photogrammetry and using the "Panasonic DMC-LX100" camera, resulting in a digital model.
 
 Subsequently, on 10/05/2023, Alice processed the digital model on behalf of UNIBO FICLIT using the "3DF Zephyr" software, creating a processed digital model.
 

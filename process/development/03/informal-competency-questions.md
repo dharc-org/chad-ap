@@ -12,7 +12,7 @@ What are the techniques used in digitization processes?
 A list of: `digitization`, `technique`
 
 ### Result
-* `ALD-15-acq`, `structured-light-scanning`
+* `15-acq`, `structured-light-scanning`
 
 ### Based on 
 Example 1

@@ -17,7 +17,7 @@ WHERE {
 }
 ```
 ## CQ_2.2
-What is the shelf mark of the cultural resource with the project ID "ALD-45"?
+What is the shelf mark of the cultural resource with the project ID "45"?
 
 ```SPARQL
 PREFIX aat: <http://vocab.getty.edu/page/aat/>
@@ -30,7 +30,7 @@ WHERE {
     crm:P48_has_preferred_identifier ?identifier1 ,
                       ?identifier2 .
     ?identifier1 crm:P2_has_type aat:300312355 ;
-                 crm:P190_has_symbolic_content "ALD-45" .
+                 crm:P190_has_symbolic_content "45" .
     ?identifier2 crm:P2_has_type aat:300404704 ;
                  crm:P190_has_symbolic_content ?identifier_text.
 }

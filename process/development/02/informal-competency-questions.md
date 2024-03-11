@@ -12,7 +12,7 @@ What are the digitization process, its output, the processing activity and its o
 A list of: `acq_activity`, `acq_output`, `proc_activity`, `proc_output`
 
 ### Result
-* `ALD-15-acq`, `ALD-15-acq-output`, `ALD-15-proc`, `ALD-15-proc-output`
+* `15-acq`, `15-acq-output`, `15-proc`, `15-proc-output`
 
 ### Based on 
 Example 1

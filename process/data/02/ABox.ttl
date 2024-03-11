@@ -12,21 +12,21 @@
 <https://purl.org/changes/process/data/02/> rdf:type owl:Ontology ;
     owl:imports <https://purl.org/changes/process/model/> .
 
-ex:ALD-15 a crm:E24_Physical_Human-Made_Thing .
+ex:15 a crm:E24_Physical_Human-Made_Thing .
 
-ex:ALD-15-acq a crmdig:D2_Digitization_Process ;
-    crmdig:L11_had_output ex:ALD-15-acq-output .
+ex:15-acq a crmdig:D2_Digitization_Process ;
+    crmdig:L11_had_output ex:15-acq-output .
 
-ex:ALD-15-proc a crmdig:D10_Software_Execution ;
+ex:15-proc a crmdig:D10_Software_Execution ;
     crm:P2_has_type aat:300054636 ;
-    crmdig:L10_had_input ex:ALD-15-acq-output ;
-    crmdig:L11_had_output ex:ALD-15-proc-output ;
+    crmdig:L10_had_input ex:15-acq-output ;
+    crmdig:L11_had_output ex:15-proc-output ;
     crm:P11_had_participant ex:unibo-dbc ;
     crm:P14_carried_out_by ex:federica-collina .
 
-ex:ALD-15-acq-output a crmdig:D9_Data_Object .
+ex:15-acq-output a crmdig:D9_Data_Object .
 
-ex:ALD-15-proc-output a crmdig:D9_Data_Object .
+ex:15-proc-output a crmdig:D9_Data_Object .
 
 ex:federica-collina a crm:E21_Person .
 

@@ -1,6 +1,6 @@
 # Formal Competency Questions
 ## CQ_5.1
-What are the titles of the work `ALD-L1-work`? What are their types?
+What are the titles of the work `L1-work`? What are their types?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/object/data/05/>
@@ -10,8 +10,8 @@ PREFIX frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/>
 SELECT ?title ?type ?content
 WHERE {
     ?creation a frbroo:F28_Expression_Creation ;
-              frbroo:R19_created_a_realisation_of ex:ALD-L1-work .
-    ex:ALD-L1-work crm:P102_has_title ?title .
+              frbroo:R19_created_a_realisation_of ex:L1-work .
+    ex:L1-work crm:P102_has_title ?title .
     ?title crm:P2_has_type ?type ;
                 crm:P190_has_symbolic_content ?content .
 }

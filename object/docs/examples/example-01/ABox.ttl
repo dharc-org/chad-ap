@@ -13,30 +13,30 @@
     owl:imports <https://purl.org/changes/object/model/> .
 
 
-ex:ALD-L1-exp-creation-00 a frbroo:F28_Expression_Creation ;
-    frbroo:R17_created ex:ALD-L1-exp ;
+ex:L1-exp-creation-00 a frbroo:F28_Expression_Creation ;
+    frbroo:R17_created ex:L1-exp ;
     crm:P32_used_general_technique aat:300053225 ;
-    frbroo:R18_created ex:ALD-L1-man ;
-    frbroo:R19_created_a_realisation_of ex:ALD-L1-work ;
-    crm:P9_consists_of ex:ALD-L1-exp-creation-01 ,
-        ex:ALD-L1-exp-creation-02 ,
-        ex:ALD-L1-exp-creation-03 .
+    frbroo:R18_created ex:L1-man ;
+    frbroo:R19_created_a_realisation_of ex:L1-work ;
+    crm:P9_consists_of ex:L1-exp-creation-01 ,
+        ex:L1-exp-creation-02 ,
+        ex:L1-exp-creation-03 .
 
-ex:ALD-L1-exp-creation-01 a crm:E7_Activity ;
+ex:L1-exp-creation-01 a crm:E7_Activity ;
     crm:P2_has_type aat:300054200 ;
     crm:P14_carried_out_by ex:jan-van-der-straet .
 
-ex:ALD-L1-exp-creation-02 a crm:E7_Activity ;
+ex:L1-exp-creation-02 a crm:E7_Activity ;
     crm:P2_has_type aat:300053225 ;
     crm:P14_carried_out_by ex:philip-galle ,
         ex:theodor-galle ,
         ex:jan-collaert .
 
-ex:ALD-L1-exp-creation-03 a crm:E7_Activity ;
+ex:L1-exp-creation-03 a crm:E7_Activity ;
     crm:P2_has_type aat:300417639 ;
     crm:P14_carried_out_by ex:luigi-alamanni .
 
-ex:ALD-L1-exp a frbroo:F2_Expression ;
+ex:L1-exp a frbroo:F2_Expression ;
     crm:P129_is_about ex:sub-amerigo-vespucci ,
         ex:sub-astrolabio ,
         ex:sub-vessillo-croce-del-sud ,
@@ -56,25 +56,25 @@ ex:jan-collaert a crm:E39_Actor .
 
 ex:luigi-alamanni a crm:E39_Actor .
 
-ex:ALD-L1-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P48_has_preferred_identifier ex:ALD-L1-identifier-0 ;
+ex:L1-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P48_has_preferred_identifier ex:L1-identifier-0 ;
     crm:P2_has_type aat:300041273 ;
     crm:P3_has_note "Amerigo Vespucci sveglia l'America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum" ;
     crm:P74_has_current_or_former_residence ex:rijksmuseum .
 
-ex:ALD-L1-man-license a crm:E73_Information_Object ;
+ex:L1-man-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:ALD-L1-man ;
+    crm:P67_refers_to ex:L1-man ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
-ex:ALD-L1-identifier-0 a crm:E42_Identifier ;
-    crm:P19_has_symbolic_content "ALD-L1" ;
+ex:L1-identifier-0 a crm:E42_Identifier ;
+    crm:P19_has_symbolic_content "L1" ;
     crm:P2_has_type aat:300312355 .
 
-ex:ALD-L1-curation a crm:E87_Curation_Activity ;
+ex:L1-curation a crm:E87_Curation_Activity ;
     crm:P147_curated ex:nova-reperta ;
     crm:P14_carried_out_by ex:rijksmuseum ;
-    crm:P12_occurred_in_the_presence_of ex:ALD-L1-man .
+    crm:P12_occurred_in_the_presence_of ex:L1-man .
 
 ex:nova-reperta a crm:E78_Curated_Holding .
 
@@ -83,30 +83,29 @@ ex:rijksmuseum a crm:E39_Actor ;
 
 ex:amsterdam a crm:E53_Place .
 
-ex:ALD-L1-work-conception a frbroo:F27_Work_Conception ;
-    frbroo:R16_initiated ex:ALD-L1-work ;
-    crm:P14_carried_out_by ex:jan-van-der-straet ;
+ex:L1-work-conception a frbroo:F27_Work_Conception ;
+    frbroo:R16_initiated ex:L1-work ;
     crm:P4_has_time-span ex:1589-1593 .            
 
 ex:1589-1593 a crm:E52_Time-Span ;
     crm:P82a_begin_of_the_begin "1589-01-01" ;
     crm:P82b_end_of_the_end "1593-12-31" .
 
-ex:ALD-L1-work a frbroo:F1_Work ;
-    crm:P102_has_title ex:ALD-L1-work-title-00 ,
-        ex:ALD-L1-work-title-01 .
+ex:L1-work a frbroo:F1_Work ;
+    crm:P102_has_title ex:L1-work-title-00 ,
+        ex:L1-work-title-01 .
 
-ex:ALD-L1-work-title-00 a crm:E35_Title ;
+ex:L1-work-title-00 a crm:E35_Title ;
     crm:P2_has_type aat:300417204 ;
     crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@it ,
         "Amerigo Vespucci awakens a sleeping America"@en .
 
-ex:ALD-L1-work-title-01 a crm:E35_Title ;
+ex:L1-work-title-01 a crm:E35_Title ;
     crm:P2_has_type aat:300417207 ;
     crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@it .
 
 ex:nova-reperta-work a frbroo:F15_Complex_Work ;
-    frbroo:R10_has_member ex:ALD-L1-work ;
+    frbroo:R10_has_member ex:L1-work ;
     crm:P2_has_type aat:300189634 .
 
 ex:sub-amerigo-vespucci a crm:E73_Information_Object ;

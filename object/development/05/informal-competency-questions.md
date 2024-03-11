@@ -4,14 +4,14 @@
 CQ_5.1
 
 ### Question
-What are the titles of the work `ALD-L1-work`? What are their types?
+What are the titles of the work `L1-work`? What are their types?
 
 ### Expected outcome
 List of: `title`, `type`, `content`
 
 ### Result
-* `ALD-L1-work-title-01`, `original-title`, "Amerigo Vespucci sveglia l'America"
-* `ALD-L1-work-title-02`, `museum-title`, "Amerigo Vespucci sveglia l'America"
+* `L1-work-title-01`, `original-title`, "Amerigo Vespucci sveglia l'America"
+* `L1-work-title-02`, `museum-title`, "Amerigo Vespucci sveglia l'America"
 
 ### Based on 
 Example 1
@@ -29,10 +29,10 @@ What are the subjects of the works that are not part of any parent work?
 List of: `work`, `subject`
 
 ### Result
-* `ALD-1-work`, `sub-europa`
-* `ALD-1-work`, `sub-africa`
-* `ALD-1-work`, `sub-asia`
-* `ALD-1-work`, `sub-mar-mediterraneo`
+* `1-work`, `sub-europa`
+* `1-work`, `sub-africa`
+* `1-work`, `sub-asia`
+* `1-work`, `sub-mar-mediterraneo`
 
 ### Based on
 Example 2
@@ -50,7 +50,7 @@ What are the manifestations of the works which are members of parent works that 
 List of: `manifestation`
 
 ### Result
-* `ALD-7-man`
+* `7-man`
 
 ### Based on
 Example 3
@@ -68,8 +68,8 @@ What are the parent works of the works that have either "Europa" or "tapiro" as 
 List of: `parent work`, `work`, `subject`
 
 ### Result
-* `nova-reperta-work`, `ALD-L1-work`, `sub-tapiro`
-* `atlante-nautico-work`, `ALD-7-work`, `sub-europa`
+* `nova-reperta-work`, `L1-work`, `sub-tapiro`
+* `atlante-nautico-work`, `7-work`, `sub-europa`
 
 ### Based on
 Example 1, Example 2, Example 3
@@ -87,8 +87,8 @@ What are the manifestations that compose another manifestation?
 List of: `manifestation1`, `manifestation2`
 
 ### Result
-* `ALD-PTa-1-man`, `ALD-PTa-man`
-* `ALD-PTa-2-man`, `ALD-PTa-man`
+* `PTa-1-man`, `PTa-man`
+* `PTa-2-man`, `PTa-man`
 
 ### Based on
 Example 4
@@ -106,7 +106,7 @@ What are the manifestations that depict other expressions?
 List of: `manifestation`, `expression`
 
 ### Result
-* `ALD-PTa-3-man`, `ALD-PTa-exp`
+* `PTa-3-man`, `PTa-exp`
 
 ### Based on
 Example 4
@@ -124,13 +124,13 @@ What are the license statements referring to the manifestations?
 List of: `manifestation`, `license_link`
 
 ### Result
-* `ALD-L1-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `ALD-1-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `ALD-7-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `ALD-PTa-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `ALD-PTa-1-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `ALD-PTa-2-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `ALD-PTa-3-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `L1-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `1-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `7-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `PTa-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `PTa-1-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `PTa-2-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `PTa-3-man`, http://rightsstatements.org/vocab/InC/1.0/
 
 ### Based on
 Example 1, Example 2, Example 3, Example 4

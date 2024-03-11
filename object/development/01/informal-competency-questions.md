@@ -10,8 +10,8 @@ What are the cultural resources whose creation involved some illustrator?
 List of: `cultural resource`, `agent`
 
 ### Result
-* `ALD-01-exp`, `Jan van der Straet (ULAN:500011304)`
-* `ALD-35-exp`, `Pietro Andrea Mattioli (VIAF:61549376)`
+* `01-exp`, `Jan van der Straet (ULAN:500011304)`
+* `35-exp`, `Pietro Andrea Mattioli (VIAF:61549376)`
 
 ### Based on 
 Example 1, Example 2
@@ -23,7 +23,7 @@ Example 1, Example 2
 CQ_1.2
 
 ### Question
-What are the agents and the types of  activities they carried out to contribute to the creation of `ALD-24-exp`?
+What are the agents and the types of  activities they carried out to contribute to the creation of `24-exp`?
 
 ### Expected outcome
 List of: `agent`, `type`
@@ -48,11 +48,11 @@ What are the agents involved in the creation of the cultural resources that have
 List of: `cultural resource`, `agent`, `type`
 
 ### Result
-* `ALD-01-exp`, `Jan van der Straet (ULAN:500011304)`, `illustration`
-* `ALD-01-exp`, `Philip Galle`, `engraving`
-* `ALD-01-exp`, `Theodor Galle`, `engraving`
-* `ALD-01-exp`, `Jan Collaert`, `engraving`
-* `ALD-01-exp`, `Luigi Alamanni (ULAN:500714480)`, `commission`
+* `01-exp`, `Jan van der Straet (ULAN:500011304)`, `illustration`
+* `01-exp`, `Philip Galle`, `engraving`
+* `01-exp`, `Theodor Galle`, `engraving`
+* `01-exp`, `Jan Collaert`, `engraving`
+* `01-exp`, `Luigi Alamanni (ULAN:500714480)`, `commission`
 
 ### Based on
 Example 1
@@ -70,7 +70,7 @@ What are the cultural resources whose creation involved at least one agent carry
 List of: `cultural resource`
 
 ### Result
-* `ALD-S35-exp`
+* `S35-exp`
 
 ### Based on
 Example 2

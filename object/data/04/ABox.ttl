@@ -13,44 +13,32 @@
     owl:imports <https://purl.org/changes/object/model/> .
 
 
-ex:ALD-L1-work-conception a frbroo:F27_Work_Conception ;
-    frbroo:R16_initiated ex:ALD-L1-work ;
-    crm:P14_carried_out_by ex:jan-van-der-straet ;
+ex:L1-work-conception a frbroo:F27_Work_Conception ;
+    frbroo:R16_initiated ex:L1-work ;
     crm:P4_has_time-span ex:1589-1593 .            
 
 ex:1589-1593 a crm:E52_Time-Span ;
     crm:P82a_begin_of_the_begin "1589-01-01" ;
     crm:P82b_end_of_the_end "1593-12-31" .
 
-ex:ALD-L1-work a frbroo:F1_Work .
+ex:L1-work a frbroo:F1_Work .
 
-ex:jan-van-der-straet a crm:E39_Actor ;
-    crm:P70i_is_documented_in <http://vocab.getty.edu/page/ulan/500011304> .
-
-ex:ALD-1-work-conception a frbroo:F27_Work_Conception ;
-    frbroo:R16_initiated ex:ALD-1-work ;
-    crm:P14_carried_out_by ex:grazioso-benincasa ;
+ex:1-work-conception a frbroo:F27_Work_Conception ;
+    frbroo:R16_initiated ex:1-work ;
     crm:P4_has_time-span ex:1482 .            
 
 ex:1482 a crm:E52_Time-Span ;
     crm:P82a_begin_of_the_begin "1482-01-01" ;
     crm:P82b_end_of_the_end "1482-12-31" .
 
-ex:ALD-1-work a frbroo:F1_Work .
+ex:1-work a frbroo:F1_Work .
 
-ex:grazioso-benincasa a crm:E39_Actor ;
-    crm:P70i_is_documented_in <http://vocab.getty.edu/page/ulan/500114874> .
-
-ex:ALD-26-work-conception a frbroo:F27_Work_Conception ;
-    frbroo:R16_initiated ex:ALD-26-work ;
-    crm:P14_carried_out_by ex:ulisse-aldrovandi ;
+ex:26-work-conception a frbroo:F27_Work_Conception ;
+    frbroo:R16_initiated ex:26-work ;
     crm:P4_has_time-span ex:1500-1599 .            
 
 ex:1500-1599 a crm:E52_Time-Span ;
     crm:P82a_begin_of_the_begin "1500-01-01" ;
     crm:P82b_end_of_the_end "1599-12-31" .
 
-ex:ALD-26-work a frbroo:F1_Work .
-
-ex:ulisse-aldrovandi a crm:E39_Actor ;
-    crm:P70i_is_documented_in <http://viaf.org/viaf/100190422> .
+ex:26-work a frbroo:F1_Work .

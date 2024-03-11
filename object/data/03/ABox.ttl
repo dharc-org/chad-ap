@@ -13,12 +13,12 @@
     owl:imports <https://purl.org/changes/object/model/> .
 
 
-ex:ALD-L1-curation a crm:E87_Curation_Activity ;
+ex:L1-curation a crm:E87_Curation_Activity ;
     crm:P147_curated ex:nova-reperta ;
     crm:P14_carried_out_by ex:rijksmuseum ;
-    crm:P12_occurred_in_the_presence_of ex:ALD-L1-man .
+    crm:P12_occurred_in_the_presence_of ex:L1-man .
 
-ex:ALD-L1-man a frbroo:F4_Manifestation_Singleton ;
+ex:L1-man a frbroo:F4_Manifestation_Singleton ;
     crm:P74_has_current_or_former_residence ex:rijksmuseum .
 
 ex:nova-reperta a crm:E78_Curated_Holding .
@@ -28,12 +28,12 @@ ex:rijksmuseum a crm:E39_Actor ;
 
 ex:amsterdam a crm:E53_Place .
 
-ex:ALD-1-curation a crm:E87_Curation_Activity ;
+ex:1-curation a crm:E87_Curation_Activity ;
     crm:P147_curated ex:collezione-di-zoologia ;
     crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
-    crm:P12_occurred_in_the_presence_of ex:ALD-1-man .
+    crm:P12_occurred_in_the_presence_of ex:1-man .
 
-ex:ALD-1-man a frbroo:F4_Manifestation_Singleton ;
+ex:1-man a frbroo:F4_Manifestation_Singleton ;
     crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
 
 ex:collezione-di-zoologia a crm:E78_Curated_Holding .
@@ -43,12 +43,12 @@ ex:sistema-museale-di-ateneo a crm:E39_Actor ;
 
 ex:bologna a crm:E53_Place .
 
-ex:ALD-14-curation a crm:E87_Curation_Activity ;
+ex:14-curation a crm:E87_Curation_Activity ;
     crm:P147_curated ex:collezione-di-anatomia-comparata ;
     crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
-    crm:P12_occurred_in_the_presence_of ex:ALD-14-man .
+    crm:P12_occurred_in_the_presence_of ex:14-man .
 
-ex:ALD-14-man a frbroo:F4_Manifestation_Singleton ;
+ex:14-man a frbroo:F4_Manifestation_Singleton ;
     crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
 
 ex:collezione-di-anatomia-comparata a crm:E78_Curated_Holding .

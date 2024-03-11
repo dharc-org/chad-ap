@@ -17,7 +17,7 @@ WHERE {
 ```
 
 ## CQ_4.2
-What are the agents who carried out the conception of a cultural resource in a time interval that includes the year 1590?
+What are the cultural resources created in a time interval that includes the year 1590?
 
 ```SPARQL
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 
