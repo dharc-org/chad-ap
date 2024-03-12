@@ -1,6 +1,6 @@
 # Formal Competency Questions
 ## CQ_4.1
-What are the cultural resources and the time spans of their conception events?.
+What are the cultural resources and the time spans of their conception events?
 
 ```SPARQL
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 

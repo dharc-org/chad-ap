@@ -1,4 +1,4 @@
-# Digitization of a temporary exhibition
+# CIDOC CRM Application Profile for Digitizing Exhibitions 
 
 ## Object level
 An object or cultural resource that is part of Aldrovandi's exhibition is conceptualized according to FRBR: 

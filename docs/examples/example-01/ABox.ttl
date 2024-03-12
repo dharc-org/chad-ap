@@ -1,6 +1,7 @@
 @prefix aat: <http://vocab.getty.edu/page/aat/> .
 @prefix ex: <http://purl.org/changes/cidoc-profile/data/example/> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -43,11 +44,11 @@ ex:32-man-license a crm:E73_Information_Object ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
 ex:32-identifier-00 a crm:E42_Identifier ;
-    crm:P19_has_symbolic_content "32" ;
+    crm:P190_has_symbolic_content "32" ;
     crm:P2_has_type aat:300312355 .
 
 ex:32-identifier-01 a crm:E42_Identifier ;
-    crm:P19_has_symbolic_content "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86" ;
+    crm:P190_has_symbolic_content "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86" ;
     crm:P2_has_type aat:300404704 .
 
 ex:32-identifier-02 a crm:E42_Identifier ;
