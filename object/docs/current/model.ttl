@@ -1,0 +1,6 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://purl.org/changes/object/model/> rdf:type owl:Ontology ;
+    owl:imports <http://www.cidoc-crm.org/cidoc-crm/> ,
+    <http://iflastandards.info/ns/fr/frbr/frbroo/> .
