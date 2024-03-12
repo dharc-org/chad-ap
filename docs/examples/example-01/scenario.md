@@ -1,9 +1,9 @@
 # Example 1: 32 (*Essere umano ermafrodita*)
 
 This object can be represented as follows:
-* at the FRBR level of Work, the object has been initiated by a work conception within a time period that spans from 1500 to 1599. The work has also three titles ("Essere umano ermafrodita", "Essere umano ermafrodita", "Human hermaphrodite"). Finally, it is part of the print volume Tavole di animali.
-* at the FRBR level of Expression, the object has been created in a creation event by using drawing as a technique. The event consists in an authorship activity carried out by Ulisse Aldrovandi. ermafrodita is related to the expression as a subject.
-* at the FRBR level of Manifestation, the object has been involved in a curation activity carried out by BUB (located in Bologna). Moreover, the Manifestation is characterized by having three identifiers ("32" as the collection ID, "5" as the volume number and "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"), a description, and a type (manuscript).
+* at the FRBR level of Work, the object has been initiated by a work conception within a time period that spans from 1500 to 1599. The work has also three titles: "Essere umano ermafrodita" (exhibition title), "Essere umano ermafrodita" and "Human hermaphrodite" (original title). Finally, it is part of the print volume "Tavole di animali".
+* at the FRBR level of Expression, the object has been created in a creation event by using "drawing" as a technique. The event consists in an authorship activity carried out by Ulisse Aldrovandi. "ermafrodita" is related to the expression as its subject.
+* at the FRBR level of Manifestation, the object has been involved in a curation activity carried out by BUB (located in Bologna). Moreover, the Manifestation is characterized by having three identifiers ("32" as the collection ID, "5" as the volume number and "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86" as the shelf mark), a description, and a type (manuscript).
 
 The process of digitization can be represented as follows:
 * On 08/05/2023, Alice Bordignon acquired digital data of the object "32" ("Essere umano ermafrodita") on behalf of UNIBO FICLIT, leveraging photogrammetry and using the "Panasonic DMC-LX100" camera, resulting in a digital model.

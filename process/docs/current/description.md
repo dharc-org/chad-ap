@@ -5,7 +5,7 @@ A 3D digitization workflow is made up by two main types of activity:
 * a **digitization process** (`crmdig:D2_Digitization_Process`);
 * a series of **software executions** (`crmdig:D10_Software_Execution`).
 
-![Digitization process](final-model-01.png)
+![Digitization process](diagrams\digitization-process.png)
 
 A **digitization process** has the following characteristics:
 * it involves the digitization of a real-world object (`crm:E24_Physical_Human-Made_Thing`)
@@ -14,7 +14,7 @@ A **digitization process** has the following characteristics:
 * it involves agents - such as people (`crm:E21_Person`), who participate in such activity, and intitutions (`crm:E74_Group`), which are responsible for it;
 * it also involves using techniques (such as photogrammetry or structured light scanning) (`crm:E55_Type`) and tools (like structured light scanners - e.g. Scanner Spider) (`crmdig:D8_Digital_Device`).
 
-![Digitization process](final-model-02.png)
+![Software execution](diagrams\software-execution.png)
 
 A **software execution**  has the following characteristics:
 * it has a type that reflects a certain stage or phase of digitization (`crm_E55_Type`) within the workflow (e.g. processing, modelling, optimization, etc.);
@@ -24,5 +24,5 @@ A **software execution**  has the following characteristics:
 * it involves agents - such as people (`crm:E21_Person`), who participate in such activity, and intitutions (`crm:E74_Group`), which are responsible for it;
 * it also involves using tools (like 3D scanning software - e.g. Artec Studio 14) (`crmdig:D14_Software`).
 
-## Complete model
-![Final model](final-model.png)
+## Process model
+![Process model](diagrams\process-model.png)
