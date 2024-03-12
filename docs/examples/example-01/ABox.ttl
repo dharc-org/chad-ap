@@ -21,7 +21,7 @@ ex:32-exp-creation-00 a frbroo:F28_Expression_Creation ;
     crm:P9_consists_of ex:32-exp-creation-01 .
 
 ex:32-exp-creation-01 a crm:E7_Activity ;
-    crm:P2_has_type aat:300054698 ;
+    crm:P2_has_type aat:300404387 ;
     crm:P14_carried_out_by ex:ulisse-aldrovandi .
 
 ex:32-exp a frbroo:F2_Expression ;
