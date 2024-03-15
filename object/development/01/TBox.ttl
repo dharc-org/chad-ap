@@ -37,6 +37,11 @@
               rdfs:label "consists of"@en .
 
 
+:hasIdentifier rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "has identifier"@en .
+
+
 #################################################################
 #    Classes
 #################################################################

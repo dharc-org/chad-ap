@@ -29,7 +29,7 @@ ex:32-exp a frbroo:F2_Expression ;
     crm:P129_is_about ex:sub-ermafrodita.
 
 ex:ulisse-aldrovandi a crm:E39_Actor ;
-    crm:P70i_is_documented_in <https://viaf.org/viaf/100190422/> .
+    crm:P48_has_preferred_identifier <https://viaf.org/viaf/100190422/> .
 
 ex:32-man a frbroo:F4_Manifestation_Singleton ;
     crm:P48_has_preferred_identifier ex:32-identifier-00 ,
@@ -69,8 +69,8 @@ ex:32-work-conception a frbroo:F27_Work_Conception ;
     crm:P4_has_time-span ex:1500-1599 .
 
 ex:1500-1599 a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1500-01-01" ;
-    crm:P82b_end_of_the_end "1599-12-31" .
+    crm:P82a_begin_of_the_begin "1500-01-01"^^xsd:date ;
+    crm:P82b_end_of_the_end "1599-12-31"^^xsd:date .
 
 ex:32-work a frbroo:F1_Work ;
     crm:P102_has_title ex:32-work-title-00 ,
@@ -132,7 +132,7 @@ ex:32-mod a crmdig:D10_Software_Execution ;
     crm:P14_carried_out_by ex:alice-bordignon ;
     crmdig:L23_used_software_or_firmware ex:blender .
 
-ex:instantmeshes-3df-zephyr a crmdig:D14_Software ;
+ex:instantmeshes a crmdig:D14_Software ;
     crm:P2_has_type aat:300426696 .
 
 ex:32-opt a crmdig:D10_Software_Execution ;
@@ -142,7 +142,8 @@ ex:32-opt a crmdig:D10_Software_Execution ;
     crm:P4_has_time-span ex:32-opt-timespan ;
     crm:P11_had_participant ex:unibo-ficlit ;
     crm:P14_carried_out_by ex:alice-bordignon ;
-    crmdig:L23_used_software_or_firmware ex:instantmeshes-3df-zephyr .
+    crmdig:L23_used_software_or_firmware ex:instantmeshes ,
+        ex:3df-zephyr .
 
 ex:32-exp a crmdig:D10_Software_Execution ;
     crm:P2_has_type aat:300417260 ;
@@ -184,53 +185,53 @@ ex:32-upl-output a crmdig:D9_Data_Object .
 ex:32-acq-output-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300027759 ;
     crm:P67_refers_to ex:32-acq-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by/4.0/> .
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
 ex:32-proc-output-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300027759 ;
     crm:P67_refers_to ex:32-proc-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by/4.0/> .
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
 ex:32-mod-output-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300027759 ;
     crm:P67_refers_to ex:32-mod-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by/4.0/> .
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
 ex:32-opt-output-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300027759 ;
     crm:P67_refers_to ex:32-opt-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by/4.0/> .
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
 ex:32-exp-output-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300027759 ;
     crm:P67_refers_to ex:32-exp-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by/4.0/> .
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
 ex:32-upl-output-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300027759 ;
     crm:P67_refers_to ex:32-upl-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by/4.0/> .
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
 ex:32-acq-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-08" ;
-    crm:P82b_end_of_the_end "2023-05-08" .
+    crm:P82a_begin_of_the_begin "2023-05-08"^^xsd:date ;
+    crm:P82b_end_of_the_end "2023-05-08"^^xsd:date .
 
 ex:32-proc-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-10" ;
-    crm:P82b_end_of_the_end "2023-05-10" .
+    crm:P82a_begin_of_the_begin "2023-05-10"^^xsd:date ;
+    crm:P82b_end_of_the_end "2023-05-10"^^xsd:date .
 
 ex:32-mod-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-17" ;
-    crm:P82b_end_of_the_end "2023-05-18" .
+    crm:P82a_begin_of_the_begin "2023-05-17"^^xsd:date ;
+    crm:P82b_end_of_the_end "2023-05-18"^^xsd:date .
 
 ex:32-opt-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-18" ;
-    crm:P82b_end_of_the_end "2023-05-19" .
+    crm:P82a_begin_of_the_begin "2023-05-18"^^xsd:date ;
+    crm:P82b_end_of_the_end "2023-05-19"^^xsd:date .
 
 ex:32-exp-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-19" ;
-    crm:P82b_end_of_the_end "2023-05-19" .
+    crm:P82a_begin_of_the_begin "2023-05-19"^^xsd:date ;
+    crm:P82b_end_of_the_end "2023-05-19"^^xsd:date .
 
 ex:32-upl-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-19" ;
-    crm:P82b_end_of_the_end "2023-05-19" .
+    crm:P82a_begin_of_the_begin "2023-05-19"^^xsd:date ;
+    crm:P82b_end_of_the_end "2023-05-19"^^xsd:date .

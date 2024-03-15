@@ -11,7 +11,7 @@
 | `has type` | This property links a `activity` with a `type`. |
 | `uses technique` | This property links a `creation event` with a `type`. |
 | `consists of` | This property links a `creation event` with a `activity`. |
-| `is documented in` | This property links some entity to an external resource referring to the same concepts it represents. |
+| `has identifier` | This property links some entity to an external resource identifying it. |
 | `illustration` | A type of `activity`. |
 | `engraving process` | A type of `activity`. |
 | `commission` | A type of `activity`. |

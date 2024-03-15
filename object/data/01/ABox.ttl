@@ -37,7 +37,7 @@ ex:L1-exp-creation-03 a crm:E7_Activity ;
 ex:L1-exp a frbroo:F2_Expression .
 
 ex:jan-van-der-straet a crm:E39_Actor ;
-    crm:P70i_is_documented_in <http://vocab.getty.edu/page/ulan/500011304> .
+    crm:P48_has_preferred_identifier <http://vocab.getty.edu/page/ulan/500011304> .
 
 ex:philip-galle a crm:E39_Actor .
 
@@ -64,7 +64,7 @@ ex:35-exp-creation-02 a crm:E7_Activity ;
     crm:P14_carried_out_by ex:pietro-andrea-mattioli .
 
 ex:pietro-andrea-mattioli a crm:E39_Actor ;
-    crm:P70i_is_documented_in <http://viaf.org/viaf/61549376> .
+    crm:P48_has_preferred_identifier <http://viaf.org/viaf/61549376> .
 
 ex:24-exp-creation-00 a frbroo:F28_Expression_Creation ;
     frbroo:R17_created ex:24-exp ;
@@ -83,6 +83,6 @@ ex:24-exp-creation-02 a crm:E7_Activity ;
     crm:P14_carried_out_by ex:naturaliter .
 
 ex:carl-linnaeus a crm:E39_Actor ;
-    crm:P70i_is_documented_in <http://viaf.org/viaf/34594730> .
+    crm:P48_has_preferred_identifier <http://viaf.org/viaf/34594730> .
 
 ex:naturaliter a crm:E39_Actor .
