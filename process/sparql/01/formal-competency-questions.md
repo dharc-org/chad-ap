@@ -13,7 +13,7 @@ WHERE {
     ?activity a crmdig:D2_Digitization_Process ;
         crmdig:L1_digitized ?input ;
         crmdig:L11_had_output ?output .
-    ?license crm:P2_has_type aat:300027759 ;
+    ?license crm:P2_has_type aat:300435434 ;
         crm:P67_refers_to ?output ;
         crm:P70i_is_documented_in ?license_link .
 }

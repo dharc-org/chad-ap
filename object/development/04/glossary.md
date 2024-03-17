@@ -9,3 +9,4 @@
 | `has time interval` | This property links a `conception event` with a `time interval`. |
 | `has beginning` | This property links a `time interval` with a `date`. |
 | `has end` | This property links a `time interval` with a `date`. |
+| `at some time between` | This property links a `time interval` with a generic fuzzy indication of a period in time. |

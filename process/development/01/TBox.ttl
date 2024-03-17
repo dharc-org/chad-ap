@@ -95,6 +95,11 @@
                rdfs:label "Type"@en .
 
 
+:RightStatement rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Right statement"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################

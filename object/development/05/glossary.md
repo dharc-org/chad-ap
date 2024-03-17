@@ -9,6 +9,7 @@
 | `parent work` | A larger work which is composed by other smaller works. |
 | `type` | A category. |
 | `concept` | An abstract concept. |
+| `document` | An external resource. |
 | `creates work` | This property links a creation event with a work. |
 | `creates expression` | This property links a creation event with a exppression. |
 | `creates manifestation` | This property links a creation event with a manifestation. |

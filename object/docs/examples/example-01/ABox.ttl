@@ -88,8 +88,8 @@ ex:L1-work-conception a frbroo:F27_Work_Conception ;
     crm:P4_has_time-span ex:1589-1593 .            
 
 ex:1589-1593 a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1589-01-01" ;
-    crm:P82b_end_of_the_end "1593-12-31" .
+    crm:P82a_begin_of_the_begin "1589-01-01"^^xsd:date ;
+    crm:P82b_end_of_the_end "1593-12-31"^^xsd:date .
 
 ex:L1-work a frbroo:F1_Work ;
     crm:P102_has_title ex:L1-work-title-00 ,

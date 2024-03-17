@@ -29,9 +29,9 @@ ex:15-acq-output-license a process:Document ;
                 process:isDocumentedIn <https://creativecommons.org/licenses/by/4.0/> .
 
 ex:15-acq-timespan a process:TimeSpan ;
-                process:hasStartDate "2023-04-17" ;
-                process:hasEndDate "2023-04-17" .
+                process:hasStartDate "2023-04-17"^^xsd:date ;
+                process:hasEndDate "2023-04-17"^^xsd:date .
 
 ex:15-proc-timespan a process:TimeSpan ;
-                process:hasStartDate "2023-04-18" ;
-                process:hasEndDate "2023-04-19" .
+                process:hasStartDate "2023-04-18"^^xsd:date ;
+                process:hasEndDate "2023-04-19"^^xsd:date .

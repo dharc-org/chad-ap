@@ -120,6 +120,11 @@
       rdfs:label "Concept"@en .
 
 
+:Document rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Document"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################

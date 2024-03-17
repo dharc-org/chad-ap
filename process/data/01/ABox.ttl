@@ -17,7 +17,7 @@ ex:15 a crm:E24_Physical_Human-Made_Thing .
 
 ex:15-acq a crmdig:D2_Digitization_Process ;
     crmdig:L1_digitized ex:15 ;
-    crmdig:L11_had_output ex:15-acq-output;
+    crmdig:L11_had_output ex:15-acq-output ;
     crm:P4_has_time-span ex:15-acq-timespan .
 
 ex:15-proc a crmdig:D10_Software_Execution ;
@@ -27,14 +27,14 @@ ex:15-proc a crmdig:D10_Software_Execution ;
 ex:15-acq-output a crmdig:D9_Data_Object .
 
 ex:15-acq-output-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300027759 ;
+    crm:P2_has_type aat:300435434 ;
     crm:P67_refers_to ex:15-acq-output ;
     crm:P70i_is_documented_in <https://creativecommons.org/licenses/by/4.0/> .
 
 ex:15-acq-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-04-17" ;
-    crm:P82b_end_of_the_end "2023-04-17" .
+    crm:P82a_begin_of_the_begin "2023-04-17"^^xsd:date ;
+    crm:P82b_end_of_the_end "2023-04-17"^^xsd:date .
 
 ex:15-proc-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-04-18" ;
-    crm:P82b_end_of_the_end "2023-04-19" .
+    crm:P82a_begin_of_the_begin "2023-04-18"^^xsd:date ;
+    crm:P82b_end_of_the_end "2023-04-19"^^xsd:date .
