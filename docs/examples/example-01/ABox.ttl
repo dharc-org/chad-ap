@@ -69,8 +69,7 @@ ex:32-work-conception a frbroo:F27_Work_Conception ;
     crm:P4_has_time-span ex:1500-1599 .
 
 ex:1500-1599 a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1500-01-01"^^xsd:date ;
-    crm:P82b_end_of_the_end "1599-12-31"^^xsd:date .
+    crm:P82_at_some_time_within "1500-1599"^^rdfs:Literal .
 
 ex:32-work a frbroo:F1_Work ;
     crm:P102_has_title ex:32-work-title-00 ,
