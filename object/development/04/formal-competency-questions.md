@@ -30,7 +30,7 @@ WHERE {
     ?timeInterval obj:hasBeginning ?beginning ;
                         obj:hasEnd ?end .
     
-FILTER (xsd:dateTime(concat(str(?beginning), "T00:00:00")) < xsd:dateTime("1591-01-01T00:00:00") && 
-xsd:dateTime(concat(str(?end), "T00:00:00")) > xsd:dateTime("1589-12-31T00:00:00"))
+FILTER (xsd:dateTimeTime(concat(str(?beginning), "T00:00:00")) < xsd:dateTimeTime("1591-01-01T00:00:00") && 
+xsd:dateTimeTime(concat(str(?end), "T00:00:00")) > xsd:dateTimeTime("1589-12-31T00:00:00"))
 }
 ```

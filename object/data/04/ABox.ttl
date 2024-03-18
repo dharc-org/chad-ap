@@ -18,8 +18,8 @@ ex:L1-work-conception a frbroo:F27_Work_Conception ;
     crm:P4_has_time-span ex:1589-1593 .            
 
 ex:1589-1593 a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1589-01-01"^^xsd:date ;
-    crm:P82b_end_of_the_end "1593-12-31"^^xsd:date .
+    crm:P82a_begin_of_the_begin "1589-01-01"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "1593-12-31"^^xsd:dateTime .
 
 ex:L1-work a frbroo:F1_Work .
 
@@ -28,8 +28,8 @@ ex:1-work-conception a frbroo:F27_Work_Conception ;
     crm:P4_has_time-span ex:1482 .            
 
 ex:1482 a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1482-01-01"^^xsd:date ;
-    crm:P82b_end_of_the_end "1482-12-31"^^xsd:date .
+    crm:P82a_begin_of_the_begin "1482-01-01"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "1482-12-31"^^xsd:dateTime .
 
 ex:1-work a frbroo:F1_Work .
 
@@ -38,7 +38,7 @@ ex:26-work-conception a frbroo:F27_Work_Conception ;
     crm:P4_has_time-span ex:1500-1599 .            
 
 ex:1500-1599 a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1500-01-01"^^xsd:date ;
-    crm:P82b_end_of_the_end "1599-12-31"^^xsd:date .
+    crm:P82a_begin_of_the_begin "1500-01-01"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "1599-12-31"^^xsd:dateTime .
 
 ex:26-work a frbroo:F1_Work .
