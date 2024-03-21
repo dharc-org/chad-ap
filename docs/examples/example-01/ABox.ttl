@@ -16,7 +16,7 @@
 
 ex:32-exp-creation-00 a frbroo:F28_Expression_Creation ;
     frbroo:R17_created ex:32-exp ;
-    crm:P32_used_general_technique aat:300033973 ;
+    crm:P32_used_general_technique aat:300054196 ;
     frbroo:R18_created ex:32-man ;
     frbroo:R19_created_a_realisation_of ex:32-work ;
     crm:P9_consists_of ex:32-exp-creation-01 .
