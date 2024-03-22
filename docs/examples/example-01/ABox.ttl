@@ -77,12 +77,12 @@ ex:32-work a frbroo:F1_Work ;
 
 ex:32-work-title-00 a crm:E35_Title ;
     crm:P2_has_type aat:300417204 ;
-    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it ,
-        "Human hermaphrodite"@en .
+    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it .
 
 ex:32-work-title-01 a crm:E35_Title ;
     crm:P2_has_type aat:300417207 ;
-    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it .
+    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it ,
+        "Human hermaphrodite"@en .
 
 ex:tavole-di-animali-work a frbroo:F15_Complex_Work ;
     frbroo:R10_has_member ex:32-work ;

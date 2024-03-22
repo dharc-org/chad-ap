@@ -58,8 +58,7 @@ Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"</y:NodeLabel>
           <y:Geometry height="20.0" width="20.0" x="-707.9339128259537" y="-1582.3083182936832"/>
           <y:Fill color="#FF99CC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="43.203125" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="228.1328125" x="-232.1328125" xml:space="preserve" y="-11.6015625">"Essere umano ermafrodita"@it
-"Human hermaphrodite"@en</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="228.1328125" x="-232.1328125" xml:space="preserve" y="-1.80078125">"Essere umano ermafrodita"@it</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -81,7 +80,8 @@ Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"</y:NodeLabel>
           <y:Geometry height="20.0" width="20.0" x="-707.9339128259537" y="-1342.045053506482"/>
           <y:Fill color="#FF99CC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="203.890625" x="-207.890625" xml:space="preserve" y="-1.80078125">"Essere umano ermafrodita"</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="43.203125" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="232.578125" x="-236.578125" xml:space="preserve" y="-11.6015625">"Essere umano ermafrodita"@it,
+"Human hermaphrodite"@en</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>

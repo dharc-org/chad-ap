@@ -97,12 +97,12 @@ ex:L1-work a frbroo:F1_Work ;
 
 ex:L1-work-title-00 a crm:E35_Title ;
     crm:P2_has_type aat:300417204 ;
-    crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@it ,
-        "Amerigo Vespucci awakens a sleeping America"@en .
+    crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@it .
 
 ex:L1-work-title-01 a crm:E35_Title ;
     crm:P2_has_type aat:300417207 ;
-    crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@it .
+    crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@it ,
+        "Amerigo Vespucci awakens a sleeping America"@en .
 
 ex:nova-reperta-work a frbroo:F15_Complex_Work ;
     frbroo:R10_has_member ex:L1-work ;

@@ -59,8 +59,7 @@ Rijksmuseum"</y:NodeLabel>
           <y:Geometry height="20.0" width="20.0" x="-777.8573170812728" y="-1582.3083182936832"/>
           <y:Fill color="#FF99CC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="43.203125" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="n" textColor="#000000" verticalTextPosition="bottom" visible="true" width="386.453125" x="-183.2265625" xml:space="preserve" y="-47.203125">"Amerigo Vespucci sveglia l’America"@it
-"Amerigo Vespucci awakens a sleeping America"@en</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="n" textColor="#000000" verticalTextPosition="bottom" visible="true" width="293.03125" x="-136.515625" xml:space="preserve" y="-27.6015625">"Amerigo Vespucci sveglia l’America"@it</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -192,7 +191,7 @@ Rijksmuseum"</y:NodeLabel>
           <y:Geometry height="20.0" width="20.0" x="-716.0810938244047" y="-536.3174684175533"/>
           <y:Fill color="#FF99CC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="138.3203125" x="-142.3203125000001" xml:space="preserve" y="-1.80078125">gruppo di cannibali</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="138.3203125" x="-142.3203125" xml:space="preserve" y="-1.80078125">gruppo di cannibali</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -203,7 +202,7 @@ Rijksmuseum"</y:NodeLabel>
           <y:Geometry height="20.0" width="20.0" x="-716.0810938244044" y="-462.3174684175533"/>
           <y:Fill color="#FF99CC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="156.0703125" x="-160.0703124999999" xml:space="preserve" y="-1.80078125">vessillo croce del sud</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="156.0703125" x="-160.0703125" xml:space="preserve" y="-1.80078125">vessillo croce del sud</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -456,7 +455,8 @@ Rijksmuseum"</y:NodeLabel>
           <y:Geometry height="20.0" width="20.0" x="-777.8573170812729" y="-1342.045053506482"/>
           <y:Fill color="#FF99CC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.6015625" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="n" textColor="#000000" verticalTextPosition="bottom" visible="true" width="268.2890625" x="-124.14453125" xml:space="preserve" y="-27.6015625">"Amerigo Vespucci sveglia l'America"</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="43.203125" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="n" textColor="#000000" verticalTextPosition="bottom" visible="true" width="386.453125" x="-183.2265625" xml:space="preserve" y="-47.203125">"Amerigo Vespucci sveglia l'America"@it,
+"Amerigo Vespucci awakens a sleeping America"@en</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
