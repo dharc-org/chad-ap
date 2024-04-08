@@ -13,28 +13,28 @@
     owl:imports <http://purl.org/changes/process/model/> .
 
 
-ex:15 a crm:E24_Physical_Human-Made_Thing .
+ex:32 a crm:E24_Physical_Human-Made_Thing .
 
-ex:15-acq a crmdig:D2_Digitization_Process ;
-    crmdig:L1_digitized ex:15 ;
-    crmdig:L11_had_output ex:15-acq-output ;
-    crm:P4_has_time-span ex:15-acq-timespan .
+ex:32-acq a crmdig:D2_Digitization_Process ;
+    crmdig:L1_digitized ex:32 ;
+    crmdig:L11_had_output ex:32-acq-output ;
+    crm:P4_has_time-span ex:32-acq-timespan .
 
-ex:15-proc a crmdig:D10_Software_Execution ;
-    crmdig:L10_had_input ex:15-acq-output ;
-    crm:P4_has_time-span ex:15-proc-timespan .
+ex:32-proc a crmdig:D10_Software_Execution ;
+    crmdig:L10_had_input ex:32-acq-output ;
+    crm:P4_has_time-span ex:32-proc-timespan .
 
-ex:15-acq-output a crmdig:D9_Data_Object .
+ex:32-acq-output a crmdig:D9_Data_Object .
 
-ex:15-acq-output-license a crm:E73_Information_Object ;
+ex:32-acq-output-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:15-acq-output ;
+    crm:P67_refers_to ex:32-acq-output ;
     crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
-ex:15-acq-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-04-17"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-04-17"^^xsd:dateTime .
+ex:32-acq-timespan a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "2023-05-08T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-08T23:59:59Z"^^xsd:dateTime .
 
-ex:15-proc-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-04-18"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-04-19"^^xsd:dateTime .
+ex:32-proc-timespan a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "2023-05-10T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-10T23:59:59Z"^^xsd:dateTime .

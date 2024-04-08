@@ -112,21 +112,21 @@ ex:32-exp-output-license a crm:E73_Information_Object ;
     crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
 ex:32-acq-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-08" ;
-    crm:P82b_end_of_the_end "2023-05-08" .
+    crm:P82a_begin_of_the_begin "2023-05-08T00:00:00Z" ;
+    crm:P82b_end_of_the_end "2023-05-08T23:59:59Z" .
 
 ex:32-proc-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-10" ;
-    crm:P82b_end_of_the_end "2023-05-10" .
+    crm:P82a_begin_of_the_begin "2023-05-10T00:00:00Z" ;
+    crm:P82b_end_of_the_end "2023-05-10T23:59:59Z" .
 
 ex:32-mod-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-17" ;
-    crm:P82b_end_of_the_end "2023-05-18" .
+    crm:P82a_begin_of_the_begin "2023-05-17T00:00:00Z" ;
+    crm:P82b_end_of_the_end "2023-05-18T23:59:59Z" .
 
 ex:32-opt-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-18" ;
-    crm:P82b_end_of_the_end "2023-05-19" .
+    crm:P82a_begin_of_the_begin "2023-05-18T00:00:00Z" ;
+    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z" .
 
 ex:32-exp-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-19" ;
-    crm:P82b_end_of_the_end "2023-05-19" .
+    crm:P82a_begin_of_the_begin "2023-05-19T00:00:00Z" ;
+    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z" .
