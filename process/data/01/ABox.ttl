@@ -29,7 +29,7 @@ ex:15-acq-output a crmdig:D9_Data_Object .
 ex:15-acq-output-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
     crm:P67_refers_to ex:15-acq-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by/4.0/> .
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
 ex:15-acq-timespan a crm:E52_Time-Span ;
     crm:P82a_begin_of_the_begin "2023-04-17"^^xsd:dateTime ;

@@ -10,28 +10,28 @@
 <http://purl.org/changes/process/development/01/data/> rdf:type owl:Ontology ;
     owl:imports <http://purl.org/changes/process/development/01/schema/> .
 
-ex:15 a process:CulturalObject .
+ex:32 a process:CulturalObject .
 
-ex:15-acq a process:DigitizationProcess ;
-                process:digitizes ex:15 ;
-                process:hasOutput ex:15-acq-output ;
-                process:hasTimeSpan ex:15-acq-timespan .
+ex:32-acq a process:DigitizationProcess ;
+                process:digitizes ex:32 ;
+                process:hasOutput ex:32-acq-output ;
+                process:hasTimeSpan ex:32-acq-timespan .
 
-ex:15-proc a process:SoftwareActivity ;
-                process:hasInput ex:15-acq ;
-                process:hasTimeSpan ex:15-proc-timespan .
+ex:32-proc a process:SoftwareActivity ;
+                process:hasInput ex:32-acq ;
+                process:hasTimeSpan ex:32-proc-timespan .
 
-ex:15-acq-output a process:DigitalObject .
+ex:32-acq-output a process:DigitalObject .
 
-ex:15-acq-output-license a process:Document ;
+ex:32-acq-output-license a process:Document ;
                 process:hasType process:license ;
-                process:refersTo ex:15-acq-output ;
-                process:isDocumentedIn <https://creativecommons.org/licenses/by/4.0/> .
+                process:refersTo ex:32-acq-output ;
+                process:isDocumentedIn <https://creativecommons.org/licenses/by-nc/4.0/> .
 
-ex:15-acq-timespan a process:TimeSpan ;
-                process:hasStartDate "2023-04-17"^^xsd:dateTime ;
-                process:hasEndDate "2023-04-17"^^xsd:dateTime .
+ex:32-acq-timespan a process:TimeSpan ;
+                process:hasStartDate "2023-05-08T00:00:00Z"^^xsd:dateTime ;
+                process:hasEndDate "2023-05-08T23:59:59Z"^^xsd:dateTime .
 
-ex:15-proc-timespan a process:TimeSpan ;
-                process:hasStartDate "2023-04-18"^^xsd:dateTime ;
-                process:hasEndDate "2023-04-19"^^xsd:dateTime .
+ex:32-proc-timespan a process:TimeSpan ;
+                process:hasStartDate "2023-05-10T00:00:00Z"^^xsd:dateTime ;
+                process:hasEndDate "2023-05-10T23:59:59Z"^^xsd:dateTime .

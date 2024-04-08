@@ -1,6 +1,469 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://purl.org/changes/process/model/> rdf:type owl:Ontology ;
-    owl:imports <http://www.cidoc-crm.org/cidoc-crm/> ,
-    <http://www.ics.forth.gr/isl/CRMdig/> .
+<http://purl.org/changes/process/model/> rdf:type owl:Ontology .
+
+crm:E24_Physical_Human-Made_Thing
+    rdf:type rdfs:Class ;
+    rdfs:label "Physical Human-Made Thing"@en ;
+    rdfs:label "Chose matérielle élaborée par l’humain"@fr ;
+    rdfs:comment """
+        This class comprises all persistent physical items of any size that are purposely created by human activity. This class comprises, besides others, Human-Made objects, such as a sword, and Human-Made features, such as rock art. For example, a “cup and ring” carving on bedrock is regarded as instance of E24 Physical Human-Made Thing.
+        Instances of Human-Made thing may be the result of modifying pre-existing physical things, preserving larger parts or most of the original matter and structure, which poses the question if they are new or even Human-Made, the respective interventions of production made on such original material should be obvious and sufficient to regard that the product has a new, distinct identity and intended function and is human-made. Substantial continuity of the previous matter and structure in the new product can be documented by describing the production process also as an instance of E81 Transformation.
+        Whereas interventions of conservation and repair are not regarded to produce a new Human-Made thing, the results of preparation of natural history specimens that substantially change their natural or original state should be regarded as physical Human-Made things, including the uncovering of petrified biological features from a solid piece of stone. On the other side, scribbling a museum number on a natural object should not be regarded to make it Human-Made. This notwithstanding, parts, sections, segments, or features of a physical Human-Made thing may continue to be non-Human-Made and preserved during the production process, for example natural pearls used as a part of an eardrop.
+    """@en ;
+    rdfs:subClassOf crm:E18_Physical_Thing ;
+    rdfs:subClassOf crm:E71_Human-Made_Thing ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crmdig:L1_digitized
+    rdf:type rdf:Property ;
+    rdfs:comment "This property associates an instance of D2 Digitization Process with an instance of E18 Physical Thing which is a material thing. This property is a specialisation of P39 measured (was measured by)." ;
+    rdfs:domain crmdig:D2_Digitization_Process ;
+    rdfs:range crm:E18_Physical_Thing ;
+    rdfs:subPropertyOf crm:P39_measured ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L1i_was_digitized_by
+    rdf:type rdf:Property ;
+    rdfs:domain crm:E18_Physical_Thing ;
+    rdfs:range crmdig:D2_Digitization_Process ;
+    rdfs:subPropertyOf crm:P39i_was_measured_by ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L11_had_output
+    rdf:type rdf:Property ;
+    rdfs:comment "This property associates an instance of D7 Digital Machine Event with an instance of D1 Digital Object which is the output of the activity. This property is a specialisation of P94 has created (was created by)." ;
+    rdfs:domain crmdig:D7_Digital_Machine_Event ;
+    rdfs:range crmdig:D1_Digital_Object ;
+    rdfs:subPropertyOf crm:P94_has_created ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L11i_was_output_of
+    rdf:type rdf:Property ;
+    rdfs:domain crmdig:D1_Digital_Object ;
+    rdfs:range crmdig:D7_Digital_Machine_Event ;
+    rdfs:subPropertyOf crm:P94i_was_created_by ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crm:P4_has_time-span
+    rdf:type rdf:Property ;
+    rdfs:label "has time-span"@en ;
+    rdfs:label "hat Zeitspanne"@de ;
+    rdfs:label "βρισκόταν σε εξέλιξη"@el ;
+    rdfs:label "a pour intervalle temporel"@fr ;
+    rdfs:label "tem período de tempo"@pt ;
+    rdfs:label "имеет временной отрезок"@ru ;
+    rdfs:label "发生时段是"@zh ;
+    rdfs:comment "This property associates an instance of E2 Temporal Entity with the instance of E52 Time-Span during which it was on-going. The associated instance of E52 Time-Span is understood as the real time-span during which the phenomena making up the temporal entity instance were active. More than one instance of E2 Temporal Entity may share a common instance of E52 Time-Span only if they come into being and end being due to identical declarations or events."@en ;
+    rdfs:domain crm:E2_Temporal_Entity ;
+    rdfs:range crm:E52_Time-Span ;
+    owl:inverseOf crm:P4i_is_time-span_of ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P4i_is_time-span_of
+    rdf:type rdf:Property ;
+    rdfs:label "is time-span of"@en ;
+    rdfs:label "ist Zeitspanne von"@de ;
+    rdfs:label "είναι χρονικό διάστημα του/της"@el ;
+    rdfs:label "est l’intervalle temporel de"@fr ;
+    rdfs:label "é o período de tempo de"@pt ;
+    rdfs:label "является временным отрезком для"@ru ;
+    rdfs:label "是时段"@zh ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range crm:E2_Temporal_Entity ;
+    owl:inverseOf crm:P4_has_time-span ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crmdig:L10_had_input
+    rdf:type rdf:Property ;
+    rdfs:comment "This property associates an instance of D7 Digital Machine Event with an instance of D1 Digital Object which is the input used to specify the machine action. This property is a specialisation of P16 used specific object(was used for)." ;
+    rdfs:domain crmdig:D7_Digital_Machine_Event ;
+    rdfs:range crmdig:D1_Digital_Object ;
+    rdfs:subPropertyOf crm:P16_used_specific_object ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L10i_was_input_of
+    rdf:type rdf:Property ;
+    rdfs:domain crmdig:D1_Digital_Object ;
+    rdfs:range crmdig:D7_Digital_Machine_Event ;
+    rdfs:subPropertyOf crm:P16i_was_used_for ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:D9_Data_Object
+    rdf:type rdfs:Class ;
+    rdfs:comment "This class comprises instances of D1 Digital Object that are the direct result of a digital measurement or a formal derivative of it, containing quantitative properties of some physical things or other constellations of matter."@en ;
+    rdfs:subClassOf crm:E54_Dimension ;
+    rdfs:subClassOf crmdig:D1_Digital_Object ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crm:E73_Information_Object
+    rdf:type rdfs:Class ;
+    rdfs:label "Information Object"@en ;
+    rdfs:label "Informationsgegenstand"@de ;
+    rdfs:label "Πληροφοριακό Αντικείμενο"@el ;
+    rdfs:label "Objet informationnel"@fr ;
+    rdfs:label "Objeto de Informação"@pt ;
+    rdfs:label "Информационный Объект"@ru ;
+    rdfs:label "信息对象"@zh ;
+    rdfs:comment """
+        This class comprises identifiable immaterial items, such as poems, jokes, data sets, images, texts, multimedia objects, procedural prescriptions, computer program code, algorithm or mathematical formulae, that have an objectively recognizable structure and are documented as single units. The encoding structure known as a "named graph" also falls under this class, so that each "named graph" is an instance of E73 Information Object.
+        An instance of E73 Information Object does not depend on a specific physical carrier, which can include human memory, and it can exist on one or more carriers simultaneously.
+        Instances of E73 Information Object of a linguistic nature should be declared as instances of the E33 Linguistic Object subclass. Instances of E73 Information Object of a documentary nature should be declared as instances of the E31 Document subclass. Conceptual items such as types and classes are not instances of E73 Information Object, nor are ideas without a reproducible expression.
+    """@en ;
+    rdfs:subClassOf crm:E89_Propositional_Object ;
+    rdfs:subClassOf crm:E90_Symbolic_Object ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P2_has_type
+    rdf:type rdf:Property ;
+    rdfs:label "has type"@en ;
+    rdfs:label "hat den Typus"@de ;
+    rdfs:label "έχει τύπο"@el ;
+    rdfs:label "a pour type"@fr ;
+    rdfs:label "é do tipo"@pt ;
+    rdfs:label "имеет тип"@ru ;
+    rdfs:label "有类型"@zh ;
+    rdfs:comment """
+        This property allows sub typing of CIDOC CRM entities –a form of specialisation – through the use of a terminological hierarchy, or thesaurus.
+        The CIDOC CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CIDOC CRM may by specialised into any number of sub entities, which can be defined in the E55 Type hierarchy. E41 Appellation, for example, may be specialised into “e-mail address”, “telephone number”, “post office box”, “URL” etc. none of which figures explicitly in the CIDOC CRM hierarchy. A comprehensive explanation about refining CIDOC CRM concepts by E55 Type is given in the section “About Types” in the section on “Specific Modelling Constructs” of this document.
+        This property is a shortcut for the path from E1 CRM Entity through P41i was classified by, E17 Type Assignment, P42 assigned to E55 Type.
+    """@en ;
+    rdfs:domain crm:E1_CRM_Entity ;
+    rdfs:range crm:E55_Type ;
+    owl:inverseOf crm:P2i_is_type_of ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P2i_is_type_of
+    rdf:type rdf:Property ;
+    rdfs:label "is type of"@en ;
+    rdfs:label "ist Typus von"@de ;
+    rdfs:label "είναι ο τύπος του/της"@el ;
+    rdfs:label "est le type de"@fr ;
+    rdfs:label "é o tipo de"@pt ;
+    rdfs:label "является типом для"@ru ;
+    rdfs:label "是类型"@zh ;
+    rdfs:domain crm:E55_Type ;
+    rdfs:range crm:E1_CRM_Entity ;
+    owl:inverseOf crm:P2_has_type ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P67_refers_to
+    rdf:type rdf:Property ;
+    rdfs:label "refers to"@en ;
+    rdfs:label "verweist auf"@de ;
+    rdfs:label "αναφέρεται σε"@el ;
+    rdfs:label "renvoie à"@fr ;
+    rdfs:label "referencia"@pt ;
+    rdfs:label "ссылается на"@ru ;
+    rdfs:label "涉及"@zh ;
+    rdfs:comment """
+        This property documents that an instance of E89 Propositional Object makes a statement about an instance of E1 CRM Entity. P67 refers to (is referred to by) has the P67.1 has type link to an instance of E55 Type. This is intended to allow a more detailed description of the type of reference. This differs from P129 is about (is subject of), which describes the primary subject or subjects of the instance of E89 Propositional Object.
+    """@en ;
+    rdfs:domain crm:E89_Propositional_Object ;
+    rdfs:range crm:E1_CRM_Entity ;
+    owl:inverseOf crm:P67i_is_referred_to_by ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P67i_is_referred_to_by
+    rdf:type rdf:Property ;
+    rdfs:label "is referred to by"@en ;
+    rdfs:label "wird angeführt von"@de ;
+    rdfs:label "αναφέρεται από"@el ;
+    rdfs:label "fait l'objet d'un renvoi par"@fr ;
+    rdfs:label "é referenciado por"@pt ;
+    rdfs:label "имеет ссылку на себя от"@ru ;
+    rdfs:label "被涉及"@zh ;
+    rdfs:domain crm:E1_CRM_Entity ;
+    rdfs:range crm:E89_Propositional_Object ;
+    owl:inverseOf crm:P67_refers_to ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+  crm:P70_documents
+    rdf:type rdf:Property ;
+    rdfs:label "documents"@en ;
+    rdfs:label "belegt"@de ;
+    rdfs:label "τεκμηριώνει"@el ;
+    rdfs:label "documente"@fr ;
+    rdfs:label "documenta"@pt ;
+    rdfs:label "документирует"@ru ;
+    rdfs:label "记录了"@zh ;
+    rdfs:comment """
+        This property describes the CRM Entities documented as instances of E31 Document.
+        Documents may describe any conceivable entity, hence the link to the highest-level entity in the CIDOC CRM class hierarchy. This property is intended for cases where a reference is regarded as making a proposition about reality. This may be of a documentary character, in the scholarly or scientific sense, or a more general statement.
+    """@en ;
+    rdfs:domain crm:E31_Document ;
+    rdfs:range crm:E1_CRM_Entity ;
+    rdfs:subPropertyOf crm:P67_refers_to ;
+    owl:inverseOf crm:P70i_is_documented_in ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P70i_is_documented_in
+    rdf:type rdf:Property ;
+    rdfs:label "is documented in"@en ;
+    rdfs:label "wird belegt in"@de ;
+    rdfs:label "τεκμηριώνεται σε"@el ;
+    rdfs:label "est documenté dans"@fr ;
+    rdfs:label "é documentado em"@pt ;
+    rdfs:label "документирован в"@ru ;
+    rdfs:label "记录在"@zh ;
+    rdfs:domain crm:E1_CRM_Entity ;
+    rdfs:range crm:E31_Document ;
+    rdfs:subPropertyOf crm:P67i_is_referred_to_by ;
+    owl:inverseOf crm:P70_documents ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P82_at_some_time_within
+    rdf:type rdf:Property ;
+    rdfs:label "at some time within"@en ;
+    rdfs:label "irgendwann innerhalb von"@de ;
+    rdfs:label "κάποτε εντός"@el ;
+    rdfs:label "a eu lieu durant"@fr ;
+    rdfs:label "abrange no máximo"@pt ;
+    rdfs:label "некоторое время в течение"@ru ;
+    rdfs:label "最长范围是"@zh ;
+    rdfs:comment """
+        This property describes the maximum period of time within which an E52 Time-Span falls. Since Time-Spans may not have precisely known temporal extents, the CIDOC CRM supports statements about the minimum and maximum temporal extents of Time-Spans. This property allows a Time-Span’s maximum temporal extent (i.e., its outer boundary) to be assigned an E61 Time Primitive value. Time Primitives are treated by the CIDOC CRM as application or system specific date intervals, and are not further analysed. If different sources of evidence justify different maximum extents without contradicting each other, the resulting intersection of all these extents will be the best estimate. This should be taken into account for information integration.
+    """@en ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range rdfs:Literal ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P82a_begin_of_the_begin
+    rdf:type rdf:Property ;
+    rdfs:label "begin of the begin"@en ;
+    rdfs:label "Anfang des Anfangs"@de ;
+    rdfs:label "αρχή της αρχής"@el ;
+    rdfs:label "début du début"@fr ;
+    rdfs:label "começar do início"@pt ;
+    rdfs:label "начать с начала"@ru ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf crm:P82_at_some_time_within ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P82b_end_of_the_end
+    rdf:type rdf:Property ;
+    rdfs:label "end of the end"@en ;
+    rdfs:label "Ende vom Ende"@de ;
+    rdfs:label "τέλος του τέλους"@el ;
+    rdfs:label "fin de la fin"@fr ;
+    rdfs:label "fim do fim"@pt ;
+    rdfs:label "конец конец"@ru ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf crm:P82_at_some_time_within ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+  crm:E21_Person
+    rdf:type rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:label "Person"@de ;
+    rdfs:label "Πρόσωπο"@el ;
+    rdfs:label "Personne"@fr ;
+    rdfs:label "Pessoa"@pt ;
+    rdfs:label "Личность"@ru ;
+    rdfs:label "人物"@zh ;
+    rdfs:comment """
+        This class comprises real persons who live or are assumed to have lived.
+        Legendary figures that may have existed, such as Ulysses and King Arthur, fall into this class if the documentation refers to them as historical figures. In cases where doubt exists as to whether several persons are in fact identical, multiple instances can be created and linked to indicate their relationship. The CIDOC CRM does not propose a specific form to support reasoning about possible identity.
+        In a bibliographic context, a name presented following the conventions usually employed for personal names will be assumed to correspond to an actual real person (an instance of E21 Person), unless evidence is available to indicate that this is not the case. The fact that a persona may erroneously be classified as an instance of E21 Person does not imply that the concept comprises personae.
+    """@en ;
+    rdfs:subClassOf crm:E20_Biological_Object ;
+    rdfs:subClassOf crm:E39_Actor ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:E74_Group
+    rdf:type rdfs:Class ;
+    rdfs:label "Group"@en ;
+    rdfs:label "Menschliche Gruppe"@de ;
+    rdfs:label "Ομάδα"@el ;
+    rdfs:label "Groupe"@fr ;
+    rdfs:label "Grupo"@pt ;
+    rdfs:label "Группа"@ru ;
+    rdfs:label "团体"@zh ;
+    rdfs:comment """
+        This class comprises any gatherings or organizations of human individuals or groups that act collectively or in a similar way due to any form of unifying relationship. In the wider sense this class also comprises official positions which used to be regarded in certain contexts as one actor, independent of the current holder of the office, such as the president of a country. In such cases, it may happen that the group never had more than one member. A joint pseudonym (i.e., a name that seems indicative of an individual but that is actually used as a persona by two or more people) is a particular case of E74 Group.
+        A gathering of people becomes an instance of E74 Group when it exhibits organizational characteristics usually typified by a set of ideas or beliefs held in common, or actions performed together. These might be communication, creating some common artifact, a common purpose such as study, worship, business, sports, etc. Nationality can be modelled as membership in an instance of E74 Group. Married couples and other concepts of family are regarded as particular examples of E74 Group.
+    """@en ;
+    rdfs:subClassOf crm:E39_Actor ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crmdig:D8_Digital_Device
+    rdf:type rdfs:Class ;
+    rdfs:comment """
+        This class comprises identifiable material items such as computers, scanners, cameras, etc. that have the capability to process or produce instances of D1 Digital Object.
+    """ ;
+    rdfs:subClassOf crm:E22_Man-Made_Object ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:D2_Digitization_Process
+    rdf:type rdfs:Class ;
+    rdfs:comment """
+        This class comprises events that result in the creation of instances of D9 Data Object that represent the appearance and/or form of an instance of E18 Physical Thing such as paper documents, statues, buildings, paintings, etc. A particular case is the analogue-to-digital conversion of audiovisual material. This class represents the transition from a material thing to an immaterial representation of it. The characteristic subsequent processing steps on digital objects are regarded as instances of D3 Formal Derivation.
+    """ ;
+    rdfs:subClassOf crmdig:D11_Digital_Measurement_Event ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crm:P11_had_participant
+    rdf:type rdf:Property ;
+    rdfs:label "had participant"@en,
+                "hatte Teilnehmer"@de,
+                "είχε συμμέτοχο"@el,
+                "a eu pour actant participant"@fr,
+                "tem participante"@pt,
+                "имел участника"@ru,
+                "有参与者"@zh ;
+    rdfs:comment """
+        This property describes the active or passive participation of instances of E39 Actors in an instance of E5 Event.
+        It documents known events in which an instance of E39 Actor has participated during the course of that actor’s life or history. The instances of E53 Place and E52 Time-Span where and when these events happened provide us with constraints about the presence of the related instances of E39 Actor in the past. Collective actors, i.e., instances of E74 Group, may physically participate in events via their representing instances of E21 Persons only. The participation of multiple actors in an event is most likely an indication of their acquaintance and interaction.
+        The property implies that the actor was involved in the event but does not imply any causal relationship. For instance, someone having been portrayed can be said to have participated in the creation of the portrait.
+    """ ;
+    rdfs:domain crm:E5_Event ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf crm:P12_occurred_in_the_presence_of ;
+    owl:inverseOf crm:P11i_participated_in ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P11i_participated_in
+    rdf:type rdf:Property ;
+    rdfs:label "participated in"@en,
+                "nahm Teil an"@de,
+                "συμμετείχε σε"@el,
+                "a participé à"@fr,
+                "participa em"@pt,
+                "участвовал в"@ru,
+                "参与"@zh ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range crm:E5_Event ;
+    rdfs:subPropertyOf crm:P12i_was_present_at ;
+    owl:inverseOf crm:P11_had_participant ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P14_carried_out_by
+    rdf:type rdf:Property ;
+    rdfs:label "carried out by"@en,
+                "wurde ausgeführt von"@de,
+                "πραγματοποιήθηκε από"@el,
+                "a été effectué par"@fr,
+                "realizada por"@pt,
+                "выполнялся"@ru,
+                "执行者是"@zh ;
+    rdfs:comment """
+        This property describes the active participation of an instance of E39 Actor in an instance of E7 Activity.
+        It implies causal or legal responsibility. The P14.1 in the role of property of the property specifies the nature of an Actor’s participation.
+    """ ;
+    rdfs:domain crm:E7_Activity ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf crm:P11_had_participant ;
+    owl:inverseOf crm:P14i_performed ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P14i_performed
+    rdf:type rdf:Property ;
+    rdfs:label "performed"@en,
+                "führte aus"@de,
+                "πραγματοποίησε"@el,
+                "a effectué"@fr,
+                "executou"@pt,
+                "выполнял"@ru,
+                "执行"@zh ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range crm:E7_Activity ;
+    rdfs:subPropertyOf crm:P11i_participated_in ;
+    owl:inverseOf crm:P14_carried_out_by ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P32_used_general_technique
+    rdf:type rdf:Property ;
+    rdfs:label "used general technique"@en,
+                "benutzte das allgemeine Verfahren"@de,
+                "χρησιμοποίησε γενική τεχνική"@el,
+                "a mobilisé comme technique générale"@fr,
+                "usou técnica geral"@pt,
+                "использовал общую технику"@ru,
+                "使用通用技术"@zh ;
+    rdfs:comment """
+        This property identifies the technique or method, modelled as an instance of E55 Type, that was employed in an instance of E7 Activity.
+        These techniques should be drawn from an external E55 Type hierarchy of consistent terminology of general techniques or methods such as embroidery, oil-painting, carbon dating, etc. Specific documented techniques should be described as instances of E29 Design or Procedure.
+    """ ;
+    rdfs:domain crm:E7_Activity ;
+    rdfs:range crm:E55_Type ;
+    rdfs:subPropertyOf crm:P125_used_object_of_type ;
+    owl:inverseOf crm:P32i_was_technique_of ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P32i_was_technique_of
+    rdf:type rdf:Property ;
+    rdfs:label "was technique of"@en,
+                "war Verfahren von"@de,
+                "ήταν τεχνική του/της"@el,
+                "a été la technique générale mise en œuvre dans"@fr,
+                "foi técnica da"@pt,
+                "был техникой для"@ru,
+                "是技术"@zh ;
+    rdfs:domain crm:E55_Type ;
+    rdfs:range crm:E7_Activity ;
+    rdfs:subPropertyOf crm:P125i_was_type_of_object_used_in ;
+    owl:inverseOf crm:P32_used_general_technique ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P16_used_specific_object
+    rdf:type rdf:Property ;
+    rdfs:label "used specific object"@en,
+                "benutzte das bestimmte Objekt"@de,
+                "χρησιμοποίησε αντικείμενο"@el,
+                "a mobilisé l’objet spécifique"@fr,
+                "usou objeto específico"@pt,
+                "использовал особый объект"@ru,
+                "使用特定对象"@zh ;
+    rdfs:comment """
+        This property describes the use of material or immaterial things in a way essential to the performance or the outcome of an instance of E7 Activity.
+        This property typically applies to tools, instruments, moulds, raw materials and items embedded in a product. It implies that the presence of the object in question was a necessary condition for the action. For example, the activity of writing this text required the use of a computer. An immaterial thing can be used if at least one of its carriers is present. For example, the software tools on a computer.
+        Another example is the use of a particular name by a particular group of people over some span to identify a thing, such as a settlement. In this case, the physical carriers of this name are at least the people understanding its use.
+    """ ;
+    rdfs:domain crm:E7_Activity ;
+    rdfs:range crm:E70_Thing ;
+    rdfs:subPropertyOf crm:P12_occurred_in_the_presence_of,
+                      crm:P15_was_influenced_by ;
+    owl:inverseOf crm:P16i_was_used_for ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P16i_was_used_for
+    rdf:type rdf:Property ;
+    rdfs:label "was used for"@en,
+                "wurde benutzt für"@de,
+                "χρησιμοποιήθηκε για"@el,
+                "a été mobilisé pour"@fr,
+                "foi usado por"@pt,
+                "был использован для"@ru,
+                "用于"@zh ;
+    rdfs:domain crm:E70_Thing ;
+    rdfs:range crm:E7_Activity ;
+    rdfs:subPropertyOf crm:P12i_was_present_at,
+                      crm:P15i_influenced ;
+    owl:inverseOf crm:P16_used_specific_object ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crmdig:D14_Software
+    rdf:type rdfs:Class ;
+    rdfs:comment "This class comprises software codes, computer programs, procedures, and functions that are used to operate a system of digital objects."@en ;
+    rdfs:subClassOf crmdig:D1_Digital_Object ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:D10_Software_Execution
+    rdf:type rdfs:Class ;
+    rdfs:comment "This class comprises events by which a digital device runs a software program or a series of computing operations on a digital object as a single task, which is completely determined by its digital input, the software and the generic properties of the device."@en ;
+    rdfs:subClassOf crmdig:D7_Digital_Machine_Event ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L23_used_software_or_firmware
+    rdf:type rdf:Property ;
+    rdfs:comment "This property associates an instance of D7 Digital Machine Event with the instance of D14 Software that had used. This property is a specialisation of P16 used specific object."@en ;
+    rdfs:domain crmdig:D7_Digital_Machine_Event ;
+    rdfs:range crmdig:D14_Software ;
+    rdfs:subPropertyOf crm:P16_used_specific_object ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .

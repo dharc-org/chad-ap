@@ -18,7 +18,7 @@ WHERE {
 ```
 
 ## CQ_1.2
-Return the time period (start and end) in which the digitization process and the following software activity took place.
+What are the time spans during which the digitization process and the following software activities were carried out?
 
 ```SPARQL
 PREFIX ex: <http://purl.org/changes/process/development/01/data/>
