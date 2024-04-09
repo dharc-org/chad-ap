@@ -11,9 +11,32 @@ crm:E24_Physical_Human-Made_Thing
     rdfs:label "Physical Human-Made Thing"@en ;
     rdfs:label "Chose matérielle élaborée par l’humain"@fr ;
     rdfs:comment """
-        This class comprises all persistent physical items of any size that are purposely created by human activity. This class comprises, besides others, Human-Made objects, such as a sword, and Human-Made features, such as rock art. For example, a “cup and ring” carving on bedrock is regarded as instance of E24 Physical Human-Made Thing.
-        Instances of Human-Made thing may be the result of modifying pre-existing physical things, preserving larger parts or most of the original matter and structure, which poses the question if they are new or even Human-Made, the respective interventions of production made on such original material should be obvious and sufficient to regard that the product has a new, distinct identity and intended function and is human-made. Substantial continuity of the previous matter and structure in the new product can be documented by describing the production process also as an instance of E81 Transformation.
-        Whereas interventions of conservation and repair are not regarded to produce a new Human-Made thing, the results of preparation of natural history specimens that substantially change their natural or original state should be regarded as physical Human-Made things, including the uncovering of petrified biological features from a solid piece of stone. On the other side, scribbling a museum number on a natural object should not be regarded to make it Human-Made. This notwithstanding, parts, sections, segments, or features of a physical Human-Made thing may continue to be non-Human-Made and preserved during the production process, for example natural pearls used as a part of an eardrop.
+        This class comprises all persistent physical items of any size 
+        that are purposely created by human activity. This class comprises, 
+        besides others, Human-Made objects, such as a sword, and Human-Made 
+        features, such as rock art. For example, a “cup and ring” carving on 
+        bedrock is regarded as instance of E24 Physical Human-Made Thing.
+        Instances of Human-Made thing may be the result of modifying 
+        pre-existing physical things, preserving larger parts or most of the 
+        original matter and structure, which poses the question if they are 
+        new or even Human-Made, the respective interventions of production 
+        made on such original material should be obvious and sufficient to 
+        regard that the product has a new, distinct identity and intended 
+        function and is human-made. Substantial continuity of the previous 
+        matter and structure in the new product can be documented by 
+        describing the production process also as an instance of E81 
+        Transformation.
+        Whereas interventions of conservation and repair are not regarded to 
+        produce a new Human-Made thing, the results of preparation of natural 
+        history specimens that substantially change their natural or original 
+        state should be regarded as physical Human-Made things, including the 
+        uncovering of petrified biological features from a solid piece of 
+        stone. On the other side, scribbling a museum number on a natural 
+        object should not be regarded to make it Human-Made. This 
+        notwithstanding, parts, sections, segments, or features of a physical 
+        Human-Made thing may continue to be non-Human-Made and preserved 
+        during the production process, for example natural pearls used as a 
+        part of an eardrop.
     """@en ;
     rdfs:subClassOf crm:E18_Physical_Thing ;
     rdfs:subClassOf crm:E71_Human-Made_Thing ;
@@ -21,7 +44,9 @@ crm:E24_Physical_Human-Made_Thing
 
 crmdig:L1_digitized
     rdf:type rdf:Property ;
-    rdfs:comment "This property associates an instance of D2 Digitization Process with an instance of E18 Physical Thing which is a material thing. This property is a specialisation of P39 measured (was measured by)." ;
+    rdfs:comment "This property associates an instance of D2 Digitization 
+    Process with an instance of E18 Physical Thing which is a material thing. 
+    This property is a specialisation of P39 measured (was measured by)." ;
     rdfs:domain crmdig:D2_Digitization_Process ;
     rdfs:range crm:E18_Physical_Thing ;
     rdfs:subPropertyOf crm:P39_measured ;
@@ -36,7 +61,10 @@ crmdig:L1i_was_digitized_by
 
 crmdig:L11_had_output
     rdf:type rdf:Property ;
-    rdfs:comment "This property associates an instance of D7 Digital Machine Event with an instance of D1 Digital Object which is the output of the activity. This property is a specialisation of P94 has created (was created by)." ;
+    rdfs:comment "This property associates an instance of D7 Digital Machine 
+    Event with an instance of D1 Digital Object which is the output of the 
+    activity. This property is a specialisation of P94 has created (was 
+    created by)." ;
     rdfs:domain crmdig:D7_Digital_Machine_Event ;
     rdfs:range crmdig:D1_Digital_Object ;
     rdfs:subPropertyOf crm:P94_has_created ;
@@ -58,7 +86,13 @@ crm:P4_has_time-span
     rdfs:label "tem período de tempo"@pt ;
     rdfs:label "имеет временной отрезок"@ru ;
     rdfs:label "发生时段是"@zh ;
-    rdfs:comment "This property associates an instance of E2 Temporal Entity with the instance of E52 Time-Span during which it was on-going. The associated instance of E52 Time-Span is understood as the real time-span during which the phenomena making up the temporal entity instance were active. More than one instance of E2 Temporal Entity may share a common instance of E52 Time-Span only if they come into being and end being due to identical declarations or events."@en ;
+    rdfs:comment "This property associates an instance of E2 Temporal Entity 
+    with the instance of E52 Time-Span during which it was on-going. The 
+    associated instance of E52 Time-Span is understood as the real time-span 
+    during which the phenomena making up the temporal entity instance were 
+    active. More than one instance of E2 Temporal Entity may share a common 
+    instance of E52 Time-Span only if they come into being and end being due 
+    to identical declarations or events."@en ;
     rdfs:domain crm:E2_Temporal_Entity ;
     rdfs:range crm:E52_Time-Span ;
     owl:inverseOf crm:P4i_is_time-span_of ;
@@ -80,7 +114,10 @@ crm:P4i_is_time-span_of
 
 crmdig:L10_had_input
     rdf:type rdf:Property ;
-    rdfs:comment "This property associates an instance of D7 Digital Machine Event with an instance of D1 Digital Object which is the input used to specify the machine action. This property is a specialisation of P16 used specific object(was used for)." ;
+    rdfs:comment "This property associates an instance of D7 Digital Machine 
+    Event with an instance of D1 Digital Object which is the input used to 
+    specify the machine action. This property is a specialisation of P16 used 
+    specific object(was used for)." ;
     rdfs:domain crmdig:D7_Digital_Machine_Event ;
     rdfs:range crmdig:D1_Digital_Object ;
     rdfs:subPropertyOf crm:P16_used_specific_object ;
@@ -95,7 +132,10 @@ crmdig:L10i_was_input_of
 
 crmdig:D9_Data_Object
     rdf:type rdfs:Class ;
-    rdfs:comment "This class comprises instances of D1 Digital Object that are the direct result of a digital measurement or a formal derivative of it, containing quantitative properties of some physical things or other constellations of matter."@en ;
+    rdfs:comment "This class comprises instances of D1 Digital Object that are 
+    the direct result of a digital measurement or a formal derivative of it, 
+    containing quantitative properties of some physical things or other 
+    constellations of matter."@en ;
     rdfs:subClassOf crm:E54_Dimension ;
     rdfs:subClassOf crmdig:D1_Digital_Object ;
     rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
@@ -110,9 +150,21 @@ crm:E73_Information_Object
     rdfs:label "Информационный Объект"@ru ;
     rdfs:label "信息对象"@zh ;
     rdfs:comment """
-        This class comprises identifiable immaterial items, such as poems, jokes, data sets, images, texts, multimedia objects, procedural prescriptions, computer program code, algorithm or mathematical formulae, that have an objectively recognizable structure and are documented as single units. The encoding structure known as a "named graph" also falls under this class, so that each "named graph" is an instance of E73 Information Object.
-        An instance of E73 Information Object does not depend on a specific physical carrier, which can include human memory, and it can exist on one or more carriers simultaneously.
-        Instances of E73 Information Object of a linguistic nature should be declared as instances of the E33 Linguistic Object subclass. Instances of E73 Information Object of a documentary nature should be declared as instances of the E31 Document subclass. Conceptual items such as types and classes are not instances of E73 Information Object, nor are ideas without a reproducible expression.
+        This class comprises identifiable immaterial items, such as poems, jokes, 
+        data sets, images, texts, multimedia objects, procedural prescriptions, 
+        computer program code, algorithm or mathematical formulae, that have an 
+        objectively recognizable structure and are documented as single units. 
+        The encoding structure known as a "named graph" also falls under this 
+        class, so that each "named graph" is an instance of E73 Information Object.
+        An instance of E73 Information Object does not depend on a specific 
+        physical carrier, which can include human memory, and it can exist on one 
+        or more carriers simultaneously.
+        Instances of E73 Information Object of a linguistic nature should be 
+        declared as instances of the E33 Linguistic Object subclass. Instances of 
+        E73 Information Object of a documentary nature should be declared as 
+        instances of the E31 Document subclass. Conceptual items such as types and 
+        classes are not instances of E73 Information Object, nor are ideas without 
+        a reproducible expression.
     """@en ;
     rdfs:subClassOf crm:E89_Propositional_Object ;
     rdfs:subClassOf crm:E90_Symbolic_Object ;
@@ -128,9 +180,22 @@ crm:P2_has_type
     rdfs:label "имеет тип"@ru ;
     rdfs:label "有类型"@zh ;
     rdfs:comment """
-        This property allows sub typing of CIDOC CRM entities –a form of specialisation – through the use of a terminological hierarchy, or thesaurus.
-        The CIDOC CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CIDOC CRM may by specialised into any number of sub entities, which can be defined in the E55 Type hierarchy. E41 Appellation, for example, may be specialised into “e-mail address”, “telephone number”, “post office box”, “URL” etc. none of which figures explicitly in the CIDOC CRM hierarchy. A comprehensive explanation about refining CIDOC CRM concepts by E55 Type is given in the section “About Types” in the section on “Specific Modelling Constructs” of this document.
-        This property is a shortcut for the path from E1 CRM Entity through P41i was classified by, E17 Type Assignment, P42 assigned to E55 Type.
+        This property allows sub typing of CIDOC CRM entities –a form of 
+        specialisation – through the use of a terminological hierarchy, or 
+        thesaurus.
+        The CIDOC CRM is intended to focus on the high-level entities and 
+        relationships needed to describe data structures. Consequently, it does 
+        not specialise entities any further than is required for this immediate 
+        purpose. However, entities in the isA hierarchy of the CIDOC CRM may by 
+        specialised into any number of sub entities, which can be defined in the 
+        E55 Type hierarchy. E41 Appellation, for example, may be specialised into 
+        “e-mail address”, “telephone number”, “post office box”, “URL” etc. none 
+        of which figures explicitly in the CIDOC CRM hierarchy. A comprehensive 
+        explanation about refining CIDOC CRM concepts by E55 Type is given in the 
+        section “About Types” in the section on “Specific Modelling Constructs” 
+        of this document.
+        This property is a shortcut for the path from E1 CRM Entity through P41i 
+        was classified by, E17 Type Assignment, P42 assigned to E55 Type.
     """@en ;
     rdfs:domain crm:E1_CRM_Entity ;
     rdfs:range crm:E55_Type ;
@@ -161,7 +226,13 @@ crm:P67_refers_to
     rdfs:label "ссылается на"@ru ;
     rdfs:label "涉及"@zh ;
     rdfs:comment """
-        This property documents that an instance of E89 Propositional Object makes a statement about an instance of E1 CRM Entity. P67 refers to (is referred to by) has the P67.1 has type link to an instance of E55 Type. This is intended to allow a more detailed description of the type of reference. This differs from P129 is about (is subject of), which describes the primary subject or subjects of the instance of E89 Propositional Object.
+        This property documents that an instance of E89 Propositional Object 
+        makes a statement about an instance of E1 CRM Entity. P67 refers to 
+        (is referred to by) has the P67.1 has type link to an instance of E55 
+        Type. This is intended to allow a more detailed description of the 
+        type of reference. This differs from P129 is about (is subject of), 
+        which describes the primary subject or subjects of the instance of 
+        E89 Propositional Object.
     """@en ;
     rdfs:domain crm:E89_Propositional_Object ;
     rdfs:range crm:E1_CRM_Entity ;
@@ -192,8 +263,13 @@ crm:P67i_is_referred_to_by
     rdfs:label "документирует"@ru ;
     rdfs:label "记录了"@zh ;
     rdfs:comment """
-        This property describes the CRM Entities documented as instances of E31 Document.
-        Documents may describe any conceivable entity, hence the link to the highest-level entity in the CIDOC CRM class hierarchy. This property is intended for cases where a reference is regarded as making a proposition about reality. This may be of a documentary character, in the scholarly or scientific sense, or a more general statement.
+        This property describes the CRM Entities documented as instances of 
+        E31 Document.
+        Documents may describe any conceivable entity, hence the link to the 
+        highest-level entity in the CIDOC CRM class hierarchy. This property 
+        is intended for cases where a reference is regarded as making a 
+        proposition about reality. This may be of a documentary character, 
+        in the scholarly or scientific sense, or a more general statement.
     """@en ;
     rdfs:domain crm:E31_Document ;
     rdfs:range crm:E1_CRM_Entity ;
@@ -295,7 +371,9 @@ crm:E74_Group
 crmdig:D8_Digital_Device
     rdf:type rdfs:Class ;
     rdfs:comment """
-        This class comprises identifiable material items such as computers, scanners, cameras, etc. that have the capability to process or produce instances of D1 Digital Object.
+        This class comprises identifiable material items such as 
+        computers, scanners, cameras, etc. that have the capability 
+        to process or produce instances of D1 Digital Object.
     """ ;
     rdfs:subClassOf crm:E22_Man-Made_Object ;
     rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
@@ -303,7 +381,15 @@ crmdig:D8_Digital_Device
 crmdig:D2_Digitization_Process
     rdf:type rdfs:Class ;
     rdfs:comment """
-        This class comprises events that result in the creation of instances of D9 Data Object that represent the appearance and/or form of an instance of E18 Physical Thing such as paper documents, statues, buildings, paintings, etc. A particular case is the analogue-to-digital conversion of audiovisual material. This class represents the transition from a material thing to an immaterial representation of it. The characteristic subsequent processing steps on digital objects are regarded as instances of D3 Formal Derivation.
+        This class comprises events that result in the creation of 
+        instances of D9 Data Object that represent the appearance 
+        and/or form of an instance of E18 Physical Thing such as 
+        paper documents, statues, buildings, paintings, etc. A 
+        particular case is the analogue-to-digital conversion of 
+        audiovisual material. This class represents the transition 
+        from a material thing to an immaterial representation of it. 
+        The characteristic subsequent processing steps on digital objects 
+        are regarded as instances of D3 Formal Derivation.
     """ ;
     rdfs:subClassOf crmdig:D11_Digital_Measurement_Event ;
     rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
@@ -318,9 +404,22 @@ crm:P11_had_participant
                 "имел участника"@ru,
                 "有参与者"@zh ;
     rdfs:comment """
-        This property describes the active or passive participation of instances of E39 Actors in an instance of E5 Event.
-        It documents known events in which an instance of E39 Actor has participated during the course of that actor’s life or history. The instances of E53 Place and E52 Time-Span where and when these events happened provide us with constraints about the presence of the related instances of E39 Actor in the past. Collective actors, i.e., instances of E74 Group, may physically participate in events via their representing instances of E21 Persons only. The participation of multiple actors in an event is most likely an indication of their acquaintance and interaction.
-        The property implies that the actor was involved in the event but does not imply any causal relationship. For instance, someone having been portrayed can be said to have participated in the creation of the portrait.
+        This property describes the active or passive participation 
+        of instances of E39 Actors in an instance of E5 Event.
+        It documents known events in which an instance of E39 Actor 
+        has participated during the course of that actor’s life or 
+        history. The instances of E53 Place and E52 Time-Span where 
+        and when these events happened provide us with constraints 
+        about the presence of the related instances of E39 Actor in 
+        the past. Collective actors, i.e., instances of E74 Group, may 
+        physically participate in events via their representing 
+        instances of E21 Persons only. The participation of multiple 
+        actors in an event is most likely an indication of their 
+        acquaintance and interaction.
+        The property implies that the actor was involved in the event 
+        but does not imply any causal relationship. For instance, 
+        someone having been portrayed can be said to have participated 
+        in the creation of the portrait.
     """ ;
     rdfs:domain crm:E5_Event ;
     rdfs:range crm:E39_Actor ;
@@ -353,8 +452,11 @@ crm:P14_carried_out_by
                 "выполнялся"@ru,
                 "执行者是"@zh ;
     rdfs:comment """
-        This property describes the active participation of an instance of E39 Actor in an instance of E7 Activity.
-        It implies causal or legal responsibility. The P14.1 in the role of property of the property specifies the nature of an Actor’s participation.
+        This property describes the active participation of an instance 
+        of E39 Actor in an instance of E7 Activity.
+        It implies causal or legal responsibility. The P14.1 in the role 
+        of property of the property specifies the nature of an Actor’s 
+        participation.
     """ ;
     rdfs:domain crm:E7_Activity ;
     rdfs:range crm:E39_Actor ;
