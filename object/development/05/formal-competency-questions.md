@@ -3,8 +3,8 @@
 What are the titles of the work `L1-work`? What are their types?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/05/data/>
-PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/schema/>
 
 SELECT ?title ?type ?content
 WHERE {
@@ -19,8 +19,8 @@ WHERE {
 What are the subjects of the works that are not part of any parent work?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/05/data/>
-PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/schema/>
 
 SELECT ?work ?subject
 WHERE {
@@ -40,8 +40,8 @@ WHERE {
 What are the manifestations of the works which are members of parent works that are marine charts?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/05/data/>
-PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/schema/>
 
 SELECT ?manifestation
 WHERE {
@@ -58,8 +58,8 @@ WHERE {
 What are the parent works of the works that have either "Europa" or "tapiro" as their subject?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/05/data/>
-PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/schema/>
 
 SELECT ?parent ?work ?subject
 WHERE {
@@ -80,8 +80,8 @@ WHERE {
 What are the manifestations that compose another manifestation?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/05/data/>
-PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/schema/>
 
 SELECT ?manifestation1 ?manifestation2
 WHERE {
@@ -93,8 +93,8 @@ WHERE {
 What are the manifestations that depict other expressions?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/05/data/>
-PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/schema/>
 
 SELECT ?manifestation ?expression
 WHERE {
@@ -106,8 +106,8 @@ WHERE {
 What are the license statements referring to the manifestations?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/05/data/>
-PREFIX obj: <http://purl.org/changes/object/development/05/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/schema/>
 
 SELECT ?manifestation ?license_link
 WHERE {

@@ -3,8 +3,8 @@
 What are the cultural resources whose collections have been curated during curation events carried out by agents located in Bologna?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/03/data/>
-PREFIX obj: <http://purl.org/changes/object/development/03/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/03/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/03/schema/>
 
 SELECT ?resource ?collection ?agent
 WHERE {
@@ -20,8 +20,8 @@ WHERE {
 What are the collections curated during curation events carried out by the Rijksmuseum?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/03/data/>
-PREFIX obj: <http://purl.org/changes/object/development/03/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/03/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/03/schema/>
 
 SELECT ?collection
 WHERE {

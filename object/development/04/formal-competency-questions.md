@@ -3,7 +3,7 @@
 What are the cultural resources and the time spans of their conception events?
 
 ```SPARQL
-PREFIX obj: <http://purl.org/changes/object/development/04/schema/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/04/schema/>
 
 SELECT ?resource ?beginning ?end
 WHERE {
@@ -19,7 +19,7 @@ WHERE {
 What are the cultural resources created in a time interval that includes the year 1590?
 
 ```SPARQL
-PREFIX obj: <http://purl.org/changes/object/development/04/schema/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/04/schema/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?resource ?beginning ?end

@@ -3,8 +3,8 @@
 What is the cultural object digitized and the digital object produced by the digitization process? What is the latter's license?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/process/development/01/data/>
-PREFIX process: <http://purl.org/changes/process/development/01/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/process/development/01/data/>
+PREFIX process: <https://w3id.org/dharc/ontology/chad-ap/process/development/01/schema/>
 
 SELECT ?input ?output ?license_link
 WHERE {
@@ -21,8 +21,8 @@ WHERE {
 What are the time spans during which the digitization process and the following software activities were carried out?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/process/development/01/data/>
-PREFIX process: <http://purl.org/changes/process/development/01/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/process/development/01/data/>
+PREFIX process: <https://w3id.org/dharc/ontology/chad-ap/process/development/01/schema/>
 
 SELECT ?activity ?start ?end
 WHERE {

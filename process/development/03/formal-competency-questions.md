@@ -3,8 +3,8 @@
 What are the techniques used in digitization processes?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/process/development/03/data/>
-PREFIX process: <http://purl.org/changes/process/development/03/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/process/development/03/data/>
+PREFIX process: <https://w3id.org/dharc/ontology/chad-ap/process/development/03/schema/>
 
 SELECT ?activity ?technique
 WHERE {
@@ -17,8 +17,8 @@ WHERE {
 What are the tools and their types used in processing activities?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/process/development/03/data/>
-PREFIX process: <http://purl.org/changes/process/development/03/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/process/development/03/data/>
+PREFIX process: <https://w3id.org/dharc/ontology/chad-ap/process/development/03/schema/>
 
 SELECT ?tool ?type
 WHERE {

@@ -3,8 +3,8 @@
 What are the cultural resources whose creation involved some illustrator?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/01/data/>
-PREFIX obj: <http://purl.org/changes/object/development/01/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/01/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/01/schema/>
 
 SELECT ?resource ?agent
 WHERE {
@@ -19,8 +19,8 @@ WHERE {
 What are the agents and the types of  activities they carried out to contribute to the creation of `24-exp`?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/01/data/>
-PREFIX obj: <http://purl.org/changes/object/development/01/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/01/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/01/schema/>
 
 SELECT ?agent ?type
 WHERE {
@@ -36,8 +36,8 @@ WHERE {
 What are the agents involved in the creation of the cultural resources that have been created through the engraving technique? What are  the types of the activities they carried out?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/01/data/>
-PREFIX obj: <http://purl.org/changes/object/development/01/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/01/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/01/schema/>
 
 SELECT ?resource ?agent ?type
 WHERE {
@@ -54,8 +54,8 @@ WHERE {
 What are the cultural resources whose creation involved at least one agent carrying out more than one activity with different types?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/01/data/>
-PREFIX obj: <http://purl.org/changes/object/development/01/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/01/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/01/schema/>
 
 SELECT ?resource
 WHERE {

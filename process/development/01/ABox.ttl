@@ -1,14 +1,14 @@
-@prefix ex: <http://purl.org/changes/process/development/01/data/> .
-@prefix process: <http://purl.org/changes/process/development/01/schema/> .
+@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/process/development/01/data/> .
+@prefix process: <https://w3id.org/dharc/ontology/chad-ap/process/development/01/schema/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/changes/process/development/01/data/> .
+@base <https://w3id.org/dharc/ontology/chad-ap/process/development/01/data/> .
 
-<http://purl.org/changes/process/development/01/data/> rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/changes/process/development/01/schema/> .
+<https://w3id.org/dharc/ontology/chad-ap/process/development/01/data/> rdf:type owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/process/development/01/schema/> .
 
 ex:32 a process:CulturalObject .
 

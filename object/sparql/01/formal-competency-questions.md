@@ -21,7 +21,7 @@ WHERE {
 What are the agents and the types of  activities they carried out to contribute to the creation of `24-exp`?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/data/01/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/data/01/>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 
 PREFIX frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> 
 

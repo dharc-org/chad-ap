@@ -1,5 +1,5 @@
 @prefix aat: <http://vocab.getty.edu/page/aat/> .
-@prefix ex: <http://purl.org/changes/process/data/03/> .
+@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/process/data/03/> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,10 +7,10 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/changes/process/data/03/> .
+@base <https://w3id.org/dharc/ontology/chad-ap/process/data/03/> .
 
-<http://purl.org/changes/process/data/03/> rdf:type owl:Ontology ;
-    owl:imports <http://purl.org/changes/process/model/> .
+<https://w3id.org/dharc/ontology/chad-ap/process/data/03/> rdf:type owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/process/model/> .
 
 
 ex:15 a crm:E24_Physical_Human-Made_Thing .

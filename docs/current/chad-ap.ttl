@@ -1,11 +1,16 @@
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/dharc/ontology/chad-ap/object/model/> rdf:type owl:Ontology .
+<https://w3id.org/dharc/ontology/chad-ap/> rdf:type owl:Ontology .
+
+##################################################################
+# CLASSES ########################################################
+##################################################################
 
 crm:E42_Identifier 
     a owl:Class ;
@@ -24,7 +29,7 @@ frbroo:F4_Manifestation_Singleton
     a owl:Class ;
     rdfs:label "Manifestation Singleton"@en ;
     rdfs:comment "The physical instance of a cultural heritage object."@en ;
-    rdfs:subClassOf crm:E24_Physical_Human-Made_Thing ;
+    rdfs:subClassOf crm:E24_Physical_Man-Made_Thing ;
     rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 
 crm:E35_Title 
@@ -186,6 +191,81 @@ frbroo:F15_Complex_Work
     rdfs:comment "A work that is composed of other works."@en ;
     rdfs:subClassOf frbroo:F1_Work ;
     rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+
+crm:E24_Physical_Human-Made_Thing
+    a owl:Class ;
+    rdfs:label "Physical Human-Made Thing"@en ,
+        "Chose matérielle élaborée par l’humain"@fr ;
+    rdfs:comment "A persistent physical item of any size that is purposely created by human activity."@en ;
+    rdfs:subClassOf crm:E18_Physical_Thing ;
+    rdfs:subClassOf crm:E71_Human-Made_Thing ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crmdig:D10_Software_Execution
+    a owl:Class ;
+    rdfs:label "Software Execution"@en ;
+    rdfs:comment "An activity in which a digital device runs a software program on a digital object."@en ;
+    rdfs:subClassOf crmdig:D7_Digital_Machine_Event ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:D14_Software
+    a owl:Class ;
+    rdfs:label "Software"@en ;
+    rdfs:comment "A computer program."@en ;
+    rdfs:subClassOf crmdig:D1_Digital_Object ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:D8_Digital_Device
+    a owl:Class ;
+    rdfs:label "Digital Device"@en ;
+    rdfs:comment "A technical tool that is used to process or produce digital objects."@en ;
+    rdfs:subClassOf crm:E22_Man-Made_Object ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:D2_Digitization_Process
+    a owl:Class ;
+    rdfs:label "Digitization Process"@en ;
+    rdfs:comment "An activity that results in the production of data objects functioning as digital representations of physical entities."@en ;
+    rdfs:subClassOf crmdig:D11_Digital_Measurement_Event ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crm:E21_Person
+    a owl:Class ;
+    rdfs:label "Person"@en ,
+        "Person"@de ,
+        "Πρόσωπο"@el ,
+        "Personne"@fr ,
+        "Pessoa"@pt ,
+        "Личность"@ru ,
+        "人物"@zh ;
+    rdfs:comment "An individual person."@en ;
+    rdfs:subClassOf crm:E20_Biological_Object ,
+        crm:E39_Actor ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:E74_Group
+    a owl:Class ;
+    rdfs:label "Group"@en ,
+        "Menschliche Gruppe"@de ,
+        "Ομάδα"@el ,
+        "Groupe"@fr ,
+        "Grupo"@pt ,
+        "Группа"@ru ,
+        "团体"@zh ;
+    rdfs:comment "A unified group of people."@en ;
+    rdfs:subClassOf crm:E39_Actor ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crmdig:D9_Data_Object
+    a owl:Class ;
+    rdfs:comment "A digital object that is the direct result of an activity in a digitization workflow."@en ;
+    rdfs:subClassOf crm:E54_Dimension ;
+    rdfs:subClassOf crmdig:D1_Digital_Object ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+##################################################################
+# OBJECT PROPERTIES ##############################################
+##################################################################
 
 crm:P48_has_preferred_identifier 
     a owl:ObjectProperty ;
@@ -567,21 +647,6 @@ crm:P32_used_general_technique
     owl:inverseOf crm:P32i_was_technique_of ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
-crm:P32i_was_technique_of 
-    a owl:ObjectProperty ;
-    rdfs:label "was technique of"@en,
-                "war Verfahren von"@de,
-                "ήταν τεχνική του/της"@el,
-                "a été la technique générale mise en œuvre dans"@fr,
-                "foi técnica da"@pt,
-                "был техникой для"@ru,
-                "是技术"@zh ;
-    rdfs:domain crm:E55_Type ;
-    rdfs:range crm:E7_Activity ;
-    rdfs:subPropertyOf crm:P125i_was_type_of_object_used_in ;
-    owl:inverseOf crm:P32_used_general_technique ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
-
 crm:P70_documents 
     a owl:ObjectProperty ;
     rdfs:label "documents"@en,
@@ -704,6 +769,140 @@ frbroo:R10i_is_member_of
     rdfs:range frbroo:F15_Complex_Work ;
     rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 
+crmdig:L1_digitized
+    a owl:ObjectProperty ;
+    rdfs:label "digitized"@en ;
+    rdfs:comment "This property associates a digitization process with the cultural heritage object that is being digitized."@en ;
+    rdfs:domain crmdig:D2_Digitization_Process ;
+    rdfs:range crm:E18_Physical_Thing ;
+    rdfs:subPropertyOf crm:P39_measured ;
+    owl:inverseOf crmdig:L1i_was_digitized_by ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L1i_was_digitized_by
+    a owl:ObjectProperty ;
+    rdfs:label "was digitized by"@en ;
+    rdfs:domain crm:E18_Physical_Thing ;
+    rdfs:range crmdig:D2_Digitization_Process ;
+    rdfs:subPropertyOf crm:P39i_was_measured_by ;
+    owl:inverseOf crmdig:L1_digitized ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L11_had_output
+    a owl:ObjectProperty ;
+    rdfs:label "has output"@en ;
+    rdfs:comment "This property associates an activity in a digitization workflow with a digital object produced as a result of that activity."@en ;
+    rdfs:domain crmdig:D7_Digital_Machine_Event ;
+    rdfs:range crmdig:D1_Digital_Object ;
+    rdfs:subPropertyOf crm:P94_has_created ;
+    owl:inverseOf crmdig:L11i_was_output_of ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L11i_was_output_of
+    a owl:ObjectProperty ;
+    rdfs:label "was output of"@en ;
+    rdfs:domain crmdig:D1_Digital_Object ;
+    rdfs:range crmdig:D7_Digital_Machine_Event ;
+    rdfs:subPropertyOf crm:P94i_was_created_by ;
+    owl:inverseOf crmdig:L11_had_output ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L10_had_input
+    a owl:ObjectProperty ;
+    rdfs:label "has input"@en ;
+    rdfs:comment "This property associates an activity in a digitization workflow with a digital object used as input for that activity."@en ;
+    rdfs:domain crmdig:D7_Digital_Machine_Event ;
+    rdfs:range crmdig:D1_Digital_Object ;
+    rdfs:subPropertyOf crm:P16_used_specific_object ;
+    owl:inverseOf crmdig:L10i_was_input_of ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crmdig:L10i_was_input_of
+    a owl:ObjectProperty ;
+    rdfs:label "was input of"@en ;
+    rdfs:domain crmdig:D1_Digital_Object ;
+    rdfs:range crmdig:D7_Digital_Machine_Event ;
+    rdfs:subPropertyOf crm:P16i_was_used_for ;
+    owl:inverseOf crmdig:L10_had_input ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+crm:P11_had_participant
+    a owl:ObjectProperty ;
+    rdfs:label "had participant"@en ,
+                "hatte Teilnehmer"@de ,
+                "είχε συμμέτοχο"@el ,
+                "a eu pour actant participant"@fr ,
+                "tem participante"@pt ,
+                "имел участника"@ru ,
+                "有参与者"@zh ;
+    rdfs:comment "This property describes the participation of one or more actors in an event."@en ;
+    rdfs:domain crm:E5_Event ;
+    rdfs:range crm:E39_Actor ;
+    rdfs:subPropertyOf crm:P12_occurred_in_the_presence_of ;
+    owl:inverseOf crm:P11i_participated_in ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P11i_participated_in
+    a owl:ObjectProperty ;
+    rdfs:label "participated in"@en ,
+                "nahm Teil an"@de ,
+                "συμμετείχε σε"@el ,
+                "a participé à"@fr ,
+                "participa em"@pt ,
+                "участвовал в"@ru ,
+                "参与"@zh ;
+    rdfs:domain crm:E39_Actor ;
+    rdfs:range crm:E5_Event ;
+    rdfs:subPropertyOf crm:P12i_was_present_at ;
+    owl:inverseOf crm:P11_had_participant ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P16_used_specific_object
+    a owl:ObjectProperty ;
+    rdfs:label "used specific object"@en ,
+                "benutzte das bestimmte Objekt"@de ,
+                "χρησιμοποίησε αντικείμενο"@el ,
+                "a mobilisé l’objet spécifique"@fr ,
+                "usou objeto específico"@pt ,
+                "использовал особый объект"@ru ,
+                "使用特定对象"@zh ;
+    rdfs:comment "This property describes the use of a tool for performing an activity."@en ;
+    rdfs:domain crm:E7_Activity ;
+    rdfs:range crm:E70_Thing ;
+    rdfs:subPropertyOf crm:P12_occurred_in_the_presence_of ,
+                      crm:P15_was_influenced_by ;
+    owl:inverseOf crm:P16i_was_used_for ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P16i_was_used_for
+    a owl:ObjectProperty ;
+    rdfs:label "was used for"@en,
+                "wurde benutzt für"@de,
+                "χρησιμοποιήθηκε για"@el,
+                "a été mobilisé pour"@fr,
+                "foi usado por"@pt,
+                "был использован для"@ru,
+                "用于"@zh ;
+    rdfs:domain crm:E70_Thing ;
+    rdfs:range crm:E7_Activity ;
+    rdfs:subPropertyOf crm:P12i_was_present_at ,
+                      crm:P15i_influenced ;
+    owl:inverseOf crm:P16_used_specific_object ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crmdig:L23_used_software_or_firmware
+    a owl:ObjectProperty ;
+    rdfs:label "used software or firmware"@en ;
+    rdfs:comment "This property associates a digitization activity with the software that was used during that activity."@en ;
+    rdfs:domain crmdig:D7_Digital_Machine_Event ;
+    rdfs:range crmdig:D14_Software ;
+    rdfs:subPropertyOf crm:P16_used_specific_object ;
+    rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> .
+
+##################################################################
+# DATATYPE PROPERTIES ############################################
+##################################################################
+
 crm:P190_has_symbolic_content 
     a owl:DatatypeProperty ;
     rdfs:label "has symbolic content"@en,
@@ -712,48 +911,6 @@ crm:P190_has_symbolic_content
     rdfs:domain crm:E90_Symbolic_Object ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf crm:P3_has_note ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
-
-crm:P82_at_some_time_within 
-    a owl:DatatypeProperty ;
-    rdfs:label "at some time within"@en ,
-                "irgendwann innerhalb von"@de ,
-                "κάποτε εντός"@el ,
-                "a eu lieu durant"@fr ,
-                "abrange no máximo"@pt ,
-                "некоторое время в течение"@ru ,
-                "最长范围是"@zh ;
-    rdfs:comment "This property describes the maximum period of time within which a time span falls."@en ;
-    rdfs:domain crm:E52_Time-Span ;
-    rdfs:range rdfs:Literal ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
-
-crm:P82a_begin_of_the_begin 
-    a owl:DatatypeProperty ;
-    rdfs:label "begin of the begin"@en,
-                "Anfang des Anfangs"@de,
-                "αρχή της αρχής"@el,
-                "début du début"@fr,
-                "começar do início"@pt,
-                "начать с начала"@ru ;
-    rdfs:comment "This property describes the precise beginning date and time of a time span."@en ;
-    rdfs:domain crm:E52_Time-Span ;
-    rdfs:range xsd:dateTime ;
-    rdfs:subPropertyOf crm:P82_at_some_time_within ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
-
-crm:P82b_end_of_the_end 
-    a owl:DatatypeProperty ;
-    rdfs:label "end of the end"@en,
-                "Ende vom Ende"@de,
-                "τέλος του τέλους"@el,
-                "fin de la fin"@fr,
-                "fim do fim"@pt,
-                "конец конец"@ru ;
-    rdfs:comment "This property describes the precise ending date and time of a time span."@en ;
-    rdfs:domain crm:E52_Time-Span ;
-    rdfs:range xsd:dateTime ;
-    rdfs:subPropertyOf crm:P82_at_some_time_within ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
 crm:P3_has_note 
@@ -769,3 +926,46 @@ crm:P3_has_note
     rdfs:domain crm:E1_CRM_Entity ;
     rdfs:range rdfs:Literal ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P82_at_some_time_within
+    a owl:DatatypeProperty ;
+    rdfs:label "at some time within"@en ,
+                "irgendwann innerhalb von"@de ,
+                "κάποτε εντός"@el ,
+                "a eu lieu durant"@fr ,
+                "abrange no máximo"@pt ,
+                "некоторое время в течение"@ru ,
+                "最长范围是"@zh ;
+    rdfs:comment "This property describes the maximum period of time within which a time span falls."@en ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range rdfs:Literal ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P82a_begin_of_the_begin
+    a owl:DatatypeProperty ;
+    rdfs:label "begin of the begin"@en,
+                "Anfang des Anfangs"@de,
+                "αρχή της αρχής"@el,
+                "début du début"@fr,
+                "começar do início"@pt,
+                "начать с начала"@ru ;
+    rdfs:comment "This property describes the precise beginning date and time of a time span."@en ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf crm:P82_at_some_time_within ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+
+crm:P82b_end_of_the_end
+    a owl:DatatypeProperty ;
+    rdfs:label "end of the end"@en ,
+                "Ende vom Ende"@de ,
+                "τέλος του τέλους"@el ,
+                "fin de la fin"@fr ,
+                "fim do fim"@pt ,
+                "конец конец"@ru ;
+    rdfs:comment "This property describes the precise ending date and time of a time span."@en ;
+    rdfs:domain crm:E52_Time-Span ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf crm:P82_at_some_time_within ;
+    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
+    

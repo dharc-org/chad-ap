@@ -3,7 +3,7 @@
 What are the titles of the work `L1-work`? What are their types?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/data/05/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/data/05/>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 
 PREFIX frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/>  
 
@@ -60,7 +60,7 @@ WHERE {
 What are the parent works of the works that have either "Europa" or "tapiro" as their subject?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/data/05/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/data/05/>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/> 
 PREFIX frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/>  
 

@@ -3,8 +3,8 @@
 What are the identifiers of the printed volumes? What are their types?
 
 ```SPARQL
-PREFIX ex: <http://purl.org/changes/object/development/02/data/>
-PREFIX obj: <http://purl.org/changes/object/development/02/schema/>
+PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/02/data/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/02/schema/>
 
 SELECT ?resource ?identifier_text ?type
 WHERE {
@@ -19,7 +19,7 @@ WHERE {
 What is the shelf mark of the cultural resource with the project ID "45"?
 
 ```SPARQL
-PREFIX obj: <http://purl.org/changes/object/development/02/schema/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/02/schema/>
 
 SELECT ?identifier_text
 WHERE {
@@ -37,7 +37,7 @@ WHERE {
 What are the descriptive labels of the cultural resources that either have shelf marks or are prints?
 
 ```SPARQL
-PREFIX obj: <http://purl.org/changes/object/development/02/schema/>
+PREFIX obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/02/schema/>
 
 SELECT ?resource ?label_text
 WHERE {
