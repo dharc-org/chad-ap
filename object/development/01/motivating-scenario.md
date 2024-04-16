@@ -18,5 +18,5 @@ The creation event `35-exp-creation-00` created the cultural resource `35-exp` (
 
 ## Example 3
 The creation event `24-exp-creation-00` created the cultural resource `24-exp` ("Panthera onca (Linnaeus, 1758)") through the technique `taxidermy`. The creation event consists of two smaller creation events:
-* `24-exp-creation-01`, carried out by `Carl Linnaeus (VIAF:34594730)`, in the role of `discovery`;
+* `24-exp-creation-01`, carried out by `Carl Linnaeus` (`VIAF:34594730`), in the role of `discovery`;
 * `24-exp-creation-02`, carried out by `Naturaliter`, in the role of `museum preparation`.

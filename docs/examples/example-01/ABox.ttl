@@ -1,5 +1,5 @@
 @prefix aat: <http://vocab.getty.edu/page/aat/> .
-@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/cidoc-profile/data/example/> .
+@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/data/example/> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
@@ -8,10 +8,10 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/dharc/ontology/chad-ap/cidoc-profile/data/example/> .
+@base <https://w3id.org/dharc/ontology/chad-ap/data/example/> .
 
-<https://w3id.org/dharc/ontology/chad-ap/cidoc-profile/data/example/> rdf:type owl:Ontology ;
-    owl:imports <https://w3id.org/dharc/ontology/chad-ap/cidoc-profile/model/> .
+<https://w3id.org/dharc/ontology/chad-ap/data/example/> rdf:type owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/> .
 
 
 ex:32-exp-creation-00 a frbroo:F28_Expression_Creation ;
@@ -35,7 +35,7 @@ ex:32-man a frbroo:F4_Manifestation_Singleton ;
     crm:P48_has_preferred_identifier ex:32-identifier-00 ,
         ex:32-identifier-01 ;
     crm:P2_has_type aat:300028569 ;
-    crm:P3_has_note "Essere umano ermafrodita Human hermaphrodite (Monstrum humanum hermaphroditicum) sec. XVI 16th century BUB, Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86" ;
+    crm:P3_has_note "Essere umano ermafrodita Human hermaphrodite (Monstrum humanum hermaphroditicum) sec. XVI 16th century BUB, Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"^^rdfs:Literal ;
     crm:P74_has_current_or_former_residence ex:bologna .
 
 ex:32-man-license a crm:E73_Information_Object ;
@@ -44,15 +44,15 @@ ex:32-man-license a crm:E73_Information_Object ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
 ex:32-identifier-00 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "32" ;
+    crm:P190_has_symbolic_content "32"^^rdfs:Literal ;
     crm:P2_has_type aat:300312355 .
 
 ex:32-identifier-01 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86" ;
+    crm:P190_has_symbolic_content "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"^^rdfs:Literal ;
     crm:P2_has_type aat:300404704 .
 
 ex:32-identifier-02 a crm:E42_Identifier ;
-    crm:P19_has_symbolic_content "5" ;
+    crm:P19_has_symbolic_content "5"^^rdfs:Literal ;
     crm:P2_has_type aat:300445021 .
 
 ex:32-curation a crm:E87_Curation_Activity ;
@@ -123,7 +123,7 @@ ex:blender a crmdig:D14_Software ;
     crm:P2_has_type aat:300426696 .
 
 ex:32-mod a crmdig:D10_Software_Execution ;
-    crm:P2_has_type aat:300237968 ;
+    crm:P2_has_type aat:300391447 ;
     crmdig:L10_had_input ex:32-proc-output ;
     crmdig:L11_had_output ex:32-mod-output ;
     crm:P4_has_time-span ex:32-mod-timespan ;
@@ -135,7 +135,7 @@ ex:instantmeshes a crmdig:D14_Software ;
     crm:P2_has_type aat:300426696 .
 
 ex:32-opt a crmdig:D10_Software_Execution ;
-    crm:P2_has_type aat:300236367 ;
+    crm:P2_has_type aat:300386427 ;
     crmdig:L10_had_input ex:32-mod-output ;
     crmdig:L11_had_output ex:32-opt-output ;
     crm:P4_has_time-span ex:32-opt-timespan ;
@@ -212,25 +212,25 @@ ex:32-upl-output-license a crm:E73_Information_Object ;
     crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
 ex:32-acq-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-08"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-08"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin "2023-05-08T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-08T23:59:59Z"^^xsd:dateTime .
 
 ex:32-proc-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-10"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-10"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin "2023-05-10T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-10T23:59:59Z"^^xsd:dateTime .
 
 ex:32-mod-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-17"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-18"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin "2023-05-17T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-18T23:59:59Z"^^xsd:dateTime .
 
 ex:32-opt-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-18"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-19"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin "2023-05-18T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .
 
 ex:32-exp-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-19"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-19"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin "2023-05-19T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .
 
 ex:32-upl-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-19"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-19"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin "2023-05-19T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .

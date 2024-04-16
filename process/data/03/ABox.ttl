@@ -32,7 +32,7 @@ ex:15-acq-output a crmdig:D9_Data_Object .
 ex:15-proc-output a crmdig:D9_Data_Object .
 
 ex:artec-spider a crmdig:D8_Digital_Device ;
-    crm:P2_has_type aat:300237891 .
+    crm:P2_has_type aat:300429747 .
 
 ex:artec-studio-14 a crmdig:D14_Software ;
     crm:P2_has_type aat:300426696 .

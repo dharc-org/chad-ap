@@ -47,7 +47,7 @@ ex:blender a crmdig:D14_Software ;
     crm:P2_has_type aat:300426696 .
 
 ex:32-mod a crmdig:D10_Software_Execution ;
-    crm:P2_has_type aat:300237968 ;
+    crm:P2_has_type aat:300391447 ;
     crmdig:L10_had_input ex:32-proc-output ;
     crmdig:L11_had_output ex:32-mod-output ;
     crm:P4_has_time-span ex:32-mod-timespan ;
@@ -59,7 +59,7 @@ ex:instantmeshes-3df-zephyr a crmdig:D14_Software ;
     crm:P2_has_type aat:300426696 .
 
 ex:32-opt a crmdig:D10_Software_Execution ;
-    crm:P2_has_type aat:300236367 ;
+    crm:P2_has_type aat:300386427 ;
     crmdig:L10_had_input ex:32-mod-output ;
     crmdig:L11_had_output ex:32-opt-output ;
     crm:P4_has_time-span ex:32-opt-timespan ;
