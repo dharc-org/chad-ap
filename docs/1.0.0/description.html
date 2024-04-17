@@ -1,0 +1,756 @@
+<h2 id="description">Description</h2>
+<p>The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, <a href="https://w3id.org/dharc/ontology/chad-ap">https://w3id.org/dharc/ontology/chad-ap</a>) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the <em>Object Module</em> (OM), dedicated to describing the CH objects, and the <em>Process Module</em> (PM), for describing the acquisition and digitisation process.</p>
+<p>Both CHAD-AP and its <a href="https://w3id.org/dharc/ontology/chad-ap">documentation</a> are living artefacts that have been drafted in the context of the <a href="https://sites.google.com/uniroma1.it/changes/">Project CHANGES</a> (&quot;Cultural Heritage Active Innovation For Next-Gen Sustainable Society&quot;), an EU-funded project that  aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.</p>
+<p>Currently, CHAD-AP is able to describe the following entities:</p>
+<ul>
+<li>CH objects, described according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. In particular, CHAD-AP considers: the essence or conceptualisation of the CH object (<em>Work</em>); the intellectual content of the CH object (<em>Expression</em>); and the physical instance of the CH object (<em>Manifestation Singleton</em>);</li>
+<li>Activities, events, agents involved and their roles;</li>
+<li>Descriptive components, such as labels, types, identifiers and titles;</li>
+<li>Entities related to curation and conservation, like curation events, places of conservation, agent responsible for its conservation, etc.</li>
+<li>Concepts and other immaterial objects, such as the subjects illustrated by CH objects and the licenses or right statements assigned to them;</li>
+<li>Digitization processes used to capture 3D data of CH objects and to output their digital models, and software activities leveraging these digital objects as input for further processes.</li>
+</ul>
+<p>The following figure contains a <a href="http://www.essepuntato.it/graffoo">Graffoo diagram</a> that provides an overview of the class and properties reused in CHAD-AP.</p>
+<p><img src="diagrams/profile-model.png" alt="A Graffoo diagram of CHAD-AP"></p>
+<p>The current version of the application profile reuses a subset of classes and properties selected from the following models:</p>
+<ul>
+<li><a href="http://www.cidoc-crm.org/cidoc-crm/">CIDOC CRM</a> is an international ISO standard that provides an ontology related to cultural heritage and museum documentation, which can be extended with additional modules for covering particular descriptions at hand;</li>
+<li><a href="http://www.ics.forth.gr/isl/CRMdig/">CRMdig</a> is an extension of CIDOC CRM for describing metadata related to the digital provenance of digitisation processes and digital representations;</li>
+<li><a href="http://iflastandards.info/ns/fr/frbr/frbroo/">FRBRoo</a> is an ontology for representing bibliographic information according to the FRBR data model within the CIDOC CRM framework;</li>
+<li><a href="http://vocab.getty.edu/page/aat/">AAT</a> is a structured vocabulary of terms used to describe art, architecture, decorative arts, and material culture.</li>
+</ul>
+<p>A full version of CHAD-AP is available at <a href="https://w3id.org/dharc/ontology/chad-ap">https://w3id.org/dharc/ontology/chad-ap</a>.</p>
+<p>The next subsections provide a quick overview of all the entities defined, some exemple of usage, and some of the queries that CHAD-AP can answer.</p>
+<h3 id="object-module-om-">Object Module (OM)</h3>
+<p>As shown in the diagram below, a Cultural Heritage (CH) object is described in CHAD-AP according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. </p>
+<p><img src="diagrams/object-model.png" alt="A diagram of the CHAD-AP Object Module (OM)."></p>
+<p>In particular, the <em>Work</em> (<code>frbroo:F1_Work</code>) represents the <em>essence</em> or conceptualization of the CH object. It begins with a conception event (<code>frbroo:F27_Work_Conception</code>) occurring within a specific time span (<code>crm:E52_Time-Span</code>), which can be expressed as either a precisely defined period with exact starting and ending date times (<code>crm:P82a_begin_of_the_begin</code> and <code>crm:P82b_end_of_the_end</code>) or a fuzzy label if its temporal extents are not precisely known (<code>crm:P82_at_some_time_within</code>). Each work is associated with a series of titles (<code>crm:E35_Title</code>), each classified according to a particular type (<code>crm:E55_Type</code>), which can be an <em>original title</em> (<code>aat:300417204</code>) or an <em>exhibition title</em> (<code>aat:300417207</code>). Furthermore, a Work can be part of a larger Work (<code>frbroo:F15_Complex_Work</code>), like a series of printed volumes, which is classified under a particular type (<code>crm:E55_Type</code>).</p>
+<p>The <em>Expression</em> (<code>frbroo:F2_Expression</code>) is the realisation of a Work, and refers to the intellectual <em>content</em> of the object. It is generated through a creation event (<code>frbroo:F28_Expression_Creation</code>) made of smaller activities (<code>crm:E7_Activity</code>), each conducted by one or more agents (<code>crm:E39_Actor</code>) and characterised by a specific type (<code>crm:E55_Type</code>) that defines, implicitly, the role assumed by the agent for that activity. For example, if the agent is identified as the author of the Expression, the activity type is represented as <em>writing</em> (<code>aat:300054698</code>). Also, creation events employ various creation techniques (<code>crm:E55_Type</code>). For example, <code>aat:300054196</code> is used to express <em>drawing technique</em>. An Expression can also be associated with one or more subjects defining its contents. In CHAD-AP, a generic <em>concept</em> is represented with the class <code>crm:E73_Information_Object</code> with the type <code>aat:300404126</code> (i.e. <em>subject</em>) explicitly specified.</p>
+<p>Finally, the <em>Manifestation Singleton</em> (<code>frbroo:F4_Manifestation_Singleton</code>) represents the physical instance of the CH object. It is accompanied with descriptive components like labels (expressed through the use of the property <code>crm:P3_has_note</code>), types (<code>crm:E55_Type</code>), and identifiers (<code>crm:E42_Identifier</code>). In some cases, it may be linked to a curation activity (<code>crm:E87_Curation_Activity</code>) carried out by a keeper (<code>crm:E39_Actor</code>) who manages a collection (<code>crm:E78_Curated_Holding</code>) the object belongs to, and that is located in a specific place (<code>crm:E53_Place</code>). Manifestations can consist of other Manifestations and may depict the Expression of another related object, such as a video displaying a manuscript or a tablet showing a picture of a specimen. In addition, Manifestations are associated with copyright or licensing statements (represented through the combination of <code>crm:E73_Information_Object</code> having type <code>aat:300435434</code>, i.e.  <em>copyright/licensing statement</em>), linked with the document introducing the actual license or right statements through the property <code>crm:P70i_is_documented_in</code>. Whenever possible, instances of <code>crm:E39_Actor</code> and <code>crm:E53_Place</code> are also linked with existing authority records through the property <code>crm:P48_has_preferred_identifier</code>.</p>
+<h3 id="process-module-pm-">Process Module (PM)</h3>
+<p>As shown in the diagram below, CHAD-AP also describes the entities for defining a 3D digitisation workflow as a sequence of activities classified according to two main categories. </p>
+<p><img src="diagrams/process-model.png" alt="A diagram of the CHAD-AP Process Module (PM)."></p>
+<p>On the one hand, we have the <em>acquisition activity</em> (<code>crmdig:D2_Digitization_Process</code>), which involves the digitisation of a CH object (<code>crm:E24_Physical_Human-Made_Thing</code>) to produce its digital CH object (<code>crmdig:D9_Data_Object</code>). Similarly to its physical counterpart, the digital CH object can be associated with copyright statements or licenses (<code>crm:E73_Information_Object</code> with <code>aat:300435434</code> as its type). The acquisition occurs within a time span (<code>crm:E52_Time-Span</code>) with defined starting and ending date times, and engages various agents, including individuals (<code>crm:E21_Person</code>) and institutions (<code>crm:E74_Group</code>) responsible for the activity. During the acquisition, a series of techniques (<code>crm:E55_Type</code>) can be used, such as <em>photogrammetry</em> (<code>aat:300053580</code>) or <em>structured light scanning</em> (<code>aat:300391312</code>), along with tools (<code>crmdig:D8_Digital_Device</code>) like <em>digital cameras</em> (<code>aat:300266792</code>) and <em>structured light scanners</em> (<code>aat:300429747</code>).</p>
+<p>On the other hand, we have a series of <em>software activities</em> (<code>crmdig:D10_Software_Execution</code>), each representing a specific stage or phase of digitisation workflow. Such stage is denoted by its type (<code>crm:E55_Type</code>), such as <em>processing</em> (<code>aat:300054636</code>), <em>modelling</em> (<code>aat:300391447</code>), and <em>optimization</em> (<code>aat:300386427</code>). It involves the manipulation of the digital CH object (<code>crmdig:D9_Data_Object</code>) produced previously as input and the production of a modified version of that digital CH object (<code>crmdig:D9_Data_Object</code>) as output. The activity also occurs within a defined time span (<code>crm:E52_Time-Span</code>) with precise start and end date times, engages various agents, including individuals (<code>crm:E21_Person</code>) and institutions (<code>crm:E74_Group</code>), and uses software as tools to produce its output (<code>crmdig:D14_Software</code>).</p>
+<h2 id="examples-of-use">Examples of use</h2>
+<p>CHAD-AP can be used for modelling  scenarios related to cultural heritage acquisition and digitisation processes. In the following subsections we introduce some of them, and we accompany them with exemplar instantiations. </p>
+<p>The prefixes that are used in all the examples provided below are defined as follows:</p>
+<pre><code><span class="hljs-variable">@prefix</span> <span class="hljs-attribute">aat</span>: &lt;<span class="hljs-attribute">http</span>:<span class="hljs-comment">//vocab.getty.edu/page/aat/&gt; .</span>
+<span class="hljs-variable">@prefix</span> <span class="hljs-attribute">ex</span>: &lt;<span class="hljs-attribute">https</span>:<span class="hljs-comment">//w3id.org/dharc/ontology/chad-ap/data/example/&gt; .</span>
+<span class="hljs-variable">@prefix</span> <span class="hljs-attribute">crm</span>: &lt;<span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.cidoc-crm.org/cidoc-crm/&gt; .</span>
+<span class="hljs-variable">@prefix</span> <span class="hljs-attribute">crmdig</span>: &lt;<span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.ics.forth.gr/isl/CRMdig/&gt; .</span>
+<span class="hljs-variable">@prefix</span> <span class="hljs-attribute">frbroo</span>: &lt;<span class="hljs-attribute">http</span>:<span class="hljs-comment">//iflastandards.info/ns/fr/frbr/frbroo/&gt; .</span>
+<span class="hljs-variable">@prefix</span> <span class="hljs-attribute">owl</span>: &lt;<span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.w3.org/2002/07/owl#&gt; .</span>
+<span class="hljs-variable">@prefix</span> <span class="hljs-attribute">rdf</span>: &lt;<span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .</span>
+<span class="hljs-variable">@prefix</span> <span class="hljs-attribute">xml</span>: &lt;<span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.w3.org/XML/1998/namespace&gt; .</span>
+<span class="hljs-variable">@prefix</span> <span class="hljs-attribute">xsd</span>: &lt;<span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.w3.org/2001/XMLSchema#&gt; .</span>
+<span class="hljs-variable">@prefix</span> <span class="hljs-attribute">rdfs</span>: &lt;<span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.w3.org/2000/01/rdf-schema#&gt; .</span>
+</code></pre><h3 id="scenario-1">Scenario 1</h3>
+<p>The creation event <code>01-exp-creation-00</code> created the CH object <code>01-exp</code> (&#39;Amerigo Vespucci sveglia l’America&#39;) through the technique <code>engraving</code>. The creation event consists of three smaller creation events:</p>
+<ul>
+<li><code>01-exp-creation-01</code>, carried out by <code>Jan van der Straet</code> (<code>ULAN:500011304</code>), in the role of <code>illustration</code>;</li>
+<li><code>01-exp-creation-02</code>, carried out by <code>Philip Galle</code>, <code>Theodor Galle</code> and <code>Jan Collaert</code>, in the role of <code>engraving process</code>;</li>
+<li><code>01-exp-creation-03</code>, carried out by <code>Luigi Alamanni</code> (<code>ULAN:500714480</code>), in the role of <code>commission</code>.</li>
+</ul>
+<p>The creation event <code>35-exp-creation-00</code> created the CH object <code>35-exp</code> (&#39;De plantis epitome utilissima&#39;) through the technique <code>watercolor</code>. The creation event consists of two smaller creation events:</p>
+<ul>
+<li><code>35-exp-creation-01</code>, carried out by <code>Pietro Andrea Mattioli</code> (<code>VIAF:61549376</code>), in the role of <code>translation</code>;</li>
+<li><code>35-exp-creation-02</code>, carried out by <code>Pietro Andrea Mattioli</code> (<code>VIAF:61549376</code>), in the role of <code>illustration</code>.</li>
+</ul>
+<p>The creation event <code>24-exp-creation-00</code> created the CH object <code>24-exp</code> (&#39;Panthera onca (Linnaeus, 1758)&#39;) through the technique <code>taxidermy</code>. The creation event consists of two smaller creation events:</p>
+<ul>
+<li><code>24-exp-creation-01</code>, carried out by <code>Carl Linnaeus</code> (<code>VIAF:34594730</code>), in the role of <code>discovery</code>;</li>
+<li><code>24-exp-creation-02</code>, carried out by <code>Naturaliter</code>, in the role of <code>museum preparation</code>.</li>
+</ul>
+<pre><code><span class="hljs-symbol">ex:</span>L1-exp-creation<span class="hljs-number">-00</span> a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:L1-exp ;
+<span class="hljs-symbol">    crm:</span>P32_used_general_technique aat:<span class="hljs-number">300053225</span> ;
+<span class="hljs-symbol">    crm:</span>P9_consists_of ex:L1-exp-creation<span class="hljs-number">-01</span> ,
+<span class="hljs-symbol">        ex:</span>L1-exp-creation<span class="hljs-number">-02</span> ,
+<span class="hljs-symbol">        ex:</span>L1-exp-creation<span class="hljs-number">-03</span> .
+<span class="hljs-symbol">
+ex:</span>L1-exp-creation<span class="hljs-number">-01</span> a crm:E7_Activity ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300054200</span> ;
+<span class="hljs-symbol">    crm:</span>P14_carried_out_by ex:jan-van-der-straet .
+<span class="hljs-symbol">
+ex:</span>L1-exp-creation<span class="hljs-number">-02</span> a crm:E7_Activity ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300053225</span> ;
+<span class="hljs-symbol">    crm:</span>P14_carried_out_by ex:philip-galle ,
+<span class="hljs-symbol">        ex:</span>theodor-galle ,
+<span class="hljs-symbol">        ex:</span>jan-collaert .
+<span class="hljs-symbol">
+ex:</span>L1-exp-creation<span class="hljs-number">-03</span> a crm:E7_Activity ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300417639</span> ;
+<span class="hljs-symbol">    crm:</span>P14_carried_out_by ex:luigi-alamanni .
+<span class="hljs-symbol">
+ex:</span>L1-exp a frbroo:F2_Expression .
+<span class="hljs-symbol">
+ex:</span>jan-van-der-straet a crm:E39_Actor ;
+<span class="hljs-symbol">    crm:</span>P48_has_preferred_identifier <span class="hljs-params">&lt;http://vocab.getty.edu/page/ulan/<span class="hljs-number">500011304</span>&gt;</span> .
+<span class="hljs-symbol">
+ex:</span>philip-galle a crm:E39_Actor .
+<span class="hljs-symbol">
+ex:</span>theodor-galle a crm:E39_Actor .
+<span class="hljs-symbol">
+ex:</span>jan-collaert a crm:E39_Actor .
+<span class="hljs-symbol">
+ex:</span>luigi-alamanni a crm:E39_Actor .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">35</span>-exp-creation<span class="hljs-number">-00</span> a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    crm:</span>P32_used_general_technique aat:<span class="hljs-number">300015045</span> ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:<span class="hljs-number">35</span>-exp ;
+<span class="hljs-symbol">    crm:</span>P9_consists_of ex:<span class="hljs-number">35</span>-exp-creation<span class="hljs-number">-01</span> ,
+<span class="hljs-symbol">        ex:</span><span class="hljs-number">35</span>-exp-creation<span class="hljs-number">-02</span> .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">35</span>-exp a frbroo:F2_Expression .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">35</span>-exp-creation<span class="hljs-number">-01</span> a crm:E7_Activity ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300069831</span> ;
+<span class="hljs-symbol">    crm:</span>P14_carried_out_by ex:pietro-andrea-mattioli .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">35</span>-exp-creation<span class="hljs-number">-02</span> a crm:E7_Activity ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300054200</span> ;
+<span class="hljs-symbol">    crm:</span>P14_carried_out_by ex:pietro-andrea-mattioli .
+<span class="hljs-symbol">
+ex:</span>pietro-andrea-mattioli a crm:E39_Actor ;
+<span class="hljs-symbol">    crm:</span>P48_has_preferred_identifier <span class="hljs-params">&lt;http://viaf.org/viaf/<span class="hljs-number">61549376</span>&gt;</span> .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">24</span>-exp-creation<span class="hljs-number">-00</span> a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:<span class="hljs-number">24</span>-exp ;
+<span class="hljs-symbol">    crm:</span>P32_used_general_technique aat:<span class="hljs-number">300053628</span> ;
+<span class="hljs-symbol">    crm:</span>P9_consists_of ex:<span class="hljs-number">24</span>-exp-creation<span class="hljs-number">-01</span> ,
+<span class="hljs-symbol">        ex:</span><span class="hljs-number">24</span>-exp-creation<span class="hljs-number">-02</span> .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">24</span>-exp a frbroo:F2_Expression .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">24</span>-exp-creation<span class="hljs-number">-01</span> a crm:E7_Activity ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404386</span> ;
+<span class="hljs-symbol">    crm:</span>P14_carried_out_by ex:carl-linnaeus .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">24</span>-exp-creation<span class="hljs-number">-02</span> a crm:E7_Activity ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300077565</span> ;
+<span class="hljs-symbol">    crm:</span>P14_carried_out_by ex:naturaliter .
+<span class="hljs-symbol">
+ex:</span>carl-linnaeus a crm:E39_Actor ;
+<span class="hljs-symbol">    crm:</span>P48_has_preferred_identifier <span class="hljs-params">&lt;http://viaf.org/viaf/<span class="hljs-number">34594730</span>&gt;</span> .
+<span class="hljs-symbol">
+ex:</span>naturaliter a crm:E39_Actor .
+</code></pre><h4 id="scenario-2">Scenario 2</h4>
+<p>The creation event <code>01-exp-creation-00</code> created the CH object <code>01-man</code> (&#39;Amerigo Vespucci sveglia l’America&#39;). The CH object has the identifier &#39;01&#39; with type equal to <code>project id</code>. Its type is <code>print</code>. Its descriptive label is &#39;Amerigo Vespucci sveglia l’America
+ Amerigo Vespucci awakens a sleeping America
+ In
+ Jan van del Straet (Stradano), Nova Reperta, c. 1589 – c.1593, Antwerp
+ Amsterdam, Rijksmuseum&#39;</p>
+<p>The creation event <code>05-exp-creation-00</code> created the CH object <code>05-exp</code> (&#39;De Historia Animalium lib. 9&#39;). The CH object has the identifiers:</p>
+<ul>
+<li>&#39;05&#39; with type equal to <code>project id</code></li>
+<li>&#39;9&#39; with type equal to <code>volume number</code></li>
+<li>&#39;A.V.GG.VII.28&#39; with type equal to <code>shelf mark</code>
+Its type is <code>printed volume</code>. Its descriptive label is &#39;Aristoteles
+De Historia Animalium lib. 9 
+Venezia, Girolamo Scoto, 1545
+BUB, A.V.GG.VII.28&#39;</li>
+</ul>
+<p>The creation event <code>45-exp-creation-00</code> created the CH object <code>45-exp</code> (&#39;Dryas octopetala L.&#39;). The CH object has the identifiers:</p>
+<ul>
+<li>&#39;45&#39; with type equal to <code>project id</code></li>
+<li>&#39;13&#39; with type equal to <code>volume number</code></li>
+<li>&#39;Erbario Aldrovandi, vol.13, carta 77&#39; with type equal to <code>shelf mark</code>
+Its type is <code>specimen</code>. Its descriptive label is &#39;Dryas octopetala L.
+Camedrio alpino 
+Mountain avens 
+Erbario Aldrovandi, vol.13, carta 77
+sec. XVI 16th century
+Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo&#39;</li>
+</ul>
+<pre><code><span class="hljs-attribute">ex</span>:L1-exp-creation-<span class="hljs-number">00</span> a <span class="hljs-attribute">frbroo</span>:F28_Expression_Creation ;
+    <span class="hljs-attribute">frbroo</span>:R18_created <span class="hljs-attribute">ex</span>:L1-man .
+
+<span class="hljs-attribute">ex</span>:L1-man a <span class="hljs-attribute">frbroo</span>:F4_Manifestation_Singleton ;
+    <span class="hljs-attribute">crm</span>:P48_has_preferred_identifier <span class="hljs-attribute">ex</span>:L1-identifier-<span class="hljs-number">00</span> ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300041273</span> ;
+    <span class="hljs-attribute">crm</span>:P3_has_note <span class="hljs-string">"Amerigo Vespucci sveglia l'America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum"</span>^^<span class="hljs-attribute">rdfs</span>:Literal .
+
+<span class="hljs-attribute">ex</span>:L1-identifier-<span class="hljs-number">00</span> a <span class="hljs-attribute">crm</span>:E42_Identifier ;
+    <span class="hljs-attribute">crm</span>:P190_has_symbolic_content <span class="hljs-string">"L1"</span>^^<span class="hljs-attribute">rdfs</span>:Literal ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300312355</span> .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">05</span>-exp-creation-<span class="hljs-number">00</span> a <span class="hljs-attribute">frbroo</span>:F28_Expression_Creation ;
+    <span class="hljs-attribute">frbroo</span>:R18_created <span class="hljs-attribute">ex</span>:<span class="hljs-number">05</span>-man .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">05</span>-man a <span class="hljs-attribute">frbroo</span>:F4_Manifestation_Singleton ;
+    <span class="hljs-attribute">crm</span>:P48_has_preferred_identifier <span class="hljs-attribute">ex</span>:<span class="hljs-number">05</span>-identifier-<span class="hljs-number">00</span> ,
+        <span class="hljs-attribute">ex</span>:<span class="hljs-number">05</span>-identifier-<span class="hljs-number">01</span> ,
+        <span class="hljs-attribute">ex</span>:<span class="hljs-number">05</span>-identifier-<span class="hljs-number">02</span> ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300265632</span> ;
+    <span class="hljs-attribute">crm</span>:P3_has_note <span class="hljs-string">"Aristoteles De Historia Animalium lib. 9 Venezia, Girolamo Scoto, 1545 BUB, A.V.GG.VII.28"</span>^^<span class="hljs-attribute">rdfs</span>:Literal .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">05</span>-identifier-<span class="hljs-number">00</span> a <span class="hljs-attribute">crm</span>:E42_Identifier ;
+    <span class="hljs-attribute">crm</span>:P190_has_symbolic_content <span class="hljs-string">"05"</span>^^<span class="hljs-attribute">rdfs</span>:Literal ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300312355</span> .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">05</span>-identifier-<span class="hljs-number">01</span> a <span class="hljs-attribute">crm</span>:E42_Identifier ;
+    <span class="hljs-attribute">crm</span>:P190_has_symbolic_content <span class="hljs-string">"9"</span>^^<span class="hljs-attribute">rdfs</span>:Literal ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300445021</span> .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">05</span>-identifier-<span class="hljs-number">02</span> a <span class="hljs-attribute">crm</span>:E42_Identifier ;
+    <span class="hljs-attribute">crm</span>:P190_has_symbolic_content <span class="hljs-string">"A.V.GG.VII.28"</span>^^<span class="hljs-attribute">rdfs</span>:Literal ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300404704</span> .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">45</span>-exp-creation-<span class="hljs-number">00</span> a <span class="hljs-attribute">frbroo</span>:F28_Expression_Creation ;
+    <span class="hljs-attribute">frbroo</span>:R18_created <span class="hljs-attribute">ex</span>:<span class="hljs-number">45</span>-man .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">45</span>-man a <span class="hljs-attribute">frbroo</span>:F4_Manifestation_Singleton ;
+    <span class="hljs-attribute">crm</span>:P48_has_preferred_identifier <span class="hljs-attribute">ex</span>:<span class="hljs-number">45</span>-identifier-<span class="hljs-number">00</span> ,
+        <span class="hljs-attribute">ex</span>:<span class="hljs-number">45</span>-identifier-<span class="hljs-number">01</span> ,
+        <span class="hljs-attribute">ex</span>:<span class="hljs-number">45</span>-identifier-<span class="hljs-number">02</span> ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300235576</span> ;
+    <span class="hljs-attribute">crm</span>:P3_has_note <span class="hljs-string">"Dryas octopetala L. Camedrio alpino Mountain avens Erbario Aldrovandi, vol.13, carta 77 sec. XVI 16th century Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo"</span>^^<span class="hljs-attribute">rdfs</span>:Literal .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">45</span>-identifier-<span class="hljs-number">00</span> a <span class="hljs-attribute">crm</span>:E42_Identifier ;
+    <span class="hljs-attribute">crm</span>:P190_has_symbolic_content <span class="hljs-string">"45"</span>^^<span class="hljs-attribute">rdfs</span>:Literal ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300312355</span> .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">45</span>-identifier-<span class="hljs-number">01</span> a <span class="hljs-attribute">crm</span>:E42_Identifier ;
+    <span class="hljs-attribute">crm</span>:P190_has_symbolic_content <span class="hljs-string">"13"</span>^^<span class="hljs-attribute">rdfs</span>:Literal ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300445021</span> .
+
+<span class="hljs-attribute">ex</span>:<span class="hljs-number">45</span>-identifier-<span class="hljs-number">02</span> a <span class="hljs-attribute">crm</span>:E42_Identifier ;
+    <span class="hljs-attribute">crm</span>:P190_has_symbolic_content <span class="hljs-string">"Erbario Aldrovandi, vol.13, carta 77"</span>^^<span class="hljs-attribute">rdfs</span>:Literal ;
+    <span class="hljs-attribute">crm</span>:P2_has_type <span class="hljs-attribute">aat</span>:<span class="hljs-number">300404704</span> .
+</code></pre><h4 id="scenario-3">Scenario 3</h4>
+<p>A curation event <code>L1-curation</code> - carried out by <code>Rijksmuseum</code> (located in <code>Amsterdam</code>) - curated the collection <code>Nova Reperta</code> for the CH object <code>L1-man</code>.</p>
+<p>A curation event <code>1-curation</code> - carried out by <code>Sistema museale di Ateneo</code> (located in <code>Bologna</code>) - curated the collection <code>Collezione di Zoologia</code> for the CH object <code>1-man</code>.</p>
+<p>A curation event <code>14-curation</code> - carried out by <code>Sistema museale di Ateneo</code> (located in <code>Bologna</code>) - curated the collection <code>Collezione di Anatomia comparata</code> for the CH object <code>14-man</code>.</p>
+<pre><code><span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:L1-curation</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E87_Curation_Activity</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P147_curated</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:nova-reperta</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P14_carried_out_by</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:rijksmuseum</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P12_occurred_in_the_presence_of</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:L1-man</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:L1-man</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F4_Manifestation_Singleton</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P74_has_current_or_former_residence</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:rijksmuseum</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:nova-reperta</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E78_Curated_Holding</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:rijksmuseum</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E39_Actor</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P74_has_current_or_former_residence</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:amsterdam</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:amsterdam</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E53_Place</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1-curation</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E87_Curation_Activity</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P147_curated</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:collezione-di-zoologia</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P14_carried_out_by</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:sistema-museale-di-ateneo</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P12_occurred_in_the_presence_of</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1-man</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1-man</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F4_Manifestation_Singleton</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P74_has_current_or_former_residence</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:sistema-museale-di-ateneo</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:collezione-di-zoologia</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E78_Curated_Holding</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:sistema-museale-di-ateneo</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E39_Actor</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P74_has_current_or_former_residence</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:bologna</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:bologna</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E53_Place</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:14-curation</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E87_Curation_Activity</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P147_curated</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:collezione-di-anatomia-comparata</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P14_carried_out_by</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:sistema-museale-di-ateneo</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P12_occurred_in_the_presence_of</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:14-man</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:14-man</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F4_Manifestation_Singleton</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P74_has_current_or_former_residence</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:sistema-museale-di-ateneo</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:collezione-di-anatomia-comparata</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E78_Curated_Holding</span> .
+</code></pre><h4 id="scenario-4">Scenario 4</h4>
+<p>A conception event <code>L1-work-conception</code> initiated the CH object <code>L1-work</code> (&#39;Amerigo Vespucci sveglia l’America&#39;) in the time interval <code>1589-1593</code>, which starts in 1589-01-01 and ends in 1593-12-31.</p>
+<p>A conception event <code>1-work-conception</code> initiated the CH object <code>1-work</code> (&#39;Carta nautica&#39;) in the time interval <code>1482</code>, which starts in 1482-01-01 and ends in 1482-12-31.</p>
+<p>A conception event <code>26-work-conception</code> initiated the CH object <code>26-work</code> (&#39;Chrysanthemi&#39;) in the time interval <code>1500-1599</code>, which starts in 1500-01-01 and ends in 1599-12-31.</p>
+<pre><code><span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:L1-work-conception</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F27_Work_Conception</span> ;
+    <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:R16_initiated</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:L1-work</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P4_has_time-span</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1589-1593</span> .            
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1589-1593</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E52_Time-Span</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P82a_begin_of_the_begin</span> "1589<span class="hljs-selector-tag">-01-01T00</span><span class="hljs-selector-pseudo">:00</span><span class="hljs-selector-pseudo">:00"</span>^^<span class="hljs-selector-tag">xsd</span><span class="hljs-selector-pseudo">:dateTime</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P82b_end_of_the_end</span> "1593<span class="hljs-selector-tag">-12-31T23</span><span class="hljs-selector-pseudo">:59</span><span class="hljs-selector-pseudo">:59"</span>^^<span class="hljs-selector-tag">xsd</span><span class="hljs-selector-pseudo">:dateTime</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:L1-work</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F1_Work</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1-work-conception</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F27_Work_Conception</span> ;
+    <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:R16_initiated</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1-work</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P4_has_time-span</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1482</span> .            
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1482</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E52_Time-Span</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P82a_begin_of_the_begin</span> "1482<span class="hljs-selector-tag">-01-01T00</span><span class="hljs-selector-pseudo">:00</span><span class="hljs-selector-pseudo">:00"</span>^^<span class="hljs-selector-tag">xsd</span><span class="hljs-selector-pseudo">:dateTime</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P82b_end_of_the_end</span> "1482<span class="hljs-selector-tag">-12-31T23</span><span class="hljs-selector-pseudo">:59</span><span class="hljs-selector-pseudo">:59"</span>^^<span class="hljs-selector-tag">xsd</span><span class="hljs-selector-pseudo">:dateTime</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1-work</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F1_Work</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:26-work-conception</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F27_Work_Conception</span> ;
+    <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:R16_initiated</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:26-work</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P4_has_time-span</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1500-1599</span> .            
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:1500-1599</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E52_Time-Span</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P82a_begin_of_the_begin</span> "1500<span class="hljs-selector-tag">-01-01T00</span><span class="hljs-selector-pseudo">:00</span><span class="hljs-selector-pseudo">:00"</span>^^<span class="hljs-selector-tag">xsd</span><span class="hljs-selector-pseudo">:dateTime</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P82b_end_of_the_end</span> "1599<span class="hljs-selector-tag">-12-31T23</span><span class="hljs-selector-pseudo">:59</span><span class="hljs-selector-pseudo">:59"</span>^^<span class="hljs-selector-tag">xsd</span><span class="hljs-selector-pseudo">:dateTime</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:26-work</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F1_Work</span> .
+</code></pre><h4 id="scenario-5">Scenario 5</h4>
+<p>The creation event <code>L1-exp-creation</code> created the work <code>L1-work</code>, the expression <code>L1-exp</code> and the manifestation <code>L1-man</code>. 
+<code>L1-work</code> has two titles: the original title <code>L1-work-title-01</code> (&#39;Amerigo Vespucci sveglia l&#39;America&#39;), and the exhibition title <code>L1-work-title-02</code> (&#39;Amerigo Vespucci sveglia l&#39;America&#39;). It is member of the parent work <code>Nova Reperta</code>, which has <code>print series</code> as its type.
+<code>L1-exp</code> is about the following subjects: <code>amerigo vespucci</code>, <code>astrolabio</code>, <code>vessillo croce del sud</code>, <code>formichiere</code>, <code>bradipo</code>, <code>tapiro</code>, and <code>gruppo di cannibali</code>.</p>
+<p>The creation event <code>1-exp-creation</code> created the work <code>1-work</code>, the expression <code>1-exp</code> and the manifestation <code>1-man</code>. 
+<code>1-work</code> has two titles: the original title <code>1-work-title-01</code> (&#39;Carta nautica&#39;), and the exhibition title <code>1-work-title-02</code> (&#39;Carta nautica&#39;).
+<code>1-exp</code> is about the following subjects: <code>europa</code>, <code>africa</code>, <code>asia</code>, and <code>mar mediterraneo</code>.</p>
+<p>The creation event <code>7-exp-creation</code> created the work <code>7-work</code>, the expression <code>7-exp</code> and the manifestation <code>7-man</code>. 
+<code>7-work</code> has two titles: the original title <code>7-work-title-01</code> (&#39;Profilo incompleto delle coste del continente americano&#39;), and the exhibition title <code>7-work-title-02</code> (&#39;Profilo incompleto delle coste del continente americano&#39;). It is member of the parent work <code>Atlante Nautico</code>, which has <code>marine chart</code> as its type.
+<code>7-exp</code> is about the following subjects: <code>america</code> and <code>europa</code>.</p>
+<pre><code><span class="hljs-symbol">ex:</span>L1-exp-creation a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    frbroo:</span>R19_created_a_realisation_of ex:L1-work ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:L1-exp ;
+<span class="hljs-symbol">    frbroo:</span>R18_created ex:L1-man .
+<span class="hljs-symbol">
+ex:</span>L1-work a frbroo:F1_Work ;
+<span class="hljs-symbol">    crm:</span>P102_has_title ex:L1-work-title<span class="hljs-number">-01</span> ,
+<span class="hljs-symbol">        ex:</span>L1-work-title<span class="hljs-number">-02</span> .
+<span class="hljs-symbol">
+ex:</span>L1-work-title<span class="hljs-number">-01</span> a crm:E35_Title ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300417204</span> ;
+<span class="hljs-symbol">    crm:</span>P190_has_symbolic_content <span class="hljs-string">"Amerigo Vespucci sveglia l'America"</span>@it .
+<span class="hljs-symbol">
+ex:</span>L1-work-title<span class="hljs-number">-02</span> a crm:E35_Title ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300417207</span> ;
+<span class="hljs-symbol">    crm:</span>P190_has_symbolic_content <span class="hljs-string">"Amerigo Vespucci sveglia l'America"</span>@en .
+<span class="hljs-symbol">
+ex:</span>L1-exp a frbroo:F2_Expression ;
+<span class="hljs-symbol">    crm:</span>P129_is_about ex:sub-amerigo-vespucci ,
+<span class="hljs-symbol">        ex:</span>sub-astrolabio ,
+<span class="hljs-symbol">        ex:</span>sub-vessillo-croce-del-sud ,
+<span class="hljs-symbol">        ex:</span>sub-formichiere ,
+<span class="hljs-symbol">        ex:</span>sub-bradipo ,
+<span class="hljs-symbol">        ex:</span>sub-tapiro ,
+<span class="hljs-symbol">        ex:</span>sub-gruppo-di-cannibali .
+<span class="hljs-symbol">
+ex:</span>L1-man a frbroo:F4_Manifestation_Singleton .
+<span class="hljs-symbol">
+ex:</span>L1-man-license a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300435434</span> ;
+<span class="hljs-symbol">    crm:</span>P67_refers_to ex:L1-man ;
+<span class="hljs-symbol">    crm:</span>P70i_is_documented_in <span class="hljs-params">&lt;http://rightsstatements.org/vocab/InC/<span class="hljs-number">1.0</span>/&gt;</span> .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">1</span>-man-license a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300435434</span> ;
+<span class="hljs-symbol">    crm:</span>P67_refers_to ex:<span class="hljs-number">1</span>-man ;
+<span class="hljs-symbol">    crm:</span>P70i_is_documented_in <span class="hljs-params">&lt;http://rightsstatements.org/vocab/InC/<span class="hljs-number">1.0</span>/&gt;</span> .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">7</span>-man-license a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300435434</span> ;
+<span class="hljs-symbol">    crm:</span>P67_refers_to ex:<span class="hljs-number">7</span>-man ;
+<span class="hljs-symbol">    crm:</span>P70i_is_documented_in <span class="hljs-params">&lt;http://rightsstatements.org/vocab/InC/<span class="hljs-number">1.0</span>/&gt;</span> .
+<span class="hljs-symbol">
+ex:</span>PTa-man-license a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300435434</span> ;
+<span class="hljs-symbol">    crm:</span>P67_refers_to ex:PTa-man ;
+<span class="hljs-symbol">    crm:</span>P70i_is_documented_in <span class="hljs-params">&lt;http://rightsstatements.org/vocab/InC/<span class="hljs-number">1.0</span>/&gt;</span> .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-1</span>-man-license a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300435434</span> ;
+<span class="hljs-symbol">    crm:</span>P67_refers_to ex:PTa<span class="hljs-number">-1</span>-man ;
+<span class="hljs-symbol">    crm:</span>P70i_is_documented_in <span class="hljs-params">&lt;http://rightsstatements.org/vocab/InC/<span class="hljs-number">1.0</span>/&gt;</span> .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-2</span>-man-license a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300435434</span> ;
+<span class="hljs-symbol">    crm:</span>P67_refers_to ex:PTa<span class="hljs-number">-2</span>-man ;
+<span class="hljs-symbol">    crm:</span>P70i_is_documented_in <span class="hljs-params">&lt;http://rightsstatements.org/vocab/InC/<span class="hljs-number">1.0</span>/&gt;</span> .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-3</span>-man-license a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300435434</span> ;
+<span class="hljs-symbol">    crm:</span>P67_refers_to ex:PTa<span class="hljs-number">-3</span>-man ;
+<span class="hljs-symbol">    crm:</span>P70i_is_documented_in <span class="hljs-params">&lt;http://rightsstatements.org/vocab/InC/<span class="hljs-number">1.0</span>/&gt;</span> .
+<span class="hljs-symbol">
+ex:</span>nova-reperta a frbroo:F15_Complex_Work ;
+<span class="hljs-symbol">    frbroo:</span>R10_has_member ex:L1-work ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300189634</span> .
+<span class="hljs-symbol">
+ex:</span>sub-amerigo-vespucci a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>sub-astrolabio a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>sub-vessillo-croce-del-sud a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>sub-formichiere a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>sub-bradipo a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>sub-tapiro a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>sub-gruppo-di-cannibali a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">1</span>-exp-creation a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    frbroo:</span>R19_created_a_realisation_of ex:<span class="hljs-number">1</span>-work ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:<span class="hljs-number">1</span>-exp ;
+<span class="hljs-symbol">    frbroo:</span>R18_created ex:<span class="hljs-number">1</span>-man .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">1</span>-work a frbroo:F1_Work ;
+<span class="hljs-symbol">    crm:</span>P102_has_title ex:<span class="hljs-number">1</span>-work-title<span class="hljs-number">-01</span> ,
+<span class="hljs-symbol">        ex:</span><span class="hljs-number">1</span>-work-title<span class="hljs-number">-02</span> .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">1</span>-work-title<span class="hljs-number">-01</span> a crm:E35_Title ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300417204</span> ;
+<span class="hljs-symbol">    crm:</span>P190_has_symbolic_content <span class="hljs-string">"Carta nautica"</span>@it .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">1</span>-work-title<span class="hljs-number">-02</span> a crm:E35_Title ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300417207</span> ;
+<span class="hljs-symbol">    crm:</span>P190_has_symbolic_content <span class="hljs-string">"Carta nautica"</span>@it .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">1</span>-exp a frbroo:F2_Expression ;
+<span class="hljs-symbol">    crm:</span>P129_is_about ex:sub-europa ,
+<span class="hljs-symbol">        ex:</span>sub-africa ,
+<span class="hljs-symbol">        ex:</span>sub-asia ,
+<span class="hljs-symbol">        ex:</span>sub-mar-mediterraneo .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">1</span>-man a frbroo:F4_Manifestation_Singleton .
+<span class="hljs-symbol">
+ex:</span>sub-europa a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>sub-africa a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>sub-asia a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>sub-mar-mediterraneo a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">7</span>-exp-creation a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    frbroo:</span>R19_created_a_realisation_of ex:<span class="hljs-number">7</span>-work ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:<span class="hljs-number">7</span>-exp ;
+<span class="hljs-symbol">    frbroo:</span>R18_created ex:<span class="hljs-number">7</span>-man .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">7</span>-work a frbroo:F1_Work ;
+<span class="hljs-symbol">    crm:</span>P102_has_title ex:<span class="hljs-number">7</span>-work-title<span class="hljs-number">-01</span> ,
+<span class="hljs-symbol">        ex:</span><span class="hljs-number">7</span>-work-title<span class="hljs-number">-02</span> .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">7</span>-work-title<span class="hljs-number">-01</span> a crm:E35_Title ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300417204</span> ;
+<span class="hljs-symbol">    crm:</span>P190_has_symbolic_content <span class="hljs-string">"Profilo incompleto delle coste del continente americano"</span>@it .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">7</span>-work-title<span class="hljs-number">-02</span> a crm:E35_Title ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300417207</span> ;
+<span class="hljs-symbol">    crm:</span>P190_has_symbolic_content <span class="hljs-string">"Profilo incompleto delle coste del continente americano"</span>@it .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">7</span>-exp a frbroo:F2_Expression ;
+<span class="hljs-symbol">    crm:</span>P129_is_about ex:sub-america ,
+<span class="hljs-symbol">        ex:</span>sub-europa .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">7</span>-man a frbroo:F4_Manifestation_Singleton .
+<span class="hljs-symbol">
+ex:</span>atlante-nautico a frbroo:F15_Complex_Work ;
+<span class="hljs-symbol">    frbroo:</span>R10_has_member ex:<span class="hljs-number">7</span>-work ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300028309</span> .
+<span class="hljs-symbol">
+ex:</span>sub-america a crm:E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type aat:<span class="hljs-number">300404126</span> .
+<span class="hljs-symbol">
+ex:</span>PTa-exp-creation a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    frbroo:</span>R19_created_a_realisation_of ex:PTa-work ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:PTa-exp ;
+<span class="hljs-symbol">    frbroo:</span>R18_created ex:PTa-man .
+<span class="hljs-symbol">
+ex:</span>PTa-work a frbroo:F1_Work .
+<span class="hljs-symbol">
+ex:</span>PTa-exp a frbroo:F2_Expression .
+<span class="hljs-symbol">
+ex:</span>PTa-man a frbroo:F4_Manifestation_Singleton ;
+<span class="hljs-symbol">    crm:</span>P46_is_composed_of ex:PTa<span class="hljs-number">-1</span>-man , 
+<span class="hljs-symbol">        ex:</span>PTa<span class="hljs-number">-2</span>-man .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-1</span>-exp-creation a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    frbroo:</span>R19_created_a_realisation_of ex:PTa<span class="hljs-number">-1</span>-work ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:PTa<span class="hljs-number">-1</span>-exp ;
+<span class="hljs-symbol">    frbroo:</span>R18_created ex:PTa<span class="hljs-number">-1</span>-man .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-1</span>-work a frbroo:F1_Work .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-1</span>-exp a frbroo:F2_Expression .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-1</span>-man a frbroo:F4_Manifestation_Singleton .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-2</span>-exp-creation a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    frbroo:</span>R19_created_a_realisation_of ex:PTa<span class="hljs-number">-2</span>-work ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:PTa<span class="hljs-number">-2</span>-exp ;
+<span class="hljs-symbol">    frbroo:</span>R18_created ex:PTa<span class="hljs-number">-2</span>-man .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-2</span>-work a frbroo:F1_Work .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-2</span>-exp a frbroo:F2_Expression .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-2</span>-man a frbroo:F4_Manifestation_Singleton .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-3</span>-exp-creation a frbroo:F28_Expression_Creation ;
+<span class="hljs-symbol">    frbroo:</span>R19_created_a_realisation_of ex:PTa<span class="hljs-number">-3</span>-work ;
+<span class="hljs-symbol">    frbroo:</span>R17_created ex:PTa<span class="hljs-number">-3</span>-exp ;
+<span class="hljs-symbol">    frbroo:</span>R18_created ex:PTa<span class="hljs-number">-3</span>-man .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-3</span>-work a frbroo:F1_Work .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-3</span>-exp a frbroo:F2_Expression .
+<span class="hljs-symbol">
+ex:</span>PTa<span class="hljs-number">-3</span>-man a frbroo:F4_Manifestation_Singleton ;
+<span class="hljs-symbol">    crm:</span>P62_depicts ex:PTa-man .
+</code></pre><h4 id="scenario-6">Scenario 6</h4>
+<p>The object <code>32</code> has been digitally acquired on the 8th of May 2023. The digitization process produced a 3D model <code>32-output-acq</code> as an output, provided with a &#39;CC BY-NC 4.0&#39; license, which will be used as an input by the software activity <code>32-proc</code>.</p>
+<pre><code><span class="hljs-string">ex:</span><span class="hljs-number">32</span> a <span class="hljs-string">crm:</span>E24_Physical_Human-Made_Thing .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">32</span>-acq a <span class="hljs-string">crmdig:</span>D2_Digitization_Process ;
+<span class="hljs-symbol">    crmdig:</span>L1_digitized <span class="hljs-string">ex:</span><span class="hljs-number">32</span> ;
+<span class="hljs-symbol">    crmdig:</span>L11_had_output <span class="hljs-string">ex:</span><span class="hljs-number">32</span>-acq-output ;
+<span class="hljs-symbol">    crm:</span>P4_has_time-span <span class="hljs-string">ex:</span><span class="hljs-number">32</span>-acq-timespan .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">32</span>-proc a <span class="hljs-string">crmdig:</span>D10_Software_Execution ;
+<span class="hljs-symbol">    crmdig:</span>L10_had_input <span class="hljs-string">ex:</span><span class="hljs-number">32</span>-acq-output ;
+<span class="hljs-symbol">    crm:</span>P4_has_time-span <span class="hljs-string">ex:</span><span class="hljs-number">32</span>-proc-timespan .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">32</span>-acq-output a <span class="hljs-string">crmdig:</span>D9_Data_Object .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">32</span>-acq-output-license a <span class="hljs-string">crm:</span>E73_Information_Object ;
+<span class="hljs-symbol">    crm:</span>P2_has_type <span class="hljs-string">aat:</span><span class="hljs-number">300435434</span> ;
+<span class="hljs-symbol">    crm:</span>P67_refers_to <span class="hljs-string">ex:</span><span class="hljs-number">32</span>-acq-output ;
+<span class="hljs-symbol">    crm:</span>P70i_is_documented_in &lt;<span class="hljs-string">https:</span><span class="hljs-comment">//creativecommons.org/licenses/by-nc/4.0/&gt; .</span>
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">32</span>-acq-timespan a <span class="hljs-string">crm:</span>E52_Time-Span ;
+<span class="hljs-symbol">    crm:</span>P82a_begin_of_the_begin <span class="hljs-string">"2023-05-08T00:00:00Z"</span>^^<span class="hljs-string">xsd:</span>dateTime ;
+<span class="hljs-symbol">    crm:</span>P82b_end_of_the_end <span class="hljs-string">"2023-05-08T23:59:59Z"</span>^^<span class="hljs-string">xsd:</span>dateTime .
+<span class="hljs-symbol">
+ex:</span><span class="hljs-number">32</span>-proc-timespan a <span class="hljs-string">crm:</span>E52_Time-Span ;
+<span class="hljs-symbol">    crm:</span>P82a_begin_of_the_begin <span class="hljs-string">"2023-05-10T00:00:00Z"</span>^^<span class="hljs-string">xsd:</span>dateTime ;
+<span class="hljs-symbol">    crm:</span>P82b_end_of_the_end <span class="hljs-string">"2023-05-10T23:59:59Z"</span>^^<span class="hljs-string">xsd:</span>dateTime .
+</code></pre><h4 id="scenario-7">Scenario 7</h4>
+<p>The digital object <code>15-proc-output</code> has been generated as an output during the processing activity carried out by the person <code>Federica Collina</code>, who belongs to the institution <code>UNIBO DBC</code>. The processing activity used the digital object <code>15-acq-output</code> (produced by the digitization process <code>15-acq</code>) as an input.</p>
+<pre><code><span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E24_Physical_Human-Made_Thing</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-acq</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D2_Digitization_Process</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L11_had_output</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-acq-output</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-proc</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D10_Software_Execution</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300054636</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L10_had_input</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-acq-output</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L11_had_output</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-proc-output</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P11_had_participant</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:unibo-dbc</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P14_carried_out_by</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:federica-collina</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-acq-output</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D9_Data_Object</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-proc-output</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D9_Data_Object</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:federica-collina</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E21_Person</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:unibo-dbc</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E74_Group</span> .
+</code></pre><h4 id="scenario-8">Scenario 8</h4>
+<p>The physical object <code>15</code> has been digitally acquired through the <code>structured light scanning</code> technique and the <code>scanner spider</code> tool. The digitization process produced a 3D model <code>15-acq-output</code> as an output.</p>
+<pre><code><span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E24_Physical_Human-Made_Thing</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-acq</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D2_Digitization_Process</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L1_digitized</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L11_had_output</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-acq-output</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P32_used_general_technique</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300391312</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P16_used_specific_object</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:artec-spider</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-proc</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D10_Software_Execution</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300054636</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L10_had_input</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-acq-output</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L11_had_output</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-proc-output</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L23_used_software_or_firmware</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:artec-studio-14</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-acq-output</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D9_Data_Object</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:15-proc-output</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D9_Data_Object</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:artec-spider</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D8_Digital_Device</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300429747</span> .
+
+<span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:artec-studio-14</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D14_Software</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300426696</span> .
+</code></pre><h3 id="competency-questions">Competency questions</h3>
+<p>CHAD-AP can be used for answering several questions related to the acquisition and digitisation of cultural heritage objects. In the following subsections we introduce some of them, and we accompany them with exemplar SPARQL queries. </p>
+<p>The prefixes that are used in all the SPARQL queries provided below are defined as follows:</p>
+<pre><code>PREFIX <span class="hljs-string">aat:</span> &lt;<span class="hljs-string">http:</span><span class="hljs-comment">//vocab.getty.edu/page/aat/&gt;</span>
+PREFIX <span class="hljs-string">crm:</span> &lt;<span class="hljs-string">http:</span><span class="hljs-comment">//www.cidoc-crm.org/cidoc-crm/&gt;</span>
+PREFIX <span class="hljs-string">crmdig:</span> &lt;<span class="hljs-string">http:</span><span class="hljs-comment">//www.ics.forth.gr/isl/CRMdig/&gt;</span>
+PREFIX <span class="hljs-string">ex:</span> &lt;<span class="hljs-string">https:</span><span class="hljs-comment">//w3id.org/dharc/ontology/chad-ap/data/example/&gt;</span>
+PREFIX <span class="hljs-string">frbroo:</span> &lt;<span class="hljs-string">http:</span><span class="hljs-comment">//iflastandards.info/ns/fr/frbr/frbroo/&gt;  </span>
+</code></pre><h4 id="question-1">Question 1</h4>
+<p>What are the CH objects whose creation involved some author?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">resource</span> ?<span class="hljs-selector-tag">agent</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">creation_event</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F28_Expression_Creation</span> ;
+        <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:R17_created</span> ?<span class="hljs-selector-tag">resource</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P9_consists_of</span> ?<span class="hljs-selector-tag">activity</span> .
+    ?<span class="hljs-selector-tag">activity</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300404387</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P14_carried_out_by</span> ?<span class="hljs-selector-tag">agent</span> .
+}
+</code></pre><h4 id="question-2">Question 2</h4>
+<p>What are the agents and the types of  activities they carried out to contribute to the creation of <code>32-exp</code>?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">agent</span> ?<span class="hljs-selector-tag">type</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">creation_event</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F28_Expression_Creation</span> ;
+        <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:R17_created</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:32-exp</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P9_consists_of</span> ?<span class="hljs-selector-tag">activity</span> .
+    ?<span class="hljs-selector-tag">activity</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> ?<span class="hljs-selector-tag">type</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P14_carried_out_by</span> ?<span class="hljs-selector-tag">agent</span> .
+}
+</code></pre><h4 id="question-3">Question 3</h4>
+<p>What are the agents involved in the creation of the CH objects that have been created through the drawing technique? What are the types of the activities they carried out?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">resource</span> ?<span class="hljs-selector-tag">agent</span> ?<span class="hljs-selector-tag">type</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">creation_event</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F28_Expression_Creation</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P32_used_general_technique</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300033973</span> ;
+        <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:R17_created</span> ?<span class="hljs-selector-tag">resource</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P9_consists_of</span> ?<span class="hljs-selector-tag">activity</span> .
+    ?<span class="hljs-selector-tag">activity</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> ?<span class="hljs-selector-tag">type</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P14_carried_out_by</span> ?<span class="hljs-selector-tag">agent</span> .
+}
+</code></pre><h4 id="question-4">Question 4</h4>
+<p>What are the identifiers of the manuscript? What are their types?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">resource</span> ?<span class="hljs-selector-tag">identifier_text</span> ?<span class="hljs-selector-tag">type</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">resource</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F4_Manifestation_Singleton</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300028569</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P48_has_preferred_identifier</span> ?<span class="hljs-selector-tag">identifier</span> .
+    ?<span class="hljs-selector-tag">identifier</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> ?<span class="hljs-selector-tag">type</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P190_has_symbolic_content</span> ?<span class="hljs-selector-tag">identifier_text</span>.
+}
+</code></pre><h4 id="question-5">Question 5</h4>
+<p>What is the shelf mark of the CH object with the project ID &#39;32&#39;?</p>
+<pre><code>SELECT ?identifier_text
+WHERE {
+    ?resource a frbroo:F4_Manifestation_Singleton ;
+<span class="hljs-symbol">    crm:</span>P48_has_preferred_identifier ?identifier1 ,
+        ?identifier2 .
+    ?identifier1 crm:P2_has_type <span class="hljs-string">aat:</span><span class="hljs-number">300312355</span> ;
+<span class="hljs-symbol">        crm:</span>P190_has_symbolic_content <span class="hljs-string">"32"</span>^^<span class="hljs-string">rdfs:</span>Literal .
+    ?identifier2 crm:P2_has_type <span class="hljs-string">aat:</span><span class="hljs-number">300404704</span> ;
+<span class="hljs-symbol">        crm:</span>P190_has_symbolic_content ?identifier_text.
+}
+</code></pre><h4 id="question-6">Question 6</h4>
+<p>What are the descriptive labels of the CH objects that either have shelf marks or are prints?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">resource</span> ?<span class="hljs-selector-tag">label</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">resource</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F4_Manifestation_Singleton</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P48_has_preferred_identifier</span> ?<span class="hljs-selector-tag">identifier</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> ?<span class="hljs-selector-tag">type</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P3_has_note</span> ?<span class="hljs-selector-tag">label</span> .
+    ?<span class="hljs-selector-tag">identifier</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> ?<span class="hljs-selector-tag">id_type</span> .
+    <span class="hljs-selector-tag">FILTER</span>(?type = <span class="hljs-attribute">aat</span>:<span class="hljs-number">300041273</span> || ?id_type = <span class="hljs-attribute">aat</span>:<span class="hljs-number">300404704</span>)
+}
+</code></pre><h4 id="question-7">Question 7</h4>
+<p>What are the CH objects whose collections have been curated by agents located in Bologna?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">resource</span> ?<span class="hljs-selector-tag">agent</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">curation</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:E87_Curation_Activity</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P14_carried_out_by</span> ?<span class="hljs-selector-tag">agent</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P12_occurred_in_the_presence_of</span> ?<span class="hljs-selector-tag">resource</span> .
+    ?<span class="hljs-selector-tag">agent</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P74_has_current_or_former_residence</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:bologna</span> .
+}
+</code></pre><h4 id="question-8">Question 8</h4>
+<p>What are the CH objects and the time spans of their conception events?</p>
+<pre><code>SELECT ?resource ?time_interval
+<span class="hljs-class">WHERE </span>{
+    ?conception_event a frbroo:F27_Work_Conception ;
+<span class="hljs-symbol">        frbroo:</span>R16_initiated ?resource ;
+<span class="hljs-symbol">        crm:</span>P4_has_time-span ?time_interval .
+}
+</code></pre><h4 id="question-9">Question 9</h4>
+<p>What are the titles of the work <code>32-work</code>? What are their types?</p>
+<pre><code><span class="hljs-built_in">SELECT</span> ?<span class="hljs-built_in">title</span> ?<span class="hljs-built_in">type</span> ?content
+<span class="hljs-built_in">WHERE</span> {
+    ?creation a frbroo:F28_Expression_Creation ;
+        frbroo:R19_created_a_realisation_of ex:<span class="hljs-number">32</span>-work .
+    ex:<span class="hljs-number">32</span>-work crm:P102_has_title ?<span class="hljs-built_in">title</span> .
+    ?<span class="hljs-built_in">title</span> crm:P2_has_type ?<span class="hljs-built_in">type</span> ;
+        crm:P190_has_symbolic_content ?content .
+}
+</code></pre><h4 id="question-10">Question 10</h4>
+<p>What are the parent works of the works that have either &#39;ermafrodita&#39; as their subject?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">parent</span> ?<span class="hljs-selector-tag">work</span> ?<span class="hljs-selector-tag">subject</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">creation</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F28_Expression_Creation</span> ;
+        <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:R19_created_a_realisation_of</span> ?<span class="hljs-selector-tag">work</span> ;
+        <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:R17_created</span> ?<span class="hljs-selector-tag">expression</span> .
+    ?<span class="hljs-selector-tag">parent</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F15_Complex_Work</span> ;
+        <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:R10_has_member</span> ?<span class="hljs-selector-tag">work</span> .
+    ?<span class="hljs-selector-tag">expression</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">frbroo</span><span class="hljs-selector-pseudo">:F2_Expression</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P129_is_about</span> <span class="hljs-selector-tag">ex</span><span class="hljs-selector-pseudo">:sub-ermafrodita</span> .
+}
+</code></pre><h4 id="question-11">Question 11</h4>
+<p>Which license statements are assigned to the manifestations?</p>
+<pre><code>SELECT ?manifestation ?<span class="hljs-meta">license</span><span class="hljs-number">_</span>link
+WHERE {
+    ?<span class="hljs-meta">license</span> crm:P<span class="hljs-number">67_</span>refers<span class="hljs-number">_</span>to ?manifestation ;
+        crm:P<span class="hljs-number">2_</span>has<span class="hljs-number">_</span>type aat:<span class="hljs-number">300435434</span> ;
+        crm:P<span class="hljs-number">70</span>i<span class="hljs-number">_</span><span class="hljs-keyword">is</span><span class="hljs-number">_</span>documented<span class="hljs-number">_</span><span class="hljs-keyword">in</span> ?<span class="hljs-meta">license</span><span class="hljs-number">_</span>link .
+}
+</code></pre><h4 id="question-12">Question 12</h4>
+<p>What is the cultural object digitized and the digital object produced by the digitization process? What is the latter&#39;s license?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">input</span> ?<span class="hljs-selector-tag">output</span> ?<span class="hljs-selector-tag">license_link</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">activity</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D2_Digitization_Process</span> ;
+        <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L1_digitized</span> ?<span class="hljs-selector-tag">input</span> ;
+        <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L11_had_output</span> ?<span class="hljs-selector-tag">output</span> .
+    ?<span class="hljs-selector-tag">license</span> <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300435434</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P67_refers_to</span> ?<span class="hljs-selector-tag">output</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P70i_is_documented_in</span> ?<span class="hljs-selector-tag">license_link</span> .
+}
+</code></pre><h4 id="question-13">Question 13</h4>
+<p>What are the starting and ending date times in which the digitization process and the following software activity occurred?</p>
+<pre><code><span class="hljs-keyword">SELECT</span> ?activity ?<span class="hljs-keyword">start</span> ?<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">WHERE</span> {
+    ?activity a crmdig:D2_Digitization_Process;
+        crm:P4_has_time-span ?timespan .
+    ?timespan crm:P82a_begin_of_the_begin ?<span class="hljs-keyword">start</span> ;
+        crm:P82b_end_of_the_end ?<span class="hljs-keyword">end</span> .
+}
+</code></pre><h4 id="question-14">Question 14</h4>
+<p>What are the digitization process, its output, the processing activity and its output?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">digitization</span> ?<span class="hljs-selector-tag">input</span> ?<span class="hljs-selector-tag">activity</span> ?<span class="hljs-selector-tag">output</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">activity</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D10_Software_Execution</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300054636</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L10_had_input</span> ?<span class="hljs-selector-tag">input</span> ;
+    <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L11_had_output</span> ?<span class="hljs-selector-tag">output</span> .
+    ?<span class="hljs-selector-tag">digitization</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L11_had_output</span> ?<span class="hljs-selector-tag">input</span> .
+}
+</code></pre><h4 id="question-15">Question 15</h4>
+<p>What are the people and institutions who either carried out or were participants in the processing activity?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">person</span> ?<span class="hljs-selector-tag">institution</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">activity</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D10_Software_Execution</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300054636</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P14_carried_out_by</span> ?<span class="hljs-selector-tag">person</span> ;
+    <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P11_had_participant</span> ?<span class="hljs-selector-tag">institution</span> .
+}
+</code></pre><h4 id="question-16">Question 16</h4>
+<p>What are the techniques used in digitization processes?</p>
+<pre><code><span class="hljs-keyword">SELECT</span> ?technique ?activity
+<span class="hljs-keyword">WHERE</span> <span class="hljs-comment">{
+    ?activity a crmdig:D2_Digitization_Process ;
+        crm:P32_used_general_technique ?technique .
+}</span>
+</code></pre><h4 id="question-17">Question 17</h4>
+<p>What are the tools and their types used in processing activities?</p>
+<pre><code><span class="hljs-selector-tag">SELECT</span> ?<span class="hljs-selector-tag">tool</span> ?<span class="hljs-selector-tag">type</span>
+<span class="hljs-selector-tag">WHERE</span> {
+    ?<span class="hljs-selector-tag">activity</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D10_Software_Execution</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> <span class="hljs-selector-tag">aat</span><span class="hljs-selector-pseudo">:300054636</span> ;
+        <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:L23_used_software_or_firmware</span> ?<span class="hljs-selector-tag">tool</span> .
+    ?<span class="hljs-selector-tag">tool</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">crmdig</span><span class="hljs-selector-pseudo">:D14_Software</span> ;
+        <span class="hljs-selector-tag">crm</span><span class="hljs-selector-pseudo">:P2_has_type</span> ?<span class="hljs-selector-tag">type</span> .
+}
+</code></pre>

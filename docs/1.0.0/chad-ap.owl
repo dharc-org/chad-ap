@@ -1,0 +1,2605 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/dharc/ontology/chad-ap/"
+     xml:base="https://w3id.org/dharc/ontology/chad-ap/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/dharc/ontology/chad-ap/">
+        <owl:versionIRI rdf:resource="https://w3id.org/dharc/ontology/chad-ap/1.0.0/"/>
+        <dc:abstract xml:lang="en">A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.</dc:abstract>
+        <dc:contributor>Heibi, Ivan</dc:contributor>
+        <dc:contributor>Moretti, Arianna</dc:contributor>
+        <dc:creator>Barzaghi, Sebastian</dc:creator>
+        <dc:creator>Peroni, Silvio</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-16</dc:date>
+        <dc:description xml:lang="en">
+
+The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CH objects, and the _Process Module_ (PM), for describing the acquisition and digitisation process.
+
+Both CHAD-AP and its [documentation](https://w3id.org/dharc/ontology/chad-ap) are living artefacts that have been drafted in the context of the [Project CHANGES](https://sites.google.com/uniroma1.it/changes/) (&quot;Cultural Heritage Active Innovation For Next-Gen Sustainable Society&quot;), an EU-funded project that  aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.
+
+Currently, CHAD-AP is able to describe the following entities:
+* CH objects, described according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. In particular, CHAD-AP considers: the essence or conceptualisation of the CH object (_Work_); the intellectual content of the CH object (_Expression_); and the physical instance of the CH object (_Manifestation Singleton_);
+* Activities, events, agents involved and their roles;
+* Descriptive components, such as labels, types, identifiers and titles;
+* Entities related to curation and conservation, like curation events, places of conservation, agent responsible for its conservation, etc.
+* Concepts and other immaterial objects, such as the subjects illustrated by CH objects and the licenses or right statements assigned to them;
+* Digitization processes used to capture 3D data of CH objects and to output their digital models, and software activities leveraging these digital objects as input for further processes.
+
+The following figure contains a [Graffoo diagram](http://www.essepuntato.it/graffoo) that provides an overview of the class and properties reused in CHAD-AP.
+
+![A Graffoo diagram of CHAD-AP](diagrams/profile-model.png)
+
+The current version of the application profile reuses a subset of classes and properties selected from the following models:
+
+* [CIDOC CRM](http://www.cidoc-crm.org/cidoc-crm/) is an international ISO standard that provides an ontology related to cultural heritage and museum documentation, which can be extended with additional modules for covering particular descriptions at hand;
+* [CRMdig](http://www.ics.forth.gr/isl/CRMdig/) is an extension of CIDOC CRM for describing metadata related to the digital provenance of digitisation processes and digital representations;
+* [FRBRoo](http://iflastandards.info/ns/fr/frbr/frbroo/) is an ontology for representing bibliographic information according to the FRBR data model within the CIDOC CRM framework;
+* [AAT](http://vocab.getty.edu/page/aat/) is a structured vocabulary of terms used to describe art, architecture, decorative arts, and material culture.
+
+A full version of CHAD-AP is available at [https://w3id.org/dharc/ontology/chad-ap](https://w3id.org/dharc/ontology/chad-ap).
+
+The next subsections provide a quick overview of all the entities defined, some exemple of usage, and some of the queries that CHAD-AP can answer.
+
+## Description
+### Object Module (OM)
+As shown in the diagram below, a Cultural Heritage (CH) object is described in CHAD-AP according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. 
+
+![A diagram of the CHAD-AP Object Module (OM).](diagrams/profile-model.png)
+
+In particular, the _Work_ (`frbroo:F1_Work`) represents the _essence_ or conceptualization of the CH object. It begins with a conception event (`frbroo:F27_Work_Conception`) occurring within a specific time span (`crm:E52_Time-Span`), which can be expressed as either a precisely defined period with exact starting and ending date times (`crm:P82a_begin_of_the_begin` and `crm:P82b_end_of_the_end`) or a fuzzy label if its temporal extents are not precisely known (`crm:P82_at_some_time_within`). Each work is associated with a series of titles (`crm:E35_Title`), each classified according to a particular type (`crm:E55_Type`), which can be an _original title_ (`aat:300417204`) or an _exhibition title_ (`aat:300417207`). Furthermore, a Work can be part of a larger Work (`frbroo:F15_Complex_Work`), like a series of printed volumes, which is classified under a particular type (`crm:E55_Type`).
+
+The _Expression_ (`frbroo:F2_Expression`) is the realisation of a Work, and refers to the intellectual _content_ of the object. It is generated through a creation event (`frbroo:F28_Expression_Creation`) made of smaller activities (`crm:E7_Activity`), each conducted by one or more agents (`crm:E39_Actor`) and characterised by a specific type (`crm:E55_Type`) that defines, implicitly, the role assumed by the agent for that activity. For example, if the agent is identified as the author of the Expression, the activity type is represented as _writing_ (`aat:300054698`). Also, creation events employ various creation techniques (`crm:E55_Type`). For example, `aat:300054196` is used to express _drawing technique_. An Expression can also be associated with one or more subjects defining its contents. In CHAD-AP, a generic _concept_ is represented with the class `crm:E73_Information_Object` with the type `aat:300404126` (i.e. _subject_) explicitly specified.
+
+Finally, the _Manifestation Singleton_ (`frbroo:F4_Manifestation_Singleton`) represents the physical instance of the CH object. It is accompanied with descriptive components like labels (expressed through the use of the property `crm:P3_has_note`), types (`crm:E55_Type`), and identifiers (`crm:E42_Identifier`). In some cases, it may be linked to a curation activity (`crm:E87_Curation_Activity`) carried out by a keeper (`crm:E39_Actor`) who manages a collection (`crm:E78_Curated_Holding`) the object belongs to, and that is located in a specific place (`crm:E53_Place`). Manifestations can consist of other Manifestations and may depict the Expression of another related object, such as a video displaying a manuscript or a tablet showing a picture of a specimen. In addition, Manifestations are associated with copyright or licensing statements (represented through the combination of `crm:E73_Information_Object` having type `aat:300435434`, i.e.  _copyright/licensing statement_), linked with the document introducing the actual license or right statements through the property `crm:P70i_is_documented_in`. Whenever possible, instances of `crm:E39_Actor` and `crm:E53_Place` are also linked with existing authority records through the property `crm:P48_has_preferred_identifier`.
+
+### Process Module (PM)
+As shown in the diagram below, CHAD-AP also describes the entities for defining a 3D digitisation workflow as a sequence of activities classified according to two main categories. 
+
+![A diagram of the CHAD-AP Process Module (PM).](diagrams/profile-model.png)
+
+On the one hand, we have the _acquisition activity_ (`crmdig:D2_Digitization_Process`), which involves the digitisation of a CH object (`crm:E24_Physical_Human-Made_Thing`) to produce its digital CH object (`crmdig:D9_Data_Object`). Similarly to its physical counterpart, the digital CH object can be associated with copyright statements or licenses (`crm:E73_Information_Object` with `aat:300435434` as its type). The acquisition occurs within a time span (`crm:E52_Time-Span`) with defined starting and ending date times, and engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`) responsible for the activity. During the acquisition, a series of techniques (`crm:E55_Type`) can be used, such as _photogrammetry_ (`aat:300053580`) or _structured light scanning_ (`aat:300391312`), along with tools (`crmdig:D8_Digital_Device`) like _digital cameras_ (`aat:300266792`) and _structured light scanners_ (`aat:300429747`).
+
+On the other hand, we have a series of _software activities_ (`crmdig:D10_Software_Execution`), each representing a specific stage or phase of digitisation workflow. Such stage is denoted by its type (`crm:E55_Type`), such as _processing_ (`aat:300054636`), _modelling_ (`aat:300391447`), and _optimization_ (`aat:300386427`). It involves the manipulation of the digital CH object (`crmdig:D9_Data_Object`) produced previously as input and the production of a modified version of that digital CH object (`crmdig:D9_Data_Object`) as output. The activity also occurs within a defined time span (`crm:E52_Time-Span`) with precise start and end date times, engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`), and uses software as tools to produce its output (`crmdig:D14_Software`).
+
+## Examples of use
+CHAD-AP can be used for modelling  scenarios related to cultural heritage acquisition and digitisation processes. In the following subsections we introduce some of them, and we accompany them with exemplar instantiations. 
+
+The prefixes that are used in all the examples provided below are defined as follows:
+
+    @prefix aat: &lt;http://vocab.getty.edu/page/aat/&gt; .
+    @prefix ex: &lt;https://w3id.org/dharc/ontology/chad-ap/data/example/&gt; .
+    @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
+    @prefix crmdig: &lt;http://www.ics.forth.gr/isl/CRMdig/&gt; .
+    @prefix frbroo: &lt;http://iflastandards.info/ns/fr/frbr/frbroo/&gt; .
+    @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+    @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+    @prefix xml: &lt;http://www.w3.org/XML/1998/namespace&gt; .
+    @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+    @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+### Scenario 1
+The creation event `01-exp-creation-00` created the CH object `01-exp` (&apos;Amerigo Vespucci sveglia l’America&apos;) through the technique `engraving`. The creation event consists of three smaller creation events:
+* `01-exp-creation-01`, carried out by `Jan van der Straet` (`ULAN:500011304`), in the role of `illustration`;
+* `01-exp-creation-02`, carried out by `Philip Galle`, `Theodor Galle` and `Jan Collaert`, in the role of `engraving process`;
+* `01-exp-creation-03`, carried out by `Luigi Alamanni` (`ULAN:500714480`), in the role of `commission`.
+
+The creation event `35-exp-creation-00` created the CH object `35-exp` (&apos;De plantis epitome utilissima&apos;) through the technique `watercolor`. The creation event consists of two smaller creation events:
+* `35-exp-creation-01`, carried out by `Pietro Andrea Mattioli` (`VIAF:61549376`), in the role of `translation`;
+* `35-exp-creation-02`, carried out by `Pietro Andrea Mattioli` (`VIAF:61549376`), in the role of `illustration`.
+
+The creation event `24-exp-creation-00` created the CH object `24-exp` (&apos;Panthera onca (Linnaeus, 1758)&apos;) through the technique `taxidermy`. The creation event consists of two smaller creation events:
+* `24-exp-creation-01`, carried out by `Carl Linnaeus` (`VIAF:34594730`), in the role of `discovery`;
+* `24-exp-creation-02`, carried out by `Naturaliter`, in the role of `museum preparation`.
+
+```
+ex:L1-exp-creation-00 a frbroo:F28_Expression_Creation ;
+    frbroo:R17_created ex:L1-exp ;
+    crm:P32_used_general_technique aat:300053225 ;
+    crm:P9_consists_of ex:L1-exp-creation-01 ,
+        ex:L1-exp-creation-02 ,
+        ex:L1-exp-creation-03 .
+
+ex:L1-exp-creation-01 a crm:E7_Activity ;
+    crm:P2_has_type aat:300054200 ;
+    crm:P14_carried_out_by ex:jan-van-der-straet .
+
+ex:L1-exp-creation-02 a crm:E7_Activity ;
+    crm:P2_has_type aat:300053225 ;
+    crm:P14_carried_out_by ex:philip-galle ,
+        ex:theodor-galle ,
+        ex:jan-collaert .
+
+ex:L1-exp-creation-03 a crm:E7_Activity ;
+    crm:P2_has_type aat:300417639 ;
+    crm:P14_carried_out_by ex:luigi-alamanni .
+
+ex:L1-exp a frbroo:F2_Expression .
+
+ex:jan-van-der-straet a crm:E39_Actor ;
+    crm:P48_has_preferred_identifier &lt;http://vocab.getty.edu/page/ulan/500011304&gt; .
+
+ex:philip-galle a crm:E39_Actor .
+
+ex:theodor-galle a crm:E39_Actor .
+
+ex:jan-collaert a crm:E39_Actor .
+
+ex:luigi-alamanni a crm:E39_Actor .
+
+ex:35-exp-creation-00 a frbroo:F28_Expression_Creation ;
+    crm:P32_used_general_technique aat:300015045 ;
+    frbroo:R17_created ex:35-exp ;
+    crm:P9_consists_of ex:35-exp-creation-01 ,
+        ex:35-exp-creation-02 .
+
+ex:35-exp a frbroo:F2_Expression .
+
+ex:35-exp-creation-01 a crm:E7_Activity ;
+    crm:P2_has_type aat:300069831 ;
+    crm:P14_carried_out_by ex:pietro-andrea-mattioli .
+
+ex:35-exp-creation-02 a crm:E7_Activity ;
+    crm:P2_has_type aat:300054200 ;
+    crm:P14_carried_out_by ex:pietro-andrea-mattioli .
+
+ex:pietro-andrea-mattioli a crm:E39_Actor ;
+    crm:P48_has_preferred_identifier &lt;http://viaf.org/viaf/61549376&gt; .
+
+ex:24-exp-creation-00 a frbroo:F28_Expression_Creation ;
+    frbroo:R17_created ex:24-exp ;
+    crm:P32_used_general_technique aat:300053628 ;
+    crm:P9_consists_of ex:24-exp-creation-01 ,
+        ex:24-exp-creation-02 .
+
+ex:24-exp a frbroo:F2_Expression .
+
+ex:24-exp-creation-01 a crm:E7_Activity ;
+    crm:P2_has_type aat:300404386 ;
+    crm:P14_carried_out_by ex:carl-linnaeus .
+
+ex:24-exp-creation-02 a crm:E7_Activity ;
+    crm:P2_has_type aat:300077565 ;
+    crm:P14_carried_out_by ex:naturaliter .
+
+ex:carl-linnaeus a crm:E39_Actor ;
+    crm:P48_has_preferred_identifier &lt;http://viaf.org/viaf/34594730&gt; .
+
+ex:naturaliter a crm:E39_Actor .
+```
+
+#### Scenario 2
+The creation event `01-exp-creation-00` created the CH object `01-man` (&apos;Amerigo Vespucci sveglia l’America&apos;). The CH object has the identifier &apos;01&apos; with type equal to `project id`. Its type is `print`. Its descriptive label is &apos;Amerigo Vespucci sveglia l’America
+ Amerigo Vespucci awakens a sleeping America
+ In
+ Jan van del Straet (Stradano), Nova Reperta, c. 1589 – c.1593, Antwerp
+ Amsterdam, Rijksmuseum&apos;
+
+The creation event `05-exp-creation-00` created the CH object `05-exp` (&apos;De Historia Animalium lib. 9&apos;). The CH object has the identifiers:
+* &apos;05&apos; with type equal to `project id`
+* &apos;9&apos; with type equal to `volume number`
+* &apos;A.V.GG.VII.28&apos; with type equal to `shelf mark`
+Its type is `printed volume`. Its descriptive label is &apos;Aristoteles
+ De Historia Animalium lib. 9 
+ Venezia, Girolamo Scoto, 1545
+ BUB, A.V.GG.VII.28&apos;
+
+The creation event `45-exp-creation-00` created the CH object `45-exp` (&apos;Dryas octopetala L.&apos;). The CH object has the identifiers:
+* &apos;45&apos; with type equal to `project id`
+* &apos;13&apos; with type equal to `volume number`
+* &apos;Erbario Aldrovandi, vol.13, carta 77&apos; with type equal to `shelf mark`
+Its type is `specimen`. Its descriptive label is &apos;Dryas octopetala L.
+ Camedrio alpino 
+ Mountain avens 
+ Erbario Aldrovandi, vol.13, carta 77
+ sec. XVI 16th century
+ Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo&apos;
+
+```
+ex:L1-exp-creation-00 a frbroo:F28_Expression_Creation ;
+    frbroo:R18_created ex:L1-man .
+
+ex:L1-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P48_has_preferred_identifier ex:L1-identifier-00 ;
+    crm:P2_has_type aat:300041273 ;
+    crm:P3_has_note &quot;Amerigo Vespucci sveglia l&apos;America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum&quot;^^rdfs:Literal .
+
+ex:L1-identifier-00 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content &quot;L1&quot;^^rdfs:Literal ;
+    crm:P2_has_type aat:300312355 .
+
+ex:05-exp-creation-00 a frbroo:F28_Expression_Creation ;
+    frbroo:R18_created ex:05-man .
+
+ex:05-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P48_has_preferred_identifier ex:05-identifier-00 ,
+        ex:05-identifier-01 ,
+        ex:05-identifier-02 ;
+    crm:P2_has_type aat:300265632 ;
+    crm:P3_has_note &quot;Aristoteles De Historia Animalium lib. 9 Venezia, Girolamo Scoto, 1545 BUB, A.V.GG.VII.28&quot;^^rdfs:Literal .
+
+ex:05-identifier-00 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content &quot;05&quot;^^rdfs:Literal ;
+    crm:P2_has_type aat:300312355 .
+
+ex:05-identifier-01 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content &quot;9&quot;^^rdfs:Literal ;
+    crm:P2_has_type aat:300445021 .
+
+ex:05-identifier-02 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content &quot;A.V.GG.VII.28&quot;^^rdfs:Literal ;
+    crm:P2_has_type aat:300404704 .
+
+ex:45-exp-creation-00 a frbroo:F28_Expression_Creation ;
+    frbroo:R18_created ex:45-man .
+
+ex:45-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P48_has_preferred_identifier ex:45-identifier-00 ,
+        ex:45-identifier-01 ,
+        ex:45-identifier-02 ;
+    crm:P2_has_type aat:300235576 ;
+    crm:P3_has_note &quot;Dryas octopetala L. Camedrio alpino Mountain avens Erbario Aldrovandi, vol.13, carta 77 sec. XVI 16th century Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo&quot;^^rdfs:Literal .
+
+ex:45-identifier-00 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content &quot;45&quot;^^rdfs:Literal ;
+    crm:P2_has_type aat:300312355 .
+
+ex:45-identifier-01 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content &quot;13&quot;^^rdfs:Literal ;
+    crm:P2_has_type aat:300445021 .
+
+ex:45-identifier-02 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content &quot;Erbario Aldrovandi, vol.13, carta 77&quot;^^rdfs:Literal ;
+    crm:P2_has_type aat:300404704 .
+```
+
+#### Scenario 3
+A curation event `L1-curation` - carried out by `Rijksmuseum` (located in `Amsterdam`) - curated the collection `Nova Reperta` for the CH object `L1-man`.
+
+A curation event `1-curation` - carried out by `Sistema museale di Ateneo` (located in `Bologna`) - curated the collection `Collezione di Zoologia` for the CH object `1-man`.
+
+A curation event `14-curation` - carried out by `Sistema museale di Ateneo` (located in `Bologna`) - curated the collection `Collezione di Anatomia comparata` for the CH object `14-man`.
+
+```
+ex:L1-curation a crm:E87_Curation_Activity ;
+    crm:P147_curated ex:nova-reperta ;
+    crm:P14_carried_out_by ex:rijksmuseum ;
+    crm:P12_occurred_in_the_presence_of ex:L1-man .
+
+ex:L1-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P74_has_current_or_former_residence ex:rijksmuseum .
+
+ex:nova-reperta a crm:E78_Curated_Holding .
+
+ex:rijksmuseum a crm:E39_Actor ;
+    crm:P74_has_current_or_former_residence ex:amsterdam .
+
+ex:amsterdam a crm:E53_Place .
+
+ex:1-curation a crm:E87_Curation_Activity ;
+    crm:P147_curated ex:collezione-di-zoologia ;
+    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
+    crm:P12_occurred_in_the_presence_of ex:1-man .
+
+ex:1-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
+
+ex:collezione-di-zoologia a crm:E78_Curated_Holding .
+
+ex:sistema-museale-di-ateneo a crm:E39_Actor ;
+    crm:P74_has_current_or_former_residence ex:bologna .
+
+ex:bologna a crm:E53_Place .
+
+ex:14-curation a crm:E87_Curation_Activity ;
+    crm:P147_curated ex:collezione-di-anatomia-comparata ;
+    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
+    crm:P12_occurred_in_the_presence_of ex:14-man .
+
+ex:14-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
+
+ex:collezione-di-anatomia-comparata a crm:E78_Curated_Holding .
+
+```
+
+#### Scenario 4
+A conception event `L1-work-conception` initiated the CH object `L1-work` (&apos;Amerigo Vespucci sveglia l’America&apos;) in the time interval `1589-1593`, which starts in 1589-01-01 and ends in 1593-12-31.
+
+A conception event `1-work-conception` initiated the CH object `1-work` (&apos;Carta nautica&apos;) in the time interval `1482`, which starts in 1482-01-01 and ends in 1482-12-31.
+
+A conception event `26-work-conception` initiated the CH object `26-work` (&apos;Chrysanthemi&apos;) in the time interval `1500-1599`, which starts in 1500-01-01 and ends in 1599-12-31.
+
+```
+ex:L1-work-conception a frbroo:F27_Work_Conception ;
+    frbroo:R16_initiated ex:L1-work ;
+    crm:P4_has_time-span ex:1589-1593 .            
+
+ex:1589-1593 a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin &quot;1589-01-01T00:00:00&quot;^^xsd:dateTime ;
+    crm:P82b_end_of_the_end &quot;1593-12-31T23:59:59&quot;^^xsd:dateTime .
+
+ex:L1-work a frbroo:F1_Work .
+
+ex:1-work-conception a frbroo:F27_Work_Conception ;
+    frbroo:R16_initiated ex:1-work ;
+    crm:P4_has_time-span ex:1482 .            
+
+ex:1482 a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin &quot;1482-01-01T00:00:00&quot;^^xsd:dateTime ;
+    crm:P82b_end_of_the_end &quot;1482-12-31T23:59:59&quot;^^xsd:dateTime .
+
+ex:1-work a frbroo:F1_Work .
+
+ex:26-work-conception a frbroo:F27_Work_Conception ;
+    frbroo:R16_initiated ex:26-work ;
+    crm:P4_has_time-span ex:1500-1599 .            
+
+ex:1500-1599 a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin &quot;1500-01-01T00:00:00&quot;^^xsd:dateTime ;
+    crm:P82b_end_of_the_end &quot;1599-12-31T23:59:59&quot;^^xsd:dateTime .
+
+ex:26-work a frbroo:F1_Work .
+```
+
+#### Scenario 5
+The creation event `L1-exp-creation` created the work `L1-work`, the expression `L1-exp` and the manifestation `L1-man`. 
+`L1-work` has two titles: the original title `L1-work-title-01` (&apos;Amerigo Vespucci sveglia l&apos;America&apos;), and the exhibition title `L1-work-title-02` (&apos;Amerigo Vespucci sveglia l&apos;America&apos;). It is member of the parent work `Nova Reperta`, which has `print series` as its type.
+`L1-exp` is about the following subjects: `amerigo vespucci`, `astrolabio`, `vessillo croce del sud`, `formichiere`, `bradipo`, `tapiro`, and `gruppo di cannibali`.
+
+The creation event `1-exp-creation` created the work `1-work`, the expression `1-exp` and the manifestation `1-man`. 
+`1-work` has two titles: the original title `1-work-title-01` (&apos;Carta nautica&apos;), and the exhibition title `1-work-title-02` (&apos;Carta nautica&apos;).
+`1-exp` is about the following subjects: `europa`, `africa`, `asia`, and `mar mediterraneo`.
+
+The creation event `7-exp-creation` created the work `7-work`, the expression `7-exp` and the manifestation `7-man`. 
+`7-work` has two titles: the original title `7-work-title-01` (&apos;Profilo incompleto delle coste del continente americano&apos;), and the exhibition title `7-work-title-02` (&apos;Profilo incompleto delle coste del continente americano&apos;). It is member of the parent work `Atlante Nautico`, which has `marine chart` as its type.
+`7-exp` is about the following subjects: `america` and `europa`.
+
+```
+ex:L1-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:L1-work ;
+    frbroo:R17_created ex:L1-exp ;
+    frbroo:R18_created ex:L1-man .
+
+ex:L1-work a frbroo:F1_Work ;
+    crm:P102_has_title ex:L1-work-title-01 ,
+        ex:L1-work-title-02 .
+
+ex:L1-work-title-01 a crm:E35_Title ;
+    crm:P2_has_type aat:300417204 ;
+    crm:P190_has_symbolic_content &quot;Amerigo Vespucci sveglia l&apos;America&quot;@it .
+
+ex:L1-work-title-02 a crm:E35_Title ;
+    crm:P2_has_type aat:300417207 ;
+    crm:P190_has_symbolic_content &quot;Amerigo Vespucci sveglia l&apos;America&quot;@en .
+
+ex:L1-exp a frbroo:F2_Expression ;
+    crm:P129_is_about ex:sub-amerigo-vespucci ,
+        ex:sub-astrolabio ,
+        ex:sub-vessillo-croce-del-sud ,
+        ex:sub-formichiere ,
+        ex:sub-bradipo ,
+        ex:sub-tapiro ,
+        ex:sub-gruppo-di-cannibali .
+
+ex:L1-man a frbroo:F4_Manifestation_Singleton .
+
+ex:L1-man-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:L1-man ;
+    crm:P70i_is_documented_in &lt;http://rightsstatements.org/vocab/InC/1.0/&gt; .
+
+ex:1-man-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:1-man ;
+    crm:P70i_is_documented_in &lt;http://rightsstatements.org/vocab/InC/1.0/&gt; .
+
+ex:7-man-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:7-man ;
+    crm:P70i_is_documented_in &lt;http://rightsstatements.org/vocab/InC/1.0/&gt; .
+
+ex:PTa-man-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:PTa-man ;
+    crm:P70i_is_documented_in &lt;http://rightsstatements.org/vocab/InC/1.0/&gt; .
+
+ex:PTa-1-man-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:PTa-1-man ;
+    crm:P70i_is_documented_in &lt;http://rightsstatements.org/vocab/InC/1.0/&gt; .
+
+ex:PTa-2-man-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:PTa-2-man ;
+    crm:P70i_is_documented_in &lt;http://rightsstatements.org/vocab/InC/1.0/&gt; .
+
+ex:PTa-3-man-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:PTa-3-man ;
+    crm:P70i_is_documented_in &lt;http://rightsstatements.org/vocab/InC/1.0/&gt; .
+
+ex:nova-reperta a frbroo:F15_Complex_Work ;
+    frbroo:R10_has_member ex:L1-work ;
+    crm:P2_has_type aat:300189634 .
+
+ex:sub-amerigo-vespucci a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:sub-astrolabio a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:sub-vessillo-croce-del-sud a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:sub-formichiere a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:sub-bradipo a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:sub-tapiro a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:sub-gruppo-di-cannibali a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:1-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:1-work ;
+    frbroo:R17_created ex:1-exp ;
+    frbroo:R18_created ex:1-man .
+
+ex:1-work a frbroo:F1_Work ;
+    crm:P102_has_title ex:1-work-title-01 ,
+        ex:1-work-title-02 .
+
+ex:1-work-title-01 a crm:E35_Title ;
+    crm:P2_has_type aat:300417204 ;
+    crm:P190_has_symbolic_content &quot;Carta nautica&quot;@it .
+
+ex:1-work-title-02 a crm:E35_Title ;
+    crm:P2_has_type aat:300417207 ;
+    crm:P190_has_symbolic_content &quot;Carta nautica&quot;@it .
+
+ex:1-exp a frbroo:F2_Expression ;
+    crm:P129_is_about ex:sub-europa ,
+        ex:sub-africa ,
+        ex:sub-asia ,
+        ex:sub-mar-mediterraneo .
+
+ex:1-man a frbroo:F4_Manifestation_Singleton .
+
+ex:sub-europa a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:sub-africa a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:sub-asia a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:sub-mar-mediterraneo a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:7-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:7-work ;
+    frbroo:R17_created ex:7-exp ;
+    frbroo:R18_created ex:7-man .
+
+ex:7-work a frbroo:F1_Work ;
+    crm:P102_has_title ex:7-work-title-01 ,
+        ex:7-work-title-02 .
+
+ex:7-work-title-01 a crm:E35_Title ;
+    crm:P2_has_type aat:300417204 ;
+    crm:P190_has_symbolic_content &quot;Profilo incompleto delle coste del continente americano&quot;@it .
+
+ex:7-work-title-02 a crm:E35_Title ;
+    crm:P2_has_type aat:300417207 ;
+    crm:P190_has_symbolic_content &quot;Profilo incompleto delle coste del continente americano&quot;@it .
+
+ex:7-exp a frbroo:F2_Expression ;
+    crm:P129_is_about ex:sub-america ,
+        ex:sub-europa .
+
+ex:7-man a frbroo:F4_Manifestation_Singleton .
+
+ex:atlante-nautico a frbroo:F15_Complex_Work ;
+    frbroo:R10_has_member ex:7-work ;
+    crm:P2_has_type aat:300028309 .
+
+ex:sub-america a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:PTa-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:PTa-work ;
+    frbroo:R17_created ex:PTa-exp ;
+    frbroo:R18_created ex:PTa-man .
+
+ex:PTa-work a frbroo:F1_Work .
+
+ex:PTa-exp a frbroo:F2_Expression .
+
+ex:PTa-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P46_is_composed_of ex:PTa-1-man , 
+        ex:PTa-2-man .
+
+ex:PTa-1-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:PTa-1-work ;
+    frbroo:R17_created ex:PTa-1-exp ;
+    frbroo:R18_created ex:PTa-1-man .
+
+ex:PTa-1-work a frbroo:F1_Work .
+
+ex:PTa-1-exp a frbroo:F2_Expression .
+
+ex:PTa-1-man a frbroo:F4_Manifestation_Singleton .
+
+ex:PTa-2-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:PTa-2-work ;
+    frbroo:R17_created ex:PTa-2-exp ;
+    frbroo:R18_created ex:PTa-2-man .
+
+ex:PTa-2-work a frbroo:F1_Work .
+
+ex:PTa-2-exp a frbroo:F2_Expression .
+
+ex:PTa-2-man a frbroo:F4_Manifestation_Singleton .
+
+ex:PTa-3-exp-creation a frbroo:F28_Expression_Creation ;
+    frbroo:R19_created_a_realisation_of ex:PTa-3-work ;
+    frbroo:R17_created ex:PTa-3-exp ;
+    frbroo:R18_created ex:PTa-3-man .
+
+ex:PTa-3-work a frbroo:F1_Work .
+
+ex:PTa-3-exp a frbroo:F2_Expression .
+
+ex:PTa-3-man a frbroo:F4_Manifestation_Singleton ;
+    crm:P62_depicts ex:PTa-man .
+```
+
+#### Scenario 6
+The object `32` has been digitally acquired on the 8th of May 2023. The digitization process produced a 3D model `32-output-acq` as an output, provided with a &apos;CC BY-NC 4.0&apos; license, which will be used as an input by the software activity `32-proc`.
+
+```
+ex:32 a crm:E24_Physical_Human-Made_Thing .
+
+ex:32-acq a crmdig:D2_Digitization_Process ;
+    crmdig:L1_digitized ex:32 ;
+    crmdig:L11_had_output ex:32-acq-output ;
+    crm:P4_has_time-span ex:32-acq-timespan .
+
+ex:32-proc a crmdig:D10_Software_Execution ;
+    crmdig:L10_had_input ex:32-acq-output ;
+    crm:P4_has_time-span ex:32-proc-timespan .
+
+ex:32-acq-output a crmdig:D9_Data_Object .
+
+ex:32-acq-output-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:32-acq-output ;
+    crm:P70i_is_documented_in &lt;https://creativecommons.org/licenses/by-nc/4.0/&gt; .
+
+ex:32-acq-timespan a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin &quot;2023-05-08T00:00:00Z&quot;^^xsd:dateTime ;
+    crm:P82b_end_of_the_end &quot;2023-05-08T23:59:59Z&quot;^^xsd:dateTime .
+
+ex:32-proc-timespan a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin &quot;2023-05-10T00:00:00Z&quot;^^xsd:dateTime ;
+    crm:P82b_end_of_the_end &quot;2023-05-10T23:59:59Z&quot;^^xsd:dateTime .
+```
+
+#### Scenario 7
+The digital object `15-proc-output` has been generated as an output during the processing activity carried out by the person `Federica Collina`, who belongs to the institution `UNIBO DBC`. The processing activity used the digital object `15-acq-output` (produced by the digitization process `15-acq`) as an input.
+
+```
+ex:15 a crm:E24_Physical_Human-Made_Thing .
+
+ex:15-acq a crmdig:D2_Digitization_Process ;
+    crmdig:L11_had_output ex:15-acq-output .
+
+ex:15-proc a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300054636 ;
+    crmdig:L10_had_input ex:15-acq-output ;
+    crmdig:L11_had_output ex:15-proc-output ;
+    crm:P11_had_participant ex:unibo-dbc ;
+    crm:P14_carried_out_by ex:federica-collina .
+
+ex:15-acq-output a crmdig:D9_Data_Object .
+
+ex:15-proc-output a crmdig:D9_Data_Object .
+
+ex:federica-collina a crm:E21_Person .
+
+ex:unibo-dbc a crm:E74_Group .
+```
+
+#### Scenario 8
+The physical object `15` has been digitally acquired through the `structured light scanning` technique and the `scanner spider` tool. The digitization process produced a 3D model `15-acq-output` as an output.
+
+```
+ex:15 a crm:E24_Physical_Human-Made_Thing .
+
+ex:15-acq a crmdig:D2_Digitization_Process ;
+    crmdig:L1_digitized ex:15 ;
+    crmdig:L11_had_output ex:15-acq-output ;
+    crm:P32_used_general_technique aat:300391312 ;
+    crm:P16_used_specific_object ex:artec-spider .
+
+ex:15-proc a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300054636 ;
+    crmdig:L10_had_input ex:15-acq-output ;
+    crmdig:L11_had_output ex:15-proc-output ;
+    crmdig:L23_used_software_or_firmware ex:artec-studio-14 .
+
+ex:15-acq-output a crmdig:D9_Data_Object .
+
+ex:15-proc-output a crmdig:D9_Data_Object .
+
+ex:artec-spider a crmdig:D8_Digital_Device ;
+    crm:P2_has_type aat:300429747 .
+
+ex:artec-studio-14 a crmdig:D14_Software ;
+    crm:P2_has_type aat:300426696 .
+```
+
+### Competency questions
+CHAD-AP can be used for answering several questions related to the acquisition and digitisation of cultural heritage objects. In the following subsections we introduce some of them, and we accompany them with exemplar SPARQL queries. 
+
+The prefixes that are used in all the SPARQL queries provided below are defined as follows:
+
+    PREFIX aat: &lt;http://vocab.getty.edu/page/aat/&gt;
+    PREFIX crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt;
+    PREFIX crmdig: &lt;http://www.ics.forth.gr/isl/CRMdig/&gt;
+    PREFIX ex: &lt;https://w3id.org/dharc/ontology/chad-ap/data/example/&gt;
+    PREFIX frbroo: &lt;http://iflastandards.info/ns/fr/frbr/frbroo/&gt;  
+
+
+#### Question 1
+What are the CH objects whose creation involved some author?
+
+    SELECT ?resource ?agent
+    WHERE {
+        ?creation_event a frbroo:F28_Expression_Creation ;
+            frbroo:R17_created ?resource ;
+            crm:P9_consists_of ?activity .
+        ?activity crm:P2_has_type aat:300404387 ;
+            crm:P14_carried_out_by ?agent .
+    }
+
+#### Question 2
+What are the agents and the types of  activities they carried out to contribute to the creation of `32-exp`?
+
+    SELECT ?agent ?type
+    WHERE {
+        ?creation_event a frbroo:F28_Expression_Creation ;
+            frbroo:R17_created ex:32-exp ;
+            crm:P9_consists_of ?activity .
+        ?activity crm:P2_has_type ?type ;
+            crm:P14_carried_out_by ?agent .
+    }
+
+#### Question 3
+What are the agents involved in the creation of the CH objects that have been created through the drawing technique? What are the types of the activities they carried out?
+
+    SELECT ?resource ?agent ?type
+    WHERE {
+        ?creation_event a frbroo:F28_Expression_Creation ;
+            crm:P32_used_general_technique aat:300033973 ;
+            frbroo:R17_created ?resource ;
+            crm:P9_consists_of ?activity .
+        ?activity crm:P2_has_type ?type ;
+            crm:P14_carried_out_by ?agent .
+    }
+
+#### Question 4
+What are the identifiers of the manuscript? What are their types?
+
+    SELECT ?resource ?identifier_text ?type
+    WHERE {
+        ?resource a frbroo:F4_Manifestation_Singleton ;
+            crm:P2_has_type aat:300028569 ;
+            crm:P48_has_preferred_identifier ?identifier .
+        ?identifier crm:P2_has_type ?type ;
+            crm:P190_has_symbolic_content ?identifier_text.
+    }
+
+#### Question 5
+What is the shelf mark of the CH object with the project ID &apos;32&apos;?
+
+    SELECT ?identifier_text
+    WHERE {
+        ?resource a frbroo:F4_Manifestation_Singleton ;
+        crm:P48_has_preferred_identifier ?identifier1 ,
+            ?identifier2 .
+        ?identifier1 crm:P2_has_type aat:300312355 ;
+            crm:P190_has_symbolic_content &quot;32&quot;^^rdfs:Literal .
+        ?identifier2 crm:P2_has_type aat:300404704 ;
+            crm:P190_has_symbolic_content ?identifier_text.
+    }
+
+#### Question 6
+What are the descriptive labels of the CH objects that either have shelf marks or are prints?
+
+    SELECT ?resource ?label
+    WHERE {
+        ?resource a frbroo:F4_Manifestation_Singleton ;
+            crm:P48_has_preferred_identifier ?identifier ;
+            crm:P2_has_type ?type ;
+            crm:P3_has_note ?label .
+        ?identifier crm:P2_has_type ?id_type .
+        FILTER(?type = aat:300041273 || ?id_type = aat:300404704)
+    }
+
+#### Question 7
+What are the CH objects whose collections have been curated by agents located in Bologna?
+
+    SELECT ?resource ?agent
+    WHERE {
+        ?curation a crm:E87_Curation_Activity ;
+            crm:P14_carried_out_by ?agent ;
+            crm:P12_occurred_in_the_presence_of ?resource .
+        ?agent crm:P74_has_current_or_former_residence ex:bologna .
+    }
+
+#### Question 8
+What are the CH objects and the time spans of their conception events?
+
+    SELECT ?resource ?time_interval
+    WHERE {
+        ?conception_event a frbroo:F27_Work_Conception ;
+            frbroo:R16_initiated ?resource ;
+            crm:P4_has_time-span ?time_interval .
+    }
+    
+#### Question 9
+What are the titles of the work `32-work`? What are their types?
+    
+    SELECT ?title ?type ?content
+    WHERE {
+        ?creation a frbroo:F28_Expression_Creation ;
+            frbroo:R19_created_a_realisation_of ex:32-work .
+        ex:32-work crm:P102_has_title ?title .
+        ?title crm:P2_has_type ?type ;
+            crm:P190_has_symbolic_content ?content .
+    }
+
+#### Question 10
+What are the parent works of the works that have either &apos;ermafrodita&apos; as their subject?
+    
+    SELECT ?parent ?work ?subject
+    WHERE {
+        ?creation a frbroo:F28_Expression_Creation ;
+            frbroo:R19_created_a_realisation_of ?work ;
+            frbroo:R17_created ?expression .
+        ?parent a frbroo:F15_Complex_Work ;
+            frbroo:R10_has_member ?work .
+        ?expression a frbroo:F2_Expression ;
+            crm:P129_is_about ex:sub-ermafrodita .
+    }
+
+#### Question 11
+Which license statements are assigned to the manifestations?
+    
+    SELECT ?manifestation ?license_link
+    WHERE {
+        ?license crm:P67_refers_to ?manifestation ;
+            crm:P2_has_type aat:300435434 ;
+            crm:P70i_is_documented_in ?license_link .
+    }
+
+#### Question 12
+What is the cultural object digitized and the digital object produced by the digitization process? What is the latter&apos;s license?
+     
+    SELECT ?input ?output ?license_link
+    WHERE {
+        ?activity a crmdig:D2_Digitization_Process ;
+            crmdig:L1_digitized ?input ;
+            crmdig:L11_had_output ?output .
+        ?license crm:P2_has_type aat:300435434 ;
+            crm:P67_refers_to ?output ;
+            crm:P70i_is_documented_in ?license_link .
+    }
+
+#### Question 13
+What are the starting and ending date times in which the digitization process and the following software activity occurred?
+
+    SELECT ?activity ?start ?end
+    WHERE {
+        ?activity a crmdig:D2_Digitization_Process;
+            crm:P4_has_time-span ?timespan .
+        ?timespan crm:P82a_begin_of_the_begin ?start ;
+            crm:P82b_end_of_the_end ?end .
+    }
+
+#### Question 14
+What are the digitization process, its output, the processing activity and its output?
+
+    SELECT ?digitization ?input ?activity ?output
+    WHERE {
+        ?activity a crmdig:D10_Software_Execution ;
+        crm:P2_has_type aat:300054636 ;
+        crmdig:L10_had_input ?input ;
+        crmdig:L11_had_output ?output .
+        ?digitization crmdig:L11_had_output ?input .
+    }
+
+#### Question 15
+What are the people and institutions who either carried out or were participants in the processing activity?
+
+    SELECT ?person ?institution
+    WHERE {
+        ?activity a crmdig:D10_Software_Execution ;
+        crm:P2_has_type aat:300054636 ;
+        crm:P14_carried_out_by ?person ;
+        crm:P11_had_participant ?institution .
+    }
+
+#### Question 16
+What are the techniques used in digitization processes?
+
+    SELECT ?technique ?activity
+    WHERE {
+        ?activity a crmdig:D2_Digitization_Process ;
+            crm:P32_used_general_technique ?technique .
+    }
+
+#### Question 17
+What are the tools and their types used in processing activities?
+
+    SELECT ?tool ?type
+    WHERE {
+        ?activity a crmdig:D10_Software_Execution ;
+            crm:P2_has_type aat:300054636 ;
+            crmdig:L23_used_software_or_firmware ?tool .
+        ?tool a crmdig:D14_Software ;
+            crm:P2_has_type ?type .
+    }
+</dc:description>
+        <terms:bibliographicCitation xml:lang="en">Barzaghi, S. and Peroni, S. (2024). Cultural Heritage Acquisition and Digitisation Application Profile. https://w3id.org/dharc/ontology/chad-ap.</terms:bibliographicCitation>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-16</terms:created>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-16</terms:issued>
+        <terms:license xml:lang="en">http://creativecommons.org/licenses/by/4.0/</terms:license>
+        <terms:title xml:lang="en">Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)</terms:title>
+        <vann:preferredNamespacePrefix xml:lang="en">chad-ap</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri xml:lang="en">https://w3id.org/dharc/ontology/chad-ap/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CH objects, and the _Process Module_ (PM), for describing the acquisition and digitisation process.</rdfs:comment>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <ns:status xml:lang="en">work in progress</ns:status>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R10_has_member -->
+
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R10_has_member">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F15_Complex_Work"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+        <rdfs:comment xml:lang="en">This property associates a complex work with a work that forms part of it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R10i_is_member_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R10i_is_member_of">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F15_Complex_Work"/>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">is member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R17_created -->
+
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R17_created">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+        <rdfs:comment xml:lang="en">This property associates the expression that was first externalised during a particular creation event with that particular creation event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">created</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R17i_was_created_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R17i_was_created_by">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">was created by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R18_created -->
+
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R18_created">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F4_Manifestation_Singleton"/>
+        <rdfs:comment xml:lang="en">This property associates an expression creation with the first physical objects in which the resulting expression was embodied.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">created</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R18i_was_created_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R18i_was_created_by">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F4_Manifestation_Singleton"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">was created by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R19_created_a_realization_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R19_created_a_realization_of">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+        <rdfs:comment xml:lang="en">This property associates an expression creation with the corresponding work.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">created a realization of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R19i_was_realised_through -->
+
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R19i_was_realised_through">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">was realised through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P102_has_title -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P102_has_title">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P102i_is_title_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E35_Title"/>
+        <rdfs:comment xml:lang="en">This property associates a title with the work bearing that title.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a pour titre</rdfs:label>
+        <rdfs:label xml:lang="en">has title</rdfs:label>
+        <rdfs:label xml:lang="pt">tem título</rdfs:label>
+        <rdfs:label xml:lang="de">trägt den Titel</rdfs:label>
+        <rdfs:label xml:lang="el">έχει τίτλο</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет заголовок</rdfs:label>
+        <rdfs:label xml:lang="zh">有题名</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P102i_is_title_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P102i_is_title_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1i_identifies"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E35_Title"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">est le titre de</rdfs:label>
+        <rdfs:label xml:lang="en">is title of</rdfs:label>
+        <rdfs:label xml:lang="de">ist der Titel von</rdfs:label>
+        <rdfs:label xml:lang="pt">é título de</rdfs:label>
+        <rdfs:label xml:lang="el">είναι τίτλος του/της</rdfs:label>
+        <rdfs:label xml:lang="ru">является заголовком для</rdfs:label>
+        <rdfs:label xml:lang="zh">题名是</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P10_falls_within -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P10_falls_within"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P10i_contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P10i_contains"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P11_had_participant -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:comment xml:lang="en">This property describes the participation of one or more actors in an event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a eu pour actant participant</rdfs:label>
+        <rdfs:label xml:lang="en">had participant</rdfs:label>
+        <rdfs:label xml:lang="de">hatte Teilnehmer</rdfs:label>
+        <rdfs:label xml:lang="pt">tem participante</rdfs:label>
+        <rdfs:label xml:lang="el">είχε συμμέτοχο</rdfs:label>
+        <rdfs:label xml:lang="ru">имел участника</rdfs:label>
+        <rdfs:label xml:lang="zh">有参与者</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a participé à</rdfs:label>
+        <rdfs:label xml:lang="de">nahm Teil an</rdfs:label>
+        <rdfs:label xml:lang="pt">participa em</rdfs:label>
+        <rdfs:label xml:lang="en">participated in</rdfs:label>
+        <rdfs:label xml:lang="el">συμμετείχε σε</rdfs:label>
+        <rdfs:label xml:lang="ru">участвовал в</rdfs:label>
+        <rdfs:label xml:lang="zh">参与</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P129_is_about -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P129_is_about">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:comment xml:lang="en">This property documents that an expression has as subject some entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a pour sujet</rdfs:label>
+        <rdfs:label xml:lang="de">handelt über</rdfs:label>
+        <rdfs:label xml:lang="en">is about</rdfs:label>
+        <rdfs:label xml:lang="pt">é sobre</rdfs:label>
+        <rdfs:label xml:lang="el">έχει ως θέμα</rdfs:label>
+        <rdfs:label xml:lang="ru">касается</rdfs:label>
+        <rdfs:label xml:lang="zh">有关</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">est le sujet de</rdfs:label>
+        <rdfs:label xml:lang="en">is subject of</rdfs:label>
+        <rdfs:label xml:lang="de">wird behandelt in</rdfs:label>
+        <rdfs:label xml:lang="pt">é assunto de</rdfs:label>
+        <rdfs:label xml:lang="el">είναι θέμα του/της</rdfs:label>
+        <rdfs:label xml:lang="ru">является предметом для</rdfs:label>
+        <rdfs:label xml:lang="zh">是主题</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item"/>
+        <rdfs:comment xml:lang="en">This property describes the presence of an entity during an event, without implying any specific role.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a eu lieu en présence de</rdfs:label>
+        <rdfs:label xml:lang="de">fand statt im Beisein von</rdfs:label>
+        <rdfs:label xml:lang="en">occurred in the presence of</rdfs:label>
+        <rdfs:label xml:lang="pt">ocorreu na presença de</rdfs:label>
+        <rdfs:label xml:lang="el">συνέβη παρουσία του/της</rdfs:label>
+        <rdfs:label xml:lang="ru">появился в присутствии</rdfs:label>
+        <rdfs:label xml:lang="zh">已出现</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at">
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a été présent à</rdfs:label>
+        <rdfs:label xml:lang="pt">estava presente no</rdfs:label>
+        <rdfs:label xml:lang="de">war anwesend bei</rdfs:label>
+        <rdfs:label xml:lang="en">was present at</rdfs:label>
+        <rdfs:label xml:lang="el">ήταν παρών/παρούσα/παρόν σε</rdfs:label>
+        <rdfs:label xml:lang="ru">присутствовал при</rdfs:label>
+        <rdfs:label xml:lang="zh">出现在</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P147_curated -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P147_curated">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E87_Curation_Activity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E78_Curated_Holding"/>
+        <rdfs:comment xml:lang="en">This property associates a curation activity with a collection involved in such activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a géré</rdfs:label>
+        <rdfs:label xml:lang="de">betreute kuratorisch</rdfs:label>
+        <rdfs:label xml:lang="en">curated</rdfs:label>
+        <rdfs:label xml:lang="zh">管理</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P147i_was_curated_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P147i_was_curated_by">
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P147_curated"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E78_Curated_Holding"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E87_Curation_Activity"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a été géré par</rdfs:label>
+        <rdfs:label xml:lang="en">was curated by</rdfs:label>
+        <rdfs:label xml:lang="de">wurde kuratorisch betreut durch</rdfs:label>
+        <rdfs:label xml:lang="zh">被管理</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14i_performed"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:comment xml:lang="en">This property describes the active, accountable participation of an actor during an activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a été effectué par</rdfs:label>
+        <rdfs:label xml:lang="en">carried out by</rdfs:label>
+        <rdfs:label xml:lang="pt">realizada por</rdfs:label>
+        <rdfs:label xml:lang="de">wurde ausgeführt von</rdfs:label>
+        <rdfs:label xml:lang="el">πραγματοποιήθηκε από</rdfs:label>
+        <rdfs:label xml:lang="ru">выполнялся</rdfs:label>
+        <rdfs:label xml:lang="zh">执行者是</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P14i_performed -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14i_performed">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a effectué</rdfs:label>
+        <rdfs:label xml:lang="pt">executou</rdfs:label>
+        <rdfs:label xml:lang="de">führte aus</rdfs:label>
+        <rdfs:label xml:lang="en">performed</rdfs:label>
+        <rdfs:label xml:lang="el">πραγματοποίησε</rdfs:label>
+        <rdfs:label xml:lang="ru">выполнял</rdfs:label>
+        <rdfs:label xml:lang="zh">执行</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P15i_influenced -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P15i_influenced"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
+        <rdfs:comment xml:lang="en">This property describes the use of a tool for performing an activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a mobilisé l’objet spécifique</rdfs:label>
+        <rdfs:label xml:lang="de">benutzte das bestimmte Objekt</rdfs:label>
+        <rdfs:label xml:lang="en">used specific object</rdfs:label>
+        <rdfs:label xml:lang="pt">usou objeto específico</rdfs:label>
+        <rdfs:label xml:lang="el">χρησιμοποίησε αντικείμενο</rdfs:label>
+        <rdfs:label xml:lang="ru">использовал особый объект</rdfs:label>
+        <rdfs:label xml:lang="zh">使用特定对象</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P15i_influenced"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a été mobilisé pour</rdfs:label>
+        <rdfs:label xml:lang="pt">foi usado por</rdfs:label>
+        <rdfs:label xml:lang="en">was used for</rdfs:label>
+        <rdfs:label xml:lang="de">wurde benutzt für</rdfs:label>
+        <rdfs:label xml:lang="el">χρησιμοποιήθηκε για</rdfs:label>
+        <rdfs:label xml:lang="ru">был использован для</rdfs:label>
+        <rdfs:label xml:lang="zh">用于</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P1i_identifies -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P1i_identifies"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P2_has_type -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="en">This property allows typing of an entity through the use of an external knowledge organization system, such as a thesaurus or a controlled vocabulary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a pour type</rdfs:label>
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <rdfs:label xml:lang="de">hat den Typus</rdfs:label>
+        <rdfs:label xml:lang="pt">é do tipo</rdfs:label>
+        <rdfs:label xml:lang="el">έχει τύπο</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет тип</rdfs:label>
+        <rdfs:label xml:lang="zh">有类型</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:comment xml:lang="en">This property identifies the technique or method that was employed during an activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a mobilisé comme technique générale</rdfs:label>
+        <rdfs:label xml:lang="de">benutzte das allgemeine Verfahren</rdfs:label>
+        <rdfs:label xml:lang="en">used general technique</rdfs:label>
+        <rdfs:label xml:lang="pt">usou técnica geral</rdfs:label>
+        <rdfs:label xml:lang="el">χρησιμοποίησε γενική τεχνική</rdfs:label>
+        <rdfs:label xml:lang="ru">использовал общую технику</rdfs:label>
+        <rdfs:label xml:lang="zh">使用通用技术</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P32i_was_technique_of"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P39_measured -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P39_measured"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P39i_was_measured_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P39i_was_measured_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:comment xml:lang="en">This property associates a physical entity with another physical entity that forms part of it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">est composé de</rdfs:label>
+        <rdfs:label xml:lang="en">is composed of</rdfs:label>
+        <rdfs:label xml:lang="de">ist zusammengesetzt aus</rdfs:label>
+        <rdfs:label xml:lang="pt">é composto de</rdfs:label>
+        <rdfs:label xml:lang="el">αποτελείται από</rdfs:label>
+        <rdfs:label xml:lang="ru">составлен из</rdfs:label>
+        <rdfs:label xml:lang="zh">组成成分是</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of">
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="de">bildet Teil von</rdfs:label>
+        <rdfs:label xml:lang="fr">fait partie de</rdfs:label>
+        <rdfs:label xml:lang="pt">faz parte de</rdfs:label>
+        <rdfs:label xml:lang="en">forms part of</rdfs:label>
+        <rdfs:label xml:lang="el">αποτελεί μέρος του/της</rdfs:label>
+        <rdfs:label xml:lang="ru">формирует часть</rdfs:label>
+        <rdfs:label xml:lang="zh">构成部分</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+        <rdfs:comment xml:lang="en">This property records the preferred identifier used to identify an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a pour identifiant préférentiel</rdfs:label>
+        <rdfs:label xml:lang="en">has preferred identifier</rdfs:label>
+        <rdfs:label xml:lang="de">hat bevorzugtes Kennzeichen</rdfs:label>
+        <rdfs:label xml:lang="pt">tem identificador preferido</rdfs:label>
+        <rdfs:label xml:lang="el">έχει προτιμώμενο αναγνωριστικό</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет предпочтительный идентификатор</rdfs:label>
+        <rdfs:label xml:lang="zh">有优选标识符</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P48i_is_preferred_identifier_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P48i_is_preferred_identifier_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1i_identifies"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">est l’identifiant préférentiel de</rdfs:label>
+        <rdfs:label xml:lang="en">is preferred identifier of</rdfs:label>
+        <rdfs:label xml:lang="de">ist bevorzugtes Kennzeichen für</rdfs:label>
+        <rdfs:label xml:lang="pt">é o identificador preferido de</rdfs:label>
+        <rdfs:label xml:lang="el">είναι προτιμώμενο αναγνωριστικό</rdfs:label>
+        <rdfs:label xml:lang="ru">является предпочтительным идентификатором для</rdfs:label>
+        <rdfs:label xml:lang="zh">是优选标识符</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper">
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:comment xml:lang="en">This property identifies an actor who has or has had custody of a physical entity at some time.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a pour actant détenteur actuel ou antérieur</rdfs:label>
+        <rdfs:label xml:lang="en">has former or current keeper</rdfs:label>
+        <rdfs:label xml:lang="de">hat früheren oder derzeitigen Betreuer</rdfs:label>
+        <rdfs:label xml:lang="pt">é ou foi guardada por</rdfs:label>
+        <rdfs:label xml:lang="el">είναι ή ήταν στην κατοχή του</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет бывшего или текущего смотрителя</rdfs:label>
+        <rdfs:label xml:lang="zh">有以往或当前保管者</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">est l’actant détenteur actuel ou antérieur de</rdfs:label>
+        <rdfs:label xml:lang="en">is former or current keeper of</rdfs:label>
+        <rdfs:label xml:lang="de">ist früherer oder derzeitiger Betreuer von</rdfs:label>
+        <rdfs:label xml:lang="pt">é ou foi guardador de</rdfs:label>
+        <rdfs:label xml:lang="el">κατέχει ή κατείχε</rdfs:label>
+        <rdfs:label xml:lang="ru">является бывшим или текущим смотрителем для</rdfs:label>
+        <rdfs:label xml:lang="zh">是以往或当前保管者</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span">
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:comment xml:lang="en">This property associates a phenomenon with the time span during which that phenomenon was on-going.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a pour intervalle temporel</rdfs:label>
+        <rdfs:label xml:lang="en">has time-span</rdfs:label>
+        <rdfs:label xml:lang="de">hat Zeitspanne</rdfs:label>
+        <rdfs:label xml:lang="pt">tem período de tempo</rdfs:label>
+        <rdfs:label xml:lang="el">βρισκόταν σε εξέλιξη</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет временной отрезок</rdfs:label>
+        <rdfs:label xml:lang="zh">发生时段是</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">est l’intervalle temporel de</rdfs:label>
+        <rdfs:label xml:lang="en">is time-span of</rdfs:label>
+        <rdfs:label xml:lang="de">ist Zeitspanne von</rdfs:label>
+        <rdfs:label xml:lang="pt">é o período de tempo de</rdfs:label>
+        <rdfs:label xml:lang="el">είναι χρονικό διάστημα του/της</rdfs:label>
+        <rdfs:label xml:lang="ru">является временным отрезком для</rdfs:label>
+        <rdfs:label xml:lang="zh">是时段</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P62_depicts -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P62_depicts">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:comment xml:lang="en">This property identifies some entity that is depicted by a physical object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="de">bildet ab</rdfs:label>
+        <rdfs:label xml:lang="en">depicts</rdfs:label>
+        <rdfs:label xml:lang="fr">illustre</rdfs:label>
+        <rdfs:label xml:lang="pt">retrata</rdfs:label>
+        <rdfs:label xml:lang="el">απεικονίζει</rdfs:label>
+        <rdfs:label xml:lang="ru">описывает</rdfs:label>
+        <rdfs:label xml:lang="zh">描绘了</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P62i_is_depicted_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P62i_is_depicted_by">
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P62_depicts"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">est illustré par</rdfs:label>
+        <rdfs:label xml:lang="en">is depicted by</rdfs:label>
+        <rdfs:label xml:lang="de">wird abgebildet durch</rdfs:label>
+        <rdfs:label xml:lang="pt">é retratada por</rdfs:label>
+        <rdfs:label xml:lang="el">απεικονίζεται σε</rdfs:label>
+        <rdfs:label xml:lang="ru">описан посредством</rdfs:label>
+        <rdfs:label xml:lang="zh">被描绘</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P67_refers_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:comment xml:lang="en">This property documents that some statement refers to a cultural heritage object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="pt">referencia</rdfs:label>
+        <rdfs:label xml:lang="en">refers to</rdfs:label>
+        <rdfs:label xml:lang="fr">renvoie à</rdfs:label>
+        <rdfs:label xml:lang="de">verweist auf</rdfs:label>
+        <rdfs:label xml:lang="el">αναφέρεται σε</rdfs:label>
+        <rdfs:label xml:lang="ru">ссылается на</rdfs:label>
+        <rdfs:label xml:lang="zh">涉及</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by">
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">fait l&apos;objet d&apos;un renvoi par</rdfs:label>
+        <rdfs:label xml:lang="en">is referred to by</rdfs:label>
+        <rdfs:label xml:lang="de">wird angeführt von</rdfs:label>
+        <rdfs:label xml:lang="pt">é referenciado por</rdfs:label>
+        <rdfs:label xml:lang="el">αναφέρεται από</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет ссылку на себя от</rdfs:label>
+        <rdfs:label xml:lang="zh">被涉及</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P70_documents -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P70_documents">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E31_Document"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:comment xml:lang="en">This property refers to the fact that a document describes some entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="de">belegt</rdfs:label>
+        <rdfs:label xml:lang="pt">documenta</rdfs:label>
+        <rdfs:label xml:lang="fr">documente</rdfs:label>
+        <rdfs:label xml:lang="en">documents</rdfs:label>
+        <rdfs:label xml:lang="el">τεκμηριώνει</rdfs:label>
+        <rdfs:label xml:lang="ru">документирует</rdfs:label>
+        <rdfs:label xml:lang="zh">记录了</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P70_documents"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E31_Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">est documenté dans</rdfs:label>
+        <rdfs:label xml:lang="en">is documented in</rdfs:label>
+        <rdfs:label xml:lang="de">wird belegt in</rdfs:label>
+        <rdfs:label xml:lang="pt">é documentado em</rdfs:label>
+        <rdfs:label xml:lang="el">τεκμηριώνεται σε</rdfs:label>
+        <rdfs:label xml:lang="ru">документирован в</rdfs:label>
+        <rdfs:label xml:lang="zh">记录在</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P74_has_current_or_former_residence">
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+        <rdfs:comment xml:lang="en">This property describes the current or former place of residence of an actor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a pour résidence actuelle ou antérieure</rdfs:label>
+        <rdfs:label xml:lang="en">has current or former residence</rdfs:label>
+        <rdfs:label xml:lang="de">hat derzeitigen oder früheren Sitz</rdfs:label>
+        <rdfs:label xml:lang="pt">reside ou residiu em</rdfs:label>
+        <rdfs:label xml:lang="el">έχει ή είχε κατοικία</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет текущее или бывшее местожительства</rdfs:label>
+        <rdfs:label xml:lang="zh">有当前或曾经居住地</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P74i_is_current_or_former_residence_of">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">est la résidence actuelle ou antérieure de</rdfs:label>
+        <rdfs:label xml:lang="en">is current or former residence of</rdfs:label>
+        <rdfs:label xml:lang="de">ist derzeitiger oder früherer Sitz von</rdfs:label>
+        <rdfs:label xml:lang="pt">é ou foi residência de</rdfs:label>
+        <rdfs:label xml:lang="el">είναι ή ήταν κατοικία του/της</rdfs:label>
+        <rdfs:label xml:lang="ru">является текущим или бывшим местом жительства для</rdfs:label>
+        <rdfs:label xml:lang="zh">是当前或曾经居住地</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P94_has_created -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P94_has_created"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P9_consists_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P9_consists_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P10i_contains"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E4_Period"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E4_Period"/>
+        <rdfs:comment xml:lang="en">This property associates a period of time with another period of time it contains.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">comprend</rdfs:label>
+        <rdfs:label xml:lang="pt">consiste de</rdfs:label>
+        <rdfs:label xml:lang="en">consists of</rdfs:label>
+        <rdfs:label xml:lang="de">setzt sich zusammen aus</rdfs:label>
+        <rdfs:label xml:lang="el">αποτελείται από</rdfs:label>
+        <rdfs:label xml:lang="ru">состоит из</rdfs:label>
+        <rdfs:label xml:lang="zh">包括</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P9i_forms_part_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P10_falls_within"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E4_Period"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E4_Period"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="de">bildet Teil von</rdfs:label>
+        <rdfs:label xml:lang="fr">fait partie de</rdfs:label>
+        <rdfs:label xml:lang="pt">faz parte de</rdfs:label>
+        <rdfs:label xml:lang="en">forms part of</rdfs:label>
+        <rdfs:label xml:lang="el">αποτελεί μέρος του/της</rdfs:label>
+        <rdfs:label xml:lang="ru">формирует часть</rdfs:label>
+        <rdfs:label xml:lang="zh">组成部分</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/L10_had_input -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMdig/L10_had_input">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
+        <owl:inverseOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/L10i_was_input_of"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event"/>
+        <rdfs:range rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">This property associates an activity in a digitization workflow with a digital object used as input for that activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">has input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/L10i_was_input_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMdig/L10i_was_input_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">was input of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/L11_had_output -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMdig/L11_had_output">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P94_has_created"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event"/>
+        <rdfs:range rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">This property associates an activity in a digitization workflow with a digital object produced as a result of that activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/L11i_was_output_of -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMdig/L11i_was_output_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"/>
+        <owl:inverseOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/L11_had_output"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+        <rdfs:range rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">was output of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/L1_digitized -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMdig/L1_digitized">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P39_measured"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:comment xml:lang="en">This property associates a digitization process with the cultural heritage object that is being digitized.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">digitized</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/L1i_was_digitized_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMdig/L1i_was_digitized_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P39i_was_measured_by"/>
+        <owl:inverseOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/L1_digitized"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:range rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">was digitized by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/L23_used_software_or_firmware -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMdig/L23_used_software_or_firmware">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event"/>
+        <rdfs:range rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D14_Software"/>
+        <rdfs:comment xml:lang="en">This property associates a digitization activity with the software that was used during that activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">used software or firmware</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P3_has_note"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property associates a symbolic object with a textual representation of its content.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a pour contenu symbolique</rdfs:label>
+        <rdfs:label xml:lang="en">has symbolic content</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P3_has_note -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P3_has_note">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property contains the textual description of an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a pour note</rdfs:label>
+        <rdfs:label xml:lang="en">has note</rdfs:label>
+        <rdfs:label xml:lang="de">hat Anmerkung</rdfs:label>
+        <rdfs:label xml:lang="pt">tem nota</rdfs:label>
+        <rdfs:label xml:lang="el">έχει επεξήγηση</rdfs:label>
+        <rdfs:label xml:lang="ru">имеет примечание</rdfs:label>
+        <rdfs:label xml:lang="zh">有注释</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This property describes the maximum period of time within which a time span falls.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">a eu lieu durant</rdfs:label>
+        <rdfs:label xml:lang="pt">abrange no máximo</rdfs:label>
+        <rdfs:label xml:lang="en">at some time within</rdfs:label>
+        <rdfs:label xml:lang="de">irgendwann innerhalb von</rdfs:label>
+        <rdfs:label xml:lang="el">κάποτε εντός</rdfs:label>
+        <rdfs:label xml:lang="ru">некоторое время в течение</rdfs:label>
+        <rdfs:label xml:lang="zh">最长范围是</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">This property describes the precise beginning date and time of a time span.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="de">Anfang des Anfangs</rdfs:label>
+        <rdfs:label xml:lang="en">begin of the begin</rdfs:label>
+        <rdfs:label xml:lang="pt">começar do início</rdfs:label>
+        <rdfs:label xml:lang="fr">début du début</rdfs:label>
+        <rdfs:label xml:lang="el">αρχή της αρχής</rdfs:label>
+        <rdfs:label xml:lang="ru">начать с начала</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">This property describes the precise ending date and time of a time span.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="de">Ende vom Ende</rdfs:label>
+        <rdfs:label xml:lang="en">end of the end</rdfs:label>
+        <rdfs:label xml:lang="pt">fim do fim</rdfs:label>
+        <rdfs:label xml:lang="fr">fin de la fin</rdfs:label>
+        <rdfs:label xml:lang="el">τέλος του τέλους</rdfs:label>
+        <rdfs:label xml:lang="ru">конец конец</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F15_Complex_Work -->
+
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F15_Complex_Work">
+        <rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+        <rdfs:comment xml:lang="en">A work that is composed of other works.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">Complex Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work -->
+
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+        <rdfs:comment xml:lang="en">The essence or conceptualization of a cultural heritage object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Conception -->
+
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Conception">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+        <rdfs:comment xml:lang="en">An activity that represents the creation of a work.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">Work Conception</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation -->
+
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E12_Production"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+        <rdfs:comment xml:lang="en">An activity that represents the creation of an expression.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">Expression Creation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression -->
+
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:comment xml:lang="en">The realisation of a work, referring to the intellectual content of a cultural heritage object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F4_Manifestation_Singleton -->
+
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F4_Manifestation_Singleton">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Man-Made_Thing"/>
+        <rdfs:comment xml:lang="en">The physical instance of a cultural heritage object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+        <rdfs:label xml:lang="en">Manifestation Singleton</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E12_Production -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E12_Production"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E21_Person -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E21_Person">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:comment xml:lang="en">An individual person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="de">Person</rdfs:label>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+        <rdfs:label xml:lang="fr">Personne</rdfs:label>
+        <rdfs:label xml:lang="pt">Pessoa</rdfs:label>
+        <rdfs:label xml:lang="el">Πρόσωπο</rdfs:label>
+        <rdfs:label xml:lang="ru">Личность</rdfs:label>
+        <rdfs:label xml:lang="zh">人物</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing"/>
+        <rdfs:comment xml:lang="en">A persistent physical item of any size that is purposely created by human activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">Chose matérielle élaborée par l’humain</rdfs:label>
+        <rdfs:label xml:lang="en">Physical Human-Made Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Man-Made_Thing -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Man-Made_Thing"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E31_Document -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E31_Document">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:comment xml:lang="en">An information object that makes propositions about reality.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+        <rdfs:label xml:lang="fr">Document</rdfs:label>
+        <rdfs:label xml:lang="pt">Documento</rdfs:label>
+        <rdfs:label xml:lang="de">Dokument</rdfs:label>
+        <rdfs:label xml:lang="el">Τεκμήριο</rdfs:label>
+        <rdfs:label xml:lang="ru">Документ</rdfs:label>
+        <rdfs:label xml:lang="zh">文献</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E35_Title -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E35_Title">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
+        <rdfs:comment xml:lang="en">A textual string that functions as a title for a work.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="de">Titel</rdfs:label>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <rdfs:label xml:lang="fr">Titre</rdfs:label>
+        <rdfs:label xml:lang="pt">Título</rdfs:label>
+        <rdfs:label xml:lang="el">Τίτλος</rdfs:label>
+        <rdfs:label xml:lang="ru">Заголовок</rdfs:label>
+        <rdfs:label xml:lang="zh">题名</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E39_Actor -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E39_Actor">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item"/>
+        <rdfs:comment xml:lang="en">An individual person or a group of people, with the potential to perform intentional and accountable actions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">Actant</rdfs:label>
+        <rdfs:label xml:lang="en">Actor</rdfs:label>
+        <rdfs:label xml:lang="pt">Agente</rdfs:label>
+        <rdfs:label xml:lang="de">Akteur</rdfs:label>
+        <rdfs:label xml:lang="el">Δράστης</rdfs:label>
+        <rdfs:label xml:lang="ru">Агент</rdfs:label>
+        <rdfs:label xml:lang="zh">参与者</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E41_Appellation -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E42_Identifier -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
+        <rdfs:comment xml:lang="en">A textual string assigned to a cultural heritage object in order to identify it uniquely within a given context.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">Identifiant</rdfs:label>
+        <rdfs:label xml:lang="pt">Identificador de Objeto</rdfs:label>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <rdfs:label xml:lang="de">Kennung</rdfs:label>
+        <rdfs:label xml:lang="el">Κωδικός Αναγνώρισης</rdfs:label>
+        <rdfs:label xml:lang="ru">Идентификатор Объекта</rdfs:label>
+        <rdfs:label xml:lang="zh">标识符</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E4_Period -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E4_Period"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:comment xml:lang="en">An abstract temporal extent having a beginning, an end and a duration.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">Intervalle temporel</rdfs:label>
+        <rdfs:label xml:lang="pt">Período de Tempo</rdfs:label>
+        <rdfs:label xml:lang="en">Time-Span</rdfs:label>
+        <rdfs:label xml:lang="de">Zeitspanne</rdfs:label>
+        <rdfs:label xml:lang="el">Χρονικό Διάστημα</rdfs:label>
+        <rdfs:label xml:lang="ru">Интервал Времени</rdfs:label>
+        <rdfs:label xml:lang="zh">时段</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E53_Place -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E53_Place">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <rdfs:comment xml:lang="en">A geographical location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">Lieu</rdfs:label>
+        <rdfs:label xml:lang="pt">Local</rdfs:label>
+        <rdfs:label xml:lang="de">Ort</rdfs:label>
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+        <rdfs:label xml:lang="el">Τόπος</rdfs:label>
+        <rdfs:label xml:lang="ru">Место</rdfs:label>
+        <rdfs:label xml:lang="zh">地点</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E54_Dimension -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E55_Type -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E55_Type">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
+        <rdfs:comment xml:lang="en">A categorical concept denoted by terms from thesauri and controlled vocabularies used to characterize and classify other entities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="pt">Tipo</rdfs:label>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <rdfs:label xml:lang="fr">Type</rdfs:label>
+        <rdfs:label xml:lang="de">Typus</rdfs:label>
+        <rdfs:label xml:lang="el">Τύπος</rdfs:label>
+        <rdfs:label xml:lang="ru">Тип</rdfs:label>
+        <rdfs:label xml:lang="zh">类型</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E5_Event -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E65_Creation -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E70_Thing -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E70_Thing"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
+        <rdfs:comment xml:lang="en">An immaterial item that has an objectively recognizable structure and is documented as a single unit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">Information Object</rdfs:label>
+        <rdfs:label xml:lang="de">Informationsgegenstand</rdfs:label>
+        <rdfs:label xml:lang="fr">Objet informationnel</rdfs:label>
+        <rdfs:label xml:lang="pt">Objeto de Informação</rdfs:label>
+        <rdfs:label xml:lang="el">Πληροφοριακό Αντικείμενο</rdfs:label>
+        <rdfs:label xml:lang="ru">Информационный Объект</rdfs:label>
+        <rdfs:label xml:lang="zh">信息对象</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E74_Group -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E74_Group">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:comment xml:lang="en">A unified group of people.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">Group</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupe</rdfs:label>
+        <rdfs:label xml:lang="pt">Grupo</rdfs:label>
+        <rdfs:label xml:lang="de">Menschliche Gruppe</rdfs:label>
+        <rdfs:label xml:lang="el">Ομάδα</rdfs:label>
+        <rdfs:label xml:lang="ru">Группа</rdfs:label>
+        <rdfs:label xml:lang="zh">团体</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E78_Curated_Holding -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E78_Curated_Holding">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <rdfs:comment xml:lang="en">A collection of physical objects that is assembled and maintained by one or more actors over time for a specific purpose and audience.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">Collection</rdfs:label>
+        <rdfs:label xml:lang="en">Curated Holding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E7_Activity -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E7_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+        <rdfs:comment xml:lang="en">An action intentionally carried out by one or more actors.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+        <rdfs:label xml:lang="fr">Activité</rdfs:label>
+        <rdfs:label xml:lang="pt">Atividade</rdfs:label>
+        <rdfs:label xml:lang="de">Handlung</rdfs:label>
+        <rdfs:label xml:lang="el">Δράση</rdfs:label>
+        <rdfs:label xml:lang="ru">Деятельность</rdfs:label>
+        <rdfs:label xml:lang="zh">活动</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E87_Curation_Activity -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E87_Curation_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:comment xml:lang="en">An activity that results in the continuity of management and the preservation and evolution of a collection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="fr">Activité curatoriale</rdfs:label>
+        <rdfs:label xml:lang="en">Curation Activity</rdfs:label>
+        <rdfs:label xml:lang="de">Kuratorische Tätigkeit</rdfs:label>
+        <rdfs:label xml:lang="zh">管理</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution -->
+
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution">
+        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event"/>
+        <rdfs:comment xml:lang="en">An activity in which a digital device runs a software program on a digital object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">Software Execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event -->
+
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event"/>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/D14_Software -->
+
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D14_Software">
+        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">A computer program.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">Software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object -->
+
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process -->
+
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process">
+        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event"/>
+        <rdfs:comment xml:lang="en">An activity that results in the production of data objects functioning as digital representations of physical entities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">Digitization Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event -->
+
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event"/>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device -->
+
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"/>
+        <rdfs:comment xml:lang="en">A technical tool that is used to process or produce digital objects.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">Digital Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object -->
+
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+        <rdfs:comment xml:lang="en">A digital object that is the direct result of an activity in a digitization workflow.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
+        <rdfs:label xml:lang="en">Data Object</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
