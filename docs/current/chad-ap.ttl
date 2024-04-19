@@ -1,22 +1,22 @@
-@prefix : <https://w3id.org/dharc/ontology/chad-ap/> .
+@prefix : <https://w3id.org/dharc/ontology/chad-ap#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/dharc/ontology/chad-ap/> .
+@base <https://w3id.org/dharc/ontology/chad-ap#> .
 
-<https://w3id.org/dharc/ontology/chad-ap/> rdf:type owl:Ontology ;
-                                            owl:versionIRI <https://w3id.org/dharc/ontology/chad-ap/1.0.0/> ;
-                                            <http://purl.org/dc/elements/1.1/abstract> "A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format."@en ;
-                                            <http://purl.org/dc/elements/1.1/contributor> "Heibi, Ivan" ,
-                                                                                          "Moretti, Arianna" ;
-                                            <http://purl.org/dc/elements/1.1/creator> "Barzaghi, Sebastian" ,
-                                                                                      "Peroni, Silvio" ;
-                                            <http://purl.org/dc/elements/1.1/date> "2024-04-16"^^xsd:date ;
-                                            <http://purl.org/dc/elements/1.1/description> """
+<https://w3id.org/dharc/ontology/chad-ap> rdf:type owl:Ontology ;
+                                           owl:versionIRI <https://w3id.org/dharc/ontology/chad-ap/1.0.0> ;
+                                           <http://purl.org/dc/elements/1.1/abstract> "A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format."@en ;
+                                           <http://purl.org/dc/elements/1.1/contributor> "Heibi, Ivan" ,
+                                                                                         "Moretti, Arianna" ;
+                                           <http://purl.org/dc/elements/1.1/creator> "Barzaghi, Sebastian" ,
+                                                                                     "Peroni, Silvio" ;
+                                           <http://purl.org/dc/elements/1.1/date> "2024-04-16"^^xsd:date ;
+                                           <http://purl.org/dc/elements/1.1/description> """
 
-The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CH objects, and the _Process Module_ (PM), for describing the acquisition and digitisation process.
+The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process.
 
 Both CHAD-AP and its [documentation](https://w3id.org/dharc/ontology/chad-ap) are living artefacts that have been drafted in the context of the [Project CHANGES](https://sites.google.com/uniroma1.it/changes/) (\"Cultural Heritage Active Innovation For Next-Gen Sustainable Society\"), an EU-funded project that  aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.
 
@@ -859,16 +859,16 @@ What are the tools and their types used in processing activities?
             crm:P2_has_type ?type .
     }
 """@en ;
-                                            <http://purl.org/dc/terms/bibliographicCitation> "Barzaghi, S. and Peroni, S. (2024). Cultural Heritage Acquisition and Digitisation Application Profile. https://w3id.org/dharc/ontology/chad-ap."@en ;
-                                            <http://purl.org/dc/terms/created> "2024-04-16"^^xsd:date ;
-                                            <http://purl.org/dc/terms/issued> "2024-04-16"^^xsd:date ;
-                                            <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/"@en ;
-                                            <http://purl.org/dc/terms/title> "Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)"@en ;
-                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "chad-ap"@en ;
-                                            <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/dharc/ontology/chad-ap/"@en ;
-                                            rdfs:comment "The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CH objects, and the _Process Module_ (PM), for describing the acquisition and digitisation process."@en ;
-                                            owl:versionInfo "1.0.0" ;
-                                            <http://www.w3.org/2003/06/sw-vocab-status/ns#status> "work in progress"@en .
+                                           <http://purl.org/dc/terms/bibliographicCitation> "Barzaghi, S. and Peroni, S. (2024). Cultural Heritage Acquisition and Digitisation Application Profile. https://w3id.org/dharc/ontology/chad-ap."@en ;
+                                           <http://purl.org/dc/terms/created> "2024-04-16"^^xsd:date ;
+                                           <http://purl.org/dc/terms/issued> "2024-04-16"^^xsd:date ;
+                                           <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/"@en ;
+                                           <http://purl.org/dc/terms/title> "Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)"@en ;
+                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "chad-ap"@en ;
+                                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/dharc/ontology/chad-ap"@en ;
+                                           rdfs:comment "The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process."@en ;
+                                           owl:versionInfo "1.0.0" ;
+                                           <http://www.w3.org/2003/06/sw-vocab-status/ns#status> "work in progress"@en .
 
 #################################################################
 #    Annotation properties
@@ -892,6 +892,10 @@ What are the tools and their types used in processing activities?
 
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/bibliographicCitation
@@ -924,6 +928,10 @@ What are the tools and their types used in processing activities?
 
 ###  http://www.w3.org/2003/06/sw-vocab-status/ns#status
 <http://www.w3.org/2003/06/sw-vocab-status/ns#status> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -1049,7 +1057,6 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.cidoc-crm.org/cidoc-crm/P11_had_participant
 <http://www.cidoc-crm.org/cidoc-crm/P11_had_participant> rdf:type owl:ObjectProperty ;
                                                          rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of> ;
-                                                         owl:inverseOf <http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in> ;
                                                          rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E5_Event> ;
                                                          rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
                                                          rdfs:comment "This property describes the participation of one or more actors in an event."@en ;
@@ -1066,6 +1073,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in
 <http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in> rdf:type owl:ObjectProperty ;
                                                           rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at> ;
+                                                          owl:inverseOf <http://www.cidoc-crm.org/cidoc-crm/P11_had_participant> ;
                                                           rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
                                                           rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E5_Event> ;
                                                           rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
@@ -1358,7 +1366,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper
 <http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper> rdf:type owl:ObjectProperty ;
-                                                                      owl:inverseOf <http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of> ;
                                                                       rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
                                                                       rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
                                                                       rdfs:comment "This property identifies an actor who has or has had custody of a physical entity at some time."@en ;
@@ -1374,6 +1381,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of
 <http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of> rdf:type owl:ObjectProperty ;
+                                                                         owl:inverseOf <http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper> ;
                                                                          rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
                                                                          rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
                                                                          rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
@@ -1776,6 +1784,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                          rdfs:label "Manifestation Singleton"@en .
 
 
+###  http://vocab.getty.edu/aat/Concept
+<http://vocab.getty.edu/aat/Concept> rdf:type owl:Class .
+
+
 ###  http://www.cidoc-crm.org/cidoc-crm/E12_Production
 <http://www.cidoc-crm.org/cidoc-crm/E12_Production> rdf:type owl:Class .
 
@@ -2090,6 +2102,850 @@ xsd:date rdf:type rdfs:Datatype .
                                                     rdfs:comment "A digital object that is the direct result of an activity in a digitization workflow."@en ;
                                                     rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> ;
                                                     rdfs:label "Data Object"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vocab.getty.edu/aat/300011172
+<http://vocab.getty.edu/aat/300011172> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300011172" ;
+                                       rdfs:comment "Works comprising precious or semiprecious stones or other materials such as amber or pearl, cut, polished, or otherwise dressed for ornamental purposes to be used in jewelry, seals, or amulets."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "gems (worked stones)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300022488
+<http://vocab.getty.edu/aat/300022488> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300022488" ;
+                                       rdfs:comment "Instruments for drawing circles and measuring the distance between two points."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "compasses (drawing instruments)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300024594
+<http://vocab.getty.edu/aat/300024594> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300024594" ;
+                                       rdfs:comment "Optical instruments consisting of a lens or combination of lenses that allow the viewing of objects that are too small to be seen with the naked, unaided eye."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "microscopes"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300024814
+<http://vocab.getty.edu/aat/300024814> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300024814" ;
+                                       rdfs:comment "Hollow forms in which castings or pressings are made; used with many materials, including clay, metal, glass, and paper."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "molds (shaping equipment)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300024928
+<http://vocab.getty.edu/aat/300024928> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300024928" ;
+                                       rdfs:comment "Tool handles, such as those of axes, hatchets, or hammers."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "helves"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300027349
+<http://vocab.getty.edu/aat/300027349> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300027349" ;
+                                       rdfs:comment "A conceptual grouping of visual arts works, literary works, or performance art created in succession by the same author, artist, or studio and intended by the creator(s) to be seen together."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "series (object groupings)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300028051
+<http://vocab.getty.edu/aat/300028051> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300028051" ;
+                                       rdfs:comment "Items comprising a collection of leaves of paper, parchment, wood, stiffened textile, ivory, metal tablets, or other flat material, that are blank, written on, or printed, and are strung or bound together."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "books"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300028094
+<http://vocab.getty.edu/aat/300028094> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300028094" ;
+                                       rdfs:comment "Refers to graphic or photogrammetric representations of the Earth's surface or a part of it, including physical features and political boundaries."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "maps (documents)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300028309
+<http://vocab.getty.edu/aat/300028309> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300028309" ;
+                                       rdfs:comment "Maps designed and used primarily for plotting courses and traveling on water in a ship or other vessel or in an aircraft or spacecraft."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "navigation charts"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300028569
+<http://vocab.getty.edu/aat/300028569> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300028569" ;
+                                       rdfs:comment "Handwritten documents, particularly books and other documents created before the invention of the printing press."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "manuscripts (documents)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300028682
+<http://vocab.getty.edu/aat/300028682> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300028682" ;
+                                       rdfs:comment "Manifestations of motion pictures, stored electronically, in any media or digitized format."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "video recordings (physical artifacts)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300033618
+<http://vocab.getty.edu/aat/300033618> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300033618" ;
+                                       rdfs:comment "Unique works in which images are formed primarily by the direct application of pigments suspended in oil, water, egg yolk, molten wax, or other liquid, arranged in masses of color, onto a general surface."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "paintings (visual works)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300033799
+<http://vocab.getty.edu/aat/300033799> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300033799" ;
+                                       rdfs:comment "Creative works in the medium of oil paint."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "oil paintings (visual works)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300037592
+<http://vocab.getty.edu/aat/300037592> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300037592" ;
+                                       rdfs:comment "Lighting devices having a vessel to contain fuel used as a source of illumination, such as grease or oil."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "lamps (lighting devices)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300041273
+<http://vocab.getty.edu/aat/300041273> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300041273" ;
+                                       rdfs:comment "Pictorial works produced by transferring images by means of a matrix such as a plate, block, or screen, using any of various printing processes."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "prints (visual works)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300041340
+<http://vocab.getty.edu/aat/300041340> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300041340" ;
+                                       rdfs:comment "Prints on paper incorporating impressions of a reverse design created on a printing plate, usually copper, into which the design has been incised (engraved) using burins or gravers."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "engravings (prints)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300041405
+<http://vocab.getty.edu/aat/300041405> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300041405" ;
+                                       rdfs:comment "Prints made using the process of woodcut, which is a relief process in which the design is cut into and printed from the plank side of a wood block."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "woodcuts (prints)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300041933
+<http://vocab.getty.edu/aat/300041933> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300041933" ;
+                                       rdfs:comment "Shaken idiophones made in a variety of forms worldwide, in which one or more objects strike against each other or against the inside or outside of another object."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "rattles (indirectly struck idiophones)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300045627
+<http://vocab.getty.edu/aat/300045627> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300045627" ;
+                                       rdfs:comment "Vessels having a neck and mouth considerably narrower than the body, used for packaging and containing liquid and dry preparations."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "bottles"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300046001
+<http://vocab.getty.edu/aat/300046001> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300046001" ;
+                                       rdfs:comment "Ornaments worn around the neck, usually in the form of chains or strands of beads, pearls, stones, or decorative or precious materials, and often including a suspended ornamental pendant."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "necklaces"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300046025
+<http://vocab.getty.edu/aat/300046025> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300046025" ;
+                                       rdfs:comment "Small pieces of metal, usually gold, silver, or bronze and bearing a relief design on one or both sides and having a commemorative purpose."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "medals"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300047600
+<http://vocab.getty.edu/aat/300047600> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300047600" ;
+                                       rdfs:comment "Sculpture in the round, usually but not always depicting humans, animals, mythical beings, or small figure groups."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "statues"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300047753
+<http://vocab.getty.edu/aat/300047753> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300047753" ;
+                                       rdfs:comment "Refers to scaled or lifesize representations of objects, structures, beings, or other subjects, usually three-dimensional."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "models (representations)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300047762
+<http://vocab.getty.edu/aat/300047762> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300047762" ;
+                                       rdfs:comment "Works in which three-dimensional objects, often figural sculpture, in the foreground blend with a realistic painted background."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "dioramas"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300051658
+<http://vocab.getty.edu/aat/300051658> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300051658" ;
+                                       rdfs:comment "Long-bladed weapons with a hilt and usually a hand guard, used primarily for cutting or thrusting."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "swords"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300053225
+<http://vocab.getty.edu/aat/300053225> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300053225" ;
+                                       rdfs:comment "The intaglio process in which the design is incised into a printing plate, usually a flat copper plate, with the aid of a graver or burin."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "engraving (printing process)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300053357
+<http://vocab.getty.edu/aat/300053357> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300053357" ;
+                                       rdfs:comment "Mural painting technique in which dry pigments are ground with water then brushed onto wet or partially dry lime plaster."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "fresco painting (technique)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300053363
+<http://vocab.getty.edu/aat/300053363> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300053363" ;
+                                       rdfs:comment "Watercolor painting done in transparent washes of color as distinguished from the opaque method using gouache."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "aquarelle (technique)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300053580
+<http://vocab.getty.edu/aat/300053580> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300053580" ;
+                                       rdfs:comment "Refers to the technique of making measurements by using photography. It usually refers to this technique as applied to mapmaking, measuring site elements, and surveying."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "photogrammetry"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300053628
+<http://vocab.getty.edu/aat/300053628> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300053628" ;
+                                       rdfs:comment "Preparing lifelike representations of animals by stuffing the skin or molding it around a model of the specimen."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "taxidermy"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300053758
+<http://vocab.getty.edu/aat/300053758> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300053758" ;
+                                       rdfs:comment "Making free or nearly free of liquids."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "drying"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300053852
+<http://vocab.getty.edu/aat/300053852> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300053852" ;
+                                       rdfs:comment "Decorative wood process in which the design or pattern is made by assembling small pieces of veneer in various shapes."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "intarsia (process)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300054196
+<http://vocab.getty.edu/aat/300054196> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300054196" ;
+                                       rdfs:comment "Producing visible forms primarily by delineation, usually by the direct application of material or instrument to the surface of the support."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "drawing (image-making)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300054200
+<http://vocab.getty.edu/aat/300054200> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300054200" ;
+                                       rdfs:comment "The art or process of providing drawings or other pictures intended to elucidate a description, story, or other written material, usually in a book or periodical."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "illustration (process)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300054636
+<http://vocab.getty.edu/aat/300054636> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300054636" ;
+                                       rdfs:comment "Creating and manipulating data in machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "data processing"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300054638
+<http://vocab.getty.edu/aat/300054638> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300054638" ;
+                                       rdfs:comment "The process or function of gathering and recording information, especially to record facts or characteristics or to establish evidence or testimony."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "documentation (activity)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300054686
+<http://vocab.getty.edu/aat/300054686> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300054686" ;
+                                       rdfs:comment "The actions, functions, or event of issuing printed, taped, or otherwise reproduced records of knowledge or visual works in any medium for sale or distribution to the public."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "publishing"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300054698
+<http://vocab.getty.edu/aat/300054698> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300054698" ;
+                                       rdfs:comment "Forming or producing letters to record the ideas which characters and words express or to communicate the ideas by visible signs."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "writing (processes)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300055021
+<http://vocab.getty.edu/aat/300055021> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300055021" ;
+                                       rdfs:comment "Books printed before 1501."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "incunabula (books)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300063663
+<http://vocab.getty.edu/aat/300063663> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300063663" ;
+                                       rdfs:comment "Japanese sword guards, usually made of metal and serving to protect the hand from sliding forward on to the blade."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "tsuba"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300069831
+<http://vocab.getty.edu/aat/300069831> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300069831" ;
+                                       rdfs:comment "The activity of comprehending, analyzing, and expressing written or spoken material in a different language from the original."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "translation (function)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300077565
+<http://vocab.getty.edu/aat/300077565> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300077565" ;
+                                       rdfs:comment "The action or process of making something ready for use or service or of getting ready for some occasion, test, or duty."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "preparing"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300117127
+<http://vocab.getty.edu/aat/300117127> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300117127" ;
+                                       rdfs:comment "Generally, objects or other things made or modified by humans, typically manually portable products of human workmanship, such as tools, utensils, objects for personal adornment, or art."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "artifacts (object genre)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300122241
+<http://vocab.getty.edu/aat/300122241> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300122241" ;
+                                       rdfs:comment "Articles or physical resources used to array, dress up, rig out, equip, or otherwise provide with what is requisite for efficient action by a person or animal or for a thing."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "equipment"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300132254
+<http://vocab.getty.edu/aat/300132254> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300132254" ;
+                                       rdfs:comment "Vessels of varying shape and size but which are usually taller than they are wide, varying greatly in actual form and use."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "vases"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300137376
+<http://vocab.getty.edu/aat/300137376> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300137376" ;
+                                       rdfs:comment "Medieval marine charts, used before compasses, and for Medieval navigation manuals, illustrated with charts and showing the location of ports and other navigational information."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "portolanos"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300138684
+<http://vocab.getty.edu/aat/300138684> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300138684" ;
+                                       rdfs:comment "A method of decorating surfaces with patterns or pictures composed of small, regularly-shaped pieces of colored durable material, such as stone or glass."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "mosaic (process)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300138758
+<http://vocab.getty.edu/aat/300138758> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300138758" ;
+                                       rdfs:comment "Refers to coverings for all or part of the face, usually with openings for the eyes and sometimes the mouth."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "masks (costume)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300155365
+<http://vocab.getty.edu/aat/300155365> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300155365" ;
+                                       rdfs:comment "Publishing text or images in electronic machine-readable formats."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "electronic publishing"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300178926
+<http://vocab.getty.edu/aat/300178926> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300178926" ;
+                                       rdfs:comment "Printing from raised and inked type, distinguished from lithographic or intaglio printing, particularly in the context of book and other text printing."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "letterpress printing"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300184300
+<http://vocab.getty.edu/aat/300184300> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300184300" ;
+                                       rdfs:comment "Refers to series of visual works depicting events and unified by a common topic, not necessarily a sequence in a single story line."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "narrative cycles"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300189634
+<http://vocab.getty.edu/aat/300189634> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300189634" ;
+                                       rdfs:comment "Groups of prints related in theme or technique and usually issued together."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "suites (print groupings)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300191086
+<http://vocab.getty.edu/aat/300191086> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300191086" ;
+                                       rdfs:comment "Works of art, architecture, and any objects that occupy space, are perceived by the sense of sight, and are created or arranged, rather than naturally occurring."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "visual works (works)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300224200
+<http://vocab.getty.edu/aat/300224200> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300224200" ;
+                                       rdfs:comment "Ancient manuscripts generally taking the form of the modern book: bound leaves of paper or parchment with information inscribed on both faces, attached at a center fold."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "codices (bound manuscripts)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300226836
+<http://vocab.getty.edu/aat/300226836> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300226836" ;
+                                       rdfs:comment "Sets or ensembles of visual works."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "visual works groupings"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300235576
+<http://vocab.getty.edu/aat/300235576> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300235576" ;
+                                       rdfs:comment "A specimen is an individual instance that represents a class. A good specimen shows the character of the thing or material, useful for close study and permitting exact identification."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "specimens"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300252927
+<http://vocab.getty.edu/aat/300252927> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300252927" ;
+                                       rdfs:comment "The forming of letters and words by hand rather than by printing; may be used to designate a particular and distinctive form, style, or method of writing by hand."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "handwriting"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300264383
+<http://vocab.getty.edu/aat/300264383> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300264383" ;
+                                       rdfs:comment "Refers to the process or branch of fine art concerned with creating sculpture, which are three-dimensional works."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "sculpting"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300265248
+<http://vocab.getty.edu/aat/300265248> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300265248" ;
+                                       rdfs:comment "Any technique for forming or shaping wax into sculptural shapes, either for casting purposes or as a final work."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "wax-modeling"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300265483
+<http://vocab.getty.edu/aat/300265483> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300265483" ;
+                                       rdfs:comment "Handwritten manuscripts that have been decorated with gold or silver, brilliant colors, designs, or miniature pictures."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "illuminated manuscripts"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300265632
+<http://vocab.getty.edu/aat/300265632> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300265632" ;
+                                       rdfs:comment "Objects comprising sheets of paper, vellum, papyrus, or another material that are bound together. Volumes may include printed books, manuscripts, sketchbooks, or albums."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "volumes (documents by form)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300266792
+<http://vocab.getty.edu/aat/300266792> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300266792" ;
+                                       rdfs:comment "Cameras capable of acquiring still or motion pictures via an electronic sensor and storing them as digital information on a memory device."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "digital cameras"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300312355
+<http://vocab.getty.edu/aat/300312355> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300312355" ;
+                                       rdfs:comment "Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "accession numbers"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300343820
+<http://vocab.getty.edu/aat/300343820> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300343820" ;
+                                       rdfs:comment "The process and technique of creating two-dimensional decoration on pottery by using paint made of metallic oxides or other pigments held in suspension in slip or another medium."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "vase painting (image-making)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300386427
+<http://vocab.getty.edu/aat/300386427> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300386427" ;
+                                       rdfs:comment "Reduction of data needed for storage or transmission. Data is reduced in volume by means of encoding information to require fewer bits to be stored than the original."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "data compression"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300391312
+<http://vocab.getty.edu/aat/300391312> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300391312" ;
+                                       rdfs:comment "Scanning technique that involves a pattern of lines projected onto a 3-D object and the subsequent mathematical measurement of the deformations caused by the geometry of the object."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "structured light scanning"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300391447
+<http://vocab.getty.edu/aat/300391447> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300391447" ;
+                                       rdfs:comment "Computer software technique for rendering virtual models of surfaces in three-dimensions."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "digital surface modeling"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300403970
+<http://vocab.getty.edu/aat/300403970> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300403970" ;
+                                       rdfs:comment "Manuscript volumes comprising two or more works, whether referring to only the content combined or to the combination of physically separate leafs or gatherings that are sewn or tipped in"@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "compilation manuscripts"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300404386
+<http://vocab.getty.edu/aat/300404386> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300404386" ;
+                                       rdfs:comment "Events or activities of finding out or becoming aware of something that had been lost, forgotten, or previously unknown. Includes the finding of archaeological objects, lost buildings, places."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "discoveries"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300404704
+<http://vocab.getty.edu/aat/300404704> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300404704" ;
+                                       rdfs:comment "Identifying numeric or alpha codes found, usually on the spine, of a manuscript, book or other volume, giving the location where the item can be found in the library."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "shelf marks"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300417204
+<http://vocab.getty.edu/aat/300417204> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300417204" ;
+                                       rdfs:comment "Titles or names that were originally assigned to a work or assigned soon after its creation. It may refer to a former title or to a title that has been translated."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "original titles"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300417207
+<http://vocab.getty.edu/aat/300417207> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300417207" ;
+                                       rdfs:comment "For art cataloging, titles or names by which the work has been known in exhibitions, particularly when different from titles by which the work is normally known."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "exhibition titles (work titles)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300417260
+<http://vocab.getty.edu/aat/300417260> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300417260" ;
+                                       rdfs:comment "The process or function of copying material or data to a computer drive, the cloud, or otherwise to a safe, more permanent location."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "saving (information handling)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300417639
+<http://vocab.getty.edu/aat/300417639> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300417639" ;
+                                       rdfs:comment "Method of acquiring property by request from the creator or producer."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "commission (method of acquisition)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300420536
+<http://vocab.getty.edu/aat/300420536> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300420536" ;
+                                       rdfs:comment "A category of handheld tools or weapons characterized by a sharp-edged blade attached to a handle, typically made of wood or metal."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "axe weapons"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300422994
+<http://vocab.getty.edu/aat/300422994> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300422994" ;
+                                       rdfs:comment "A small decorative item, often made of metal or other materials, that is attached to a necklace or bracelet."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "charm pendant"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300425064
+<http://vocab.getty.edu/aat/300425064> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300425064" ;
+                                       rdfs:comment "Machines for the production of electrical discharge at high voltage."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "electrostatic generators"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300426696
+<http://vocab.getty.edu/aat/300426696> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300426696" ;
+                                       rdfs:comment "Software used to create computer graphics, or edit and otherwise manipulate existing graphics."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "graphics software"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300428379
+<http://vocab.getty.edu/aat/300428379> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300428379" ;
+                                       rdfs:comment "Japanese decorative sword guards, and accessories such as handle decorations and skewers used to keep the sword in its scabbard."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "tsuba kōzuka kogai sets"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300429747
+<http://vocab.getty.edu/aat/300429747> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300429747" ;
+                                       rdfs:comment "A device that captures images or text documents and converts them into digital data that can be processed by a computer. These scanners use optical technology to scan physical documents or images and create digital representations of them."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "optical scanner"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300433476
+<http://vocab.getty.edu/aat/300433476> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300433476" ;
+                                       rdfs:comment "Instruments used to discharge a capacitor, which is a device capable of storing energy within an electrostatic field."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "spark arresters"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300435434
+<http://vocab.getty.edu/aat/300435434> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300435434" ;
+                                       rdfs:comment "A formal statement of the copyright or licensing of a work, and/or any restrictions placed on it."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "copyright/licensing statement"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300440768
+<http://vocab.getty.edu/aat/300440768> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300440768" ;
+                                       rdfs:comment "Systematically arranged collections of pressed plant specimens that have been gathered in situ, then dried and pressed onto sheets of archival paper so that major morphological characteristics are preserved."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "herbaria (documents)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
+
+
+###  http://vocab.getty.edu/aat/300445021
+<http://vocab.getty.edu/aat/300445021> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300445021" ;
+                                       rdfs:comment "Numbers used to identify an individual publication within a classification or location in a library."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "book numbers"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.getty.edu/aat/> .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

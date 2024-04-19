@@ -7,10 +7,7 @@
     font-family: sans-serif;
     font-size: 95%;
 }
-#abstract br {
-   /* doesn't work right SOMETIMES
-   margin-bottom: 1em;   */
-}
+
 .name {
     font-family: monospace;
 }
@@ -245,4 +242,8 @@ pre {
   color:var(--text-color);
   line-height:1.1em;
   padding:1em;
+}
+
+img {
+    max-width: 100%;
 }

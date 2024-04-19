@@ -262,6 +262,9 @@
   "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/bibliographicCitation",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -282,6 +285,1941 @@
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300011172",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300011172"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Works comprising precious or semiprecious stones or other materials such as amber or pearl, cut, polished, or otherwise dressed for ornamental purposes to be used in jewelry, seals, or amulets."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gems (worked stones)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300022488",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300022488"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Instruments for drawing circles and measuring the distance between two points."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "compasses (drawing instruments)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300024594",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300024594"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Optical instruments consisting of a lens or combination of lenses that allow the viewing of objects that are too small to be seen with the naked, unaided eye."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "microscopes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300024814",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300024814"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Hollow forms in which castings or pressings are made; used with many materials, including clay, metal, glass, and paper."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "molds (shaping equipment)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300024928",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300024928"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tool handles, such as those of axes, hatchets, or hammers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "helves"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300027349",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300027349"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A conceptual grouping of visual arts works, literary works, or performance art created in succession by the same author, artist, or studio and intended by the creator(s) to be seen together."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "series (object groupings)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300028051",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300028051"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Items comprising a collection of leaves of paper, parchment, wood, stiffened textile, ivory, metal tablets, or other flat material, that are blank, written on, or printed, and are strung or bound together."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "books"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300028094",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300028094"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to graphic or photogrammetric representations of the Earth's surface or a part of it, including physical features and political boundaries."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "maps (documents)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300028309",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300028309"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Maps designed and used primarily for plotting courses and traveling on water in a ship or other vessel or in an aircraft or spacecraft."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "navigation charts"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300028569",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300028569"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Handwritten documents, particularly books and other documents created before the invention of the printing press."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "manuscripts (documents)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300028682",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300028682"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Manifestations of motion pictures, stored electronically, in any media or digitized format."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "video recordings (physical artifacts)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300033618",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300033618"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Unique works in which images are formed primarily by the direct application of pigments suspended in oil, water, egg yolk, molten wax, or other liquid, arranged in masses of color, onto a general surface."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "paintings (visual works)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300033799",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300033799"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Creative works in the medium of oil paint."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "oil paintings (visual works)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300037592",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300037592"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Lighting devices having a vessel to contain fuel used as a source of illumination, such as grease or oil."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "lamps (lighting devices)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300041273",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300041273"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Pictorial works produced by transferring images by means of a matrix such as a plate, block, or screen, using any of various printing processes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "prints (visual works)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300041340",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300041340"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Prints on paper incorporating impressions of a reverse design created on a printing plate, usually copper, into which the design has been incised (engraved) using burins or gravers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "engravings (prints)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300041405",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300041405"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Prints made using the process of woodcut, which is a relief process in which the design is cut into and printed from the plank side of a wood block."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "woodcuts (prints)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300041933",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300041933"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Shaken idiophones made in a variety of forms worldwide, in which one or more objects strike against each other or against the inside or outside of another object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "rattles (indirectly struck idiophones)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300045627",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300045627"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Vessels having a neck and mouth considerably narrower than the body, used for packaging and containing liquid and dry preparations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "bottles"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300046001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300046001"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ornaments worn around the neck, usually in the form of chains or strands of beads, pearls, stones, or decorative or precious materials, and often including a suspended ornamental pendant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "necklaces"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300046025",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300046025"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Small pieces of metal, usually gold, silver, or bronze and bearing a relief design on one or both sides and having a commemorative purpose."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "medals"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300047600",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300047600"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Sculpture in the round, usually but not always depicting humans, animals, mythical beings, or small figure groups."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "statues"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300047753",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300047753"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to scaled or lifesize representations of objects, structures, beings, or other subjects, usually three-dimensional."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "models (representations)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300047762",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300047762"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Works in which three-dimensional objects, often figural sculpture, in the foreground blend with a realistic painted background."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "dioramas"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300051658",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300051658"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Long-bladed weapons with a hilt and usually a hand guard, used primarily for cutting or thrusting."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "swords"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300053225",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300053225"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The intaglio process in which the design is incised into a printing plate, usually a flat copper plate, with the aid of a graver or burin."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "engraving (printing process)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300053357",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300053357"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Mural painting technique in which dry pigments are ground with water then brushed onto wet or partially dry lime plaster."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "fresco painting (technique)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300053363",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300053363"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Watercolor painting done in transparent washes of color as distinguished from the opaque method using gouache."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "aquarelle (technique)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300053580",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300053580"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to the technique of making measurements by using photography. It usually refers to this technique as applied to mapmaking, measuring site elements, and surveying."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "photogrammetry"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300053628",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300053628"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Preparing lifelike representations of animals by stuffing the skin or molding it around a model of the specimen."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "taxidermy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300053758",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300053758"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Making free or nearly free of liquids."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drying"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300053852",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300053852"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Decorative wood process in which the design or pattern is made by assembling small pieces of veneer in various shapes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "intarsia (process)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300054196",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300054196"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Producing visible forms primarily by delineation, usually by the direct application of material or instrument to the surface of the support."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "drawing (image-making)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300054200",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300054200"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The art or process of providing drawings or other pictures intended to elucidate a description, story, or other written material, usually in a book or periodical."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "illustration (process)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300054636",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300054636"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Creating and manipulating data in machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "data processing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300054638",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300054638"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The process or function of gathering and recording information, especially to record facts or characteristics or to establish evidence or testimony."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "documentation (activity)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300054686",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300054686"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The actions, functions, or event of issuing printed, taped, or otherwise reproduced records of knowledge or visual works in any medium for sale or distribution to the public."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "publishing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300054698",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300054698"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Forming or producing letters to record the ideas which characters and words express or to communicate the ideas by visible signs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "writing (processes)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300055021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300055021"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Books printed before 1501."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "incunabula (books)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300063663",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300063663"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Japanese sword guards, usually made of metal and serving to protect the hand from sliding forward on to the blade."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "tsuba"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300069831",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300069831"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The activity of comprehending, analyzing, and expressing written or spoken material in a different language from the original."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "translation (function)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300077565",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300077565"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The action or process of making something ready for use or service or of getting ready for some occasion, test, or duty."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "preparing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300117127",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300117127"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Generally, objects or other things made or modified by humans, typically manually portable products of human workmanship, such as tools, utensils, objects for personal adornment, or art."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "artifacts (object genre)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300122241",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300122241"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Articles or physical resources used to array, dress up, rig out, equip, or otherwise provide with what is requisite for efficient action by a person or animal or for a thing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "equipment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300132254",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300132254"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Vessels of varying shape and size but which are usually taller than they are wide, varying greatly in actual form and use."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vases"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300137376",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300137376"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Medieval marine charts, used before compasses, and for Medieval navigation manuals, illustrated with charts and showing the location of ports and other navigational information."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "portolanos"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300138684",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300138684"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A method of decorating surfaces with patterns or pictures composed of small, regularly-shaped pieces of colored durable material, such as stone or glass."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "mosaic (process)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300138758",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300138758"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to coverings for all or part of the face, usually with openings for the eyes and sometimes the mouth."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "masks (costume)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300155365",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300155365"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Publishing text or images in electronic machine-readable formats."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "electronic publishing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300178926",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300178926"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Printing from raised and inked type, distinguished from lithographic or intaglio printing, particularly in the context of book and other text printing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "letterpress printing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300184300",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300184300"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to series of visual works depicting events and unified by a common topic, not necessarily a sequence in a single story line."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "narrative cycles"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300189634",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300189634"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Groups of prints related in theme or technique and usually issued together."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "suites (print groupings)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300191086",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300191086"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Works of art, architecture, and any objects that occupy space, are perceived by the sense of sight, and are created or arranged, rather than naturally occurring."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "visual works (works)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300224200",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300224200"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ancient manuscripts generally taking the form of the modern book: bound leaves of paper or parchment with information inscribed on both faces, attached at a center fold."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "codices (bound manuscripts)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300226836",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300226836"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Sets or ensembles of visual works."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "visual works groupings"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300235576",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300235576"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A specimen is an individual instance that represents a class. A good specimen shows the character of the thing or material, useful for close study and permitting exact identification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "specimens"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300252927",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300252927"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The forming of letters and words by hand rather than by printing; may be used to designate a particular and distinctive form, style, or method of writing by hand."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "handwriting"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300264383",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300264383"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to the process or branch of fine art concerned with creating sculpture, which are three-dimensional works."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "sculpting"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300265248",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300265248"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Any technique for forming or shaping wax into sculptural shapes, either for casting purposes or as a final work."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "wax-modeling"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300265483",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300265483"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Handwritten manuscripts that have been decorated with gold or silver, brilliant colors, designs, or miniature pictures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "illuminated manuscripts"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300265632",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300265632"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Objects comprising sheets of paper, vellum, papyrus, or another material that are bound together. Volumes may include printed books, manuscripts, sketchbooks, or albums."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "volumes (documents by form)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300266792",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300266792"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Cameras capable of acquiring still or motion pictures via an electronic sensor and storing them as digital information on a memory device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "digital cameras"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300312355",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300312355"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "accession numbers"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300343820",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300343820"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The process and technique of creating two-dimensional decoration on pottery by using paint made of metallic oxides or other pigments held in suspension in slip or another medium."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vase painting (image-making)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300386427",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300386427"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Reduction of data needed for storage or transmission. Data is reduced in volume by means of encoding information to require fewer bits to be stored than the original."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "data compression"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300391312",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300391312"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Scanning technique that involves a pattern of lines projected onto a 3-D object and the subsequent mathematical measurement of the deformations caused by the geometry of the object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "structured light scanning"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300391447",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300391447"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Computer software technique for rendering virtual models of surfaces in three-dimensions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "digital surface modeling"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300403970",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300403970"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Manuscript volumes comprising two or more works, whether referring to only the content combined or to the combination of physically separate leafs or gatherings that are sewn or tipped in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "compilation manuscripts"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300404386",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300404386"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Events or activities of finding out or becoming aware of something that had been lost, forgotten, or previously unknown. Includes the finding of archaeological objects, lost buildings, places."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "discoveries"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300404704",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300404704"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifying numeric or alpha codes found, usually on the spine, of a manuscript, book or other volume, giving the location where the item can be found in the library."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "shelf marks"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300417204",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300417204"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Titles or names that were originally assigned to a work or assigned soon after its creation. It may refer to a former title or to a title that has been translated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "original titles"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300417207",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300417207"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For art cataloging, titles or names by which the work has been known in exhibitions, particularly when different from titles by which the work is normally known."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "exhibition titles (work titles)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300417260",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300417260"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The process or function of copying material or data to a computer drive, the cloud, or otherwise to a safe, more permanent location."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "saving (information handling)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300417639",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300417639"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Method of acquiring property by request from the creator or producer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commission (method of acquisition)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300420536",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300420536"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A category of handheld tools or weapons characterized by a sharp-edged blade attached to a handle, typically made of wood or metal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "axe weapons"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300422994",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300422994"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A small decorative item, often made of metal or other materials, that is attached to a necklace or bracelet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "charm pendant"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300425064",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300425064"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Machines for the production of electrical discharge at high voltage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "electrostatic generators"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300426696",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300426696"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Software used to create computer graphics, or edit and otherwise manipulate existing graphics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "graphics software"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300428379",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300428379"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Japanese decorative sword guards, and accessories such as handle decorations and skewers used to keep the sword in its scabbard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "tsuba kōzuka kogai sets"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300429747",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300429747"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A device that captures images or text documents and converts them into digital data that can be processed by a computer. These scanners use optical technology to scan physical documents or images and create digital representations of them."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "optical scanner"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300433476",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300433476"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Instruments used to discharge a capacitor, which is a device capable of storing energy within an electrostatic field."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "spark arresters"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300435434",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300435434"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A formal statement of the copyright or licensing of a work, and/or any restrictions placed on it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "copyright/licensing statement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300440768",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300440768"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Systematically arranged collections of pressed plant specimens that have been gathered in situ, then dried and pressed onto sheets of archival paper so that major morphological characteristics are preserved."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "herbaria (documents)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300445021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300445021"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Numbers used to identify an individual publication within a classification or location in a library."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "book numbers"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E12_Production",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -925,9 +2863,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in"
   } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in",
@@ -965,6 +2900,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/P11_had_participant"
   } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/P125_used_object_of_type",
@@ -1708,9 +3646,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E39_Actor"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of"
   } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of",
@@ -1745,6 +3680,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper"
   } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
@@ -2589,7 +4527,10 @@
   "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#status",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/dharc/ontology/chad-ap/",
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/dharc/ontology/chad-ap",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/abstract" : [ {
     "@language" : "en",
@@ -2611,7 +4552,7 @@
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
-    "@value" : "\n\nThe Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CH objects, and the _Process Module_ (PM), for describing the acquisition and digitisation process.\n\nBoth CHAD-AP and its [documentation](https://w3id.org/dharc/ontology/chad-ap) are living artefacts that have been drafted in the context of the [Project CHANGES](https://sites.google.com/uniroma1.it/changes/) (\"Cultural Heritage Active Innovation For Next-Gen Sustainable Society\"), an EU-funded project that  aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.\n\nCurrently, CHAD-AP is able to describe the following entities:\n* CH objects, described according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. In particular, CHAD-AP considers: the essence or conceptualisation of the CH object (_Work_); the intellectual content of the CH object (_Expression_); and the physical instance of the CH object (_Manifestation Singleton_);\n* Activities, events, agents involved and their roles;\n* Descriptive components, such as labels, types, identifiers and titles;\n* Entities related to curation and conservation, like curation events, places of conservation, agent responsible for its conservation, etc.\n* Concepts and other immaterial objects, such as the subjects illustrated by CH objects and the licenses or right statements assigned to them;\n* Digitization processes used to capture 3D data of CH objects and to output their digital models, and software activities leveraging these digital objects as input for further processes.\n\nThe following figure contains a [Graffoo diagram](http://www.essepuntato.it/graffoo) that provides an overview of the class and properties reused in CHAD-AP.\n\n![A Graffoo diagram of CHAD-AP](diagrams/profile-model.png)\n\nThe current version of the application profile reuses a subset of classes and properties selected from the following models:\n\n* [CIDOC CRM](http://www.cidoc-crm.org/cidoc-crm/) is an international ISO standard that provides an ontology related to cultural heritage and museum documentation, which can be extended with additional modules for covering particular descriptions at hand;\n* [CRMdig](http://www.ics.forth.gr/isl/CRMdig/) is an extension of CIDOC CRM for describing metadata related to the digital provenance of digitisation processes and digital representations;\n* [FRBRoo](http://iflastandards.info/ns/fr/frbr/frbroo/) is an ontology for representing bibliographic information according to the FRBR data model within the CIDOC CRM framework;\n* [AAT](http://vocab.getty.edu/page/aat/) is a structured vocabulary of terms used to describe art, architecture, decorative arts, and material culture.\n\nA full version of CHAD-AP is available at [https://w3id.org/dharc/ontology/chad-ap](https://w3id.org/dharc/ontology/chad-ap).\n\nThe next subsections provide a quick overview of all the entities defined, some exemple of usage, and some of the queries that CHAD-AP can answer.\n\n## Description\n### Object Module (OM)\nAs shown in the diagram below, a Cultural Heritage (CH) object is described in CHAD-AP according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. \n\n![A diagram of the CHAD-AP Object Module (OM).](diagrams/profile-model.png)\n\nIn particular, the _Work_ (`frbroo:F1_Work`) represents the _essence_ or conceptualization of the CH object. It begins with a conception event (`frbroo:F27_Work_Conception`) occurring within a specific time span (`crm:E52_Time-Span`), which can be expressed as either a precisely defined period with exact starting and ending date times (`crm:P82a_begin_of_the_begin` and `crm:P82b_end_of_the_end`) or a fuzzy label if its temporal extents are not precisely known (`crm:P82_at_some_time_within`). Each work is associated with a series of titles (`crm:E35_Title`), each classified according to a particular type (`crm:E55_Type`), which can be an _original title_ (`aat:300417204`) or an _exhibition title_ (`aat:300417207`). Furthermore, a Work can be part of a larger Work (`frbroo:F15_Complex_Work`), like a series of printed volumes, which is classified under a particular type (`crm:E55_Type`).\n\nThe _Expression_ (`frbroo:F2_Expression`) is the realisation of a Work, and refers to the intellectual _content_ of the object. It is generated through a creation event (`frbroo:F28_Expression_Creation`) made of smaller activities (`crm:E7_Activity`), each conducted by one or more agents (`crm:E39_Actor`) and characterised by a specific type (`crm:E55_Type`) that defines, implicitly, the role assumed by the agent for that activity. For example, if the agent is identified as the author of the Expression, the activity type is represented as _writing_ (`aat:300054698`). Also, creation events employ various creation techniques (`crm:E55_Type`). For example, `aat:300054196` is used to express _drawing technique_. An Expression can also be associated with one or more subjects defining its contents. In CHAD-AP, a generic _concept_ is represented with the class `crm:E73_Information_Object` with the type `aat:300404126` (i.e. _subject_) explicitly specified.\n\nFinally, the _Manifestation Singleton_ (`frbroo:F4_Manifestation_Singleton`) represents the physical instance of the CH object. It is accompanied with descriptive components like labels (expressed through the use of the property `crm:P3_has_note`), types (`crm:E55_Type`), and identifiers (`crm:E42_Identifier`). In some cases, it may be linked to a curation activity (`crm:E87_Curation_Activity`) carried out by a keeper (`crm:E39_Actor`) who manages a collection (`crm:E78_Curated_Holding`) the object belongs to, and that is located in a specific place (`crm:E53_Place`). Manifestations can consist of other Manifestations and may depict the Expression of another related object, such as a video displaying a manuscript or a tablet showing a picture of a specimen. In addition, Manifestations are associated with copyright or licensing statements (represented through the combination of `crm:E73_Information_Object` having type `aat:300435434`, i.e.  _copyright/licensing statement_), linked with the document introducing the actual license or right statements through the property `crm:P70i_is_documented_in`. Whenever possible, instances of `crm:E39_Actor` and `crm:E53_Place` are also linked with existing authority records through the property `crm:P48_has_preferred_identifier`.\n\n### Process Module (PM)\nAs shown in the diagram below, CHAD-AP also describes the entities for defining a 3D digitisation workflow as a sequence of activities classified according to two main categories. \n\n![A diagram of the CHAD-AP Process Module (PM).](diagrams/profile-model.png)\n\nOn the one hand, we have the _acquisition activity_ (`crmdig:D2_Digitization_Process`), which involves the digitisation of a CH object (`crm:E24_Physical_Human-Made_Thing`) to produce its digital CH object (`crmdig:D9_Data_Object`). Similarly to its physical counterpart, the digital CH object can be associated with copyright statements or licenses (`crm:E73_Information_Object` with `aat:300435434` as its type). The acquisition occurs within a time span (`crm:E52_Time-Span`) with defined starting and ending date times, and engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`) responsible for the activity. During the acquisition, a series of techniques (`crm:E55_Type`) can be used, such as _photogrammetry_ (`aat:300053580`) or _structured light scanning_ (`aat:300391312`), along with tools (`crmdig:D8_Digital_Device`) like _digital cameras_ (`aat:300266792`) and _structured light scanners_ (`aat:300429747`).\n\nOn the other hand, we have a series of _software activities_ (`crmdig:D10_Software_Execution`), each representing a specific stage or phase of digitisation workflow. Such stage is denoted by its type (`crm:E55_Type`), such as _processing_ (`aat:300054636`), _modelling_ (`aat:300391447`), and _optimization_ (`aat:300386427`). It involves the manipulation of the digital CH object (`crmdig:D9_Data_Object`) produced previously as input and the production of a modified version of that digital CH object (`crmdig:D9_Data_Object`) as output. The activity also occurs within a defined time span (`crm:E52_Time-Span`) with precise start and end date times, engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`), and uses software as tools to produce its output (`crmdig:D14_Software`).\n\n## Examples of use\nCHAD-AP can be used for modelling  scenarios related to cultural heritage acquisition and digitisation processes. In the following subsections we introduce some of them, and we accompany them with exemplar instantiations. \n\nThe prefixes that are used in all the examples provided below are defined as follows:\n\n    @prefix aat: <http://vocab.getty.edu/page/aat/> .\n    @prefix ex: <https://w3id.org/dharc/ontology/chad-ap/data/example/> .\n    @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .\n    @prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .\n    @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .\n    @prefix owl: <http://www.w3.org/2002/07/owl#> .\n    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n    @prefix xml: <http://www.w3.org/XML/1998/namespace> .\n    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n### Scenario 1\nThe creation event `01-exp-creation-00` created the CH object `01-exp` ('Amerigo Vespucci sveglia l’America') through the technique `engraving`. The creation event consists of three smaller creation events:\n* `01-exp-creation-01`, carried out by `Jan van der Straet` (`ULAN:500011304`), in the role of `illustration`;\n* `01-exp-creation-02`, carried out by `Philip Galle`, `Theodor Galle` and `Jan Collaert`, in the role of `engraving process`;\n* `01-exp-creation-03`, carried out by `Luigi Alamanni` (`ULAN:500714480`), in the role of `commission`.\n\nThe creation event `35-exp-creation-00` created the CH object `35-exp` ('De plantis epitome utilissima') through the technique `watercolor`. The creation event consists of two smaller creation events:\n* `35-exp-creation-01`, carried out by `Pietro Andrea Mattioli` (`VIAF:61549376`), in the role of `translation`;\n* `35-exp-creation-02`, carried out by `Pietro Andrea Mattioli` (`VIAF:61549376`), in the role of `illustration`.\n\nThe creation event `24-exp-creation-00` created the CH object `24-exp` ('Panthera onca (Linnaeus, 1758)') through the technique `taxidermy`. The creation event consists of two smaller creation events:\n* `24-exp-creation-01`, carried out by `Carl Linnaeus` (`VIAF:34594730`), in the role of `discovery`;\n* `24-exp-creation-02`, carried out by `Naturaliter`, in the role of `museum preparation`.\n\n```\nex:L1-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R17_created ex:L1-exp ;\n    crm:P32_used_general_technique aat:300053225 ;\n    crm:P9_consists_of ex:L1-exp-creation-01 ,\n        ex:L1-exp-creation-02 ,\n        ex:L1-exp-creation-03 .\n\nex:L1-exp-creation-01 a crm:E7_Activity ;\n    crm:P2_has_type aat:300054200 ;\n    crm:P14_carried_out_by ex:jan-van-der-straet .\n\nex:L1-exp-creation-02 a crm:E7_Activity ;\n    crm:P2_has_type aat:300053225 ;\n    crm:P14_carried_out_by ex:philip-galle ,\n        ex:theodor-galle ,\n        ex:jan-collaert .\n\nex:L1-exp-creation-03 a crm:E7_Activity ;\n    crm:P2_has_type aat:300417639 ;\n    crm:P14_carried_out_by ex:luigi-alamanni .\n\nex:L1-exp a frbroo:F2_Expression .\n\nex:jan-van-der-straet a crm:E39_Actor ;\n    crm:P48_has_preferred_identifier <http://vocab.getty.edu/page/ulan/500011304> .\n\nex:philip-galle a crm:E39_Actor .\n\nex:theodor-galle a crm:E39_Actor .\n\nex:jan-collaert a crm:E39_Actor .\n\nex:luigi-alamanni a crm:E39_Actor .\n\nex:35-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    crm:P32_used_general_technique aat:300015045 ;\n    frbroo:R17_created ex:35-exp ;\n    crm:P9_consists_of ex:35-exp-creation-01 ,\n        ex:35-exp-creation-02 .\n\nex:35-exp a frbroo:F2_Expression .\n\nex:35-exp-creation-01 a crm:E7_Activity ;\n    crm:P2_has_type aat:300069831 ;\n    crm:P14_carried_out_by ex:pietro-andrea-mattioli .\n\nex:35-exp-creation-02 a crm:E7_Activity ;\n    crm:P2_has_type aat:300054200 ;\n    crm:P14_carried_out_by ex:pietro-andrea-mattioli .\n\nex:pietro-andrea-mattioli a crm:E39_Actor ;\n    crm:P48_has_preferred_identifier <http://viaf.org/viaf/61549376> .\n\nex:24-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R17_created ex:24-exp ;\n    crm:P32_used_general_technique aat:300053628 ;\n    crm:P9_consists_of ex:24-exp-creation-01 ,\n        ex:24-exp-creation-02 .\n\nex:24-exp a frbroo:F2_Expression .\n\nex:24-exp-creation-01 a crm:E7_Activity ;\n    crm:P2_has_type aat:300404386 ;\n    crm:P14_carried_out_by ex:carl-linnaeus .\n\nex:24-exp-creation-02 a crm:E7_Activity ;\n    crm:P2_has_type aat:300077565 ;\n    crm:P14_carried_out_by ex:naturaliter .\n\nex:carl-linnaeus a crm:E39_Actor ;\n    crm:P48_has_preferred_identifier <http://viaf.org/viaf/34594730> .\n\nex:naturaliter a crm:E39_Actor .\n```\n\n#### Scenario 2\nThe creation event `01-exp-creation-00` created the CH object `01-man` ('Amerigo Vespucci sveglia l’America'). The CH object has the identifier '01' with type equal to `project id`. Its type is `print`. Its descriptive label is 'Amerigo Vespucci sveglia l’America\n Amerigo Vespucci awakens a sleeping America\n In\n Jan van del Straet (Stradano), Nova Reperta, c. 1589 – c.1593, Antwerp\n Amsterdam, Rijksmuseum'\n\nThe creation event `05-exp-creation-00` created the CH object `05-exp` ('De Historia Animalium lib. 9'). The CH object has the identifiers:\n* '05' with type equal to `project id`\n* '9' with type equal to `volume number`\n* 'A.V.GG.VII.28' with type equal to `shelf mark`\nIts type is `printed volume`. Its descriptive label is 'Aristoteles\n De Historia Animalium lib. 9 \n Venezia, Girolamo Scoto, 1545\n BUB, A.V.GG.VII.28'\n\nThe creation event `45-exp-creation-00` created the CH object `45-exp` ('Dryas octopetala L.'). The CH object has the identifiers:\n* '45' with type equal to `project id`\n* '13' with type equal to `volume number`\n* 'Erbario Aldrovandi, vol.13, carta 77' with type equal to `shelf mark`\nIts type is `specimen`. Its descriptive label is 'Dryas octopetala L.\n Camedrio alpino \n Mountain avens \n Erbario Aldrovandi, vol.13, carta 77\n sec. XVI 16th century\n Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo'\n\n```\nex:L1-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R18_created ex:L1-man .\n\nex:L1-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P48_has_preferred_identifier ex:L1-identifier-00 ;\n    crm:P2_has_type aat:300041273 ;\n    crm:P3_has_note \"Amerigo Vespucci sveglia l'America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum\"^^rdfs:Literal .\n\nex:L1-identifier-00 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"L1\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300312355 .\n\nex:05-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R18_created ex:05-man .\n\nex:05-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P48_has_preferred_identifier ex:05-identifier-00 ,\n        ex:05-identifier-01 ,\n        ex:05-identifier-02 ;\n    crm:P2_has_type aat:300265632 ;\n    crm:P3_has_note \"Aristoteles De Historia Animalium lib. 9 Venezia, Girolamo Scoto, 1545 BUB, A.V.GG.VII.28\"^^rdfs:Literal .\n\nex:05-identifier-00 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"05\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300312355 .\n\nex:05-identifier-01 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"9\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300445021 .\n\nex:05-identifier-02 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"A.V.GG.VII.28\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300404704 .\n\nex:45-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R18_created ex:45-man .\n\nex:45-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P48_has_preferred_identifier ex:45-identifier-00 ,\n        ex:45-identifier-01 ,\n        ex:45-identifier-02 ;\n    crm:P2_has_type aat:300235576 ;\n    crm:P3_has_note \"Dryas octopetala L. Camedrio alpino Mountain avens Erbario Aldrovandi, vol.13, carta 77 sec. XVI 16th century Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo\"^^rdfs:Literal .\n\nex:45-identifier-00 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"45\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300312355 .\n\nex:45-identifier-01 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"13\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300445021 .\n\nex:45-identifier-02 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"Erbario Aldrovandi, vol.13, carta 77\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300404704 .\n```\n\n#### Scenario 3\nA curation event `L1-curation` - carried out by `Rijksmuseum` (located in `Amsterdam`) - curated the collection `Nova Reperta` for the CH object `L1-man`.\n\nA curation event `1-curation` - carried out by `Sistema museale di Ateneo` (located in `Bologna`) - curated the collection `Collezione di Zoologia` for the CH object `1-man`.\n\nA curation event `14-curation` - carried out by `Sistema museale di Ateneo` (located in `Bologna`) - curated the collection `Collezione di Anatomia comparata` for the CH object `14-man`.\n\n```\nex:L1-curation a crm:E87_Curation_Activity ;\n    crm:P147_curated ex:nova-reperta ;\n    crm:P14_carried_out_by ex:rijksmuseum ;\n    crm:P12_occurred_in_the_presence_of ex:L1-man .\n\nex:L1-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P74_has_current_or_former_residence ex:rijksmuseum .\n\nex:nova-reperta a crm:E78_Curated_Holding .\n\nex:rijksmuseum a crm:E39_Actor ;\n    crm:P74_has_current_or_former_residence ex:amsterdam .\n\nex:amsterdam a crm:E53_Place .\n\nex:1-curation a crm:E87_Curation_Activity ;\n    crm:P147_curated ex:collezione-di-zoologia ;\n    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;\n    crm:P12_occurred_in_the_presence_of ex:1-man .\n\nex:1-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .\n\nex:collezione-di-zoologia a crm:E78_Curated_Holding .\n\nex:sistema-museale-di-ateneo a crm:E39_Actor ;\n    crm:P74_has_current_or_former_residence ex:bologna .\n\nex:bologna a crm:E53_Place .\n\nex:14-curation a crm:E87_Curation_Activity ;\n    crm:P147_curated ex:collezione-di-anatomia-comparata ;\n    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;\n    crm:P12_occurred_in_the_presence_of ex:14-man .\n\nex:14-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .\n\nex:collezione-di-anatomia-comparata a crm:E78_Curated_Holding .\n\n```\n\n#### Scenario 4\nA conception event `L1-work-conception` initiated the CH object `L1-work` ('Amerigo Vespucci sveglia l’America') in the time interval `1589-1593`, which starts in 1589-01-01 and ends in 1593-12-31.\n\nA conception event `1-work-conception` initiated the CH object `1-work` ('Carta nautica') in the time interval `1482`, which starts in 1482-01-01 and ends in 1482-12-31.\n\nA conception event `26-work-conception` initiated the CH object `26-work` ('Chrysanthemi') in the time interval `1500-1599`, which starts in 1500-01-01 and ends in 1599-12-31.\n\n```\nex:L1-work-conception a frbroo:F27_Work_Conception ;\n    frbroo:R16_initiated ex:L1-work ;\n    crm:P4_has_time-span ex:1589-1593 .            \n\nex:1589-1593 a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"1589-01-01T00:00:00\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"1593-12-31T23:59:59\"^^xsd:dateTime .\n\nex:L1-work a frbroo:F1_Work .\n\nex:1-work-conception a frbroo:F27_Work_Conception ;\n    frbroo:R16_initiated ex:1-work ;\n    crm:P4_has_time-span ex:1482 .            \n\nex:1482 a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"1482-01-01T00:00:00\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"1482-12-31T23:59:59\"^^xsd:dateTime .\n\nex:1-work a frbroo:F1_Work .\n\nex:26-work-conception a frbroo:F27_Work_Conception ;\n    frbroo:R16_initiated ex:26-work ;\n    crm:P4_has_time-span ex:1500-1599 .            \n\nex:1500-1599 a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"1500-01-01T00:00:00\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"1599-12-31T23:59:59\"^^xsd:dateTime .\n\nex:26-work a frbroo:F1_Work .\n```\n\n#### Scenario 5\nThe creation event `L1-exp-creation` created the work `L1-work`, the expression `L1-exp` and the manifestation `L1-man`. \n`L1-work` has two titles: the original title `L1-work-title-01` ('Amerigo Vespucci sveglia l'America'), and the exhibition title `L1-work-title-02` ('Amerigo Vespucci sveglia l'America'). It is member of the parent work `Nova Reperta`, which has `print series` as its type.\n`L1-exp` is about the following subjects: `amerigo vespucci`, `astrolabio`, `vessillo croce del sud`, `formichiere`, `bradipo`, `tapiro`, and `gruppo di cannibali`.\n\nThe creation event `1-exp-creation` created the work `1-work`, the expression `1-exp` and the manifestation `1-man`. \n`1-work` has two titles: the original title `1-work-title-01` ('Carta nautica'), and the exhibition title `1-work-title-02` ('Carta nautica').\n`1-exp` is about the following subjects: `europa`, `africa`, `asia`, and `mar mediterraneo`.\n\nThe creation event `7-exp-creation` created the work `7-work`, the expression `7-exp` and the manifestation `7-man`. \n`7-work` has two titles: the original title `7-work-title-01` ('Profilo incompleto delle coste del continente americano'), and the exhibition title `7-work-title-02` ('Profilo incompleto delle coste del continente americano'). It is member of the parent work `Atlante Nautico`, which has `marine chart` as its type.\n`7-exp` is about the following subjects: `america` and `europa`.\n\n```\nex:L1-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:L1-work ;\n    frbroo:R17_created ex:L1-exp ;\n    frbroo:R18_created ex:L1-man .\n\nex:L1-work a frbroo:F1_Work ;\n    crm:P102_has_title ex:L1-work-title-01 ,\n        ex:L1-work-title-02 .\n\nex:L1-work-title-01 a crm:E35_Title ;\n    crm:P2_has_type aat:300417204 ;\n    crm:P190_has_symbolic_content \"Amerigo Vespucci sveglia l'America\"@it .\n\nex:L1-work-title-02 a crm:E35_Title ;\n    crm:P2_has_type aat:300417207 ;\n    crm:P190_has_symbolic_content \"Amerigo Vespucci sveglia l'America\"@en .\n\nex:L1-exp a frbroo:F2_Expression ;\n    crm:P129_is_about ex:sub-amerigo-vespucci ,\n        ex:sub-astrolabio ,\n        ex:sub-vessillo-croce-del-sud ,\n        ex:sub-formichiere ,\n        ex:sub-bradipo ,\n        ex:sub-tapiro ,\n        ex:sub-gruppo-di-cannibali .\n\nex:L1-man a frbroo:F4_Manifestation_Singleton .\n\nex:L1-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:L1-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:1-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:1-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:7-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:7-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:PTa-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:PTa-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:PTa-1-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:PTa-1-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:PTa-2-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:PTa-2-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:PTa-3-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:PTa-3-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:nova-reperta a frbroo:F15_Complex_Work ;\n    frbroo:R10_has_member ex:L1-work ;\n    crm:P2_has_type aat:300189634 .\n\nex:sub-amerigo-vespucci a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-astrolabio a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-vessillo-croce-del-sud a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-formichiere a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-bradipo a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-tapiro a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-gruppo-di-cannibali a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:1-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:1-work ;\n    frbroo:R17_created ex:1-exp ;\n    frbroo:R18_created ex:1-man .\n\nex:1-work a frbroo:F1_Work ;\n    crm:P102_has_title ex:1-work-title-01 ,\n        ex:1-work-title-02 .\n\nex:1-work-title-01 a crm:E35_Title ;\n    crm:P2_has_type aat:300417204 ;\n    crm:P190_has_symbolic_content \"Carta nautica\"@it .\n\nex:1-work-title-02 a crm:E35_Title ;\n    crm:P2_has_type aat:300417207 ;\n    crm:P190_has_symbolic_content \"Carta nautica\"@it .\n\nex:1-exp a frbroo:F2_Expression ;\n    crm:P129_is_about ex:sub-europa ,\n        ex:sub-africa ,\n        ex:sub-asia ,\n        ex:sub-mar-mediterraneo .\n\nex:1-man a frbroo:F4_Manifestation_Singleton .\n\nex:sub-europa a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-africa a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-asia a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-mar-mediterraneo a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:7-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:7-work ;\n    frbroo:R17_created ex:7-exp ;\n    frbroo:R18_created ex:7-man .\n\nex:7-work a frbroo:F1_Work ;\n    crm:P102_has_title ex:7-work-title-01 ,\n        ex:7-work-title-02 .\n\nex:7-work-title-01 a crm:E35_Title ;\n    crm:P2_has_type aat:300417204 ;\n    crm:P190_has_symbolic_content \"Profilo incompleto delle coste del continente americano\"@it .\n\nex:7-work-title-02 a crm:E35_Title ;\n    crm:P2_has_type aat:300417207 ;\n    crm:P190_has_symbolic_content \"Profilo incompleto delle coste del continente americano\"@it .\n\nex:7-exp a frbroo:F2_Expression ;\n    crm:P129_is_about ex:sub-america ,\n        ex:sub-europa .\n\nex:7-man a frbroo:F4_Manifestation_Singleton .\n\nex:atlante-nautico a frbroo:F15_Complex_Work ;\n    frbroo:R10_has_member ex:7-work ;\n    crm:P2_has_type aat:300028309 .\n\nex:sub-america a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:PTa-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:PTa-work ;\n    frbroo:R17_created ex:PTa-exp ;\n    frbroo:R18_created ex:PTa-man .\n\nex:PTa-work a frbroo:F1_Work .\n\nex:PTa-exp a frbroo:F2_Expression .\n\nex:PTa-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P46_is_composed_of ex:PTa-1-man , \n        ex:PTa-2-man .\n\nex:PTa-1-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:PTa-1-work ;\n    frbroo:R17_created ex:PTa-1-exp ;\n    frbroo:R18_created ex:PTa-1-man .\n\nex:PTa-1-work a frbroo:F1_Work .\n\nex:PTa-1-exp a frbroo:F2_Expression .\n\nex:PTa-1-man a frbroo:F4_Manifestation_Singleton .\n\nex:PTa-2-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:PTa-2-work ;\n    frbroo:R17_created ex:PTa-2-exp ;\n    frbroo:R18_created ex:PTa-2-man .\n\nex:PTa-2-work a frbroo:F1_Work .\n\nex:PTa-2-exp a frbroo:F2_Expression .\n\nex:PTa-2-man a frbroo:F4_Manifestation_Singleton .\n\nex:PTa-3-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:PTa-3-work ;\n    frbroo:R17_created ex:PTa-3-exp ;\n    frbroo:R18_created ex:PTa-3-man .\n\nex:PTa-3-work a frbroo:F1_Work .\n\nex:PTa-3-exp a frbroo:F2_Expression .\n\nex:PTa-3-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P62_depicts ex:PTa-man .\n```\n\n#### Scenario 6\nThe object `32` has been digitally acquired on the 8th of May 2023. The digitization process produced a 3D model `32-output-acq` as an output, provided with a 'CC BY-NC 4.0' license, which will be used as an input by the software activity `32-proc`.\n\n```\nex:32 a crm:E24_Physical_Human-Made_Thing .\n\nex:32-acq a crmdig:D2_Digitization_Process ;\n    crmdig:L1_digitized ex:32 ;\n    crmdig:L11_had_output ex:32-acq-output ;\n    crm:P4_has_time-span ex:32-acq-timespan .\n\nex:32-proc a crmdig:D10_Software_Execution ;\n    crmdig:L10_had_input ex:32-acq-output ;\n    crm:P4_has_time-span ex:32-proc-timespan .\n\nex:32-acq-output a crmdig:D9_Data_Object .\n\nex:32-acq-output-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:32-acq-output ;\n    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .\n\nex:32-acq-timespan a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"2023-05-08T00:00:00Z\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"2023-05-08T23:59:59Z\"^^xsd:dateTime .\n\nex:32-proc-timespan a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"2023-05-10T00:00:00Z\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"2023-05-10T23:59:59Z\"^^xsd:dateTime .\n```\n\n#### Scenario 7\nThe digital object `15-proc-output` has been generated as an output during the processing activity carried out by the person `Federica Collina`, who belongs to the institution `UNIBO DBC`. The processing activity used the digital object `15-acq-output` (produced by the digitization process `15-acq`) as an input.\n\n```\nex:15 a crm:E24_Physical_Human-Made_Thing .\n\nex:15-acq a crmdig:D2_Digitization_Process ;\n    crmdig:L11_had_output ex:15-acq-output .\n\nex:15-proc a crmdig:D10_Software_Execution ;\n    crm:P2_has_type aat:300054636 ;\n    crmdig:L10_had_input ex:15-acq-output ;\n    crmdig:L11_had_output ex:15-proc-output ;\n    crm:P11_had_participant ex:unibo-dbc ;\n    crm:P14_carried_out_by ex:federica-collina .\n\nex:15-acq-output a crmdig:D9_Data_Object .\n\nex:15-proc-output a crmdig:D9_Data_Object .\n\nex:federica-collina a crm:E21_Person .\n\nex:unibo-dbc a crm:E74_Group .\n```\n\n#### Scenario 8\nThe physical object `15` has been digitally acquired through the `structured light scanning` technique and the `scanner spider` tool. The digitization process produced a 3D model `15-acq-output` as an output.\n\n```\nex:15 a crm:E24_Physical_Human-Made_Thing .\n\nex:15-acq a crmdig:D2_Digitization_Process ;\n    crmdig:L1_digitized ex:15 ;\n    crmdig:L11_had_output ex:15-acq-output ;\n    crm:P32_used_general_technique aat:300391312 ;\n    crm:P16_used_specific_object ex:artec-spider .\n\nex:15-proc a crmdig:D10_Software_Execution ;\n    crm:P2_has_type aat:300054636 ;\n    crmdig:L10_had_input ex:15-acq-output ;\n    crmdig:L11_had_output ex:15-proc-output ;\n    crmdig:L23_used_software_or_firmware ex:artec-studio-14 .\n\nex:15-acq-output a crmdig:D9_Data_Object .\n\nex:15-proc-output a crmdig:D9_Data_Object .\n\nex:artec-spider a crmdig:D8_Digital_Device ;\n    crm:P2_has_type aat:300429747 .\n\nex:artec-studio-14 a crmdig:D14_Software ;\n    crm:P2_has_type aat:300426696 .\n```\n\n### Competency questions\nCHAD-AP can be used for answering several questions related to the acquisition and digitisation of cultural heritage objects. In the following subsections we introduce some of them, and we accompany them with exemplar SPARQL queries. \n\nThe prefixes that are used in all the SPARQL queries provided below are defined as follows:\n\n    PREFIX aat: <http://vocab.getty.edu/page/aat/>\n    PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\n    PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>\n    PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/data/example/>\n    PREFIX frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/>  \n\n\n#### Question 1\nWhat are the CH objects whose creation involved some author?\n\n    SELECT ?resource ?agent\n    WHERE {\n        ?creation_event a frbroo:F28_Expression_Creation ;\n            frbroo:R17_created ?resource ;\n            crm:P9_consists_of ?activity .\n        ?activity crm:P2_has_type aat:300404387 ;\n            crm:P14_carried_out_by ?agent .\n    }\n\n#### Question 2\nWhat are the agents and the types of  activities they carried out to contribute to the creation of `32-exp`?\n\n    SELECT ?agent ?type\n    WHERE {\n        ?creation_event a frbroo:F28_Expression_Creation ;\n            frbroo:R17_created ex:32-exp ;\n            crm:P9_consists_of ?activity .\n        ?activity crm:P2_has_type ?type ;\n            crm:P14_carried_out_by ?agent .\n    }\n\n#### Question 3\nWhat are the agents involved in the creation of the CH objects that have been created through the drawing technique? What are the types of the activities they carried out?\n\n    SELECT ?resource ?agent ?type\n    WHERE {\n        ?creation_event a frbroo:F28_Expression_Creation ;\n            crm:P32_used_general_technique aat:300033973 ;\n            frbroo:R17_created ?resource ;\n            crm:P9_consists_of ?activity .\n        ?activity crm:P2_has_type ?type ;\n            crm:P14_carried_out_by ?agent .\n    }\n\n#### Question 4\nWhat are the identifiers of the manuscript? What are their types?\n\n    SELECT ?resource ?identifier_text ?type\n    WHERE {\n        ?resource a frbroo:F4_Manifestation_Singleton ;\n            crm:P2_has_type aat:300028569 ;\n            crm:P48_has_preferred_identifier ?identifier .\n        ?identifier crm:P2_has_type ?type ;\n            crm:P190_has_symbolic_content ?identifier_text.\n    }\n\n#### Question 5\nWhat is the shelf mark of the CH object with the project ID '32'?\n\n    SELECT ?identifier_text\n    WHERE {\n        ?resource a frbroo:F4_Manifestation_Singleton ;\n        crm:P48_has_preferred_identifier ?identifier1 ,\n            ?identifier2 .\n        ?identifier1 crm:P2_has_type aat:300312355 ;\n            crm:P190_has_symbolic_content \"32\"^^rdfs:Literal .\n        ?identifier2 crm:P2_has_type aat:300404704 ;\n            crm:P190_has_symbolic_content ?identifier_text.\n    }\n\n#### Question 6\nWhat are the descriptive labels of the CH objects that either have shelf marks or are prints?\n\n    SELECT ?resource ?label\n    WHERE {\n        ?resource a frbroo:F4_Manifestation_Singleton ;\n            crm:P48_has_preferred_identifier ?identifier ;\n            crm:P2_has_type ?type ;\n            crm:P3_has_note ?label .\n        ?identifier crm:P2_has_type ?id_type .\n        FILTER(?type = aat:300041273 || ?id_type = aat:300404704)\n    }\n\n#### Question 7\nWhat are the CH objects whose collections have been curated by agents located in Bologna?\n\n    SELECT ?resource ?agent\n    WHERE {\n        ?curation a crm:E87_Curation_Activity ;\n            crm:P14_carried_out_by ?agent ;\n            crm:P12_occurred_in_the_presence_of ?resource .\n        ?agent crm:P74_has_current_or_former_residence ex:bologna .\n    }\n\n#### Question 8\nWhat are the CH objects and the time spans of their conception events?\n\n    SELECT ?resource ?time_interval\n    WHERE {\n        ?conception_event a frbroo:F27_Work_Conception ;\n            frbroo:R16_initiated ?resource ;\n            crm:P4_has_time-span ?time_interval .\n    }\n    \n#### Question 9\nWhat are the titles of the work `32-work`? What are their types?\n    \n    SELECT ?title ?type ?content\n    WHERE {\n        ?creation a frbroo:F28_Expression_Creation ;\n            frbroo:R19_created_a_realisation_of ex:32-work .\n        ex:32-work crm:P102_has_title ?title .\n        ?title crm:P2_has_type ?type ;\n            crm:P190_has_symbolic_content ?content .\n    }\n\n#### Question 10\nWhat are the parent works of the works that have either 'ermafrodita' as their subject?\n    \n    SELECT ?parent ?work ?subject\n    WHERE {\n        ?creation a frbroo:F28_Expression_Creation ;\n            frbroo:R19_created_a_realisation_of ?work ;\n            frbroo:R17_created ?expression .\n        ?parent a frbroo:F15_Complex_Work ;\n            frbroo:R10_has_member ?work .\n        ?expression a frbroo:F2_Expression ;\n            crm:P129_is_about ex:sub-ermafrodita .\n    }\n\n#### Question 11\nWhich license statements are assigned to the manifestations?\n    \n    SELECT ?manifestation ?license_link\n    WHERE {\n        ?license crm:P67_refers_to ?manifestation ;\n            crm:P2_has_type aat:300435434 ;\n            crm:P70i_is_documented_in ?license_link .\n    }\n\n#### Question 12\nWhat is the cultural object digitized and the digital object produced by the digitization process? What is the latter's license?\n     \n    SELECT ?input ?output ?license_link\n    WHERE {\n        ?activity a crmdig:D2_Digitization_Process ;\n            crmdig:L1_digitized ?input ;\n            crmdig:L11_had_output ?output .\n        ?license crm:P2_has_type aat:300435434 ;\n            crm:P67_refers_to ?output ;\n            crm:P70i_is_documented_in ?license_link .\n    }\n\n#### Question 13\nWhat are the starting and ending date times in which the digitization process and the following software activity occurred?\n\n    SELECT ?activity ?start ?end\n    WHERE {\n        ?activity a crmdig:D2_Digitization_Process;\n            crm:P4_has_time-span ?timespan .\n        ?timespan crm:P82a_begin_of_the_begin ?start ;\n            crm:P82b_end_of_the_end ?end .\n    }\n\n#### Question 14\nWhat are the digitization process, its output, the processing activity and its output?\n\n    SELECT ?digitization ?input ?activity ?output\n    WHERE {\n        ?activity a crmdig:D10_Software_Execution ;\n        crm:P2_has_type aat:300054636 ;\n        crmdig:L10_had_input ?input ;\n        crmdig:L11_had_output ?output .\n        ?digitization crmdig:L11_had_output ?input .\n    }\n\n#### Question 15\nWhat are the people and institutions who either carried out or were participants in the processing activity?\n\n    SELECT ?person ?institution\n    WHERE {\n        ?activity a crmdig:D10_Software_Execution ;\n        crm:P2_has_type aat:300054636 ;\n        crm:P14_carried_out_by ?person ;\n        crm:P11_had_participant ?institution .\n    }\n\n#### Question 16\nWhat are the techniques used in digitization processes?\n\n    SELECT ?technique ?activity\n    WHERE {\n        ?activity a crmdig:D2_Digitization_Process ;\n            crm:P32_used_general_technique ?technique .\n    }\n\n#### Question 17\nWhat are the tools and their types used in processing activities?\n\n    SELECT ?tool ?type\n    WHERE {\n        ?activity a crmdig:D10_Software_Execution ;\n            crm:P2_has_type aat:300054636 ;\n            crmdig:L23_used_software_or_firmware ?tool .\n        ?tool a crmdig:D14_Software ;\n            crm:P2_has_type ?type .\n    }\n"
+    "@value" : "\n\nThe Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process.\n\nBoth CHAD-AP and its [documentation](https://w3id.org/dharc/ontology/chad-ap) are living artefacts that have been drafted in the context of the [Project CHANGES](https://sites.google.com/uniroma1.it/changes/) (\"Cultural Heritage Active Innovation For Next-Gen Sustainable Society\"), an EU-funded project that  aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.\n\nCurrently, CHAD-AP is able to describe the following entities:\n* CH objects, described according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. In particular, CHAD-AP considers: the essence or conceptualisation of the CH object (_Work_); the intellectual content of the CH object (_Expression_); and the physical instance of the CH object (_Manifestation Singleton_);\n* Activities, events, agents involved and their roles;\n* Descriptive components, such as labels, types, identifiers and titles;\n* Entities related to curation and conservation, like curation events, places of conservation, agent responsible for its conservation, etc.\n* Concepts and other immaterial objects, such as the subjects illustrated by CH objects and the licenses or right statements assigned to them;\n* Digitization processes used to capture 3D data of CH objects and to output their digital models, and software activities leveraging these digital objects as input for further processes.\n\nThe following figure contains a [Graffoo diagram](http://www.essepuntato.it/graffoo) that provides an overview of the class and properties reused in CHAD-AP.\n\n![A Graffoo diagram of CHAD-AP](diagrams/profile-model.png)\n\nThe current version of the application profile reuses a subset of classes and properties selected from the following models:\n\n* [CIDOC CRM](http://www.cidoc-crm.org/cidoc-crm/) is an international ISO standard that provides an ontology related to cultural heritage and museum documentation, which can be extended with additional modules for covering particular descriptions at hand;\n* [CRMdig](http://www.ics.forth.gr/isl/CRMdig/) is an extension of CIDOC CRM for describing metadata related to the digital provenance of digitisation processes and digital representations;\n* [FRBRoo](http://iflastandards.info/ns/fr/frbr/frbroo/) is an ontology for representing bibliographic information according to the FRBR data model within the CIDOC CRM framework;\n* [AAT](http://vocab.getty.edu/page/aat/) is a structured vocabulary of terms used to describe art, architecture, decorative arts, and material culture.\n\nA full version of CHAD-AP is available at [https://w3id.org/dharc/ontology/chad-ap](https://w3id.org/dharc/ontology/chad-ap).\n\nThe next subsections provide a quick overview of all the entities defined, some exemple of usage, and some of the queries that CHAD-AP can answer.\n\n## Description\n### Object Module (OM)\nAs shown in the diagram below, a Cultural Heritage (CH) object is described in CHAD-AP according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. \n\n![A diagram of the CHAD-AP Object Module (OM).](diagrams/profile-model.png)\n\nIn particular, the _Work_ (`frbroo:F1_Work`) represents the _essence_ or conceptualization of the CH object. It begins with a conception event (`frbroo:F27_Work_Conception`) occurring within a specific time span (`crm:E52_Time-Span`), which can be expressed as either a precisely defined period with exact starting and ending date times (`crm:P82a_begin_of_the_begin` and `crm:P82b_end_of_the_end`) or a fuzzy label if its temporal extents are not precisely known (`crm:P82_at_some_time_within`). Each work is associated with a series of titles (`crm:E35_Title`), each classified according to a particular type (`crm:E55_Type`), which can be an _original title_ (`aat:300417204`) or an _exhibition title_ (`aat:300417207`). Furthermore, a Work can be part of a larger Work (`frbroo:F15_Complex_Work`), like a series of printed volumes, which is classified under a particular type (`crm:E55_Type`).\n\nThe _Expression_ (`frbroo:F2_Expression`) is the realisation of a Work, and refers to the intellectual _content_ of the object. It is generated through a creation event (`frbroo:F28_Expression_Creation`) made of smaller activities (`crm:E7_Activity`), each conducted by one or more agents (`crm:E39_Actor`) and characterised by a specific type (`crm:E55_Type`) that defines, implicitly, the role assumed by the agent for that activity. For example, if the agent is identified as the author of the Expression, the activity type is represented as _writing_ (`aat:300054698`). Also, creation events employ various creation techniques (`crm:E55_Type`). For example, `aat:300054196` is used to express _drawing technique_. An Expression can also be associated with one or more subjects defining its contents. In CHAD-AP, a generic _concept_ is represented with the class `crm:E73_Information_Object` with the type `aat:300404126` (i.e. _subject_) explicitly specified.\n\nFinally, the _Manifestation Singleton_ (`frbroo:F4_Manifestation_Singleton`) represents the physical instance of the CH object. It is accompanied with descriptive components like labels (expressed through the use of the property `crm:P3_has_note`), types (`crm:E55_Type`), and identifiers (`crm:E42_Identifier`). In some cases, it may be linked to a curation activity (`crm:E87_Curation_Activity`) carried out by a keeper (`crm:E39_Actor`) who manages a collection (`crm:E78_Curated_Holding`) the object belongs to, and that is located in a specific place (`crm:E53_Place`). Manifestations can consist of other Manifestations and may depict the Expression of another related object, such as a video displaying a manuscript or a tablet showing a picture of a specimen. In addition, Manifestations are associated with copyright or licensing statements (represented through the combination of `crm:E73_Information_Object` having type `aat:300435434`, i.e.  _copyright/licensing statement_), linked with the document introducing the actual license or right statements through the property `crm:P70i_is_documented_in`. Whenever possible, instances of `crm:E39_Actor` and `crm:E53_Place` are also linked with existing authority records through the property `crm:P48_has_preferred_identifier`.\n\n### Process Module (PM)\nAs shown in the diagram below, CHAD-AP also describes the entities for defining a 3D digitisation workflow as a sequence of activities classified according to two main categories. \n\n![A diagram of the CHAD-AP Process Module (PM).](diagrams/profile-model.png)\n\nOn the one hand, we have the _acquisition activity_ (`crmdig:D2_Digitization_Process`), which involves the digitisation of a CH object (`crm:E24_Physical_Human-Made_Thing`) to produce its digital CH object (`crmdig:D9_Data_Object`). Similarly to its physical counterpart, the digital CH object can be associated with copyright statements or licenses (`crm:E73_Information_Object` with `aat:300435434` as its type). The acquisition occurs within a time span (`crm:E52_Time-Span`) with defined starting and ending date times, and engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`) responsible for the activity. During the acquisition, a series of techniques (`crm:E55_Type`) can be used, such as _photogrammetry_ (`aat:300053580`) or _structured light scanning_ (`aat:300391312`), along with tools (`crmdig:D8_Digital_Device`) like _digital cameras_ (`aat:300266792`) and _structured light scanners_ (`aat:300429747`).\n\nOn the other hand, we have a series of _software activities_ (`crmdig:D10_Software_Execution`), each representing a specific stage or phase of digitisation workflow. Such stage is denoted by its type (`crm:E55_Type`), such as _processing_ (`aat:300054636`), _modelling_ (`aat:300391447`), and _optimization_ (`aat:300386427`). It involves the manipulation of the digital CH object (`crmdig:D9_Data_Object`) produced previously as input and the production of a modified version of that digital CH object (`crmdig:D9_Data_Object`) as output. The activity also occurs within a defined time span (`crm:E52_Time-Span`) with precise start and end date times, engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`), and uses software as tools to produce its output (`crmdig:D14_Software`).\n\n## Examples of use\nCHAD-AP can be used for modelling  scenarios related to cultural heritage acquisition and digitisation processes. In the following subsections we introduce some of them, and we accompany them with exemplar instantiations. \n\nThe prefixes that are used in all the examples provided below are defined as follows:\n\n    @prefix aat: <http://vocab.getty.edu/page/aat/> .\n    @prefix ex: <https://w3id.org/dharc/ontology/chad-ap/data/example/> .\n    @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .\n    @prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .\n    @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .\n    @prefix owl: <http://www.w3.org/2002/07/owl#> .\n    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n    @prefix xml: <http://www.w3.org/XML/1998/namespace> .\n    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n### Scenario 1\nThe creation event `01-exp-creation-00` created the CH object `01-exp` ('Amerigo Vespucci sveglia l’America') through the technique `engraving`. The creation event consists of three smaller creation events:\n* `01-exp-creation-01`, carried out by `Jan van der Straet` (`ULAN:500011304`), in the role of `illustration`;\n* `01-exp-creation-02`, carried out by `Philip Galle`, `Theodor Galle` and `Jan Collaert`, in the role of `engraving process`;\n* `01-exp-creation-03`, carried out by `Luigi Alamanni` (`ULAN:500714480`), in the role of `commission`.\n\nThe creation event `35-exp-creation-00` created the CH object `35-exp` ('De plantis epitome utilissima') through the technique `watercolor`. The creation event consists of two smaller creation events:\n* `35-exp-creation-01`, carried out by `Pietro Andrea Mattioli` (`VIAF:61549376`), in the role of `translation`;\n* `35-exp-creation-02`, carried out by `Pietro Andrea Mattioli` (`VIAF:61549376`), in the role of `illustration`.\n\nThe creation event `24-exp-creation-00` created the CH object `24-exp` ('Panthera onca (Linnaeus, 1758)') through the technique `taxidermy`. The creation event consists of two smaller creation events:\n* `24-exp-creation-01`, carried out by `Carl Linnaeus` (`VIAF:34594730`), in the role of `discovery`;\n* `24-exp-creation-02`, carried out by `Naturaliter`, in the role of `museum preparation`.\n\n```\nex:L1-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R17_created ex:L1-exp ;\n    crm:P32_used_general_technique aat:300053225 ;\n    crm:P9_consists_of ex:L1-exp-creation-01 ,\n        ex:L1-exp-creation-02 ,\n        ex:L1-exp-creation-03 .\n\nex:L1-exp-creation-01 a crm:E7_Activity ;\n    crm:P2_has_type aat:300054200 ;\n    crm:P14_carried_out_by ex:jan-van-der-straet .\n\nex:L1-exp-creation-02 a crm:E7_Activity ;\n    crm:P2_has_type aat:300053225 ;\n    crm:P14_carried_out_by ex:philip-galle ,\n        ex:theodor-galle ,\n        ex:jan-collaert .\n\nex:L1-exp-creation-03 a crm:E7_Activity ;\n    crm:P2_has_type aat:300417639 ;\n    crm:P14_carried_out_by ex:luigi-alamanni .\n\nex:L1-exp a frbroo:F2_Expression .\n\nex:jan-van-der-straet a crm:E39_Actor ;\n    crm:P48_has_preferred_identifier <http://vocab.getty.edu/page/ulan/500011304> .\n\nex:philip-galle a crm:E39_Actor .\n\nex:theodor-galle a crm:E39_Actor .\n\nex:jan-collaert a crm:E39_Actor .\n\nex:luigi-alamanni a crm:E39_Actor .\n\nex:35-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    crm:P32_used_general_technique aat:300015045 ;\n    frbroo:R17_created ex:35-exp ;\n    crm:P9_consists_of ex:35-exp-creation-01 ,\n        ex:35-exp-creation-02 .\n\nex:35-exp a frbroo:F2_Expression .\n\nex:35-exp-creation-01 a crm:E7_Activity ;\n    crm:P2_has_type aat:300069831 ;\n    crm:P14_carried_out_by ex:pietro-andrea-mattioli .\n\nex:35-exp-creation-02 a crm:E7_Activity ;\n    crm:P2_has_type aat:300054200 ;\n    crm:P14_carried_out_by ex:pietro-andrea-mattioli .\n\nex:pietro-andrea-mattioli a crm:E39_Actor ;\n    crm:P48_has_preferred_identifier <http://viaf.org/viaf/61549376> .\n\nex:24-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R17_created ex:24-exp ;\n    crm:P32_used_general_technique aat:300053628 ;\n    crm:P9_consists_of ex:24-exp-creation-01 ,\n        ex:24-exp-creation-02 .\n\nex:24-exp a frbroo:F2_Expression .\n\nex:24-exp-creation-01 a crm:E7_Activity ;\n    crm:P2_has_type aat:300404386 ;\n    crm:P14_carried_out_by ex:carl-linnaeus .\n\nex:24-exp-creation-02 a crm:E7_Activity ;\n    crm:P2_has_type aat:300077565 ;\n    crm:P14_carried_out_by ex:naturaliter .\n\nex:carl-linnaeus a crm:E39_Actor ;\n    crm:P48_has_preferred_identifier <http://viaf.org/viaf/34594730> .\n\nex:naturaliter a crm:E39_Actor .\n```\n\n#### Scenario 2\nThe creation event `01-exp-creation-00` created the CH object `01-man` ('Amerigo Vespucci sveglia l’America'). The CH object has the identifier '01' with type equal to `project id`. Its type is `print`. Its descriptive label is 'Amerigo Vespucci sveglia l’America\n Amerigo Vespucci awakens a sleeping America\n In\n Jan van del Straet (Stradano), Nova Reperta, c. 1589 – c.1593, Antwerp\n Amsterdam, Rijksmuseum'\n\nThe creation event `05-exp-creation-00` created the CH object `05-exp` ('De Historia Animalium lib. 9'). The CH object has the identifiers:\n* '05' with type equal to `project id`\n* '9' with type equal to `volume number`\n* 'A.V.GG.VII.28' with type equal to `shelf mark`\nIts type is `printed volume`. Its descriptive label is 'Aristoteles\n De Historia Animalium lib. 9 \n Venezia, Girolamo Scoto, 1545\n BUB, A.V.GG.VII.28'\n\nThe creation event `45-exp-creation-00` created the CH object `45-exp` ('Dryas octopetala L.'). The CH object has the identifiers:\n* '45' with type equal to `project id`\n* '13' with type equal to `volume number`\n* 'Erbario Aldrovandi, vol.13, carta 77' with type equal to `shelf mark`\nIts type is `specimen`. Its descriptive label is 'Dryas octopetala L.\n Camedrio alpino \n Mountain avens \n Erbario Aldrovandi, vol.13, carta 77\n sec. XVI 16th century\n Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo'\n\n```\nex:L1-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R18_created ex:L1-man .\n\nex:L1-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P48_has_preferred_identifier ex:L1-identifier-00 ;\n    crm:P2_has_type aat:300041273 ;\n    crm:P3_has_note \"Amerigo Vespucci sveglia l'America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum\"^^rdfs:Literal .\n\nex:L1-identifier-00 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"L1\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300312355 .\n\nex:05-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R18_created ex:05-man .\n\nex:05-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P48_has_preferred_identifier ex:05-identifier-00 ,\n        ex:05-identifier-01 ,\n        ex:05-identifier-02 ;\n    crm:P2_has_type aat:300265632 ;\n    crm:P3_has_note \"Aristoteles De Historia Animalium lib. 9 Venezia, Girolamo Scoto, 1545 BUB, A.V.GG.VII.28\"^^rdfs:Literal .\n\nex:05-identifier-00 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"05\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300312355 .\n\nex:05-identifier-01 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"9\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300445021 .\n\nex:05-identifier-02 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"A.V.GG.VII.28\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300404704 .\n\nex:45-exp-creation-00 a frbroo:F28_Expression_Creation ;\n    frbroo:R18_created ex:45-man .\n\nex:45-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P48_has_preferred_identifier ex:45-identifier-00 ,\n        ex:45-identifier-01 ,\n        ex:45-identifier-02 ;\n    crm:P2_has_type aat:300235576 ;\n    crm:P3_has_note \"Dryas octopetala L. Camedrio alpino Mountain avens Erbario Aldrovandi, vol.13, carta 77 sec. XVI 16th century Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo\"^^rdfs:Literal .\n\nex:45-identifier-00 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"45\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300312355 .\n\nex:45-identifier-01 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"13\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300445021 .\n\nex:45-identifier-02 a crm:E42_Identifier ;\n    crm:P190_has_symbolic_content \"Erbario Aldrovandi, vol.13, carta 77\"^^rdfs:Literal ;\n    crm:P2_has_type aat:300404704 .\n```\n\n#### Scenario 3\nA curation event `L1-curation` - carried out by `Rijksmuseum` (located in `Amsterdam`) - curated the collection `Nova Reperta` for the CH object `L1-man`.\n\nA curation event `1-curation` - carried out by `Sistema museale di Ateneo` (located in `Bologna`) - curated the collection `Collezione di Zoologia` for the CH object `1-man`.\n\nA curation event `14-curation` - carried out by `Sistema museale di Ateneo` (located in `Bologna`) - curated the collection `Collezione di Anatomia comparata` for the CH object `14-man`.\n\n```\nex:L1-curation a crm:E87_Curation_Activity ;\n    crm:P147_curated ex:nova-reperta ;\n    crm:P14_carried_out_by ex:rijksmuseum ;\n    crm:P12_occurred_in_the_presence_of ex:L1-man .\n\nex:L1-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P74_has_current_or_former_residence ex:rijksmuseum .\n\nex:nova-reperta a crm:E78_Curated_Holding .\n\nex:rijksmuseum a crm:E39_Actor ;\n    crm:P74_has_current_or_former_residence ex:amsterdam .\n\nex:amsterdam a crm:E53_Place .\n\nex:1-curation a crm:E87_Curation_Activity ;\n    crm:P147_curated ex:collezione-di-zoologia ;\n    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;\n    crm:P12_occurred_in_the_presence_of ex:1-man .\n\nex:1-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .\n\nex:collezione-di-zoologia a crm:E78_Curated_Holding .\n\nex:sistema-museale-di-ateneo a crm:E39_Actor ;\n    crm:P74_has_current_or_former_residence ex:bologna .\n\nex:bologna a crm:E53_Place .\n\nex:14-curation a crm:E87_Curation_Activity ;\n    crm:P147_curated ex:collezione-di-anatomia-comparata ;\n    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;\n    crm:P12_occurred_in_the_presence_of ex:14-man .\n\nex:14-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .\n\nex:collezione-di-anatomia-comparata a crm:E78_Curated_Holding .\n\n```\n\n#### Scenario 4\nA conception event `L1-work-conception` initiated the CH object `L1-work` ('Amerigo Vespucci sveglia l’America') in the time interval `1589-1593`, which starts in 1589-01-01 and ends in 1593-12-31.\n\nA conception event `1-work-conception` initiated the CH object `1-work` ('Carta nautica') in the time interval `1482`, which starts in 1482-01-01 and ends in 1482-12-31.\n\nA conception event `26-work-conception` initiated the CH object `26-work` ('Chrysanthemi') in the time interval `1500-1599`, which starts in 1500-01-01 and ends in 1599-12-31.\n\n```\nex:L1-work-conception a frbroo:F27_Work_Conception ;\n    frbroo:R16_initiated ex:L1-work ;\n    crm:P4_has_time-span ex:1589-1593 .            \n\nex:1589-1593 a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"1589-01-01T00:00:00\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"1593-12-31T23:59:59\"^^xsd:dateTime .\n\nex:L1-work a frbroo:F1_Work .\n\nex:1-work-conception a frbroo:F27_Work_Conception ;\n    frbroo:R16_initiated ex:1-work ;\n    crm:P4_has_time-span ex:1482 .            \n\nex:1482 a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"1482-01-01T00:00:00\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"1482-12-31T23:59:59\"^^xsd:dateTime .\n\nex:1-work a frbroo:F1_Work .\n\nex:26-work-conception a frbroo:F27_Work_Conception ;\n    frbroo:R16_initiated ex:26-work ;\n    crm:P4_has_time-span ex:1500-1599 .            \n\nex:1500-1599 a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"1500-01-01T00:00:00\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"1599-12-31T23:59:59\"^^xsd:dateTime .\n\nex:26-work a frbroo:F1_Work .\n```\n\n#### Scenario 5\nThe creation event `L1-exp-creation` created the work `L1-work`, the expression `L1-exp` and the manifestation `L1-man`. \n`L1-work` has two titles: the original title `L1-work-title-01` ('Amerigo Vespucci sveglia l'America'), and the exhibition title `L1-work-title-02` ('Amerigo Vespucci sveglia l'America'). It is member of the parent work `Nova Reperta`, which has `print series` as its type.\n`L1-exp` is about the following subjects: `amerigo vespucci`, `astrolabio`, `vessillo croce del sud`, `formichiere`, `bradipo`, `tapiro`, and `gruppo di cannibali`.\n\nThe creation event `1-exp-creation` created the work `1-work`, the expression `1-exp` and the manifestation `1-man`. \n`1-work` has two titles: the original title `1-work-title-01` ('Carta nautica'), and the exhibition title `1-work-title-02` ('Carta nautica').\n`1-exp` is about the following subjects: `europa`, `africa`, `asia`, and `mar mediterraneo`.\n\nThe creation event `7-exp-creation` created the work `7-work`, the expression `7-exp` and the manifestation `7-man`. \n`7-work` has two titles: the original title `7-work-title-01` ('Profilo incompleto delle coste del continente americano'), and the exhibition title `7-work-title-02` ('Profilo incompleto delle coste del continente americano'). It is member of the parent work `Atlante Nautico`, which has `marine chart` as its type.\n`7-exp` is about the following subjects: `america` and `europa`.\n\n```\nex:L1-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:L1-work ;\n    frbroo:R17_created ex:L1-exp ;\n    frbroo:R18_created ex:L1-man .\n\nex:L1-work a frbroo:F1_Work ;\n    crm:P102_has_title ex:L1-work-title-01 ,\n        ex:L1-work-title-02 .\n\nex:L1-work-title-01 a crm:E35_Title ;\n    crm:P2_has_type aat:300417204 ;\n    crm:P190_has_symbolic_content \"Amerigo Vespucci sveglia l'America\"@it .\n\nex:L1-work-title-02 a crm:E35_Title ;\n    crm:P2_has_type aat:300417207 ;\n    crm:P190_has_symbolic_content \"Amerigo Vespucci sveglia l'America\"@en .\n\nex:L1-exp a frbroo:F2_Expression ;\n    crm:P129_is_about ex:sub-amerigo-vespucci ,\n        ex:sub-astrolabio ,\n        ex:sub-vessillo-croce-del-sud ,\n        ex:sub-formichiere ,\n        ex:sub-bradipo ,\n        ex:sub-tapiro ,\n        ex:sub-gruppo-di-cannibali .\n\nex:L1-man a frbroo:F4_Manifestation_Singleton .\n\nex:L1-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:L1-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:1-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:1-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:7-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:7-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:PTa-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:PTa-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:PTa-1-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:PTa-1-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:PTa-2-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:PTa-2-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:PTa-3-man-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:PTa-3-man ;\n    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\nex:nova-reperta a frbroo:F15_Complex_Work ;\n    frbroo:R10_has_member ex:L1-work ;\n    crm:P2_has_type aat:300189634 .\n\nex:sub-amerigo-vespucci a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-astrolabio a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-vessillo-croce-del-sud a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-formichiere a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-bradipo a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-tapiro a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-gruppo-di-cannibali a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:1-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:1-work ;\n    frbroo:R17_created ex:1-exp ;\n    frbroo:R18_created ex:1-man .\n\nex:1-work a frbroo:F1_Work ;\n    crm:P102_has_title ex:1-work-title-01 ,\n        ex:1-work-title-02 .\n\nex:1-work-title-01 a crm:E35_Title ;\n    crm:P2_has_type aat:300417204 ;\n    crm:P190_has_symbolic_content \"Carta nautica\"@it .\n\nex:1-work-title-02 a crm:E35_Title ;\n    crm:P2_has_type aat:300417207 ;\n    crm:P190_has_symbolic_content \"Carta nautica\"@it .\n\nex:1-exp a frbroo:F2_Expression ;\n    crm:P129_is_about ex:sub-europa ,\n        ex:sub-africa ,\n        ex:sub-asia ,\n        ex:sub-mar-mediterraneo .\n\nex:1-man a frbroo:F4_Manifestation_Singleton .\n\nex:sub-europa a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-africa a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-asia a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:sub-mar-mediterraneo a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:7-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:7-work ;\n    frbroo:R17_created ex:7-exp ;\n    frbroo:R18_created ex:7-man .\n\nex:7-work a frbroo:F1_Work ;\n    crm:P102_has_title ex:7-work-title-01 ,\n        ex:7-work-title-02 .\n\nex:7-work-title-01 a crm:E35_Title ;\n    crm:P2_has_type aat:300417204 ;\n    crm:P190_has_symbolic_content \"Profilo incompleto delle coste del continente americano\"@it .\n\nex:7-work-title-02 a crm:E35_Title ;\n    crm:P2_has_type aat:300417207 ;\n    crm:P190_has_symbolic_content \"Profilo incompleto delle coste del continente americano\"@it .\n\nex:7-exp a frbroo:F2_Expression ;\n    crm:P129_is_about ex:sub-america ,\n        ex:sub-europa .\n\nex:7-man a frbroo:F4_Manifestation_Singleton .\n\nex:atlante-nautico a frbroo:F15_Complex_Work ;\n    frbroo:R10_has_member ex:7-work ;\n    crm:P2_has_type aat:300028309 .\n\nex:sub-america a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300404126 .\n\nex:PTa-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:PTa-work ;\n    frbroo:R17_created ex:PTa-exp ;\n    frbroo:R18_created ex:PTa-man .\n\nex:PTa-work a frbroo:F1_Work .\n\nex:PTa-exp a frbroo:F2_Expression .\n\nex:PTa-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P46_is_composed_of ex:PTa-1-man , \n        ex:PTa-2-man .\n\nex:PTa-1-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:PTa-1-work ;\n    frbroo:R17_created ex:PTa-1-exp ;\n    frbroo:R18_created ex:PTa-1-man .\n\nex:PTa-1-work a frbroo:F1_Work .\n\nex:PTa-1-exp a frbroo:F2_Expression .\n\nex:PTa-1-man a frbroo:F4_Manifestation_Singleton .\n\nex:PTa-2-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:PTa-2-work ;\n    frbroo:R17_created ex:PTa-2-exp ;\n    frbroo:R18_created ex:PTa-2-man .\n\nex:PTa-2-work a frbroo:F1_Work .\n\nex:PTa-2-exp a frbroo:F2_Expression .\n\nex:PTa-2-man a frbroo:F4_Manifestation_Singleton .\n\nex:PTa-3-exp-creation a frbroo:F28_Expression_Creation ;\n    frbroo:R19_created_a_realisation_of ex:PTa-3-work ;\n    frbroo:R17_created ex:PTa-3-exp ;\n    frbroo:R18_created ex:PTa-3-man .\n\nex:PTa-3-work a frbroo:F1_Work .\n\nex:PTa-3-exp a frbroo:F2_Expression .\n\nex:PTa-3-man a frbroo:F4_Manifestation_Singleton ;\n    crm:P62_depicts ex:PTa-man .\n```\n\n#### Scenario 6\nThe object `32` has been digitally acquired on the 8th of May 2023. The digitization process produced a 3D model `32-output-acq` as an output, provided with a 'CC BY-NC 4.0' license, which will be used as an input by the software activity `32-proc`.\n\n```\nex:32 a crm:E24_Physical_Human-Made_Thing .\n\nex:32-acq a crmdig:D2_Digitization_Process ;\n    crmdig:L1_digitized ex:32 ;\n    crmdig:L11_had_output ex:32-acq-output ;\n    crm:P4_has_time-span ex:32-acq-timespan .\n\nex:32-proc a crmdig:D10_Software_Execution ;\n    crmdig:L10_had_input ex:32-acq-output ;\n    crm:P4_has_time-span ex:32-proc-timespan .\n\nex:32-acq-output a crmdig:D9_Data_Object .\n\nex:32-acq-output-license a crm:E73_Information_Object ;\n    crm:P2_has_type aat:300435434 ;\n    crm:P67_refers_to ex:32-acq-output ;\n    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .\n\nex:32-acq-timespan a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"2023-05-08T00:00:00Z\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"2023-05-08T23:59:59Z\"^^xsd:dateTime .\n\nex:32-proc-timespan a crm:E52_Time-Span ;\n    crm:P82a_begin_of_the_begin \"2023-05-10T00:00:00Z\"^^xsd:dateTime ;\n    crm:P82b_end_of_the_end \"2023-05-10T23:59:59Z\"^^xsd:dateTime .\n```\n\n#### Scenario 7\nThe digital object `15-proc-output` has been generated as an output during the processing activity carried out by the person `Federica Collina`, who belongs to the institution `UNIBO DBC`. The processing activity used the digital object `15-acq-output` (produced by the digitization process `15-acq`) as an input.\n\n```\nex:15 a crm:E24_Physical_Human-Made_Thing .\n\nex:15-acq a crmdig:D2_Digitization_Process ;\n    crmdig:L11_had_output ex:15-acq-output .\n\nex:15-proc a crmdig:D10_Software_Execution ;\n    crm:P2_has_type aat:300054636 ;\n    crmdig:L10_had_input ex:15-acq-output ;\n    crmdig:L11_had_output ex:15-proc-output ;\n    crm:P11_had_participant ex:unibo-dbc ;\n    crm:P14_carried_out_by ex:federica-collina .\n\nex:15-acq-output a crmdig:D9_Data_Object .\n\nex:15-proc-output a crmdig:D9_Data_Object .\n\nex:federica-collina a crm:E21_Person .\n\nex:unibo-dbc a crm:E74_Group .\n```\n\n#### Scenario 8\nThe physical object `15` has been digitally acquired through the `structured light scanning` technique and the `scanner spider` tool. The digitization process produced a 3D model `15-acq-output` as an output.\n\n```\nex:15 a crm:E24_Physical_Human-Made_Thing .\n\nex:15-acq a crmdig:D2_Digitization_Process ;\n    crmdig:L1_digitized ex:15 ;\n    crmdig:L11_had_output ex:15-acq-output ;\n    crm:P32_used_general_technique aat:300391312 ;\n    crm:P16_used_specific_object ex:artec-spider .\n\nex:15-proc a crmdig:D10_Software_Execution ;\n    crm:P2_has_type aat:300054636 ;\n    crmdig:L10_had_input ex:15-acq-output ;\n    crmdig:L11_had_output ex:15-proc-output ;\n    crmdig:L23_used_software_or_firmware ex:artec-studio-14 .\n\nex:15-acq-output a crmdig:D9_Data_Object .\n\nex:15-proc-output a crmdig:D9_Data_Object .\n\nex:artec-spider a crmdig:D8_Digital_Device ;\n    crm:P2_has_type aat:300429747 .\n\nex:artec-studio-14 a crmdig:D14_Software ;\n    crm:P2_has_type aat:300426696 .\n```\n\n### Competency questions\nCHAD-AP can be used for answering several questions related to the acquisition and digitisation of cultural heritage objects. In the following subsections we introduce some of them, and we accompany them with exemplar SPARQL queries. \n\nThe prefixes that are used in all the SPARQL queries provided below are defined as follows:\n\n    PREFIX aat: <http://vocab.getty.edu/page/aat/>\n    PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\n    PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>\n    PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/data/example/>\n    PREFIX frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/>  \n\n\n#### Question 1\nWhat are the CH objects whose creation involved some author?\n\n    SELECT ?resource ?agent\n    WHERE {\n        ?creation_event a frbroo:F28_Expression_Creation ;\n            frbroo:R17_created ?resource ;\n            crm:P9_consists_of ?activity .\n        ?activity crm:P2_has_type aat:300404387 ;\n            crm:P14_carried_out_by ?agent .\n    }\n\n#### Question 2\nWhat are the agents and the types of  activities they carried out to contribute to the creation of `32-exp`?\n\n    SELECT ?agent ?type\n    WHERE {\n        ?creation_event a frbroo:F28_Expression_Creation ;\n            frbroo:R17_created ex:32-exp ;\n            crm:P9_consists_of ?activity .\n        ?activity crm:P2_has_type ?type ;\n            crm:P14_carried_out_by ?agent .\n    }\n\n#### Question 3\nWhat are the agents involved in the creation of the CH objects that have been created through the drawing technique? What are the types of the activities they carried out?\n\n    SELECT ?resource ?agent ?type\n    WHERE {\n        ?creation_event a frbroo:F28_Expression_Creation ;\n            crm:P32_used_general_technique aat:300033973 ;\n            frbroo:R17_created ?resource ;\n            crm:P9_consists_of ?activity .\n        ?activity crm:P2_has_type ?type ;\n            crm:P14_carried_out_by ?agent .\n    }\n\n#### Question 4\nWhat are the identifiers of the manuscript? What are their types?\n\n    SELECT ?resource ?identifier_text ?type\n    WHERE {\n        ?resource a frbroo:F4_Manifestation_Singleton ;\n            crm:P2_has_type aat:300028569 ;\n            crm:P48_has_preferred_identifier ?identifier .\n        ?identifier crm:P2_has_type ?type ;\n            crm:P190_has_symbolic_content ?identifier_text.\n    }\n\n#### Question 5\nWhat is the shelf mark of the CH object with the project ID '32'?\n\n    SELECT ?identifier_text\n    WHERE {\n        ?resource a frbroo:F4_Manifestation_Singleton ;\n        crm:P48_has_preferred_identifier ?identifier1 ,\n            ?identifier2 .\n        ?identifier1 crm:P2_has_type aat:300312355 ;\n            crm:P190_has_symbolic_content \"32\"^^rdfs:Literal .\n        ?identifier2 crm:P2_has_type aat:300404704 ;\n            crm:P190_has_symbolic_content ?identifier_text.\n    }\n\n#### Question 6\nWhat are the descriptive labels of the CH objects that either have shelf marks or are prints?\n\n    SELECT ?resource ?label\n    WHERE {\n        ?resource a frbroo:F4_Manifestation_Singleton ;\n            crm:P48_has_preferred_identifier ?identifier ;\n            crm:P2_has_type ?type ;\n            crm:P3_has_note ?label .\n        ?identifier crm:P2_has_type ?id_type .\n        FILTER(?type = aat:300041273 || ?id_type = aat:300404704)\n    }\n\n#### Question 7\nWhat are the CH objects whose collections have been curated by agents located in Bologna?\n\n    SELECT ?resource ?agent\n    WHERE {\n        ?curation a crm:E87_Curation_Activity ;\n            crm:P14_carried_out_by ?agent ;\n            crm:P12_occurred_in_the_presence_of ?resource .\n        ?agent crm:P74_has_current_or_former_residence ex:bologna .\n    }\n\n#### Question 8\nWhat are the CH objects and the time spans of their conception events?\n\n    SELECT ?resource ?time_interval\n    WHERE {\n        ?conception_event a frbroo:F27_Work_Conception ;\n            frbroo:R16_initiated ?resource ;\n            crm:P4_has_time-span ?time_interval .\n    }\n    \n#### Question 9\nWhat are the titles of the work `32-work`? What are their types?\n    \n    SELECT ?title ?type ?content\n    WHERE {\n        ?creation a frbroo:F28_Expression_Creation ;\n            frbroo:R19_created_a_realisation_of ex:32-work .\n        ex:32-work crm:P102_has_title ?title .\n        ?title crm:P2_has_type ?type ;\n            crm:P190_has_symbolic_content ?content .\n    }\n\n#### Question 10\nWhat are the parent works of the works that have either 'ermafrodita' as their subject?\n    \n    SELECT ?parent ?work ?subject\n    WHERE {\n        ?creation a frbroo:F28_Expression_Creation ;\n            frbroo:R19_created_a_realisation_of ?work ;\n            frbroo:R17_created ?expression .\n        ?parent a frbroo:F15_Complex_Work ;\n            frbroo:R10_has_member ?work .\n        ?expression a frbroo:F2_Expression ;\n            crm:P129_is_about ex:sub-ermafrodita .\n    }\n\n#### Question 11\nWhich license statements are assigned to the manifestations?\n    \n    SELECT ?manifestation ?license_link\n    WHERE {\n        ?license crm:P67_refers_to ?manifestation ;\n            crm:P2_has_type aat:300435434 ;\n            crm:P70i_is_documented_in ?license_link .\n    }\n\n#### Question 12\nWhat is the cultural object digitized and the digital object produced by the digitization process? What is the latter's license?\n     \n    SELECT ?input ?output ?license_link\n    WHERE {\n        ?activity a crmdig:D2_Digitization_Process ;\n            crmdig:L1_digitized ?input ;\n            crmdig:L11_had_output ?output .\n        ?license crm:P2_has_type aat:300435434 ;\n            crm:P67_refers_to ?output ;\n            crm:P70i_is_documented_in ?license_link .\n    }\n\n#### Question 13\nWhat are the starting and ending date times in which the digitization process and the following software activity occurred?\n\n    SELECT ?activity ?start ?end\n    WHERE {\n        ?activity a crmdig:D2_Digitization_Process;\n            crm:P4_has_time-span ?timespan .\n        ?timespan crm:P82a_begin_of_the_begin ?start ;\n            crm:P82b_end_of_the_end ?end .\n    }\n\n#### Question 14\nWhat are the digitization process, its output, the processing activity and its output?\n\n    SELECT ?digitization ?input ?activity ?output\n    WHERE {\n        ?activity a crmdig:D10_Software_Execution ;\n        crm:P2_has_type aat:300054636 ;\n        crmdig:L10_had_input ?input ;\n        crmdig:L11_had_output ?output .\n        ?digitization crmdig:L11_had_output ?input .\n    }\n\n#### Question 15\nWhat are the people and institutions who either carried out or were participants in the processing activity?\n\n    SELECT ?person ?institution\n    WHERE {\n        ?activity a crmdig:D10_Software_Execution ;\n        crm:P2_has_type aat:300054636 ;\n        crm:P14_carried_out_by ?person ;\n        crm:P11_had_participant ?institution .\n    }\n\n#### Question 16\nWhat are the techniques used in digitization processes?\n\n    SELECT ?technique ?activity\n    WHERE {\n        ?activity a crmdig:D2_Digitization_Process ;\n            crm:P32_used_general_technique ?technique .\n    }\n\n#### Question 17\nWhat are the tools and their types used in processing activities?\n\n    SELECT ?tool ?type\n    WHERE {\n        ?activity a crmdig:D10_Software_Execution ;\n            crm:P2_has_type aat:300054636 ;\n            crmdig:L23_used_software_or_firmware ?tool .\n        ?tool a crmdig:D14_Software ;\n            crm:P2_has_type ?type .\n    }\n"
   } ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
     "@language" : "en",
@@ -2639,14 +4580,14 @@
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@language" : "en",
-    "@value" : "https://w3id.org/dharc/ontology/chad-ap/"
+    "@value" : "https://w3id.org/dharc/ontology/chad-ap"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CH objects, and the _Process Module_ (PM), for describing the acquisition and digitisation process."
+    "@value" : "The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process."
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/dharc/ontology/chad-ap/1.0.0/"
+    "@id" : "https://w3id.org/dharc/ontology/chad-ap/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.0.0"

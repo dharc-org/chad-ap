@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/dharc/ontology/chad-ap/"
-     xml:base="https://w3id.org/dharc/ontology/chad-ap/"
+<rdf:RDF xmlns="https://w3id.org/dharc/ontology/chad-ap#"
+     xml:base="https://w3id.org/dharc/ontology/chad-ap"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -8,10 +8,11 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/dharc/ontology/chad-ap/">
-        <owl:versionIRI rdf:resource="https://w3id.org/dharc/ontology/chad-ap/1.0.0/"/>
+    <owl:Ontology rdf:about="https://w3id.org/dharc/ontology/chad-ap">
+        <owl:versionIRI rdf:resource="https://w3id.org/dharc/ontology/chad-ap/1.0.0"/>
         <dc:abstract xml:lang="en">A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.</dc:abstract>
         <dc:contributor>Heibi, Ivan</dc:contributor>
         <dc:contributor>Moretti, Arianna</dc:contributor>
@@ -20,7 +21,7 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-16</dc:date>
         <dc:description xml:lang="en">
 
-The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CH objects, and the _Process Module_ (PM), for describing the acquisition and digitisation process.
+The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process.
 
 Both CHAD-AP and its [documentation](https://w3id.org/dharc/ontology/chad-ap) are living artefacts that have been drafted in the context of the [Project CHANGES](https://sites.google.com/uniroma1.it/changes/) (&quot;Cultural Heritage Active Innovation For Next-Gen Sustainable Society&quot;), an EU-funded project that  aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.
 
@@ -869,8 +870,8 @@ What are the tools and their types used in processing activities?
         <terms:license xml:lang="en">http://creativecommons.org/licenses/by/4.0/</terms:license>
         <terms:title xml:lang="en">Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)</terms:title>
         <vann:preferredNamespacePrefix xml:lang="en">chad-ap</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri xml:lang="en">https://w3id.org/dharc/ontology/chad-ap/</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CH objects, and the _Process Module_ (PM), for describing the acquisition and digitisation process.</rdfs:comment>
+        <vann:preferredNamespaceUri xml:lang="en">https://w3id.org/dharc/ontology/chad-ap</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process.</rdfs:comment>
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <ns:status xml:lang="en">work in progress</ns:status>
     </owl:Ontology>
@@ -921,6 +922,13 @@ What are the tools and their types used in processing activities?
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
     
 
 
@@ -977,6 +985,13 @@ What are the tools and their types used in processing activities?
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#status"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
     
 
 
@@ -1170,7 +1185,6 @@ What are the tools and their types used in processing activities?
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of"/>
-        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
         <rdfs:comment xml:lang="en">This property describes the participation of one or more actors in an event.</rdfs:comment>
@@ -1191,6 +1205,7 @@ What are the tools and their types used in processing activities?
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in">
         <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at"/>
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
@@ -1575,7 +1590,6 @@ What are the tools and their types used in processing activities?
 
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper">
-        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
         <rdfs:comment xml:lang="en">This property identifies an actor who has or has had custody of a physical entity at some time.</rdfs:comment>
@@ -1595,6 +1609,7 @@ What are the tools and their types used in processing activities?
 
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P49i_is_former_or_current_keeper_of">
+        <owl:inverseOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P49_has_former_or_current_keeper"/>
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
@@ -2141,6 +2156,13 @@ What are the tools and their types used in processing activities?
     
 
 
+    <!-- http://vocab.getty.edu/aat/Concept -->
+
+
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/Concept"/>
+    
+
+
     <!-- http://www.cidoc-crm.org/cidoc-crm/E12_Production -->
 
 
@@ -2596,6 +2618,1194 @@ What are the tools and their types used in processing activities?
         <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
         <rdfs:label xml:lang="en">Data Object</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300011172 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300011172">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300011172</dc:identifier>
+        <rdfs:comment xml:lang="en">Works comprising precious or semiprecious stones or other materials such as amber or pearl, cut, polished, or otherwise dressed for ornamental purposes to be used in jewelry, seals, or amulets.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">gems (worked stones)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300022488 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300022488">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300022488</dc:identifier>
+        <rdfs:comment xml:lang="en">Instruments for drawing circles and measuring the distance between two points.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">compasses (drawing instruments)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300024594 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300024594">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300024594</dc:identifier>
+        <rdfs:comment xml:lang="en">Optical instruments consisting of a lens or combination of lenses that allow the viewing of objects that are too small to be seen with the naked, unaided eye.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">microscopes</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300024814 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300024814">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300024814</dc:identifier>
+        <rdfs:comment xml:lang="en">Hollow forms in which castings or pressings are made; used with many materials, including clay, metal, glass, and paper.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">molds (shaping equipment)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300024928 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300024928">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300024928</dc:identifier>
+        <rdfs:comment xml:lang="en">Tool handles, such as those of axes, hatchets, or hammers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">helves</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300027349 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300027349">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300027349</dc:identifier>
+        <rdfs:comment xml:lang="en">A conceptual grouping of visual arts works, literary works, or performance art created in succession by the same author, artist, or studio and intended by the creator(s) to be seen together.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">series (object groupings)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300028051 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028051">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300028051</dc:identifier>
+        <rdfs:comment xml:lang="en">Items comprising a collection of leaves of paper, parchment, wood, stiffened textile, ivory, metal tablets, or other flat material, that are blank, written on, or printed, and are strung or bound together.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">books</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300028094 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028094">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300028094</dc:identifier>
+        <rdfs:comment xml:lang="en">Refers to graphic or photogrammetric representations of the Earth&apos;s surface or a part of it, including physical features and political boundaries.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">maps (documents)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300028309 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028309">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300028309</dc:identifier>
+        <rdfs:comment xml:lang="en">Maps designed and used primarily for plotting courses and traveling on water in a ship or other vessel or in an aircraft or spacecraft.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">navigation charts</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300028569 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028569">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300028569</dc:identifier>
+        <rdfs:comment xml:lang="en">Handwritten documents, particularly books and other documents created before the invention of the printing press.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">manuscripts (documents)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300028682 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028682">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300028682</dc:identifier>
+        <rdfs:comment xml:lang="en">Manifestations of motion pictures, stored electronically, in any media or digitized format.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">video recordings (physical artifacts)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300033618 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300033618">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300033618</dc:identifier>
+        <rdfs:comment xml:lang="en">Unique works in which images are formed primarily by the direct application of pigments suspended in oil, water, egg yolk, molten wax, or other liquid, arranged in masses of color, onto a general surface.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">paintings (visual works)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300033799 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300033799">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300033799</dc:identifier>
+        <rdfs:comment xml:lang="en">Creative works in the medium of oil paint.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">oil paintings (visual works)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300037592 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300037592">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300037592</dc:identifier>
+        <rdfs:comment xml:lang="en">Lighting devices having a vessel to contain fuel used as a source of illumination, such as grease or oil.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">lamps (lighting devices)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300041273 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300041273">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300041273</dc:identifier>
+        <rdfs:comment xml:lang="en">Pictorial works produced by transferring images by means of a matrix such as a plate, block, or screen, using any of various printing processes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">prints (visual works)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300041340 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300041340">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300041340</dc:identifier>
+        <rdfs:comment xml:lang="en">Prints on paper incorporating impressions of a reverse design created on a printing plate, usually copper, into which the design has been incised (engraved) using burins or gravers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">engravings (prints)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300041405 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300041405">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300041405</dc:identifier>
+        <rdfs:comment xml:lang="en">Prints made using the process of woodcut, which is a relief process in which the design is cut into and printed from the plank side of a wood block.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">woodcuts (prints)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300041933 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300041933">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300041933</dc:identifier>
+        <rdfs:comment xml:lang="en">Shaken idiophones made in a variety of forms worldwide, in which one or more objects strike against each other or against the inside or outside of another object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">rattles (indirectly struck idiophones)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300045627 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300045627">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300045627</dc:identifier>
+        <rdfs:comment xml:lang="en">Vessels having a neck and mouth considerably narrower than the body, used for packaging and containing liquid and dry preparations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">bottles</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300046001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300046001">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300046001</dc:identifier>
+        <rdfs:comment xml:lang="en">Ornaments worn around the neck, usually in the form of chains or strands of beads, pearls, stones, or decorative or precious materials, and often including a suspended ornamental pendant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">necklaces</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300046025 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300046025">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300046025</dc:identifier>
+        <rdfs:comment xml:lang="en">Small pieces of metal, usually gold, silver, or bronze and bearing a relief design on one or both sides and having a commemorative purpose.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">medals</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300047600 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300047600">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300047600</dc:identifier>
+        <rdfs:comment xml:lang="en">Sculpture in the round, usually but not always depicting humans, animals, mythical beings, or small figure groups.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">statues</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300047753 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300047753">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300047753</dc:identifier>
+        <rdfs:comment xml:lang="en">Refers to scaled or lifesize representations of objects, structures, beings, or other subjects, usually three-dimensional.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">models (representations)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300047762 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300047762">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300047762</dc:identifier>
+        <rdfs:comment xml:lang="en">Works in which three-dimensional objects, often figural sculpture, in the foreground blend with a realistic painted background.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">dioramas</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300051658 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300051658">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300051658</dc:identifier>
+        <rdfs:comment xml:lang="en">Long-bladed weapons with a hilt and usually a hand guard, used primarily for cutting or thrusting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">swords</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300053225 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053225">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300053225</dc:identifier>
+        <rdfs:comment xml:lang="en">The intaglio process in which the design is incised into a printing plate, usually a flat copper plate, with the aid of a graver or burin.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">engraving (printing process)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300053357 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053357">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300053357</dc:identifier>
+        <rdfs:comment xml:lang="en">Mural painting technique in which dry pigments are ground with water then brushed onto wet or partially dry lime plaster.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">fresco painting (technique)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300053363 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053363">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300053363</dc:identifier>
+        <rdfs:comment xml:lang="en">Watercolor painting done in transparent washes of color as distinguished from the opaque method using gouache.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">aquarelle (technique)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300053580 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053580">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300053580</dc:identifier>
+        <rdfs:comment xml:lang="en">Refers to the technique of making measurements by using photography. It usually refers to this technique as applied to mapmaking, measuring site elements, and surveying.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">photogrammetry</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300053628 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053628">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300053628</dc:identifier>
+        <rdfs:comment xml:lang="en">Preparing lifelike representations of animals by stuffing the skin or molding it around a model of the specimen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">taxidermy</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300053758 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053758">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300053758</dc:identifier>
+        <rdfs:comment xml:lang="en">Making free or nearly free of liquids.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">drying</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300053852 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053852">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300053852</dc:identifier>
+        <rdfs:comment xml:lang="en">Decorative wood process in which the design or pattern is made by assembling small pieces of veneer in various shapes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">intarsia (process)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300054196 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054196">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300054196</dc:identifier>
+        <rdfs:comment xml:lang="en">Producing visible forms primarily by delineation, usually by the direct application of material or instrument to the surface of the support.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">drawing (image-making)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300054200 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054200">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300054200</dc:identifier>
+        <rdfs:comment xml:lang="en">The art or process of providing drawings or other pictures intended to elucidate a description, story, or other written material, usually in a book or periodical.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">illustration (process)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300054636 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054636">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300054636</dc:identifier>
+        <rdfs:comment xml:lang="en">Creating and manipulating data in machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">data processing</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300054638 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054638">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300054638</dc:identifier>
+        <rdfs:comment xml:lang="en">The process or function of gathering and recording information, especially to record facts or characteristics or to establish evidence or testimony.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">documentation (activity)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300054686 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054686">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300054686</dc:identifier>
+        <rdfs:comment xml:lang="en">The actions, functions, or event of issuing printed, taped, or otherwise reproduced records of knowledge or visual works in any medium for sale or distribution to the public.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">publishing</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300054698 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054698">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300054698</dc:identifier>
+        <rdfs:comment xml:lang="en">Forming or producing letters to record the ideas which characters and words express or to communicate the ideas by visible signs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">writing (processes)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300055021 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300055021">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300055021</dc:identifier>
+        <rdfs:comment xml:lang="en">Books printed before 1501.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">incunabula (books)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300063663 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300063663">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300063663</dc:identifier>
+        <rdfs:comment xml:lang="en">Japanese sword guards, usually made of metal and serving to protect the hand from sliding forward on to the blade.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">tsuba</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300069831 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300069831">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300069831</dc:identifier>
+        <rdfs:comment xml:lang="en">The activity of comprehending, analyzing, and expressing written or spoken material in a different language from the original.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">translation (function)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300077565 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300077565">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300077565</dc:identifier>
+        <rdfs:comment xml:lang="en">The action or process of making something ready for use or service or of getting ready for some occasion, test, or duty.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">preparing</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300117127 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300117127">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300117127</dc:identifier>
+        <rdfs:comment xml:lang="en">Generally, objects or other things made or modified by humans, typically manually portable products of human workmanship, such as tools, utensils, objects for personal adornment, or art.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">artifacts (object genre)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300122241 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300122241">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300122241</dc:identifier>
+        <rdfs:comment xml:lang="en">Articles or physical resources used to array, dress up, rig out, equip, or otherwise provide with what is requisite for efficient action by a person or animal or for a thing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">equipment</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300132254 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300132254">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300132254</dc:identifier>
+        <rdfs:comment xml:lang="en">Vessels of varying shape and size but which are usually taller than they are wide, varying greatly in actual form and use.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">vases</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300137376 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300137376">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300137376</dc:identifier>
+        <rdfs:comment xml:lang="en">Medieval marine charts, used before compasses, and for Medieval navigation manuals, illustrated with charts and showing the location of ports and other navigational information.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">portolanos</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300138684 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300138684">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300138684</dc:identifier>
+        <rdfs:comment xml:lang="en">A method of decorating surfaces with patterns or pictures composed of small, regularly-shaped pieces of colored durable material, such as stone or glass.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">mosaic (process)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300138758 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300138758">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300138758</dc:identifier>
+        <rdfs:comment xml:lang="en">Refers to coverings for all or part of the face, usually with openings for the eyes and sometimes the mouth.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">masks (costume)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300155365 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300155365">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300155365</dc:identifier>
+        <rdfs:comment xml:lang="en">Publishing text or images in electronic machine-readable formats.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">electronic publishing</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300178926 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300178926">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300178926</dc:identifier>
+        <rdfs:comment xml:lang="en">Printing from raised and inked type, distinguished from lithographic or intaglio printing, particularly in the context of book and other text printing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">letterpress printing</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300184300 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300184300">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300184300</dc:identifier>
+        <rdfs:comment xml:lang="en">Refers to series of visual works depicting events and unified by a common topic, not necessarily a sequence in a single story line.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">narrative cycles</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300189634 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300189634">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300189634</dc:identifier>
+        <rdfs:comment xml:lang="en">Groups of prints related in theme or technique and usually issued together.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">suites (print groupings)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300191086 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300191086">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300191086</dc:identifier>
+        <rdfs:comment xml:lang="en">Works of art, architecture, and any objects that occupy space, are perceived by the sense of sight, and are created or arranged, rather than naturally occurring.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">visual works (works)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300224200 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300224200">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300224200</dc:identifier>
+        <rdfs:comment xml:lang="en">Ancient manuscripts generally taking the form of the modern book: bound leaves of paper or parchment with information inscribed on both faces, attached at a center fold.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">codices (bound manuscripts)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300226836 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300226836">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300226836</dc:identifier>
+        <rdfs:comment xml:lang="en">Sets or ensembles of visual works.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">visual works groupings</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300235576 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300235576">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300235576</dc:identifier>
+        <rdfs:comment xml:lang="en">A specimen is an individual instance that represents a class. A good specimen shows the character of the thing or material, useful for close study and permitting exact identification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">specimens</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300252927 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300252927">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300252927</dc:identifier>
+        <rdfs:comment xml:lang="en">The forming of letters and words by hand rather than by printing; may be used to designate a particular and distinctive form, style, or method of writing by hand.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">handwriting</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264383 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300264383">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300264383</dc:identifier>
+        <rdfs:comment xml:lang="en">Refers to the process or branch of fine art concerned with creating sculpture, which are three-dimensional works.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">sculpting</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300265248 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300265248">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300265248</dc:identifier>
+        <rdfs:comment xml:lang="en">Any technique for forming or shaping wax into sculptural shapes, either for casting purposes or as a final work.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">wax-modeling</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300265483 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300265483">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300265483</dc:identifier>
+        <rdfs:comment xml:lang="en">Handwritten manuscripts that have been decorated with gold or silver, brilliant colors, designs, or miniature pictures.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">illuminated manuscripts</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300265632 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300265632">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300265632</dc:identifier>
+        <rdfs:comment xml:lang="en">Objects comprising sheets of paper, vellum, papyrus, or another material that are bound together. Volumes may include printed books, manuscripts, sketchbooks, or albums.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">volumes (documents by form)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300266792 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300266792">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300266792</dc:identifier>
+        <rdfs:comment xml:lang="en">Cameras capable of acquiring still or motion pictures via an electronic sensor and storing them as digital information on a memory device.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">digital cameras</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300312355 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300312355">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300312355</dc:identifier>
+        <rdfs:comment xml:lang="en">Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">accession numbers</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300343820 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300343820">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300343820</dc:identifier>
+        <rdfs:comment xml:lang="en">The process and technique of creating two-dimensional decoration on pottery by using paint made of metallic oxides or other pigments held in suspension in slip or another medium.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">vase painting (image-making)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300386427 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300386427">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300386427</dc:identifier>
+        <rdfs:comment xml:lang="en">Reduction of data needed for storage or transmission. Data is reduced in volume by means of encoding information to require fewer bits to be stored than the original.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">data compression</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300391312 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300391312">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300391312</dc:identifier>
+        <rdfs:comment xml:lang="en">Scanning technique that involves a pattern of lines projected onto a 3-D object and the subsequent mathematical measurement of the deformations caused by the geometry of the object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">structured light scanning</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300391447 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300391447">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300391447</dc:identifier>
+        <rdfs:comment xml:lang="en">Computer software technique for rendering virtual models of surfaces in three-dimensions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">digital surface modeling</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300403970 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300403970">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300403970</dc:identifier>
+        <rdfs:comment xml:lang="en">Manuscript volumes comprising two or more works, whether referring to only the content combined or to the combination of physically separate leafs or gatherings that are sewn or tipped in</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">compilation manuscripts</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300404386 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404386">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300404386</dc:identifier>
+        <rdfs:comment xml:lang="en">Events or activities of finding out or becoming aware of something that had been lost, forgotten, or previously unknown. Includes the finding of archaeological objects, lost buildings, places.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">discoveries</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300404704 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404704">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300404704</dc:identifier>
+        <rdfs:comment xml:lang="en">Identifying numeric or alpha codes found, usually on the spine, of a manuscript, book or other volume, giving the location where the item can be found in the library.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">shelf marks</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300417204 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300417204">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300417204</dc:identifier>
+        <rdfs:comment xml:lang="en">Titles or names that were originally assigned to a work or assigned soon after its creation. It may refer to a former title or to a title that has been translated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">original titles</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300417207 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300417207">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300417207</dc:identifier>
+        <rdfs:comment xml:lang="en">For art cataloging, titles or names by which the work has been known in exhibitions, particularly when different from titles by which the work is normally known.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">exhibition titles (work titles)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300417260 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300417260">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300417260</dc:identifier>
+        <rdfs:comment xml:lang="en">The process or function of copying material or data to a computer drive, the cloud, or otherwise to a safe, more permanent location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">saving (information handling)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300417639 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300417639">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300417639</dc:identifier>
+        <rdfs:comment xml:lang="en">Method of acquiring property by request from the creator or producer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">commission (method of acquisition)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300420536 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300420536">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300420536</dc:identifier>
+        <rdfs:comment xml:lang="en">A category of handheld tools or weapons characterized by a sharp-edged blade attached to a handle, typically made of wood or metal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">axe weapons</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300422994 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300422994">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300422994</dc:identifier>
+        <rdfs:comment xml:lang="en">A small decorative item, often made of metal or other materials, that is attached to a necklace or bracelet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">charm pendant</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300425064 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300425064">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300425064</dc:identifier>
+        <rdfs:comment xml:lang="en">Machines for the production of electrical discharge at high voltage.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">electrostatic generators</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300426696 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300426696">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300426696</dc:identifier>
+        <rdfs:comment xml:lang="en">Software used to create computer graphics, or edit and otherwise manipulate existing graphics.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">graphics software</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300428379 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300428379">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300428379</dc:identifier>
+        <rdfs:comment xml:lang="en">Japanese decorative sword guards, and accessories such as handle decorations and skewers used to keep the sword in its scabbard.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">tsuba kōzuka kogai sets</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300429747 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300429747">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300429747</dc:identifier>
+        <rdfs:comment xml:lang="en">A device that captures images or text documents and converts them into digital data that can be processed by a computer. These scanners use optical technology to scan physical documents or images and create digital representations of them.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">optical scanner</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300433476 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300433476">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300433476</dc:identifier>
+        <rdfs:comment xml:lang="en">Instruments used to discharge a capacitor, which is a device capable of storing energy within an electrostatic field.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">spark arresters</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300435434 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300435434">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300435434</dc:identifier>
+        <rdfs:comment xml:lang="en">A formal statement of the copyright or licensing of a work, and/or any restrictions placed on it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">copyright/licensing statement</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300440768 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300440768">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300440768</dc:identifier>
+        <rdfs:comment xml:lang="en">Systematically arranged collections of pressed plant specimens that have been gathered in situ, then dried and pressed onto sheets of archival paper so that major morphological characteristics are preserved.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">herbaria (documents)</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300445021 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300445021">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300445021</dc:identifier>
+        <rdfs:comment xml:lang="en">Numbers used to identify an individual publication within a classification or location in a library.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">book numbers</rdfs:label>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
