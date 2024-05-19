@@ -1,0 +1,248 @@
+@prefix : <https://w3id.org/dharc/ontology/chad-ap/object/development/06/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dharc/ontology/chad-ap/object/development/06/schema/> .
+
+<https://w3id.org/dharc/ontology/chad-ap/object/development/06/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:createsWork rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "creates work"@en .
+
+
+:createsExpression rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "creates expression"@en .
+
+
+:isRealizedIn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "is realized in"@en .
+
+
+:embodies rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "embodies"@en .
+
+
+:isEsemplifiedBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "is exemplified by"@en .
+
+
+:hasMember a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "has member"@en .
+
+
+:hasTitle rdf:type owl:ObjectProperty;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "has title"@en .
+
+
+:hasIdentifier a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "has identifier"@en .
+
+
+:usesObject a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "uses object"@en .
+
+
+:isCarriedOutBy a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "is carried out by"@en .
+
+
+:occursInThePresenceOf a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "occurs in the presence of"@en .
+
+
+:hasType a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "has type"@en .
+
+
+:isAbout rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "is about"@en .
+
+
+:depicts rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "depicts"@en .
+
+
+:isComposedOf rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "is composed of"@en .
+
+
+:refersTo rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "refers to"@en .
+
+
+:isDocumentedIn rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "is documented in"@en .
+
+
+:hasTimeSpan a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "has time span"@en .
+
+
+#################################################################
+#    Data Properties
+#################################################################
+
+:hasContent rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topDatatypeProperty ;
+              rdfs:label "has content"@en .
+
+
+:hasDescription rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topDatatypeProperty ;
+              rdfs:label "has description"@en .
+
+
+:atSomeTimeWithin rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topDatatypeProperty ;
+              rdfs:label "at some time within"@en .
+
+
+:hasStartDate rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topDatatypeProperty ;
+              rdfs:label "has start date"@en .
+
+
+:hasEndDate rdf:type owl:ObjectProperty;
+              rdfs:subPropertyOf owl:topDatatypeProperty ;
+              rdfs:label "has end date"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+:CreationEvent rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                rdfs:label "Creation event"@en .
+
+
+:Work rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Work"@en .
+
+
+:Expression rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Expression"@en .
+
+
+:Manifestation rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Manifestation"@en .
+
+
+:Item rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Item"@en .
+
+
+:Type rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Type"@en .
+
+
+:Title rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Title"@en .
+
+
+:InformationObject rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Information object"@en .
+
+
+:Document rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Document"@en .
+
+
+:Identifier rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Identifier"@en .
+
+
+:Activity rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Activity"@en .
+
+
+:Actor rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Actor"@en .
+
+
+:PhysicalObject rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Physical object"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+:original-title rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "original title"@en .
+
+:exhibition-title rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "exhibition title"@en .
+
+:subject rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "subject"@en .
+
+:license-statement rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "license statement"@en .
+
+:curation rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "curation"@en .
+
+:collection rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "collection"@en .
+
+:collection-id rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "collection id"@en .
+
+:volume-number rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "volume number"@en .
+
+:shelf-mark rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "shelf mark"@en .
+
+:manuscript rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "manuscript"@en .
+
+:print-volume rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "print volume"@en .

@@ -1,0 +1,218 @@
+@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/> .
+@prefix obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/05/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/> .
+
+<https://w3id.org/dharc/ontology/chad-ap/object/development/05/data/> rdf:type owl:Ontology ;
+                                                        owl:imports <https://w3id.org/dharc/ontology/chad-ap/object/development/05/schema/> .
+
+
+ex:L1-exp-creation a obj:CreationEvent ;
+                obj:createsWork ex:L1-work ;
+                obj:createsExpression ex:L1-exp ;
+                obj:createsManifestation ex:L1-man .
+
+ex:L1-work a obj:Work ;
+                obj:hasTitle ex:L1-work-title-01 ,
+                    ex:L1-work-title-02  .
+
+ex:L1-work-title-01 a obj:Title ;
+                obj:hasType obj:original-title ;
+                obj:hasContent "Amerigo Vespucci sveglia l'America"@it .
+
+ex:L1-work-title-02 a obj:Title ;
+                obj:hasType obj:museum-title ;
+                obj:hasContent "Amerigo Vespucci sveglia l'America"@it .
+                
+ex:L1-exp a obj:Expression ;
+                obj:isAbout ex:sub-amerigo-vespucci ,
+                            ex:sub-astrolabio ,
+                            ex:sub-vessillo-croce-del-sud ,
+                            ex:sub-formichiere ,
+                            ex:sub-bradipo ,
+                            ex:sub-tapiro ,
+                            ex:sub-gruppo-di-cannibali .
+
+ex:L1-man a obj:Manifestation .
+
+ex:L1-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:L1-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
+ex:nova-reperta a obj:ParentWork ;
+                obj:hasMember ex:L1-work ;
+                obj:hasType obj:print-series .
+
+ex:sub-amerigo-vespucci a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-astrolabio a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-vessillo-croce-del-sud a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-formichiere a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-bradipo a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-tapiro a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-gruppo-di-cannibali a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:1-exp-creation a obj:CreationEvent ;
+                obj:createsWork ex:1-work ;
+                obj:createsExpression ex:1-exp ;
+                obj:createsManifestation ex:1-man .
+
+ex:1-work a obj:Work ;
+                obj:hasTitle ex:1-work-title-01 ,
+                    ex:1-work-title-02 .
+
+ex:1-work-title-01 a obj:Title ;
+                obj:hasType obj:original-title ;
+                obj:hasContent "Carta nautica"@it .
+
+ex:1-work-title-02 a obj:Title ;
+                obj:hasType obj:museum-title ;
+                obj:hasContent "Carta nautica"@it .
+
+ex:1-exp a obj:Expression ;
+                obj:isAbout ex:sub-europa ,
+                            ex:sub-africa ,
+                            ex:sub-asia ,
+                            ex:sub-mar-mediterraneo .
+
+ex:1-man a obj:Manifestation .
+
+ex:1-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:1-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
+ex:sub-europa a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-africa a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-asia a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-mar-mediterraneo a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:7-exp-creation a obj:CreationEvent ;
+                obj:createsWork ex:7-work ;
+                obj:createsExpression ex:7-exp ;
+                obj:createsManifestation ex:7-man .
+
+ex:7-work a obj:Work ;
+                obj:hasTitle ex:7-work-title-01 ,
+                    ex:7-work-title-02 .
+
+ex:7-work-title-01 a obj:Title ;
+                obj:hasType obj:original-title ;
+                obj:hasContent "Profilo incompleto delle coste del continente americano"@it .
+
+ex:7-work-title-02 a obj:Title ;
+                obj:hasType obj:museum-title ;
+                obj:hasContent "Profilo incompleto delle coste del continente americano"@it .
+
+
+ex:7-exp a obj:Expression ;
+                obj:isAbout ex:sub-america ,
+                            ex:sub-europa .
+
+ex:7-man a obj:Manifestation .
+
+ex:7-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:7-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
+ex:atlante-nautico a obj:ParentWork ;
+                obj:hasMember ex:7-work ;
+                obj:hasType obj:marine-chart .
+
+ex:sub-amerigo-vespucci a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:sub-america a obj:Concept ;
+    obj:hasType obj:subject .
+
+ex:PTa-exp-creation a obj:CreationEvent ;
+                obj:createsWork ex:PTa-work ;
+                obj:createsExpression ex:PTa-exp ;
+                obj:createsManifestation ex:PTa-man .
+
+ex:PTa-work a obj:Work .
+
+ex:PTa-exp a obj:Expression .
+
+ex:PTa-man a obj:Manifestation ;
+                obj:isComposedOf ex:PTa-1-man , 
+                                 ex:PTa-2-man .
+
+ex:PTa-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:PTa-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
+ex:PTa-1-exp-creation a obj:CreationEvent ;
+                obj:createsWork ex:PTa-1-work ;
+                obj:createsExpression ex:PTa-1-exp ;
+                obj:createsManifestation ex:PTa-1-man .
+
+ex:PTa-1-work a obj:Work .
+
+ex:PTa-1-exp a obj:Expression .
+
+ex:PTa-1-man a obj:Manifestation .
+
+ex:PTa-1-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:PTa-1-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
+ex:PTa-2-exp-creation a obj:CreationEvent ;
+                obj:createsWork ex:PTa-2-work ;
+                obj:createsExpression ex:PTa-2-exp ;
+                obj:createsManifestation ex:PTa-2-man .
+
+ex:PTa-2-work a obj:Work .
+
+ex:PTa-2-exp a obj:Expression .
+
+ex:PTa-2-man a obj:Manifestation .
+
+ex:PTa-2-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:PTa-2-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
+
+ex:PTa-3-exp-creation a obj:CreationEvent ;
+                obj:createsWork ex:PTa-3-work ;
+                obj:createsExpression ex:PTa-3-exp ;
+                obj:createsManifestation ex:PTa-3-man .
+
+ex:PTa-3-work a obj:Work .
+
+ex:PTa-3-exp a obj:Expression .
+
+ex:PTa-3-man a obj:Manifestation ;
+                    obj:depicts ex:PTa-man .
+
+ex:PTa-3-man-license a obj:Concept ;
+    obj:hasType obj:license ;
+    obj:refersTo ex:PTa-3-man ;
+    obj:isDocumentedIn <http://rightsstatements.org/vocab/InC/1.0/> .
