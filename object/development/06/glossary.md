@@ -24,7 +24,7 @@
 | `has identifier` | This property links an entity with an identifier. |
 | `uses object` | This property links an activity to an item. |
 | `is carried out by` | This property links an activity to an actor. |
-| `occurred in the presence of` | This property links an activity with a collection. |
+| `occurs in the presence of` | This property links an activity with a collection. |
 | `has type` | This property links an entity with a type. |
 | `is about` | This property links an expression with an information object (e.g. a subject). |
 | `depicts` | This property links a item with the expression it depicts. |
