@@ -1,5 +1,5 @@
 @prefix aat: <http://vocab.getty.edu/page/aat/> .
-@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/object/data/05/> .
+@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/object/data/06/> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -38,7 +38,7 @@ ex:32-work-title-02 a crm:E35_Title ;
                 
 ex:32-expression a lrmoo:F2_Expression ;
     crm:P129_is_about ex:ermafrodita ;
-    lrmoo:R4_embodies ex:32-manifestation .
+    lrmoo:R4i_is_embodied_in ex:32-manifestation .
 
 ex:32-manifestation a lrmoo:F3_Manifestation ;
     crm:P2_has_type aat:300028569 ;
