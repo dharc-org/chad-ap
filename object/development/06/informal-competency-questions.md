@@ -4,14 +4,15 @@
 CQ_5.1
 
 ### Question
-What are the titles of the work `L1-work`? What are their types?
+What are the titles of the work? What are their types?
 
 ### Expected outcome
 List of: `title`, `type`, `content`
 
 ### Result
-* `L1-work-title-01`, `original-title`, "Amerigo Vespucci sveglia l'America"
-* `L1-work-title-02`, `museum-title`, "Amerigo Vespucci sveglia l'America"
+* `32-work-title-01`, `original-title`, "Essere umano ermafrodita"
+* `32-work-title-02`, `exhibition-title`, "Essere umano ermafrodita"
+* `32-work-title-02`, `exhibition-title`, "Human hermaphrodite"
 
 ### Based on 
 Example 1
@@ -23,19 +24,16 @@ Example 1
 CQ_5.2
 
 ### Question
-What are the subjects of the works that are not part of any parent work?
+Which work was created and in which period?
 
 ### Expected outcome
-List of: `work`, `subject`
+List of: `work`, `start_date`, `end_date`
 
 ### Result
-* `1-work`, `sub-europa`
-* `1-work`, `sub-africa`
-* `1-work`, `sub-asia`
-* `1-work`, `sub-mar-mediterraneo`
+* `32-work`, "1500-01-01T00:00:00Z", "1599-12-31T23:59:59Z"
 
 ### Based on
-Example 2
+Example 1
 
 ***
 
@@ -44,16 +42,16 @@ Example 2
 CQ_5.3
 
 ### Question
-What are the manifestations of the works which are members of parent works that are marine charts?
+Which works are part of other works? What are the types of the larger works?
 
 ### Exprected outcome
-List of: `manifestation`
+List of: `work`, `larger_work`
 
 ### Result
-* `7-man`
+* `32-work`, `tavole-di-animali-work`, `print-volume`
 
 ### Based on
-Example 3
+Example 1
 
 ***
 
@@ -62,17 +60,16 @@ Example 3
 CQ_5.4
 
 ### Question
-What are the parent works of the works that have either "Europa" or "tapiro" as their subject?
+What is the cultural object about?
 
 ### Expected outcome
-List of: `parent work`, `work`, `subject`
+List of: `expression`, `subject`
 
 ### Result
-* `nova-reperta-work`, `L1-work`, `sub-tapiro`
-* `atlante-nautico-work`, `7-work`, `sub-europa`
+* `32-expression`, `ermafrodita`
 
 ### Based on
-Example 1, Example 2, Example 3
+Example 1
 
 ***
 
@@ -81,17 +78,16 @@ Example 1, Example 2, Example 3
 CQ_5.5
 
 ### Question
-What are the manifestations that compose another manifestation?
+What is the type of the cultural object?
 
 ### Expected outcome
-List of: `manifestation1`, `manifestation2`
+List of: `manifestation`, `type`
 
 ### Result
-* `PTa-1-man`, `PTa-man`
-* `PTa-2-man`, `PTa-man`
+* `32-manifestation`, `manuscript`
 
 ### Based on
-Example 4
+Example 1
 
 ***
 
@@ -100,16 +96,16 @@ Example 4
 CQ_5.6
 
 ### Question
-What are the manifestations that depict other expressions?
+Which license statement is assigned to the cultural object?
 
 ### Expected outcome
-List of: `manifestation`, `expression`
+List of: `manifestation`, `license`, `external_resource`
 
 ### Result
-* `PTa-3-man`, `PTa-exp`
+* `32-manifestation`, `in-copyright`, "http://rightsstatements.org/vocab/InC/1.0/"
 
 ### Based on
-Example 4
+Example 1
 
 ***
 
@@ -118,19 +114,51 @@ Example 4
 CQ_5.7
 
 ### Question
-What are the license statements referring to the manifestations?
+What are the identifiers identifying the cultural object? What are their types?
 
 ### Expected outcome
-List of: `manifestation`, `license_link`
+List of: `identifier`, `type`, `content`
 
 ### Result
-* `L1-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `1-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `7-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `PTa-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `PTa-1-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `PTa-2-man`, http://rightsstatements.org/vocab/InC/1.0/
-* `PTa-3-man`, http://rightsstatements.org/vocab/InC/1.0/
+* `32-item-identifier-01`, `collection-id`, "32"
+* `32-item-identifier-02`, `volume-number`, "5"
+* `32-item-identifier-03`, `shelf-mark`, "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"
 
 ### Based on
-Example 1, Example 2, Example 3, Example 4
+Example 1
+
+***
+
+## Question 8
+### Identifier 
+CQ_5.8
+
+### Question
+What is the curation activity in which the object is involved? Who carried it out?
+
+### Expected outcome
+List of: `item`, `activity`, `actor`
+
+### Result
+* `32-item`, `32-item-curation`, `bub`
+
+### Based on
+Example 1
+
+***
+
+## Question 8
+### Identifier 
+CQ_5.9
+
+### Question
+What is the description of the cultural object?
+
+### Expected outcome
+List of: `item`, `description`
+
+### Result
+* `32-item`, "Essere umano ermafrodita Human hermaphrodite (Monstrum humanum hermaphroditicum) sec. XVI 16th century BUB, Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"
+
+### Based on
+Example 1
