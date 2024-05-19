@@ -1,0 +1,98 @@
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/object/data/05/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dharc/ontology/chad-ap/object/data/06/> .
+
+<https://w3id.org/dharc/ontology/chad-ap/object/data/06/> rdf:type owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/object/model/> .
+
+
+ex:32-expression-creation a lrmoo:F28_Expression_Creation ;
+    lrmoo:R19_created_a_realisation_of ex:32-work ;
+    lrmoo:R17_created ex:32-expression ;
+    crm:P4_has_time-span ex:1500-1599 .
+
+ex:1500-1599 a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1500-01-01T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "1599-12-31T23:59:59Z"^^xsd:dateTime .
+
+ex:32-work a lrmoo:F1_Work ;
+    crm:P102_has_title ex:32-work-title-01 ,
+        ex:32-work-title-02 ;
+    lrmoo:R3_is_realised_in ex:32-expression .
+
+ex:32-work-title-01 a crm:E35_Title ;
+    crm:P2_has_type aat:300417204 ;
+    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it .
+
+ex:32-work-title-02 a crm:E35_Title ;
+    crm:P2_has_type aat:300417207 ;
+    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it ,
+        "Human hermaphrodite"@en .
+                
+ex:32-expression a lrmoo:F2_Expression ;
+    crm:P129_is_about ex:ermafrodita ;
+    lrmoo:R4_embodies ex:32-manifestation .
+
+ex:32-manifestation a lrmoo:F3_Manifestation ;
+    crm:P2_has_type aat:300028569 ;
+    lrmoo:R7i_is_exemplified_by ex:32-item .
+
+ex:32-manifestation-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:32-manifestation ;
+    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
+
+ex:tavole-di-animali-work a lrmoo:F1_Work ;
+    lrmoo:R10_has_member ex:32-work ;
+    lrmoo:R3_is_realised_in ex:tavole-di-animali-expression .
+
+ex:tavole-di-animali-expression a lrmoo:F2_Expression ;
+    lrmoo:R4i_is_embodied_in ex:tavole-di-animali-manifestation .
+
+ex:tavole-di-animali-manifestation a lrmoo:F3_Manifestation ;
+    crm:P2_has_type aat:300265632 ;
+    lrmoo:R7i_is_exemplified_by ex:tavole-di-animali-item .
+
+ex:tavole-di-animali-item a lrmoo:F5_Item .
+
+ex:ermafrodita a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300404126 .
+
+ex:32-item a lrmoo:F5_Item ;
+    crm:P1_is_identified_by ex:32-item-identifier-01 ,
+        ex:32-item-identifier-02 ,
+        ex:32-item-identifier-03 ;
+    crm:P3_has_note """
+        Essere umano ermafrodita 
+        Human hermaphrodite (Monstrum humanum hermaphroditicum) 
+        sec. XVI 
+        16th century 
+        BUB, 
+        Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86
+    """^^rdfs:Literal .
+
+ex:32-item-identifier-01 a crm:E42_Identifier ;
+    crm:P2_has_type aat:300312355 ;
+    crm:P190_has_symbolic_content "32"^^rdfs:Literal .
+
+ex:32-item-identifier-02 a crm:E42_Identifier ;
+    crm:P2_has_type aat:300445021 ;
+    crm:P190_has_symbolic_content "5"^^rdfs:Literal .
+
+ex:32-item-identifier-03 a crm:E42_Identifier ;
+    crm:P2_has_type aat:300404704 ;
+    crm:P190_has_symbolic_content "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"^^rdfs:Literal .
+
+ex:32-item-curation a crm:E7_Activity ;
+    crm:P2_has_type aat:300054277 ;
+    crm:P16_used_specific_object ex:32-item ;
+    crm:P12_occurred_in_the_presence_of ex:bub .
+
+ex:bub a crm:E39_Actor .

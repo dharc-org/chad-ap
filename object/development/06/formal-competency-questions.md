@@ -95,7 +95,7 @@ WHERE {
     ?creation a obj:CreationEvent ;
       obj:createsExpression ?expression .
     ?expression obj:isEmbodiedIn ?manifestation .
-    ?license obj:type obj:license-statement ;
+    ?license obj:hasType obj:license-statement ;
       obj:refersTo ?manifestation ;
       obj:isDocumentedIn ?external_resource .
 }
