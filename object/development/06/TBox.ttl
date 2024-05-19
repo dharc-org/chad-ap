@@ -27,9 +27,9 @@
           rdfs:label "is realized in"@en .
 
 
-:embodies rdf:type owl:ObjectProperty ;
+:isEmbodiedIn rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:label "embodies"@en .
+           rdfs:label "is embodied in"@en .
 
 
 :isEsemplifiedBy rdf:type owl:ObjectProperty ;

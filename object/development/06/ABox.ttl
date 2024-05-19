@@ -36,7 +36,7 @@ ex:32-work-title-02 a obj:Title ;
                 
 ex:32-expression a obj:Expression ;
     obj:isAbout ex:ermafrodita ;
-    obj:embodies ex:32-manifestation .
+    obj:isEmbodiedIn ex:32-manifestation .
 
 ex:32-manifestation a obj:Manifestation ;
     obj:hasType obj:manuscript ;
@@ -52,7 +52,7 @@ ex:tavole-di-animali-work a obj:Work ;
     obj:isRealizedIn ex:tavole-di-animali-expression .
 
 ex:tavole-di-animali-expression a obj:Expression ;
-    obj:embodies ex:tavole-di-animali-manifestation .
+    obj:isEmbodiedIn ex:tavole-di-animali-manifestation .
 
 ex:tavole-di-animali-manifestation a obj:Manifestation ;
     obj:hasType obj:print-volume ;

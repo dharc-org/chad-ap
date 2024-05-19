@@ -1,7 +1,7 @@
 # Informal Competency Questions
 ## Question 1
 ### Identifier
-CQ_5.1
+CQ_6.1
 
 ### Question
 What are the titles of the work? What are their types?
@@ -21,7 +21,7 @@ Example 1
 
 ## Question 2
 ### Identifier 
-CQ_5.2
+CQ_6.2
 
 ### Question
 Which work was created and in which period?
@@ -39,13 +39,13 @@ Example 1
 
 ## Question 3
 ### Identifier
-CQ_5.3
+CQ_6.3
 
 ### Question
 Which works are part of other works? What are the types of the larger works?
 
 ### Exprected outcome
-List of: `work`, `larger_work`
+List of: `work`, `larger_work`, `type`
 
 ### Result
 * `32-work`, `tavole-di-animali-work`, `print-volume`
@@ -57,7 +57,7 @@ Example 1
 
 ## Question 4
 ### Identifier
-CQ_5.4
+CQ_6.4
 
 ### Question
 What is the cultural object about?
@@ -75,7 +75,7 @@ Example 1
 
 ## Question 5
 ### Identifier 
-CQ_5.5
+CQ_6.5
 
 ### Question
 What is the type of the cultural object?
@@ -93,7 +93,7 @@ Example 1
 
 ## Question 6
 ### Identifier 
-CQ_5.6
+CQ_6.6
 
 ### Question
 Which license statement is assigned to the cultural object?
@@ -111,7 +111,7 @@ Example 1
 
 ## Question 7
 ### Identifier 
-CQ_5.7
+CQ_6.7
 
 ### Question
 What are the identifiers identifying the cultural object? What are their types?
@@ -131,7 +131,7 @@ Example 1
 
 ## Question 8
 ### Identifier 
-CQ_5.8
+CQ_6.8
 
 ### Question
 What is the curation activity in which the object is involved? Who carried it out?
@@ -147,9 +147,9 @@ Example 1
 
 ***
 
-## Question 8
+## Question 9
 ### Identifier 
-CQ_5.9
+CQ_6.9
 
 ### Question
 What is the description of the cultural object?

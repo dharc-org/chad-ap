@@ -17,7 +17,7 @@
 | `creates work` | This property links a creation event with a work. |
 | `creates expression` | This property links a creation event with a exppression. |
 | `is realized in` | This property links a work with an expression. |
-| `embodies` | This property links an expression with a manifestation. |
+| `is embodied in` | This property links an expression with a manifestation. |
 | `is exemplified by` | This property links a manifestation with an item. |
 | `has member` | This property links a work with another work. |
 | `has title` | This property links an entity with a title. |
