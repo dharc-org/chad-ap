@@ -671,7 +671,7 @@ What are the CH objects whose creation involved some author?
         ?creation_event a frbroo:F28_Expression_Creation ;
             frbroo:R17_created ?resource ;
             crm:P9_consists_of ?activity .
-        ?activity crm:P2_has_type aat:300404387 ;
+        ?activity crm:P2_has_type aat:300054698 ;
             crm:P14_carried_out_by ?agent .
     }
 

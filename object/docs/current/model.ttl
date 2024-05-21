@@ -1,5 +1,5 @@
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -20,12 +20,19 @@ crm:E42_Identifier
     rdfs:subClassOf crm:E41_Appellation ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
-frbroo:F4_Manifestation_Singleton 
+lrmoo:F3_Manifestation 
     a owl:Class ;
-    rdfs:label "Manifestation Singleton"@en ;
-    rdfs:comment "The physical instance of a cultural heritage object."@en ;
+    rdfs:label "Manifestation"@en ;
+    rdfs:comment "The rendering of one or more expressions. It is defined by both the overall content and the form of its presentation. The substance of manifestation is not only signs, but also the manner in which they are presented to be consumed by users, including the kind of media adopted."@en ;
+    rdfs:subClassOf crm:E73_Information_Object ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:F5_Item 
+    a owl:Class ;
+    rdfs:label "Item"@en ;
+    rdfs:comment "This class comprises physical objects that were produced by a process involving a given manifestation."@en ;
     rdfs:subClassOf crm:E24_Physical_Human-Made_Thing ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
 crm:E35_Title 
     a owl:Class ;
@@ -39,24 +46,6 @@ crm:E35_Title
     rdfs:comment "A textual string that functions as a title for a work."@en ;
     rdfs:subClassOf crm:E33_Linguistic_Object, 
         crm:E41_Appellation ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
-
-crm:E87_Curation_Activity 
-    a owl:Class ;
-    rdfs:label "Curation Activity"@en,
-                "Kuratorische Tätigkeit"@de,
-                "Activité curatoriale"@fr,
-                "管理"@zh ;
-    rdfs:comment "An activity that results in the continuity of management and the preservation and evolution of a collection."@en ;
-    rdfs:subClassOf crm:E7_Activity ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
-
-crm:E78_Curated_Holding 
-    a owl:Class ;
-    rdfs:label "Curated Holding"@en,
-                "Collection"@fr ;
-    rdfs:comment "A collection of physical objects that is assembled and maintained by one or more actors over time for a specific purpose and audience."@en ;
-    rdfs:subClassOf crm:E24_Physical_Human-Made_Thing ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
 crm:E52_Time-Span 
@@ -98,27 +87,20 @@ crm:E39_Actor
     rdfs:subClassOf crm:E77_Persistent_Item ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
-frbroo:F27_Work_Conception 
-    a owl:Class ;
-    rdfs:label "Work Conception"@en ;
-    rdfs:comment "An activity that represents the creation of a work."@en ;
-    rdfs:subClassOf crm:E65_Creation ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
-
-frbroo:F1_Work 
+lrmoo:F1_Work 
     a owl:Class ;
     rdfs:label "Work"@en ;
     rdfs:comment "The essence or conceptualization of a cultural heritage object."@en ;
     rdfs:subClassOf crm:E89_Propositional_Object ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
-frbroo:F28_Expression_Creation 
+lrmoo:F28_Expression_Creation 
     a owl:Class ;
     rdfs:label "Expression Creation"@en ;
     rdfs:comment "An activity that represents the creation of an expression."@en ;
     rdfs:subClassOf crm:E12_Production ;
     rdfs:subClassOf crm:E65_Creation ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
 crm:E7_Activity 
     a owl:Class ;
@@ -146,12 +128,12 @@ crm:E55_Type
     rdfs:subClassOf crm:E28_Conceptual_Object ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
-frbroo:F2_Expression 
+lrmoo:F2_Expression 
     a owl:Class ;
     rdfs:label "Expression"@en ;
     rdfs:comment "The realisation of a work, referring to the intellectual content of a cultural heritage object."@en ;
     rdfs:subClassOf crm:E73_Information_Object ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
 crm:E73_Information_Object 
     a owl:Class ;
@@ -180,42 +162,33 @@ crm:E31_Document
     rdfs:subClassOf crm:E73_Information_Object ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
-frbroo:F15_Complex_Work 
-    a owl:Class ;
-    rdfs:label "Complex Work"@en ;
-    rdfs:comment "A work that is composed of other works."@en ;
-    rdfs:subClassOf frbroo:F1_Work ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
-
-crm:P48_has_preferred_identifier 
+crm:P1_is_identified_by
     a owl:ObjectProperty ;
-    rdfs:label "has preferred identifier"@en,
-                "hat bevorzugtes Kennzeichen"@de,
-                "έχει προτιμώμενο αναγνωριστικό"@el,
-                "a pour identifiant préférentiel"@fr,
-                "tem identificador preferido"@pt,
-                "имеет предпочтительный идентификатор"@ru,
-                "有优选标识符"@zh ;
-    rdfs:comment "This property records the preferred identifier used to identify an entity."@en ;
+    rdfs:label "is identified by"@en,
+                "wird bezeichnet als"@de,
+                "αναγνωρίζεται ως"@el,
+                "est identifié par"@fr,
+                "é identificado por"@pt,
+                "идентифицируется посредством"@ru,
+                "被标识为"@zh ;
+    rdfs:comment "This property describes the naming or identification of any real-world item by a name or any other identifier."@en ;
     rdfs:domain crm:E1_CRM_Entity ;
-    rdfs:range crm:E42_Identifier ;
-    rdfs:subPropertyOf crm:P1_is_identified_by ;
-    owl:inverseOf crm:P48i_is_preferred_identifier_of ;
+    rdfs:range crm:E41_Appellation ;
+    owl:inverseOf crm:P1i_identifies ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
-crm:P48i_is_preferred_identifier_of 
+crm:P1i_identifies 
     a owl:ObjectProperty ;
-    rdfs:label "is preferred identifier of"@en,
-                "ist bevorzugtes Kennzeichen für"@de,
-                "είναι προτιμώμενο αναγνωριστικό"@el,
-                "est l’identifiant préférentiel de"@fr,
-                "é o identificador preferido de"@pt,
-                "является предпочтительным идентификатором для"@ru,
-                "是优选标识符"@zh ;
-    rdfs:domain crm:E42_Identifier ;
+    rdfs:label "identifies"@en,
+                "bezeichnet"@de,
+                "είναι αναγνωριστικό"@el,
+                "identifie"@fr,
+                "identifica"@pt,
+                "идентифицирует"@ru,
+                "标识"@zh ;
+    rdfs:domain crm:E41_Appellation ;
     rdfs:range crm:E1_CRM_Entity ;
-    rdfs:subPropertyOf crm:P1i_identifies ;
-    owl:inverseOf crm:P48_has_preferred_identifier ;
+    owl:inverseOf crm:P1_is_identified_by ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
 crm:P46_is_composed_of 
@@ -290,56 +263,37 @@ crm:P12i_was_present_at
     owl:inverseOf crm:P12_occurred_in_the_presence_of ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
-crm:P49_has_former_or_current_keeper 
+crm:P16_used_specific_object 
     a owl:ObjectProperty ;
-    rdfs:label "has former or current keeper"@en,
-                "hat früheren oder derzeitigen Betreuer"@de,
-                "είναι ή ήταν στην κατοχή του"@el,
-                "a pour actant détenteur actuel ou antérieur"@fr,
-                "é ou foi guardada por"@pt,
-                "имеет бывшего или текущего смотрителя"@ru,
-                "有以往或当前保管者"@zh ;
-    rdfs:comment "This property identifies an actor who has or has had custody of a physical entity at some time."@en ;
-    rdfs:domain crm:E18_Physical_Thing ;
-    rdfs:range crm:E39_Actor ;
-    owl:inverseOf crm:P49i_is_former_or_current_keeper_of ;
+    rdfs:label "used specific object"@en,
+                "benutzte das bestimmte Objekt"@de,
+                "χρησιμοποίησε αντικείμενο"@el,
+                "a mobilisé l’objet spécifique"@fr,
+                "usou objeto específico"@pt,
+                "использовал особый объект"@ru,
+                "使用特定对象"@zh ;
+    rdfs:comment "This property describes the use of material or immaterial things in a way essential to the performance or the outcome of an activity."@en ;
+    rdfs:domain crm:E7_Activity ;
+    rdfs:range crm:E70_Thing ;
+    rdfs:subPropertyOf crm:P12_occurred_in_the_presence_of ,
+        crm:P15_was_influenced_by ;
+    owl:inverseOf crm:P16i_was_used_for ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
-crm:P49i_is_former_or_current_keeper_of 
+crm:P16i_was_used_for 
     a owl:ObjectProperty ;
-    rdfs:label "is former or current keeper of"@en,
-                "ist früherer oder derzeitiger Betreuer von"@de,
-                "κατέχει ή κατείχε"@el,
-                "est l’actant détenteur actuel ou antérieur de"@fr,
-                "é ou foi guardador de"@pt,
-                "является бывшим или текущим смотрителем для"@ru,
-                "是以往或当前保管者"@zh ;
-    rdfs:domain crm:E39_Actor ;
-    rdfs:range crm:E18_Physical_Thing ;
-    owl:inverseOf crm:P49_has_former_or_current_keeper ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
-
-crm:P147_curated 
-    a owl:ObjectProperty ;
-    rdfs:label "curated"@en,
-                "betreute kuratorisch"@de,
-                "a géré"@fr,
-                "管理"@zh ;
-    rdfs:comment "This property associates a curation activity with a collection involved in such activity."@en ;
-    rdfs:domain crm:E87_Curation_Activity ;
-    rdfs:range crm:E78_Curated_Holding ;
-    owl:inverseOf crm:P147i_was_curated_by ;
-    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
-
-crm:P147i_was_curated_by 
-    a owl:ObjectProperty ;
-    rdfs:label "was curated by"@en,
-                "wurde kuratorisch betreut durch"@de,
-                "a été géré par"@fr,
-                "被管理"@zh ;
-    rdfs:domain crm:E78_Curated_Holding ;
-    rdfs:range crm:E87_Curation_Activity ;
-    owl:inverseOf crm:P147_curated ;
+    rdfs:label "was used for"@en,
+                "wurde benutzt für"@de,
+                "χρησιμοποιήθηκε για"@el,
+                "a été mobilisé pour"@fr,
+                "foi usado por"@pt,
+                "был использован для"@ru,
+                "用于"@zh ;
+    rdfs:domain crm:E70_Thing ;
+    rdfs:range crm:E7_Activity ;
+    rdfs:subPropertyOf crm:P12i_was_present_at ,
+        crm:P15i_influenced ;
+    owl:inverseOf crm:P16_used_specific_object ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
 crm:P102_has_title 
@@ -644,65 +598,115 @@ crm:P129i_is_subject_of
     owl:inverseOf crm:P129_is_about ;
     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> .
 
-frbroo:R18_created 
-    a owl:ObjectProperty ;
-    rdfs:label "created"@en ;
-    rdfs:comment "This property associates an expression creation with the first physical objects in which the resulting expression was embodied."@en ;
-    rdfs:domain frbroo:F28_Expression_Creation ;
-    rdfs:range frbroo:F4_Manifestation_Singleton ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
-
-frbroo:R18i_was_created_by 
-    a owl:ObjectProperty ;
-    rdfs:label "was created by"@en ;
-    rdfs:domain frbroo:F4_Manifestation_Singleton ;
-    rdfs:range frbroo:F28_Expression_Creation ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
-
-frbroo:R19_created_a_realization_of 
+lrmoo:R19_created_a_realisation_of
     a owl:ObjectProperty ;
     rdfs:label "created a realization of"@en ;
     rdfs:comment "This property associates an expression creation with the corresponding work."@en ;
-    rdfs:domain frbroo:F28_Expression_Creation ;
-    rdfs:range frbroo:F1_Work ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:domain lrmoo:F28_Expression_Creation ;
+    rdfs:range lrmoo:F1_Work ;
+    owl:inverseOf lrmoo:R19i_was_realised_through ;
+    rdfs:subPropertyOf crm:P16_used_specific_object ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
-frbroo:R19i_was_realised_through 
+lrmoo:R19i_was_realised_through 
     a owl:ObjectProperty ;
     rdfs:label "was realised through"@en ;
-    rdfs:domain frbroo:F1_Work ;
-    rdfs:range frbroo:F28_Expression_Creation ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:domain lrmoo:F1_Work ;
+    rdfs:range lrmoo:F28_Expression_Creation ;
+    owl:inverseOf lrmoo:R19_created_a_realisation_of ;
+    rdfs:subPropertyOf crm:P16i_was_used_for ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
-frbroo:R17_created 
+lrmoo:R17_created 
     a owl:ObjectProperty ;
     rdfs:label "created"@en ;
     rdfs:comment "This property associates the expression that was first externalised during a particular creation event with that particular creation event."@en ;
-    rdfs:domain frbroo:F28_Expression_Creation ;
-    rdfs:range frbroo:F2_Expression ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:domain lrmoo:F28_Expression_Creation ;
+    rdfs:range lrmoo:F2_Expression ;
+    owl:inverseOf lrmoo:R17i_was_created_by ;
+    rdfs:subPropertyOf crm:P94_has_created ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
-frbroo:R17i_was_created_by 
+lrmoo:R17i_was_created_by 
     a owl:ObjectProperty ;
     rdfs:label "was created by"@en ;
-    rdfs:domain frbroo:F2_Expression ;
-    rdfs:range frbroo:F28_Expression_Creation ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range lrmoo:F28_Expression_Creation ;
+    owl:inverseOf lrmoo:R17_created ;
+    rdfs:subPropertyOf crm:P94i_was_created_by ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
-frbroo:R10_has_member 
+lrmoo:R10_has_member 
     a owl:ObjectProperty ;
     rdfs:label "has member"@en ;
     rdfs:comment "This property associates a complex work with a work that forms part of it."@en ;
-    rdfs:domain frbroo:F15_Complex_Work ;
-    rdfs:range frbroo:F1_Work ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:domain lrmoo:F1_Work ;
+    rdfs:range crm:E28_Conceptual_Object ;
+    owl:inverseOf lrmoo:R10i_is_member_of ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
-frbroo:R10i_is_member_of 
+lrmoo:R10i_is_member_of 
     a owl:ObjectProperty ;
     rdfs:label "is member of"@en ;
-    rdfs:domain frbroo:F1_Work ;
-    rdfs:range frbroo:F15_Complex_Work ;
-    rdfs:isDefinedBy <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    rdfs:domain crm:E28_Conceptual_Object ;
+    rdfs:range lrmoo:F1_Work ;
+    owl:inverseOf lrmoo:R10_has_member ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:R3_is_realised_in 
+    a owl:ObjectProperty ;
+    rdfs:label "is realised in"@en ;
+    rdfs:comment "This property associates an expression with a work."@en ;
+    rdfs:domain lrmoo:F1_Work ;
+    rdfs:range lrmoo:F2_Expression ;
+    owl:inverseOf lrmoo:R3i_realises ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:R3i_realises 
+    a owl:ObjectProperty ;
+    rdfs:label "realises"@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range lrmoo:F1_Work ;
+    owl:inverseOf lrmoo:R3_is_realised_in ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:R4_embodies 
+    a owl:ObjectProperty ;
+    rdfs:label "embodies"@en ;
+    rdfs:comment "This property associates a manifestation with one or more expressions which are rendered by this manifestation."@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range lrmoo:F2_Expression ;
+    owl:inverseOf lrmoo:R4i_is_embodied_in ;
+    rdfs:subPropertyOf crm:P165_incorporates ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:R4i_is_embodied_by 
+    a owl:ObjectProperty ;
+    rdfs:label "is embodied in"@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range lrmoo:F3_Manifestation ;
+    owl:inverseOf lrmoo:R4_embodies ;
+    rdfs:subPropertyOf crm:P165i_is_incorporated_in ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:R7_exemplifies
+    a owl:ObjectProperty ;
+    rdfs:label "exemplifies"@en ;
+    rdfs:comment "This property associates a manifestation with an item that is one of its exemplars or its only exemplar."@en ;
+    rdfs:domain lrmoo:F5_Item ;
+    rdfs:range lrmoo:F3_Manifestation ;
+    owl:inverseOf lrmoo:R7i_is_exemplified_by ;
+    rdfs:subPropertyOf crm:P128_carries ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
+
+lrmoo:R7i_is_exemplified_by
+    a owl:ObjectProperty ;
+    rdfs:label "is exemplified by"@en ;
+    rdfs:domain lrmoo:F3_Manifestation ;
+    rdfs:range lrmoo:F5_Item ;
+    owl:inverseOf lrmoo:R7_exemplifies ;
+    rdfs:subPropertyOf crm:P128i_is_carried_by ;
+    rdfs:isDefinedBy <http://iflastandards.info/ns/lrm/lrmoo/> .
 
 crm:P190_has_symbolic_content 
     a owl:DatatypeProperty ;
