@@ -1,26 +1,22 @@
 ## Description
 
-The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CH objects, and the _Process Module_ (PM), for describing the acquisition and digitisation process.
+The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CHOs, and the _Process Module_ (PM), for describing the acquisition and digitisation process.
 
-Both CHAD-AP and its [documentation](https://w3id.org/dharc/ontology/chad-ap) are living artefacts that have been drafted in the context of the [Project CHANGES](https://sites.google.com/uniroma1.it/changes/) ("Cultural Heritage Active Innovation For Next-Gen Sustainable Society"), an EU-funded project that  aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.
+Both CHAD-AP and its [documentation](https://w3id.org/dharc/ontology/chad-ap) are living artefacts that have been drafted in the context of the [Project CHANGES](https://sites.google.com/uniroma1.it/changes/) ("Cultural Heritage Active Innovation For Next-Gen Sustainable Society"), an EU-funded project that aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.
 
 Currently, CHAD-AP is able to describe the following entities:
-* CH objects, described according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. In particular, CHAD-AP considers: the essence or conceptualisation of the CH object (_Work_); the intellectual content of the CH object (_Expression_); and the physical instance of the CH object (_Manifestation Singleton_);
+* CHOs, described according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. In particular, CHAD-AP considers: the essence or conceptualisation of the CHO (_Work_); the intellectual content of the CHO (_Expression_); the embodiment of the CHO in terms of its format (_Manifestation_); and the physical exemplar of the CHO (_Item_);
 * Activities, events, agents involved and their roles;
 * Descriptive components, such as labels, types, identifiers and titles;
 * Entities related to curation and conservation, like curation events, places of conservation, agent responsible for its conservation, etc.
-* Concepts and other immaterial objects, such as the subjects illustrated by CH objects and the licenses or right statements assigned to them;
-* Digitization processes used to capture 3D data of CH objects and to output their digital models, and software activities leveraging these digital objects as input for further processes.
-
-The following figure contains a [Graffoo diagram](http://www.essepuntato.it/graffoo) that provides an overview of the class and properties reused in CHAD-AP.
-
-![A Graffoo diagram of CHAD-AP](diagrams/profile-model.png)
+* Concepts and other immaterial objects, such as the subjects illustrated by CHOs and the licenses or right statements assigned to them;
+* Digitization processes used to capture 3D data of CHOs and to output their digital models, and software activities leveraging these DCHOs as input for further processes.
 
 The current version of the application profile reuses a subset of classes and properties selected from the following models:
 
 * [CIDOC CRM](http://www.cidoc-crm.org/cidoc-crm/) is an international ISO standard that provides an ontology related to cultural heritage and museum documentation, which can be extended with additional modules for covering particular descriptions at hand;
 * [CRMdig](http://www.ics.forth.gr/isl/CRMdig/) is an extension of CIDOC CRM for describing metadata related to the digital provenance of digitisation processes and digital representations;
-* [FRBRoo](http://iflastandards.info/ns/fr/frbr/frbroo/) is an ontology for representing bibliographic information according to the FRBR data model within the CIDOC CRM framework;
+* [LRMoo](http://iflastandards.info/ns/lrm/lrmoo/) is an ontology for representing bibliographic information according to the LRM data model within the CIDOC CRM framework;
 * [AAT](http://vocab.getty.edu/page/aat/) is a structured vocabulary of terms used to describe art, architecture, decorative arts, and material culture.
 
 A full version of CHAD-AP is available at [https://w3id.org/dharc/ontology/chad-ap](https://w3id.org/dharc/ontology/chad-ap).
@@ -28,24 +24,28 @@ A full version of CHAD-AP is available at [https://w3id.org/dharc/ontology/chad-
 The next subsections provide a quick overview of all the entities defined, some exemple of usage, and some of the queries that CHAD-AP can answer.
 
 ### Object Module (OM)
-As shown in the diagram below, a Cultural Heritage (CH) object is described in CHAD-AP according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. 
+As shown in the diagram below, a Cultural Heritage Object (CHO) is described in CHAD-AP according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. 
 
 ![A diagram of the CHAD-AP Object Module (OM).](diagrams/object-model.png)
 
-In particular, the _Work_ (`frbroo:F1_Work`) represents the _essence_ or conceptualization of the CH object. It begins with a conception event (`frbroo:F27_Work_Conception`) occurring within a specific time span (`crm:E52_Time-Span`), which can be expressed as either a precisely defined period with exact starting and ending date times (`crm:P82a_begin_of_the_begin` and `crm:P82b_end_of_the_end`) or a fuzzy label if its temporal extents are not precisely known (`crm:P82_at_some_time_within`). Each work is associated with a series of titles (`crm:E35_Title`), each classified according to a particular type (`crm:E55_Type`), which can be an _original title_ (`aat:300417204`) or an _exhibition title_ (`aat:300417207`). Furthermore, a Work can be part of a larger Work (`frbroo:F15_Complex_Work`), like a series of printed volumes, which is classified under a particular type (`crm:E55_Type`).
+In particular, the _Work_ (`lrmoo:F1_Work`) represents the _essence_ or conceptualization of the CHO. Each work is associated with a series of titles (`crm:E35_Title`), each classified according to a particular type (`crm:E55_Type`), which can be an _original title_ (`aat:300417204`) or an _exhibition title_ (`aat:300417207`). Furthermore, a Work can be part of a larger Work, like a series of printed volumes, which is classified under a particular type (`crm:E55_Type`).
 
-The _Expression_ (`frbroo:F2_Expression`) is the realisation of a Work, and refers to the intellectual _content_ of the object. It is generated through a creation event (`frbroo:F28_Expression_Creation`) made of smaller activities (`crm:E7_Activity`), each conducted by one or more agents (`crm:E39_Actor`) and characterised by a specific type (`crm:E55_Type`) that defines, implicitly, the role assumed by the agent for that activity. For example, if the agent is identified as the author of the Expression, the activity type is represented as _writing_ (`aat:300054698`). Also, creation events employ various creation techniques (`crm:E55_Type`). For example, `aat:300054196` is used to express _drawing technique_. An Expression can also be associated with one or more subjects defining its contents. In CHAD-AP, a generic _concept_ is represented with the class `crm:E73_Information_Object` with the type `aat:300404126` (i.e. _subject_) explicitly specified.
+The _Expression_ (`lrmoo:F2_Expression`) is the realisation of a Work, and refers to the intellectual _content_ of the object. Both the Expression and the Work are generated through a creation event (`lrmoo:F28_Expression_Creation`) occurring within a specific time span (`crm:E52_Time-Span`), which can be expressed as either a precisely defined period with exact starting and ending date times (`crm:P82a_begin_of_the_begin` and `crm:P82b_end_of_the_end`) or a fuzzy label if its temporal extents are not precisely known (`crm:P82_at_some_time_within`). A creation event is made of smaller activities (`crm:E7_Activity`), each conducted by one or more agents (`crm:E39_Actor`) and characterised by a specific type (`crm:E55_Type`) that defines, implicitly, the role assumed by the agent for that activity. For example, if the agent is identified as the author of the Expression, the activity type is represented as _writing_ (`aat:300054698`). Also, creation events employ various creation techniques (`crm:E55_Type`). For example, `aat:300054196` is used to express _drawing technique_. An Expression can also be associated with one or more subjects defining its contents. In CHAD-AP, a generic _concept_ is represented with the class `crm:E73_Information_Object` with the type `aat:300404126` (i.e. _subject_) explicitly specified.
 
-Finally, the _Manifestation Singleton_ (`frbroo:F4_Manifestation_Singleton`) represents the physical instance of the CH object. It is accompanied with descriptive components like labels (expressed through the use of the property `crm:P3_has_note`), types (`crm:E55_Type`), and identifiers (`crm:E42_Identifier`). In some cases, it may be linked to a curation activity (`crm:E87_Curation_Activity`) carried out by a keeper (`crm:E39_Actor`) who manages a collection (`crm:E78_Curated_Holding`) the object belongs to, and that is located in a specific place (`crm:E53_Place`). Manifestations can consist of other Manifestations and may depict the Expression of another related object, such as a video displaying a manuscript or a tablet showing a picture of a specimen. In addition, Manifestations are associated with copyright or licensing statements (represented through the combination of `crm:E73_Information_Object` having type `aat:300435434`, i.e.  _copyright/licensing statement_), linked with the document introducing the actual license or right statements through the property `crm:P70i_is_documented_in`. Whenever possible, instances of `crm:E39_Actor` and `crm:E53_Place` are also linked with existing authority records through the property `crm:P48_has_preferred_identifier`.
+The _Manifestation_ (`lrmoo:F3_Manifestation`) represents the embodiment of the CHO's content in a physical format. It is characterised by having a type (`crm:E55_Type`). In addition, Manifestations are associated with copyright or licensing statements (represented through the combination of `crm:E73_Information_Object` having type `aat:300435434`, i.e.  _copyright/licensing statement_), linked with the document introducing the actual license or right statements through the property `crm:P70i_is_documented_in`.
+
+Finally, the _Item_ (`lrmoo:F5_Item`) represents the physical, localised exemplar of the CHO. It is accompanied with descriptive components like labels (expressed through the use of the property `crm:P3_has_note`) and identifiers (`crm:E42_Identifier`, each with its own content and type). Items can depict the content (`lrmoo:F2_Expression`) of another CHO. Sometimes, an Item may be linked to a curation activity (represented through the combination of `crm:E7_Activity` with type `aat:300054277`, i.e. _curating_) carried out by a keeper (`crm:E39_Actor`) who manages a collection (`crm:E24_Physical_Human-Made_Thing` with type `aat:300025976`, i.e. _collections_) to which the object belongs, located in a specific place (`crm:E53_Place`). An Item can also be composed of (`crm:P46_is_composed_of`) other Items.
+
+Whenever possible, instances of `crm:E39_Actor` and `crm:E53_Place` are also linked with existing authority records through the property `crm:P1_is_identified_by`.
 
 ### Process Module (PM)
 As shown in the diagram below, CHAD-AP also describes the entities for defining a 3D digitisation workflow as a sequence of activities classified according to two main categories. 
 
 ![A diagram of the CHAD-AP Process Module (PM).](diagrams/process-model.png)
 
-On the one hand, we have the _acquisition activity_ (`crmdig:D2_Digitization_Process`), which involves the digitisation of a CH object (`crm:E24_Physical_Human-Made_Thing`) to produce its digital CH object (`crmdig:D9_Data_Object`). Similarly to its physical counterpart, the digital CH object can be associated with copyright statements or licenses (`crm:E73_Information_Object` with `aat:300435434` as its type). The acquisition occurs within a time span (`crm:E52_Time-Span`) with defined starting and ending date times, and engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`) responsible for the activity. During the acquisition, a series of techniques (`crm:E55_Type`) can be used, such as _photogrammetry_ (`aat:300053580`) or _structured light scanning_ (`aat:300391312`), along with tools (`crmdig:D8_Digital_Device`) like _digital cameras_ (`aat:300266792`) and _structured light scanners_ (`aat:300429747`).
+On the one hand, we have the _acquisition activity_ (`crmdig:D2_Digitization_Process`), which involves the digitisation of a CHO (`crm:E24_Physical_Human-Made_Thing`) to produce a Digital CHO (DCHO) (`crmdig:D9_Data_Object`). Similarly to its physical counterpart, the DCHO can be associated with copyright statements or licenses (`crm:E73_Information_Object` with `aat:300435434` as its type). The acquisition occurs within a time span (`crm:E52_Time-Span`) with defined starting and ending date times, and engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`) responsible for the activity. During the acquisition, a series of techniques (`crm:E55_Type`) can be used, such as _photogrammetry_ (`aat:300053580`) or _structured light scanning_ (`aat:300391312`), along with tools (`crmdig:D8_Digital_Device`) like _digital cameras_ (`aat:300266792`) and _structured light scanners_ (`aat:300429747`).
 
-On the other hand, we have a series of _software activities_ (`crmdig:D10_Software_Execution`), each representing a specific stage or phase of digitisation workflow. Such stage is denoted by its type (`crm:E55_Type`), such as _processing_ (`aat:300054636`), _modelling_ (`aat:300391447`), and _optimization_ (`aat:300386427`). It involves the manipulation of the digital CH object (`crmdig:D9_Data_Object`) produced previously as input and the production of a modified version of that digital CH object (`crmdig:D9_Data_Object`) as output. The activity also occurs within a defined time span (`crm:E52_Time-Span`) with precise start and end date times, engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`), and uses software as tools to produce its output (`crmdig:D14_Software`).
+On the other hand, we have a series of _software activities_ (`crmdig:D10_Software_Execution`), each representing a specific stage or phase of digitisation workflow. Such stage is denoted by its type (`crm:E55_Type`), such as _processing_ (`aat:300054636`), _modelling_ (`aat:300391447`), and _optimization_ (`aat:300386427`). It involves the manipulation of the DCHO (`crmdig:D9_Data_Object`) produced previously as input and the production of a modified version of that DCHO (`crmdig:D9_Data_Object`) as output. The activity also occurs within a defined time span (`crm:E52_Time-Span`) with precise start and end date times, engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`), and uses software as tools to produce its output (`crmdig:D14_Software`).
 
 ## Examples of use
 CHAD-AP can be used for modelling  scenarios related to cultural heritage acquisition and digitisation processes. In the following subsections we introduce some of them, and we accompany them with exemplar instantiations. 
@@ -56,577 +56,247 @@ The prefixes that are used in all the examples provided below are defined as fol
     @prefix ex: <https://w3id.org/dharc/ontology/chad-ap/data/example/> .
     @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
     @prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
-    @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+    @prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
     @prefix owl: <http://www.w3.org/2002/07/owl#> .
     @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
     @prefix xml: <http://www.w3.org/XML/1998/namespace> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
     @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-### Scenario 1
-The creation event `01-exp-creation-00` created the CH object `01-exp` ('Amerigo Vespucci sveglia l’America') through the technique `engraving`. The creation event consists of three smaller creation events:
-* `01-exp-creation-01`, carried out by `Jan van der Straet` (`ULAN:500011304`), in the role of `illustration`;
-* `01-exp-creation-02`, carried out by `Philip Galle`, `Theodor Galle` and `Jan Collaert`, in the role of `engraving process`;
-* `01-exp-creation-03`, carried out by `Luigi Alamanni` (`ULAN:500714480`), in the role of `commission`.
+### Scenario 
+The creation event `32-expression-creation` created the work `32-work` and its expression `32-expression` within a time span ranging from 1500 to 1599. The creation event is carried out through the `drawing` technique and consists of an activity `32-expression-creation-01`, carried out by `ulisse-aldrovandi` (ULAN:`500342675`) as a creator of the work.
 
-The creation event `35-exp-creation-00` created the CH object `35-exp` ('De plantis epitome utilissima') through the technique `watercolor`. The creation event consists of two smaller creation events:
-* `35-exp-creation-01`, carried out by `Pietro Andrea Mattioli` (`VIAF:61549376`), in the role of `translation`;
-* `35-exp-creation-02`, carried out by `Pietro Andrea Mattioli` (`VIAF:61549376`), in the role of `illustration`.
+`32-work` has two titles: `32-work-title-01` with type `original-title` ("Essere umano ermafrodita"), and `32-work-title-02` with type `exhibition-title` ("Essere umano ermafrodita" and "Human hermaphrodite"). It is member of another work `tavole-di-animali-work`, whose manifestation has `print-volume` as its type. It is realised in `32-expression`.
 
-The creation event `24-exp-creation-00` created the CH object `24-exp` ('Panthera onca (Linnaeus, 1758)') through the technique `taxidermy`. The creation event consists of two smaller creation events:
-* `24-exp-creation-01`, carried out by `Carl Linnaeus` (`VIAF:34594730`), in the role of `discovery`;
-* `24-exp-creation-02`, carried out by `Naturaliter`, in the role of `museum preparation`.
+`32-expression` is about the concept `ermafrodita`. It is embodied in the manifestation `L1-manifestation`.
+
+`32-manifestation` has `manuscript` as its type. It is referred to by a license statement `32-manifestation-license` documented in the external document "http://rightsstatements.org/vocab/InC/1.0/". It is exemplified by `32-item`.
+
+`32-item` is identified by three identifiers: `32-item-identifier-01` ("32") with type `collection-id`; `32-item-identifier-02` ("5") with type `volume-number`; and `32-item-identifier-03` ("Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86") with type `shelf-mark`. The item is used in a curation activity `32-item-curation` carried out by `bub`. Its description reads: "Essere umano ermafrodita Human hermaphrodite (Monstrum humanum hermaphroditicum) sec. XVI 16th century BUB, Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86".
 
 ```
-ex:L1-exp-creation-00 a frbroo:F28_Expression_Creation ;
-    frbroo:R17_created ex:L1-exp ;
-    crm:P32_used_general_technique aat:300053225 ;
-    crm:P9_consists_of ex:L1-exp-creation-01 ,
-        ex:L1-exp-creation-02 ,
-        ex:L1-exp-creation-03 .
+ex:32-expression-creation a lrmoo:F28_Expression_Creation ;
+    crm:P9_consists_of ex:32-expression-creation-activity-01 ;
+    crm:P32_used_general_technique aat:300054196 ;
+    lrmoo:R19_created_a_realisation_of ex:32-work ;
+    lrmoo:R17_created ex:32-expression ;
+    crm:P4_has_time-span ex:1500-1599 .
 
-ex:L1-exp-creation-01 a crm:E7_Activity ;
-    crm:P2_has_type aat:300054200 ;
-    crm:P14_carried_out_by ex:jan-van-der-straet .
+ex:32-expression-creation-activity-01 a crm:E7_Activity ;
+    crm:P2_has_type aat:300404387 ;
+    crm:P14_carried_out_by ex:ulisse-aldrovandi .
 
-ex:L1-exp-creation-02 a crm:E7_Activity ;
-    crm:P2_has_type aat:300053225 ;
-    crm:P14_carried_out_by ex:philip-galle ,
-        ex:theodor-galle ,
-        ex:jan-collaert .
-
-ex:L1-exp-creation-03 a crm:E7_Activity ;
-    crm:P2_has_type aat:300417639 ;
-    crm:P14_carried_out_by ex:luigi-alamanni .
-
-ex:L1-exp a frbroo:F2_Expression .
-
-ex:jan-van-der-straet a crm:E39_Actor ;
-    crm:P48_has_preferred_identifier <http://vocab.getty.edu/page/ulan/500011304> .
-
-ex:philip-galle a crm:E39_Actor .
-
-ex:theodor-galle a crm:E39_Actor .
-
-ex:jan-collaert a crm:E39_Actor .
-
-ex:luigi-alamanni a crm:E39_Actor .
-
-ex:35-exp-creation-00 a frbroo:F28_Expression_Creation ;
-    crm:P32_used_general_technique aat:300015045 ;
-    frbroo:R17_created ex:35-exp ;
-    crm:P9_consists_of ex:35-exp-creation-01 ,
-        ex:35-exp-creation-02 .
-
-ex:35-exp a frbroo:F2_Expression .
-
-ex:35-exp-creation-01 a crm:E7_Activity ;
-    crm:P2_has_type aat:300069831 ;
-    crm:P14_carried_out_by ex:pietro-andrea-mattioli .
-
-ex:35-exp-creation-02 a crm:E7_Activity ;
-    crm:P2_has_type aat:300054200 ;
-    crm:P14_carried_out_by ex:pietro-andrea-mattioli .
-
-ex:pietro-andrea-mattioli a crm:E39_Actor ;
-    crm:P48_has_preferred_identifier <http://viaf.org/viaf/61549376> .
-
-ex:24-exp-creation-00 a frbroo:F28_Expression_Creation ;
-    frbroo:R17_created ex:24-exp ;
-    crm:P32_used_general_technique aat:300053628 ;
-    crm:P9_consists_of ex:24-exp-creation-01 ,
-        ex:24-exp-creation-02 .
-
-ex:24-exp a frbroo:F2_Expression .
-
-ex:24-exp-creation-01 a crm:E7_Activity ;
-    crm:P2_has_type aat:300404386 ;
-    crm:P14_carried_out_by ex:carl-linnaeus .
-
-ex:24-exp-creation-02 a crm:E7_Activity ;
-    crm:P2_has_type aat:300077565 ;
-    crm:P14_carried_out_by ex:naturaliter .
-
-ex:carl-linnaeus a crm:E39_Actor ;
-    crm:P48_has_preferred_identifier <http://viaf.org/viaf/34594730> .
-
-ex:naturaliter a crm:E39_Actor .
-```
-
-#### Scenario 2
-The creation event `01-exp-creation-00` created the CH object `01-man` ('Amerigo Vespucci sveglia l’America'). The CH object has the identifier '01' with type equal to `project id`. Its type is `print`. Its descriptive label is 'Amerigo Vespucci sveglia l’America
- Amerigo Vespucci awakens a sleeping America
- In
- Jan van del Straet (Stradano), Nova Reperta, c. 1589 – c.1593, Antwerp
- Amsterdam, Rijksmuseum'
-
-The creation event `05-exp-creation-00` created the CH object `05-exp` ('De Historia Animalium lib. 9'). The CH object has the identifiers:
-* '05' with type equal to `project id`
-* '9' with type equal to `volume number`
-* 'A.V.GG.VII.28' with type equal to `shelf mark`
-Its type is `printed volume`. Its descriptive label is 'Aristoteles
- De Historia Animalium lib. 9 
- Venezia, Girolamo Scoto, 1545
- BUB, A.V.GG.VII.28'
-
-The creation event `45-exp-creation-00` created the CH object `45-exp` ('Dryas octopetala L.'). The CH object has the identifiers:
-* '45' with type equal to `project id`
-* '13' with type equal to `volume number`
-* 'Erbario Aldrovandi, vol.13, carta 77' with type equal to `shelf mark`
-Its type is `specimen`. Its descriptive label is 'Dryas octopetala L.
- Camedrio alpino 
- Mountain avens 
- Erbario Aldrovandi, vol.13, carta 77
- sec. XVI 16th century
- Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo'
-
-```
-ex:L1-exp-creation-00 a frbroo:F28_Expression_Creation ;
-    frbroo:R18_created ex:L1-man .
-
-ex:L1-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P48_has_preferred_identifier ex:L1-identifier-00 ;
-    crm:P2_has_type aat:300041273 ;
-    crm:P3_has_note "Amerigo Vespucci sveglia l'America Amerigo Vespucci awakens a sleeping America In Jan van del Straet (Stradano), Nova Reperta, c. 1589 - c.1593, Antwerp Amsterdam, Rijksmuseum"^^rdfs:Literal .
-
-ex:L1-identifier-00 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "L1"^^rdfs:Literal ;
-    crm:P2_has_type aat:300312355 .
-
-ex:05-exp-creation-00 a frbroo:F28_Expression_Creation ;
-    frbroo:R18_created ex:05-man .
-
-ex:05-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P48_has_preferred_identifier ex:05-identifier-00 ,
-        ex:05-identifier-01 ,
-        ex:05-identifier-02 ;
-    crm:P2_has_type aat:300265632 ;
-    crm:P3_has_note "Aristoteles De Historia Animalium lib. 9 Venezia, Girolamo Scoto, 1545 BUB, A.V.GG.VII.28"^^rdfs:Literal .
-
-ex:05-identifier-00 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "05"^^rdfs:Literal ;
-    crm:P2_has_type aat:300312355 .
-
-ex:05-identifier-01 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "9"^^rdfs:Literal ;
-    crm:P2_has_type aat:300445021 .
-
-ex:05-identifier-02 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "A.V.GG.VII.28"^^rdfs:Literal ;
-    crm:P2_has_type aat:300404704 .
-
-ex:45-exp-creation-00 a frbroo:F28_Expression_Creation ;
-    frbroo:R18_created ex:45-man .
-
-ex:45-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P48_has_preferred_identifier ex:45-identifier-00 ,
-        ex:45-identifier-01 ,
-        ex:45-identifier-02 ;
-    crm:P2_has_type aat:300235576 ;
-    crm:P3_has_note "Dryas octopetala L. Camedrio alpino Mountain avens Erbario Aldrovandi, vol.13, carta 77 sec. XVI 16th century Bologna, Orto Botanico ed Erbario, Sistema Museale di Ateneo"^^rdfs:Literal .
-
-ex:45-identifier-00 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "45"^^rdfs:Literal ;
-    crm:P2_has_type aat:300312355 .
-
-ex:45-identifier-01 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "13"^^rdfs:Literal ;
-    crm:P2_has_type aat:300445021 .
-
-ex:45-identifier-02 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Erbario Aldrovandi, vol.13, carta 77"^^rdfs:Literal ;
-    crm:P2_has_type aat:300404704 .
-```
-
-#### Scenario 3
-A curation event `L1-curation` - carried out by `Rijksmuseum` (located in `Amsterdam`) - curated the collection `Nova Reperta` for the CH object `L1-man`.
-
-A curation event `1-curation` - carried out by `Sistema museale di Ateneo` (located in `Bologna`) - curated the collection `Collezione di Zoologia` for the CH object `1-man`.
-
-A curation event `14-curation` - carried out by `Sistema museale di Ateneo` (located in `Bologna`) - curated the collection `Collezione di Anatomia comparata` for the CH object `14-man`.
-
-```
-ex:L1-curation a crm:E87_Curation_Activity ;
-    crm:P147_curated ex:nova-reperta ;
-    crm:P14_carried_out_by ex:rijksmuseum ;
-    crm:P12_occurred_in_the_presence_of ex:L1-man .
-
-ex:L1-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P74_has_current_or_former_residence ex:rijksmuseum .
-
-ex:nova-reperta a crm:E78_Curated_Holding .
-
-ex:rijksmuseum a crm:E39_Actor ;
-    crm:P74_has_current_or_former_residence ex:amsterdam .
-
-ex:amsterdam a crm:E53_Place .
-
-ex:1-curation a crm:E87_Curation_Activity ;
-    crm:P147_curated ex:collezione-di-zoologia ;
-    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
-    crm:P12_occurred_in_the_presence_of ex:1-man .
-
-ex:1-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
-
-ex:collezione-di-zoologia a crm:E78_Curated_Holding .
-
-ex:sistema-museale-di-ateneo a crm:E39_Actor ;
-    crm:P74_has_current_or_former_residence ex:bologna .
-
-ex:bologna a crm:E53_Place .
-
-ex:14-curation a crm:E87_Curation_Activity ;
-    crm:P147_curated ex:collezione-di-anatomia-comparata ;
-    crm:P14_carried_out_by ex:sistema-museale-di-ateneo ;
-    crm:P12_occurred_in_the_presence_of ex:14-man .
-
-ex:14-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P74_has_current_or_former_residence ex:sistema-museale-di-ateneo .
-
-ex:collezione-di-anatomia-comparata a crm:E78_Curated_Holding .
-
-```
-
-#### Scenario 4
-A conception event `L1-work-conception` initiated the CH object `L1-work` ('Amerigo Vespucci sveglia l’America') in the time interval `1589-1593`, which starts in 1589-01-01 and ends in 1593-12-31.
-
-A conception event `1-work-conception` initiated the CH object `1-work` ('Carta nautica') in the time interval `1482`, which starts in 1482-01-01 and ends in 1482-12-31.
-
-A conception event `26-work-conception` initiated the CH object `26-work` ('Chrysanthemi') in the time interval `1500-1599`, which starts in 1500-01-01 and ends in 1599-12-31.
-
-```
-ex:L1-work-conception a frbroo:F27_Work_Conception ;
-    frbroo:R16_initiated ex:L1-work ;
-    crm:P4_has_time-span ex:1589-1593 .            
-
-ex:1589-1593 a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1589-01-01T00:00:00"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "1593-12-31T23:59:59"^^xsd:dateTime .
-
-ex:L1-work a frbroo:F1_Work .
-
-ex:1-work-conception a frbroo:F27_Work_Conception ;
-    frbroo:R16_initiated ex:1-work ;
-    crm:P4_has_time-span ex:1482 .            
-
-ex:1482 a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1482-01-01T00:00:00"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "1482-12-31T23:59:59"^^xsd:dateTime .
-
-ex:1-work a frbroo:F1_Work .
-
-ex:26-work-conception a frbroo:F27_Work_Conception ;
-    frbroo:R16_initiated ex:26-work ;
-    crm:P4_has_time-span ex:1500-1599 .            
+ex:ulisse-aldrovandi a crm:E39_Actor ;
+    crm:P70i_is_documented_in <http://vocab.getty.edu/page/ulan/500342675> .
 
 ex:1500-1599 a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1500-01-01T00:00:00"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "1599-12-31T23:59:59"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin "1500-01-01T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "1599-12-31T23:59:59Z"^^xsd:dateTime .
 
-ex:26-work a frbroo:F1_Work .
-```
+ex:32-work a lrmoo:F1_Work ;
+    crm:P102_has_title ex:32-work-title-01 ,
+        ex:32-work-title-02 ;
+    lrmoo:R3_is_realised_in ex:32-expression .
 
-#### Scenario 5
-The creation event `L1-exp-creation` created the work `L1-work`, the expression `L1-exp` and the manifestation `L1-man`. 
-`L1-work` has two titles: the original title `L1-work-title-01` ('Amerigo Vespucci sveglia l'America'), and the exhibition title `L1-work-title-02` ('Amerigo Vespucci sveglia l'America'). It is member of the parent work `Nova Reperta`, which has `print series` as its type.
-`L1-exp` is about the following subjects: `amerigo vespucci`, `astrolabio`, `vessillo croce del sud`, `formichiere`, `bradipo`, `tapiro`, and `gruppo di cannibali`.
-
-The creation event `1-exp-creation` created the work `1-work`, the expression `1-exp` and the manifestation `1-man`. 
-`1-work` has two titles: the original title `1-work-title-01` ('Carta nautica'), and the exhibition title `1-work-title-02` ('Carta nautica').
-`1-exp` is about the following subjects: `europa`, `africa`, `asia`, and `mar mediterraneo`.
-
-The creation event `7-exp-creation` created the work `7-work`, the expression `7-exp` and the manifestation `7-man`. 
-`7-work` has two titles: the original title `7-work-title-01` ('Profilo incompleto delle coste del continente americano'), and the exhibition title `7-work-title-02` ('Profilo incompleto delle coste del continente americano'). It is member of the parent work `Atlante Nautico`, which has `marine chart` as its type.
-`7-exp` is about the following subjects: `america` and `europa`.
-
-```
-ex:L1-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:L1-work ;
-    frbroo:R17_created ex:L1-exp ;
-    frbroo:R18_created ex:L1-man .
-
-ex:L1-work a frbroo:F1_Work ;
-    crm:P102_has_title ex:L1-work-title-01 ,
-        ex:L1-work-title-02 .
-
-ex:L1-work-title-01 a crm:E35_Title ;
+ex:32-work-title-01 a crm:E35_Title ;
     crm:P2_has_type aat:300417204 ;
-    crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@it .
+    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it .
 
-ex:L1-work-title-02 a crm:E35_Title ;
+ex:32-work-title-02 a crm:E35_Title ;
     crm:P2_has_type aat:300417207 ;
-    crm:P190_has_symbolic_content "Amerigo Vespucci sveglia l'America"@en .
+    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it ,
+        "Human hermaphrodite"@en .
+                
+ex:32-expression a lrmoo:F2_Expression ;
+    crm:P129_is_about ex:ermafrodita ;
+    lrmoo:R4i_is_embodied_in ex:32-manifestation .
 
-ex:L1-exp a frbroo:F2_Expression ;
-    crm:P129_is_about ex:sub-amerigo-vespucci ,
-        ex:sub-astrolabio ,
-        ex:sub-vessillo-croce-del-sud ,
-        ex:sub-formichiere ,
-        ex:sub-bradipo ,
-        ex:sub-tapiro ,
-        ex:sub-gruppo-di-cannibali .
+ex:32-manifestation a lrmoo:F3_Manifestation ;
+    crm:P2_has_type aat:300028569 ;
+    lrmoo:R7i_is_exemplified_by ex:32-item .
 
-ex:L1-man a frbroo:F4_Manifestation_Singleton .
-
-ex:L1-man-license a crm:E73_Information_Object ;
+ex:32-manifestation-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:L1-man ;
+    crm:P67_refers_to ex:32-manifestation ;
     crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
-ex:1-man-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:1-man ;
-    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
+ex:tavole-di-animali-work a lrmoo:F1_Work ;
+    lrmoo:R10_has_member ex:32-work ;
+    lrmoo:R3_is_realised_in ex:tavole-di-animali-expression .
 
-ex:7-man-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:7-man ;
-    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
+ex:tavole-di-animali-expression a lrmoo:F2_Expression ;
+    lrmoo:R4i_is_embodied_in ex:tavole-di-animali-manifestation .
 
-ex:PTa-man-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:PTa-man ;
-    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
+ex:tavole-di-animali-manifestation a lrmoo:F3_Manifestation ;
+    crm:P2_has_type aat:300265632 ;
+    lrmoo:R7i_is_exemplified_by ex:tavole-di-animali-item .
 
-ex:PTa-1-man-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:PTa-1-man ;
-    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
+ex:tavole-di-animali-item a lrmoo:F5_Item .
 
-ex:PTa-2-man-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:PTa-2-man ;
-    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
-
-ex:PTa-3-man-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:PTa-3-man ;
-    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
-
-ex:nova-reperta a frbroo:F15_Complex_Work ;
-    frbroo:R10_has_member ex:L1-work ;
-    crm:P2_has_type aat:300189634 .
-
-ex:sub-amerigo-vespucci a crm:E73_Information_Object ;
+ex:ermafrodita a crm:E73_Information_Object ;
     crm:P2_has_type aat:300404126 .
 
-ex:sub-astrolabio a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
+ex:32-item a lrmoo:F5_Item ;
+    crm:P1_is_identified_by ex:32-item-identifier-01 ,
+        ex:32-item-identifier-02 ,
+        ex:32-item-identifier-03 ;
+    crm:P3_has_note '''
+        Essere umano ermafrodita 
+        Human hermaphrodite (Monstrum humanum hermaphroditicum) 
+        sec. XVI 
+        16th century 
+        BUB, 
+        Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86
+    '''^^rdfs:Literal .
 
-ex:sub-vessillo-croce-del-sud a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
+ex:32-item-identifier-01 a crm:E42_Identifier ;
+    crm:P2_has_type aat:300312355 ;
+    crm:P190_has_symbolic_content "32"^^rdfs:Literal .
 
-ex:sub-formichiere a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
+ex:32-item-identifier-02 a crm:E42_Identifier ;
+    crm:P2_has_type aat:300445021 ;
+    crm:P190_has_symbolic_content "5"^^rdfs:Literal .
 
-ex:sub-bradipo a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
+ex:32-item-identifier-03 a crm:E42_Identifier ;
+    crm:P2_has_type aat:300404704 ;
+    crm:P190_has_symbolic_content "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"^^rdfs:Literal .
 
-ex:sub-tapiro a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
+ex:32-item-curation a crm:E7_Activity ;
+    crm:P2_has_type aat:300054277 ;
+    crm:P16_used_specific_object ex:32-item ;
+    crm:P12_occurred_in_the_presence_of ex:bub .
 
-ex:sub-gruppo-di-cannibali a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
-
-ex:1-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:1-work ;
-    frbroo:R17_created ex:1-exp ;
-    frbroo:R18_created ex:1-man .
-
-ex:1-work a frbroo:F1_Work ;
-    crm:P102_has_title ex:1-work-title-01 ,
-        ex:1-work-title-02 .
-
-ex:1-work-title-01 a crm:E35_Title ;
-    crm:P2_has_type aat:300417204 ;
-    crm:P190_has_symbolic_content "Carta nautica"@it .
-
-ex:1-work-title-02 a crm:E35_Title ;
-    crm:P2_has_type aat:300417207 ;
-    crm:P190_has_symbolic_content "Carta nautica"@it .
-
-ex:1-exp a frbroo:F2_Expression ;
-    crm:P129_is_about ex:sub-europa ,
-        ex:sub-africa ,
-        ex:sub-asia ,
-        ex:sub-mar-mediterraneo .
-
-ex:1-man a frbroo:F4_Manifestation_Singleton .
-
-ex:sub-europa a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
-
-ex:sub-africa a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
-
-ex:sub-asia a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
-
-ex:sub-mar-mediterraneo a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
-
-ex:7-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:7-work ;
-    frbroo:R17_created ex:7-exp ;
-    frbroo:R18_created ex:7-man .
-
-ex:7-work a frbroo:F1_Work ;
-    crm:P102_has_title ex:7-work-title-01 ,
-        ex:7-work-title-02 .
-
-ex:7-work-title-01 a crm:E35_Title ;
-    crm:P2_has_type aat:300417204 ;
-    crm:P190_has_symbolic_content "Profilo incompleto delle coste del continente americano"@it .
-
-ex:7-work-title-02 a crm:E35_Title ;
-    crm:P2_has_type aat:300417207 ;
-    crm:P190_has_symbolic_content "Profilo incompleto delle coste del continente americano"@it .
-
-ex:7-exp a frbroo:F2_Expression ;
-    crm:P129_is_about ex:sub-america ,
-        ex:sub-europa .
-
-ex:7-man a frbroo:F4_Manifestation_Singleton .
-
-ex:atlante-nautico a frbroo:F15_Complex_Work ;
-    frbroo:R10_has_member ex:7-work ;
-    crm:P2_has_type aat:300028309 .
-
-ex:sub-america a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
-
-ex:PTa-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:PTa-work ;
-    frbroo:R17_created ex:PTa-exp ;
-    frbroo:R18_created ex:PTa-man .
-
-ex:PTa-work a frbroo:F1_Work .
-
-ex:PTa-exp a frbroo:F2_Expression .
-
-ex:PTa-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P46_is_composed_of ex:PTa-1-man , 
-        ex:PTa-2-man .
-
-ex:PTa-1-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:PTa-1-work ;
-    frbroo:R17_created ex:PTa-1-exp ;
-    frbroo:R18_created ex:PTa-1-man .
-
-ex:PTa-1-work a frbroo:F1_Work .
-
-ex:PTa-1-exp a frbroo:F2_Expression .
-
-ex:PTa-1-man a frbroo:F4_Manifestation_Singleton .
-
-ex:PTa-2-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:PTa-2-work ;
-    frbroo:R17_created ex:PTa-2-exp ;
-    frbroo:R18_created ex:PTa-2-man .
-
-ex:PTa-2-work a frbroo:F1_Work .
-
-ex:PTa-2-exp a frbroo:F2_Expression .
-
-ex:PTa-2-man a frbroo:F4_Manifestation_Singleton .
-
-ex:PTa-3-exp-creation a frbroo:F28_Expression_Creation ;
-    frbroo:R19_created_a_realisation_of ex:PTa-3-work ;
-    frbroo:R17_created ex:PTa-3-exp ;
-    frbroo:R18_created ex:PTa-3-man .
-
-ex:PTa-3-work a frbroo:F1_Work .
-
-ex:PTa-3-exp a frbroo:F2_Expression .
-
-ex:PTa-3-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P62_depicts ex:PTa-man .
+ex:bub a crm:E39_Actor .
 ```
 
-#### Scenario 6
-The object `32` has been digitally acquired on the 8th of May 2023. The digitization process produced a 3D model `32-output-acq` as an output, provided with a 'CC BY-NC 4.0' license, which will be used as an input by the software activity `32-proc`.
+On `2023-05-08`, `alice-bordignon` acquired digital data of `32-item` on behalf of `unibo-ficlit`, leveraging `photogrammetry` and using the `panasonic-dmc-lx100` camera, resulting in a digital model `32-model-00`.
+
+Subsequently, on `2023-05-10`, Alice processed `32-model-00` on behalf of `unibo-ficlit` using the `3df-zephyr` software, creating a processed digital model `32-model-01`.
+
+From `2023-05-17` to `2023-05-18`, Alice further modeled `32-model-01` on behalf of `unibo-ficlit` using the `blender` software, resulting in a refined digital model `32-model-02`.
+
+From `2023-05-18` to `2023-05-19`, Alice optimized `32-model-02` on behalf of `unibo-ficlit` using the `instantmeshes` and `3df-zephyr` software, resulting in an optimized digital model `32-model-03`.
+
+Finally, on `2023-05-19`, Alice exported `32-model-03` on behalf of `unibo-ficlit` using the `blender` software, resulting in the final exported model `32-model-04` as an output.
+
+Each digital model is licensed under a CC BY-NC 4.0 license.
 
 ```
-ex:32 a crm:E24_Physical_Human-Made_Thing .
+ex:unibo-ficlit a crm:E74_Group .
 
-ex:32-acq a crmdig:D2_Digitization_Process ;
-    crmdig:L1_digitized ex:32 ;
-    crmdig:L11_had_output ex:32-acq-output ;
-    crm:P4_has_time-span ex:32-acq-timespan .
+ex:panasonic-dmc-lx100 a crmdig:D8_Digital_Device ;
+    crm:P2_has_type aat:300266792 .
 
-ex:32-proc a crmdig:D10_Software_Execution ;
-    crmdig:L10_had_input ex:32-acq-output ;
-    crm:P4_has_time-span ex:32-proc-timespan .
+ex:32-acquisition a crmdig:D2_Digitization_Process ;
+    crmdig:L1_digitized ex:32-item ;
+    crmdig:L11_had_output ex:32-model-00 ;
+    crm:P4_has_time-span ex:32-acquisition-timespan ;
+    crm:P11_had_participant ex:unibo-ficlit ;
+    crm:P14_carried_out_by ex:alice-bordignon ;
+    crm:P32_used_general_technique aat:300391312 ;
+    crm:P16_used_specific_object ex:panasonic-dmc-lx100 .
 
-ex:32-acq-output a crmdig:D9_Data_Object .
+ex:3df-zephyr a crmdig:D14_Software ;
+    crm:P2_has_type aat:300426696 .
 
-ex:32-acq-output-license a crm:E73_Information_Object ;
+ex:32-processing a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300054636 ;
+    crmdig:L10_had_input ex:32-model-00 ;
+    crmdig:L11_had_output ex:32-model-01 ;
+    crm:P4_has_time-span ex:32-processing-timespan ;
+    crm:P11_had_participant ex:unibo-ficlit ;
+    crm:P14_carried_out_by ex:alice-bordignon ;
+    crmdig:L23_used_software_or_firmware ex:3df-zephyr .
+
+ex:blender a crmdig:D14_Software ;
+    crm:P2_has_type aat:300426696 .
+
+ex:32-modeling a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300391447 ;
+    crmdig:L10_had_input ex:32-model-01 ;
+    crmdig:L11_had_output ex:32-model-02 ;
+    crm:P4_has_time-span ex:32-modeling-timespan ;
+    crm:P11_had_participant ex:unibo-ficlit ;
+    crm:P14_carried_out_by ex:alice-bordignon ;
+    crmdig:L23_used_software_or_firmware ex:blender .
+
+ex:instantmeshes a crmdig:D14_Software ;
+    crm:P2_has_type aat:300426696 .
+
+ex:32-optimisation a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300386427 ;
+    crmdig:L10_had_input ex:32-model-02 ;
+    crmdig:L11_had_output ex:32-model-03 ;
+    crm:P4_has_time-span ex:32-optimisation-timespan ;
+    crm:P11_had_participant ex:unibo-ficlit ;
+    crm:P14_carried_out_by ex:alice-bordignon ;
+    crmdig:L23_used_software_or_firmware ex:instantmeshes, ex:3df-zephyr .
+
+ex:32-export a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300417260 ;
+    crmdig:L10_had_input ex:32-model-03 ;
+    crmdig:L11_had_output ex:32-model-04 ;
+    crm:P4_has_time-span ex:32-export-timespan ;
+    crm:P11_had_participant ex:unibo-ficlit ;
+    crm:P14_carried_out_by ex:alice-bordignon ;
+    crmdig:L23_used_software_or_firmware ex:blender .
+
+ex:alice-bordignon a crm:E21_Person .
+
+ex:32-model-00 a crmdig:D9_Data_Object .
+
+ex:32-model-01 a crmdig:D9_Data_Object .
+
+ex:32-model-02 a crmdig:D9_Data_Object .
+
+ex:32-model-03 a crmdig:D9_Data_Object .
+
+ex:32-model-04 a crmdig:D9_Data_Object .
+
+ex:32-model-00-license a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:32-acq-output ;
+    crm:P67_refers_to ex:32-model-00 ;
     crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
-ex:32-acq-timespan a crm:E52_Time-Span ;
+ex:32-model-01-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:32-model-01 ;
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
+
+ex:32-model-02-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:32-model-02 ;
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
+
+ex:32-model-03-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:32-model-03 ;
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
+
+ex:32-model-04-license a crm:E73_Information_Object ;
+    crm:P2_has_type aat:300435434 ;
+    crm:P67_refers_to ex:32-model-04 ;
+    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
+
+ex:32-acquisition-timespan a crm:E52_Time-Span ;
     crm:P82a_begin_of_the_begin "2023-05-08T00:00:00Z"^^xsd:dateTime ;
     crm:P82b_end_of_the_end "2023-05-08T23:59:59Z"^^xsd:dateTime .
 
-ex:32-proc-timespan a crm:E52_Time-Span ;
+ex:32-processing-timespan a crm:E52_Time-Span ;
     crm:P82a_begin_of_the_begin "2023-05-10T00:00:00Z"^^xsd:dateTime ;
     crm:P82b_end_of_the_end "2023-05-10T23:59:59Z"^^xsd:dateTime .
-```
 
-#### Scenario 7
-The digital object `15-proc-output` has been generated as an output during the processing activity carried out by the person `Federica Collina`, who belongs to the institution `UNIBO DBC`. The processing activity used the digital object `15-acq-output` (produced by the digitization process `15-acq`) as an input.
+ex:32-modeling-timespan a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "2023-05-17T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-18T23:59:59Z"^^xsd:dateTime .
 
-```
-ex:15 a crm:E24_Physical_Human-Made_Thing .
+ex:32-optimisation-timespan a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "2023-05-18T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .
 
-ex:15-acq a crmdig:D2_Digitization_Process ;
-    crmdig:L11_had_output ex:15-acq-output .
-
-ex:15-proc a crmdig:D10_Software_Execution ;
-    crm:P2_has_type aat:300054636 ;
-    crmdig:L10_had_input ex:15-acq-output ;
-    crmdig:L11_had_output ex:15-proc-output ;
-    crm:P11_had_participant ex:unibo-dbc ;
-    crm:P14_carried_out_by ex:federica-collina .
-
-ex:15-acq-output a crmdig:D9_Data_Object .
-
-ex:15-proc-output a crmdig:D9_Data_Object .
-
-ex:federica-collina a crm:E21_Person .
-
-ex:unibo-dbc a crm:E74_Group .
-```
-
-#### Scenario 8
-The physical object `15` has been digitally acquired through the `structured light scanning` technique and the `scanner spider` tool. The digitization process produced a 3D model `15-acq-output` as an output.
-
-```
-ex:15 a crm:E24_Physical_Human-Made_Thing .
-
-ex:15-acq a crmdig:D2_Digitization_Process ;
-    crmdig:L1_digitized ex:15 ;
-    crmdig:L11_had_output ex:15-acq-output ;
-    crm:P32_used_general_technique aat:300391312 ;
-    crm:P16_used_specific_object ex:artec-spider .
-
-ex:15-proc a crmdig:D10_Software_Execution ;
-    crm:P2_has_type aat:300054636 ;
-    crmdig:L10_had_input ex:15-acq-output ;
-    crmdig:L11_had_output ex:15-proc-output ;
-    crmdig:L23_used_software_or_firmware ex:artec-studio-14 .
-
-ex:15-acq-output a crmdig:D9_Data_Object .
-
-ex:15-proc-output a crmdig:D9_Data_Object .
-
-ex:artec-spider a crmdig:D8_Digital_Device ;
-    crm:P2_has_type aat:300429747 .
-
-ex:artec-studio-14 a crmdig:D14_Software ;
-    crm:P2_has_type aat:300426696 .
+ex:32-export-timespan a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "2023-05-19T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .
 ```
 
 ### Competency questions
@@ -638,65 +308,64 @@ The prefixes that are used in all the SPARQL queries provided below are defined 
     PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
     PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>
     PREFIX ex: <https://w3id.org/dharc/ontology/chad-ap/data/example/>
-    PREFIX frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/>  
-
+    PREFIX lrmoo: <http://iflastandards.info/ns/fr/frbr/lrmoo/>  
 
 #### Question 1
-What are the CH objects whose creation involved some author?
+What are the CHOs whose creation involved some author?
 
     SELECT ?resource ?agent
     WHERE {
-        ?creation_event a frbroo:F28_Expression_Creation ;
-            frbroo:R17_created ?resource ;
+        ?creation_event a lrmoo:F28_Expression_Creation ;
+            lrmoo:R17_created ?resource ;
             crm:P9_consists_of ?activity .
         ?activity crm:P2_has_type aat:300054698 ;
             crm:P14_carried_out_by ?agent .
     }
 
 #### Question 2
-What are the agents and the types of  activities they carried out to contribute to the creation of `32-exp`?
+What are the agents and the types of  activities they carried out to contribute to the creation of `32-expression`?
 
     SELECT ?agent ?type
     WHERE {
-        ?creation_event a frbroo:F28_Expression_Creation ;
-            frbroo:R17_created ex:32-exp ;
+        ?creation_event a lrmoo:F28_Expression_Creation ;
+            lrmoo:R17_created ex:32-expression ;
             crm:P9_consists_of ?activity .
         ?activity crm:P2_has_type ?type ;
             crm:P14_carried_out_by ?agent .
     }
 
 #### Question 3
-What are the agents involved in the creation of the CH objects that have been created through the drawing technique? What are the types of the activities they carried out?
+What are the agents involved in the creation of the CHOs that have been created through the drawing technique? What are the types of the activities they carried out?
 
     SELECT ?resource ?agent ?type
     WHERE {
-        ?creation_event a frbroo:F28_Expression_Creation ;
-            crm:P32_used_general_technique aat:300033973 ;
-            frbroo:R17_created ?resource ;
+        ?creation_event a lrmoo:F28_Expression_Creation ;
+            crm:P32_used_general_technique aat:300054196 ;
+            lrmoo:R17_created ?resource ;
             crm:P9_consists_of ?activity .
         ?activity crm:P2_has_type ?type ;
             crm:P14_carried_out_by ?agent .
     }
 
 #### Question 4
-What are the identifiers of the manuscript? What are their types?
+What are the identifiers of a manuscript? What are their types?
 
     SELECT ?resource ?identifier_text ?type
     WHERE {
-        ?resource a frbroo:F4_Manifestation_Singleton ;
+        ?resource a lrmoo:F5_Item ;
             crm:P2_has_type aat:300028569 ;
-            crm:P48_has_preferred_identifier ?identifier .
+            crm:P1_is_identified_by ?identifier .
         ?identifier crm:P2_has_type ?type ;
             crm:P190_has_symbolic_content ?identifier_text.
     }
 
 #### Question 5
-What is the shelf mark of the CH object with the project ID '32'?
+What is the shelf mark of the CHO with the project ID '32'?
 
     SELECT ?identifier_text
     WHERE {
-        ?resource a frbroo:F4_Manifestation_Singleton ;
-        crm:P48_has_preferred_identifier ?identifier1 ,
+        ?resource a lrmoo:F5_Item ;
+        crm:P1_is_identified_by ?identifier1 ,
             ?identifier2 .
         ?identifier1 crm:P2_has_type aat:300312355 ;
             crm:P190_has_symbolic_content "32"^^rdfs:Literal .
@@ -705,36 +374,39 @@ What is the shelf mark of the CH object with the project ID '32'?
     }
 
 #### Question 6
-What are the descriptive labels of the CH objects that either have shelf marks or are prints?
+What are the descriptive labels of the CHOs that either have shelf marks or are prints?
 
     SELECT ?resource ?label
     WHERE {
-        ?resource a frbroo:F4_Manifestation_Singleton ;
-            crm:P48_has_preferred_identifier ?identifier ;
-            crm:P2_has_type ?type ;
+        ?manifestation a lrmoo:F3_Manifestation ;
+            lrmoo:R7i_is_exemplified_by ?resource ;
+            crm:P2_has_type ?type .
+        ?resource a lrmoo:F5_Item ;
+            crm:P1_is_identified_by ?identifier ;
             crm:P3_has_note ?label .
         ?identifier crm:P2_has_type ?id_type .
         FILTER(?type = aat:300041273 || ?id_type = aat:300404704)
     }
 
 #### Question 7
-What are the CH objects whose collections have been curated by agents located in Bologna?
+What are the CHOs whose collections have been curated by agents located in Bologna?
 
     SELECT ?resource ?agent
     WHERE {
-        ?curation a crm:E87_Curation_Activity ;
+        ?curation a crm:E7_Activity ;
+            crm:P2_has_type aat:300054277 ;
             crm:P14_carried_out_by ?agent ;
-            crm:P12_occurred_in_the_presence_of ?resource .
+            crm:P16_used_specific_object ?resource .
         ?agent crm:P74_has_current_or_former_residence ex:bologna .
     }
 
 #### Question 8
-What are the CH objects and the time spans of their conception events?
+What are the CHOs and the time spans of their creation events?
 
     SELECT ?resource ?time_interval
     WHERE {
-        ?conception_event a frbroo:F27_Work_Conception ;
-            frbroo:R16_initiated ?resource ;
+        ?creation_event a lrmoo:F28_Expression_Creation ;
+            lrmoo:R19_created_a_realisation_of ?resource ;
             crm:P4_has_time-span ?time_interval .
     }
     
@@ -743,25 +415,25 @@ What are the titles of the work `32-work`? What are their types?
     
     SELECT ?title ?type ?content
     WHERE {
-        ?creation a frbroo:F28_Expression_Creation ;
-            frbroo:R19_created_a_realisation_of ex:32-work .
+        ?creation a lrmoo:F28_Expression_Creation ;
+            lrmoo:R19_created_a_realisation_of ex:32-work .
         ex:32-work crm:P102_has_title ?title .
         ?title crm:P2_has_type ?type ;
             crm:P190_has_symbolic_content ?content .
     }
 
 #### Question 10
-What are the parent works of the works that have either 'ermafrodita' as their subject?
+What are the parent works of the works that have 'ermafrodita' as their subject?
     
     SELECT ?parent ?work ?subject
     WHERE {
-        ?creation a frbroo:F28_Expression_Creation ;
-            frbroo:R19_created_a_realisation_of ?work ;
-            frbroo:R17_created ?expression .
-        ?parent a frbroo:F15_Complex_Work ;
-            frbroo:R10_has_member ?work .
-        ?expression a frbroo:F2_Expression ;
-            crm:P129_is_about ex:sub-ermafrodita .
+        ?creation a lrmoo:F28_Expression_Creation ;
+            lrmoo:R19_created_a_realisation_of ?work ;
+            lrmoo:R17_created ?expression .
+        ?parent a lrmoo:F1_Work ;
+            lrmoo:R10_has_member ?work .
+        ?expression a lrmoo:F2_Expression ;
+            crm:P129_is_about ex:ermafrodita .
     }
 
 #### Question 11
@@ -775,7 +447,7 @@ Which license statements are assigned to the manifestations?
     }
 
 #### Question 12
-What is the cultural object digitized and the digital object produced by the digitization process? What is the latter's license?
+What is the CHO digitized and the DCHO produced by an acquisition activity? What is the latter's license?
      
     SELECT ?input ?output ?license_link
     WHERE {
@@ -788,7 +460,7 @@ What is the cultural object digitized and the digital object produced by the dig
     }
 
 #### Question 13
-What are the starting and ending date times in which the digitization process and the following software activity occurred?
+What are the starting and ending date times in which the acquisition activity occurred?
 
     SELECT ?activity ?start ?end
     WHERE {
@@ -799,14 +471,14 @@ What are the starting and ending date times in which the digitization process an
     }
 
 #### Question 14
-What are the digitization process, its output, the processing activity and its output?
+What are the acquisition activities, its output, the processing activity and its output?
 
     SELECT ?digitization ?input ?activity ?output
     WHERE {
         ?activity a crmdig:D10_Software_Execution ;
-        crm:P2_has_type aat:300054636 ;
-        crmdig:L10_had_input ?input ;
-        crmdig:L11_had_output ?output .
+            crm:P2_has_type aat:300054636 ;
+            crmdig:L10_had_input ?input ;
+            crmdig:L11_had_output ?output .
         ?digitization crmdig:L11_had_output ?input .
     }
 
@@ -816,13 +488,13 @@ What are the people and institutions who either carried out or were participants
     SELECT ?person ?institution
     WHERE {
         ?activity a crmdig:D10_Software_Execution ;
-        crm:P2_has_type aat:300054636 ;
-        crm:P14_carried_out_by ?person ;
-        crm:P11_had_participant ?institution .
+            crm:P2_has_type aat:300054636 ;
+            crm:P14_carried_out_by ?person ;
+            crm:P11_had_participant ?institution .
     }
 
 #### Question 16
-What are the techniques used in digitization processes?
+What are the techniques used in acquisition activities?
 
     SELECT ?technique ?activity
     WHERE {
