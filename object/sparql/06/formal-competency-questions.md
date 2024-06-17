@@ -136,7 +136,7 @@ WHERE {
     ?expression lrmoo:R4i_is_embodied_in ?manifestation .
     ?manifestation lrmoo:R7i_is_exemplified_by ?item .
     ?activity crm:P16_used_specific_object ?item ;
-      crm:P12_occurred_in_the_presence_of ?actor .
+      crm:P14_carried_out_by ?actor .
 }
 ```
 

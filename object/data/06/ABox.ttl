@@ -93,6 +93,6 @@ ex:32-item-identifier-03 a crm:E42_Identifier ;
 ex:32-item-curation a crm:E7_Activity ;
     crm:P2_has_type aat:300054277 ;
     crm:P16_used_specific_object ex:32-item ;
-    crm:P12_occurred_in_the_presence_of ex:bub .
+    crm:P14_carried_out_by ex:bub .
 
 ex:bub a crm:E39_Actor .
