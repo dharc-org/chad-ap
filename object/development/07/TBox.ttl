@@ -1,0 +1,96 @@
+@prefix : <https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/> .
+
+<https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:isRealizedIn rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "is realized in"@en .
+
+
+:isEmbodiedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "is embodied in"@en .
+
+
+:isEsemplifiedBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "is exemplified by"@en .
+
+
+:isCopyOf a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "is copy of"@en .
+
+
+:hasCopy a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "has copy"@en .
+
+
+:hasInput a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "has input"@en .
+
+
+:hasType a owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:label "has type"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+:Work rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Work"@en .
+
+
+:Expression rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Expression"@en .
+
+
+:Manifestation rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Manifestation"@en .
+
+
+:Item rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Item"@en .
+
+
+:Type rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Type"@en .
+
+
+:SoftwareActivity rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Software Activity"@en .
+
+
+:DataObject rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Data Object"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+:optimization rdf:type owl:NamedIndividual ,
+                          :Type ;
+      rdfs:label "optimization"@en .

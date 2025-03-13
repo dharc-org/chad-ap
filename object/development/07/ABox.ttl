@@ -1,0 +1,43 @@
+@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/object/development/07/data/> .
+@prefix obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dharc/ontology/chad-ap/object/development/07/data/> .
+
+<https://w3id.org/dharc/ontology/chad-ap/object/development/07/data/> rdf:type owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/> .
+
+
+ex:52/wrk/1 a obj:Work ;
+    obj:isRealizedIn ex:52/exp/1 .
+                
+ex:52/exp/1 a obj:Expression ;
+    obj:isEmbodiedIn ex:52/mnf/1 .
+
+ex:52/mnf/1 a obj:Manifestation ;
+    obj:isExemplifiedBy ex:52/itm/1 ;
+    obj:hasCopy <http://hdl.handle.net/20.500.14008/78078> .
+
+ex:52/itm/1 a obj:Item .
+
+ex:16/wrk/1 a obj:Work ;
+    obj:isRealizedIn ex:16/exp/1 .
+                
+ex:16/exp/1 a obj:Expression ;
+    obj:isEmbodiedIn ex:16/mnf/1 .
+
+ex:16/mnf/1 a obj:Manifestation ;
+    obj:isExemplifiedBy ex:16/itm/1 .
+
+ex:16/itm/1 a obj:Item ;
+    obj:hasCopy ex:16/mdl/1 .
+
+ex:16/mdl/1 a obj:DataObject ;
+    obj:isCopyOf <https://sketchfab.com/3d-models/cuban-macaw-nhmw-zoo-vs-50796-52348a29605a4136a0e807942d3c12a6> .
+
+ex:16/act/1 a obj:SoftwareActivity ;
+    obj:hasInput ex:16/mdl/1 ;
+    obj:hasType obj:optimization .

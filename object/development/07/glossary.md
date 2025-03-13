@@ -14,4 +14,5 @@
 | `is copy of` | This property links the representation of an entity to that entity. |
 | `has copy` | This property links an entity to one of its representations. |
 | `has input` | This property links a software activity with a data object used as an input. |
+| `has type` | This property links an entity with a type. |
 | `optimization` | A type of software activity involving the reduction of the data object to make it performant for storage or transmission. |
