@@ -24,5 +24,3 @@ The specimen with ID "16" comprises four layers:
 * Item: `16/itm`.
 
 During the digitisation process involving this item, it was decided to use an existing 3D model of a similar specimen as input, instead of acquiring the data directly from the original. In particular, the input for the optimisation phase was a copy of the existing data object, which can be found at https://sketchfab.com/3d-models/cuban-macaw-nhmw-zoo-vs-50796-52348a29605a4136a0e807942d3c12a6.
-
-https://w3id.org/changes/4/aldrovandi/82/
