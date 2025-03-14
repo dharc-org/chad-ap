@@ -4,9 +4,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/dharc/ontology/chad-ap/object/development/07/data/> .
+@base <https://w3id.org/changes/4/aldrovandi/> .
 
-<https://w3id.org/dharc/ontology/chad-ap/object/development/07/data/> rdf:type owl:Ontology ;
+<https://w3id.org/changes/4/aldrovandi/> rdf:type owl:Ontology ;
     owl:imports <https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/> .
 
 
