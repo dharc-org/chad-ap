@@ -1,0 +1,27 @@
+namespaces:
+  old_ns: 
+    abox: "https://w3id.org/changes/4/aldrovandi/"
+    obj: "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/"
+  new_ns: 
+    abox: "https://w3id.org/changes/4/aldrovandi/"
+    lrmoo: "http://iflastandards.info/ns/lrm/lrmoo/"
+    crm: "http://www.cidoc-crm.org/cidoc-crm/"
+    crmdig: "http://www.cidoc-crm.org/extensions/crmdig/"
+    aat: "http://vocab.getty.edu/page/aat/"
+
+mapping_rules:
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/Work": "http://iflastandards.info/ns/lrm/lrmoo/F1_Work"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/Expression": "http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/Manifestation": "http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/Item": "http://iflastandards.info/ns/lrm/lrmoo/F5_Item"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/DataObject": "http://www.cidoc-crm.org/extensions/crmdig/D9_Data_Object"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/SoftwareActivity": "http://www.cidoc-crm.org/extensions/crmdig/D10_Software_Execution"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/isRealizedIn": "http://iflastandards.info/ns/lrm/lrmoo/R3_is_realised_in"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/isEmbodiedIn": "http://iflastandards.info/ns/lrm/lrmoo/R4i_is_embodied_in"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/isExemplifiedBy": "http://iflastandards.info/ns/lrm/lrmoo/R7i_is_exemplified_by"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/hasCopy": "http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/isCopyOf": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/hasInput": "http://www.cidoc-crm.org/extensions/crmdig/L10_had_input"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/hasType": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/Type": "http://www.cidoc-crm.org/cidoc-crm/E55_Type"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/07/schema/optimization": "http://vocab.getty.edu/page/aat/300386427"

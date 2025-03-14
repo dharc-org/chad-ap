@@ -1,0 +1,39 @@
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://w3id.org/changes/4/aldrovandi/> a owl:Ontology .
+
+<https://w3id.org/changes/4/aldrovandi/16/act/1> a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300386427 ;
+    crmdig:L10_had_input <https://w3id.org/changes/4/aldrovandi/16/mdl/1> .
+
+<https://w3id.org/changes/4/aldrovandi/16/wrk/1> a lrmoo:F1_Work ;
+    lrmoo:R3_is_realised_in <https://w3id.org/changes/4/aldrovandi/16/exp/1> .
+
+<https://w3id.org/changes/4/aldrovandi/52/wrk/1> a lrmoo:F1_Work ;
+    lrmoo:R3_is_realised_in <https://w3id.org/changes/4/aldrovandi/52/exp/1> .
+
+<https://w3id.org/changes/4/aldrovandi/16/exp/1> a lrmoo:F2_Expression ;
+    lrmoo:R4i_is_embodied_in <https://w3id.org/changes/4/aldrovandi/16/mnf/1> .
+
+<https://w3id.org/changes/4/aldrovandi/16/itm/1> a lrmoo:F5_Item ;
+    crm:P130i_features_are_also_found_on <https://w3id.org/changes/4/aldrovandi/16/mdl/1> .
+
+<https://w3id.org/changes/4/aldrovandi/16/mnf/1> a lrmoo:F3_Manifestation ;
+    lrmoo:R7i_is_exemplified_by <https://w3id.org/changes/4/aldrovandi/16/itm/1> .
+
+<https://w3id.org/changes/4/aldrovandi/52/exp/1> a lrmoo:F2_Expression ;
+    lrmoo:R4i_is_embodied_in <https://w3id.org/changes/4/aldrovandi/52/mnf/1> .
+
+<https://w3id.org/changes/4/aldrovandi/52/itm/1> a lrmoo:F5_Item .
+
+<https://w3id.org/changes/4/aldrovandi/52/mnf/1> a lrmoo:F3_Manifestation ;
+    lrmoo:R7i_is_exemplified_by <https://w3id.org/changes/4/aldrovandi/52/itm/1> ;
+    crm:P130i_features_are_also_found_on <http://hdl.handle.net/20.500.14008/78078> .
+
+<https://w3id.org/changes/4/aldrovandi/16/mdl/1> a crmdig:D9_Data_Object ;
+    crm:P130_shows_features_of <https://sketchfab.com/3d-models/cuban-macaw-nhmw-zoo-vs-50796-52348a29605a4136a0e807942d3c12a6> .
+
