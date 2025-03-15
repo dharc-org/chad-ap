@@ -2,13 +2,13 @@
 title: "Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)"
 Release: 2024-04-16
 Latest version: https://w3id.org/dharc/ontology/chad-ap
-Revision: 1.0.0
+Revision: 2.0.1
 Issued on: 2024-04-16
 Authors: Barzaghi, Sebastian; Peroni, Silvio
 Contributors: Heibi, Ivan; Moretti, Arianna
 Available formats: JSON-LD, RDF/XML, N-Triples, Turtle
 License: http://creativecommons.org/licenses/by/4.0/
-Cite as: Barzaghi, S. and Peroni, S. (2024). Cultural Heritage Acquisition and Digitisation Application Profile. https://w3id.org/dharc/ontology/chad-ap.
+Cite as: Barzaghi, S., Heibi, I., Moretti, A., Peroni, S. (2025). Developing Application Profiles for Enhancing Data and Workflows in Cultural Heritage Digitisation Processes. In\: Demartini, G., et al. The Semantic Web – ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer, Cham. https://doi.org/10.1007/978-3-031-77847-6_11.
 ---
 
 # CHAD-AP
@@ -22,11 +22,6 @@ It was developed by leveraging the [Simplified Agile Methodology for Ontology De
 
 ## Description
 This repository contains the full documentation produced during the development of CHAD-AP. In particular:
-* the `docs` folder contains the documentation about the current state of the model and some examples;
-* the `object` folder contains the full documentation of the module specific to modeling the exhibition objects starting from their bibliographic metadata;
-* the `process` folder contains the full documentation of the module specific to modeling the digitisation workflow of the exhibition.
-
-In turn, both the `object` and the `process` folder are organized as follows:
 * the `data` directory contains the full set of refactored ABoxes, one for each iteration, written in the Turtle RDF serialisation;
 * the `development` directory contains a folder per development iteration, each containing a full test case with:
     - a `motivating scenario`, which defines the scope of the single iteration, along with some examples;
@@ -39,4 +34,4 @@ In turn, both the `object` and the `process` folder are organized as follows:
     - a `testing notebook`, which is used to test the SPARQL queries against both the TBox and the ABox;
 * the `diagrams` directory contains the full set of Graffoo diagrams representing the refactored model of each iteration;
 * the `docs` directory contains the full set of files related to the final model and its versions in time;
-* the `sparql` directory contains the full set of refactored Formal Competency Questions.
+* the `sparql` directory contains the full set of refactored Formal Competency Questions, along with their respective testing notebooks.
