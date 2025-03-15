@@ -1,5 +1,5 @@
 ---
-title: "Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)"
+Title: "Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)"
 Release: 2024-04-16
 Latest version: https://w3id.org/dharc/ontology/chad-ap
 Revision: 2.0.1
@@ -8,7 +8,7 @@ Authors: Barzaghi, Sebastian; Peroni, Silvio
 Contributors: Heibi, Ivan; Moretti, Arianna
 Available formats: JSON-LD, RDF/XML, N-Triples, Turtle
 License: http://creativecommons.org/licenses/by/4.0/
-Cite as: Barzaghi, S., Heibi, I., Moretti, A., Peroni, S. (2025). Developing Application Profiles for Enhancing Data and Workflows in Cultural Heritage Digitisation Processes. In\: Demartini, G., et al. The Semantic Web – ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer, Cham. https://doi.org/10.1007/978-3-031-77847-6_11.
+Cite as: Barzaghi, S., Heibi, I., Moretti, A., Peroni, S. (2025). Developing Application Profiles for Enhancing Data and Workflows in Cultural Heritage Digitisation Processes. In "Demartini, G., et al. The Semantic Web – ISWC 2024". ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer, Cham. https://doi.org/10.1007/978-3-031-77847-6_11.
 ---
 
 # CHAD-AP
