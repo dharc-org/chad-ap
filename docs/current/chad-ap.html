@@ -128,7 +128,7 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>CRMdig</b></td><td>&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</td></tr>
 <tr><td><b>aat</b></td><td>&lt;http://vocab.getty.edu/aat/&gt;</td></tr>
 <tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo/&gt;</td></tr>
-<tr><td><b>chad-ap</b></td><td>&lt;https://w3id.org/dharc/ontology/chad-ap#&gt;</td></tr>
+<tr><td><b>chad-ap</b></td><td>&lt;https://w3id.org/dharc/ontology/chad-ap&gt;</td></tr>
 <tr><td><b>cidoc-crm</b></td><td>&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</td></tr>
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
 <tr><td><b>lrmoo</b></td><td>&lt;http://iflastandards.info/ns/lrm/lrmoo/&gt;</td></tr>
@@ -1228,6 +1228,9 @@ This section provides details for each class and property defined by Cultural He
   <div class="comment">
    <span class="markdown">An action intentionally carried out by one or more actors.</span>
   </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P14_carried_out_by -[1..N]-&gt; crm:E39_Actor * crm:P16_used_specific_object -[0..N]-&gt; lrmoo:F5_Item * crm:P32_used_general_technique -[0..N]-&gt; E55_Type</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -1296,6 +1299,9 @@ This section provides details for each class and property defined by Cultural He
   <div class="comment">
    <span class="markdown">An individual person or a group of people, with the potential to perform intentional and accountable actions.</span>
   </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P74_has_current_or_former_residence -[0..1]-&gt; crm:E53_Place * crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -1353,6 +1359,9 @@ This section provides details for each class and property defined by Cultural He
   <div class="comment">
    <span class="markdown">A digital object that is the direct result of an activity in a digitization workflow.</span>
   </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P130i_features_are_also_found_on -[0..N]-&gt; crmdig:D9_Data_Object</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -1377,6 +1386,27 @@ This section provides details for each class and property defined by Cultural He
     This class is used to represent the DCHO produced at the end of each digitisation activity.
    </dd>
   </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>
+        ### Example of a data object produced at the end of an acquisition activity and used as input in a processing activity
+
+        ex:data-object a crmdig:D9_Data_Object .
+
+        ex:acquisition a crmdig:D2_Digitization_Process ;
+            crmdig:L1_digitized ex:item ;
+            crmdig:L11_had_output ex:data-object .
+
+        ex:processing a crmdig:D10_Software_Execution ;
+            crm:P2_has_type aat:300054636 ;
+            crmdig:L10_had_input ex:data-object .
+
+    </pre>
+   </dd>
+  </dl>
   <dl class="description">
    <dt>
     has super-classes
@@ -1391,6 +1421,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device</p>
   <div class="comment">
    <span class="markdown">A technical tool that is used to process or produce digital objects.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1435,7 +1468,7 @@ This section provides details for each class and property defined by Cultural He
     has super-classes
    </dt>
    <dd>
-    <a href="http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object">E22 Man Made Object</a> <sup class="type-c" title="class">c</sup>
+    <a href="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object">E22 Human Made Object</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1444,6 +1477,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process</p>
   <div class="comment">
    <span class="markdown">An activity that results in the production of data objects functioning as digital representations of physical entities.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crmdig:L1_digitized -[1]-&gt; lrmoo:F5_Item * crmdig:L11_had_output -[1]-&gt; crmdig:D9_Data_Object * crm:P4_has_time-span -[1]-&gt; crm:E52_Time-Span * crm:P11_had_participant -[0..N]-&gt; crm:E74_Group * crm:P14_carried_out_by -[1..N]-&gt; crm:E39_Actor * crm:P32_used_general_technique -[1]-&gt; crm:E55_Type * crm:P16_used_specific_object -[1..N]-&gt; crmdig:D8_Digital_Device</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1572,6 +1608,9 @@ This section provides details for each class and property defined by Cultural He
   <div class="comment">
    <span class="markdown">The realisation of a work, referring to the intellectual content of a cultural heritage object.</span>
   </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:R129_is_about -[0..N]-&gt; crm:E73_Information_Object * lrmoo:R4i_is_embodied_in -[1..N]-&gt; lrmoo:F3_Manifestation</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -1637,6 +1676,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation</p>
   <div class="comment">
    <span class="markdown">An activity that represents the creation of an expression.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * lrmoo:R17_created -[1]-&gt; lrmoo:F2_Expression * crm:P9_consists_of -[1..N]-&gt; crm:E7_Activity * crm:R32_used_general_technique -[0..N]-&gt; crm:E55_Type * lrmoo:R19_created_a_realisation_of -[1]-&gt; lrmoo:F1_Item * crm:P4_has_time-span -[1]-&gt; crm:E52_Time-Span</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1709,6 +1751,9 @@ This section provides details for each class and property defined by Cultural He
   <div class="comment">
    <span class="markdown">A unified group of people.</span>
   </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P74_has_current_or_former_residence -[0..1]-&gt; crm:E53_Place * crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -1747,6 +1792,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/E42_Identifier</p>
   <div class="comment">
    <span class="markdown">A textual string assigned to a cultural heritage object in order to identify it uniquely within a given context.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1801,6 +1849,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object</p>
   <div class="comment">
    <span class="markdown">An immaterial item that has an objectively recognizable structure and is documented as a single unit.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P67_refers_to -[0..1]-&gt; lrmoo:F3_Manifestation * crm:P70i_is_documented_in -[0..1]-&gt; crm:E31_Document * crm:P190_has_symbolic_content -[0..1]-&gt; rdfs:Literal</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1866,6 +1917,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://iflastandards.info/ns/lrm/lrmoo/F5_Item</p>
   <div class="comment">
    <span class="markdown">This class comprises physical objects that were produced by a process involving a given manifestation.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P1_is_identified_by -[1..N]-&gt; crm:E42_Identifier * crm:P3_has_note -[0..1]-&gt; rdfs:Literal</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1942,6 +1996,9 @@ This section provides details for each class and property defined by Cultural He
   <div class="comment">
    <span class="markdown">The rendering of one or more expressions. It is defined by both the overall content and the form of its presentation. The substance of manifestation is not only signs, but also the manner in which they are presented to be consumed by users, including the kind of media adopted.</span>
   </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P130i_features_are_also_found_on -[0..N]-&gt; lrmoo:F4_Manifestation * lrmoo:R7i_is_exemplified_by -[1..N]-&gt; lrmoo:F5_Item</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -2008,6 +2065,9 @@ This section provides details for each class and property defined by Cultural He
   <div class="comment">
    <span class="markdown">An individual person.</span>
   </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P74_has_current_or_former_residence -[0..1]-&gt; crm:E53_Place * crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -2046,6 +2106,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing</p>
   <div class="comment">
    <span class="markdown">A persistent physical item of any size that is purposely created by human activity.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2104,6 +2167,9 @@ This section provides details for each class and property defined by Cultural He
   <div class="comment">
    <span class="markdown">A geographical location.</span>
   </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document</span>
+  </div>
   <dl class="definedBy">
    <dt>
     Is defined by
@@ -2154,6 +2220,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://www.ics.forth.gr/isl/CRMdig/D14_Software</p>
   <div class="comment">
    <span class="markdown">A computer program.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2213,6 +2282,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution</p>
   <div class="comment">
    <span class="markdown">An activity in which a digital device runs a software program on a digital object.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crmdig:L10_had_input -[1]-&gt; crmdig:D9_Data_Object * crmdig:L11_had_output -[1]-&gt; crmdig:D9_Data_Object * crm:P4_has_time-span -[1]-&gt; crm:E52_Time-Span * crm:P11_had_participant -[0..N]-&gt; crm:E74_Group * crm:P14_carried_out_by -[1..N]-&gt; crm:E39_Actor * crmdig:L23_used_software_or_hardware -[1..N]-&gt; crmdig:D14_Software</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2275,6 +2347,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span</p>
   <div class="comment">
    <span class="markdown">An abstract temporal extent having a beginning, an end and a duration.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P82a_begin_of_the_begin -[1]-&gt; xsd:dateTime * crm:P82b_end_of_the_end -[1]-&gt; xsd:dateTime</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2341,6 +2416,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/E35_Title</p>
   <div class="comment">
    <span class="markdown">A textual string that functions as a title for a work.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2452,6 +2530,9 @@ This section provides details for each class and property defined by Cultural He
   <p><strong>IRI:</strong> http://iflastandards.info/ns/lrm/lrmoo/F1_Work</p>
   <div class="comment">
    <span class="markdown">The essence or conceptualisation of an endeavor.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * lrmoo:R10_has_member -[0..N]-&gt; lrmoo:F1_Work * crm:P102_has_title -[0..N]-&gt; crm:E35_Title * lrmoo:R3_is_realized_in -[1..N]-&gt; lrmoo:F2_Expression</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -5912,6 +5993,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent identifiers that are issued by the institution."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300053363">
@@ -5934,6 +6021,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of watercolor as a technique."@en</span>
    </dd>
   </dl>
  </div>
@@ -5958,6 +6051,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are artifacts."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300420536">
@@ -5980,6 +6079,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are axes."@en</span>
    </dd>
   </dl>
  </div>
@@ -6004,6 +6109,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent identifiers that are volume numbers."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300028051">
@@ -6026,6 +6137,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are books."@en</span>
    </dd>
   </dl>
  </div>
@@ -6050,6 +6167,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are bottles."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300422994">
@@ -6072,6 +6195,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are charm pendants."@en</span>
    </dd>
   </dl>
  </div>
@@ -6096,6 +6225,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are bound manuscripts."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300025976">
@@ -6118,6 +6253,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent collections."@en</span>
    </dd>
   </dl>
  </div>
@@ -6142,6 +6283,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of commissioners."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300022488">
@@ -6164,6 +6311,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are compasses."@en</span>
    </dd>
   </dl>
  </div>
@@ -6188,6 +6341,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are manuscript volumes."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300435434">
@@ -6210,6 +6369,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent licenses and copyright statements."@en</span>
    </dd>
   </dl>
  </div>
@@ -6234,6 +6399,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of authors."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300054277">
@@ -6256,6 +6427,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent curation activities."@en</span>
    </dd>
   </dl>
  </div>
@@ -6280,13 +6457,19 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the optimisation phase of a digitisation process."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300054636">
   <h3>data processing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300054636</p>
   <div class="comment">
-   <span class="markdown">Creating and manipulating data in machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing.</span>
+   <span class="markdown">Creating and manipulating data in a machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -6302,6 +6485,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the processing phase in a digitisation process."@en</span>
    </dd>
   </dl>
  </div>
@@ -6326,6 +6515,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent digital devices that are cameras."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300391447">
@@ -6348,6 +6543,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the modelling phase of a digitisation process."@en</span>
    </dd>
   </dl>
  </div>
@@ -6372,6 +6573,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are dioramas."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300404386">
@@ -6394,6 +6601,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of discoverers."@en</span>
    </dd>
   </dl>
  </div>
@@ -6418,6 +6631,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the metadata handling phase in a digitisation process."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300054196">
@@ -6440,6 +6659,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of drawing as a technique."@en</span>
    </dd>
   </dl>
  </div>
@@ -6464,6 +6689,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of drying as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300155365">
@@ -6486,6 +6717,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the publication phase in a digitisation process."@en</span>
    </dd>
   </dl>
  </div>
@@ -6510,6 +6747,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are electrostatic machines."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300053225">
@@ -6532,6 +6775,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of engravers."@en</span>
    </dd>
   </dl>
  </div>
@@ -6556,6 +6805,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are engravings."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300122241">
@@ -6578,6 +6833,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are pieces of equipment."@en</span>
    </dd>
   </dl>
  </div>
@@ -6602,6 +6863,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent titles that are the denominations used during the exhibition to identify their CHOs."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300053357">
@@ -6624,6 +6891,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of fresco paintings as a technique."@en</span>
    </dd>
   </dl>
  </div>
@@ -6648,6 +6921,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are gems."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300426696">
@@ -6670,6 +6949,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent software used for activities dealing with graphics."@en</span>
    </dd>
   </dl>
  </div>
@@ -6694,6 +6979,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of handwriting as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300024928">
@@ -6716,6 +7007,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are handles."@en</span>
    </dd>
   </dl>
  </div>
@@ -6740,6 +7037,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are herbaria."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300265483">
@@ -6762,6 +7065,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are illuminated manuscripts."@en</span>
    </dd>
   </dl>
  </div>
@@ -6786,6 +7095,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of illustrators."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300055021">
@@ -6808,6 +7123,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are incunambula."@en</span>
    </dd>
   </dl>
  </div>
@@ -6832,6 +7153,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of intarsia as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300037592">
@@ -6854,6 +7181,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are lamps."@en</span>
    </dd>
   </dl>
  </div>
@@ -6878,6 +7211,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of letterpress printing as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300028569">
@@ -6900,6 +7239,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are manuscripts."@en</span>
    </dd>
   </dl>
  </div>
@@ -6924,6 +7269,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are maps."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300138758">
@@ -6946,6 +7297,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are masks."@en</span>
    </dd>
   </dl>
  </div>
@@ -6970,6 +7327,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are medals."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300024594">
@@ -6992,6 +7355,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are microscopes."@en</span>
    </dd>
   </dl>
  </div>
@@ -7016,6 +7385,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are models."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300024814">
@@ -7038,6 +7413,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are molds."@en</span>
    </dd>
   </dl>
  </div>
@@ -7062,6 +7443,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of mosaics as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300184300">
@@ -7084,6 +7471,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are series of paintings."@en</span>
    </dd>
   </dl>
  </div>
@@ -7108,6 +7501,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are navigation charts."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300046001">
@@ -7130,6 +7529,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are necklaces."@en</span>
    </dd>
   </dl>
  </div>
@@ -7154,6 +7559,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of oil paintings as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300429747">
@@ -7176,6 +7587,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent digital devices that are optical scanners."@en</span>
    </dd>
   </dl>
  </div>
@@ -7200,6 +7617,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent titles that are the original denominations of their CHOs."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300033618">
@@ -7222,6 +7645,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are paintings."@en</span>
    </dd>
   </dl>
  </div>
@@ -7246,6 +7675,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of photogrammetry as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300137376">
@@ -7268,6 +7703,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are marine charts."@en</span>
    </dd>
   </dl>
  </div>
@@ -7292,6 +7733,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of museum preparators."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300053319">
@@ -7314,6 +7761,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of printers."@en</span>
    </dd>
   </dl>
  </div>
@@ -7338,6 +7791,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are prints."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300054686">
@@ -7360,6 +7819,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of publishers."@en</span>
    </dd>
   </dl>
  </div>
@@ -7384,6 +7849,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are rattles."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300417260">
@@ -7406,6 +7877,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the exporting phase of a digitisation process."@en</span>
    </dd>
   </dl>
  </div>
@@ -7430,6 +7907,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of sculpting as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300027349">
@@ -7452,6 +7935,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are bibliographic series."@en</span>
    </dd>
   </dl>
  </div>
@@ -7476,6 +7965,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent identifiers that are shelf marks."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300433476">
@@ -7498,6 +7993,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are spark arresters."@en</span>
    </dd>
   </dl>
  </div>
@@ -7522,6 +8023,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are specimens."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300047600">
@@ -7544,6 +8051,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are statues."@en</span>
    </dd>
   </dl>
  </div>
@@ -7568,6 +8081,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of structured light scanning as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300404126">
@@ -7590,6 +8109,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent subjects of a CHO."@en</span>
    </dd>
   </dl>
  </div>
@@ -7614,6 +8139,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are series of prints."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300053628">
@@ -7636,6 +8167,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of taxidermy as a technique."@en</span>
    </dd>
   </dl>
  </div>
@@ -7660,6 +8197,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of translators."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300343820">
@@ -7682,6 +8225,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of vase painting as a technique."@en</span>
    </dd>
   </dl>
  </div>
@@ -7706,6 +8255,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are vases."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300028682">
@@ -7728,6 +8283,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are videos."@en</span>
    </dd>
   </dl>
  </div>
@@ -7752,6 +8313,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are visual works of art."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300226836">
@@ -7774,6 +8341,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are series of frescoes."@en</span>
    </dd>
   </dl>
  </div>
@@ -7798,6 +8371,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are printed volumes."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300015045">
@@ -7820,6 +8399,12 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are watercolor paintings."@en</span>
    </dd>
   </dl>
  </div>
@@ -7844,6 +8429,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of wax modeling as a technique."@en</span>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300041405">
@@ -7867,6 +8458,12 @@ This section provides details for each class and property defined by Cultural He
    <dd>
     <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are woodcuts."@en</span>
+   </dd>
   </dl>
  </div>
 </div><div id="legend">
@@ -7884,7 +8481,303 @@ This section provides details for each class and property defined by Cultural He
 <!--CHANGELOG SECTION-->
    <div id="changelog"><div id="changelog">
 <h2 id="changes" class="list">Changes from last version</h2>
-<h3 id="changeProp" class="list">Object Properties</h3>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F1_Work">http://iflastandards.info/ns/lrm/lrmoo/F1_Work</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* lrmoo:R10_has_member -[0..N]-> lrmoo:F1_Work
+* crm:P102_has_title -[0..N]-> crm:E35_Title
+* lrmoo:R3_is_realized_in -[1..N]-> lrmoo:F2_Expression"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation">http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* lrmoo:R17_created -[1]-> lrmoo:F2_Expression
+* crm:P9_consists_of -[1..N]-> crm:E7_Activity
+* crm:R32_used_general_technique -[0..N]-> crm:E55_Type
+* lrmoo:R19_created_a_realisation_of -[1]-> lrmoo:F1_Item
+* crm:P4_has_time-span -[1]-> crm:E52_Time-Span"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F2_Expression">http://iflastandards.info/ns/lrm/lrmoo/F2_Expression</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:R129_is_about -[0..N]-> crm:E73_Information_Object
+* lrmoo:R4i_is_embodied_in -[1..N]-> lrmoo:F3_Manifestation"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation">http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P130i_features_are_also_found_on -[0..N]-> lrmoo:F4_Manifestation
+* lrmoo:R7i_is_exemplified_by -[1..N]-> lrmoo:F5_Item"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F5_Item">http://iflastandards.info/ns/lrm/lrmoo/F5_Item</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P1_is_identified_by -[1..N]-> crm:E42_Identifier
+* crm:P3_has_note -[0..1]-> rdfs:Literal"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E21_Person">http://www.cidoc-crm.org/cidoc-crm/E21_Person</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Личность"@ru</li>
+<li>Deleted: rdfs:label "人物"@zh</li>
+<li>Deleted: rdfs:label "Person"@de</li>
+<li>Deleted: rdfs:label "Pessoa"@pt</li>
+<li>Deleted: rdfs:label "Πρόσωπο"@el</li>
+<li>Deleted: rdfs:label "Personne"@fr</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing">http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Chose matérielle élaborée par l’humain"@fr</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E31_Document">http://www.cidoc-crm.org/cidoc-crm/E31_Document</a>
+<ul>
+<li>Deleted: rdfs:label "Dokument"@de</li>
+<li>Deleted: rdfs:label "Document"@fr</li>
+<li>Deleted: rdfs:label "Τεκμήριο"@el</li>
+<li>Deleted: rdfs:label "Documento"@pt</li>
+<li>Deleted: rdfs:label "Документ"@ru</li>
+<li>Deleted: rdfs:label "文献"@zh</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E35_Title">http://www.cidoc-crm.org/cidoc-crm/E35_Title</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Título"@pt</li>
+<li>Deleted: rdfs:label "Titel"@de</li>
+<li>Deleted: rdfs:label "题名"@zh</li>
+<li>Deleted: rdfs:label "Titre"@fr</li>
+<li>Deleted: rdfs:label "Заголовок"@ru</li>
+<li>Deleted: rdfs:label "Τίτλος"@el</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E39_Actor">http://www.cidoc-crm.org/cidoc-crm/E39_Actor</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Actant"@fr</li>
+<li>Deleted: rdfs:label "Δράστης"@el</li>
+<li>Deleted: rdfs:label "Agente"@pt</li>
+<li>Deleted: rdfs:label "参与者"@zh</li>
+<li>Deleted: rdfs:label "Агент"@ru</li>
+<li>Deleted: rdfs:label "Akteur"@de</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E42_Identifier">http://www.cidoc-crm.org/cidoc-crm/E42_Identifier</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Identificador de Objeto"@pt</li>
+<li>Deleted: rdfs:label "Κωδικός Αναγνώρισης"@el</li>
+<li>Deleted: rdfs:label "Identifiant"@fr</li>
+<li>Deleted: rdfs:label "标识符"@zh</li>
+<li>Deleted: rdfs:label "Идентификатор Объекта"@ru</li>
+<li>Deleted: rdfs:label "Kennung"@de</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime
+* crm:P82b_end_of_the_end -[1]-> xsd:dateTime"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Zeitspanne"@de</li>
+<li>Deleted: rdfs:label "Período de Tempo"@pt</li>
+<li>Deleted: rdfs:label "Intervalle temporel"@fr</li>
+<li>Deleted: rdfs:label "Χρονικό Διάστημα"@el</li>
+<li>Deleted: rdfs:label "时段"@zh</li>
+<li>Deleted: rdfs:label "Интервал Времени"@ru</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E53_Place">http://www.cidoc-crm.org/cidoc-crm/E53_Place</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Local"@pt</li>
+<li>Deleted: rdfs:label "地点"@zh</li>
+<li>Deleted: rdfs:label "Ort"@de</li>
+<li>Deleted: rdfs:label "Место"@ru</li>
+<li>Deleted: rdfs:label "Lieu"@fr</li>
+<li>Deleted: rdfs:label "Τόπος"@el</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E55_Type">http://www.cidoc-crm.org/cidoc-crm/E55_Type</a>
+<ul>
+<li>Deleted: rdfs:label "Τύπος"@el</li>
+<li>Deleted: rdfs:label "Тип"@ru</li>
+<li>Deleted: rdfs:label "Type"@fr</li>
+<li>Deleted: rdfs:label "Typus"@de</li>
+<li>Deleted: rdfs:label "Tipo"@pt</li>
+<li>Deleted: rdfs:label "类型"@zh</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object">http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation
+* crm:P70i_is_documented_in -[0..1]-> crm:E31_Document
+* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Πληροφοριακό Αντικείμενο"@el</li>
+<li>Deleted: rdfs:label "信息对象"@zh</li>
+<li>Deleted: rdfs:label "Objeto de Informação"@pt</li>
+<li>Deleted: rdfs:label "Информационный Объект"@ru</li>
+<li>Deleted: rdfs:label "Informationsgegenstand"@de</li>
+<li>Deleted: rdfs:label "Objet informationnel"@fr</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E74_Group">http://www.cidoc-crm.org/cidoc-crm/E74_Group</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Grupo"@pt</li>
+<li>Deleted: rdfs:label "Группа"@ru</li>
+<li>Deleted: rdfs:label "Groupe"@fr</li>
+<li>Deleted: rdfs:label "Menschliche Gruppe"@de</li>
+<li>Deleted: rdfs:label "Ομάδα"@el</li>
+<li>Deleted: rdfs:label "团体"@zh</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E7_Activity">http://www.cidoc-crm.org/cidoc-crm/E7_Activity</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
+* crm:P16_used_specific_object -[0..N]-> lrmoo:F5_Item
+* crm:P32_used_general_technique -[0..N]-> E55_Type"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Δράση"@el</li>
+<li>Deleted: rdfs:label "Деятельность"@ru</li>
+<li>Deleted: rdfs:label "Handlung"@de</li>
+<li>Deleted: rdfs:label "活动"@zh</li>
+<li>Deleted: rdfs:label "Atividade"@pt</li>
+<li>Deleted: rdfs:label "Activité"@fr</li>
+</ul>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution">http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crmdig:L10_had_input -[1]-> crmdig:D9_Data_Object
+* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
+* crm:P4_has_time-span -[1]-> crm:E52_Time-Span
+* crm:P11_had_participant -[0..N]-> crm:E74_Group
+* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
+* crmdig:L23_used_software_or_hardware -[1..N]-> crmdig:D14_Software"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D14_Software">http://www.ics.forth.gr/isl/CRMdig/D14_Software</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process">http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crmdig:L1_digitized -[1]-> lrmoo:F5_Item
+* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
+* crm:P4_has_time-span -[1]-> crm:E52_Time-Span
+* crm:P11_had_participant -[0..N]-> crm:E74_Group
+* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
+* crm:P32_used_general_technique -[1]-> crm:E55_Type
+* crm:P16_used_specific_object -[1..N]-> crmdig:D8_Digital_Device"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device">http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device</a>
+<ul>
+<li>Added: SubClass of http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object</li>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: SubClass of http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object</li>
+</ul>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object">http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object</a>
+<ul>
+<li>Added: <http://purl.org/vocab/vann/example> "
+
+        # Example of a data object produced at the end of an acquisition activity and used as input in a processing activity
+
+        ex:data-object a crmdig:D9_Data_Object .
+
+        ex:acquisition a crmdig:D2_Digitization_Process ;
+            crmdig:L1_digitized ex:item ;
+            crmdig:L11_had_output ex:data-object .
+
+        ex:processing a crmdig:D10_Software_Execution ;
+            crm:P2_has_type aat:300054636 ;
+            crmdig:L10_had_input ex:data-object .
+
+    "@en</li>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P130i_features_are_also_found_on -[0..N]-> crmdig:D9_Data_Object"^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object">http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object</a>
+</li>
+</ul></details><details><summary><u>Deleted classes</u></summary>
+<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object">http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
 <details><summary><u>Added object properties</u></summary>
 <ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of">http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of</a>
 <ul>

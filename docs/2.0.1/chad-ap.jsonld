@@ -1,6 +1,9 @@
 [ {
   "@id" : "http://iflastandards.info/ns/lrm/lrmoo/F1_Work",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* lrmoo:R10_has_member -[0..N]-> lrmoo:F1_Work\n* crm:P102_has_title -[0..N]-> crm:E35_Title\n* lrmoo:R3_is_realized_in -[1..N]-> lrmoo:F2_Expression"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of a CHO at the Work level, characterised by two titles and realised in an Expression\n\n        ex:32-work a lrmoo:F1_Work ;\n            crm:P102_has_title ex:32-work-title-01 ,\n                ex:32-work-title-02 ;\n            lrmoo:R3_is_realised_in ex:32-expression .\n\n    "
@@ -29,6 +32,9 @@
 }, {
   "@id" : "http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* lrmoo:R17_created -[1]-> lrmoo:F2_Expression\n* crm:P9_consists_of -[1..N]-> crm:E7_Activity\n* crm:R32_used_general_technique -[0..N]-> crm:E55_Type\n* lrmoo:R19_created_a_realisation_of -[1]-> lrmoo:F1_Item\n* crm:P4_has_time-span -[1]-> crm:E52_Time-Span"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of an Expression Creation. It consists of a smaller activity; it is carried out through a drawing\n        ### technique; it happens during the XVI century; and it generates both the Expression of the CHO (its content) and\n        ### its realisation (the Work).\n\n        ex:32-expression-creation a lrmoo:F28_Expression_Creation ;\n            crm:P9_consists_of ex:32-expression-creation-activity-01 ;\n            crm:P32_used_general_technique aat:300054196 ;\n            lrmoo:R19_created_a_realisation_of ex:32-work ;\n            lrmoo:R17_created ex:32-expression ;\n            crm:P4_has_time-span ex:1500-1599 .\n\n    "
@@ -59,6 +65,9 @@
 }, {
   "@id" : "http://iflastandards.info/ns/lrm/lrmoo/F2_Expression",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:R129_is_about -[0..N]-> crm:E73_Information_Object\n* lrmoo:R4i_is_embodied_in -[1..N]-> lrmoo:F3_Manifestation"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of a CHO at the Expression level, characterised by a subject and embodied in a Manifestation\n\n        ex:32-expression a lrmoo:F2_Expression ;\n            crm:P129_is_about ex:ermafrodita ;\n            lrmoo:R4i_is_embodied_in ex:32-manifestation .\n\n    "
@@ -87,6 +96,9 @@
 }, {
   "@id" : "http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P130i_features_are_also_found_on -[0..N]-> lrmoo:F4_Manifestation\n* lrmoo:R7i_is_exemplified_by -[1..N]-> lrmoo:F5_Item"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of a CHO at the Manifestation level, characterised by a type and exemplified in an Item\n\n        ex:32-manifestation a lrmoo:F3_Manifestation ;\n            crm:P2_has_type aat:300028569 ;\n            lrmoo:R7i_is_exemplified_by ex:32-item .\n\n    "
@@ -115,6 +127,9 @@
 }, {
   "@id" : "http://iflastandards.info/ns/lrm/lrmoo/F5_Item",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P1_is_identified_by -[1..N]-> crm:E42_Identifier\n* crm:P3_has_note -[0..1]-> rdfs:Literal"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of a CHO at the Item level, characterised by three identifiers and a description\n\n        ex:32-item a lrmoo:F5_Item ;\n            crm:P1_is_identified_by ex:32-item-identifier-01 ,\n                ex:32-item-identifier-02 ,\n                ex:32-item-identifier-03 ;\n            crm:P3_has_note '''\n                Essere umano ermafrodita \n                Human hermaphrodite (Monstrum humanum hermaphroditicum) \n                sec. XVI \n                16th century \n                BUB, \n                Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86\n                '''^^rdfs:Literal .\n\n    "
@@ -530,6 +545,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300011172"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are gems."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -549,6 +568,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300015045"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are watercolor paintings."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -570,6 +593,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300022488"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are compasses."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -589,6 +616,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300024594"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are microscopes."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -610,6 +641,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300024814"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are molds."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -629,6 +664,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300024928"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are handles."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -650,6 +689,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300025976"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent collections."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -669,6 +712,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300027349"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are bibliographic series."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -690,6 +737,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300028051"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are books."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -709,6 +760,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300028094"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are maps."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -730,6 +785,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300028309"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are navigation charts."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -749,6 +808,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300028569"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are manuscripts."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -770,6 +833,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300028682"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are videos."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -789,6 +856,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300033618"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are paintings."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -810,6 +881,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300037592"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are lamps."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -829,6 +904,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300041273"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are prints."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -850,6 +929,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300041340"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are engravings."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -869,6 +952,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300041405"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are woodcuts."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -890,6 +977,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300041933"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are rattles."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -909,6 +1000,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300045627"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are bottles."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -930,6 +1025,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300046001"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are necklaces."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -949,6 +1048,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300046025"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are medals."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -970,6 +1073,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300047600"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are statues."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -989,6 +1096,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300047753"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are models."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1010,6 +1121,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300047762"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are dioramas."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1029,6 +1144,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300053225"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the activities of engravers."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1050,6 +1169,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300053319"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the activities of printers."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1069,6 +1192,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300053357"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of fresco paintings as a technique."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1090,6 +1217,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300053363"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of watercolor as a technique."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1109,6 +1240,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300053580"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of photogrammetry as a technique."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1130,6 +1265,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300053628"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of taxidermy as a technique."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1149,6 +1288,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300053758"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of drying as a technique."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1170,6 +1313,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300053852"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of intarsia as a technique."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1189,6 +1336,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300054196"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of drawing as a technique."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1210,6 +1361,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300054200"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the activities of illustrators."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1229,6 +1384,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300054277"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent curation activities."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1250,12 +1409,16 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300054636"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the processing phase in a digitisation process."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Creating and manipulating data in machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing."
+    "@value" : "Creating and manipulating data in a machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://vocab.getty.edu/aat/"
@@ -1269,6 +1432,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300054638"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the metadata handling phase in a digitisation process."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1290,6 +1457,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300054686"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the activities of publishers."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1309,6 +1480,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300055021"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are incunambula."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1330,6 +1505,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300069831"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the activities of translators."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1349,6 +1528,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300077565"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the activities of museum preparators."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1370,6 +1553,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300117127"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are artifacts."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1389,6 +1576,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300122241"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are pieces of equipment."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1410,6 +1601,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300132254"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are vases."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1429,6 +1624,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300137376"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are marine charts."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1450,6 +1649,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300138684"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of mosaics as a technique."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1469,6 +1672,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300138758"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are masks."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1490,6 +1697,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300155365"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the publication phase in a digitisation process."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1509,6 +1720,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300178684"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of oil paintings as a technique."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1530,6 +1745,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300178926"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of letterpress printing as a technique."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1549,6 +1768,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300184300"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are series of paintings."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1570,6 +1793,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300189634"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are series of prints."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1589,6 +1816,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300191086"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are visual works of art."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1610,6 +1841,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300224200"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are bound manuscripts."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1629,6 +1864,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300226836"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are series of frescoes."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1650,6 +1889,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300235576"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are specimens."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1669,6 +1912,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300252927"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of handwriting as a technique."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1690,6 +1937,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300264383"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of sculpting as a technique."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1709,6 +1960,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300265248"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of wax modeling as a technique."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1730,6 +1985,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300265483"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are illuminated manuscripts."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1749,6 +2008,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300265632"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are printed volumes."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1770,6 +2033,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300266792"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent digital devices that are cameras."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1789,6 +2056,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300312355"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent identifiers that are issued by the institution."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1810,6 +2081,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300343820"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of vase painting as a technique."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1829,6 +2104,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300386427"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the optimisation phase of a digitisation process."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1850,6 +2129,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300391312"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the use of structured light scanning as a technique."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1869,6 +2152,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300391447"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the modelling phase of a digitisation process."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1890,6 +2177,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300403970"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are manuscript volumes."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1909,6 +2200,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300404126"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent subjects of a CHO."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1930,6 +2225,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300404386"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the activities of discoverers."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1949,6 +2248,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300404387"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the activities of authors."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -1970,6 +2273,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300404704"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent identifiers that are shelf marks."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -1989,6 +2296,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300417204"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent titles that are the original denominations of their CHOs."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -2010,6 +2321,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300417207"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent titles that are the denominations used during the exhibition to identify their CHOs."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -2029,6 +2344,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300417260"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the exporting phase of a digitisation process."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -2050,6 +2369,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300417639"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the activities of commissioners."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -2069,6 +2392,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300420536"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are axes."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -2090,6 +2417,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300422994"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are charm pendants."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -2109,6 +2440,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300425064"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are electrostatic machines."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -2130,6 +2465,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300426696"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent software used for activities dealing with graphics."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -2149,6 +2488,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300429747"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent digital devices that are optical scanners."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -2170,6 +2513,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300433476"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are spark arresters."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -2189,6 +2536,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300435434"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent licenses and copyright statements."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -2210,6 +2561,10 @@
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300440768"
   } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent CHOs that are herbaria."
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
   } ],
@@ -2229,6 +2584,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
     "@value" : "300445021"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent identifiers that are volume numbers."
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://vocab.getty.edu/aat/Concept"
@@ -2262,6 +2621,9 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E21_Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place\n* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document"
+  } ],
   "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
     "@language" : "en",
     "@value" : "This class represents a person, usually involved in some sort of activity."
@@ -2274,26 +2636,8 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "de",
-    "@value" : "Person"
-  }, {
     "@language" : "en",
     "@value" : "Person"
-  }, {
-    "@language" : "fr",
-    "@value" : "Personne"
-  }, {
-    "@language" : "pt",
-    "@value" : "Pessoa"
-  }, {
-    "@language" : "el",
-    "@value" : "Πρόσωπο"
-  }, {
-    "@language" : "ru",
-    "@value" : "Личность"
-  }, {
-    "@language" : "zh",
-    "@value" : "人物"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object"
@@ -2304,11 +2648,14 @@
     "@id" : "http://purl.org/linked-data/registry#statusStable"
   } ]
 }, {
-  "@id" : "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object",
+  "@id" : "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type"
+  } ],
   "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
     "@language" : "en",
     "@value" : "This class is used in conjunction with crm:P2_has_type and aat:300025976 to represent the concept of collection."
@@ -2321,9 +2668,6 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Chose matérielle élaborée par l’humain"
-  }, {
     "@language" : "en",
     "@value" : "Physical Human-Made Thing"
   } ],
@@ -2358,24 +2702,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Document"
-  }, {
-    "@language" : "fr",
-    "@value" : "Document"
-  }, {
-    "@language" : "pt",
-    "@value" : "Documento"
-  }, {
-    "@language" : "de",
-    "@value" : "Dokument"
-  }, {
-    "@language" : "el",
-    "@value" : "Τεκμήριο"
-  }, {
-    "@language" : "ru",
-    "@value" : "Документ"
-  }, {
-    "@language" : "zh",
-    "@value" : "文献"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
@@ -2389,6 +2715,9 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of a title, characterised by a type and a textual content\n\n        ex:32-work-title-01 a crm:E35_Title ;\n            crm:P2_has_type aat:300417204 ;\n            crm:P190_has_symbolic_content \"Essere umano ermafrodita\"@it .\n\n    "
@@ -2405,26 +2734,8 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "de",
-    "@value" : "Titel"
-  }, {
     "@language" : "en",
     "@value" : "Title"
-  }, {
-    "@language" : "fr",
-    "@value" : "Titre"
-  }, {
-    "@language" : "pt",
-    "@value" : "Título"
-  }, {
-    "@language" : "el",
-    "@value" : "Τίτλος"
-  }, {
-    "@language" : "ru",
-    "@value" : "Заголовок"
-  }, {
-    "@language" : "zh",
-    "@value" : "题名"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"
@@ -2437,6 +2748,9 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E39_Actor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place\n* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document"
+  } ],
   "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
     "@language" : "en",
     "@value" : "This class represents a generic entity with an agency, which can be either a person or an organisation."
@@ -2449,26 +2763,8 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Actant"
-  }, {
     "@language" : "en",
     "@value" : "Actor"
-  }, {
-    "@language" : "pt",
-    "@value" : "Agente"
-  }, {
-    "@language" : "de",
-    "@value" : "Akteur"
-  }, {
-    "@language" : "el",
-    "@value" : "Δράστης"
-  }, {
-    "@language" : "ru",
-    "@value" : "Агент"
-  }, {
-    "@language" : "zh",
-    "@value" : "参与者"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item"
@@ -2482,6 +2778,9 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of an identifier, characterised by a type and a textual content\n\n        ex:32-item-identifier-01 a crm:E42_Identifier ;\n            crm:P2_has_type aat:300312355 ;\n            crm:P190_has_symbolic_content \"32\"^^rdfs:Literal .\n\n    "
@@ -2498,26 +2797,8 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Identifiant"
-  }, {
-    "@language" : "pt",
-    "@value" : "Identificador de Objeto"
-  }, {
     "@language" : "en",
     "@value" : "Identifier"
-  }, {
-    "@language" : "de",
-    "@value" : "Kennung"
-  }, {
-    "@language" : "el",
-    "@value" : "Κωδικός Αναγνώρισης"
-  }, {
-    "@language" : "ru",
-    "@value" : "Идентификатор Объекта"
-  }, {
-    "@language" : "zh",
-    "@value" : "标识符"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
@@ -2531,6 +2812,9 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime\n* crm:P82b_end_of_the_end -[1]-> xsd:dateTime"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of a time span, characterised by a starting date time and an ending date time\n\n        ex:1500-1599 a crm:E52_Time-Span ;\n            crm:P82a_begin_of_the_begin \"1500-01-01T00:00:00Z\"^^xsd:dateTime ;\n            crm:P82b_end_of_the_end \"1599-12-31T23:59:59Z\"^^xsd:dateTime .\n\n    "
@@ -2547,26 +2831,8 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Intervalle temporel"
-  }, {
-    "@language" : "pt",
-    "@value" : "Período de Tempo"
-  }, {
     "@language" : "en",
     "@value" : "Time-Span"
-  }, {
-    "@language" : "de",
-    "@value" : "Zeitspanne"
-  }, {
-    "@language" : "el",
-    "@value" : "Χρονικό Διάστημα"
-  }, {
-    "@language" : "ru",
-    "@value" : "Интервал Времени"
-  }, {
-    "@language" : "zh",
-    "@value" : "时段"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
@@ -2577,6 +2843,9 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document"
+  } ],
   "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
     "@language" : "en",
     "@value" : "This class represents a geograhical location, usually indicating the current residence of some actor."
@@ -2589,26 +2858,8 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Lieu"
-  }, {
-    "@language" : "pt",
-    "@value" : "Local"
-  }, {
-    "@language" : "de",
-    "@value" : "Ort"
-  }, {
     "@language" : "en",
     "@value" : "Place"
-  }, {
-    "@language" : "el",
-    "@value" : "Τόπος"
-  }, {
-    "@language" : "ru",
-    "@value" : "Место"
-  }, {
-    "@language" : "zh",
-    "@value" : "地点"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
@@ -2634,26 +2885,8 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "pt",
-    "@value" : "Tipo"
-  }, {
     "@language" : "en",
     "@value" : "Type"
-  }, {
-    "@language" : "fr",
-    "@value" : "Type"
-  }, {
-    "@language" : "de",
-    "@value" : "Typus"
-  }, {
-    "@language" : "el",
-    "@value" : "Τύπος"
-  }, {
-    "@language" : "ru",
-    "@value" : "Тип"
-  }, {
-    "@language" : "zh",
-    "@value" : "类型"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"
@@ -2676,6 +2909,9 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation\n* crm:P70i_is_documented_in -[0..1]-> crm:E31_Document\n* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of two Information Objects, one representing a copyright statement and \n        ### the other representing a subject of a CHO at the Expression level\n\n        ex:32-manifestation-license a crm:E73_Information_Object ;\n            crm:P2_has_type aat:300435434 ;\n            crm:P67_refers_to ex:32-manifestation ;\n            crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .\n\n        ex:ermafrodita a crm:E73_Information_Object ;\n            crm:P2_has_type aat:300404126 .\n\n    "
@@ -2694,24 +2930,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Information Object"
-  }, {
-    "@language" : "de",
-    "@value" : "Informationsgegenstand"
-  }, {
-    "@language" : "fr",
-    "@value" : "Objet informationnel"
-  }, {
-    "@language" : "pt",
-    "@value" : "Objeto de Informação"
-  }, {
-    "@language" : "el",
-    "@value" : "Πληροφοριακό Αντικείμενο"
-  }, {
-    "@language" : "ru",
-    "@value" : "Информационный Объект"
-  }, {
-    "@language" : "zh",
-    "@value" : "信息对象"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"
@@ -2724,6 +2942,9 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E74_Group",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place\n* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document"
+  } ],
   "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
     "@language" : "en",
     "@value" : "This class represents organisations and other entities made up by groups of actors."
@@ -2738,24 +2959,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Group"
-  }, {
-    "@language" : "fr",
-    "@value" : "Groupe"
-  }, {
-    "@language" : "pt",
-    "@value" : "Grupo"
-  }, {
-    "@language" : "de",
-    "@value" : "Menschliche Gruppe"
-  }, {
-    "@language" : "el",
-    "@value" : "Ομάδα"
-  }, {
-    "@language" : "ru",
-    "@value" : "Группа"
-  }, {
-    "@language" : "zh",
-    "@value" : "团体"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E39_Actor"
@@ -2769,6 +2972,9 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor\n* crm:P16_used_specific_object -[0..N]-> lrmoo:F5_Item\n* crm:P32_used_general_technique -[0..N]-> E55_Type"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of activity consisting in the curation (aat:300054277) of a \n        ### CHO at the Item level, carried out by a cultural organization (BUB)\n\n        ex:32-item-curation a crm:E7_Activity ;\n            crm:P2_has_type aat:300054277 ;\n            crm:P16_used_specific_object ex:32-item ;\n            crm:P14_carried_out_by ex:bub .\n\n    "
@@ -2787,24 +2993,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Activity"
-  }, {
-    "@language" : "fr",
-    "@value" : "Activité"
-  }, {
-    "@language" : "pt",
-    "@value" : "Atividade"
-  }, {
-    "@language" : "de",
-    "@value" : "Handlung"
-  }, {
-    "@language" : "el",
-    "@value" : "Δράση"
-  }, {
-    "@language" : "ru",
-    "@value" : "Деятельность"
-  }, {
-    "@language" : "zh",
-    "@value" : "活动"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E5_Event"
@@ -4491,6 +4679,9 @@
 }, {
   "@id" : "http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crmdig:L10_had_input -[1]-> crmdig:D9_Data_Object\n* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object\n* crm:P4_has_time-span -[1]-> crm:E52_Time-Span\n* crm:P11_had_participant -[0..N]-> crm:E74_Group\n* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor\n* crmdig:L23_used_software_or_hardware -[1..N]-> crmdig:D14_Software"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of software activity consisting in the processing (aat:300054636) of the \n        ### DCHO produced by the previous acquisition activity, carried out by an expert\n        ### (ex:alice-bordignon) during a defined time-span (ex:32-processing-timespan) using a \n        ### certain tool (ex:3df-zephyr).\n\n        ex:32-processing a crmdig:D10_Software_Execution ;\n            crm:P2_has_type aat:300054636 ;\n            crmdig:L10_had_input ex:32-model-00 ;\n            crmdig:L11_had_output ex:32-model-01 ;\n            crm:P4_has_time-span ex:32-processing-timespan ;\n            crm:P11_had_participant ex:unibo-ficlit ;\n            crm:P14_carried_out_by ex:alice-bordignon ;\n            crmdig:L23_used_software_or_firmware ex:3df-zephyr .\n\n    "
@@ -4522,6 +4713,9 @@
 }, {
   "@id" : "http://www.ics.forth.gr/isl/CRMdig/D14_Software",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of a graphics software (aat:300426696)\n\n        ex:3df-zephyr a crmdig:D14_Software ;\n            crm:P2_has_type aat:300426696 .\n\n    "
@@ -4553,6 +4747,9 @@
 }, {
   "@id" : "http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crmdig:L1_digitized -[1]-> lrmoo:F5_Item\n* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object\n* crm:P4_has_time-span -[1]-> crm:E52_Time-Span\n* crm:P11_had_participant -[0..N]-> crm:E74_Group\n* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor\n* crm:P32_used_general_technique -[1]-> crm:E55_Type\n* crm:P16_used_specific_object -[1..N]-> crmdig:D8_Digital_Device"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of an acquisition activity that digitises a CHO at\n        ### the Item level (ex:32-item) and produces a DCHO as a result \n        ### (ex:32-model-00), being carried out by an expert (ex:alice-bordignon)\n        ### during a given time-span (ex:32-acquisition-timespan), using a\n        ### certain technique such as photogrammetry (aat:300391312) with the\n        ### help of a given tool (ex:panasonic-dmc-lx100).\n\n        ex:32-acquisition a crmdig:D2_Digitization_Process ;\n            crmdig:L1_digitized ex:32-item ;\n            crmdig:L11_had_output ex:32-model-00 ;\n            crm:P4_has_time-span ex:32-acquisition-timespan ;\n            crm:P11_had_participant ex:unibo-ficlit ;\n            crm:P14_carried_out_by ex:alice-bordignon ;\n            crm:P32_used_general_technique aat:300391312 ;\n            crm:P16_used_specific_object ex:panasonic-dmc-lx100 .\n\n    "
@@ -4584,6 +4781,9 @@
 }, {
   "@id" : "http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type"
+  } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
     "@value" : "\n\n        ### Example of a digital camera (aat:300266792)\n\n        ex:panasonic-dmc-lx100 a crmdig:D8_Digital_Device ;\n            crm:P2_has_type aat:300266792 .\n\n    "
@@ -4604,7 +4804,7 @@
     "@value" : "Digital Device"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@id" : "http://purl.org/linked-data/registry#statusStable"
@@ -4612,6 +4812,13 @@
 }, {
   "@id" : "http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P130i_features_are_also_found_on -[0..N]-> crmdig:D9_Data_Object"
+  } ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@language" : "en",
+    "@value" : "\n\n        ### Example of a data object produced at the end of an acquisition activity and used as input in a processing activity\n\n        ex:data-object a crmdig:D9_Data_Object .\n\n        ex:acquisition a crmdig:D2_Digitization_Process ;\n            crmdig:L1_digitized ex:item ;\n            crmdig:L11_had_output ex:data-object .\n\n        ex:processing a crmdig:D10_Software_Execution ;\n            crm:P2_has_type aat:300054636 ;\n            crmdig:L10_had_input ex:data-object .\n\n    "
+  } ],
   "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
     "@language" : "en",
     "@value" : "This class is used to represent the DCHO produced at the end of each digitisation activity."

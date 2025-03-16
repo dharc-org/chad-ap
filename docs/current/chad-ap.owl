@@ -2230,6 +2230,11 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+        <dc:description>The properties that can be used with this class are:
+
+* lrmoo:R10_has_member -[0..N]-&gt; lrmoo:F1_Work
+* crm:P102_has_title -[0..N]-&gt; crm:E35_Title
+* lrmoo:R3_is_realized_in -[1..N]-&gt; lrmoo:F2_Expression</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of a CHO at the Work level, characterised by two titles and realised in an Expression
@@ -2255,6 +2260,13 @@ What are the tools and their types used in processing activities?
     <owl:Class rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E12_Production"/>
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E65_Creation"/>
+        <dc:description>The properties that can be used with this class are:
+
+* lrmoo:R17_created -[1]-&gt; lrmoo:F2_Expression
+* crm:P9_consists_of -[1..N]-&gt; crm:E7_Activity
+* crm:R32_used_general_technique -[0..N]-&gt; crm:E55_Type
+* lrmoo:R19_created_a_realisation_of -[1]-&gt; lrmoo:F1_Item
+* crm:P4_has_time-span -[1]-&gt; crm:E52_Time-Span</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of an Expression Creation. It consists of a smaller activity; it is carried out through a drawing
@@ -2283,6 +2295,10 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:R129_is_about -[0..N]-&gt; crm:E73_Information_Object
+* lrmoo:R4i_is_embodied_in -[1..N]-&gt; lrmoo:F3_Manifestation</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of a CHO at the Expression level, characterised by a subject and embodied in a Manifestation
@@ -2306,6 +2322,11 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-&gt; crm:E55_Type
+* crm:P130i_features_are_also_found_on -[0..N]-&gt; lrmoo:F4_Manifestation
+* lrmoo:R7i_is_exemplified_by -[1..N]-&gt; lrmoo:F5_Item</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of a CHO at the Manifestation level, characterised by a type and exemplified in an Item
@@ -2329,6 +2350,10 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F5_Item">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P1_is_identified_by -[1..N]-&gt; crm:E42_Identifier
+* crm:P3_has_note -[0..1]-&gt; rdfs:Literal</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of a CHO at the Item level, characterised by three identifiers and a description
@@ -2397,25 +2422,23 @@ What are the tools and their types used in processing activities?
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E21_Person">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object"/>
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P74_has_current_or_former_residence -[0..1]-&gt; crm:E53_Place
+* crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document</dc:description>
         <vaem:rationale xml:lang="en">This class represents a person, usually involved in some sort of activity.</vaem:rationale>
         <rdfs:comment xml:lang="en">An individual person.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
-        <rdfs:label xml:lang="de">Person</rdfs:label>
         <rdfs:label xml:lang="en">Person</rdfs:label>
-        <rdfs:label xml:lang="fr">Personne</rdfs:label>
-        <rdfs:label xml:lang="pt">Pessoa</rdfs:label>
-        <rdfs:label xml:lang="el">Πρόσωπο</rdfs:label>
-        <rdfs:label xml:lang="ru">Личность</rdfs:label>
-        <rdfs:label xml:lang="zh">人物</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
 
 
-    <!-- http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object -->
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object -->
 
 
-    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"/>
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object"/>
     
 
 
@@ -2425,10 +2448,12 @@ What are the tools and their types used in processing activities?
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"/>
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-&gt; crm:E55_Type</dc:description>
         <vaem:rationale xml:lang="en">This class is used in conjunction with crm:P2_has_type and aat:300025976 to represent the concept of collection.</vaem:rationale>
         <rdfs:comment xml:lang="en">A persistent physical item of any size that is purposely created by human activity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
-        <rdfs:label xml:lang="fr">Chose matérielle élaborée par l’humain</rdfs:label>
         <rdfs:label xml:lang="en">Physical Human-Made Thing</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
@@ -2458,12 +2483,6 @@ What are the tools and their types used in processing activities?
         <rdfs:comment xml:lang="en">An information object that makes propositions about reality.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <rdfs:label xml:lang="en">Document</rdfs:label>
-        <rdfs:label xml:lang="fr">Document</rdfs:label>
-        <rdfs:label xml:lang="pt">Documento</rdfs:label>
-        <rdfs:label xml:lang="de">Dokument</rdfs:label>
-        <rdfs:label xml:lang="el">Τεκμήριο</rdfs:label>
-        <rdfs:label xml:lang="ru">Документ</rdfs:label>
-        <rdfs:label xml:lang="zh">文献</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2482,6 +2501,10 @@ What are the tools and their types used in processing activities?
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E35_Title">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-&gt; crm:E55_Type
+* crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of a title, characterised by a type and a textual content
@@ -2494,13 +2517,7 @@ What are the tools and their types used in processing activities?
         <vaem:rationale xml:lang="en">This class represents a title given to the CHO at the Work level.</vaem:rationale>
         <rdfs:comment xml:lang="en">A textual string that functions as a title for a work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
-        <rdfs:label xml:lang="de">Titel</rdfs:label>
         <rdfs:label xml:lang="en">Title</rdfs:label>
-        <rdfs:label xml:lang="fr">Titre</rdfs:label>
-        <rdfs:label xml:lang="pt">Título</rdfs:label>
-        <rdfs:label xml:lang="el">Τίτλος</rdfs:label>
-        <rdfs:label xml:lang="ru">Заголовок</rdfs:label>
-        <rdfs:label xml:lang="zh">题名</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2511,16 +2528,14 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E39_Actor">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P74_has_current_or_former_residence -[0..1]-&gt; crm:E53_Place
+* crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document</dc:description>
         <vaem:rationale xml:lang="en">This class represents a generic entity with an agency, which can be either a person or an organisation.</vaem:rationale>
         <rdfs:comment xml:lang="en">An individual person or a group of people, with the potential to perform intentional and accountable actions.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
-        <rdfs:label xml:lang="fr">Actant</rdfs:label>
         <rdfs:label xml:lang="en">Actor</rdfs:label>
-        <rdfs:label xml:lang="pt">Agente</rdfs:label>
-        <rdfs:label xml:lang="de">Akteur</rdfs:label>
-        <rdfs:label xml:lang="el">Δράστης</rdfs:label>
-        <rdfs:label xml:lang="ru">Агент</rdfs:label>
-        <rdfs:label xml:lang="zh">参与者</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2538,6 +2553,10 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-&gt; crm:E55_Type
+* crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of an identifier, characterised by a type and a textual content
@@ -2550,13 +2569,7 @@ What are the tools and their types used in processing activities?
         <vaem:rationale xml:lang="en">This class represents a identifier given to the CHO at the Item level.</vaem:rationale>
         <rdfs:comment xml:lang="en">A textual string assigned to a cultural heritage object in order to identify it uniquely within a given context.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
-        <rdfs:label xml:lang="fr">Identifiant</rdfs:label>
-        <rdfs:label xml:lang="pt">Identificador de Objeto</rdfs:label>
         <rdfs:label xml:lang="en">Identifier</rdfs:label>
-        <rdfs:label xml:lang="de">Kennung</rdfs:label>
-        <rdfs:label xml:lang="el">Κωδικός Αναγνώρισης</rdfs:label>
-        <rdfs:label xml:lang="ru">Идентификатор Объекта</rdfs:label>
-        <rdfs:label xml:lang="zh">标识符</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2574,6 +2587,10 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P82a_begin_of_the_begin -[1]-&gt; xsd:dateTime
+* crm:P82b_end_of_the_end -[1]-&gt; xsd:dateTime</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of a time span, characterised by a starting date time and an ending date time
@@ -2586,13 +2603,7 @@ What are the tools and their types used in processing activities?
         <vaem:rationale xml:lang="en">This class represents a period of time defined within a starting date time and an ending date time. Both dates are declared in the following form &apos;YYYY-MM-DDThh:mm:ss&apos;, as instructed by the XML Schema Definition (XSD).</vaem:rationale>
         <rdfs:comment xml:lang="en">An abstract temporal extent having a beginning, an end and a duration.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
-        <rdfs:label xml:lang="fr">Intervalle temporel</rdfs:label>
-        <rdfs:label xml:lang="pt">Período de Tempo</rdfs:label>
         <rdfs:label xml:lang="en">Time-Span</rdfs:label>
-        <rdfs:label xml:lang="de">Zeitspanne</rdfs:label>
-        <rdfs:label xml:lang="el">Χρονικό Διάστημα</rdfs:label>
-        <rdfs:label xml:lang="ru">Интервал Времени</rdfs:label>
-        <rdfs:label xml:lang="zh">时段</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2603,16 +2614,13 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E53_Place">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document</dc:description>
         <vaem:rationale xml:lang="en">This class represents a geograhical location, usually indicating the current residence of some actor.</vaem:rationale>
         <rdfs:comment xml:lang="en">A geographical location.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
-        <rdfs:label xml:lang="fr">Lieu</rdfs:label>
-        <rdfs:label xml:lang="pt">Local</rdfs:label>
-        <rdfs:label xml:lang="de">Ort</rdfs:label>
         <rdfs:label xml:lang="en">Place</rdfs:label>
-        <rdfs:label xml:lang="el">Τόπος</rdfs:label>
-        <rdfs:label xml:lang="ru">Место</rdfs:label>
-        <rdfs:label xml:lang="zh">地点</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2633,13 +2641,7 @@ What are the tools and their types used in processing activities?
         <vaem:rationale xml:lang="en">This class is indirectly used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. activities, CHOs, techniques, etc.). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty&apos;s Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals.</vaem:rationale>
         <rdfs:comment xml:lang="en">A categorical concept denoted by terms from thesauri and controlled vocabularies used to characterize and classify other entities.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
-        <rdfs:label xml:lang="pt">Tipo</rdfs:label>
         <rdfs:label xml:lang="en">Type</rdfs:label>
-        <rdfs:label xml:lang="fr">Type</rdfs:label>
-        <rdfs:label xml:lang="de">Typus</rdfs:label>
-        <rdfs:label xml:lang="el">Τύπος</rdfs:label>
-        <rdfs:label xml:lang="ru">Тип</rdfs:label>
-        <rdfs:label xml:lang="zh">类型</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2679,6 +2681,12 @@ What are the tools and their types used in processing activities?
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-&gt; crm:E55_Type
+* crm:P67_refers_to -[0..1]-&gt; lrmoo:F3_Manifestation
+* crm:P70i_is_documented_in -[0..1]-&gt; crm:E31_Document
+* crm:P190_has_symbolic_content -[0..1]-&gt; rdfs:Literal</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of two Information Objects, one representing a copyright statement and 
@@ -2697,12 +2705,6 @@ What are the tools and their types used in processing activities?
         <rdfs:comment xml:lang="en">An immaterial item that has an objectively recognizable structure and is documented as a single unit.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <rdfs:label xml:lang="en">Information Object</rdfs:label>
-        <rdfs:label xml:lang="de">Informationsgegenstand</rdfs:label>
-        <rdfs:label xml:lang="fr">Objet informationnel</rdfs:label>
-        <rdfs:label xml:lang="pt">Objeto de Informação</rdfs:label>
-        <rdfs:label xml:lang="el">Πληροφοριακό Αντικείμενο</rdfs:label>
-        <rdfs:label xml:lang="ru">Информационный Объект</rdfs:label>
-        <rdfs:label xml:lang="zh">信息对象</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2713,16 +2715,14 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E74_Group">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P74_has_current_or_former_residence -[0..1]-&gt; crm:E53_Place
+* crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document</dc:description>
         <vaem:rationale xml:lang="en">This class represents organisations and other entities made up by groups of actors.</vaem:rationale>
         <rdfs:comment xml:lang="en">A unified group of people.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <rdfs:label xml:lang="en">Group</rdfs:label>
-        <rdfs:label xml:lang="fr">Groupe</rdfs:label>
-        <rdfs:label xml:lang="pt">Grupo</rdfs:label>
-        <rdfs:label xml:lang="de">Menschliche Gruppe</rdfs:label>
-        <rdfs:label xml:lang="el">Ομάδα</rdfs:label>
-        <rdfs:label xml:lang="ru">Группа</rdfs:label>
-        <rdfs:label xml:lang="zh">团体</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2740,6 +2740,12 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E7_Activity">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-&gt; crm:E55_Type
+* crm:P14_carried_out_by -[1..N]-&gt; crm:E39_Actor
+* crm:P16_used_specific_object -[0..N]-&gt; lrmoo:F5_Item
+* crm:P32_used_general_technique -[0..N]-&gt; E55_Type</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of activity consisting in the curation (aat:300054277) of a 
@@ -2755,12 +2761,6 @@ What are the tools and their types used in processing activities?
         <rdfs:comment xml:lang="en">An action intentionally carried out by one or more actors.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <rdfs:label xml:lang="en">Activity</rdfs:label>
-        <rdfs:label xml:lang="fr">Activité</rdfs:label>
-        <rdfs:label xml:lang="pt">Atividade</rdfs:label>
-        <rdfs:label xml:lang="de">Handlung</rdfs:label>
-        <rdfs:label xml:lang="el">Δράση</rdfs:label>
-        <rdfs:label xml:lang="ru">Деятельность</rdfs:label>
-        <rdfs:label xml:lang="zh">活动</rdfs:label>
         <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:Class>
     
@@ -2785,6 +2785,15 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution">
         <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-&gt; crm:E55_Type
+* crmdig:L10_had_input -[1]-&gt; crmdig:D9_Data_Object
+* crmdig:L11_had_output -[1]-&gt; crmdig:D9_Data_Object
+* crm:P4_has_time-span -[1]-&gt; crm:E52_Time-Span
+* crm:P11_had_participant -[0..N]-&gt; crm:E74_Group
+* crm:P14_carried_out_by -[1..N]-&gt; crm:E39_Actor
+* crmdig:L23_used_software_or_hardware -[1..N]-&gt; crmdig:D14_Software</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of software activity consisting in the processing (aat:300054636) of the 
@@ -2823,6 +2832,9 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D14_Software">
         <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-&gt; crm:E55_Type</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of a graphics software (aat:300426696)
@@ -2852,6 +2864,15 @@ What are the tools and their types used in processing activities?
 
     <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process">
         <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crmdig:L1_digitized -[1]-&gt; lrmoo:F5_Item
+* crmdig:L11_had_output -[1]-&gt; crmdig:D9_Data_Object
+* crm:P4_has_time-span -[1]-&gt; crm:E52_Time-Span
+* crm:P11_had_participant -[0..N]-&gt; crm:E74_Group
+* crm:P14_carried_out_by -[1..N]-&gt; crm:E39_Actor
+* crm:P32_used_general_technique -[1]-&gt; crm:E55_Type
+* crm:P16_used_specific_object -[1..N]-&gt; crmdig:D8_Digital_Device</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of an acquisition activity that digitises a CHO at
@@ -2891,7 +2912,10 @@ What are the tools and their types used in processing activities?
 
 
     <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-&gt; crm:E55_Type</dc:description>
         <vann:example xml:lang="en">
 
         ### Example of a digital camera (aat:300266792)
@@ -2915,6 +2939,24 @@ What are the tools and their types used in processing activities?
     <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
         <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P130i_features_are_also_found_on -[0..N]-&gt; crmdig:D9_Data_Object</dc:description>
+        <vann:example xml:lang="en">
+
+        ### Example of a data object produced at the end of an acquisition activity and used as input in a processing activity
+
+        ex:data-object a crmdig:D9_Data_Object .
+
+        ex:acquisition a crmdig:D2_Digitization_Process ;
+            crmdig:L1_digitized ex:item ;
+            crmdig:L11_had_output ex:data-object .
+
+        ex:processing a crmdig:D10_Software_Execution ;
+            crm:P2_has_type aat:300054636 ;
+            crmdig:L10_had_input ex:data-object .
+
+    </vann:example>
         <vaem:rationale xml:lang="en">This class is used to represent the DCHO produced at the end of each digitisation activity.</vaem:rationale>
         <rdfs:comment xml:lang="en">A digital object that is the direct result of an activity in a digitization workflow.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.ics.forth.gr/isl/CRMdig/"/>
@@ -2942,6 +2984,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300011172">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300011172</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are gems.</vaem:rationale>
         <rdfs:comment xml:lang="en">Works comprising precious or semiprecious stones or other materials such as amber or pearl, cut, polished, or otherwise dressed for ornamental purposes to be used in jewelry, seals, or amulets.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">gems (worked stones)</rdfs:label>
@@ -2955,6 +2998,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300015045">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300015045</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are watercolor paintings.</vaem:rationale>
         <rdfs:comment xml:lang="en">Transparent aqueous based paint produced by mixing ground pigments with water and, generally, gum arabic.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">watercolor (paint)</rdfs:label>
@@ -2968,6 +3012,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300022488">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300022488</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are compasses.</vaem:rationale>
         <rdfs:comment xml:lang="en">Instruments for drawing circles and measuring the distance between two points.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">compasses (drawing instruments)</rdfs:label>
@@ -2981,6 +3026,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300024594">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300024594</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are microscopes.</vaem:rationale>
         <rdfs:comment xml:lang="en">Optical instruments consisting of a lens or combination of lenses that allow the viewing of objects that are too small to be seen with the naked, unaided eye.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">microscopes</rdfs:label>
@@ -2994,6 +3040,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300024814">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300024814</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are molds.</vaem:rationale>
         <rdfs:comment xml:lang="en">Hollow forms in which castings or pressings are made; used with many materials, including clay, metal, glass, and paper.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">molds (shaping equipment)</rdfs:label>
@@ -3007,6 +3054,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300024928">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300024928</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are handles.</vaem:rationale>
         <rdfs:comment xml:lang="en">Tool handles, such as those of axes, hatchets, or hammers.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">helves</rdfs:label>
@@ -3020,6 +3068,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300025976">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300025976</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent collections.</vaem:rationale>
         <rdfs:comment xml:lang="en">Accumulated groups of objects or materials having a focal characteristic and that have been brought together by an individual or organization.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">collections (object groupings)</rdfs:label>
@@ -3033,6 +3082,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300027349">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300027349</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are bibliographic series.</vaem:rationale>
         <rdfs:comment xml:lang="en">A conceptual grouping of visual arts works, literary works, or performance art created in succession by the same author, artist, or studio and intended by the creator(s) to be seen together.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">series (object groupings)</rdfs:label>
@@ -3046,6 +3096,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028051">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300028051</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are books.</vaem:rationale>
         <rdfs:comment xml:lang="en">Items comprising a collection of leaves of paper, parchment, wood, stiffened textile, ivory, metal tablets, or other flat material, that are blank, written on, or printed, and are strung or bound together.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">books</rdfs:label>
@@ -3059,6 +3110,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028094">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300028094</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are maps.</vaem:rationale>
         <rdfs:comment xml:lang="en">Refers to graphic or photogrammetric representations of the Earth&apos;s surface or a part of it, including physical features and political boundaries.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">maps (documents)</rdfs:label>
@@ -3072,6 +3124,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028309">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300028309</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are navigation charts.</vaem:rationale>
         <rdfs:comment xml:lang="en">Maps designed and used primarily for plotting courses and traveling on water in a ship or other vessel or in an aircraft or spacecraft.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">navigation charts</rdfs:label>
@@ -3085,6 +3138,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028569">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300028569</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are manuscripts.</vaem:rationale>
         <rdfs:comment xml:lang="en">Handwritten documents, particularly books and other documents created before the invention of the printing press.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">manuscripts (documents)</rdfs:label>
@@ -3098,6 +3152,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300028682">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300028682</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are videos.</vaem:rationale>
         <rdfs:comment xml:lang="en">Manifestations of motion pictures, stored electronically, in any media or digitized format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">video recordings (physical artifacts)</rdfs:label>
@@ -3111,6 +3166,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300033618">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300033618</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are paintings.</vaem:rationale>
         <rdfs:comment xml:lang="en">Unique works in which images are formed primarily by the direct application of pigments suspended in oil, water, egg yolk, molten wax, or other liquid, arranged in masses of color, onto a general surface.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">paintings (visual works)</rdfs:label>
@@ -3124,6 +3180,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300037592">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300037592</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are lamps.</vaem:rationale>
         <rdfs:comment xml:lang="en">Lighting devices having a vessel to contain fuel used as a source of illumination, such as grease or oil.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">lamps (lighting devices)</rdfs:label>
@@ -3137,6 +3194,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300041273">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300041273</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are prints.</vaem:rationale>
         <rdfs:comment xml:lang="en">Pictorial works produced by transferring images by means of a matrix such as a plate, block, or screen, using any of various printing processes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">prints (visual works)</rdfs:label>
@@ -3150,6 +3208,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300041340">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300041340</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are engravings.</vaem:rationale>
         <rdfs:comment xml:lang="en">Prints on paper incorporating impressions of a reverse design created on a printing plate, usually copper, into which the design has been incised (engraved) using burins or gravers.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">engravings (prints)</rdfs:label>
@@ -3163,6 +3222,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300041405">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300041405</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are woodcuts.</vaem:rationale>
         <rdfs:comment xml:lang="en">Prints made using the process of woodcut, which is a relief process in which the design is cut into and printed from the plank side of a wood block.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">woodcuts (prints)</rdfs:label>
@@ -3176,6 +3236,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300041933">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300041933</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are rattles.</vaem:rationale>
         <rdfs:comment xml:lang="en">Shaken idiophones made in a variety of forms worldwide, in which one or more objects strike against each other or against the inside or outside of another object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">rattles (indirectly struck idiophones)</rdfs:label>
@@ -3189,6 +3250,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300045627">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300045627</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are bottles.</vaem:rationale>
         <rdfs:comment xml:lang="en">Vessels having a neck and mouth considerably narrower than the body, used for packaging and containing liquid and dry preparations.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">bottles</rdfs:label>
@@ -3202,6 +3264,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300046001">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300046001</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are necklaces.</vaem:rationale>
         <rdfs:comment xml:lang="en">Ornaments worn around the neck, usually in the form of chains or strands of beads, pearls, stones, or decorative or precious materials, and often including a suspended ornamental pendant.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">necklaces</rdfs:label>
@@ -3215,6 +3278,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300046025">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300046025</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are medals.</vaem:rationale>
         <rdfs:comment xml:lang="en">Small pieces of metal, usually gold, silver, or bronze and bearing a relief design on one or both sides and having a commemorative purpose.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">medals</rdfs:label>
@@ -3228,6 +3292,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300047600">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300047600</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are statues.</vaem:rationale>
         <rdfs:comment xml:lang="en">Sculpture in the round, usually but not always depicting humans, animals, mythical beings, or small figure groups.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">statues</rdfs:label>
@@ -3241,6 +3306,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300047753">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300047753</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are models.</vaem:rationale>
         <rdfs:comment xml:lang="en">Refers to scaled or lifesize representations of objects, structures, beings, or other subjects, usually three-dimensional.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">models (representations)</rdfs:label>
@@ -3254,6 +3320,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300047762">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300047762</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are dioramas.</vaem:rationale>
         <rdfs:comment xml:lang="en">Works in which three-dimensional objects, often figural sculpture, in the foreground blend with a realistic painted background.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">dioramas</rdfs:label>
@@ -3267,6 +3334,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053225">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300053225</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the activities of engravers.</vaem:rationale>
         <rdfs:comment xml:lang="en">The intaglio process in which the design is incised into a printing plate, usually a flat copper plate, with the aid of a graver or burin.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">engraving (printing process)</rdfs:label>
@@ -3280,6 +3348,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053319">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300053319</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the activities of printers.</vaem:rationale>
         <rdfs:comment xml:lang="en">Various means of reproducing identical copies of graphic matter in a fixed form, by which an image, pictorial or textual, is transferred, usually to paper or cloth.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">printing (process)</rdfs:label>
@@ -3293,6 +3362,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053357">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300053357</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of fresco paintings as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Mural painting technique in which dry pigments are ground with water then brushed onto wet or partially dry lime plaster.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">fresco painting (technique)</rdfs:label>
@@ -3306,6 +3376,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053363">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300053363</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of watercolor as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Watercolor painting done in transparent washes of color as distinguished from the opaque method using gouache.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">aquarelle (technique)</rdfs:label>
@@ -3319,6 +3390,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053580">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300053580</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of photogrammetry as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Refers to the technique of making measurements by using photography. It usually refers to this technique as applied to mapmaking, measuring site elements, and surveying.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">photogrammetry</rdfs:label>
@@ -3332,6 +3404,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053628">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300053628</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of taxidermy as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Preparing lifelike representations of animals by stuffing the skin or molding it around a model of the specimen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">taxidermy</rdfs:label>
@@ -3345,6 +3418,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053758">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300053758</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of drying as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Making free or nearly free of liquids.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">drying</rdfs:label>
@@ -3358,6 +3432,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300053852">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300053852</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of intarsia as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Decorative wood process in which the design or pattern is made by assembling small pieces of veneer in various shapes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">intarsia (process)</rdfs:label>
@@ -3371,6 +3446,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054196">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300054196</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of drawing as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Producing visible forms primarily by delineation, usually by the direct application of material or instrument to the surface of the support.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">drawing (image-making)</rdfs:label>
@@ -3384,6 +3460,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054200">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300054200</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the activities of illustrators.</vaem:rationale>
         <rdfs:comment xml:lang="en">The art or process of providing drawings or other pictures intended to elucidate a description, story, or other written material, usually in a book or periodical.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">illustration (process)</rdfs:label>
@@ -3397,6 +3474,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054277">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300054277</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent curation activities.</vaem:rationale>
         <rdfs:comment xml:lang="en">Superintending or managing the collections, exhibitions, research activities, and personnel of a museum, art gallery, zoo, or other place of exhibit; also, the superintending or managing of a single collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">curating</rdfs:label>
@@ -3410,7 +3488,8 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054636">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300054636</dc:identifier>
-        <rdfs:comment xml:lang="en">Creating and manipulating data in machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing.</rdfs:comment>
+        <vaem:rationale xml:lang="en">This individual is used to represent the processing phase in a digitisation process.</vaem:rationale>
+        <rdfs:comment xml:lang="en">Creating and manipulating data in a machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">data processing</rdfs:label>
     </owl:NamedIndividual>
@@ -3423,6 +3502,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054638">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300054638</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the metadata handling phase in a digitisation process.</vaem:rationale>
         <rdfs:comment xml:lang="en">The process or function of gathering and recording information, especially to record facts or characteristics or to establish evidence or testimony.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">documentation (activity)</rdfs:label>
@@ -3436,6 +3516,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300054686">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300054686</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the activities of publishers.</vaem:rationale>
         <rdfs:comment xml:lang="en">The actions, functions, or event of issuing printed, taped, or otherwise reproduced records of knowledge or visual works in any medium for sale or distribution to the public.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">publishing</rdfs:label>
@@ -3449,6 +3530,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300055021">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300055021</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are incunambula.</vaem:rationale>
         <rdfs:comment xml:lang="en">Books printed before 1501.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">incunabula (books)</rdfs:label>
@@ -3462,6 +3544,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300069831">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300069831</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the activities of translators.</vaem:rationale>
         <rdfs:comment xml:lang="en">The activity of comprehending, analyzing, and expressing written or spoken material in a different language from the original.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">translation (function)</rdfs:label>
@@ -3475,6 +3558,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300077565">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300077565</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the activities of museum preparators.</vaem:rationale>
         <rdfs:comment xml:lang="en">The action or process of making something ready for use or service or of getting ready for some occasion, test, or duty.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">preparing</rdfs:label>
@@ -3488,6 +3572,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300117127">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300117127</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are artifacts.</vaem:rationale>
         <rdfs:comment xml:lang="en">Generally, objects or other things made or modified by humans, typically manually portable products of human workmanship, such as tools, utensils, objects for personal adornment, or art.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">artifacts (object genre)</rdfs:label>
@@ -3501,6 +3586,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300122241">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300122241</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are pieces of equipment.</vaem:rationale>
         <rdfs:comment xml:lang="en">Articles or physical resources used to array, dress up, rig out, equip, or otherwise provide with what is requisite for efficient action by a person or animal or for a thing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">equipment</rdfs:label>
@@ -3514,6 +3600,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300132254">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300132254</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are vases.</vaem:rationale>
         <rdfs:comment xml:lang="en">Vessels of varying shape and size but which are usually taller than they are wide, varying greatly in actual form and use.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">vases</rdfs:label>
@@ -3527,6 +3614,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300137376">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300137376</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are marine charts.</vaem:rationale>
         <rdfs:comment xml:lang="en">Medieval marine charts, used before compasses, and for Medieval navigation manuals, illustrated with charts and showing the location of ports and other navigational information.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">portolanos</rdfs:label>
@@ -3540,6 +3628,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300138684">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300138684</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of mosaics as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">A method of decorating surfaces with patterns or pictures composed of small, regularly-shaped pieces of colored durable material, such as stone or glass.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">mosaic (process)</rdfs:label>
@@ -3553,6 +3642,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300138758">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300138758</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are masks.</vaem:rationale>
         <rdfs:comment xml:lang="en">Refers to coverings for all or part of the face, usually with openings for the eyes and sometimes the mouth.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">masks (costume)</rdfs:label>
@@ -3566,6 +3656,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300155365">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300155365</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the publication phase in a digitisation process.</vaem:rationale>
         <rdfs:comment xml:lang="en">Publishing text or images in electronic machine-readable formats.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">electronic publishing</rdfs:label>
@@ -3579,6 +3670,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300178684">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300178684</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of oil paintings as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">The art or practice of producing creative works in oil paint, which is pigment suspended in vegetal drying oils.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">oil painting (technique)</rdfs:label>
@@ -3592,6 +3684,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300178926">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300178926</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of letterpress printing as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Printing from raised and inked type, distinguished from lithographic or intaglio printing, particularly in the context of book and other text printing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">letterpress printing</rdfs:label>
@@ -3605,6 +3698,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300184300">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300184300</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are series of paintings.</vaem:rationale>
         <rdfs:comment xml:lang="en">Refers to series of visual works depicting events and unified by a common topic, not necessarily a sequence in a single story line.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">narrative cycles</rdfs:label>
@@ -3618,6 +3712,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300189634">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300189634</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are series of prints.</vaem:rationale>
         <rdfs:comment xml:lang="en">Groups of prints related in theme or technique and usually issued together.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">suites (print groupings)</rdfs:label>
@@ -3631,6 +3726,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300191086">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300191086</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are visual works of art.</vaem:rationale>
         <rdfs:comment xml:lang="en">Works of art, architecture, and any objects that occupy space, are perceived by the sense of sight, and are created or arranged, rather than naturally occurring.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">visual works (works)</rdfs:label>
@@ -3644,6 +3740,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300224200">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300224200</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are bound manuscripts.</vaem:rationale>
         <rdfs:comment xml:lang="en">Ancient manuscripts generally taking the form of the modern book: bound leaves of paper or parchment with information inscribed on both faces, attached at a center fold.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">codices (bound manuscripts)</rdfs:label>
@@ -3657,6 +3754,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300226836">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300226836</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are series of frescoes.</vaem:rationale>
         <rdfs:comment xml:lang="en">Sets or ensembles of visual works.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">visual works groupings</rdfs:label>
@@ -3670,6 +3768,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300235576">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300235576</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are specimens.</vaem:rationale>
         <rdfs:comment xml:lang="en">A specimen is an individual instance that represents a class. A good specimen shows the character of the thing or material, useful for close study and permitting exact identification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">specimens</rdfs:label>
@@ -3683,6 +3782,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300252927">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300252927</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of handwriting as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">The forming of letters and words by hand rather than by printing; may be used to designate a particular and distinctive form, style, or method of writing by hand.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">handwriting</rdfs:label>
@@ -3696,6 +3796,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300264383">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300264383</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of sculpting as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Refers to the process or branch of fine art concerned with creating sculpture, which are three-dimensional works.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">sculpting</rdfs:label>
@@ -3709,6 +3810,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300265248">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300265248</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of wax modeling as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Any technique for forming or shaping wax into sculptural shapes, either for casting purposes or as a final work.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">wax-modeling</rdfs:label>
@@ -3722,6 +3824,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300265483">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300265483</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are illuminated manuscripts.</vaem:rationale>
         <rdfs:comment xml:lang="en">Handwritten manuscripts that have been decorated with gold or silver, brilliant colors, designs, or miniature pictures.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">illuminated manuscripts</rdfs:label>
@@ -3735,6 +3838,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300265632">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300265632</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are printed volumes.</vaem:rationale>
         <rdfs:comment xml:lang="en">Objects comprising sheets of paper, vellum, papyrus, or another material that are bound together. Volumes may include printed books, manuscripts, sketchbooks, or albums.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">volumes (documents by form)</rdfs:label>
@@ -3748,6 +3852,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300266792">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300266792</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent digital devices that are cameras.</vaem:rationale>
         <rdfs:comment xml:lang="en">Cameras capable of acquiring still or motion pictures via an electronic sensor and storing them as digital information on a memory device.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">digital cameras</rdfs:label>
@@ -3761,6 +3866,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300312355">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300312355</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent identifiers that are issued by the institution.</vaem:rationale>
         <rdfs:comment xml:lang="en">Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">accession numbers</rdfs:label>
@@ -3774,6 +3880,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300343820">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300343820</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of vase painting as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">The process and technique of creating two-dimensional decoration on pottery by using paint made of metallic oxides or other pigments held in suspension in slip or another medium.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">vase painting (image-making)</rdfs:label>
@@ -3787,6 +3894,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300386427">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300386427</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the optimisation phase of a digitisation process.</vaem:rationale>
         <rdfs:comment xml:lang="en">Reduction of data needed for storage or transmission. Data is reduced in volume by means of encoding information to require fewer bits to be stored than the original.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">data compression</rdfs:label>
@@ -3800,6 +3908,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300391312">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300391312</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the use of structured light scanning as a technique.</vaem:rationale>
         <rdfs:comment xml:lang="en">Scanning technique that involves a pattern of lines projected onto a 3-D object and the subsequent mathematical measurement of the deformations caused by the geometry of the object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">structured light scanning</rdfs:label>
@@ -3813,6 +3922,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300391447">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300391447</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the modelling phase of a digitisation process.</vaem:rationale>
         <rdfs:comment xml:lang="en">Computer software technique for rendering virtual models of surfaces in three-dimensions.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">digital surface modeling</rdfs:label>
@@ -3826,6 +3936,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300403970">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300403970</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are manuscript volumes.</vaem:rationale>
         <rdfs:comment xml:lang="en">Manuscript volumes comprising two or more works, whether referring to only the content combined or to the combination of physically separate leafs or gatherings that are sewn or tipped in</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">compilation manuscripts</rdfs:label>
@@ -3839,6 +3950,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404126">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300404126</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent subjects of a CHO.</vaem:rationale>
         <rdfs:comment xml:lang="en">In the visual arts, oral works, music, performing arts, and literature, the topics, themes, or other visual, oral, or written content of the work. It includes what the work is of or about.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">subjects (content of works)</rdfs:label>
@@ -3852,6 +3964,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404386">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300404386</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the activities of discoverers.</vaem:rationale>
         <rdfs:comment xml:lang="en">Events or activities of finding out or becoming aware of something that had been lost, forgotten, or previously unknown. Includes the finding of archaeological objects, lost buildings, places.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">discoveries</rdfs:label>
@@ -3865,6 +3978,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404387">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300404387</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the activities of authors.</vaem:rationale>
         <rdfs:comment xml:lang="en">The activities surrounding the production or conception of a work, particularly a work of visual art, literary art, or performing arts.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">creating (artistic activity)</rdfs:label>
@@ -3878,6 +3992,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404704">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300404704</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent identifiers that are shelf marks.</vaem:rationale>
         <rdfs:comment xml:lang="en">Identifying numeric or alpha codes found, usually on the spine, of a manuscript, book or other volume, giving the location where the item can be found in the library.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">shelf marks</rdfs:label>
@@ -3891,6 +4006,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300417204">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300417204</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent titles that are the original denominations of their CHOs.</vaem:rationale>
         <rdfs:comment xml:lang="en">Titles or names that were originally assigned to a work or assigned soon after its creation. It may refer to a former title or to a title that has been translated.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">original titles</rdfs:label>
@@ -3904,6 +4020,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300417207">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300417207</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent titles that are the denominations used during the exhibition to identify their CHOs.</vaem:rationale>
         <rdfs:comment xml:lang="en">For art cataloging, titles or names by which the work has been known in exhibitions, particularly when different from titles by which the work is normally known.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">exhibition titles (work titles)</rdfs:label>
@@ -3917,6 +4034,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300417260">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300417260</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the exporting phase of a digitisation process.</vaem:rationale>
         <rdfs:comment xml:lang="en">The process or function of copying material or data to a computer drive, the cloud, or otherwise to a safe, more permanent location.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">saving (information handling)</rdfs:label>
@@ -3930,6 +4048,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300417639">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300417639</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the activities of commissioners.</vaem:rationale>
         <rdfs:comment xml:lang="en">Method of acquiring property by request from the creator or producer.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">commission (method of acquisition)</rdfs:label>
@@ -3943,6 +4062,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300420536">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300420536</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are axes.</vaem:rationale>
         <rdfs:comment xml:lang="en">A category of handheld tools or weapons characterized by a sharp-edged blade attached to a handle, typically made of wood or metal.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">axe weapons</rdfs:label>
@@ -3956,6 +4076,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300422994">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300422994</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are charm pendants.</vaem:rationale>
         <rdfs:comment xml:lang="en">A small decorative item, often made of metal or other materials, that is attached to a necklace or bracelet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">charm pendant</rdfs:label>
@@ -3969,6 +4090,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300425064">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300425064</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are electrostatic machines.</vaem:rationale>
         <rdfs:comment xml:lang="en">Machines for the production of electrical discharge at high voltage.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">electrostatic generators</rdfs:label>
@@ -3982,6 +4104,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300426696">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300426696</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent software used for activities dealing with graphics.</vaem:rationale>
         <rdfs:comment xml:lang="en">Software used to create computer graphics, or edit and otherwise manipulate existing graphics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">graphics software</rdfs:label>
@@ -3995,6 +4118,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300429747">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300429747</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent digital devices that are optical scanners.</vaem:rationale>
         <rdfs:comment xml:lang="en">A device that captures images or text documents and converts them into digital data that can be processed by a computer. These scanners use optical technology to scan physical documents or images and create digital representations of them.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">optical scanner</rdfs:label>
@@ -4008,6 +4132,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300433476">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300433476</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are spark arresters.</vaem:rationale>
         <rdfs:comment xml:lang="en">Instruments used to discharge a capacitor, which is a device capable of storing energy within an electrostatic field.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">spark arresters</rdfs:label>
@@ -4021,6 +4146,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300435434">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300435434</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent licenses and copyright statements.</vaem:rationale>
         <rdfs:comment xml:lang="en">A formal statement of the copyright or licensing of a work, and/or any restrictions placed on it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">copyright/licensing statement</rdfs:label>
@@ -4034,6 +4160,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300440768">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300440768</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent CHOs that are herbaria.</vaem:rationale>
         <rdfs:comment xml:lang="en">Systematically arranged collections of pressed plant specimens that have been gathered in situ, then dried and pressed onto sheets of archival paper so that major morphological characteristics are preserved.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">herbaria (documents)</rdfs:label>
@@ -4047,6 +4174,7 @@ What are the tools and their types used in processing activities?
     <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300445021">
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300445021</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent identifiers that are volume numbers.</vaem:rationale>
         <rdfs:comment xml:lang="en">Numbers used to identify an individual publication within a classification or location in a library.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">book numbers</rdfs:label>

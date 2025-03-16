@@ -1839,6 +1839,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://iflastandards.info/ns/lrm/lrmoo/F1_Work
 <http://iflastandards.info/ns/lrm/lrmoo/F1_Work> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ;
+                                                 <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* lrmoo:R10_has_member -[0..N]-> lrmoo:F1_Work
+* crm:P102_has_title -[0..N]-> crm:E35_Title
+* lrmoo:R3_is_realized_in -[1..N]-> lrmoo:F2_Expression""" ;
                                                  <http://purl.org/vocab/vann/example> """
 
         ### Example of a CHO at the Work level, characterised by two titles and realised in an Expression
@@ -1860,6 +1865,13 @@ xsd:date rdf:type rdfs:Datatype .
 <http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation> rdf:type owl:Class ;
                                                                  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E12_Production> ,
                                                                                  <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> ;
+                                                                 <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* lrmoo:R17_created -[1]-> lrmoo:F2_Expression
+* crm:P9_consists_of -[1..N]-> crm:E7_Activity
+* crm:R32_used_general_technique -[0..N]-> crm:E55_Type
+* lrmoo:R19_created_a_realisation_of -[1]-> lrmoo:F1_Item
+* crm:P4_has_time-span -[1]-> crm:E52_Time-Span""" ;
                                                                  <http://purl.org/vocab/vann/example> """
 
         ### Example of an Expression Creation. It consists of a smaller activity; it is carried out through a drawing
@@ -1884,6 +1896,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://iflastandards.info/ns/lrm/lrmoo/F2_Expression
 <http://iflastandards.info/ns/lrm/lrmoo/F2_Expression> rdf:type owl:Class ;
                                                        rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> ;
+                                                       <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:R129_is_about -[0..N]-> crm:E73_Information_Object
+* lrmoo:R4i_is_embodied_in -[1..N]-> lrmoo:F3_Manifestation""" ;
                                                        <http://purl.org/vocab/vann/example> """
 
         ### Example of a CHO at the Expression level, characterised by a subject and embodied in a Manifestation
@@ -1903,6 +1919,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation
 <http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation> rdf:type owl:Class ;
                                                           rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> ;
+                                                          <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P130i_features_are_also_found_on -[0..N]-> lrmoo:F4_Manifestation
+* lrmoo:R7i_is_exemplified_by -[1..N]-> lrmoo:F5_Item""" ;
                                                           <http://purl.org/vocab/vann/example> """
 
         ### Example of a CHO at the Manifestation level, characterised by a type and exemplified in an Item
@@ -1922,6 +1943,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://iflastandards.info/ns/lrm/lrmoo/F5_Item
 <http://iflastandards.info/ns/lrm/lrmoo/F5_Item> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> ;
+                                                 <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P1_is_identified_by -[1..N]-> crm:E42_Identifier
+* crm:P3_has_note -[0..1]-> rdfs:Literal""" ;
                                                  <http://purl.org/vocab/vann/example> """
 
         ### Example of a CHO at the Item level, characterised by three identifiers and a description
@@ -1971,32 +1996,32 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.cidoc-crm.org/cidoc-crm/E21_Person> rdf:type owl:Class ;
                                                 rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object> ,
                                                                 <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
+                                                <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document""" ;
                                                 <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a person, usually involved in some sort of activity."@en ;
                                                 rdfs:comment "An individual person."@en ;
                                                 rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                                rdfs:label "Person"@de ,
-                                                           "Person"@en ,
-                                                           "Personne"@fr ,
-                                                           "Pessoa"@pt ,
-                                                           "Πρόσωπο"@el ,
-                                                           "Личность"@ru ,
-                                                           "人物"@zh ;
+                                                rdfs:label "Person"@en ;
                                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
-###  http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object
-<http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> rdf:type owl:Class .
+###  http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object
+<http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> rdf:type owl:Class .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing
 <http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> rdf:type owl:Class ;
                                                                    rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ,
                                                                                    <http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing> ;
+                                                                   <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type""" ;
                                                                    <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used in conjunction with crm:P2_has_type and aat:300025976 to represent the concept of collection."@en ;
                                                                    rdfs:comment "A persistent physical item of any size that is purposely created by human activity."@en ;
                                                                    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                                                   rdfs:label "Chose matérielle élaborée par l’humain"@fr ,
-                                                                              "Physical Human-Made Thing"@en ;
+                                                                   rdfs:label "Physical Human-Made Thing"@en ;
                                                                    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
@@ -2014,13 +2039,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                   <http://www.linkedmodel.org/schema/vaem#rationale> "This class is implicitly used in conjunction with crm:P70i_is_documented_in to represent external resources (e.g. copyright statements, authority records, etc.)."@en ;
                                                   rdfs:comment "An information object that makes propositions about reality."@en ;
                                                   rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                                  rdfs:label "Document"@en ,
-                                                             "Document"@fr ,
-                                                             "Documento"@pt ,
-                                                             "Dokument"@de ,
-                                                             "Τεκμήριο"@el ,
-                                                             "Документ"@ru ,
-                                                             "文献"@zh ;
+                                                  rdfs:label "Document"@en ;
                                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
@@ -2032,6 +2051,10 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.cidoc-crm.org/cidoc-crm/E35_Title> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object> ,
                                                                <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> ;
+                                               <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P190_has_symbolic_content -[1]-> rdfs:Literal""" ;
                                                <http://purl.org/vocab/vann/example> """
 
         ### Example of a title, characterised by a type and a textual content
@@ -2044,29 +2067,21 @@ xsd:date rdf:type rdfs:Datatype .
                                                <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a title given to the CHO at the Work level."@en ;
                                                rdfs:comment "A textual string that functions as a title for a work."@en ;
                                                rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                               rdfs:label "Titel"@de ,
-                                                          "Title"@en ,
-                                                          "Titre"@fr ,
-                                                          "Título"@pt ,
-                                                          "Τίτλος"@el ,
-                                                          "Заголовок"@ru ,
-                                                          "题名"@zh ;
+                                               rdfs:label "Title"@en ;
                                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E39_Actor
 <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item> ;
+                                               <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document""" ;
                                                <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a generic entity with an agency, which can be either a person or an organisation."@en ;
                                                rdfs:comment "An individual person or a group of people, with the potential to perform intentional and accountable actions."@en ;
                                                rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                               rdfs:label "Actant"@fr ,
-                                                          "Actor"@en ,
-                                                          "Agente"@pt ,
-                                                          "Akteur"@de ,
-                                                          "Δράστης"@el ,
-                                                          "Агент"@ru ,
-                                                          "参与者"@zh ;
+                                               rdfs:label "Actor"@en ;
                                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
@@ -2077,6 +2092,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.cidoc-crm.org/cidoc-crm/E42_Identifier
 <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> rdf:type owl:Class ;
                                                     rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> ;
+                                                    <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P190_has_symbolic_content -[1]-> rdfs:Literal""" ;
                                                     <http://purl.org/vocab/vann/example> """
 
         ### Example of an identifier, characterised by a type and a textual content
@@ -2089,13 +2108,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                     <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a identifier given to the CHO at the Item level."@en ;
                                                     rdfs:comment "A textual string assigned to a cultural heritage object in order to identify it uniquely within a given context."@en ;
                                                     rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                                    rdfs:label "Identifiant"@fr ,
-                                                               "Identificador de Objeto"@pt ,
-                                                               "Identifier"@en ,
-                                                               "Kennung"@de ,
-                                                               "Κωδικός Αναγνώρισης"@el ,
-                                                               "Идентификатор Объекта"@ru ,
-                                                               "标识符"@zh ;
+                                                    rdfs:label "Identifier"@en ;
                                                     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
@@ -2106,6 +2119,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span
 <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+                                                   <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime
+* crm:P82b_end_of_the_end -[1]-> xsd:dateTime""" ;
                                                    <http://purl.org/vocab/vann/example> """
 
         ### Example of a time span, characterised by a starting date time and an ending date time
@@ -2118,29 +2135,20 @@ xsd:date rdf:type rdfs:Datatype .
                                                    <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a period of time defined within a starting date time and an ending date time. Both dates are declared in the following form 'YYYY-MM-DDThh:mm:ss', as instructed by the XML Schema Definition (XSD)."@en ;
                                                    rdfs:comment "An abstract temporal extent having a beginning, an end and a duration."@en ;
                                                    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                                   rdfs:label "Intervalle temporel"@fr ,
-                                                              "Período de Tempo"@pt ,
-                                                              "Time-Span"@en ,
-                                                              "Zeitspanne"@de ,
-                                                              "Χρονικό Διάστημα"@el ,
-                                                              "Интервал Времени"@ru ,
-                                                              "时段"@zh ;
+                                                   rdfs:label "Time-Span"@en ;
                                                    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E53_Place
 <http://www.cidoc-crm.org/cidoc-crm/E53_Place> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+                                               <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document""" ;
                                                <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a geograhical location, usually indicating the current residence of some actor."@en ;
                                                rdfs:comment "A geographical location."@en ;
                                                rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                               rdfs:label "Lieu"@fr ,
-                                                          "Local"@pt ,
-                                                          "Ort"@de ,
-                                                          "Place"@en ,
-                                                          "Τόπος"@el ,
-                                                          "Место"@ru ,
-                                                          "地点"@zh ;
+                                               rdfs:label "Place"@en ;
                                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
@@ -2154,13 +2162,7 @@ xsd:date rdf:type rdfs:Datatype .
                                               <http://www.linkedmodel.org/schema/vaem#rationale> "This class is indirectly used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. activities, CHOs, techniques, etc.). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals."@en ;
                                               rdfs:comment "A categorical concept denoted by terms from thesauri and controlled vocabularies used to characterize and classify other entities."@en ;
                                               rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                              rdfs:label "Tipo"@pt ,
-                                                         "Type"@en ,
-                                                         "Type"@fr ,
-                                                         "Typus"@de ,
-                                                         "Τύπος"@el ,
-                                                         "Тип"@ru ,
-                                                         "类型"@zh ;
+                                              rdfs:label "Type"@en ;
                                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
@@ -2184,6 +2186,12 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> rdf:type owl:Class ;
                                                             rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                             <http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object> ;
+                                                            <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation
+* crm:P70i_is_documented_in -[0..1]-> crm:E31_Document
+* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal""" ;
                                                             <http://purl.org/vocab/vann/example> """
 
         ### Example of two Information Objects, one representing a copyright statement and 
@@ -2201,29 +2209,21 @@ xsd:date rdf:type rdfs:Datatype .
                                                             <http://www.linkedmodel.org/schema/vaem#rationale> "This class consists in a generic abstract construct that can be used in conjunction with crm:P2_has_type to represent conceptual entities like rights statements and CHOs subjects."@en ;
                                                             rdfs:comment "An immaterial item that has an objectively recognizable structure and is documented as a single unit."@en ;
                                                             rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                                            rdfs:label "Information Object"@en ,
-                                                                       "Informationsgegenstand"@de ,
-                                                                       "Objet informationnel"@fr ,
-                                                                       "Objeto de Informação"@pt ,
-                                                                       "Πληροφοριακό Αντικείμενο"@el ,
-                                                                       "Информационный Объект"@ru ,
-                                                                       "信息对象"@zh ;
+                                                            rdfs:label "Information Object"@en ;
                                                             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E74_Group
 <http://www.cidoc-crm.org/cidoc-crm/E74_Group> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
+                                               <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document""" ;
                                                <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents organisations and other entities made up by groups of actors."@en ;
                                                rdfs:comment "A unified group of people."@en ;
                                                rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                               rdfs:label "Group"@en ,
-                                                          "Groupe"@fr ,
-                                                          "Grupo"@pt ,
-                                                          "Menschliche Gruppe"@de ,
-                                                          "Ομάδα"@el ,
-                                                          "Группа"@ru ,
-                                                          "团体"@zh ;
+                                               rdfs:label "Group"@en ;
                                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
@@ -2234,6 +2234,12 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.cidoc-crm.org/cidoc-crm/E7_Activity
 <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E5_Event> ;
+                                                 <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
+* crm:P16_used_specific_object -[0..N]-> lrmoo:F5_Item
+* crm:P32_used_general_technique -[0..N]-> E55_Type""" ;
                                                  <http://purl.org/vocab/vann/example> """
 
         ### Example of activity consisting in the curation (aat:300054277) of a 
@@ -2248,13 +2254,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                  <http://www.linkedmodel.org/schema/vaem#rationale> "This class consists in a generic action carried out by one or more actors. An activity should at least be typified (through the combination of crm:P2_has_type and AAT) and assigned to its respective actors, although its properties may vary depending on the type of activity."@en ;
                                                  rdfs:comment "An action intentionally carried out by one or more actors."@en ;
                                                  rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
-                                                 rdfs:label "Activity"@en ,
-                                                            "Activité"@fr ,
-                                                            "Atividade"@pt ,
-                                                            "Handlung"@de ,
-                                                            "Δράση"@el ,
-                                                            "Деятельность"@ru ,
-                                                            "活动"@zh ;
+                                                 rdfs:label "Activity"@en ;
                                                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
@@ -2269,6 +2269,15 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution
 <http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution> rdf:type owl:Class ;
                                                             rdfs:subClassOf <http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event> ;
+                                                            <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crmdig:L10_had_input -[1]-> crmdig:D9_Data_Object
+* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
+* crm:P4_has_time-span -[1]-> crm:E52_Time-Span
+* crm:P11_had_participant -[0..N]-> crm:E74_Group
+* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
+* crmdig:L23_used_software_or_hardware -[1..N]-> crmdig:D14_Software""" ;
                                                             <http://purl.org/vocab/vann/example> """
 
         ### Example of software activity consisting in the processing (aat:300054636) of the 
@@ -2300,6 +2309,9 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.ics.forth.gr/isl/CRMdig/D14_Software
 <http://www.ics.forth.gr/isl/CRMdig/D14_Software> rdf:type owl:Class ;
                                                   rdfs:subClassOf <http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object> ;
+                                                  <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type""" ;
                                                   <http://purl.org/vocab/vann/example> """
 
         ### Example of a graphics software (aat:300426696)
@@ -2322,6 +2334,15 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process
 <http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process> rdf:type owl:Class ;
                                                              rdfs:subClassOf <http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event> ;
+                                                             <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crmdig:L1_digitized -[1]-> lrmoo:F5_Item
+* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
+* crm:P4_has_time-span -[1]-> crm:E52_Time-Span
+* crm:P11_had_participant -[0..N]-> crm:E74_Group
+* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
+* crm:P32_used_general_technique -[1]-> crm:E55_Type
+* crm:P16_used_specific_object -[1..N]-> crmdig:D8_Digital_Device""" ;
                                                              <http://purl.org/vocab/vann/example> """
 
         ### Example of an acquisition activity that digitises a CHO at
@@ -2354,7 +2375,10 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device
 <http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device> rdf:type owl:Class ;
-                                                       rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object> ;
+                                                       rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> ;
+                                                       <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type""" ;
                                                        <http://purl.org/vocab/vann/example> """
 
         ### Example of a digital camera (aat:300266792)
@@ -2374,6 +2398,24 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object> rdf:type owl:Class ;
                                                     rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E54_Dimension> ,
                                                                     <http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object> ;
+                                                    <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P130i_features_are_also_found_on -[0..N]-> crmdig:D9_Data_Object""" ;
+                                                    <http://purl.org/vocab/vann/example> """
+
+        ### Example of a data object produced at the end of an acquisition activity and used as input in a processing activity
+
+        ex:data-object a crmdig:D9_Data_Object .
+
+        ex:acquisition a crmdig:D2_Digitization_Process ;
+            crmdig:L1_digitized ex:item ;
+            crmdig:L11_had_output ex:data-object .
+
+        ex:processing a crmdig:D10_Software_Execution ;
+            crm:P2_has_type aat:300054636 ;
+            crmdig:L10_had_input ex:data-object .
+
+    """@en ;
                                                     <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used to represent the DCHO produced at the end of each digitisation activity."@en ;
                                                     rdfs:comment "A digital object that is the direct result of an activity in a digitization workflow."@en ;
                                                     rdfs:isDefinedBy <http://www.ics.forth.gr/isl/CRMdig/> ;
@@ -2389,6 +2431,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300011172> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300011172" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are gems."@en ;
                                        rdfs:comment "Works comprising precious or semiprecious stones or other materials such as amber or pearl, cut, polished, or otherwise dressed for ornamental purposes to be used in jewelry, seals, or amulets."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "gems (worked stones)"@en .
@@ -2398,6 +2441,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300015045> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300015045" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are watercolor paintings."@en ;
                                        rdfs:comment "Transparent aqueous based paint produced by mixing ground pigments with water and, generally, gum arabic."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "watercolor (paint)"@en .
@@ -2407,6 +2451,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300022488> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300022488" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are compasses."@en ;
                                        rdfs:comment "Instruments for drawing circles and measuring the distance between two points."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "compasses (drawing instruments)"@en .
@@ -2416,6 +2461,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300024594> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300024594" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are microscopes."@en ;
                                        rdfs:comment "Optical instruments consisting of a lens or combination of lenses that allow the viewing of objects that are too small to be seen with the naked, unaided eye."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "microscopes"@en .
@@ -2425,6 +2471,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300024814> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300024814" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are molds."@en ;
                                        rdfs:comment "Hollow forms in which castings or pressings are made; used with many materials, including clay, metal, glass, and paper."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "molds (shaping equipment)"@en .
@@ -2434,6 +2481,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300024928> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300024928" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are handles."@en ;
                                        rdfs:comment "Tool handles, such as those of axes, hatchets, or hammers."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "helves"@en .
@@ -2443,6 +2491,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300025976> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300025976" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent collections."@en ;
                                        rdfs:comment "Accumulated groups of objects or materials having a focal characteristic and that have been brought together by an individual or organization."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "collections (object groupings)"@en .
@@ -2452,6 +2501,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300027349> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300027349" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are bibliographic series."@en ;
                                        rdfs:comment "A conceptual grouping of visual arts works, literary works, or performance art created in succession by the same author, artist, or studio and intended by the creator(s) to be seen together."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "series (object groupings)"@en .
@@ -2461,6 +2511,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300028051> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300028051" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are books."@en ;
                                        rdfs:comment "Items comprising a collection of leaves of paper, parchment, wood, stiffened textile, ivory, metal tablets, or other flat material, that are blank, written on, or printed, and are strung or bound together."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "books"@en .
@@ -2470,6 +2521,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300028094> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300028094" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are maps."@en ;
                                        rdfs:comment "Refers to graphic or photogrammetric representations of the Earth's surface or a part of it, including physical features and political boundaries."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "maps (documents)"@en .
@@ -2479,6 +2531,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300028309> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300028309" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are navigation charts."@en ;
                                        rdfs:comment "Maps designed and used primarily for plotting courses and traveling on water in a ship or other vessel or in an aircraft or spacecraft."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "navigation charts"@en .
@@ -2488,6 +2541,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300028569> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300028569" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are manuscripts."@en ;
                                        rdfs:comment "Handwritten documents, particularly books and other documents created before the invention of the printing press."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "manuscripts (documents)"@en .
@@ -2497,6 +2551,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300028682> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300028682" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are videos."@en ;
                                        rdfs:comment "Manifestations of motion pictures, stored electronically, in any media or digitized format."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "video recordings (physical artifacts)"@en .
@@ -2506,6 +2561,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300033618> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300033618" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are paintings."@en ;
                                        rdfs:comment "Unique works in which images are formed primarily by the direct application of pigments suspended in oil, water, egg yolk, molten wax, or other liquid, arranged in masses of color, onto a general surface."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "paintings (visual works)"@en .
@@ -2515,6 +2571,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300037592> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300037592" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are lamps."@en ;
                                        rdfs:comment "Lighting devices having a vessel to contain fuel used as a source of illumination, such as grease or oil."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "lamps (lighting devices)"@en .
@@ -2524,6 +2581,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300041273> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300041273" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are prints."@en ;
                                        rdfs:comment "Pictorial works produced by transferring images by means of a matrix such as a plate, block, or screen, using any of various printing processes."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "prints (visual works)"@en .
@@ -2533,6 +2591,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300041340> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300041340" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are engravings."@en ;
                                        rdfs:comment "Prints on paper incorporating impressions of a reverse design created on a printing plate, usually copper, into which the design has been incised (engraved) using burins or gravers."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "engravings (prints)"@en .
@@ -2542,6 +2601,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300041405> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300041405" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are woodcuts."@en ;
                                        rdfs:comment "Prints made using the process of woodcut, which is a relief process in which the design is cut into and printed from the plank side of a wood block."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "woodcuts (prints)"@en .
@@ -2551,6 +2611,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300041933> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300041933" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are rattles."@en ;
                                        rdfs:comment "Shaken idiophones made in a variety of forms worldwide, in which one or more objects strike against each other or against the inside or outside of another object."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "rattles (indirectly struck idiophones)"@en .
@@ -2560,6 +2621,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300045627> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300045627" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are bottles."@en ;
                                        rdfs:comment "Vessels having a neck and mouth considerably narrower than the body, used for packaging and containing liquid and dry preparations."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "bottles"@en .
@@ -2569,6 +2631,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300046001> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300046001" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are necklaces."@en ;
                                        rdfs:comment "Ornaments worn around the neck, usually in the form of chains or strands of beads, pearls, stones, or decorative or precious materials, and often including a suspended ornamental pendant."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "necklaces"@en .
@@ -2578,6 +2641,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300046025> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300046025" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are medals."@en ;
                                        rdfs:comment "Small pieces of metal, usually gold, silver, or bronze and bearing a relief design on one or both sides and having a commemorative purpose."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "medals"@en .
@@ -2587,6 +2651,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300047600> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300047600" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are statues."@en ;
                                        rdfs:comment "Sculpture in the round, usually but not always depicting humans, animals, mythical beings, or small figure groups."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "statues"@en .
@@ -2596,6 +2661,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300047753> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300047753" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are models."@en ;
                                        rdfs:comment "Refers to scaled or lifesize representations of objects, structures, beings, or other subjects, usually three-dimensional."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "models (representations)"@en .
@@ -2605,6 +2671,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300047762> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300047762" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are dioramas."@en ;
                                        rdfs:comment "Works in which three-dimensional objects, often figural sculpture, in the foreground blend with a realistic painted background."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "dioramas"@en .
@@ -2614,6 +2681,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300053225> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300053225" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the activities of engravers."@en ;
                                        rdfs:comment "The intaglio process in which the design is incised into a printing plate, usually a flat copper plate, with the aid of a graver or burin."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "engraving (printing process)"@en .
@@ -2623,6 +2691,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300053319> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300053319" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the activities of printers."@en ;
                                        rdfs:comment "Various means of reproducing identical copies of graphic matter in a fixed form, by which an image, pictorial or textual, is transferred, usually to paper or cloth."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "printing (process)"@en .
@@ -2632,6 +2701,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300053357> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300053357" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of fresco paintings as a technique."@en ;
                                        rdfs:comment "Mural painting technique in which dry pigments are ground with water then brushed onto wet or partially dry lime plaster."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "fresco painting (technique)"@en .
@@ -2641,6 +2711,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300053363> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300053363" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of watercolor as a technique."@en ;
                                        rdfs:comment "Watercolor painting done in transparent washes of color as distinguished from the opaque method using gouache."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "aquarelle (technique)"@en .
@@ -2650,6 +2721,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300053580> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300053580" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of photogrammetry as a technique."@en ;
                                        rdfs:comment "Refers to the technique of making measurements by using photography. It usually refers to this technique as applied to mapmaking, measuring site elements, and surveying."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "photogrammetry"@en .
@@ -2659,6 +2731,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300053628> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300053628" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of taxidermy as a technique."@en ;
                                        rdfs:comment "Preparing lifelike representations of animals by stuffing the skin or molding it around a model of the specimen."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "taxidermy"@en .
@@ -2668,6 +2741,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300053758> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300053758" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of drying as a technique."@en ;
                                        rdfs:comment "Making free or nearly free of liquids."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "drying"@en .
@@ -2677,6 +2751,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300053852> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300053852" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of intarsia as a technique."@en ;
                                        rdfs:comment "Decorative wood process in which the design or pattern is made by assembling small pieces of veneer in various shapes."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "intarsia (process)"@en .
@@ -2686,6 +2761,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300054196> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300054196" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of drawing as a technique."@en ;
                                        rdfs:comment "Producing visible forms primarily by delineation, usually by the direct application of material or instrument to the surface of the support."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "drawing (image-making)"@en .
@@ -2695,6 +2771,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300054200> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300054200" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the activities of illustrators."@en ;
                                        rdfs:comment "The art or process of providing drawings or other pictures intended to elucidate a description, story, or other written material, usually in a book or periodical."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "illustration (process)"@en .
@@ -2704,6 +2781,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300054277> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300054277" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent curation activities."@en ;
                                        rdfs:comment "Superintending or managing the collections, exhibitions, research activities, and personnel of a museum, art gallery, zoo, or other place of exhibit; also, the superintending or managing of a single collection."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "curating"@en .
@@ -2713,7 +2791,8 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300054636> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300054636" ;
-                                       rdfs:comment "Creating and manipulating data in machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing."@en ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the processing phase in a digitisation process."@en ;
+                                       rdfs:comment "Creating and manipulating data in a machine-readable form by means of computers, including inputting, storage, conversion, editing, and printing."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "data processing"@en .
 
@@ -2722,6 +2801,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300054638> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300054638" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the metadata handling phase in a digitisation process."@en ;
                                        rdfs:comment "The process or function of gathering and recording information, especially to record facts or characteristics or to establish evidence or testimony."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "documentation (activity)"@en .
@@ -2731,6 +2811,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300054686> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300054686" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the activities of publishers."@en ;
                                        rdfs:comment "The actions, functions, or event of issuing printed, taped, or otherwise reproduced records of knowledge or visual works in any medium for sale or distribution to the public."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "publishing"@en .
@@ -2740,6 +2821,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300055021> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300055021" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are incunambula."@en ;
                                        rdfs:comment "Books printed before 1501."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "incunabula (books)"@en .
@@ -2749,6 +2831,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300069831> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300069831" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the activities of translators."@en ;
                                        rdfs:comment "The activity of comprehending, analyzing, and expressing written or spoken material in a different language from the original."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "translation (function)"@en .
@@ -2758,6 +2841,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300077565> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300077565" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the activities of museum preparators."@en ;
                                        rdfs:comment "The action or process of making something ready for use or service or of getting ready for some occasion, test, or duty."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "preparing"@en .
@@ -2767,6 +2851,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300117127> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300117127" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are artifacts."@en ;
                                        rdfs:comment "Generally, objects or other things made or modified by humans, typically manually portable products of human workmanship, such as tools, utensils, objects for personal adornment, or art."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "artifacts (object genre)"@en .
@@ -2776,6 +2861,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300122241> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300122241" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are pieces of equipment."@en ;
                                        rdfs:comment "Articles or physical resources used to array, dress up, rig out, equip, or otherwise provide with what is requisite for efficient action by a person or animal or for a thing."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "equipment"@en .
@@ -2785,6 +2871,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300132254> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300132254" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are vases."@en ;
                                        rdfs:comment "Vessels of varying shape and size but which are usually taller than they are wide, varying greatly in actual form and use."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "vases"@en .
@@ -2794,6 +2881,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300137376> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300137376" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are marine charts."@en ;
                                        rdfs:comment "Medieval marine charts, used before compasses, and for Medieval navigation manuals, illustrated with charts and showing the location of ports and other navigational information."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "portolanos"@en .
@@ -2803,6 +2891,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300138684> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300138684" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of mosaics as a technique."@en ;
                                        rdfs:comment "A method of decorating surfaces with patterns or pictures composed of small, regularly-shaped pieces of colored durable material, such as stone or glass."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "mosaic (process)"@en .
@@ -2812,6 +2901,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300138758> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300138758" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are masks."@en ;
                                        rdfs:comment "Refers to coverings for all or part of the face, usually with openings for the eyes and sometimes the mouth."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "masks (costume)"@en .
@@ -2821,6 +2911,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300155365> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300155365" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the publication phase in a digitisation process."@en ;
                                        rdfs:comment "Publishing text or images in electronic machine-readable formats."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "electronic publishing"@en .
@@ -2830,6 +2921,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300178684> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300178684" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of oil paintings as a technique."@en ;
                                        rdfs:comment "The art or practice of producing creative works in oil paint, which is pigment suspended in vegetal drying oils."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "oil painting (technique)"@en .
@@ -2839,6 +2931,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300178926> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300178926" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of letterpress printing as a technique."@en ;
                                        rdfs:comment "Printing from raised and inked type, distinguished from lithographic or intaglio printing, particularly in the context of book and other text printing."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "letterpress printing"@en .
@@ -2848,6 +2941,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300184300> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300184300" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are series of paintings."@en ;
                                        rdfs:comment "Refers to series of visual works depicting events and unified by a common topic, not necessarily a sequence in a single story line."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "narrative cycles"@en .
@@ -2857,6 +2951,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300189634> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300189634" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are series of prints."@en ;
                                        rdfs:comment "Groups of prints related in theme or technique and usually issued together."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "suites (print groupings)"@en .
@@ -2866,6 +2961,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300191086> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300191086" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are visual works of art."@en ;
                                        rdfs:comment "Works of art, architecture, and any objects that occupy space, are perceived by the sense of sight, and are created or arranged, rather than naturally occurring."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "visual works (works)"@en .
@@ -2875,6 +2971,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300224200> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300224200" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are bound manuscripts."@en ;
                                        rdfs:comment "Ancient manuscripts generally taking the form of the modern book: bound leaves of paper or parchment with information inscribed on both faces, attached at a center fold."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "codices (bound manuscripts)"@en .
@@ -2884,6 +2981,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300226836> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300226836" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are series of frescoes."@en ;
                                        rdfs:comment "Sets or ensembles of visual works."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "visual works groupings"@en .
@@ -2893,6 +2991,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300235576> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300235576" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are specimens."@en ;
                                        rdfs:comment "A specimen is an individual instance that represents a class. A good specimen shows the character of the thing or material, useful for close study and permitting exact identification."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "specimens"@en .
@@ -2902,6 +3001,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300252927> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300252927" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of handwriting as a technique."@en ;
                                        rdfs:comment "The forming of letters and words by hand rather than by printing; may be used to designate a particular and distinctive form, style, or method of writing by hand."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "handwriting"@en .
@@ -2911,6 +3011,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300264383> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300264383" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of sculpting as a technique."@en ;
                                        rdfs:comment "Refers to the process or branch of fine art concerned with creating sculpture, which are three-dimensional works."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "sculpting"@en .
@@ -2920,6 +3021,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300265248> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300265248" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of wax modeling as a technique."@en ;
                                        rdfs:comment "Any technique for forming or shaping wax into sculptural shapes, either for casting purposes or as a final work."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "wax-modeling"@en .
@@ -2929,6 +3031,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300265483> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300265483" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are illuminated manuscripts."@en ;
                                        rdfs:comment "Handwritten manuscripts that have been decorated with gold or silver, brilliant colors, designs, or miniature pictures."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "illuminated manuscripts"@en .
@@ -2938,6 +3041,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300265632> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300265632" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are printed volumes."@en ;
                                        rdfs:comment "Objects comprising sheets of paper, vellum, papyrus, or another material that are bound together. Volumes may include printed books, manuscripts, sketchbooks, or albums."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "volumes (documents by form)"@en .
@@ -2947,6 +3051,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300266792> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300266792" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent digital devices that are cameras."@en ;
                                        rdfs:comment "Cameras capable of acquiring still or motion pictures via an electronic sensor and storing them as digital information on a memory device."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "digital cameras"@en .
@@ -2956,6 +3061,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300312355> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300312355" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent identifiers that are issued by the institution."@en ;
                                        rdfs:comment "Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "accession numbers"@en .
@@ -2965,6 +3071,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300343820> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300343820" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of vase painting as a technique."@en ;
                                        rdfs:comment "The process and technique of creating two-dimensional decoration on pottery by using paint made of metallic oxides or other pigments held in suspension in slip or another medium."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "vase painting (image-making)"@en .
@@ -2974,6 +3081,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300386427> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300386427" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the optimisation phase of a digitisation process."@en ;
                                        rdfs:comment "Reduction of data needed for storage or transmission. Data is reduced in volume by means of encoding information to require fewer bits to be stored than the original."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "data compression"@en .
@@ -2983,6 +3091,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300391312> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300391312" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the use of structured light scanning as a technique."@en ;
                                        rdfs:comment "Scanning technique that involves a pattern of lines projected onto a 3-D object and the subsequent mathematical measurement of the deformations caused by the geometry of the object."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "structured light scanning"@en .
@@ -2992,6 +3101,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300391447> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300391447" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the modelling phase of a digitisation process."@en ;
                                        rdfs:comment "Computer software technique for rendering virtual models of surfaces in three-dimensions."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "digital surface modeling"@en .
@@ -3001,6 +3111,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300403970> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300403970" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are manuscript volumes."@en ;
                                        rdfs:comment "Manuscript volumes comprising two or more works, whether referring to only the content combined or to the combination of physically separate leafs or gatherings that are sewn or tipped in"@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "compilation manuscripts"@en .
@@ -3010,6 +3121,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300404126> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300404126" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent subjects of a CHO."@en ;
                                        rdfs:comment "In the visual arts, oral works, music, performing arts, and literature, the topics, themes, or other visual, oral, or written content of the work. It includes what the work is of or about."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "subjects (content of works)"@en .
@@ -3019,6 +3131,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300404386> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300404386" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the activities of discoverers."@en ;
                                        rdfs:comment "Events or activities of finding out or becoming aware of something that had been lost, forgotten, or previously unknown. Includes the finding of archaeological objects, lost buildings, places."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "discoveries"@en .
@@ -3028,6 +3141,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300404387> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300404387" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the activities of authors."@en ;
                                        rdfs:comment "The activities surrounding the production or conception of a work, particularly a work of visual art, literary art, or performing arts."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "creating (artistic activity)"@en .
@@ -3037,6 +3151,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300404704> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300404704" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent identifiers that are shelf marks."@en ;
                                        rdfs:comment "Identifying numeric or alpha codes found, usually on the spine, of a manuscript, book or other volume, giving the location where the item can be found in the library."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "shelf marks"@en .
@@ -3046,6 +3161,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300417204> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300417204" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent titles that are the original denominations of their CHOs."@en ;
                                        rdfs:comment "Titles or names that were originally assigned to a work or assigned soon after its creation. It may refer to a former title or to a title that has been translated."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "original titles"@en .
@@ -3055,6 +3171,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300417207> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300417207" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent titles that are the denominations used during the exhibition to identify their CHOs."@en ;
                                        rdfs:comment "For art cataloging, titles or names by which the work has been known in exhibitions, particularly when different from titles by which the work is normally known."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "exhibition titles (work titles)"@en .
@@ -3064,6 +3181,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300417260> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300417260" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the exporting phase of a digitisation process."@en ;
                                        rdfs:comment "The process or function of copying material or data to a computer drive, the cloud, or otherwise to a safe, more permanent location."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "saving (information handling)"@en .
@@ -3073,6 +3191,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300417639> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300417639" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the activities of commissioners."@en ;
                                        rdfs:comment "Method of acquiring property by request from the creator or producer."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "commission (method of acquisition)"@en .
@@ -3082,6 +3201,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300420536> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300420536" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are axes."@en ;
                                        rdfs:comment "A category of handheld tools or weapons characterized by a sharp-edged blade attached to a handle, typically made of wood or metal."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "axe weapons"@en .
@@ -3091,6 +3211,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300422994> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300422994" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are charm pendants."@en ;
                                        rdfs:comment "A small decorative item, often made of metal or other materials, that is attached to a necklace or bracelet."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "charm pendant"@en .
@@ -3100,6 +3221,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300425064> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300425064" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are electrostatic machines."@en ;
                                        rdfs:comment "Machines for the production of electrical discharge at high voltage."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "electrostatic generators"@en .
@@ -3109,6 +3231,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300426696> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300426696" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent software used for activities dealing with graphics."@en ;
                                        rdfs:comment "Software used to create computer graphics, or edit and otherwise manipulate existing graphics."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "graphics software"@en .
@@ -3118,6 +3241,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300429747> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300429747" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent digital devices that are optical scanners."@en ;
                                        rdfs:comment "A device that captures images or text documents and converts them into digital data that can be processed by a computer. These scanners use optical technology to scan physical documents or images and create digital representations of them."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "optical scanner"@en .
@@ -3127,6 +3251,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300433476> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300433476" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are spark arresters."@en ;
                                        rdfs:comment "Instruments used to discharge a capacitor, which is a device capable of storing energy within an electrostatic field."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "spark arresters"@en .
@@ -3136,6 +3261,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300435434> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300435434" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent licenses and copyright statements."@en ;
                                        rdfs:comment "A formal statement of the copyright or licensing of a work, and/or any restrictions placed on it."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "copyright/licensing statement"@en .
@@ -3145,6 +3271,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300440768> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300440768" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent CHOs that are herbaria."@en ;
                                        rdfs:comment "Systematically arranged collections of pressed plant specimens that have been gathered in situ, then dried and pressed onto sheets of archival paper so that major morphological characteristics are preserved."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "herbaria (documents)"@en .
@@ -3154,6 +3281,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://vocab.getty.edu/aat/300445021> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300445021" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent identifiers that are volume numbers."@en ;
                                        rdfs:comment "Numbers used to identify an individual publication within a classification or location in a library."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "book numbers"@en .
