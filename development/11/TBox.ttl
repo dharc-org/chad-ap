@@ -1,0 +1,92 @@
+@prefix : <https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/> .
+
+<https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:isIdentifiedBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "is identified by"@en .
+
+
+:isDocumentedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "is documented in"@en .
+
+
+#################################################################
+#    Datatype Properties
+#################################################################
+
+:hasSymbolicContent rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDatatypeProperty ;
+      rdfs:label "has symbolic content"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+:Appellation rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Appellation"@en .
+
+
+:Manifestation rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Manifestation"@en .
+
+
+:Type rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Type"@en .
+
+
+:Actor rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Actor"@en .
+
+
+:Collection rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Collection"@en .
+
+
+:Place rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Place"@en .
+
+
+:Person rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Person"@en .
+
+
+:DigitalDevice rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Digital Device"@en .
+
+
+:Group rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Group"@en .
+
+
+:Software rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Software"@en .
+
+
+:Document rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Document"@en .
+
