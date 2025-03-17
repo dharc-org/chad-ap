@@ -1,0 +1,64 @@
+@prefix obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@base <https://w3id.org/changes/4/aldrovandi/> .
+
+<https://w3id.org/changes/4/aldrovandi/> rdf:type owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/> .
+
+
+<https://w3id.org/changes/4/aldrovandi/22/mnf/1> a obj:Manifestation ;
+    obj:hasType <https://w3id.org/changes/4/aldrovandi/typ/300041273> .
+
+<https://w3id.org/changes/4/aldrovandi/typ/300041273> a obj:Type ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/aldrovandi/app/1> ;
+    obj:isDocumentedIn aat:300041273 .
+
+<https://w3id.org/changes/4/aldrovandi/app/1> a obj:Appellation ;
+    obj:hasSymbolicContent "Stampa" .
+
+<https://w3id.org/changes/4/aldrovandi/act/dioscorides-pedanius> a obj:Actor ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/aldrovandi/app/2> .
+
+<https://w3id.org/changes/4/aldrovandi/app/2> a obj:Appellation ;
+    obj:hasSymbolicContent "Dioscorides Pedanius" .
+
+<https://w3id.org/changes/4/aldrovandi/col/fondo-storico-bertoloni> a obj:Collection ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/aldrovandi/app/3> .
+
+<https://w3id.org/changes/4/aldrovandi/app/3> a obj:Appellation ;
+    obj:hasSymbolicContent "Fondo Storico Bertoloni" .
+
+<https://w3id.org/changes/4/aldrovandi/plc/bologna> a obj:Place ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/aldrovandi/app/4> .
+
+<https://w3id.org/changes/4/aldrovandi/app/4> a obj:Appellation ;
+    obj:hasSymbolicContent "Bologna" .
+
+<https://w3id.org/changes/4/aldrovandi/psn/alice-bordignon> a obj:Person ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/aldrovandi/app/5> .
+
+<https://w3id.org/changes/4/aldrovandi/app/5> a obj:Appellation ;
+    obj:hasSymbolicContent "Alice Bordignon" .
+
+<https://w3id.org/changes/4/aldrovandi/dev/nikon-d7200-nikor-50mm> a obj:DigitalDevice ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/aldrovandi/app/6> .
+
+<https://w3id.org/changes/4/aldrovandi/app/6> a obj:Appellation ;
+    obj:hasSymbolicContent "Nikon D7200 Nikor 50mm" .
+
+<https://w3id.org/changes/4/aldrovandi/grp/unibo-ficlit> a obj:Group ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/aldrovandi/app/7> .
+
+<https://w3id.org/changes/4/aldrovandi/app/7> a obj:Appellation ;
+    obj:hasSymbolicContent "Unibo Ficlit" .
+
+<https://w3id.org/changes/4/aldrovandi/sfw/3df-zephyr> a obj:Software ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/aldrovandi/app/8> .
+
+<https://w3id.org/changes/4/aldrovandi/app/8> a obj:Appellation ;
+    obj:hasSymbolicContent "3df Zephyr" .
