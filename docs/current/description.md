@@ -26,7 +26,7 @@ The next subsections provide a quick overview of all the entities defined, some 
 ### Object Module (OM)
 As shown in the diagram below, a Cultural Heritage Object (CHO) is described in CHAD-AP according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. 
 
-![A diagram of the CHAD-AP Object Module (OM).](diagrams/object-model.png)
+![A diagram of the CHAD-AP Object Module (OM).](../current/diagrams/chad-ap-object.png)
 
 In particular, the _Work_ (`lrmoo:F1_Work`) represents the _essence_ or conceptualization of the CHO. Each work is associated with a series of titles (`crm:E35_Title`), each classified according to a particular type (`crm:E55_Type`), which can be an _original title_ (`aat:300417204`) or an _exhibition title_ (`aat:300417207`). Furthermore, a Work can be part of a larger Work, like a series of printed volumes, which is classified under a particular type (`crm:E55_Type`).
 
@@ -41,7 +41,7 @@ Whenever possible, instances of `crm:E39_Actor` and `crm:E53_Place` are also lin
 ### Process Module (PM)
 As shown in the diagram below, CHAD-AP also describes the entities for defining a 3D digitisation workflow as a sequence of activities classified according to two main categories. 
 
-![A diagram of the CHAD-AP Process Module (PM).](diagrams/process-model.png)
+![A diagram of the CHAD-AP Process Module (PM).](../current/diagrams/chad-ap-process.png)
 
 On the one hand, we have the _acquisition activity_ (`crmdig:D2_Digitization_Process`), which involves the digitisation of a CHO at the Item level(`lrmoo:F5_Item`) to produce a Digital CHO (DCHO) (`crmdig:D9_Data_Object`). Similarly to its physical counterpart, the DCHO can be associated with copyright statements or licenses (`crm:E73_Information_Object` with `aat:300435434` as its type). The acquisition occurs within a time span (`crm:E52_Time-Span`) with defined starting and ending date times, and engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`) responsible for the activity. During the acquisition, a series of techniques (`crm:E55_Type`) can be used, such as _photogrammetry_ (`aat:300053580`) or _structured light scanning_ (`aat:300391312`), along with tools (`crmdig:D8_Digital_Device`) like _digital cameras_ (`aat:300266792`) and _structured light scanners_ (`aat:300429747`).
 
