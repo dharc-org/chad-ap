@@ -21,7 +21,7 @@
 <https://w3id.org/changes/4/aldrovandi/app/1> a obj:Appellation ;
     obj:hasSymbolicContent "Stampa" .
 
-<https://w3id.org/changes/4/aldrovandi/act/dioscorides-pedanius> a obj:Actor ;
+<https://w3id.org/changes/4/aldrovandi/acr/dioscorides-pedanius> a obj:Actor ;
     obj:isIdentifiedBy <https://w3id.org/changes/4/aldrovandi/app/2> .
 
 <https://w3id.org/changes/4/aldrovandi/app/2> a obj:Appellation ;

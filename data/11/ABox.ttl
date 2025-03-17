@@ -9,7 +9,7 @@
 <https://w3id.org/changes/4/aldrovandi/22/mnf/1> a lrmoo:F3_Manifestation ;
     crm:P2_has_type <https://w3id.org/changes/4/aldrovandi/typ/300041273> .
 
-<https://w3id.org/changes/4/aldrovandi/act/dioscorides-pedanius> a crm:E39_Actor ;
+<https://w3id.org/changes/4/aldrovandi/acr/dioscorides-pedanius> a crm:E39_Actor ;
     crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/app/2> .
 
 <https://w3id.org/changes/4/aldrovandi/col/fondo-storico-bertoloni> a crm:E24_Physical_Human-Made_Thing ;
