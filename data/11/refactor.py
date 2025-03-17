@@ -18,7 +18,7 @@ aat = Namespace(namespaces["new_ns"]["aat"])
 
 # Load the ABox
 original_abox = Graph()
-original_abox.parse("../development/10/ABox.ttl", format="turtle")
+original_abox.parse("../development/11/ABox.ttl", format="turtle")
 
 # Create a new RDF graph for the refactored ABox
 refactored_abox = Graph()

@@ -1,0 +1,27 @@
+namespaces:
+  old_ns: 
+    abox: "https://w3id.org/changes/4/aldrovandi/"
+    obj: "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/"
+  new_ns: 
+    abox: "https://w3id.org/changes/4/aldrovandi/"
+    lrmoo: "http://iflastandards.info/ns/lrm/lrmoo/"
+    crm: "http://www.cidoc-crm.org/cidoc-crm/"
+    crmdig: "http://www.cidoc-crm.org/extensions/crmdig/"
+    aat: "http://vocab.getty.edu/page/aat/"
+
+mapping_rules:
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Appellation": "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Type": "http://www.cidoc-crm.org/cidoc-crm/E55_Type"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Manifestation": "http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Document": "http://www.cidoc-crm.org/cidoc-crm/E31_Document"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/DigitalDevice": "http://www.cidoc-crm.org/extensions/crmdig/D8_Digital_Device"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Software": "http://www.cidoc-crm.org/extensions/crmdig/D14_Software"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Collection": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Actor": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Place": "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Person": "http://www.cidoc-crm.org/cidoc-crm/E21_Person"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/Group": "http://www.cidoc-crm.org/cidoc-crm/E74_Group"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/isIdentifiedBy": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/isDocumentedIn": "http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/hasSymbolicContent": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/11/schema/hasType": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type"

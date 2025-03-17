@@ -1,0 +1,60 @@
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://w3id.org/changes/4/aldrovandi/> a owl:Ontology .
+
+<https://w3id.org/changes/4/aldrovandi/22/mnf/1> a lrmoo:F3_Manifestation ;
+    crm:P2_has_type <https://w3id.org/changes/4/aldrovandi/typ/300041273> .
+
+<https://w3id.org/changes/4/aldrovandi/act/dioscorides-pedanius> a crm:E39_Actor ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/app/2> .
+
+<https://w3id.org/changes/4/aldrovandi/col/fondo-storico-bertoloni> a crm:E24_Physical_Human-Made_Thing ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/app/3> .
+
+<https://w3id.org/changes/4/aldrovandi/dev/nikon-d7200-nikor-50mm> a crmdig:D8_Digital_Device ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/app/6> .
+
+<https://w3id.org/changes/4/aldrovandi/grp/unibo-ficlit> a crm:E74_Group ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/app/7> .
+
+<https://w3id.org/changes/4/aldrovandi/plc/bologna> a crm:E53_Place ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/app/4> .
+
+<https://w3id.org/changes/4/aldrovandi/psn/alice-bordignon> a crm:E21_Person ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/app/5> .
+
+<https://w3id.org/changes/4/aldrovandi/sfw/3df-zephyr> a crmdig:D14_Software ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/app/8> .
+
+<https://w3id.org/changes/4/aldrovandi/app/1> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Stampa" .
+
+<https://w3id.org/changes/4/aldrovandi/app/2> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Dioscorides Pedanius" .
+
+<https://w3id.org/changes/4/aldrovandi/app/3> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Fondo Storico Bertoloni" .
+
+<https://w3id.org/changes/4/aldrovandi/app/4> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Bologna" .
+
+<https://w3id.org/changes/4/aldrovandi/app/5> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Alice Bordignon" .
+
+<https://w3id.org/changes/4/aldrovandi/app/6> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Nikon D7200 Nikor 50mm" .
+
+<https://w3id.org/changes/4/aldrovandi/app/7> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Unibo Ficlit" .
+
+<https://w3id.org/changes/4/aldrovandi/app/8> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "3df Zephyr" .
+
+<https://w3id.org/changes/4/aldrovandi/typ/300041273> a crm:E55_Type ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/app/1> ;
+    crm:P70i_is_documented_in aat:300041273 .
+
