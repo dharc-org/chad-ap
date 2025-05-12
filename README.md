@@ -7,11 +7,14 @@ Issued on: 2024-04-16
 Authors: Barzaghi, Sebastian; Peroni, Silvio
 Contributors: Heibi, Ivan; Moretti, Arianna
 Available formats: JSON-LD, RDF/XML, N-Triples, Turtle
+DOI: https://doi.org/10.5281/zenodo.15391304
 License: http://creativecommons.org/licenses/by/4.0/
 Cite as: Barzaghi, S., Heibi, I., Moretti, A., Peroni, S. (2025). Developing Application Profiles for Enhancing Data and Workflows in Cultural Heritage Digitisation Processes. In "Demartini, G., et al. The Semantic Web – ISWC 2024". ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer, Cham. https://doi.org/10.1007/978-3-031-77847-6_11.
 ---
 
 # CHAD-AP
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15391304.svg)](https://doi.org/10.5281/zenodo.15391304)
 
 ## Introduction
 The _Cultural Heritage Acquisition and Digitisation Application Profile_ (CHAD-AP) is a OWL 2 DL-based metadata application profile of CIDOC CRM for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.

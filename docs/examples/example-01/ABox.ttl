@@ -1,236 +1,233 @@
 @prefix aat: <http://vocab.getty.edu/page/aat/> .
-@prefix ex: <https://w3id.org/dharc/ontology/chad-ap/data/example/> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
-@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/dharc/ontology/chad-ap/data/example/> .
 
-<https://w3id.org/dharc/ontology/chad-ap/data/example/> rdf:type owl:Ontology ;
+<https://w3id.org/changes/4/aldrovandi/> rdf:type owl:Ontology ;
     owl:imports <https://w3id.org/dharc/ontology/chad-ap/> .
 
 
-ex:32-exp-creation-00 a frbroo:F28_Expression_Creation ;
-    frbroo:R17_created ex:32-exp ;
+<https://w3id.org/changes/4/aldrovandi/32/wrk/00/1> a lrmoo:F1_Work ;
+    crm:P102_has_title <https://w3id.org/changes/4/aldrovandi/32/ttl/00/1> ,
+        <https://w3id.org/changes/4/aldrovandi/32/ttl/01/1> ;
+    lrmoo:R3_is_realised_in <https://w3id.org/changes/4/aldrovandi/32/exp/00/1> .
+
+<https://w3id.org/changes/4/aldrovandi/32/act/00/1> a lrmoo:F28_Expression_Creation ;
+    lrmoo:R17_created <https://w3id.org/changes/4/aldrovandi/32/exp/00/1> ;
     crm:P32_used_general_technique aat:300054196 ;
-    frbroo:R18_created ex:32-man ;
-    frbroo:R19_created_a_realisation_of ex:32-work ;
-    crm:P9_consists_of ex:32-exp-creation-01 .
+    lrmoo:R19_created_a_realisation_of <https://w3id.org/changes/4/aldrovandi/32/wrk/00/1> ;
+    crm:P9_consists_of <https://w3id.org/changes/4/aldrovandi/32/act/01/1> ,
+        <https://w3id.org/changes/4/aldrovandi/32/act/10/1> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/aldrovandi/tsp/00/1> .
 
-ex:32-exp-creation-01 a crm:E7_Activity ;
+<https://w3id.org/changes/4/aldrovandi/32/act/01/1> a crm:E7_Activity ;
     crm:P2_has_type aat:300054698 ;
-    crm:P14_carried_out_by ex:ulisse-aldrovandi .
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/ulisse_aldrovandi> .
 
-ex:32-exp a frbroo:F2_Expression ;
-    crm:P129_is_about ex:sub-ermafrodita.
+<https://w3id.org/changes/4/aldrovandi/32/act/10/1> a crm:E7_Activity ;
+    crm:P2_has_type aat:300054698 ;
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/luca_rossi> .
 
-ex:ulisse-aldrovandi a crm:E39_Actor ;
-    crm:P48_has_preferred_identifier <https://viaf.org/viaf/100190422/> .
+<https://w3id.org/changes/4/aldrovandi/32/exp/00/1> a lrmoo:F2_Expression ;
+    crm:P129_is_about <https://w3id.org/changes/4/aldrovandi/sub/ermafrodita> ,
+        <https://w3id.org/changes/4/aldrovandi/sub/umano> ;
+    lrmoo:R4i_is_embodied_in <https://w3id.org/changes/4/aldrovandi/32/man/00/1> .
 
-ex:32-man a frbroo:F4_Manifestation_Singleton ;
-    crm:P48_has_preferred_identifier ex:32-identifier-00 ,
-        ex:32-identifier-01 ;
+<https://w3id.org/changes/4/aldrovandi/acr/ulisse_aldrovandi> a crm:E39_Actor ;
+    crm:P70i_is_documented_in <http://vocab.getty.edu/page/ulan/500342675> .
+
+<https://w3id.org/changes/4/aldrovandi/tsp/00/1> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1500-01-01T00:00:00Z"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "1599-12-31T23:59:59Z"^^xsd:dateTime .
+
+<https://w3id.org/changes/4/aldrovandi/32/man/00/1> a lrmoo:F3_Manifestation ;
     crm:P2_has_type aat:300028569 ;
-    crm:P3_has_note "Essere umano ermafrodita Human hermaphrodite (Monstrum humanum hermaphroditicum) sec. XVI 16th century BUB, Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"^^rdfs:Literal ;
-    crm:P74_has_current_or_former_residence ex:bologna .
+    lrmoo:R7i_is_exemplified_by <https://w3id.org/changes/4/aldrovandi/32/itm/00/1> ;
+    crm:P130i_features_are_also_found_on <https://www.example.org> .
 
-ex:32-man-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:32-man ;
-    crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
+<https://w3id.org/changes/4/aldrovandi/32_parent/wrk/00/1> a lrmoo:F1_Work ;
+    lrmoo:R10_has_member <https://w3id.org/changes/4/aldrovandi/32/wrk/00/1> ;
+    lrmoo:R3_is_realised_in <https://w3id.org/changes/4/aldrovandi/32_parent/exp/00/1> .
 
-ex:32-identifier-00 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "32"^^rdfs:Literal ;
-    crm:P2_has_type aat:300312355 .
+<https://w3id.org/changes/4/aldrovandi/32_parent/exp/00/1> a lrmoo:F2_Expression ;
+    lrmoo:R4i_is_embodied_in <https://w3id.org/changes/4/aldrovandi/32_parent/mnf/00/1> .
 
-ex:32-identifier-01 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"^^rdfs:Literal ;
-    crm:P2_has_type aat:300404704 .
+<https://w3id.org/changes/4/aldrovandi/32_parent/mnf/00/1> a lrmoo:F3_Manifestation ;
+    crm:P2_has_type aat:300265632 .
 
-ex:32-identifier-02 a crm:E42_Identifier ;
-    crm:P19_has_symbolic_content "5"^^rdfs:Literal ;
-    crm:P2_has_type aat:300445021 .
+<https://w3id.org/changes/4/aldrovandi/sub/ermafrodita> a crm:E73_Information_Object ;
+    crm:P190_has_symbolic_content "ermafrodita"^^rdfs:Literal ;
+    crm:P2_has_type aat:300404126 .
 
-ex:32-curation a crm:E87_Curation_Activity ;
-    crm:P14_carried_out_by ex:bub ;
-    crm:P12_occurred_in_the_presence_of ex:32-man .
+<https://w3id.org/changes/4/aldrovandi/sub/umano> a crm:E73_Information_Object ;
+    crm:P190_has_symbolic_content "umano"^^rdfs:Literal ;
+    crm:P2_has_type aat:300404126 .
 
-ex:bub a crm:E39_Actor ;
-    crm:P74_has_current_or_former_residence ex:bologna .
+<https://w3id.org/changes/4/aldrovandi/32/itm/00/1> a lrmoo:F5_Item ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/32/idf/00/1> ,
+        <https://w3id.org/changes/4/aldrovandi/32/idf/01/1> ,
+        <https://w3id.org/changes/4/aldrovandi/32/idf/02/1> ;
+    crm:P3_has_note """
+        Essere umano ermafrodita 
+        Human hermaphrodite (Monstrum humanum hermaphroditicum) 
+        sec. XVI 
+        16th century 
+        BUB, 
+        Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86
+    """^^rdfs:Literal ;
+    crm:P130i_features_are_also_found_on <https://w3id.org/changes/4/aldrovandi/32/mdl/03/1> .
 
-ex:bologna a crm:E53_Place .
+<https://w3id.org/changes/4/aldrovandi/32/act/02/1> a crm:E7_Activity ;
+    crm:P2_has_type aat:300054277 ;
+    crm:P16_used_specific_object <https://w3id.org/changes/4/aldrovandi/32/itm/00/1> ;
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/bub> .
 
-ex:32-work-conception a frbroo:F27_Work_Conception ;
-    frbroo:R16_initiated ex:32-work ;
-    crm:P4_has_time-span ex:1500-1599 .
+<https://w3id.org/changes/4/aldrovandi/acr/bub> a crm:E39_Actor ;
+    crm:P74_has_current_or_former_residence <https://w3id.org/changes/4/aldrovandi/plc/bologna> .
 
-ex:1500-1599 a crm:E52_Time-Span ;
-    crm:P82_at_some_time_within "1500-1599"^^rdfs:Literal .
-
-ex:32-work a frbroo:F1_Work ;
-    crm:P102_has_title ex:32-work-title-00 ,
-        ex:32-work-title-01 .
-
-ex:32-work-title-00 a crm:E35_Title ;
+<https://w3id.org/changes/4/aldrovandi/32/ttl/00/1> a crm:E35_Title ;
     crm:P2_has_type aat:300417204 ;
     crm:P190_has_symbolic_content "Essere umano ermafrodita"@it .
 
-ex:32-work-title-01 a crm:E35_Title ;
+<https://w3id.org/changes/4/aldrovandi/32/ttl/01/1> a crm:E35_Title ;
     crm:P2_has_type aat:300417207 ;
     crm:P190_has_symbolic_content "Essere umano ermafrodita"@it ,
         "Human hermaphrodite"@en .
 
-ex:tavole-di-animali-work a frbroo:F15_Complex_Work ;
-    frbroo:R10_has_member ex:32-work ;
-    crm:P2_has_type aat:300265632 .
+<https://w3id.org/changes/4/aldrovandi/acr/unibo_ficlit> a crm:E74_Group .
 
-ex:sub-ermafrodita a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300404126 .
-
-ex:alice-bordignon a crm:E21_Person .
-
-ex:unibo-ficlit a crm:E74_Group .
-
-ex:panasonic-dmc-lx100 a crmdig:D8_Digital_Device ;
+<https://w3id.org/changes/4/aldrovandi/dev/panasonic_dmc_lx100> a crmdig:D8_Digital_Device ;
     crm:P2_has_type aat:300266792 .
 
-ex:32-acq a crmdig:D2_Digitization_Process ;
-    crmdig:L1_digitized ex:32-man ;
-    crmdig:L11_had_output ex:32-acq-output ;
-    crm:P4_has_time-span ex:32-acq-timespan ;
-    crm:P11_had_participant ex:unibo-ficlit ;
-    crm:P14_carried_out_by ex:alice-bordignon ;
+<https://w3id.org/changes/4/aldrovandi/32/act/03/1> a crmdig:D2_Digitization_Process ;
+    crmdig:L1_digitized <https://w3id.org/changes/4/aldrovandi/32/itm/00/1> ;
+    crmdig:L11_had_output <https://w3id.org/changes/4/aldrovandi/32/mdl/00/1> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/aldrovandi/tsp/01/1> ;
+    crm:P11_had_participant <https://w3id.org/changes/4/aldrovandi/acr/unibo_ficlit> ;
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/alice_bordignon> ;
     crm:P32_used_general_technique aat:300391312 ;
-    crm:P16_used_specific_object ex:panasonic-dmc-lx100 .
+    crm:P16_used_specific_object <https://w3id.org/changes/4/aldrovandi/dev/panasonic_dmc_lx100> .
 
-ex:3df-zephyr a crmdig:D14_Software ;
+<https://w3id.org/changes/4/aldrovandi/sfw/3df_zephyr> a crmdig:D14_Software ;
     crm:P2_has_type aat:300426696 .
 
-ex:32-proc a crmdig:D10_Software_Execution ;
+<https://w3id.org/changes/4/aldrovandi/32/act/04/1> a crmdig:D10_Software_Execution ;
     crm:P2_has_type aat:300054636 ;
-    crmdig:L10_had_input ex:32-acq-output ;
-    crmdig:L11_had_output ex:32-proc-output ;
-    crm:P4_has_time-span ex:32-proc-timespan ;
-    crm:P11_had_participant ex:unibo-ficlit ;
-    crm:P14_carried_out_by ex:alice-bordignon ;
-    crmdig:L23_used_software_or_firmware ex:3df-zephyr .
+    crmdig:L10_had_input <https://w3id.org/changes/4/aldrovandi/32/mdl/00/1> ;
+    crmdig:L11_had_output <https://w3id.org/changes/4/aldrovandi/32/mdl/01/1> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/aldrovandi/tsp/02/1> ;
+    crm:P11_had_participant <https://w3id.org/changes/4/aldrovandi/acr/unibo_ficlit> ;
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/alice_bordignon> ;
+    crmdig:L23_used_software_or_firmware <https://w3id.org/changes/4/aldrovandi/sfw/3df_zephyr> .
 
-ex:blender a crmdig:D14_Software ;
+<https://w3id.org/changes/4/aldrovandi/sfw/blender> a crmdig:D14_Software ;
     crm:P2_has_type aat:300426696 .
 
-ex:32-mod a crmdig:D10_Software_Execution ;
+<https://w3id.org/changes/4/aldrovandi/32/act/05/1> a crmdig:D10_Software_Execution ;
     crm:P2_has_type aat:300391447 ;
-    crmdig:L10_had_input ex:32-proc-output ;
-    crmdig:L11_had_output ex:32-mod-output ;
-    crm:P4_has_time-span ex:32-mod-timespan ;
-    crm:P11_had_participant ex:unibo-ficlit ;
-    crm:P14_carried_out_by ex:alice-bordignon ;
-    crmdig:L23_used_software_or_firmware ex:blender .
+    crmdig:L10_had_input <https://w3id.org/changes/4/aldrovandi/32/mdl/01/1> ;
+    crmdig:L11_had_output <https://w3id.org/changes/4/aldrovandi/32/mdl/02/1> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/aldrovandi/tsp/03/1> ;
+    crm:P11_had_participant <https://w3id.org/changes/4/aldrovandi/acr/unibo_ficlit> ;
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/alice_bordignon> ;
+    crmdig:L23_used_software_or_firmware <https://w3id.org/changes/4/aldrovandi/sfw/blender> .
 
-ex:instantmeshes a crmdig:D14_Software ;
+<https://w3id.org/changes/4/aldrovandi/sfw/instant_meshes> a crmdig:D14_Software ;
     crm:P2_has_type aat:300426696 .
 
-ex:32-opt a crmdig:D10_Software_Execution ;
+<https://w3id.org/changes/4/aldrovandi/32/act/06/1> a crmdig:D10_Software_Execution ;
     crm:P2_has_type aat:300386427 ;
-    crmdig:L10_had_input ex:32-mod-output ;
-    crmdig:L11_had_output ex:32-opt-output ;
-    crm:P4_has_time-span ex:32-opt-timespan ;
-    crm:P11_had_participant ex:unibo-ficlit ;
-    crm:P14_carried_out_by ex:alice-bordignon ;
-    crmdig:L23_used_software_or_firmware ex:instantmeshes ,
-        ex:3df-zephyr .
+    crmdig:L10_had_input <https://w3id.org/changes/4/aldrovandi/32/mdl/02/1> ;
+    crmdig:L11_had_output <https://w3id.org/changes/4/aldrovandi/32/mdl/03/1> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/aldrovandi/tsp/04/1> ;
+    crm:P11_had_participant <https://w3id.org/changes/4/aldrovandi/acr/unibo_ficlit> ;
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/alice_bordignon> ;
+    crmdig:L23_used_software_or_firmware <https://w3id.org/changes/4/aldrovandi/sfw/instant_meshes>, <https://w3id.org/changes/4/aldrovandi/sfw/3df_zephyr> .
 
-ex:32-exp a crmdig:D10_Software_Execution ;
+<https://w3id.org/changes/4/aldrovandi/32/act/07/1> a crmdig:D10_Software_Execution ;
     crm:P2_has_type aat:300417260 ;
-    crmdig:L10_had_input ex:32-opt-output ;
-    crmdig:L11_had_output ex:32-exp-output ;
-    crm:P4_has_time-span ex:32-exp-timespan ;
-    crm:P11_had_participant ex:unibo-ficlit ;
-    crm:P14_carried_out_by ex:alice-bordignon ;
-    crmdig:L23_used_software_or_firmware ex:blender .
+    crmdig:L10_had_input <https://w3id.org/changes/4/aldrovandi/32/mdl/03/1> ;
+    crmdig:L11_had_output <https://w3id.org/changes/4/aldrovandi/32/mdl/04/1> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/aldrovandi/32/tsp/05/1> ;
+    crm:P11_had_participant <https://w3id.org/changes/4/aldrovandi/acr/unibo_ficlit> ;
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/alice_bordignon> ;
+    crmdig:L23_used_software_or_firmware <https://w3id.org/changes/4/aldrovandi/sfw/blender> .
 
-ex:32-upl a crmdig:D10_Software_Execution ;
-    crm:P2_has_type aat:300155365 ;
-    crmdig:L10_had_input ex:32-exp-output ;
-    crmdig:L11_had_output ex:32-upl-output ;
-    crm:P4_has_time-span ex:32-upl-timespan ;
-    crm:P11_had_participant ex:unibo-ficlit ;
-    crm:P14_carried_out_by ex:alice-bordignon ;
-    crmdig:L23_used_software_or_firmware ex:nextcloud ,
-        ex:aton .
+<https://w3id.org/changes/4/aldrovandi/32/act/08/1> a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300417260 ;
+    crmdig:L10_had_input <https://w3id.org/changes/4/aldrovandi/32/mdl/04/1> ;
+    crmdig:L11_had_output <https://w3id.org/changes/4/aldrovandi/32/mdl/05/1> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/aldrovandi/32/tsp/06/1> ;
+    crm:P11_had_participant <https://w3id.org/changes/4/aldrovandi/acr/unibo_ficlit> ;
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/alice_bordignon> ;
+    crmdig:L23_used_software_or_firmware <https://w3id.org/changes/4/aldrovandi/sfw/blender> .
 
-ex:nextcloud a crmdig:D14_Software ;
-    crm:P2_has_type aat:300426696 .
+<https://w3id.org/changes/4/aldrovandi/32/act/09/1> a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300417260 ;
+    crmdig:L10_had_input <https://w3id.org/changes/4/aldrovandi/32/mdl/05/1> ;
+    crmdig:L11_had_output <https://w3id.org/changes/4/aldrovandi/32/mdl/06/1> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/aldrovandi/32/tsp/07/1> ;
+    crm:P11_had_participant <https://w3id.org/changes/4/aldrovandi/acr/unibo_ficlit> ;
+    crm:P14_carried_out_by <https://w3id.org/changes/4/aldrovandi/acr/alice_bordignon> ;
+    crmdig:L23_used_software_or_firmware <https://w3id.org/changes/4/aldrovandi/sfw/blender> .
 
-ex:aton a crmdig:D14_Software ;
-    crm:P2_has_type aat:300426696 .
+<https://w3id.org/changes/4/aldrovandi/acr/alice_bordignon> a crm:E21_Person .
 
-ex:32-acq-output a crmdig:D9_Data_Object .
+<https://w3id.org/changes/4/aldrovandi/32/mdl/00/1> a crmdig:D9_Data_Object .
 
-ex:32-proc-output a crmdig:D9_Data_Object .
+<https://w3id.org/changes/4/aldrovandi/32/mdl/01/1> a crmdig:D9_Data_Object .
 
-ex:32-mod-output a crmdig:D9_Data_Object .
+<https://w3id.org/changes/4/aldrovandi/32/mdl/02/1> a crmdig:D9_Data_Object .
 
-ex:32-opt-output a crmdig:D9_Data_Object .
+<https://w3id.org/changes/4/aldrovandi/32/mdl/03/1> a crmdig:D9_Data_Object ;
+    crm:P130_shows_features_of <https://www.example.com> .
 
-ex:32-exp-output a crmdig:D9_Data_Object .
+<https://w3id.org/changes/4/aldrovandi/32/mdl/04/1> a crmdig:D9_Data_Object .
 
-ex:32-upl-output a crmdig:D9_Data_Object .
+<https://w3id.org/changes/4/aldrovandi/32/mdl/05/1> a crmdig:D9_Data_Object .
 
-ex:32-acq-output-license a crm:E73_Information_Object ;
+<https://w3id.org/changes/4/aldrovandi/32/mdl/06/1> a crmdig:D9_Data_Object ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/32/idf/04/1> .
+
+<https://w3id.org/changes/4/aldrovandi/32/idf/04/1> a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "https://aton.ispc.cnr.it/s/aldrovandi/20240321-kfhnvfaof"^^rdfs:Literal .
+
+<https://w3id.org/changes/4/aldrovandi/32/lic/06/1> a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:32-acq-output ;
+    crm:P67_refers_to <https://w3id.org/changes/4/aldrovandi/32/mdl/06/1> ;
     crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
-ex:32-proc-output-license a crm:E73_Information_Object ;
+
+<https://w3id.org/changes/4/aldrovandi/56/itm/00/1> a lrmoo:F5_Item ;
+    crm:P130i_features_are_also_found_on <https://w3id.org/changes/4/aldrovandi/56/mdl/04/1> .
+
+<https://w3id.org/changes/4/aldrovandi/56/act/05/1> a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300417260 ;
+    crmdig:L10_had_input <https://w3id.org/changes/4/aldrovandi/56/mdl/04/1> ;
+    crmdig:L11_had_output <https://w3id.org/changes/4/aldrovandi/56/mdl/05/1> .
+
+<https://w3id.org/changes/4/aldrovandi/56/act/06/1> a crmdig:D10_Software_Execution ;
+    crm:P2_has_type aat:300417260 ;
+    crmdig:L10_had_input <https://w3id.org/changes/4/aldrovandi/56/mdl/05/1> ;
+    crmdig:L11_had_output <https://w3id.org/changes/4/aldrovandi/56/mdl/06/1> .
+
+<https://w3id.org/changes/4/aldrovandi/56/mdl/06/1> a crmdig:D9_Data_Object ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/aldrovandi/56/idf/04/1> .
+
+<https://w3id.org/changes/4/aldrovandi/56/idf/04/1> a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "https://aton.ispc.cnr.it/s/aldrovandi/bfbfbfbfbfbfbfb-jhjhjhjhjhj"^^rdfs:Literal .
+
+<https://w3id.org/changes/4/aldrovandi/56/lic/06/1> a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:32-proc-output ;
+    crm:P67_refers_to <https://w3id.org/changes/4/aldrovandi/56/mdl/06/1> ;
     crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
 
-ex:32-mod-output-license a crm:E73_Information_Object ;
+<https://w3id.org/changes/4/aldrovandi/56/lic/05/1> a crm:E73_Information_Object ;
     crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:32-mod-output ;
+    crm:P67_refers_to <https://w3id.org/changes/4/aldrovandi/56/mdl/05/1> ;
     crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
-
-ex:32-opt-output-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:32-opt-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
-
-ex:32-exp-output-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:32-exp-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
-
-ex:32-upl-output-license a crm:E73_Information_Object ;
-    crm:P2_has_type aat:300435434 ;
-    crm:P67_refers_to ex:32-upl-output ;
-    crm:P70i_is_documented_in <https://creativecommons.org/licenses/by-nc/4.0/> .
-
-ex:32-acq-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-08T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-08T23:59:59Z"^^xsd:dateTime .
-
-ex:32-proc-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-10T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-10T23:59:59Z"^^xsd:dateTime .
-
-ex:32-mod-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-17T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-18T23:59:59Z"^^xsd:dateTime .
-
-ex:32-opt-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-18T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .
-
-ex:32-exp-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-19T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .
-
-ex:32-upl-timespan a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-19T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .
