@@ -1,6 +1,6 @@
 <h2>Description</h2>
 <p>The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the <em>Object Module</em> (OM), dedicated to describing the CHOs, and the <em>Process Module</em> (PM), for describing the acquisition and digitisation process.</p>
-<p>Both CHAD-AP and its <a href="https://w3id.org/dharc/ontology/chad-ap">documentation</a> are living artefacts that have been drafted in the context of the <a href="https://sites.google.com/uniroma1.it/changes/">Project CHANGES</a> ("Cultural Heritage Active Innovation For Next-Gen Sustainable Society"), an EU-funded project that aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.</p>
+<p>Both CHAD-AP and its <a href="https://w3id.org/dharc/ontology/chad-ap">documentation</a> are living artefacts that have been drafted in the context of the <a href="https://sites.google.com/uniroma1.it/changes/">Project CHANGES</a> (\"Cultural Heritage Active Innovation For Next-Gen Sustainable Society\"), an EU-funded project that aims at increasing, at the Italian level, the curation, and management of cultural heritage artefacts in all forms, expanding the involvement of the general public, making more sustainable the exhibition potential, and including crucial social functions (accessibility, inclusiveness, critical thinking, participation, enjoyment, sustainability) into the cultural heritage environment.</p>
 <p>Currently, CHAD-AP is able to describe the following entities:
 * CHOs, described according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. In particular, CHAD-AP considers: the essence or conceptualisation of the CHO (<em>Work</em>); the intellectual content of the CHO (<em>Expression</em>); the embodiment of the CHO in terms of its format (<em>Manifestation</em>); and the physical exemplar of the CHO (<em>Item</em>);
 * Activities, events, agents involved and their roles;
@@ -19,18 +19,20 @@
 <p>The next subsections provide a quick overview of all the entities defined, some exemple of usage, and some of the queries that CHAD-AP can answer.</p>
 <h3>Object Module (OM)</h3>
 <p>As shown in the diagram below, a Cultural Heritage Object (CHO) is described in CHAD-AP according to the Functional Requirements for Bibliographic Records (FRBR) data model, which uses several descriptive layers for its representation. </p>
-<p><img alt="A diagram of the CHAD-AP Object Module (OM)." src="diagrams/chad-ap-object.png" /></p>
+<p><img alt="A diagram of the CHAD-AP Object Module (OM)." src="diagrams/object-model.png" /></p>
 <p>In particular, the <em>Work</em> (<code>lrmoo:F1_Work</code>) represents the <em>essence</em> or conceptualization of the CHO. Each work is associated with a series of titles (<code>crm:E35_Title</code>), each classified according to a particular type (<code>crm:E55_Type</code>), which can be an <em>original title</em> (<code>aat:300417204</code>) or an <em>exhibition title</em> (<code>aat:300417207</code>). Furthermore, a Work can be part of a larger Work, like a series of printed volumes, which is classified under a particular type (<code>crm:E55_Type</code>).</p>
 <p>The <em>Expression</em> (<code>lrmoo:F2_Expression</code>) is the realisation of a Work, and refers to the intellectual <em>content</em> of the object. Both the Expression and the Work are generated through a creation event (<code>lrmoo:F28_Expression_Creation</code>) occurring within a specific time span (<code>crm:E52_Time-Span</code>), which can be expressed as either a precisely defined period with exact starting and ending date times (<code>crm:P82a_begin_of_the_begin</code> and <code>crm:P82b_end_of_the_end</code>) or a fuzzy label if its temporal extents are not precisely known (<code>crm:P82_at_some_time_within</code>). A creation event is made of smaller activities (<code>crm:E7_Activity</code>), each conducted by one or more agents (<code>crm:E39_Actor</code>) and characterised by a specific type (<code>crm:E55_Type</code>) that defines, implicitly, the role assumed by the agent for that activity. For example, if the agent is identified as the author of the Expression, the activity type is represented as <em>writing</em> (<code>aat:300054698</code>). Also, creation events employ various creation techniques (<code>crm:E55_Type</code>). For example, <code>aat:300054196</code> is used to express <em>drawing technique</em>. An Expression can also be associated with one or more subjects defining its contents. In CHAD-AP, a generic <em>concept</em> is represented with the class <code>crm:E73_Information_Object</code> with the type <code>aat:300404126</code> (i.e. <em>subject</em>) explicitly specified.</p>
-<p>The <em>Manifestation</em> (<code>lrmoo:F3_Manifestation</code>) represents the embodiment of the CHO\'s content in a physical format. It is characterised by having a type (<code>crm:E55_Type</code>). In addition, Manifestations are associated with copyright or licensing statements (represented through the combination of <code>crm:E73_Information_Object</code> having type <code>aat:300435434</code>, i.e.  <em>copyright/licensing statement</em>), linked with the document introducing the actual license or right statements through the property <code>crm:P70i_is_documented_in</code>. Manifestations may also have existing digital representations: a digital resource such as this serves as a copy of the CHO at the Manifestation level, and is linked to it through the property <code>crm:P130i_features_are_also_found_on</code>.</p>
+<p>The <em>Manifestation</em> (<code>lrmoo:F3_Manifestation</code>) represents the embodiment of the CHO's content in a physical format. It is characterised by having a type (<code>crm:E55_Type</code>). In addition, Manifestations are associated with copyright or licensing statements (represented through the combination of <code>crm:E73_Information_Object</code> having type <code>aat:300435434</code>, i.e.  <em>copyright/licensing statement</em>), linked with the document introducing the actual license or right statements through the property <code>crm:P70i_is_documented_in</code>. Manifestations may also have existing digital representations: a digital resource such as this serves as a copy of the CHO at the Manifestation level, and is linked to it through the property <code>crm:P130i_features_are_also_found_on</code>.</p>
 <p>Finally, the <em>Item</em> (<code>lrmoo:F5_Item</code>) represents the physical, localised exemplar of the CHO. It is accompanied with descriptive components like labels (expressed through the use of the property <code>crm:P3_has_note</code>) and identifiers (<code>crm:E42_Identifier</code>, each with its own content and type). Items can depict the content (<code>lrmoo:F2_Expression</code>) of another CHO. Sometimes, an Item may be linked to a curation activity (represented through the combination of <code>crm:E7_Activity</code> with type <code>aat:300054277</code>, i.e. <em>curating</em>) carried out by a keeper (<code>crm:E39_Actor</code>) who manages a collection (<code>crm:E24_Physical_Human-Made_Thing</code> with type <code>aat:300025976</code>, i.e. <em>collections</em>) to which the object belongs, located in a specific place (<code>crm:E53_Place</code>). An Item can also be composed of (<code>crm:P46_is_composed_of</code>) other Items. Finally, an Item can be related to an existing resource serving as a copy of it (e.g. an existing 3D model published on some repository) through the property <code>crm:P130i_features_are_also_found_on</code>.</p>
-<p>Whenever possible, instances of <code>crm:E39_Actor</code> and <code>crm:E53_Place</code> are also linked with existing authority records through the property <code>crm:P1_is_identified_by</code>.</p>
+<p>Instances of <code>crm:E39_Actor</code>, <code>crm:E53_Place</code>, <code>crm:E24_Physical_Human-Made_Thing</code>, <code>crm:E73_Information_Object</code> and <code>crm:E55_Type</code> can be identified with names or other human-readable labels (<code>crm:E41_Appellation</code>) through the property <code>crm:P1_is_identified_by</code>.</p>
+<p>Whenever possible, instances of <code>crm:E39_Actor</code> and <code>crm:E53_Place</code> are also linked with existing authority records through the property <code>crm:P70i_is_documented_by</code>.</p>
 <h3>Process Module (PM)</h3>
 <p>As shown in the diagram below, CHAD-AP also describes the entities for defining a 3D digitisation workflow as a sequence of activities classified according to two main categories. </p>
-<p><img alt="A diagram of the CHAD-AP Process Module (PM)." src="diagrams/chad-ap-process.png" /></p>
+<p><img alt="A diagram of the CHAD-AP Process Module (PM)." src="diagrams/process-model.png" /></p>
 <p>On the one hand, we have the <em>acquisition activity</em> (<code>crmdig:D2_Digitization_Process</code>), which involves the digitisation of a CHO at the Item level(<code>lrmoo:F5_Item</code>) to produce a Digital CHO (DCHO) (<code>crmdig:D9_Data_Object</code>). Similarly to its physical counterpart, the DCHO can be associated with copyright statements or licenses (<code>crm:E73_Information_Object</code> with <code>aat:300435434</code> as its type). The acquisition occurs within a time span (<code>crm:E52_Time-Span</code>) with defined starting and ending date times, and engages various agents, including individuals (<code>crm:E21_Person</code>) and institutions (<code>crm:E74_Group</code>) responsible for the activity. During the acquisition, a series of techniques (<code>crm:E55_Type</code>) can be used, such as <em>photogrammetry</em> (<code>aat:300053580</code>) or <em>structured light scanning</em> (<code>aat:300391312</code>), along with tools (<code>crmdig:D8_Digital_Device</code>) like <em>digital cameras</em> (<code>aat:300266792</code>) and <em>structured light scanners</em> (<code>aat:300429747</code>).</p>
 <p>On the other hand, we have a series of <em>software activities</em> (<code>crmdig:D10_Software_Execution</code>), each representing a specific stage or phase of digitisation workflow. Such stage is denoted by its type (<code>crm:E55_Type</code>), such as <em>processing</em> (<code>aat:300054636</code>), <em>modelling</em> (<code>aat:300391447</code>), and <em>optimization</em> (<code>aat:300386427</code>). It involves the manipulation of the DCHO (<code>crmdig:D9_Data_Object</code>) produced previously as input and the production of a modified version of that DCHO (<code>crmdig:D9_Data_Object</code>) as output. The activity also occurs within a defined time span (<code>crm:E52_Time-Span</code>) with precise start and end date times, engages various agents, including individuals (<code>crm:E21_Person</code>) and institutions (<code>crm:E74_Group</code>), and uses software as tools to produce its output (<code>crmdig:D14_Software</code>).</p>
 <p>A DCHO can be related to another existing digital model (<code>crmdig:D9_Data_Object</code>) that had been used as a basis to produce the former, instead of acquiring the CHO directly. In this case, the DCHO and the existing model are linked through the property <code>crm:P130_shows_features_of</code>.</p>
+<p>Instances of <code>crm:E21_Person</code>, <code>crm:E74_Group</code>, <code>crmdig:D14_Software</code>, <code>crmdig:D8_Digital_Device</code> and <code>crmdig:D9_Data_Object</code> can be identified with names or other human-readable labels (<code>crm:E41_Appellation</code>) through the property <code>crm:P1_is_identified_by</code>.</p>
 <h2>Examples of use</h2>
 <p>CHAD-AP can be used for modelling  scenarios related to cultural heritage acquisition and digitisation processes. In the following subsections we introduce some of them, and we accompany them with exemplar instantiations. </p>
 <p>The prefixes that are used in all the examples provided below are defined as follows:</p>
@@ -46,10 +48,10 @@
 </code></pre>
 <h3>Scenario</h3>
 <p>The creation event <code>32/act/1</code> created the work <code>32/wrk/1</code> and its expression <code>32/exp/1</code> within a time span ranging from 1500 to 1599. The creation event is carried out through the <code>drawing</code> technique and consists of an activity <code>32/act/1-01</code>, carried out by <code>ulisse-aldrovandi</code> (ULAN:<code>500342675</code>) as a creator of the work.</p>
-<p><code>32/wrk/1</code> has two titles: <code>32/ttl/1</code> with type <code>original-title</code> ("Essere umano ermafrodita"), and <code>32/ttl/2</code> with type <code>exhibition-title</code> ("Essere umano ermafrodita" and "Human hermaphrodite"). It is member of another work <code>tavole-di-animali-work</code>, whose manifestation has <code>print-volume</code> as its type. It is realised in <code>32/exp/1</code>.</p>
+<p><code>32/wrk/1</code> has two titles: <code>32/ttl/1</code> with type <code>original-title</code> (\"Essere umano ermafrodita\"), and <code>32/ttl/2</code> with type <code>exhibition-title</code> (\"Essere umano ermafrodita\" and \"Human hermaphrodite\"). It is member of another work <code>tavole-di-animali-work</code>, whose manifestation has <code>print-volume</code> as its type. It is realised in <code>32/exp/1</code>.</p>
 <p><code>32/exp/1</code> is about the concept <code>ermafrodita</code>. It is embodied in the manifestation <code>32/mnf/1</code>.</p>
-<p><code>32/mnf/1</code> has <code>manuscript</code> as its type. It is referred to by a license statement <code>32/lic/1</code> documented in the external document "http://rightsstatements.org/vocab/InC/1.0/". It is exemplified by <code>32/itm/1</code>.</p>
-<p><code>32/itm/1</code> is identified by three identifiers: <code>32/itm/1-identifier-01</code> ("32") with type <code>collection-id</code>; <code>32/itm/1-identifier-02</code> ("5") with type <code>volume-number</code>; and <code>32/itm/1-identifier-03</code> ("Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86") with type <code>shelf-mark</code>. The item is used in a curation activity <code>32/act/3</code> carried out by <code>bub</code>. Its description reads: "Essere umano ermafrodita Human hermaphrodite (Monstrum humanum hermaphroditicum) sec. XVI 16th century BUB, Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86".</p>
+<p><code>32/mnf/1</code> has <code>manuscript</code> as its type. It is referred to by a license statement <code>32/lic/1</code> documented in the external document \"http://rightsstatements.org/vocab/InC/1.0/\". It is exemplified by <code>32/itm/1</code>.</p>
+<p><code>32/itm/1</code> is identified by three identifiers: <code>32/itm/1-identifier-01</code> (\"32\") with type <code>collection-id</code>; <code>32/itm/1-identifier-02</code> (\"5\") with type <code>volume-number</code>; and <code>32/itm/1-identifier-03</code> (\"Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86\") with type <code>shelf-mark</code>. The item is used in a curation activity <code>32/act/3</code> carried out by <code>bub</code>. Its description reads: \"Essere umano ermafrodita Human hermaphrodite (Monstrum humanum hermaphroditicum) sec. XVI 16th century BUB, Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86\".</p>
 <pre><code>&lt;https://w3id.org/changes/4/aldrovandi/32/act/1&gt; a lrmoo:F28_Expression_Creation ;
     crm:P9_consists_of &lt;https://w3id.org/changes/4/aldrovandi/32/act/2&gt; ;
     crm:P32_used_general_technique aat:300054196 ;
@@ -65,8 +67,8 @@
     crm:P70i_is_documented_in &lt;http://vocab.getty.edu/page/ulan/500342675&gt; .
 
 &lt;https://w3id.org/changes/4/aldrovandi/tsp/1&gt; a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "1500-01-01T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "1599-12-31T23:59:59Z"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin \"1500-01-01T00:00:00Z\"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end \"1599-12-31T23:59:59Z\"^^xsd:dateTime .
 
 &lt;https://w3id.org/changes/4/aldrovandi/32/wrk/1&gt; a lrmoo:F1_Work ;
     crm:P102_has_title &lt;https://w3id.org/changes/4/aldrovandi/32/ttl/1&gt; ,
@@ -75,12 +77,12 @@
 
 &lt;https://w3id.org/changes/4/aldrovandi/32/ttl/1&gt; a crm:E35_Title ;
     crm:P2_has_type aat:300417204 ;
-    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it .
+    crm:P190_has_symbolic_content \"Essere umano ermafrodita\"@it .
 
 &lt;https://w3id.org/changes/4/aldrovandi/32/ttl/2&gt; a crm:E35_Title ;
     crm:P2_has_type aat:300417207 ;
-    crm:P190_has_symbolic_content "Essere umano ermafrodita"@it ,
-        "Human hermaphrodite"@en .
+    crm:P190_has_symbolic_content \"Essere umano ermafrodita\"@it ,
+        \"Human hermaphrodite\"@en .
 
 &lt;https://w3id.org/changes/4/aldrovandi/32/exp/1&gt; a lrmoo:F2_Expression ;
     crm:P129_is_about &lt;https://w3id.org/changes/4/aldrovandi/sub/ermafrodita&gt; ;
@@ -115,26 +117,26 @@
     crm:P1_is_identified_by &lt;https://w3id.org/changes/4/aldrovandi/32/idf/1&gt; ,
         &lt;https://w3id.org/changes/4/aldrovandi/32/idf/2&gt; ,
         &lt;https://w3id.org/changes/4/aldrovandi/32/idf/3&gt; ;
-    crm:P3_has_note """
+    crm:P3_has_note \"\"\"
         Essere umano ermafrodita 
         Human hermaphrodite (Monstrum humanum hermaphroditicum) 
         sec. XVI 
         16th century 
         BUB, 
         Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86
-    """^^rdfs:Literal .
+    \"\"\"^^rdfs:Literal .
 
 &lt;https://w3id.org/changes/4/aldrovandi/32/idf/1&gt; a crm:E42_Identifier ;
     crm:P2_has_type aat:300312355 ;
-    crm:P190_has_symbolic_content "32"^^rdfs:Literal .
+    crm:P190_has_symbolic_content \"32\"^^rdfs:Literal .
 
 &lt;https://w3id.org/changes/4/aldrovandi/32/idf/2&gt; a crm:E42_Identifier ;
     crm:P2_has_type aat:300445021 ;
-    crm:P190_has_symbolic_content "5"^^rdfs:Literal .
+    crm:P190_has_symbolic_content \"5\"^^rdfs:Literal .
 
 &lt;https://w3id.org/changes/4/aldrovandi/32/idf/3&gt; a crm:E42_Identifier ;
     crm:P2_has_type aat:300404704 ;
-    crm:P190_has_symbolic_content "Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86"^^rdfs:Literal .
+    crm:P190_has_symbolic_content \"Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86\"^^rdfs:Literal .
 
 &lt;https://w3id.org/changes/4/aldrovandi/32/act/3&gt; a crm:E7_Activity ;
     crm:P2_has_type aat:300054277 ;
@@ -247,24 +249,24 @@
     crm:P70i_is_documented_in &lt;https://creativecommons.org/licenses/by-nc/4.0/&gt; .
 
 &lt;https://w3id.org/changes/4/aldrovandi/tsp/2&gt; a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-08T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-08T23:59:59Z"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin \"2023-05-08T00:00:00Z\"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end \"2023-05-08T23:59:59Z\"^^xsd:dateTime .
 
 &lt;https://w3id.org/changes/4/aldrovandi/tsp/3&gt; a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-10T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-10T23:59:59Z"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin \"2023-05-10T00:00:00Z\"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end \"2023-05-10T23:59:59Z\"^^xsd:dateTime .
 
 &lt;https://w3id.org/changes/4/aldrovandi/tsp/3&gt; a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-17T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-18T23:59:59Z"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin \"2023-05-17T00:00:00Z\"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end \"2023-05-18T23:59:59Z\"^^xsd:dateTime .
 
 &lt;https://w3id.org/changes/4/aldrovandi/tsp/4&gt; a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-18T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin \"2023-05-18T00:00:00Z\"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end \"2023-05-19T23:59:59Z\"^^xsd:dateTime .
 
 &lt;https://w3id.org/changes/4/aldrovandi/tsp/5&gt; a crm:E52_Time-Span ;
-    crm:P82a_begin_of_the_begin "2023-05-19T00:00:00Z"^^xsd:dateTime ;
-    crm:P82b_end_of_the_end "2023-05-19T23:59:59Z"^^xsd:dateTime .
+    crm:P82a_begin_of_the_begin \"2023-05-19T00:00:00Z\"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end \"2023-05-19T23:59:59Z\"^^xsd:dateTime .
 </code></pre>
 <h3>Competency questions</h3>
 <p>CHAD-AP can be used for answering several questions related to the acquisition and digitisation of cultural heritage objects. In the following subsections we introduce some of them, and we accompany them with exemplar SPARQL queries. </p>
@@ -329,7 +331,7 @@ WHERE {
     crm:P1_is_identified_by ?identifier1 ,
         ?identifier2 .
     ?identifier1 crm:P2_has_type aat:300312355 ;
-        crm:P190_has_symbolic_content "32"^^rdfs:Literal .
+        crm:P190_has_symbolic_content \"32\"^^rdfs:Literal .
     ?identifier2 crm:P2_has_type aat:300404704 ;
         crm:P190_has_symbolic_content ?identifier_text.
 }
@@ -402,7 +404,7 @@ WHERE {
 }
 </code></pre>
 <h4>Question 12</h4>
-<p>What is the CHO digitized and the DCHO produced by an acquisition activity? What is the latter\'s license?</p>
+<p>What is the CHO digitized and the DCHO produced by an acquisition activity? What is the latter's license?</p>
 <pre><code>SELECT ?input ?output ?license_link
 WHERE {
     ?activity a crmdig:D2_Digitization_Process ;

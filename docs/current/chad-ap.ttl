@@ -7,7 +7,7 @@
 @base <https://w3id.org/dharc/ontology/chad-ap#> .
 
 <https://w3id.org/dharc/ontology/chad-ap> rdf:type owl:Ontology ;
-                                           owl:versionIRI <https://w3id.org/dharc/ontology/chad-ap/2.0.1> ;
+                                           owl:versionIRI <https://w3id.org/dharc/ontology/chad-ap/2.0.3> ;
                                            <http://purl.org/dc/elements/1.1/abstract> "A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format."@en ;
                                            <http://purl.org/dc/elements/1.1/contributor> "Heibi, Ivan" ,
                                                                                          "Moretti, Arianna" ;
@@ -54,7 +54,10 @@ The _Manifestation_ (`lrmoo:F3_Manifestation`) represents the embodiment of the 
 
 Finally, the _Item_ (`lrmoo:F5_Item`) represents the physical, localised exemplar of the CHO. It is accompanied with descriptive components like labels (expressed through the use of the property `crm:P3_has_note`) and identifiers (`crm:E42_Identifier`, each with its own content and type). Items can depict the content (`lrmoo:F2_Expression`) of another CHO. Sometimes, an Item may be linked to a curation activity (represented through the combination of `crm:E7_Activity` with type `aat:300054277`, i.e. _curating_) carried out by a keeper (`crm:E39_Actor`) who manages a collection (`crm:E24_Physical_Human-Made_Thing` with type `aat:300025976`, i.e. _collections_) to which the object belongs, located in a specific place (`crm:E53_Place`). An Item can also be composed of (`crm:P46_is_composed_of`) other Items. Finally, an Item can be related to an existing resource serving as a copy of it (e.g. an existing 3D model published on some repository) through the property `crm:P130i_features_are_also_found_on`.
 
-Whenever possible, instances of `crm:E39_Actor` and `crm:E53_Place` are also linked with existing authority records through the property `crm:P1_is_identified_by`.
+Instances of `crm:E39_Actor`, `crm:E53_Place`, `crm:E24_Physical_Human-Made_Thing`, `crm:E73_Information_Object` and `crm:E55_Type` can be identified with names or other human-readable labels (`crm:E41_Appellation`) through the property `crm:P1_is_identified_by`.
+
+Whenever possible, instances of `crm:E39_Actor` and `crm:E53_Place` are also linked with existing authority records through the property `crm:P70i_is_documented_by`.
+
 
 ### Process Module (PM)
 As shown in the diagram below, CHAD-AP also describes the entities for defining a 3D digitisation workflow as a sequence of activities classified according to two main categories. 
@@ -66,6 +69,8 @@ On the one hand, we have the _acquisition activity_ (`crmdig:D2_Digitization_Pro
 On the other hand, we have a series of _software activities_ (`crmdig:D10_Software_Execution`), each representing a specific stage or phase of digitisation workflow. Such stage is denoted by its type (`crm:E55_Type`), such as _processing_ (`aat:300054636`), _modelling_ (`aat:300391447`), and _optimization_ (`aat:300386427`). It involves the manipulation of the DCHO (`crmdig:D9_Data_Object`) produced previously as input and the production of a modified version of that DCHO (`crmdig:D9_Data_Object`) as output. The activity also occurs within a defined time span (`crm:E52_Time-Span`) with precise start and end date times, engages various agents, including individuals (`crm:E21_Person`) and institutions (`crm:E74_Group`), and uses software as tools to produce its output (`crmdig:D14_Software`).
 
 A DCHO can be related to another existing digital model (`crmdig:D9_Data_Object`) that had been used as a basis to produce the former, instead of acquiring the CHO directly. In this case, the DCHO and the existing model are linked through the property `crm:P130_shows_features_of`.
+
+Instances of `crm:E21_Person`, `crm:E74_Group`, `crmdig:D14_Software`, `crmdig:D8_Digital_Device` and `crmdig:D9_Data_Object` can be identified with names or other human-readable labels (`crm:E41_Appellation`) through the property `crm:P1_is_identified_by`.
 
 ## Examples of use
 CHAD-AP can be used for modelling  scenarios related to cultural heritage acquisition and digitisation processes. In the following subsections we introduce some of them, and we accompany them with exemplar instantiations. 
@@ -540,7 +545,7 @@ What are the tools and their types used in processing activities?
                                            <http://purl.org/dc/terms/created> "2024-04-16"^^xsd:date ;
                                            <http://purl.org/dc/terms/issued> "2024-04-16"^^xsd:date ;
                                            <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
-                                           <http://purl.org/dc/terms/modified> "2025-03-17"^^xsd:date ;
+                                           <http://purl.org/dc/terms/modified> "2025-05-23"^^xsd:date ;
                                            <http://purl.org/dc/terms/title> "Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)"@en ;
                                            <http://purl.org/ontology/bibo/doi> "10.1007/978-3-031-77847-6_11"^^rdfs:Literal ;
                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "chad-ap"@en ;
@@ -548,10 +553,10 @@ What are the tools and their types used in processing activities?
                                            <http://schema.org/codeRepository> "https://github.com/dharc-org/chad-ap/"^^xsd:anyURI ;
                                            <http://schema.org/funder> <https://www.fondazionechanges.org/> ;
                                            rdfs:comment "The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process."@en ;
-                                           owl:backwardCompatibleWith <https://w3id.org/dharc/ontology/chad-ap/2.0.0> ;
+                                           owl:backwardCompatibleWith <https://w3id.org/dharc/ontology/chad-ap/2.0.2> ;
                                            owl:incompatibleWith <https://w3id.org/dharc/ontology/chad-ap/1.0.0> ;
-                                           owl:priorVersion <https://w3id.org/dharc/ontology/chad-ap/2.0.0> ;
-                                           owl:versionInfo "2.0.1" ;
+                                           owl:priorVersion <https://w3id.org/dharc/ontology/chad-ap/2.0.2> ;
+                                           owl:versionInfo "2.0.3" ;
                                            <http://www.w3.org/2003/06/sw-vocab-status/ns#status> "work in progress"@en .
 
 #################################################################
@@ -663,14 +668,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                         rdfs:domain <http://iflastandards.info/ns/lrm/lrmoo/F1_Work> ;
                                                         rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object> ;
                                                         <http://purl.org/vocab/vann/example> """
-
         ### Example of a complex work made up by another work.
         
         :parent-work a lrmoo:F1_Work ;
             lrmoo:R10_has_member :another-work .
         
         :another-work a lrmoo:F1_Work .
-
     """@en ;
                                                         <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent works composed of other works."@en ;
                                                         rdfs:comment "This property associates a complex work with a work that forms part of it."@en ;
@@ -694,14 +697,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                      rdfs:domain <http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation> ;
                                                      rdfs:range <http://iflastandards.info/ns/lrm/lrmoo/F2_Expression> ;
                                                      <http://purl.org/vocab/vann/example> """
-
         ### Example of an expression being created in a creation event.
         
         :expression-creation a lrmoo:F28_Expression_Creation ;
             lrmoo:R17_created :expression .
         
         :expression a lrmoo:F2_Expression .
-
     """@en ;
                                                      <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the creation of an LRM Expression entity."@en ;
                                                      rdfs:comment "This property associates the expression that was first externalised during a particular creation event with that particular creation event."@en ;
@@ -727,14 +728,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                                       rdfs:domain <http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation> ;
                                                                       rdfs:range <http://iflastandards.info/ns/lrm/lrmoo/F1_Work> ;
                                                                       <http://purl.org/vocab/vann/example> """
-
         ### Example of a work being created during a creation event.
         
         :expression-creation a lrmoo:F28_Expression_Creation ;
             lrmoo:R19_created_a_realisation_of :work .
         
         :work a lrmoo:F1_Work .
-
     """@en ;
                                                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the creation of an LRM Work entity."@en ;
                                                                       rdfs:comment "This property associates an expression creation with the corresponding work."@en ;
@@ -758,14 +757,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                            rdfs:domain <http://iflastandards.info/ns/lrm/lrmoo/F1_Work> ;
                                                            rdfs:range <http://iflastandards.info/ns/lrm/lrmoo/F2_Expression> ;
                                                            <http://purl.org/vocab/vann/example> """
-
         ### Example of a work realised in an expression.
         
         :work a lrmoo:F1_Work ;
             lrmoo:R3_is_realised_in :expression .
         
         :expression a lrmoo:F2_Expression .
-
     """@en ;
                                                            <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to model the relation between the Work and the Expression LRM entities."@en ;
                                                            rdfs:comment "This property associates an expression with a work."@en ;
@@ -789,14 +786,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                      rdfs:domain <http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation> ;
                                                      rdfs:range <http://iflastandards.info/ns/lrm/lrmoo/F2_Expression> ;
                                                      <http://purl.org/vocab/vann/example> """
-
         ### Example of a Manifestation embodying an Expression.
         
         :manifestation a lrmoo:F3_Manifestation ;
             lrmoo:R4_embodies :expression .
         
         :expression a lrmoo:F2_Expression .
-
     """@en ;
                                                      <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to model the relation between the Manifestation and the Expression LRM entities."@en ;
                                                      rdfs:comment "This property associates a Manifestation with one or more expressions which are rendered by this manifestation."@en ;
@@ -825,14 +820,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                         rdfs:domain <http://iflastandards.info/ns/lrm/lrmoo/F5_Item> ;
                                                         rdfs:range <http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation> ;
                                                         <http://purl.org/vocab/vann/example> """
-
         ### Example of a item exemplifying a manifestation.
         
         :item a lrmoo:F5_Item ;
             lrmoo:R7_exemplifies :manifestation .
         
         :manifestation a lrmoo:F3_Manifestation .
-
     """@en ;
                                                         <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the relation between the Item and Manifestation LRM entities."@en ;
                                                         rdfs:comment "This property associates a manifestation with an item that is one of its exemplars or its only exemplar."@en ;
@@ -858,14 +851,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                     rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing> ;
                                                     rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E35_Title> ;
                                                     <http://purl.org/vocab/vann/example> """
-
         ### Example of a work bearing a title.
         
         :work a lrmoo:F1_Work ;
             crm:P102_has_title :title .
         
         :title a crm:E35_Title .
-
     """@en ;
                                                     <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the fact that a CHO at the Work level has a title."@en ;
                                                     rdfs:comment "This property associates a title with the work bearing that title."@en ;
@@ -909,14 +900,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                          rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E5_Event> ;
                                                          rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
                                                          <http://purl.org/vocab/vann/example> """
-
         ### Example of an actor participating in an activity.
         
-        :event a crm:E5_Event ;
+        :activity a crm:E7_Activity ;
             crm:P11_had_participant :agent .
         
         :agent a crm:E39_Actor .
-
     """@en ;
                                                          <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the participation of some person or organization to an activity, such as the creation of a CHO, or its digital acquisition."@en ;
                                                          rdfs:comment "This property describes the participation of one or more actors in an event."@en ;
@@ -965,12 +954,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                    rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ;
                                                    rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
                                                    <http://purl.org/vocab/vann/example> """
-
         ### Example of an expression having a topic.
         
         :expression a lrmoo:F2_Expression ;
-            crm:P129_is_about :subject .
-
+            crm:P129_is_about :subject .            
     """@en ;
                                                    <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent topics of CHOs at their Expression level."@en ;
                                                    rdfs:comment "This property documents that an expression has some entity as its topic."@en ;
@@ -1006,14 +993,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                                      rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E5_Event> ;
                                                                      rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item> ;
                                                                      <http://purl.org/vocab/vann/example> """
-
         ### Example of a curation activity involving a collection.
         
         :curation-activity a crm:E7_Activity ;
             crm:P12_occurred_in_the_presence_of :collection .
         
         :collection a crm:E24_Physical_Human-Made_Thing .
-
     """@en ;
                                                                      <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the fact that a curation activity involves a collection a CHO is part of."@en ;
                                                                      rdfs:comment "This property describes the presence of an entity during an event, without implying any specific role."@en ;
@@ -1048,13 +1033,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                             rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
                                                             rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
                                                             <http://purl.org/vocab/vann/example> """
-
         ### Example of a 3D model based on another model, already existing and published on Sketchfab.
         
         :3d-model a crmdig:D9_Data_Object ;
             crm:P130_shows_features_of <https://sketchfab.com/3d-models/cuban-macaw-nhmw-zoo-vs-50796-52348a29605a4136a0e807942d3c12a6> .
-
-
     """@en ;
                                                             <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to associate cultural heritage objects and digital models with existing resources that are somehow related to them, such as a digital record of a cultural heritage object or a 3D model used as a basis for producing another model."@en ;
                                                             rdfs:comment "This property generalises the notions of “copy of” and “similar to” into a directed relationship, where the domain expresses the derivative or influenced item and the range the source or influencing item, if such a direction can be established. The property can also be used to express similarity in cases that can be stated between two objects only, without historical knowledge about its reasons."@en ;
@@ -1069,12 +1051,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                       rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
                                                                       rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
                                                                       <http://purl.org/vocab/vann/example> """
-
         ### Example of a manifestation having another digital representation, already existing and published on an institutional repository.
         
         :manifestation a lrmoo:F3_Manifestation ;
             crm:P130i_features_are_also_found_on <http://hdl.handle.net/20.500.14008/78078> .
-
     """@en ;
                                                                       rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
                                                                       rdfs:label "features are also found on"@en ;
@@ -1088,14 +1068,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                         rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> ;
                                                         rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
                                                         <http://purl.org/vocab/vann/example> """
-
         ### Example of a person carrying out an acquisition activity.
         
         :acquisition a crmdig:D2_Digitization_Process ;
             crm:P14_carried_out_by :researcher .
         
         :researcher a crm:E21_Person .
-
     """@en ;
                                                         <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the direct responsibility of a person carrying out an activity, such as the acquisition of a CHO, its curation, its creation, etc."@en ;
                                                         rdfs:comment "This property describes the active, accountable participation of an actor during an activity."@en ;
@@ -1149,14 +1127,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                               rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> ;
                                                               rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E70_Thing> ;
                                                               <http://purl.org/vocab/vann/example> """
-
         ### Example of a CHO being involved in a curation activity.
         
         :curation-activity a crm:E7_Activity ;
             crm:P16_used_specific_object :item .
         
         :item a lrmoo:F1_Item .
-
     """@en ;
                                                               <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the fact that a certain tool is used to carry out an activity, such as a LRM Item entity during a curation activity, or a digital scanner during an acquisition activity."@en ;
                                                               rdfs:comment "This property describes the use of a tool for performing an activity."@en ;
@@ -1193,29 +1169,27 @@ xsd:date rdf:type rdfs:Datatype .
                                                          rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
                                                          rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> ;
                                                          <http://purl.org/vocab/vann/example> """
-
         ### Example of a CHO being identified by three identifiers: an accession number (aat:300312355),
         ### a book number (aat:300445021) and a shelfmark (aat:300404704).
         
-        ex:32-item a lrmoo:F5_Item ;
-            crm:P1_is_identified_by ex:32-item-identifier-01 ,
-                ex:32-item-identifier-02 ,
-                ex:32-item-identifier-03 .
+        :item a lrmoo:F5_Item ;
+            crm:P1_is_identified_by :item-identifier ,
+                :item-identifier-02 ,
+                :item-identifier-03 .
 
-        ex:32-item-identifier-01 a crm:E42_Identifier ;
+        :item-identifier a crm:E42_Identifier ;
             crm:P2_has_type aat:300312355 ;
             crm:P190_has_symbolic_content \"32\"^^rdfs:Literal .
 
-        ex:32-item-identifier-02 a crm:E42_Identifier ;
+        :item-identifier-02 a crm:E42_Identifier ;
             crm:P2_has_type aat:300445021 ;
             crm:P190_has_symbolic_content \"5\"^^rdfs:Literal .
 
-        ex:32-item-identifier-03 a crm:E42_Identifier ;
+        :item-identifier-03 a crm:E42_Identifier ;
             crm:P2_has_type aat:300404704 ;
             crm:P190_has_symbolic_content \"Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86\"^^rdfs:Literal .
-
     """@en ;
-                                                         <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the identification of CHOs as a reified relation between the CHO and its identifiers, each characterised by a series of attributes."@en ;
+                                                         <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the identification of entities as a reified relation between the entity and its name or identifiers, each characterised by a series of attributes."@en ;
                                                          rdfs:comment "This property describes the naming or identification of any real-world item by a name or any other identifier."@en ;
                                                          rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
                                                          rdfs:label "est identifié par"@fr ,
@@ -1247,13 +1221,11 @@ xsd:date rdf:type rdfs:Datatype .
                                                  rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
                                                  rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
                                                  <http://purl.org/vocab/vann/example> """
-
         ### Example of a title having \"original title\" (aat:300417204) as its type.
         
-        ex:32-work-title-01 a crm:E35_Title ;
+        :work-title a crm:E35_Title ;
             crm:P2_has_type aat:300417204 ;
             crm:P190_has_symbolic_content \"Essere umano ermafrodita\"@it .
-
     """@en ;
                                                  <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the type of an entity through a flexible, generalised modelling mechanism. This property turns the burden of typifying entities (and thus managing the related individuals) on any external controlled vocabulary that is compatible with RDF representations, such as the Getty's Art and Architecture Thesaurus (AAT)."@en ;
                                                  rdfs:comment "This property allows typing of an entity through the use of an external knowledge organization system, such as a thesaurus or a controlled vocabulary."@en ;
@@ -1275,12 +1247,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                 rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> ;
                                                                 rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
                                                                 <http://purl.org/vocab/vann/example> """
-
         ### Example of an activity (expression creation) employing a \"drawing technique\" (aat:300054196).
         
-        ex:32-expression-creation a lrmoo:F28_Expression_Creation ;
+        :expression-creation a lrmoo:F28_Expression_Creation ;
             crm:P32_used_general_technique aat:300054196 .
-
     """@en ;
                                                                 <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the technique employed during an activity, and especially during the creation of CHOs and DCHOs. This property turns the burden of defining techniques (and thus the related individuals) on any external controlled vocabulary that is compatible with RDF representations, such as the Getty's Art and Architecture Thesaurus (AAT)."@en ;
                                                                 rdfs:comment "This property identifies the technique or method that was employed during an activity."@en ;
@@ -1345,17 +1315,15 @@ xsd:date rdf:type rdfs:Datatype .
                                                       rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> ;
                                                       rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
                                                       <http://purl.org/vocab/vann/example> """
-
         ### Example of an activity (expression creation) happening in the 16th century (a time span between the 
         ### first day of 1500 and the last day of 1599).
         
-        ex:32-expression-creation a lrmoo:F28_Expression_Creation ;
-            crm:P4_has_time-span ex:1500-1599 .
+        :expression-creation a lrmoo:F28_Expression_Creation ;
+            crm:P4_has_time-span :1500-1599 .
         
-        ex:1500-1599 a crm:E52_Time-Span ;
+        :1500-1599 a crm:E52_Time-Span ;
             crm:P82a_begin_of_the_begin \"1500-01-01T00:00:00Z\"^^xsd:dateTime ;
             crm:P82b_end_of_the_end \"1599-12-31T23:59:59Z\"^^xsd:dateTime .
-
     """@en ;
                                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the fact that an activity happens within a time span, defined by precise starting and ending date times."@en ;
                                                       rdfs:comment "This property associates a phenomenon with the time span during which that phenomenon was on-going."@en ;
@@ -1421,14 +1389,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                    rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ;
                                                    rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
                                                    <http://purl.org/vocab/vann/example> """
-
         ### Example of a license statement (a crm:E73_Information_Object with type aat:300435434) referring to
         ### a CHO at the Manifestation level.
         
-        ex:32-manifestation-license a crm:E73_Information_Object ;
+        :manifestation-license a crm:E73_Information_Object ;
             crm:P2_has_type aat:300435434 ;
-            crm:P67_refers_to ex:32-manifestation .
-
+            crm:P67_refers_to :manifestation .
     """@en ;
                                                    <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the relation between a license or copyright statement (modelled as a crm:E73_Information_Object with type aat:300435434) and the CHO it is attached to."@en ;
                                                    rdfs:comment "This property documents that a propositional object refers to some entity."@en ;
@@ -1464,15 +1430,13 @@ xsd:date rdf:type rdfs:Datatype .
                                                    rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E31_Document> ;
                                                    rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
                                                    <http://purl.org/vocab/vann/example> """
-
         ### Example of an external web page documenting a license statement referring to
         ### a CHO at the Manifestation level.
         
-        ex:32-manifestation-license a crm:E73_Information_Object ;
+        :manifestation-license a crm:E73_Information_Object ;
             crm:P2_has_type aat:300435434 ;
-            crm:P67_refers_to ex:32-manifestation ;
+            crm:P67_refers_to :manifestation ;
             crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
-
     """@en ;
                                                    <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the relation between a license or copyright statement (modelled as a crm:E73_Information_Object with type aat:300435434) and the external document (e.g. a Web page) that describes its legal implications, either in a technical or non-technical way."@en ;
                                                    rdfs:comment "This property refers to the fact that a document describes some entity."@en ;
@@ -1550,16 +1514,14 @@ xsd:date rdf:type rdfs:Datatype .
                                                     rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E4_Period> ;
                                                     rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E4_Period> ;
                                                     <http://purl.org/vocab/vann/example> """
-
         ### Example of an activity (Expression Creation) consisting of another creation activity (aat:300404387).
 
-        ex:32-expression-creation a lrmoo:F28_Expression_Creation ;
-            crm:P9_consists_of ex:32-expression-creation-activity-01 .
+        :expression-creation a lrmoo:F28_Expression_Creation ;
+            crm:P9_consists_of :expression-creation-activity .
 
-        ex:32-expression-creation-activity-01 a crm:E7_Activity ;
+        :expression-creation-activity a crm:E7_Activity ;
             crm:P2_has_type aat:300404387 ;
-            crm:P14_carried_out_by ex:ulisse-aldrovandi .
-
+            crm:P14_carried_out_by :ulisse-aldrovandi .
     """@en ;
                                                     <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the fact that the creation of a CHO often consists of a set of smaller activities involving different people, techniques, and other aspects that cannot be related to a single entity."@en ;
                                                     rdfs:comment "This property associates a period of time with another period of time it contains."@en ;
@@ -1596,14 +1558,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                    rdfs:domain <http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event> ;
                                                    rdfs:range <http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object> ;
                                                    <http://purl.org/vocab/vann/example> """
-
         ### Example of a processing activity (a crmdig:D10_Software_Execution with type aat:300054636) using a 
         ### DCHO (the raw 3D model acquired in the previous step).
 
-        ex:32-processing a crmdig:D10_Software_Execution ;
+        :processing a crmdig:D10_Software_Execution ;
             crm:P2_has_type aat:300054636 ;
-            crmdig:L10_had_input ex:32-model-00 .
-
+            crmdig:L10_had_input :model-00 .
     """@en ;
                                                    <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the fact that a digitisation activity uses some DCHO as input for producing another DCHO as an output."@en ;
                                                    rdfs:comment "This property associates an activity in a digitization workflow with a digital object used as input for that activity."@en ;
@@ -1627,14 +1587,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                     rdfs:domain <http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event> ;
                                                     rdfs:range <http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object> ;
                                                     <http://purl.org/vocab/vann/example> """
-
         ### Example of a processing activity (a crmdig:D10_Software_Execution with type aat:300054636) producing a 
         ### DCHO (the processed 3D model) as an output.
 
-        ex:32-processing a crmdig:D10_Software_Execution ;
+        :processing a crmdig:D10_Software_Execution ;
             crm:P2_has_type aat:300054636 ;
-            crmdig:L11_had_output ex:32-model-01 .
-
+            crmdig:L11_had_output :model-01 .
     """@en ;
                                                     <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the fact that a digitisation activity produces some DCHO as an output starting from another DCHO used as its input."@en ;
                                                     rdfs:comment "This property associates an activity in a digitization workflow with a digital object produced as a result of that activity."@en ;
@@ -1659,14 +1617,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                   rdfs:domain <http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process> ;
                                                   rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
                                                   <http://purl.org/vocab/vann/example> """
-
         ### Example of an acquisition activity digitising a CHO at the Item level to produce a DCHO 
         ### (the raw 3D model) as an output.
 
-        ex:32-acquisition a crmdig:D2_Digitization_Process ;
-            crmdig:L1_digitized ex:32-item ;
-            crmdig:L11_had_output ex:32-model-00 .
-
+        :acquisition a crmdig:D2_Digitization_Process ;
+            crmdig:L1_digitized :item ;
+            crmdig:L11_had_output :model-00 .
     """@en ;
                                                   <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the fact that an acquisition activity digitises some CHO to produce a DCHO as an output."@en ;
                                                   rdfs:comment "This property associates a digitization process with the cultural heritage object that is being digitized."@en ;
@@ -1691,15 +1647,13 @@ xsd:date rdf:type rdfs:Datatype .
                                                                    rdfs:domain <http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event> ;
                                                                    rdfs:range <http://www.ics.forth.gr/isl/CRMdig/D14_Software> ;
                                                                    <http://purl.org/vocab/vann/example> """
-
         ### Example of a processing activity using 3D Zephyr for producing its output 
 
-        ex:32-processing a crmdig:D10_Software_Execution ;
+        :processing a crmdig:D10_Software_Execution ;
             crm:P2_has_type aat:300054636 ;
-            crmdig:L10_had_input ex:32-model-00 ;
-            crmdig:L11_had_output ex:32-model-01 ;
-            crmdig:L23_used_software_or_firmware ex:3df-zephyr .
-
+            crmdig:L10_had_input :model-00 ;
+            crmdig:L11_had_output :model-01 ;
+            crmdig:L23_used_software_or_firmware :3df-zephyr .
     """@en ;
                                                                    <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the fact that during a digitisation activity one or more software are used to produce its output."@en ;
                                                                    rdfs:comment "This property associates a digitization activity with the software that was used during that activity."@en ;
@@ -1718,12 +1672,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object> ;
                                                                rdfs:range rdfs:Literal ;
                                                                <http://purl.org/vocab/vann/example> """
-
         ### Example of the textual content of a title 
 
-        ex:32-work-title-01 a crm:E35_Title ;
+        :work-title a crm:E35_Title ;
             crm:P190_has_symbolic_content \"Essere umano ermafrodita\"@it .
-
     """@en ;
                                                                <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the textual content of entities such as titles and identifiers."@en ;
                                                                rdfs:comment "This property associates a symbolic object with a textual representation of its content."@en ;
@@ -1738,10 +1690,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                  rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
                                                  rdfs:range rdfs:Literal ;
                                                  <http://purl.org/vocab/vann/example> """
-
         ### Example of the textual description of a CHO at the Item level
 
-        ex:32-item a lrmoo:F5_Item ;
+        :item a lrmoo:F5_Item ;
             crm:P3_has_note '''
                 Essere umano ermafrodita 
                 Human hermaphrodite (Monstrum humanum hermaphroditicum) 
@@ -1750,7 +1701,6 @@ xsd:date rdf:type rdfs:Datatype .
                 BUB, 
                 Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86
             '''^^rdfs:Literal .
-
     """@en ;
                                                  <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the textual description of a CHO at the Item level (thus intended as an exemplar of the exhibition)."@en ;
                                                  rdfs:comment "This property contains the textual description of an entity."@en ;
@@ -1788,12 +1738,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                              rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
                                                              rdfs:range xsd:dateTime ;
                                                              <http://purl.org/vocab/vann/example> """
-
         ### Example of a time span having a beginning date time
 
-        ex:1500-1599 a crm:E52_Time-Span ;
+        :1500-1599 a crm:E52_Time-Span ;
             crm:P82a_begin_of_the_begin \"1500-01-01T00:00:00Z\"^^xsd:dateTime .
-
     """@en ;
                                                              <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the precise beginning date time of a time span."@en ;
                                                              rdfs:comment "This property describes the precise beginning date and time of a time span."@en ;
@@ -1813,12 +1761,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                          rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
                                                          rdfs:range xsd:dateTime ;
                                                          <http://purl.org/vocab/vann/example> """
-
         ### Example of a time span having a ending date time
 
-        ex:1500-1599 a crm:E52_Time-Span ;
+        :1500-1599 a crm:E52_Time-Span ;
             crm:P82b_end_of_the_end \"1599-12-31T23:59:59Z\"^^xsd:dateTime .
-
     """@en ;
                                                          <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the precise ending date time of a time span."@en ;
                                                          rdfs:comment "This property describes the precise ending date and time of a time span."@en ;
@@ -1845,14 +1791,12 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P102_has_title -[0..N]-> crm:E35_Title
 * lrmoo:R3_is_realized_in -[1..N]-> lrmoo:F2_Expression""" ;
                                                  <http://purl.org/vocab/vann/example> """
-
         ### Example of a CHO at the Work level, characterised by two titles and realised in an Expression
 
-        ex:32-work a lrmoo:F1_Work ;
-            crm:P102_has_title ex:32-work-title-01 ,
-                ex:32-work-title-02 ;
-            lrmoo:R3_is_realised_in ex:32-expression .
-
+        :work a lrmoo:F1_Work ;
+            crm:P102_has_title :work-title ,
+                :work-title-02 ;
+            lrmoo:R3_is_realised_in :expression .
     """@en ;
                                                  <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents the Work level of conceptualisation as instructed by the LRM conceptual model. The Work represents the essence of a CHO, as it was thought out during its conception in the mind of its creator(s)."@en ;
                                                  rdfs:comment "The essence or conceptualisation of an endeavor."@en ;
@@ -1873,18 +1817,16 @@ xsd:date rdf:type rdfs:Datatype .
 * lrmoo:R19_created_a_realisation_of -[1]-> lrmoo:F1_Item
 * crm:P4_has_time-span -[1]-> crm:E52_Time-Span""" ;
                                                                  <http://purl.org/vocab/vann/example> """
-
         ### Example of an Expression Creation. It consists of a smaller activity; it is carried out through a drawing
         ### technique; it happens during the XVI century; and it generates both the Expression of the CHO (its content) and
         ### its realisation (the Work).
 
-        ex:32-expression-creation a lrmoo:F28_Expression_Creation ;
-            crm:P9_consists_of ex:32-expression-creation-activity-01 ;
+        :expression-creation a lrmoo:F28_Expression_Creation ;
+            crm:P9_consists_of :expression-creation-activity ;
             crm:P32_used_general_technique aat:300054196 ;
-            lrmoo:R19_created_a_realisation_of ex:32-work ;
-            lrmoo:R17_created ex:32-expression ;
-            crm:P4_has_time-span ex:1500-1599 .
-
+            lrmoo:R19_created_a_realisation_of :work ;
+            lrmoo:R17_created :expression ;
+            crm:P4_has_time-span :1500-1599 .
     """@en ;
                                                                  <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents the creation of the CHO at both the Work and Expression levels."@en ;
                                                                  rdfs:comment "An activity that represents the creation of an expression."@en ;
@@ -1901,13 +1843,11 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:R129_is_about -[0..N]-> crm:E73_Information_Object
 * lrmoo:R4i_is_embodied_in -[1..N]-> lrmoo:F3_Manifestation""" ;
                                                        <http://purl.org/vocab/vann/example> """
-
         ### Example of a CHO at the Expression level, characterised by a subject and embodied in a Manifestation
 
-        ex:32-expression a lrmoo:F2_Expression ;
-            crm:P129_is_about ex:ermafrodita ;
-            lrmoo:R4i_is_embodied_in ex:32-manifestation .
-
+        :expression a lrmoo:F2_Expression ;
+            crm:P129_is_about :ermafrodita ;
+            lrmoo:R4i_is_embodied_in :manifestation .
     """@en ;
                                                        <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents the Expression level of conceptualisation as instructed by the LRM conceptual model. The Expression represents the content of a CHO, intended as the specific intellectual or artistic form that a Work takes each time it is realised."@en ;
                                                        rdfs:comment "The realisation of a work, referring to the intellectual content of a cultural heritage object."@en ;
@@ -1925,13 +1865,11 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P130i_features_are_also_found_on -[0..N]-> lrmoo:F4_Manifestation
 * lrmoo:R7i_is_exemplified_by -[1..N]-> lrmoo:F5_Item""" ;
                                                           <http://purl.org/vocab/vann/example> """
-
         ### Example of a CHO at the Manifestation level, characterised by a type and exemplified in an Item
 
-        ex:32-manifestation a lrmoo:F3_Manifestation ;
+        :manifestation a lrmoo:F3_Manifestation ;
             crm:P2_has_type aat:300028569 ;
-            lrmoo:R7i_is_exemplified_by ex:32-item .
-
+            lrmoo:R7i_is_exemplified_by :item .
     """@en ;
                                                           <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents the Manifestation level of conceptualisation as instructed by the LRM conceptual model. The Manifestation represents the format of a CHO, intended as the result from the capture of one or more Expressions onto a carrier or set of carriers."@en ;
                                                           rdfs:comment "The rendering of one or more expressions. It is defined by both the overall content and the form of its presentation. The substance of manifestation is not only signs, but also the manner in which they are presented to be consumed by users, including the kind of media adopted."@en ;
@@ -1948,13 +1886,12 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P1_is_identified_by -[1..N]-> crm:E42_Identifier
 * crm:P3_has_note -[0..1]-> rdfs:Literal""" ;
                                                  <http://purl.org/vocab/vann/example> """
-
         ### Example of a CHO at the Item level, characterised by three identifiers and a description
 
-        ex:32-item a lrmoo:F5_Item ;
-            crm:P1_is_identified_by ex:32-item-identifier-01 ,
-                ex:32-item-identifier-02 ,
-                ex:32-item-identifier-03 ;
+        :item a lrmoo:F5_Item ;
+            crm:P1_is_identified_by :item-identifier ,
+                :item-identifier-02 ,
+                :item-identifier-03 ;
             crm:P3_has_note '''
                 Essere umano ermafrodita 
                 Human hermaphrodite (Monstrum humanum hermaphroditicum) 
@@ -1963,7 +1900,6 @@ xsd:date rdf:type rdfs:Datatype .
                 BUB, 
                 Ms. Aldrovandi, Tavole di animali, vol. 5, carta 86
                 '''^^rdfs:Literal .
-
     """@en ;
                                                  <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents the Item level of conceptualisation as instructed by the LRM conceptual model. The Item represents the single exemplar of a CHO, intended as an object physically localised."@en ;
                                                  rdfs:comment "This class comprises physical objects that were produced by a process involving a given manifestation."@en ;
@@ -1999,7 +1935,17 @@ xsd:date rdf:type rdfs:Datatype .
                                                 <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
 * crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document""" ;
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
+                                                          <http://purl.org/vocab/vann/example> """
+        ### Example of a person named \"John Doe\"
+
+        :researcher a crm:E21_Person ;
+            crm:P1_is_identified_by :researcher-name .
+        
+        :researcher-name a crm:E41_Appellation ;
+            crm:P190_has_symbolic_content \"John Doe\"^^rdfs:Literal .
+    """@en ;
                                                 <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a person, usually involved in some sort of activity."@en ;
                                                 rdfs:comment "An individual person."@en ;
                                                 rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
@@ -2017,8 +1963,15 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                    <http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing> ;
                                                                    <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
-* crm:P2_has_type -[1]-> crm:E55_Type""" ;
-                                                                   <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used in conjunction with crm:P2_has_type and aat:300025976 to represent the concept of collection."@en ;
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
+                                                          <http://purl.org/vocab/vann/example> """
+        ### Example of a collection
+
+        :collection a crm:E24_Physical_Human-Made_Thing ;
+            crm:P2_has_type aat:300025976 .
+    """@en ;
+                                                                   <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used in conjunction with crm:P2_has_type and aat:300025976 to represent the concept of \"collection\"."@en ;
                                                                    rdfs:comment "A persistent physical item of any size that is purposely created by human activity."@en ;
                                                                    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
                                                                    rdfs:label "Physical Human-Made Thing"@en ;
@@ -2037,6 +1990,14 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.cidoc-crm.org/cidoc-crm/E31_Document> rdf:type owl:Class ;
                                                   rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> ;
                                                   <http://www.linkedmodel.org/schema/vaem#rationale> "This class is implicitly used in conjunction with crm:P70i_is_documented_in to represent external resources (e.g. copyright statements, authority records, etc.)."@en ;
+                                                    <http://purl.org/vocab/vann/example> """
+        ### Example of some entity (Ulisse Aldrovandi) 
+        ### being documented by an external resource 
+        ### (a VIAF authority record)
+
+        :ulisse-aldrovandi a crm:E39_Actor ;
+            crm:P70i_is_documented_by <http://viaf.org/viaf/100190422> .
+    """@en ;
                                                   rdfs:comment "An information object that makes propositions about reality."@en ;
                                                   rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
                                                   rdfs:label "Document"@en ;
@@ -2056,13 +2017,11 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P2_has_type -[1]-> crm:E55_Type
 * crm:P190_has_symbolic_content -[1]-> rdfs:Literal""" ;
                                                <http://purl.org/vocab/vann/example> """
-
         ### Example of a title, characterised by a type and a textual content
 
-        ex:32-work-title-01 a crm:E35_Title ;
+        :work-title a crm:E35_Title ;
             crm:P2_has_type aat:300417204 ;
             crm:P190_has_symbolic_content \"Essere umano ermafrodita\"@it .
-
     """@en ;
                                                <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a title given to the CHO at the Work level."@en ;
                                                rdfs:comment "A textual string that functions as a title for a work."@en ;
@@ -2077,8 +2036,18 @@ xsd:date rdf:type rdfs:Datatype .
                                                <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
 * crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document""" ;
-                                               <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a generic entity with an agency, which can be either a person or an organisation."@en ;
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
+                                               <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a generic entity with an agency, which can be either a person or an organisation. It should be used when it is not feasible to determine programmatically whether a data point is either a person or an organisation."@en ;
+                                                <http://purl.org/vocab/vann/example> """
+        ### Example of an actor named Ulisse Aldrovandi
+
+        :ulisse-aldrovandi a crm:E39_Actor ;
+            crm:P1_is_identified_by :ulisse-aldrovandi-name .
+        
+        :ulisse-aldrovandi-name a crm:E41_Appellation ;
+            crm:P190_has_symbolic_content \"Ulisse Aldrovandi\"^^rdfs:Literal .
+    """@en ;
                                                rdfs:comment "An individual person or a group of people, with the potential to perform intentional and accountable actions."@en ;
                                                rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
                                                rdfs:label "Actor"@en ;
@@ -2086,7 +2055,26 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E41_Appellation
-<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> rdf:type owl:Class .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> rdf:type owl:Class ;
+    rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object> ;
+    <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal""" ;
+    <http://purl.org/vocab/vann/example> """
+        ### Example of the appellation used to identify the Blender software
+
+        :blender a crmdig:D14_Software ;
+            crm:P2_has_type aat:300426696 ;
+            crm:P1_is_identified_by :appellation-blender .
+
+        :appellation-blender a crm:E41_Appellation ;
+            crm:P190_has_symbolic_content \"Blender\"^^rdfs:Literal .
+    """@en ;
+    <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents the names used to identify entities belonging to the following classes: crm:E55_Type, crmdig:D14_Software, crm:E24_Physical_Human-Made_Thing, crm:E39_Actor, crm:E53_Place, crm:E21_Person, crm:E74_Group, crmdig:D8_Digital_Device, crmdig:D9_Data_Object, crm:E73_Information_Object."@en ;
+                                               rdfs:comment "A label used to refer to or identify an entity."@en ;
+                                               rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
+                                               rdfs:label "Appellation"@en ;
+                                               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E42_Identifier
@@ -2097,13 +2085,11 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P2_has_type -[1]-> crm:E55_Type
 * crm:P190_has_symbolic_content -[1]-> rdfs:Literal""" ;
                                                     <http://purl.org/vocab/vann/example> """
-
         ### Example of an identifier, characterised by a type and a textual content
 
-        ex:32-item-identifier-01 a crm:E42_Identifier ;
+        :item-identifier a crm:E42_Identifier ;
             crm:P2_has_type aat:300312355 ;
             crm:P190_has_symbolic_content \"32\"^^rdfs:Literal .
-
     """@en ;
                                                     <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a identifier given to the CHO at the Item level."@en ;
                                                     rdfs:comment "A textual string assigned to a cultural heritage object in order to identify it uniquely within a given context."@en ;
@@ -2124,13 +2110,11 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime
 * crm:P82b_end_of_the_end -[1]-> xsd:dateTime""" ;
                                                    <http://purl.org/vocab/vann/example> """
-
         ### Example of a time span, characterised by a starting date time and an ending date time
 
-        ex:1500-1599 a crm:E52_Time-Span ;
+        :1500-1599 a crm:E52_Time-Span ;
             crm:P82a_begin_of_the_begin \"1500-01-01T00:00:00Z\"^^xsd:dateTime ;
             crm:P82b_end_of_the_end \"1599-12-31T23:59:59Z\"^^xsd:dateTime .
-
     """@en ;
                                                    <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a period of time defined within a starting date time and an ending date time. Both dates are declared in the following form 'YYYY-MM-DDThh:mm:ss', as instructed by the XML Schema Definition (XSD)."@en ;
                                                    rdfs:comment "An abstract temporal extent having a beginning, an end and a duration."@en ;
@@ -2144,8 +2128,16 @@ xsd:date rdf:type rdfs:Datatype .
                                                rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
                                                <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document""" ;
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
                                                <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents a geograhical location, usually indicating the current residence of some actor."@en ;
+                                                    <http://purl.org/vocab/vann/example> """
+        ### Example of a place named Bologna, documented
+        ### by an external resource (an authority record on WikiData)
+
+        :bologna a crm:E53_Place ;
+            crm:P70i_is_documented_by <https://www.wikidata.org/wiki/Q1891> .
+    """@en ;                                               
                                                rdfs:comment "A geographical location."@en ;
                                                rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
                                                rdfs:label "Place"@en ;
@@ -2159,6 +2151,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.cidoc-crm.org/cidoc-crm/E55_Type
 <http://www.cidoc-crm.org/cidoc-crm/E55_Type> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object> ;
+                                              <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
                                               <http://www.linkedmodel.org/schema/vaem#rationale> "This class is indirectly used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. activities, CHOs, techniques, etc.). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals."@en ;
                                               rdfs:comment "A categorical concept denoted by terms from thesauri and controlled vocabularies used to characterize and classify other entities."@en ;
                                               rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
@@ -2191,20 +2187,19 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P2_has_type -[1]-> crm:E55_Type
 * crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation
 * crm:P70i_is_documented_in -[0..1]-> crm:E31_Document
-* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal""" ;
+* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
                                                             <http://purl.org/vocab/vann/example> """
-
         ### Example of two Information Objects, one representing a copyright statement and 
         ### the other representing a subject of a CHO at the Expression level
 
-        ex:32-manifestation-license a crm:E73_Information_Object ;
+        :manifestation-license a crm:E73_Information_Object ;
             crm:P2_has_type aat:300435434 ;
-            crm:P67_refers_to ex:32-manifestation ;
+            crm:P67_refers_to :manifestation ;
             crm:P70i_is_documented_in <http://rightsstatements.org/vocab/InC/1.0/> .
 
-        ex:ermafrodita a crm:E73_Information_Object ;
+        :ermafrodita a crm:E73_Information_Object ;
             crm:P2_has_type aat:300404126 .
-
     """@en ;
                                                             <http://www.linkedmodel.org/schema/vaem#rationale> "This class consists in a generic abstract construct that can be used in conjunction with crm:P2_has_type to represent conceptual entities like rights statements and CHOs subjects."@en ;
                                                             rdfs:comment "An immaterial item that has an objectively recognizable structure and is documented as a single unit."@en ;
@@ -2219,8 +2214,18 @@ xsd:date rdf:type rdfs:Datatype .
                                                <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
 * crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document""" ;
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
                                                <http://www.linkedmodel.org/schema/vaem#rationale> "This class represents organisations and other entities made up by groups of actors."@en ;
+                                                 <http://purl.org/vocab/vann/example> """
+        ### Example of an organisation named \"University of Bologna\"
+
+        :university-bologna a crm:E74_Group ;
+            crm:P1_is_identified_by :university-bologna-name .
+        
+        :university-bologna-name a crm:P41_Appellation ;
+            crm:P190_has_symbolic_content \"University of Bologna\"^^rdfs:Literal .
+    """@en ;                                               
                                                rdfs:comment "A unified group of people."@en ;
                                                rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
                                                rdfs:label "Group"@en ;
@@ -2241,15 +2246,13 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P16_used_specific_object -[0..N]-> lrmoo:F5_Item
 * crm:P32_used_general_technique -[0..N]-> E55_Type""" ;
                                                  <http://purl.org/vocab/vann/example> """
-
         ### Example of activity consisting in the curation (aat:300054277) of a 
         ### CHO at the Item level, carried out by a cultural organization (BUB)
 
-        ex:32-item-curation a crm:E7_Activity ;
+        :item-curation a crm:E7_Activity ;
             crm:P2_has_type aat:300054277 ;
-            crm:P16_used_specific_object ex:32-item ;
-            crm:P14_carried_out_by ex:bub .
-
+            crm:P16_used_specific_object :item ;
+            crm:P14_carried_out_by :bub .
     """@en ;
                                                  <http://www.linkedmodel.org/schema/vaem#rationale> "This class consists in a generic action carried out by one or more actors. An activity should at least be typified (through the combination of crm:P2_has_type and AAT) and assigned to its respective actors, although its properties may vary depending on the type of activity."@en ;
                                                  rdfs:comment "An action intentionally carried out by one or more actors."@en ;
@@ -2279,21 +2282,19 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
 * crmdig:L23_used_software_or_hardware -[1..N]-> crmdig:D14_Software""" ;
                                                             <http://purl.org/vocab/vann/example> """
-
         ### Example of software activity consisting in the processing (aat:300054636) of the 
         ### DCHO produced by the previous acquisition activity, carried out by an expert
-        ### (ex:alice-bordignon) during a defined time-span (ex:32-processing-timespan) using a 
-        ### certain tool (ex:3df-zephyr).
+        ### (:alice-bordignon) during a defined time-span (:processing-timespan) using a 
+        ### certain tool (:3df-zephyr).
 
-        ex:32-processing a crmdig:D10_Software_Execution ;
+        :processing a crmdig:D10_Software_Execution ;
             crm:P2_has_type aat:300054636 ;
-            crmdig:L10_had_input ex:32-model-00 ;
-            crmdig:L11_had_output ex:32-model-01 ;
-            crm:P4_has_time-span ex:32-processing-timespan ;
-            crm:P11_had_participant ex:unibo-ficlit ;
-            crm:P14_carried_out_by ex:alice-bordignon ;
-            crmdig:L23_used_software_or_firmware ex:3df-zephyr .
-
+            crmdig:L10_had_input :model-00 ;
+            crmdig:L11_had_output :model-01 ;
+            crm:P4_has_time-span :processing-timespan ;
+            crm:P11_had_participant :unibo-ficlit ;
+            crm:P14_carried_out_by :alice-bordignon ;
+            crmdig:L23_used_software_or_firmware :3df-zephyr .
     """@en ;
                                                             <http://www.linkedmodel.org/schema/vaem#rationale> "This class consists in a digitisation activity that follows the digital acquisition of a CHO. A software activity should at least be typified (through the combination of crm:P2_has_type and AAT), be assigned to its respective actors, have defined both its input and its output, have a time-span, and have the tool(s) used to carry it out."@en ;
                                                             rdfs:comment "An activity in which a digital device runs a software program on a digital object."@en ;
@@ -2311,14 +2312,17 @@ xsd:date rdf:type rdfs:Datatype .
                                                   rdfs:subClassOf <http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object> ;
                                                   <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
-* crm:P2_has_type -[1]-> crm:E55_Type""" ;
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
                                                   <http://purl.org/vocab/vann/example> """
-
         ### Example of a graphics software (aat:300426696)
 
-        ex:3df-zephyr a crmdig:D14_Software ;
-            crm:P2_has_type aat:300426696 .
+        :3df-zephyr a crmdig:D14_Software ;
+            crm:P2_has_type aat:300426696 ;
+            crm:P1_is_identified_by :software-name .
 
+        :software-name a crm:E41_Appellation ;
+            crm:P190_has_symbolic_content \"3DF Zephyr\"^^rdfs:Literal .
     """@en ;
                                                   <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used to represent the software used to carry out software activities during the digitisation process."@en ;
                                                   rdfs:comment "A computer program."@en ;
@@ -2344,23 +2348,21 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P32_used_general_technique -[1]-> crm:E55_Type
 * crm:P16_used_specific_object -[1..N]-> crmdig:D8_Digital_Device""" ;
                                                              <http://purl.org/vocab/vann/example> """
-
         ### Example of an acquisition activity that digitises a CHO at
-        ### the Item level (ex:32-item) and produces a DCHO as a result 
-        ### (ex:32-model-00), being carried out by an expert (ex:alice-bordignon)
-        ### during a given time-span (ex:32-acquisition-timespan), using a
+        ### the Item level (:item) and produces a DCHO as a result 
+        ### (:model-00), being carried out by an expert (:alice-bordignon)
+        ### during a given time-span (:acquisition-timespan), using a
         ### certain technique such as photogrammetry (aat:300391312) with the
-        ### help of a given tool (ex:panasonic-dmc-lx100).
+        ### help of a given tool (:panasonic-dmc-lx100).
 
-        ex:32-acquisition a crmdig:D2_Digitization_Process ;
-            crmdig:L1_digitized ex:32-item ;
-            crmdig:L11_had_output ex:32-model-00 ;
-            crm:P4_has_time-span ex:32-acquisition-timespan ;
-            crm:P11_had_participant ex:unibo-ficlit ;
-            crm:P14_carried_out_by ex:alice-bordignon ;
+        :acquisition a crmdig:D2_Digitization_Process ;
+            crmdig:L1_digitized :item ;
+            crmdig:L11_had_output :model-00 ;
+            crm:P4_has_time-span :acquisition-timespan ;
+            crm:P11_had_participant :unibo-ficlit ;
+            crm:P14_carried_out_by :alice-bordignon ;
             crm:P32_used_general_technique aat:300391312 ;
-            crm:P16_used_specific_object ex:panasonic-dmc-lx100 .
-
+            crm:P16_used_specific_object :panasonic-dmc-lx100 .
     """@en ;
                                                              <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used to represent the acquisition activity that kickstarts the digitisation process. An acquisition activity should at least be associated with the CHO it digitises and its output (the raw DCHO), as well as its time-span, the actors involved in it, and both the technique and the tool(s) used to carry it out."@en ;
                                                              rdfs:comment "An activity that results in the production of data objects functioning as digital representations of physical entities."@en ;
@@ -2378,14 +2380,17 @@ xsd:date rdf:type rdfs:Datatype .
                                                        rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> ;
                                                        <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
-* crm:P2_has_type -[1]-> crm:E55_Type""" ;
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
                                                        <http://purl.org/vocab/vann/example> """
-
         ### Example of a digital camera (aat:300266792)
 
-        ex:panasonic-dmc-lx100 a crmdig:D8_Digital_Device ;
-            crm:P2_has_type aat:300266792 .
+        :panasonic-dmc-lx100 a crmdig:D8_Digital_Device ;
+            crm:P2_has_type aat:300266792 ;
+            crm:P1_is_identified_by :device-name .
 
+        :device-name a crm:E41_Appellation ;
+            crm:P190_has_symbolic_content \"Panasonic DMC-LX100\"^^rdfs:Literal .
     """@en ;
                                                        <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used to represent the tools used to carry out acquisition activities. A digital device should at least be typified through the combination of crm:P2_has_type and AAT."@en ;
                                                        rdfs:comment "A technical tool that is used to process or produce digital objects."@en ;
@@ -2400,21 +2405,20 @@ xsd:date rdf:type rdfs:Datatype .
                                                                     <http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object> ;
                                                     <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
-* crm:P130i_features_are_also_found_on -[0..N]-> crmdig:D9_Data_Object""" ;
+* crm:P130i_features_are_also_found_on -[0..N]-> crmdig:D9_Data_Object
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
                                                     <http://purl.org/vocab/vann/example> """
-
         ### Example of a data object produced at the end of an acquisition activity and used as input in a processing activity
 
-        ex:data-object a crmdig:D9_Data_Object .
+        :data-object a crmdig:D9_Data_Object .
 
-        ex:acquisition a crmdig:D2_Digitization_Process ;
-            crmdig:L1_digitized ex:item ;
-            crmdig:L11_had_output ex:data-object .
+        :acquisition a crmdig:D2_Digitization_Process ;
+            crmdig:L1_digitized :item ;
+            crmdig:L11_had_output :data-object .
 
-        ex:processing a crmdig:D10_Software_Execution ;
+        :processing a crmdig:D10_Software_Execution ;
             crm:P2_has_type aat:300054636 ;
-            crmdig:L10_had_input ex:data-object .
-
+            crmdig:L10_had_input :data-object .
     """@en ;
                                                     <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used to represent the DCHO produced at the end of each digitisation activity."@en ;
                                                     rdfs:comment "A digital object that is the direct result of an activity in a digitization workflow."@en ;

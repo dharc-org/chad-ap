@@ -2,7 +2,7 @@
 Title: "Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)"
 Release: 2024-04-16
 Latest version: https://w3id.org/dharc/ontology/chad-ap
-Revision: 2.0.1
+Revision: 2.0.3
 Issued on: 2024-04-16
 Authors: Barzaghi, Sebastian; Peroni, Silvio
 Contributors: Heibi, Ivan; Moretti, Arianna
