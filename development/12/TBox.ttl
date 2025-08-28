@@ -1,0 +1,60 @@
+@prefix : <https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/> .
+
+<https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:showsFeaturesOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "shows features of"@en .
+
+:isDocumentedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "is documented in"@en .
+
+:hasType rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "has type"@en .
+
+
+#################################################################
+#    Datatype Properties
+#################################################################
+
+:hasSymbolicContent rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDatatypeProperty ;
+      rdfs:label "has symbolic content"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+:CulturalHeritageObject rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Cultural Heritage Object"@en .
+
+
+:Rank rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Rank"@en .
+
+
+:Type rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Type"@en .
+
+
+:Document rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Document"@en .
+

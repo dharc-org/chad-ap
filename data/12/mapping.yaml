@@ -1,0 +1,20 @@
+namespaces:
+  old_ns: 
+    abox: "https://w3id.org/changes/4/aldrovandi/"
+    obj: "https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/"
+  new_ns: 
+    abox: "https://w3id.org/changes/4/aldrovandi/"
+    lrmoo: "http://iflastandards.info/ns/lrm/lrmoo/"
+    crm: "http://www.cidoc-crm.org/cidoc-crm/"
+    crmdig: "http://www.cidoc-crm.org/extensions/crmdig/"
+    wd: "http://www.wikidata.org/entity/"
+
+mapping_rules:
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/CulturalHeritageObject": "http://iflastandards.info/ns/lrm/lrmoo/F1_Work"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/Type": "http://www.cidoc-crm.org/cidoc-crm/E55_Type"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/Rank": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/Document": "http://www.cidoc-crm.org/cidoc-crm/E31_Document"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/isDocumentedIn": "http://www.cidoc-crm.org/cidoc-crm/P170i_is_documented_in"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/hasSymbolicContent": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/hasType": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/showsFeaturesOf": "http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"

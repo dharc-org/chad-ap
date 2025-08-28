@@ -7,15 +7,3 @@ The directory contains all the files related to the model, its versions in time,
 The current directory contains a `.owl` file named after the lowercase ontology acronym, which is the source of the ontology in a particular format between RDF/XML, Turtle, N-triples, or JSON-LD. In addition to this file, the directory includes other files, named in the same way and with the following extensions: `.ttl` (Turtle), `.nt` (N-Triple), `.jsonld` (JSON-LD), `.html` (HTML, i.e. the human readable documentation of the ontology).
 
 The version directories contain the same kinds of files as those included in the current directory, but specific for that particular version.
-
-
-E39_Actor
-D9_Data_Object
-D8_Digital_Device
-E74_Group
-E73_Information_Object
-E21_Person
-E24_Physical_Human-Made_Thing
-E53_Place
-D14_Software
-

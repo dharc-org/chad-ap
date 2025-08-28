@@ -1,0 +1,67 @@
+@prefix obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@base <https://w3id.org/changes/4/cappellini/> .
+
+<https://w3id.org/changes/4/cappellini/> rdf:type owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/object/development/12/schema/> .
+
+
+<https://w3id.org/changes/4/cappellini/699690/wrk/1> a obj:CulturalHeritageObject ;
+    obj:showsFeaturesOf <https://w3id.org/changes/4/cappellini/tax/animalia> ,
+        <https://w3id.org/changes/4/cappellini/tax/mollusca> ,
+        <https://w3id.org/changes/4/cappellini/tax/cephalopoda> ,
+        <https://w3id.org/changes/4/cappellini/tax/ammonitida> ,
+        <https://w3id.org/changes/4/cappellini/tax/ancyloceratidae> ,
+        <https://w3id.org/changes/4/cappellini/tax/ancyloceras> ;
+    obj:isDocumentedIn <https://www.mindat.org/taxon-3245811.html> .
+
+<https://w3id.org/changes/4/cappellini/699692/wrk/1> a obj:CulturalHeritageObject ;
+    obj:showsFeaturesOf <https://w3id.org/changes/4/cappellini/tax/animalia> ,
+        <https://w3id.org/changes/4/cappellini/tax/mollusca> ,
+        <https://w3id.org/changes/4/cappellini/tax/cephalopoda> ,
+        <https://w3id.org/changes/4/cappellini/tax/ammonitida> ,
+        <https://w3id.org/changes/4/cappellini/tax/turrilitidae> ,
+        <https://w3id.org/changes/4/cappellini/tax/mariella> ,
+        <https://w3id.org/changes/4/cappellini/tax/cenomanensis> ;
+    obj:isDocumentedIn <https://www.mindat.org/taxon-P355991.html> .
+
+<https://w3id.org/changes/4/cappellini/tax/animalia> a obj:Rank ;
+    obj:hasSymbolicContent "Animalia" ;
+    obj:hasType wd:Q36732 .
+
+<https://w3id.org/changes/4/cappellini/tax/mollusca> a obj:Rank ;
+    obj:hasSymbolicContent "Mollusca" ;
+    obj:hasType wd:Q38348 .
+
+<https://w3id.org/changes/4/cappellini/tax/cephalopoda> a obj:Rank ;
+    obj:hasSymbolicContent "Cephalopoda" ;
+    obj:hasType wd:Q37517 .
+
+<https://w3id.org/changes/4/cappellini/tax/ammonitida> a obj:Rank ;
+    obj:hasSymbolicContent "Ammonitida" ;
+    obj:hasType wd:Q36602 .
+
+<https://w3id.org/changes/4/cappellini/tax/turrilitidae> a obj:Rank ;
+    obj:hasSymbolicContent "Turrilitidae" ;
+    obj:hasType wd:Q35409 .
+
+<https://w3id.org/changes/4/cappellini/tax/mariella> a obj:Rank ;
+    obj:hasSymbolicContent "Mariella" ;
+    obj:hasType wd:Q34740 .
+
+<https://w3id.org/changes/4/cappellini/tax/cenomanensis> a obj:Rank ;
+    obj:hasSymbolicContent "cenomanensis" ;
+    obj:hasType wd:Q7432 .
+
+<https://w3id.org/changes/4/cappellini/tax/ancyloceratidae> a obj:Rank ;
+    obj:hasSymbolicContent "Ancyloceratidae" ;
+    obj:hasType wd:Q35409 .
+
+<https://w3id.org/changes/4/cappellini/tax/ancyloceras> a obj:Rank ;
+    obj:hasSymbolicContent "Ancyloceras" ;
+    obj:hasType wd:Q34740 .
