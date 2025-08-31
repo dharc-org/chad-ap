@@ -15,7 +15,7 @@
 | `Actor` | An entity with agency, such as a person or an organization. |
 | `Physical Object` | An object with a physical existence. |
 | `creates work` | This property links a creation event with a work. |
-| `creates expression` | This property links a creation event with a exppression. |
+| `creates expression` | This property links a creation event with a expression. |
 | `is realized in` | This property links a work with an expression. |
 | `is embodied in` | This property links an expression with a manifestation. |
 | `is exemplified by` | This property links a manifestation with an item. |

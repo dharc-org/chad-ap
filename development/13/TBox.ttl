@@ -1,0 +1,86 @@
+@prefix : <https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/> .
+
+<https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:isIdentifiedBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "is identified by"@en .
+
+:contains rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "contains"@en .
+
+:tookPlaceIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "took place in"@en .
+
+:hasCurrentLocation rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "has current location"@en .
+
+:isExemplifiedBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "is exemplified by"@en .
+
+:createsExpression rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "creates expression"@en .
+
+:isEmbodiedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "is embodied in"@en .
+
+
+#################################################################
+#    Datatype Properties
+#################################################################
+
+:hasSymbolicContent rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDatatypeProperty ;
+      rdfs:label "has symbolic content"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+:Appellation rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Appellation"@en .
+
+
+:Place rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Place"@en .
+
+
+:Item rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Item"@en .
+
+
+:CreationEvent rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Creation Event"@en .
+
+
+:Expression rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Expression"@en .
+
+
+:Manifestation rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Manifestation"@en .
+

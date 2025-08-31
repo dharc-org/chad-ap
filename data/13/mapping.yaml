@@ -1,0 +1,25 @@
+namespaces:
+  old_ns: 
+    abox: "https://w3id.org/changes/4/aldrovandi/"
+    obj: "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/"
+  new_ns: 
+    abox: "https://w3id.org/changes/4/aldrovandi/"
+    lrmoo: "http://iflastandards.info/ns/lrm/lrmoo/"
+    crm: "http://www.cidoc-crm.org/cidoc-crm/"
+    crmdig: "http://www.cidoc-crm.org/extensions/crmdig/"
+
+mapping_rules:
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/CreationEvent": "http://iflastandards.info/ns/lrm/lrmoo/F24_Expression_Creation"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/Expression": "http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/Manifestation": "http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/Item": "http://iflastandards.info/ns/lrm/lrmoo/F5_Item"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/createsExpression": "http://iflastandards.info/ns/lrm/lrmoo/R17_created"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/isExemplifiedBy": "http://iflastandards.info/ns/lrm/lrmoo/R7i_is_exemplified_by"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/isEmbodiedIn": "http://iflastandards.info/ns/lrm/lrmoo/R4i_is_embodied_in"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/Place": "http://www.cidoc-crm.org/cidoc-crm/E53_Place"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/contains": "http://www.cidoc-crm.org/cidoc-crm/P89i_contains"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/isIdentifiedBy": "http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/hasCurrentLocation": "http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/hasSymbolicContent": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/Appellation": "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/tookPlaceIn": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"

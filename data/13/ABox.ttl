@@ -1,0 +1,67 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://w3id.org/changes/4/cappellini/> a owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/> .
+
+<https://w3id.org/changes/4/cappellini/699693/act/1> a lrmoo:F24_Expression_Creation ;
+    lrmoo:R17_created <https://w3id.org/changes/4/cappellini/699693/exp/1> ;
+    crm:P7_took_place_at <https://w3id.org/changes/4/cappellini/plc/italia/1>,
+        <https://w3id.org/changes/4/cappellini/plc/opicina/1> .
+
+<https://w3id.org/changes/4/cappellini/699708/act/1> a lrmoo:F24_Expression_Creation ;
+    lrmoo:R17_created <https://w3id.org/changes/4/cappellini/699708/exp/1> ;
+    crm:P7_took_place_at <https://w3id.org/changes/4/cappellini/plc/italia/1>,
+        <https://w3id.org/changes/4/cappellini/plc/spoleto/1> .
+
+<https://w3id.org/changes/4/cappellini/699693/exp/1> a lrmoo:F2_Expression ;
+    lrmoo:R4i_is_embodied_in <https://w3id.org/changes/4/cappellini/699693/man/1> .
+
+<https://w3id.org/changes/4/cappellini/699693/itm/1> a lrmoo:F5_Item ;
+    crm:P53_has_former_or_current_location <https://w3id.org/changes/4/cappellini/plc/viii/1> .
+
+<https://w3id.org/changes/4/cappellini/699693/man/1> a lrmoo:F3_Manifestation ;
+    lrmoo:R7i_is_exemplified_by <https://w3id.org/changes/4/cappellini/699693/itm/1> .
+
+<https://w3id.org/changes/4/cappellini/699708/exp/1> a lrmoo:F2_Expression ;
+    lrmoo:R4i_is_embodied_in <https://w3id.org/changes/4/cappellini/699708/man/1> .
+
+<https://w3id.org/changes/4/cappellini/699708/itm/1> a lrmoo:F5_Item ;
+    crm:P53_has_former_or_current_location <https://w3id.org/changes/4/cappellini/plc/vi/1> .
+
+<https://w3id.org/changes/4/cappellini/699708/man/1> a lrmoo:F3_Manifestation ;
+    lrmoo:R7i_is_exemplified_by <https://w3id.org/changes/4/cappellini/699708/itm/1> .
+
+<https://w3id.org/changes/4/cappellini/app/italia/1> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Italia" .
+
+<https://w3id.org/changes/4/cappellini/app/opicina/1> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Opicina" .
+
+<https://w3id.org/changes/4/cappellini/app/spoleto/1> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Spoleto" .
+
+<https://w3id.org/changes/4/cappellini/app/vi/1> a crm:E53_Place ;
+    crm:P190_has_symbolic_content "Stanza VI" .
+
+<https://w3id.org/changes/4/cappellini/app/viii/1> a crm:E53_Place ;
+    crm:P190_has_symbolic_content "Stanza VIII" .
+
+<https://w3id.org/changes/4/cappellini/plc/vi/1> a crm:E53_Place ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/cappellini/app/vi/1> .
+
+<https://w3id.org/changes/4/cappellini/plc/viii/1> a crm:E53_Place ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/cappellini/app/viii/1> .
+
+<https://w3id.org/changes/4/cappellini/plc/italia/1> a crm:E53_Place ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/cappellini/app/italia/1> ;
+    crm:P89i_contains <https://w3id.org/changes/4/cappellini/plc/opicina/1>,
+        <https://w3id.org/changes/4/cappellini/plc/spoleto/1> .
+
+<https://w3id.org/changes/4/cappellini/plc/opicina/1> a crm:E53_Place ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/cappellini/app/opicina/1> .
+
+<https://w3id.org/changes/4/cappellini/plc/spoleto/1> a crm:E53_Place ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/cappellini/app/spoleto/1> .
+

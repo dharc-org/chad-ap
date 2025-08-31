@@ -1,0 +1,70 @@
+@prefix obj: <https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/changes/4/cappellini/> .
+
+<https://w3id.org/changes/4/cappellini/> rdf:type owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/object/development/13/schema/> .
+
+<https://w3id.org/changes/4/cappellini/699693/act/1> a obj:CreationEvent ;
+    obj:tookPlaceIn <https://w3id.org/changes/4/cappellini/plc/italia/1> ,
+        <https://w3id.org/changes/4/cappellini/plc/opicina/1> ;
+    obj:createsExpression <https://w3id.org/changes/4/cappellini/699693/exp/1> .
+
+<https://w3id.org/changes/4/cappellini/699693/exp/1> a obj:Expression ;
+    obj:isEmbodiedIn <https://w3id.org/changes/4/cappellini/699693/man/1> .
+
+<https://w3id.org/changes/4/cappellini/699693/man/1> a obj:Manifestation ;
+    obj:isExemplifiedBy <https://w3id.org/changes/4/cappellini/699693/itm/1> .
+
+<https://w3id.org/changes/4/cappellini/699693/itm/1> a obj:Item ;
+    obj:hasCurrentLocation <https://w3id.org/changes/4/cappellini/plc/viii/1> .
+
+<https://w3id.org/changes/4/cappellini/plc/italia/1> a obj:Place ;
+    obj:contains <https://w3id.org/changes/4/cappellini/plc/opicina/1> ,
+        <https://w3id.org/changes/4/cappellini/plc/spoleto/1> ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/cappellini/app/italia/1> .
+
+<https://w3id.org/changes/4/cappellini/app/italia/1> a obj:Appellation ;
+    obj:hasSymbolicContent "Italia" .
+
+<https://w3id.org/changes/4/cappellini/plc/opicina/1> a obj:Place ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/cappellini/app/opicina/1> .
+
+<https://w3id.org/changes/4/cappellini/app/opicina/1> a obj:Appellation ;
+    obj:hasSymbolicContent "Opicina" .
+
+<https://w3id.org/changes/4/cappellini/plc/viii/1> a obj:Place ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/cappellini/app/viii/1> .
+
+<https://w3id.org/changes/4/cappellini/app/viii/1> a obj:Place ;
+    obj:hasSymbolicContent "Stanza VIII" .
+
+<https://w3id.org/changes/4/cappellini/699708/act/1> a obj:CreationEvent ;
+    obj:tookPlaceIn <https://w3id.org/changes/4/cappellini/plc/italia/1> ,
+        <https://w3id.org/changes/4/cappellini/plc/spoleto/1> ;
+    obj:createsExpression <https://w3id.org/changes/4/cappellini/699708/exp/1> .
+
+<https://w3id.org/changes/4/cappellini/699708/exp/1> a obj:Expression ;
+    obj:isEmbodiedIn <https://w3id.org/changes/4/cappellini/699708/man/1> .
+
+<https://w3id.org/changes/4/cappellini/699708/man/1> a obj:Manifestation ;
+    obj:isExemplifiedBy <https://w3id.org/changes/4/cappellini/699708/itm/1> .
+
+<https://w3id.org/changes/4/cappellini/699708/itm/1> a obj:Item ;
+    obj:hasCurrentLocation <https://w3id.org/changes/4/cappellini/plc/vi/1> .
+
+<https://w3id.org/changes/4/cappellini/plc/spoleto/1> a obj:Place ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/cappellini/app/spoleto/1> .
+
+<https://w3id.org/changes/4/cappellini/app/spoleto/1> a obj:Appellation ;
+    obj:hasSymbolicContent "Spoleto" .
+
+<https://w3id.org/changes/4/cappellini/plc/vi/1> a obj:Place ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/cappellini/app/vi/1> .
+
+<https://w3id.org/changes/4/cappellini/app/vi/1> a obj:Place ;
+    obj:hasSymbolicContent "Stanza VI" .
