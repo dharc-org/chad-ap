@@ -14,7 +14,7 @@ If an agent is a person, they can be described in terms of:
 - their country;
 - their language;
 - their gender;
-- their profession;
+- their description;
 - their date of death;
 - possible links to their authority records.
 
@@ -35,7 +35,7 @@ The person `:eugene-hus` is characterised by the following features:
 * country: http://data.bnf.fr/vocabulary/countrycodes/xnhh
 * language: http://id.loc.gov/vocabulary/iso639-2/fre
 * gender: male
-* profession: Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique
+* description: Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique
 * date of death: 1823-02-24
 * links: http://data.bnf.fr/ark:/12148/cb10701361n, http://www.idref.fr/071283463, http://d-nb.info/gnd/113677871
 
