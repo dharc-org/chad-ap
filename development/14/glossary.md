@@ -12,16 +12,19 @@
 | `Place` | A geographical location. |
 | `Linguistic Object` | An uterance related to something, expressed in natural language. |
 | `Time-Span` | A period of time defined by a starting and an ending time. |
-| `is identified by` | This property links something with an appellation. |
+| `is identified by` | This property links an entity with an identifier or an appellation. |
+| `has timespan` | This property links an event with a time-span. |
+| `was present at` | This property links an actor with an event. |
 | `has type` | This property links something to a type. |
 | `assigns attribute to` | This property links an attribute assignment to the entity the attribute is assigned to. |
 | `assigns` | This property links an attribute assignment to the value of the attribute it assigns to the entity. |
 | `assigns property of type` | This property links an attribute assignment to the type of the attribute assigned to the entity. |
 | `has residence in` | This property links an actor to a place it currently resides or formely resided in. | 
-| `has content` | This property attaches textual content to an appellation, an identifier or a description. |
+| `is referred to by`| This property links an actor to a linguistic object. |
+| `has symbolic content` | This property attaches textual content to an appellation, an identifier or a description. |
 | `has start time` | This property defines the starting time of a time-span. |
 | `has end time` | This property defines the ending time of a time-span. |
-| `full name` | A type of appellation that represents the full name of a person. |
+| `full name` | A type of appellation that represents the full name of an actor. |
 | `first name` | A type of appellation that represents the first name of a person. |
 | `last name` | A type of appellation that represents the last name of a person. | 
 | `birth` | A type of event that represents the birth of a person. |
@@ -33,3 +36,4 @@
 | `male` | A type of attribute assigned to a person, representing their male gender. |
 | `female` | A type of attribute assigned to a person, representing their female gender. |
 | `description`| A type of linguistic object that describes something. |
+| `uri` | A type of identifier that consists in a Unique Resource Identifier. |
