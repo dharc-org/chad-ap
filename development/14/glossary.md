@@ -13,7 +13,7 @@
 | `Linguistic Object` | An uterance related to something, expressed in natural language. |
 | `Time-Span` | A period of time defined by a starting and an ending time. |
 | `is identified by` | This property links an entity with an identifier or an appellation. |
-| `has timespan` | This property links an event with a time-span. |
+| `has time-span` | This property links an event with a time-span. |
 | `was present at` | This property links an actor with an event. |
 | `has type` | This property links something to a type. |
 | `assigns attribute to` | This property links an attribute assignment to the entity the attribute is assigned to. |

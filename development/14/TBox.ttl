@@ -1,0 +1,188 @@
+@prefix : <https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/> .
+
+<https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:isIdentifiedBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "is identified by"@en .
+
+:hasTimeSpan rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "has time-span"@en .
+
+:wasPresentAt rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "was present at"@en .
+
+:hasType rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:label "has type"@en .
+
+:assignsAttributeTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "assigns attribute to"@en .
+
+:assigns rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "assigns"@en .
+
+:assignsPropertyofType rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "assigns property of type"@en .
+
+:hasResidenceIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "has residence in"@en .
+
+:isReferredToBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:label "is referred to by"@en .
+
+
+#################################################################
+#    Datatype Properties
+#################################################################
+
+:hasSymbolicContent rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDatatypeProperty ;
+      rdfs:label "has symbolic content"@en .
+
+:hasStartTime rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDatatypeProperty ;
+      rdfs:label "has start time"@en .
+
+:hasEndTime rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDatatypeProperty ;
+      rdfs:label "has end time"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+:Appellation rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Appellation"@en .
+
+
+:Actor rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Actor"@en .
+
+
+:Person rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Person"@en .
+
+
+:Organization rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Organization"@en .
+
+
+:Event rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Event"@en .
+
+
+:Appellation rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Appellation"@en .
+
+
+:Identifier rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Identifier"@en .
+
+
+:Type rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Type"@en .
+
+
+:AttributeAssignment rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Attribute assignment"@en .
+
+
+:Place rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Place"@en .
+
+
+:LinguisticObject rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Linguistic object"@en .
+
+
+:Time-Span rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Time-span"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+
+:male rdf:type owl:NamedIndividual ;
+      rdfs:label "male"@en .
+
+
+:female rdf:type owl:NamedIndividual ;
+      rdfs:label "female"@en .
+
+
+:gender rdf:type owl:NamedIndividual ;
+      rdfs:label "gender"@en .
+
+
+:full-name rdf:type owl:NamedIndividual ;
+      rdfs:label "full name"@en .
+
+
+:first-name rdf:type owl:NamedIndividual ;
+      rdfs:label "first name"@en .
+
+
+:last-name rdf:type owl:NamedIndividual ;
+      rdfs:label "last name"@en .
+
+
+:birth rdf:type owl:NamedIndividual ;
+      rdfs:label "birth"@en .
+
+
+:death rdf:type owl:NamedIndividual ;
+      rdfs:label "death"@en .
+
+
+:foundation rdf:type owl:NamedIndividual ;
+      rdfs:label "foundation"@en .
+
+
+:dissolution rdf:type owl:NamedIndividual ;
+      rdfs:label "dissolution"@en .
+
+
+:language rdf:type owl:NamedIndividual ;
+      rdfs:label "language"@en .
+
+
+:description rdf:type owl:NamedIndividual ;
+      rdfs:label "description"@en .
+
+
+:uri rdf:type owl:NamedIndividual ;
+      rdfs:label "URI"@en .
