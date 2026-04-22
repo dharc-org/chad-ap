@@ -11,60 +11,102 @@
 
 <https://w3id.org/changes/4/bnf/eugene-hus> a obj:Person ;
     obj:wasPresentAt <https://w3id.org/changes/4/bnf/evn/1/1> ,
-        <https://w3id.org/changes/4/bnf/evn/1/1> ;
-    obj:createsExpression <https://w3id.org/changes/4/bnf/699693/exp/1> .
+        <https://w3id.org/changes/4/bnf/evn/2/1> ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/bnf/idf/1/1> ,
+        <https://w3id.org/changes/4/bnf/idf/2/1> ,
+        <https://w3id.org/changes/4/bnf/idf/3/1> ,
+        <https://w3id.org/changes/4/bnf/apl/1/1> ,
+        <https://w3id.org/changes/4/bnf/apl/2/1> ,
+        <https://w3id.org/changes/4/bnf/apl/3/1> ;
+    obj:hasResidenceIn <https://w3id.org/changes/4/bnf/plc/1/1> ;
+    obj:isReferredToBy <https://w3id.org/changes/4/bnf/lgo/1/1> .
 
-<https://w3id.org/changes/4/bnf/699693/exp/1> a obj:Expression ;
-    obj:isEmbodiedIn <https://w3id.org/changes/4/bnf/699693/man/1> .
+<https://w3id.org/changes/4/bnf/evn/1/1> a obj:Event ;
+    obj:hasTimeSpan <https://w3id.org/changes/4/bnf/tsp/1/1> ;
+    obj:hasType obj:birth .
 
-<https://w3id.org/changes/4/bnf/699693/man/1> a obj:Manifestation ;
-    obj:isExemplifiedBy <https://w3id.org/changes/4/bnf/699693/itm/1> .
+<https://w3id.org/changes/4/bnf/evn/2/1> a obj:Event ;
+    obj:hasTimeSpan <https://w3id.org/changes/4/bnf/tsp/2/1> ;
+    obj:hasType obj:death .
 
-<https://w3id.org/changes/4/bnf/699693/itm/1> a obj:Item ;
-    obj:hasCurrentLocation <https://w3id.org/changes/4/bnf/plc/viii/1> .
+<https://w3id.org/changes/4/bnf/idf/1/1> a obj:Identifier ;
+    obj:hasType obj:uri ;
+    obj:hasSymbolicContent "http://data.bnf.fr/ark:/12148/cb10701361n" .
 
-<https://w3id.org/changes/4/bnf/plc/italia/1> a obj:Place ;
-    obj:contains <https://w3id.org/changes/4/bnf/plc/opicina/1> ,
-        <https://w3id.org/changes/4/bnf/plc/spoleto/1> ;
-    obj:isIdentifiedBy <https://w3id.org/changes/4/bnf/app/italia/1> .
+<https://w3id.org/changes/4/bnf/idf/2/1> a obj:Identifier ;
+    obj:hasType obj:uri ;
+    obj:hasSymbolicContent "http://www.idref.fr/071283463" .
 
-<https://w3id.org/changes/4/bnf/app/italia/1> a obj:Appellation ;
-    obj:hasSymbolicContent "Italia" .
+<https://w3id.org/changes/4/bnf/idf/3/1> a obj:Identifier ;
+    obj:hasType obj:uri ;
+    obj:hasSymbolicContent "http://d-nb.info/gnd/113677871" .
 
-<https://w3id.org/changes/4/bnf/plc/opicina/1> a obj:Place ;
-    obj:isIdentifiedBy <https://w3id.org/changes/4/bnf/app/opicina/1> .
+<https://w3id.org/changes/4/bnf/apl/1/1> a obj:Appellation ;
+    obj:hasType obj:full-name ;
+    obj:hasSymbolicContent "Eugène Hus" .
 
-<https://w3id.org/changes/4/bnf/app/opicina/1> a obj:Appellation ;
-    obj:hasSymbolicContent "Opicina" .
+<https://w3id.org/changes/4/bnf/apl/2/1> a obj:Appellation ;
+    obj:hasType obj:first-name ;
+    obj:hasSymbolicContent "Eugène" .
 
-<https://w3id.org/changes/4/bnf/plc/viii/1> a obj:Place ;
-    obj:isIdentifiedBy <https://w3id.org/changes/4/bnf/app/viii/1> .
+<https://w3id.org/changes/4/bnf/apl/3/1> a obj:Appellation ;
+    obj:hasType obj:last-name ;
+    obj:hasSymbolicContent "Hus" .
 
-<https://w3id.org/changes/4/bnf/app/viii/1> a obj:Place ;
-    obj:hasSymbolicContent "Stanza VIII" .
+<https://w3id.org/changes/4/bnf/plc/1/1> a obj:Place ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/bnf/idf/4/1> .
 
-<https://w3id.org/changes/4/bnf/699708/act/1> a obj:CreationEvent ;
-    obj:tookPlaceIn <https://w3id.org/changes/4/bnf/plc/italia/1> ,
-        <https://w3id.org/changes/4/bnf/plc/spoleto/1> ;
-    obj:createsExpression <https://w3id.org/changes/4/bnf/699708/exp/1> .
+<https://w3id.org/changes/4/bnf/idf/4/1> a obj:Identifier ;
+    obj:hasType obj:uri ;
+    obj:hasSymbolicContent "http://data.bnf.fr/vocabulary/countrycodes/xnhh" .
 
-<https://w3id.org/changes/4/bnf/699708/exp/1> a obj:Expression ;
-    obj:isEmbodiedIn <https://w3id.org/changes/4/bnf/699708/man/1> .
+<https://w3id.org/changes/4/bnf/aas/1/1> a obj:AttributeAssignment ;
+    obj:assignsAttributeTo <https://w3id.org/changes/4/bnf/eugene-hus> ;
+    obj:assignsPropertyOfType obj:gender ;
+    obj:assigns obj:male .
 
-<https://w3id.org/changes/4/bnf/699708/man/1> a obj:Manifestation ;
-    obj:isExemplifiedBy <https://w3id.org/changes/4/bnf/699708/itm/1> .
+<https://w3id.org/changes/4/bnf/aas/2/1> a obj:AttributeAssignment ;
+    obj:assignsAttributeTo <https://w3id.org/changes/4/bnf/eugene-hus> ;
+    obj:assignsPropertyOfType obj:language ;
+    obj:assigns <http://id.loc.gov/vocabulary/iso639-2/fre> .
 
-<https://w3id.org/changes/4/bnf/699708/itm/1> a obj:Item ;
-    obj:hasCurrentLocation <https://w3id.org/changes/4/bnf/plc/vi/1> .
+<https://w3id.org/changes/4/bnf/lgo/1/1> a obj:LinguisticObject ;
+    obj:hasType obj:description ;
+    obj:hasSymbolicContent "Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique" .
 
-<https://w3id.org/changes/4/bnf/plc/spoleto/1> a obj:Place ;
-    obj:isIdentifiedBy <https://w3id.org/changes/4/bnf/app/spoleto/1> .
+<https://w3id.org/changes/4/bnf/tsp/1/1> a obj:Time-Span ;
+    obj:hasStartTime "1758-07-17T00:00:00" ;
+    obj:hasEndTime "1758-07-17T23:59:59" .
 
-<https://w3id.org/changes/4/bnf/app/spoleto/1> a obj:Appellation ;
-    obj:hasSymbolicContent "Spoleto" .
+<https://w3id.org/changes/4/bnf/tsp/2/1> a obj:Time-Span ;
+    obj:hasStartTime "1823-02-24T00:00:00" ;
+    obj:hasEndTime "1823-02-24T23:59:59" .
 
-<https://w3id.org/changes/4/bnf/plc/vi/1> a obj:Place ;
-    obj:isIdentifiedBy <https://w3id.org/changes/4/bnf/app/vi/1> .
+<https://w3id.org/changes/4/bnf/bnf> a obj:Organization ;
+    obj:wasPresentAt <https://w3id.org/changes/4/bnf/evn/3/1> ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/bnf/idf/5/1> ,
+        <https://w3id.org/changes/4/bnf/apl/4/1> ;
+    obj:hasResidenceIn <https://w3id.org/changes/4/bnf/plc/2/1> .
 
-<https://w3id.org/changes/4/bnf/app/vi/1> a obj:Place ;
-    obj:hasSymbolicContent "Stanza VI" .
+<https://w3id.org/changes/4/bnf/evn/3/1> a obj:Event ;
+    obj:hasTimeSpan <https://w3id.org/changes/4/bnf/tsp/3/1> ;
+    obj:hasType obj:foundation .
+
+<https://w3id.org/changes/4/bnf/idf/5/1> a obj:Identifier ;
+    obj:hasType obj:uri ;
+    obj:hasSymbolicContent "https://ror.org/04v1bf639" .
+
+<https://w3id.org/changes/4/bnf/apl/4/1> a obj:Appellation ;
+    obj:hasType obj:full-name ;
+    obj:hasSymbolicContent "Bibliothèque nationale de France" .
+
+<https://w3id.org/changes/4/bnf/plc/2/1> a obj:Place ;
+    obj:isIdentifiedBy <https://w3id.org/changes/4/bnf/idf/6/1> .
+
+<https://w3id.org/changes/4/bnf/idf/6/1> a obj:Identifier ;
+    obj:hasType obj:uri ;
+    obj:hasSymbolicContent "https://data.bnf.fr/en/11931476/15238307/france/" .
+
+<https://w3id.org/changes/4/bnf/tsp/3/1> a obj:Time-Span ;
+    obj:hasStartTime "1994-01-05T00:00:00" ;
+    obj:hasEndTime "1994-01-05T23:59:59" .
