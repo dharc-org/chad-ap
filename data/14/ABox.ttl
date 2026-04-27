@@ -1,0 +1,108 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://w3id.org/changes/4/bnf/> a owl:Ontology ;
+    owl:imports <https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/> .
+
+<https://w3id.org/changes/4/bnf/aas/1/1> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://w3id.org/changes/4/bnf/eugene-hus> ;
+    crm:P141_assigned <http://vocab.getty.edu/aat/300189559> ;
+    crm:P177_assigned_property_of_type <http://vocab.getty.edu/aat/300411835> .
+
+<https://w3id.org/changes/4/bnf/aas/2/1> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://w3id.org/changes/4/bnf/eugene-hus> ;
+    crm:P141_assigned <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+    crm:P177_assigned_property_of_type <http://vocab.getty.edu/aat/300435433> .
+
+<https://w3id.org/changes/4/bnf/bnf> a crm:E74_Group ;
+    crm:P12i_was_present_at <https://w3id.org/changes/4/bnf/evn/3/1> ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/bnf/apl/4/1>,
+        <https://w3id.org/changes/4/bnf/idf/5/1> ;
+    crm:P74_has_current_or_former_residence <https://w3id.org/changes/4/bnf/plc/2/1> .
+
+<https://w3id.org/changes/4/bnf/apl/1/1> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Eugène Hus" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404688> .
+
+<https://w3id.org/changes/4/bnf/apl/2/1> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Eugène" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404651> .
+
+<https://w3id.org/changes/4/bnf/apl/3/1> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Hus" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404652> .
+
+<https://w3id.org/changes/4/bnf/apl/4/1> a crm:E41_Appellation ;
+    crm:P190_has_symbolic_content "Bibliothèque nationale de France" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404688> .
+
+<https://w3id.org/changes/4/bnf/evn/1/1> a crm:E5_Event ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300069672> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/bnf/tsp/1/1> .
+
+<https://w3id.org/changes/4/bnf/evn/2/1> a crm:E5_Event ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300151836> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/bnf/tsp/2/1> .
+
+<https://w3id.org/changes/4/bnf/evn/3/1> a crm:E5_Event ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300393213> ;
+    crm:P4_has_time-span <https://w3id.org/changes/4/bnf/tsp/3/1> .
+
+<https://w3id.org/changes/4/bnf/idf/1/1> a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "http://data.bnf.fr/ark:/12148/cb10701361n" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+
+<https://w3id.org/changes/4/bnf/idf/2/1> a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "http://www.idref.fr/071283463" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+
+<https://w3id.org/changes/4/bnf/idf/3/1> a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "http://d-nb.info/gnd/113677871" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+
+<https://w3id.org/changes/4/bnf/idf/4/1> a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "http://data.bnf.fr/vocabulary/countrycodes/xnhh" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+
+<https://w3id.org/changes/4/bnf/idf/5/1> a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "https://ror.org/04v1bf639" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+
+<https://w3id.org/changes/4/bnf/idf/6/1> a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "https://data.bnf.fr/en/11931476/15238307/france/" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+
+<https://w3id.org/changes/4/bnf/lgo/1/1> a crm:E33_Linguistic_Object ;
+    crm:P190_has_symbolic_content "Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique" ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300435416> .
+
+<https://w3id.org/changes/4/bnf/plc/1/1> a crm:E53_Place ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/bnf/idf/4/1> .
+
+<https://w3id.org/changes/4/bnf/plc/2/1> a crm:E53_Place ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/bnf/idf/6/1> .
+
+<https://w3id.org/changes/4/bnf/tsp/1/1> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1758-07-17T00:00:00" ;
+    crm:P82b_end_of_the_end "1758-07-17T23:59:59" .
+
+<https://w3id.org/changes/4/bnf/tsp/2/1> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1823-02-24T00:00:00" ;
+    crm:P82b_end_of_the_end "1823-02-24T23:59:59" .
+
+<https://w3id.org/changes/4/bnf/tsp/3/1> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1994-01-05T00:00:00" ;
+    crm:P82b_end_of_the_end "1994-01-05T23:59:59" .
+
+<https://w3id.org/changes/4/bnf/eugene-hus> a crm:E21_Person ;
+    crm:P12i_was_present_at <https://w3id.org/changes/4/bnf/evn/1/1>,
+        <https://w3id.org/changes/4/bnf/evn/2/1> ;
+    crm:P1_is_identified_by <https://w3id.org/changes/4/bnf/apl/1/1>,
+        <https://w3id.org/changes/4/bnf/apl/2/1>,
+        <https://w3id.org/changes/4/bnf/apl/3/1>,
+        <https://w3id.org/changes/4/bnf/idf/1/1>,
+        <https://w3id.org/changes/4/bnf/idf/2/1>,
+        <https://w3id.org/changes/4/bnf/idf/3/1> ;
+    crm:P67i_is_referred_to_by <https://w3id.org/changes/4/bnf/lgo/1/1> ;
+    crm:P74_has_current_or_former_residence <https://w3id.org/changes/4/bnf/plc/1/1> .
+
