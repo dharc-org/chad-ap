@@ -2236,7 +2236,8 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P9_consists_of -[1..N]-> crm:E7_Activity
 * crm:R32_used_general_technique -[0..N]-> crm:E55_Type
 * lrmoo:R19_created_a_realisation_of -[1]-> lrmoo:F1_Item
-* crm:P4_has_time-span -[1]-> crm:E52_Time-Span""" ;
+* crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span
+""" ;
                                                                  <http://purl.org/vocab/vann/example> """
         ### Example of an Expression Creation. It consists of a smaller activity; it is carried out through a drawing
         ### technique; it happens during the XVI century; and it generates both the Expression of the CHO (its content) and
@@ -2304,7 +2305,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing> ;
                                                  <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
-* crm:P1_is_identified_by -[1..N]-> crm:E42_Identifier
+* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
 * crm:P3_has_note -[0..1]-> rdfs:Literal""" ;
                                                  <http://purl.org/vocab/vann/example> """
         ### Example of a CHO at the Item level, characterised by three identifiers and a description
@@ -2357,7 +2358,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 * crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
 * crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
+* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
+""" ;
                                                 <http://purl.org/vocab/vann/example> """
         ### Example of a person named \"John Doe\"
 
@@ -2385,7 +2388,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                                    <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
 * crm:P2_has_type -[0..1]-> crm:E55_Type
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
+* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
+""" ;
                                                                    <http://purl.org/vocab/vann/example> """
         ### Example of a collection
 
@@ -2462,7 +2467,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 * crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
 * crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
+* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
+""" ;
                                                <http://purl.org/vocab/vann/example> """
         ### Example of an actor named Ulisse Aldrovandi
 
@@ -2484,7 +2491,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                      rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object> ;
                                                      <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
-* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal""" ;
+* crm:P190_has_symbolic_content -[1]-> rdfs:Literal
+* crm:P2_has_type -[0..1]-> E55_Type
+""" ;
                                                      <http://purl.org/vocab/vann/example> """
         ### Example of the appellation used to identify the Blender software
 
@@ -2554,7 +2563,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
 * crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
+* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
+""" ;
                                                <http://purl.org/vocab/vann/example> """
         ### Example of a place named Bologna, documented
         ### by an external resource (an authority record on WikiData)
@@ -2611,7 +2622,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 * crm:P2_has_type -[1]-> crm:E55_Type
 * crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation
-* crm:P70i_is_documented_in -[0..1]-> crm:E31_Document
+* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
 * crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal
 * crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
                                                             <http://purl.org/vocab/vann/example> """
@@ -2640,7 +2651,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 * crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
 * crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
+* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
+""" ;
                                                <http://purl.org/vocab/vann/example> """
         ### Example of an organisation named \"University of Bologna\"
 
@@ -2669,7 +2682,9 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P2_has_type -[1]-> crm:E55_Type
 * crm:P14_carried_out_by -[0..N]-> crm:E39_Actor
 * crm:P16_used_specific_object -[0..N]-> lrmoo:F5_Item
-* crm:P32_used_general_technique -[0..N]-> E55_Type""" ;
+* crm:P32_used_general_technique -[0..N]-> E55_Type
+* crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span
+""" ;
                                                  <http://purl.org/vocab/vann/example> """
         ### Example of activity consisting in the curation (aat:300054277) of a 
         ### CHO at the Item level, carried out by a cultural organization (BUB)
@@ -2702,7 +2717,7 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P2_has_type -[1]-> crm:E55_Type
 * crmdig:L10_had_input -[1]-> crmdig:D9_Data_Object
 * crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
-* crm:P4_has_time-span -[1]-> crm:E52_Time-Span
+* crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span
 * crm:P11_had_participant -[0..N]-> crm:E74_Group
 * crm:P14_carried_out_by -[0..N]-> crm:E39_Actor
 * crmdig:L23_used_software_or_firmware -[1..N]-> crmdig:D14_Software""" ;
@@ -2767,9 +2782,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 * crmdig:L1_digitized -[1]-> lrmoo:F5_Item
 * crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
-* crm:P4_has_time-span -[1]-> crm:E52_Time-Span
+* crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span
 * crm:P11_had_participant -[0..N]-> crm:E74_Group
-* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
+* crm:P14_carried_out_by -[0..N]-> crm:E39_Actor
 * crm:P32_used_general_technique -[1]-> crm:E55_Type
 * crm:P16_used_specific_object -[1..N]-> crmdig:D8_Digital_Device""" ;
                                                                      <http://purl.org/vocab/vann/example> """
@@ -2831,7 +2846,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                             <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
 * crm:P130i_features_are_also_found_on -[0..N]-> crmdig:D9_Data_Object
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
+* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
+* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
+""" ;
                                                             <http://purl.org/vocab/vann/example> """
         ### Example of a data object produced at the end of an acquisition activity and used as input in a processing activity
 
