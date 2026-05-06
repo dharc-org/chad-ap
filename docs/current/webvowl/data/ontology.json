@@ -16,17 +16,17 @@
       "en" : "The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process."
     },
     "other" : {
-      "funder" : [ {
-        "identifier" : "funder",
-        "language" : "undefined",
-        "value" : "https://www.fondazionechanges.org/",
-        "type" : "iri"
-      } ],
       "date" : [ {
         "identifier" : "date",
         "language" : "undefined",
         "value" : "2024-04-16",
         "type" : "label"
+      } ],
+      "funder" : [ {
+        "identifier" : "funder",
+        "language" : "undefined",
+        "value" : "https://www.fondazionechanges.org/",
+        "type" : "iri"
       } ],
       "priorVersion" : [ {
         "identifier" : "priorVersion",
@@ -37,12 +37,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Peroni, Silvio",
+        "value" : "Barzaghi, Sebastian",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Barzaghi, Sebastian",
+        "value" : "Peroni, Silvio",
         "type" : "label"
       } ],
       "incompatibleWith" : [ {
@@ -110,12 +110,6 @@
         "value" : "2025-09-17",
         "type" : "label"
       } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "en",
-        "value" : "Barzaghi, S., Heibi, I., Moretti, A., Peroni, S. (2025). Developing Application Profiles for Enhancing Data and Workflows in Cultural Heritage Digitisation Processes. In: Demartini, G., et al. The Semantic Web - ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer, Cham. https://doi.org/10.1007/978-3-031-77847-6_11.",
-        "type" : "label"
-      } ],
       "codeRepository" : [ {
         "identifier" : "codeRepository",
         "language" : "undefined",
@@ -128,22 +122,28 @@
         "value" : "https://w3id.org/dharc/ontology/chad-ap",
         "type" : "label"
       } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "Barzaghi, S., Heibi, I., Moretti, A., Peroni, S. (2025). Developing Application Profiles for Enhancing Data and Workflows in Cultural Heritage Digitisation Processes. In: Demartini, G., et al. The Semantic Web - ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer, Cham. https://doi.org/10.1007/978-3-031-77847-6_11.",
+        "type" : "label"
+      } ],
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
         "value" : "2024-04-16",
         "type" : "label"
       } ],
-      "doi" : [ {
-        "identifier" : "doi",
-        "language" : "undefined",
-        "value" : "10.1007/978-3-031-77847-6_11",
-        "type" : "label"
-      } ],
       "status" : [ {
         "identifier" : "status",
         "language" : "en",
         "value" : "work in progress",
+        "type" : "label"
+      } ],
+      "doi" : [ {
+        "identifier" : "doi",
+        "language" : "undefined",
+        "value" : "10.1007/978-3-031-77847-6_11",
         "type" : "label"
       } ]
     }
@@ -198,10 +198,10 @@
     "id" : "53",
     "type" : "owl:Class"
   }, {
-    "id" : "31",
+    "id" : "78",
     "type" : "owl:Class"
   }, {
-    "id" : "78",
+    "id" : "31",
     "type" : "owl:Class"
   }, {
     "id" : "49",
@@ -276,10 +276,10 @@
     "id" : "80",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
     "id" : "9",
@@ -466,37 +466,6 @@
         "it" : "sonaglio"
       }
     }, {
-      "iri" : "http://vocab.getty.edu/aat/300226836",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300226836",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "This individual is used to represent CHOs that are series of frescoes.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Sets or ensembles of visual works."
-      },
-      "labels" : {
-        "IRI-based" : "300226836",
-        "en" : "visual works groupings",
-        "it" : "serie di affreschi"
-      }
-    }, {
       "iri" : "http://vocab.getty.edu/aat/300015045",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -526,6 +495,37 @@
         "IRI-based" : "300015045",
         "en" : "watercolor (paint)",
         "it" : "acquarello"
+      }
+    }, {
+      "iri" : "http://vocab.getty.edu/aat/300226836",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300226836",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "This individual is used to represent CHOs that are series of frescoes.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Sets or ensembles of visual works."
+      },
+      "labels" : {
+        "IRI-based" : "300226836",
+        "en" : "visual works groupings",
+        "it" : "serie di affreschi"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300037592",
@@ -621,37 +621,6 @@
         "it" : "acquarello"
       }
     }, {
-      "iri" : "http://vocab.getty.edu/aat/300053319",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300053319",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "This individual is used to represent the activities of printers.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Various means of reproducing identical copies of graphic matter in a fixed form, by which an image, pictorial or textual, is transferred, usually to paper or cloth."
-      },
-      "labels" : {
-        "IRI-based" : "300053319",
-        "en" : "printing (process)",
-        "it" : "stampa"
-      }
-    }, {
       "iri" : "http://vocab.getty.edu/aat/300404387",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -681,6 +650,37 @@
         "IRI-based" : "300404387",
         "en" : "creating (artistic activity)",
         "it" : "creazione"
+      }
+    }, {
+      "iri" : "http://vocab.getty.edu/aat/300053319",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300053319",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "This individual is used to represent the activities of printers.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Various means of reproducing identical copies of graphic matter in a fixed form, by which an image, pictorial or textual, is transferred, usually to paper or cloth."
+      },
+      "labels" : {
+        "IRI-based" : "300053319",
+        "en" : "printing (process)",
+        "it" : "stampa"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300404386",
@@ -838,37 +838,6 @@
         "it" : "manoscritto"
       }
     }, {
-      "iri" : "http://vocab.getty.edu/aat/300025976",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300025976",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "This individual is used to represent collections.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Accumulated groups of objects or materials having a focal characteristic and that have been brought together by an individual or organization."
-      },
-      "labels" : {
-        "IRI-based" : "300025976",
-        "en" : "collections (object groupings)",
-        "it" : "collezione"
-      }
-    }, {
       "iri" : "http://vocab.getty.edu/aat/300053758",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -898,6 +867,37 @@
         "IRI-based" : "300053758",
         "en" : "drying",
         "it" : "essiccatura"
+      }
+    }, {
+      "iri" : "http://vocab.getty.edu/aat/300025976",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300025976",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "This individual is used to represent collections.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Accumulated groups of objects or materials having a focal characteristic and that have been brought together by an individual or organization."
+      },
+      "labels" : {
+        "IRI-based" : "300025976",
+        "en" : "collections (object groupings)",
+        "it" : "collezione"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300265483",
@@ -1055,37 +1055,6 @@
         "it" : "pittura su vaso"
       }
     }, {
-      "iri" : "http://vocab.getty.edu/aat/300047762",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300047762",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "This individual is used to represent CHOs that are dioramas.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Works in which three-dimensional objects, often figural sculpture, in the foreground blend with a realistic painted background."
-      },
-      "labels" : {
-        "IRI-based" : "300047762",
-        "en" : "dioramas",
-        "it" : "diorama"
-      }
-    }, {
       "iri" : "http://vocab.getty.edu/aat/300069831",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -1115,6 +1084,37 @@
         "IRI-based" : "300069831",
         "en" : "translation (function)",
         "it" : "traduzione"
+      }
+    }, {
+      "iri" : "http://vocab.getty.edu/aat/300047762",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300047762",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "This individual is used to represent CHOs that are dioramas.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Works in which three-dimensional objects, often figural sculpture, in the foreground blend with a realistic painted background."
+      },
+      "labels" : {
+        "IRI-based" : "300047762",
+        "en" : "dioramas",
+        "it" : "diorama"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300420536",
@@ -1334,37 +1334,6 @@
         "it" : "modellazione"
       }
     }, {
-      "iri" : "http://vocab.getty.edu/aat/300077565",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300077565",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "This individual is used to represent the activities of museum preparators.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "The action or process of making something ready for use or service or of getting ready for some occasion, test, or duty."
-      },
-      "labels" : {
-        "IRI-based" : "300077565",
-        "en" : "preparing",
-        "it" : "preparazione museale"
-      }
-    }, {
       "iri" : "http://vocab.getty.edu/aat/300184300",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -1394,6 +1363,37 @@
         "IRI-based" : "300184300",
         "en" : "narrative cycles",
         "it" : "serie di dipinti"
+      }
+    }, {
+      "iri" : "http://vocab.getty.edu/aat/300077565",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300077565",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "This individual is used to represent the activities of museum preparators.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The action or process of making something ready for use or service or of getting ready for some occasion, test, or duty."
+      },
+      "labels" : {
+        "IRI-based" : "300077565",
+        "en" : "preparing",
+        "it" : "preparazione museale"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300422994",
@@ -1892,6 +1892,37 @@
         "it" : "commissione"
       }
     }, {
+      "iri" : "http://vocab.getty.edu/aat/300391312",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300391312",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "This individual is used to represent the use of structured light scanning as a technique.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Scanning technique that involves a pattern of lines projected onto a 3-D object and the subsequent mathematical measurement of the deformations caused by the geometry of the object."
+      },
+      "labels" : {
+        "IRI-based" : "300391312",
+        "en" : "structured light scanning",
+        "it" : "scansione a luce strutturata"
+      }
+    }, {
       "iri" : "http://vocab.getty.edu/aat/300024814",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -1952,37 +1983,6 @@
         "IRI-based" : "300053225",
         "en" : "engraving (printing process)",
         "it" : "incisione"
-      }
-    }, {
-      "iri" : "http://vocab.getty.edu/aat/300391312",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300391312",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "This individual is used to represent the use of structured light scanning as a technique.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Scanning technique that involves a pattern of lines projected onto a 3-D object and the subsequent mathematical measurement of the deformations caused by the geometry of the object."
-      },
-      "labels" : {
-        "IRI-based" : "300391312",
-        "en" : "structured light scanning",
-        "it" : "scansione a luce strutturata"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300445021",
@@ -2140,37 +2140,6 @@
         "it" : "compasso"
       }
     }, {
-      "iri" : "http://vocab.getty.edu/aat/300138758",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300138758",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "This individual is used to represent CHOs that are masks.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Refers to coverings for all or part of the face, usually with openings for the eyes and sometimes the mouth."
-      },
-      "labels" : {
-        "IRI-based" : "300138758",
-        "en" : "masks (costume)",
-        "it" : "maschera"
-      }
-    }, {
       "iri" : "http://vocab.getty.edu/aat/300235576",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -2231,6 +2200,37 @@
         "IRI-based" : "300132254",
         "en" : "vases",
         "it" : "vaso"
+      }
+    }, {
+      "iri" : "http://vocab.getty.edu/aat/300138758",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300138758",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "This individual is used to represent CHOs that are masks.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Refers to coverings for all or part of the face, usually with openings for the eyes and sometimes the mouth."
+      },
+      "labels" : {
+        "IRI-based" : "300138758",
+        "en" : "masks (costume)",
+        "it" : "maschera"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300404126",
@@ -2388,37 +2388,6 @@
         "it" : "mappa"
       }
     }, {
-      "iri" : "http://vocab.getty.edu/aat/300224200",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300224200",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "This individual is used to represent CHOs that are bound manuscripts.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Ancient manuscripts generally taking the form of the modern book: bound leaves of paper or parchment with information inscribed on both faces, attached at a center fold."
-      },
-      "labels" : {
-        "IRI-based" : "300224200",
-        "en" : "codices (bound manuscripts)",
-        "it" : "codice manoscritto"
-      }
-    }, {
       "iri" : "http://vocab.getty.edu/aat/300028051",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -2448,6 +2417,37 @@
         "IRI-based" : "300028051",
         "en" : "books",
         "it" : "libro"
+      }
+    }, {
+      "iri" : "http://vocab.getty.edu/aat/300224200",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300224200",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "This individual is used to represent CHOs that are bound manuscripts.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Ancient manuscripts generally taking the form of the modern book: bound leaves of paper or parchment with information inscribed on both faces, attached at a center fold."
+      },
+      "labels" : {
+        "IRI-based" : "300224200",
+        "en" : "codices (bound manuscripts)",
+        "it" : "codice manoscritto"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300041405",
@@ -2636,37 +2636,6 @@
         "it" : "illustrazione"
       }
     }, {
-      "iri" : "http://vocab.getty.edu/aat/300404630",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300404630",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "Unique resource locators that, in addition to identifying a resource, provide the address of the internet document according to one of a variety of protocols.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Uniform Resource Locators used to identify a resource existing online."
-      },
-      "labels" : {
-        "IRI-based" : "300404630",
-        "en" : "url",
-        "it" : "url"
-      }
-    }, {
       "iri" : "http://vocab.getty.edu/aat/300178684",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -2696,6 +2665,37 @@
         "IRI-based" : "300178684",
         "en" : "oil painting (technique)",
         "it" : "olio su tela"
+      }
+    }, {
+      "iri" : "http://vocab.getty.edu/aat/300404630",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300404630",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "Unique resource locators that, in addition to identifying a resource, provide the address of the internet document according to one of a variety of protocols.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Uniform Resource Locators used to identify a resource existing online."
+      },
+      "labels" : {
+        "IRI-based" : "300404630",
+        "en" : "url",
+        "it" : "url"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300047753",
@@ -2946,37 +2946,6 @@
         "it" : "dichiarazione di licenza"
       }
     }, {
-      "iri" : "http://vocab.getty.edu/aat/300252927",
-      "baseIri" : "http://vocab.getty.edu/aat",
-      "annotations" : {
-        "identifier" : [ {
-          "identifier" : "identifier",
-          "language" : "undefined",
-          "value" : "300252927",
-          "type" : "label"
-        } ],
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://vocab.getty.edu/aat/",
-          "type" : "iri"
-        } ],
-        "rationale" : [ {
-          "identifier" : "rationale",
-          "language" : "en",
-          "value" : "This individual is used to represent the use of handwriting as a technique.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "The forming of letters and words by hand rather than by printing; may be used to designate a particular and distinctive form, style, or method of writing by hand."
-      },
-      "labels" : {
-        "IRI-based" : "300252927",
-        "en" : "handwriting",
-        "it" : "scrittura"
-      }
-    }, {
       "iri" : "http://vocab.getty.edu/aat/300137376",
       "baseIri" : "http://vocab.getty.edu/aat",
       "annotations" : {
@@ -3006,6 +2975,37 @@
         "IRI-based" : "300137376",
         "en" : "portolanos",
         "it" : "atlante nautico"
+      }
+    }, {
+      "iri" : "http://vocab.getty.edu/aat/300252927",
+      "baseIri" : "http://vocab.getty.edu/aat",
+      "annotations" : {
+        "identifier" : [ {
+          "identifier" : "identifier",
+          "language" : "undefined",
+          "value" : "300252927",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://vocab.getty.edu/aat/",
+          "type" : "iri"
+        } ],
+        "rationale" : [ {
+          "identifier" : "rationale",
+          "language" : "en",
+          "value" : "This individual is used to represent the use of handwriting as a technique.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The forming of letters and words by hand rather than by printing; may be used to designate a particular and distinctive form, style, or method of writing by hand."
+      },
+      "labels" : {
+        "IRI-based" : "300252927",
+        "en" : "handwriting",
+        "it" : "scrittura"
       }
     }, {
       "iri" : "http://vocab.getty.edu/aat/300191086",
@@ -3375,7 +3375,7 @@
     "baseIri" : "http://www.cidoc-crm.org/cidoc-crm",
     "instances" : 0,
     "description" : {
-      "undefined" : "The properties that can be used with this class are:\n\n* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime\n* crm:P82b_end_of_the_end -[1]-> xsd:dateTime"
+      "undefined" : "The properties that can be used with this class are:\n\n* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime\n* crm:P82a_begin_of_the_begin -[1]-> edtf:EDTF\n* crm:P82b_end_of_the_end -[1]-> xsd:dateTime\n* crm:P82b_end_of_the_end -[1]-> edtf:EDTF"
     },
     "annotations" : {
       "isDefinedBy" : [ {
@@ -3413,6 +3413,16 @@
     "attributes" : [ "external" ],
     "id" : "53",
     "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object",
+    "baseIri" : "http://www.cidoc-crm.org/extensions/crmdig",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "D1_Digital_Object"
+    },
+    "subClasses" : [ "57", "77" ],
+    "attributes" : [ "external" ],
+    "id" : "78"
   }, {
     "iri" : "http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation",
     "baseIri" : "http://iflastandards.info/ns/lrm/lrmoo",
@@ -3456,16 +3466,6 @@
     "attributes" : [ "external" ],
     "id" : "31",
     "superClasses" : [ "71", "32" ]
-  }, {
-    "iri" : "http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object",
-    "baseIri" : "http://www.cidoc-crm.org/extensions/crmdig",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "D1_Digital_Object"
-    },
-    "subClasses" : [ "57", "77" ],
-    "attributes" : [ "external" ],
-    "id" : "78"
   }, {
     "iri" : "http://www.cidoc-crm.org/cidoc-crm/E53_Place",
     "baseIri" : "http://www.cidoc-crm.org/cidoc-crm",
@@ -3577,7 +3577,7 @@
     "baseIri" : "http://www.cidoc-crm.org/cidoc-crm",
     "instances" : 0,
     "description" : {
-      "undefined" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"
+      "undefined" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal"
     },
     "annotations" : {
       "isDefinedBy" : [ {
@@ -3769,7 +3769,7 @@
     "baseIri" : "http://www.cidoc-crm.org/cidoc-crm",
     "instances" : 0,
     "description" : {
-      "undefined" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation\n* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document\n* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal\n* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"
+      "undefined" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation\n* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document\n* crm:P190_has_symbolic_content -[0..N]-> rdfs:Literal\n* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"
     },
     "annotations" : {
       "isDefinedBy" : [ {
@@ -3872,7 +3872,7 @@
     "baseIri" : "http://www.cidoc-crm.org/cidoc-crm",
     "instances" : 0,
     "description" : {
-      "undefined" : "The properties that can be used with this class are:\n\n* crm:P190_has_symbolic_content -[1]-> rdfs:Literal\n* crm:P2_has_type -[0..1]-> E55_Type\n"
+      "undefined" : "The properties that can be used with this class are:\n\n* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal\n* crm:P2_has_type -[0..1]-> E55_Type\n"
     },
     "annotations" : {
       "isDefinedBy" : [ {
@@ -4024,21 +4024,11 @@
     "id" : "80",
     "superClasses" : [ "22" ]
   }, {
-    "iri" : "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
-    "baseIri" : "http://www.cidoc-crm.org/cidoc-crm",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "E5_Event"
-    },
-    "subClasses" : [ "4" ],
-    "attributes" : [ "external" ],
-    "id" : "5"
-  }, {
     "iri" : "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
     "baseIri" : "http://www.cidoc-crm.org/cidoc-crm",
     "instances" : 0,
     "description" : {
-      "undefined" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"
+      "undefined" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal"
     },
     "annotations" : {
       "isDefinedBy" : [ {
@@ -4076,6 +4066,16 @@
     "attributes" : [ "external" ],
     "id" : "34",
     "superClasses" : [ "63", "35" ]
+  }, {
+    "iri" : "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
+    "baseIri" : "http://www.cidoc-crm.org/cidoc-crm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "E5_Event"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "5"
   }, {
     "iri" : "http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item",
     "baseIri" : "http://www.cidoc-crm.org/cidoc-crm",

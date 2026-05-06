@@ -2907,7 +2907,7 @@ What are the tools and their types used in processing activities?
         <dc:description>The properties that can be used with this class are:
 
 * crm:P2_has_type -[1]-&gt; crm:E55_Type
-* crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal</dc:description>
+* crm:P190_has_symbolic_content -[1..N]-&gt; rdfs:Literal</dc:description>
         <vann:example xml:lang="en">
         ### Example of a title, characterised by a type and a textual content
 
@@ -2968,7 +2968,7 @@ What are the tools and their types used in processing activities?
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
         <dc:description>The properties that can be used with this class are:
 
-* crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal
+* crm:P190_has_symbolic_content -[1..N]-&gt; rdfs:Literal
 * crm:P2_has_type -[0..1]-&gt; E55_Type
 </dc:description>
         <vann:example xml:lang="en">
@@ -2998,7 +2998,7 @@ What are the tools and their types used in processing activities?
         <dc:description>The properties that can be used with this class are:
 
 * crm:P2_has_type -[1]-&gt; crm:E55_Type
-* crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal</dc:description>
+* crm:P190_has_symbolic_content -[1..N]-&gt; rdfs:Literal</dc:description>
         <vann:example xml:lang="en">
         ### Example of an identifier, characterised by a type and a textual content
 
@@ -3030,7 +3030,9 @@ What are the tools and their types used in processing activities?
         <dc:description>The properties that can be used with this class are:
 
 * crm:P82a_begin_of_the_begin -[1]-&gt; xsd:dateTime
-* crm:P82b_end_of_the_end -[1]-&gt; xsd:dateTime</dc:description>
+* crm:P82a_begin_of_the_begin -[1]-&gt; edtf:EDTF
+* crm:P82b_end_of_the_end -[1]-&gt; xsd:dateTime
+* crm:P82b_end_of_the_end -[1]-&gt; edtf:EDTF</dc:description>
         <vann:example xml:lang="en">
         ### Example of a time span, characterised by a starting date time and an ending date time
 
@@ -3138,7 +3140,7 @@ What are the tools and their types used in processing activities?
 * crm:P2_has_type -[1]-&gt; crm:E55_Type
 * crm:P67_refers_to -[0..1]-&gt; lrmoo:F3_Manifestation
 * crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document
-* crm:P190_has_symbolic_content -[0..1]-&gt; rdfs:Literal
+* crm:P190_has_symbolic_content -[0..N]-&gt; rdfs:Literal
 * crm:P1_is_identified_by -[0..N]-&gt; crm:E41_Appellation</dc:description>
         <vann:example xml:lang="en">
         ### Example of two Information Objects, one representing a copyright statement and 

@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/dharc/ontology/chad-ap","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/dharc/ontology/chad-ap","name":"Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)", "headline":"A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.", "dateReleased":"2024-04-16", "dateModified":"2025-09-17", "version":"2.0.6", "license":"http://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/dharc-org/chad-ap/", "author":[{"@type":"Person","name":"Barzaghi, Sebastian"},{"@type":"Person","name":"Peroni, Silvio"}], "contributor":[{"@type":"Person","name":"Heibi, Ivan"},{"@type":"Person","name":"Moretti, Arianna"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/dharc/ontology/chad-ap","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/dharc/ontology/chad-ap","name":"Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)", "headline":"A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.", "dateReleased":"2024-04-16", "dateModified":"2025-09-17", "version":"2.0.4", "license":"http://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/dharc-org/chad-ap/", "author":[{"@type":"Person","name":"Barzaghi, Sebastian"},{"@type":"Person","name":"Peroni, Silvio"}], "contributor":[{"@type":"Person","name":"Heibi, Ivan"},{"@type":"Person","name":"Moretti, Arianna"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -72,13 +72,13 @@ $(function(){
 <dl>
 <dt>Modified on: 2025-09-17</dt>
 <dt>This version:</dt>
-<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.6">https://w3id.org/dharc/ontology/chad-ap/2.0.6</a></dd>
+<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.3">https://w3id.org/dharc/ontology/chad-ap/2.0.3</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://w3id.org/dharc/ontology/chad-ap">https://w3id.org/dharc/ontology/chad-ap</a></dd>
 <dt>Previous version:</dt>
-<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.5">https://w3id.org/dharc/ontology/chad-ap/2.0.5</a></dd>
+<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.3">https://w3id.org/dharc/ontology/chad-ap/2.0.3</a></dd>
 <dt>Revision:</dt>
-<dd>2.0.6</dd>
+<dd>2.0.4</dd>
 <dt>Issued on:</dt>
 <dd>2024-04-16</dd>
 <dt>Authors:</dt>
@@ -95,16 +95,16 @@ $(function(){
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd>Barzaghi, S., Heibi, I., Moretti, A., Peroni, S. (2025). Developing Application Profiles for Enhancing Data and Workflows in Cultural Heritage Digitisation Processes. In: Demartini, G., et al. The Semantic Web - ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer, Cham. https://doi.org/10.1007/978-3-031-77847-6_11.</dd>
 <dt>DOI:</dt>
-<dd><a href="http://dx.doi.org/10.1007/978-3-031-77847-6_11"><img src ="https://img.shields.io/badge/doi-10.1007/978--3--031--77847--6-11-blue" alt="10.1007/978-3-031-77847-6_11" /></a></dd>
+<dd><a href="http://dx.doi.org/10.1007/978-3-031-77847-6_11"><img src ="https://img.shields.io/badge/DOI-10.1007/978--3--031--77847--6--11-blue.svg" alt="10.1007/978-3-031-77847-6_11" /></a></dd>
 <dt>Compatible with:</dt>
-<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.5">https://w3id.org/dharc/ontology/chad-ap/2.0.5</a></dd>
+<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.3">https://w3id.org/dharc/ontology/chad-ap/2.0.3</a></dd>
 <dt>Incompatible with:</dt>
 <dd><a href="https://w3id.org/dharc/ontology/chad-ap/1.0.0">https://w3id.org/dharc/ontology/chad-ap/1.0.0</a></dd>
 <dt>Vocabulary maintained at:</dt>
 <dd><a href="https://github.com/dharc-org/chad-ap/">https://github.com/dharc-org/chad-ap/</a></dd>
 </dl>
 
-<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+<hr/>
 </div>
 <div class="status">
 <div>
@@ -1401,7 +1401,7 @@ This section provides details for each class and property defined by Cultural He
    <span class="markdown">A label used to refer to or identify an entity.</span>
   </div>
   <div class="info">
-   <span class="markdown">The properties that can be used with this class are: * crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal * crm:P2_has_type -[0..1]-&gt; E55_Type </span>
+   <span class="markdown">The properties that can be used with this class are: * crm:P190_has_symbolic_content -[1..N]-&gt; rdfs:Literal * crm:P2_has_type -[0..1]-&gt; E55_Type </span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1934,7 +1934,7 @@ This section provides details for each class and property defined by Cultural He
    <span class="markdown">A textual string assigned to a cultural heritage object in order to identify it uniquely within a given context.</span>
   </div>
   <div class="info">
-   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal</span>
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P190_has_symbolic_content -[1..N]-&gt; rdfs:Literal</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1989,7 +1989,7 @@ This section provides details for each class and property defined by Cultural He
    <span class="markdown">An immaterial item that has an objectively recognizable structure and is documented as a single unit.</span>
   </div>
   <div class="info">
-   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P67_refers_to -[0..1]-&gt; lrmoo:F3_Manifestation * crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document * crm:P190_has_symbolic_content -[0..1]-&gt; rdfs:Literal * crm:P1_is_identified_by -[0..N]-&gt; crm:E41_Appellation</span>
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P67_refers_to -[0..1]-&gt; lrmoo:F3_Manifestation * crm:P70i_is_documented_in -[0..N]-&gt; crm:E31_Document * crm:P190_has_symbolic_content -[0..N]-&gt; rdfs:Literal * crm:P1_is_identified_by -[0..N]-&gt; crm:E41_Appellation</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2521,7 +2521,7 @@ This section provides details for each class and property defined by Cultural He
    <span class="markdown">An abstract temporal extent having a beginning, an end and a duration.</span>
   </div>
   <div class="info">
-   <span class="markdown">The properties that can be used with this class are: * crm:P82a_begin_of_the_begin -[1]-&gt; xsd:dateTime * crm:P82b_end_of_the_end -[1]-&gt; xsd:dateTime</span>
+   <span class="markdown">The properties that can be used with this class are: * crm:P82a_begin_of_the_begin -[1]-&gt; xsd:dateTime * crm:P82a_begin_of_the_begin -[1]-&gt; edtf:EDTF * crm:P82b_end_of_the_end -[1]-&gt; xsd:dateTime * crm:P82b_end_of_the_end -[1]-&gt; edtf:EDTF</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2588,7 +2588,7 @@ This section provides details for each class and property defined by Cultural He
    <span class="markdown">A textual string that functions as a title for a work.</span>
   </div>
   <div class="info">
-   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P190_has_symbolic_content -[1]-&gt; rdfs:Literal</span>
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[1]-&gt; crm:E55_Type * crm:P190_has_symbolic_content -[1..N]-&gt; rdfs:Literal</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -8839,7 +8839,23 @@ This section provides details for each class and property defined by Cultural He
 <h2 id="changes" class="list">Changes from last version</h2>
 <h3 id="changeClass" class="list">Classes</h3>
 <details><summary><u>Modified classes</u></summary>
-<ul><li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation">http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation</a>
+<ul><li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F1_Work">http://iflastandards.info/ns/lrm/lrmoo/F1_Work</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* lrmoo:R10_has_member -[0..N]-> lrmoo:F1_Work
+* crm:P102_has_title -[0..N]-> crm:E35_Title
+* lrmoo:R3_is_realised_in -[1..N]-> lrmoo:F2_Expression"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* lrmoo:R10_has_member -[0..N]-> lrmoo:F1_Work
+* crm:P102_has_title -[0..N]-> crm:E35_Title
+* lrmoo:R3_is_realized_in -[1..N]-> lrmoo:F2_Expression"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation">http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation</a>
 <ul>
 <li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
 
@@ -8904,8 +8920,44 @@ This section provides details for each class and property defined by Cultural He
 <ul>
 <li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
 
-* crm:P2_has_type -[0..1]-> crm:E55_Type
+* crm:P2_has_type -[1]-> crm:E55_Type
 * crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E31_Document">http://www.cidoc-crm.org/cidoc-crm/E31_Document</a>
+<ul>
+<li>Added: <http://purl.org/vocab/vann/example> "
+        # Example of some entity (Ulisse Aldrovandi) 
+        # being documented by an external resource 
+        # (a VIAF authority record)
+
+        :ulisse-aldrovandi a crm:E39_Actor ;
+            crm:P70i_is_documented_in <http://viaf.org/viaf/100190422> .
+    "@en</li>
+</ul>
+<ul>
+<li>Deleted: <http://purl.org/vocab/vann/example> "
+        # Example of some entity (Ulisse Aldrovandi) 
+        # being documented by an external resource 
+        # (a VIAF authority record)
+
+        :ulisse-aldrovandi a crm:E39_Actor ;
+            crm:P70i_is_documented_by <http://viaf.org/viaf/100190422> .
+    "@en</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E35_Title">http://www.cidoc-crm.org/cidoc-crm/E35_Title</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"^^xsd:string</li>
 </ul>
 </li>
 <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E39_Actor">http://www.cidoc-crm.org/cidoc-crm/E39_Actor</a>
@@ -8930,7 +8982,7 @@ This section provides details for each class and property defined by Cultural He
 <ul>
 <li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
 
-* crm:P190_has_symbolic_content -[1]-> rdfs:Literal
+* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal
 * crm:P2_has_type -[0..1]-> E55_Type
 "^^xsd:string</li>
 </ul>
@@ -8940,8 +8992,45 @@ This section provides details for each class and property defined by Cultural He
 * crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal"^^xsd:string</li>
 </ul>
 </li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E42_Identifier">http://www.cidoc-crm.org/cidoc-crm/E42_Identifier</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P2_has_type -[1]-> crm:E55_Type
+* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span</a>
+<ul>
+<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime
+* crm:P82a_begin_of_the_begin -[1]-> edtf:EDTF
+* crm:P82b_end_of_the_end -[1]-> xsd:dateTime
+* crm:P82b_end_of_the_end -[1]-> edtf:EDTF"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+
+* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime
+* crm:P82b_end_of_the_end -[1]-> xsd:dateTime"^^xsd:string</li>
+</ul>
+</li>
 <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E53_Place">http://www.cidoc-crm.org/cidoc-crm/E53_Place</a>
 <ul>
+<li>Added: <http://purl.org/vocab/vann/example> "
+        # Example of a place named Bologna, documented
+        # by an external resource (an authority record on WikiData)
+
+        :bologna a crm:E53_Place ;
+            crm:P70i_is_documented_in <https://www.wikidata.org/wiki/Q1891> .
+    "@en</li>
 <li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
 
 * crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
@@ -8950,6 +9039,13 @@ This section provides details for each class and property defined by Cultural He
 "^^xsd:string</li>
 </ul>
 <ul>
+<li>Deleted: <http://purl.org/vocab/vann/example> "
+        # Example of a place named Bologna, documented
+        # by an external resource (an authority record on WikiData)
+
+        :bologna a crm:E53_Place ;
+            crm:P70i_is_documented_by <https://www.wikidata.org/wiki/Q1891> .
+    "@en</li>
 <li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
 
 * crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
@@ -8963,7 +9059,7 @@ This section provides details for each class and property defined by Cultural He
 * crm:P2_has_type -[1]-> crm:E55_Type
 * crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation
 * crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal
+* crm:P190_has_symbolic_content -[0..N]-> rdfs:Literal
 * crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
 </ul>
 <ul>
@@ -9009,74 +9105,164 @@ This section provides details for each class and property defined by Cultural He
 <li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
 
 * crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P14_carried_out_by -[0..N]-> crm:E39_Actor
+* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
 * crm:P16_used_specific_object -[0..N]-> lrmoo:F5_Item
 * crm:P32_used_general_technique -[0..N]-> E55_Type"^^xsd:string</li>
 </ul>
 </li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item">http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item</a>
+</li>
 <li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D10_Software_Execution">http://www.cidoc-crm.org/extensions/crmdig/D10_Software_Execution</a>
 <ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crmdig:L10_had_input -[1]-> crmdig:D9_Data_Object
-* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
-* crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span
-* crm:P11_had_participant -[0..N]-> crm:E74_Group
-* crm:P14_carried_out_by -[0..N]-> crm:E39_Actor
-* crmdig:L23_used_software_or_firmware -[1..N]-> crmdig:D14_Software"^^xsd:string</li>
+<li>Added: SubClass of http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
 </ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D11_Digital_Measurement_Event">http://www.cidoc-crm.org/extensions/crmdig/D11_Digital_Measurement_Event</a>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D14_Software">http://www.cidoc-crm.org/extensions/crmdig/D14_Software</a>
 <ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crmdig:L10_had_input -[1]-> crmdig:D9_Data_Object
-* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
-* crm:P4_has_time-span -[1]-> crm:E52_Time-Span
-* crm:P11_had_participant -[0..N]-> crm:E74_Group
-* crm:P14_carried_out_by -[0..N]-> crm:E39_Actor
-* crmdig:L23_used_software_or_firmware -[1..N]-> crmdig:D14_Software"^^xsd:string</li>
+<li>Added: SubClass of http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
 </ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object">http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</a>
 </li>
 <li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process">http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process</a>
 <ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crmdig:L1_digitized -[1]-> lrmoo:F5_Item
-* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
-* crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span
-* crm:P11_had_participant -[0..N]-> crm:E74_Group
-* crm:P14_carried_out_by -[0..N]-> crm:E39_Actor
-* crm:P32_used_general_technique -[1]-> crm:E55_Type
-* crm:P16_used_specific_object -[1..N]-> crmdig:D8_Digital_Device"^^xsd:string</li>
+<li>Added: SubClass of http://www.cidoc-crm.org/extensions/crmdig/D11_Digital_Measurement_Event</li>
 </ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event">http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</a>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D8_Digital_Device">http://www.cidoc-crm.org/extensions/crmdig/D8_Digital_Device</a>
 <ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crmdig:L1_digitized -[1]-> lrmoo:F5_Item
-* crmdig:L11_had_output -[1]-> crmdig:D9_Data_Object
-* crm:P4_has_time-span -[1]-> crm:E52_Time-Span
-* crm:P11_had_participant -[0..N]-> crm:E74_Group
-* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
-* crm:P32_used_general_technique -[1]-> crm:E55_Type
-* crm:P16_used_specific_object -[1..N]-> crmdig:D8_Digital_Device"^^xsd:string</li>
+<li>Added: SubClass of http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object</li>
 </ul>
 </li>
 <li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D9_Data_Object">http://www.cidoc-crm.org/extensions/crmdig/D9_Data_Object</a>
 <ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P130i_features_are_also_found_on -[0..N]-> crmdig:D9_Data_Object
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
-* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
-"^^xsd:string</li>
+<li>Added: SubClass of http://www.cidoc-crm.org/cidoc-crm/E54_Dimension</li>
+<li>Added: SubClass of http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
 </ul>
+</li>
+</ul></details><details><summary><u>Deleted classes</u></summary>
+<ul><li><a href="#http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution">http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event">http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D14_Software">http://www.ics.forth.gr/isl/CRMdig/D14_Software</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object">http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process">http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event">http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device">http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object">http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/P138_represents">http://www.cidoc-crm.org/cidoc-crm/P138_represents</a>
 <ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P130i_features_are_also_found_on -[0..N]-> crmdig:D9_Data_Object
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
+<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity</li>
+<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item</li>
+<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation&gt; &lt;http://www.cidoc-crm.org/cidoc-crm/P138_represents&gt;)</li>
 </ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation">http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation</a>
+<ul>
+<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity</li>
+<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation&gt; &lt;http://www.cidoc-crm.org/cidoc-crm/P138_represents&gt;)</li>
+<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location">http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</a>
+<ul>
+<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing</li>
+<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E53_Place</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of&gt; &lt;http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of">http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</a>
+<ul>
+<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of&gt; &lt;http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location&gt;)</li>
+<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E53_Place</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L10_had_input">http://www.cidoc-crm.org/extensions/crmdig/L10_had_input</a>
+<ul>
+<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object</li>
+<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L10_had_input&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L10i_was_input_of&gt;)</li>
+<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L10i_was_input_of">http://www.cidoc-crm.org/extensions/crmdig/L10i_was_input_of</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L10_had_input&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L10i_was_input_of&gt;)</li>
+<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for</li>
+<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
+<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L11_had_output">http://www.cidoc-crm.org/extensions/crmdig/L11_had_output</a>
+<ul>
+<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P94_has_created</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L11i_was_output_of&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L11_had_output&gt;)</li>
+<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
+<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L11i_was_output_of">http://www.cidoc-crm.org/extensions/crmdig/L11i_was_output_of</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L11i_was_output_of&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L11_had_output&gt;)</li>
+<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
+<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by</li>
+<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L1_digitized">http://www.cidoc-crm.org/extensions/crmdig/L1_digitized</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L1i_was_digitized_by&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L1_digitized&gt;)</li>
+<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process</li>
+<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing</li>
+<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P39_measured</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L1i_was_digitized_by">http://www.cidoc-crm.org/extensions/crmdig/L1i_was_digitized_by</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L1i_was_digitized_by&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L1_digitized&gt;)</li>
+<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P39i_was_measured_by</li>
+<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing</li>
+<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process</li>
+</ul>
+</li>
+<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L23_used_software_or_firmware">http://www.cidoc-crm.org/extensions/crmdig/L23_used_software_or_firmware</a>
+<ul>
+<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object</li>
+<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D14_Software</li>
+<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#http://www.ics.forth.gr/isl/CRMdig/L10_had_input">http://www.ics.forth.gr/isl/CRMdig/L10_had_input</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L10i_was_input_of">http://www.ics.forth.gr/isl/CRMdig/L10i_was_input_of</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L11_had_output">http://www.ics.forth.gr/isl/CRMdig/L11_had_output</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L11i_was_output_of">http://www.ics.forth.gr/isl/CRMdig/L11i_was_output_of</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L1_digitized">http://www.ics.forth.gr/isl/CRMdig/L1_digitized</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L1i_was_digitized_by">http://www.ics.forth.gr/isl/CRMdig/L1i_was_digitized_by</a>
+</li>
+<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L23_used_software_or_firmware">http://www.ics.forth.gr/isl/CRMdig/L23_used_software_or_firmware</a>
 </li>
 </ul></details></div>
 </div>

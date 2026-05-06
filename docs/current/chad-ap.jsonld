@@ -3013,7 +3013,7 @@
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal"
   } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
@@ -3080,7 +3080,7 @@
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "The properties that can be used with this class are:\n\n* crm:P190_has_symbolic_content -[1]-> rdfs:Literal\n* crm:P2_has_type -[0..1]-> E55_Type\n"
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal\n* crm:P2_has_type -[0..1]-> E55_Type\n"
   } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
@@ -3111,7 +3111,7 @@
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal"
   } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
@@ -3145,7 +3145,7 @@
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "The properties that can be used with this class are:\n\n* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime\n* crm:P82b_end_of_the_end -[1]-> xsd:dateTime"
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime\n* crm:P82a_begin_of_the_begin -[1]-> edtf:EDTF\n* crm:P82b_end_of_the_end -[1]-> xsd:dateTime\n* crm:P82b_end_of_the_end -[1]-> edtf:EDTF"
   } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",
@@ -3249,7 +3249,7 @@
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation\n* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document\n* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal\n* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[1]-> crm:E55_Type\n* crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation\n* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document\n* crm:P190_has_symbolic_content -[0..N]-> rdfs:Literal\n* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"
   } ],
   "http://purl.org/vocab/vann/example" : [ {
     "@language" : "en",

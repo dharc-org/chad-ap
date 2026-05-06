@@ -2441,7 +2441,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
 * crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P190_has_symbolic_content -[1]-> rdfs:Literal""" ;
+* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal""" ;
                                                <http://purl.org/vocab/vann/example> """
         ### Example of a title, characterised by a type and a textual content
 
@@ -2491,7 +2491,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                      rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object> ;
                                                      <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
-* crm:P190_has_symbolic_content -[1]-> rdfs:Literal
+* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal
 * crm:P2_has_type -[0..1]-> E55_Type
 """ ;
                                                      <http://purl.org/vocab/vann/example> """
@@ -2517,7 +2517,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                     <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
 * crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P190_has_symbolic_content -[1]-> rdfs:Literal""" ;
+* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal""" ;
                                                     <http://purl.org/vocab/vann/example> """
         ### Example of an identifier, characterised by a type and a textual content
 
@@ -2542,7 +2542,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                    <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
 
 * crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime
-* crm:P82b_end_of_the_end -[1]-> xsd:dateTime""" ;
+* crm:P82a_begin_of_the_begin -[1]-> edtf:EDTF
+* crm:P82b_end_of_the_end -[1]-> xsd:dateTime
+* crm:P82b_end_of_the_end -[1]-> edtf:EDTF""" ;
                                                    <http://purl.org/vocab/vann/example> """
         ### Example of a time span, characterised by a starting date time and an ending date time
 
@@ -2623,7 +2625,7 @@ xsd:date rdf:type rdfs:Datatype .
 * crm:P2_has_type -[1]-> crm:E55_Type
 * crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation
 * crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal
+* crm:P190_has_symbolic_content -[0..N]-> rdfs:Literal
 * crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation""" ;
                                                             <http://purl.org/vocab/vann/example> """
         ### Example of two Information Objects, one representing a copyright statement and 
