@@ -38,6 +38,7 @@ mapping_rules:
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/hasEndTime": "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/Organization": "http://www.cidoc-crm.org/cidoc-crm/E74_Group"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/foundation": "http://vocab.getty.edu/aat/300393213"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/dissolution": "http://vocab.getty.edu/aat/300393214"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/description": "http://vocab.getty.edu/aat/300435416"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/language": "http://vocab.getty.edu/aat/300435433"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/gender": "http://vocab.getty.edu/aat/300411835"
