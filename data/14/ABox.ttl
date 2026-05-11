@@ -7,7 +7,7 @@
 <https://w3id.org/changes/4/bnf/aas/1/1> a crm:E13_Attribute_Assignment ;
     crm:P140_assigned_attribute_to <https://w3id.org/changes/4/bnf/eugene-hus> ;
     crm:P141_assigned <http://vocab.getty.edu/aat/300189559> ;
-    crm:P177_assigned_property_of_type <http://vocab.getty.edu/aat/300411835> .
+    crm:P177_assigned_property_of_type <http://vocab.getty.edu/aat/300055146> .
 
 <https://w3id.org/changes/4/bnf/aas/2/1> a crm:E13_Attribute_Assignment ;
     crm:P140_assigned_attribute_to <https://w3id.org/changes/4/bnf/eugene-hus> ;
@@ -50,27 +50,27 @@
 
 <https://w3id.org/changes/4/bnf/idf/1/1> a crm:E42_Identifier ;
     crm:P190_has_symbolic_content "http://data.bnf.fr/ark:/12148/cb10701361n" ;
-    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404630> .
 
 <https://w3id.org/changes/4/bnf/idf/2/1> a crm:E42_Identifier ;
     crm:P190_has_symbolic_content "http://www.idref.fr/071283463" ;
-    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404630> .
 
 <https://w3id.org/changes/4/bnf/idf/3/1> a crm:E42_Identifier ;
     crm:P190_has_symbolic_content "http://d-nb.info/gnd/113677871" ;
-    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404630> .
 
 <https://w3id.org/changes/4/bnf/idf/4/1> a crm:E42_Identifier ;
     crm:P190_has_symbolic_content "http://data.bnf.fr/vocabulary/countrycodes/xnhh" ;
-    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404630> .
 
 <https://w3id.org/changes/4/bnf/idf/5/1> a crm:E42_Identifier ;
     crm:P190_has_symbolic_content "https://ror.org/04v1bf639" ;
-    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404630> .
 
 <https://w3id.org/changes/4/bnf/idf/6/1> a crm:E42_Identifier ;
     crm:P190_has_symbolic_content "https://data.bnf.fr/en/11931476/15238307/france/" ;
-    crm:P2_has_type <http://vocab.getty.edu/aat/300404629> .
+    crm:P2_has_type <http://vocab.getty.edu/aat/300404630> .
 
 <https://w3id.org/changes/4/bnf/lgo/1/1> a crm:E33_Linguistic_Object ;
     crm:P190_has_symbolic_content "Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique" ;

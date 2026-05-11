@@ -22,7 +22,7 @@ mapping_rules:
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/birth": "http://vocab.getty.edu/aat/300069672"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/death": "http://vocab.getty.edu/aat/300151836"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/Identifier": "http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"
-  "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/uri": "http://vocab.getty.edu/aat/300404629"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/uri": "http://vocab.getty.edu/aat/300404630"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/hasSymbolicContent": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/Appellation": "http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/full-name": "http://vocab.getty.edu/aat/300404688"
@@ -41,6 +41,6 @@ mapping_rules:
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/dissolution": "http://vocab.getty.edu/aat/300393214"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/description": "http://vocab.getty.edu/aat/300435416"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/language": "http://vocab.getty.edu/aat/300435433"
-  "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/gender": "http://vocab.getty.edu/aat/300411835"
+  "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/gender": "http://vocab.getty.edu/aat/300055146"
   "https://w3id.org/dharc/ontology/chad-ap/object/development/14/schema/male": "http://vocab.getty.edu/aat/300189559"
 
