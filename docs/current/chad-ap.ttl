@@ -7,7 +7,7 @@
 @base <https://w3id.org/dharc/ontology/chad-ap#> .
 
 <https://w3id.org/dharc/ontology/chad-ap> rdf:type owl:Ontology ;
-                                           owl:versionIRI <https://w3id.org/dharc/ontology/chad-ap/2.0.3> ;
+                                           owl:versionIRI <https://w3id.org/dharc/ontology/chad-ap/2.1.0> ;
                                            <http://purl.org/dc/elements/1.1/abstract> "A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format."@en ;
                                            <http://purl.org/dc/elements/1.1/contributor> "Heibi, Ivan" ,
                                                                                          "Moretti, Arianna" ;
@@ -886,7 +886,7 @@ What are the tools and their types used in processing activities?
                                            <http://purl.org/dc/terms/created> "2024-04-16"^^xsd:date ;
                                            <http://purl.org/dc/terms/issued> "2024-04-16"^^xsd:date ;
                                            <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
-                                           <http://purl.org/dc/terms/modified> "2025-09-17"^^xsd:date ;
+                                           <http://purl.org/dc/terms/modified> "2026-05-11"^^xsd:date ;
                                            <http://purl.org/dc/terms/title> "Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)"@en ;
                                            <http://purl.org/ontology/bibo/doi> "10.1007/978-3-031-77847-6_11"^^rdfs:Literal ;
                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "chad-ap"@en ;
@@ -894,11 +894,12 @@ What are the tools and their types used in processing activities?
                                            <http://schema.org/codeRepository> "https://github.com/dharc-org/chad-ap/"^^xsd:anyURI ;
                                            <http://schema.org/funder> <https://www.fondazionechanges.org/> ;
                                            rdfs:comment "The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process."@en ;
-                                           owl:backwardCompatibleWith <https://w3id.org/dharc/ontology/chad-ap/2.0.3> ;
+                                           owl:backwardCompatibleWith <https://w3id.org/dharc/ontology/chad-ap/2.0.6> ;
                                            owl:incompatibleWith <https://w3id.org/dharc/ontology/chad-ap/1.0.0> ;
-                                           owl:priorVersion <https://w3id.org/dharc/ontology/chad-ap/2.0.3> ;
-                                           owl:versionInfo "2.0.4" ;
-                                           <http://www.w3.org/2003/06/sw-vocab-status/ns#status> "work in progress"@en .
+                                           owl:priorVersion <https://w3id.org/dharc/ontology/chad-ap/2.0.6> ;
+                                           owl:versionInfo "2.1.0" ;
+                                           <http://www.w3.org/2003/06/sw-vocab-status/ns#status> "work in progress"@en ;
+                                           <https://w3id.org/widoco/vocab#introduction> "CHAD-AP is a OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format."@en .
 
 #################################################################
 #    Annotation properties
@@ -990,6 +991,10 @@ What are the tools and their types used in processing activities?
 
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#introduction
+<https://w3id.org/widoco/vocab#introduction> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -1300,8 +1305,8 @@ xsd:date rdf:type rdfs:Datatype .
         :expression a lrmoo:F2_Expression ;
             crm:P129_is_about :subject .            
     """@en ;
-                                                   <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent topics of CHOs at their Expression level."@en ;
-                                                   rdfs:comment "This property documents that an expression has some entity as its topic."@en ;
+                                                   <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent entities such as topics of CHOs at their Expression level or the subjects of assertions (linguistic objects)."@en ;
+                                                   rdfs:comment "This property documents that a propositional object has some entity as its primary subject."@en ;
                                                    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
                                                    rdfs:label "a pour sujet"@fr ,
                                                               "handelt über"@de ,
@@ -1443,6 +1448,42 @@ xsd:date rdf:type rdfs:Datatype .
                                                                          "有描绘"@zh .
 
 
+###  http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> ;
+                                                                rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+                                                                <http://purl.org/vocab/vann/example> """
+        ### Example of an attribute assignment assigning some undefined characteristic
+        ### to the person Heugene Hus
+        
+        :attribute-assignment a crm:E13_Attribute_Assignment ;
+            crm:P140_assigned_attribute_to :heugene-hus .
+    """@en ;
+                                                                <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the thing that is the target of an attribute assignment."@en ;
+                                                                rdfs:comment "This property associates an attribute assignment with an entity about which the attribution is made."@en ;
+                                                                rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
+                                                                rdfs:label "assigned attribute to"@en ;
+                                                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P141_assigned
+<http://www.cidoc-crm.org/cidoc-crm/P141_assigned> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> ;
+                                                   rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> ;
+                                                   <http://purl.org/vocab/vann/example> """
+        ### Example of an attribute assignment assigning to some undefined entity
+        ### the French language
+        
+        :attribute-assignment a crm:E13_Attribute_Assignment ;
+            crm:P141_assigned <http://id.loc.gov/vocabulary/iso639-2/fre> .
+    """@en ;
+                                                   <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the thing assigned in an attribute assignment."@en ;
+                                                   rdfs:comment "This property associates an attribute assignment with the entity used in the attribution."@en ;
+                                                   rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
+                                                   rdfs:label "assigned"@en ;
+                                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+
+
 ###  http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by
 <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> rdf:type owl:ObjectProperty ;
                                                         rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P11_had_participant> ;
@@ -1543,6 +1584,24 @@ xsd:date rdf:type rdfs:Datatype .
                                                                   "χρησιμοποιήθηκε για"@el ,
                                                                   "был использован для"@ru ,
                                                                   "用于"@zh .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type
+<http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> ;
+                                                                    rdfs:range <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+                                                                    <http://purl.org/vocab/vann/example> """
+        ### Example of an attribute assignment assigning to some undefined entity
+        ### an undefined attribute with type \"language\" (aat:300435433)
+        
+        :attribute-assignment a crm:E13_Attribute_Assignment ;
+            crm:P177_assigned_property_of_type aat:300435433 .
+    """@en ;
+                                                                    <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent the type of thing assigned in an attribute assignment."@en ;
+                                                                    rdfs:comment "This property associates an attribute assignment with the type of the entity used in the attribution."@en ;
+                                                                    rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
+                                                                    rdfs:label "assigned property of type"@en ;
+                                                                    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by
@@ -2338,6 +2397,31 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.cidoc-crm.org/cidoc-crm/E12_Production> rdf:type owl:Class .
 
 
+###  http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E4_Period> ;
+                                                              <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P141_assigned -[1]-> owl:Thing
+* crm:P177_assigned_property_of_type -[1]-> crm:E55_Type
+* crm:P140_assigned_attribute_to -[1]-> owl:Thing""" ;
+                                                              <http://purl.org/vocab/vann/example> """
+        ### Example of Heugene Hus having
+        ### his gender (aat:300411835) assigned
+        ### as male (aat:300189559)
+
+        :heugene-hus-gender a crm:E13_Attribute_Assignment ;
+            crm:P140_assigned_attribute_to :eugene-hus ;
+            crm:P141_assigned aat:300189559 ;
+            crm:P177_assigned_property_of_type aat:300411835 .
+            """@en ;
+                                                              <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. languages used by a person, an individual's gender, and so on). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals."@en ;
+                                                              rdfs:comment "The actions of making assertions about one property of an object or any single relation between two items or concepts."@en ;
+                                                              rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
+                                                              rdfs:label "Attribute Assignment"@en ;
+                                                              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+
+
 ###  http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing
 <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> rdf:type owl:Class .
 
@@ -2431,7 +2515,30 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object
-<http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object> rdf:type owl:Class .
+<http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> ;
+                                                           <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P2_has_type -[0..1]-> crm:E55_Type
+* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal
+""" ;
+                                                           <http://purl.org/vocab/vann/example> """
+        ### Example of a descriptive note (aat:300435416)
+        ### referring to the person Heugene Hus
+        
+        :heugene-hus a crm:E39_Actor ;
+            crm:P67i_is_referred_to_by :heugene-hus-description .
+        
+        :heugene-hus-description a E33_Linguistic_Object ;
+            crm:P2_has_type aat:300435416 ;
+            crm:P190_has_symbolic_content \"Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique\" .
+
+    """@en ;
+                                                           <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used in conjunction with crm:P2_type to represent an assertion made about some other entity (e.g. a description of that entity). This can be useful in those cases where the assertion needs to be trated as a qualified entity and not as a simple string of characters (in that case, crm:P3_has_note would be sufficient)."@en ;
+                                                           rdfs:comment "An identifiable expression in natural language or languages."@en ;
+                                                           rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
+                                                           rdfs:label "Linguistic Object"@en ;
+                                                           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E35_Title
@@ -2601,7 +2708,25 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E5_Event
-<http://www.cidoc-crm.org/cidoc-crm/E5_Event> rdf:type owl:Class .
+<http://www.cidoc-crm.org/cidoc-crm/E5_Event> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E4_Period> ;
+                                              <http://purl.org/dc/elements/1.1/description> """The properties that can be used with this class are:
+
+* crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span
+* crm:P2_has_type -[0..1]-> crm:E55_Type""" ;
+                                              <http://purl.org/vocab/vann/example> """
+        ### Example of a birth event (aat:300069672),
+        ### in this case being Eugene Hus' birth
+
+        :heugene-hus-birth a crm:E5_Event ;
+            crm:P2_has_type aat:300069672 ;
+            crm:P4_has_time-span :heugene-hus-birth-timespan .
+            """@en ;
+                                              <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. births, deaths, historical events). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals."@en ;
+                                              rdfs:comment "A distinct, delimited and coherent process and interaction of a material nature, in cultural, social or physical systems, involving and affecting entities in a way characteristic of the kind of process."@en ;
+                                              rdfs:isDefinedBy <http://www.cidoc-crm.org/cidoc-crm/> ;
+                                              rdfs:label "Event"@en ;
+                                              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E65_Creation
@@ -3315,6 +3440,28 @@ xsd:date rdf:type rdfs:Datatype .
                                                   "incunambolo"@it .
 
 
+###  http://vocab.getty.edu/aat/300055146
+<http://vocab.getty.edu/aat/300055146> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300055146" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the sex assigned to individuals."@en ;
+                                       rdfs:comment "Biological characteristics and physiological traits that distinguish the males and females of a species."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "sesso"@it ,
+                                                  "sex"@en .
+
+
+###  http://vocab.getty.edu/aat/300069672
+<http://vocab.getty.edu/aat/300069672> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300069672" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the event of a person's birth."@en ;
+                                       rdfs:comment "Initiation of life processes of all living organisms."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "birth"@en ,
+                                                  "nascita"@it .
+
+
 ###  http://vocab.getty.edu/aat/300069831
 <http://vocab.getty.edu/aat/300069831> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
@@ -3403,6 +3550,17 @@ xsd:date rdf:type rdfs:Datatype .
                                                   "masks (costume)"@en .
 
 
+###  http://vocab.getty.edu/aat/300151836
+<http://vocab.getty.edu/aat/300151836> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300151836" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent the event of a person's death."@en ;
+                                       rdfs:comment "Cessation of life processes of all living organisms."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "death"@en ,
+                                                  "morte"@it .
+
+
 ###  http://vocab.getty.edu/aat/300155365
 <http://vocab.getty.edu/aat/300155365> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
@@ -3445,6 +3603,28 @@ xsd:date rdf:type rdfs:Datatype .
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "narrative cycles"@en ,
                                                   "serie di dipinti"@it .
+
+
+###  http://vocab.getty.edu/aat/300189557
+<http://vocab.getty.edu/aat/300189557> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300189557" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent female-identifying individuals."@en ;
+                                       rdfs:comment "The sex that normally produces eggs or female germ cells."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "female"@en ,
+                                                  "femmina"@it .
+
+
+###  http://vocab.getty.edu/aat/300189559
+<http://vocab.getty.edu/aat/300189559> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300189559" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent male-identifying individuals."@en ;
+                                       rdfs:comment "The sex that in reproduction normally produces sperm cells or male gametes."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "male"@en ,
+                                                  "maschio"@it .
 
 
 ###  http://vocab.getty.edu/aat/300189634
@@ -3623,6 +3803,28 @@ xsd:date rdf:type rdfs:Datatype .
                                                   "modellazione"@it .
 
 
+###  http://vocab.getty.edu/aat/300393213
+<http://vocab.getty.edu/aat/300393213> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300393213" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent events in which a group or organization is created."@en ;
+                                       rdfs:comment "The action or condition of causing something, such as a group of people or a settlement, to exist."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "fondazione"@it ,
+                                                  "foundation"@en .
+
+
+###  http://vocab.getty.edu/aat/300393214
+<http://vocab.getty.edu/aat/300393214> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300393214" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent events in which a group or organization is dissolved."@en ;
+                                       rdfs:comment "The action or condition of causing an organization or group of people to cease to exist."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "dissolution"@en ,
+                                                  "scioglimento"@it .
+
+
 ###  http://vocab.getty.edu/aat/300403970
 <http://vocab.getty.edu/aat/300403970> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
@@ -3672,10 +3874,43 @@ xsd:date rdf:type rdfs:Datatype .
                                                 <http://vocab.getty.edu/aat/Concept> ;
                                        <http://purl.org/dc/elements/1.1/identifier> "300404630" ;
                                        <http://www.linkedmodel.org/schema/vaem#rationale> "Unique resource locators that, in addition to identifying a resource, provide the address of the internet document according to one of a variety of protocols."@en ;
-                                       rdfs:comment "Uniform Resource Locators used to identify a resource existing online."@en ;
+                                       rdfs:comment "A Uniform Resource Locator (URL)."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
                                        rdfs:label "url"@en ,
                                                   "url"@it .
+
+
+###  http://vocab.getty.edu/aat/300404651
+<http://vocab.getty.edu/aat/300404651> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300404651" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent a person's first name."@en ;
+                                       rdfs:comment "In the context of personal names, particularly in western culture, a first name is the name given to a person at birth or an early period of life, historically at baptism and historically chosen to signify or honor a saint, an earlier family member, or a personal characteristic."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "first name"@en ,
+                                                  "nome"@it .
+
+
+###  http://vocab.getty.edu/aat/300404652
+<http://vocab.getty.edu/aat/300404652> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300404652" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent a person's last name."@en ;
+                                       rdfs:comment "In the context of modern western personal names, the names that are hereditary and common to all members of a family, placed at the end of a string of names for an individual; used with a first name to distinguish an individual from others with the same first name. In other cultural traditions, last names may not be hereditary family names or they may not be used at all."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "cognome"@it ,
+                                                  "last name"@en .
+
+
+###  http://vocab.getty.edu/aat/300404688
+<http://vocab.getty.edu/aat/300404688> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300404688" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent an agent's full name."@en ;
+                                       rdfs:comment "Names for people, places, or things that are the fullest version of the name."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "full name"@en ,
+                                                  "nome completo"@it .
 
 
 ###  http://vocab.getty.edu/aat/300404704
@@ -3799,6 +4034,28 @@ xsd:date rdf:type rdfs:Datatype .
                                                   "spark arresters"@en .
 
 
+###  http://vocab.getty.edu/aat/300435416
+<http://vocab.getty.edu/aat/300435416> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300435416" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent descriptions of some entity."@en ;
+                                       rdfs:comment "A textual description of the work or other entity, including a discussion of issues related to it."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "descriptive note"@en ,
+                                                  "descrizione"@it .
+
+
+###  http://vocab.getty.edu/aat/300435433
+<http://vocab.getty.edu/aat/300435433> rdf:type owl:NamedIndividual ,
+                                                <http://vocab.getty.edu/aat/Concept> ;
+                                       <http://purl.org/dc/elements/1.1/identifier> "300435433" ;
+                                       <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent a language used by or known to an individual."@en ;
+                                       rdfs:comment "The language of a record or another entity."@en ;
+                                       rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
+                                       rdfs:label "language"@en ,
+                                                  "lingua"@it .
+
+
 ###  http://vocab.getty.edu/aat/300435434
 <http://vocab.getty.edu/aat/300435434> rdf:type owl:NamedIndividual ,
                                                 <http://vocab.getty.edu/aat/Concept> ;
@@ -3806,8 +4063,8 @@ xsd:date rdf:type rdfs:Datatype .
                                        <http://www.linkedmodel.org/schema/vaem#rationale> "This individual is used to represent licenses and copyright statements."@en ;
                                        rdfs:comment "A formal statement of the copyright or licensing of a work, and/or any restrictions placed on it."@en ;
                                        rdfs:isDefinedBy <http://vocab.getty.edu/aat/> ;
-                                       rdfs:label "copyright/licensing statement"@en ,
-                                                  "dichiarazione di licenza"@it .
+                                       rdfs:label "dichiarazione di licenza"@it ,
+                                                  "licensing statement"@en .
 
 
 ###  http://vocab.getty.edu/aat/300440768

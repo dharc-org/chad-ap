@@ -1620,6 +1620,60 @@
     "@value" : "incunambolo"
   } ]
 }, {
+  "@id" : "http://vocab.getty.edu/aat/300055146",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300055146"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the sex assigned to individuals."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Biological characteristics and physiological traits that distinguish the males and females of a species."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "sesso"
+  }, {
+    "@language" : "en",
+    "@value" : "sex"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300069672",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300069672"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the event of a person's birth."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Initiation of life processes of all living organisms."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "birth"
+  }, {
+    "@language" : "it",
+    "@value" : "nascita"
+  } ]
+}, {
   "@id" : "http://vocab.getty.edu/aat/300069831",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
@@ -1836,6 +1890,33 @@
     "@value" : "masks (costume)"
   } ]
 }, {
+  "@id" : "http://vocab.getty.edu/aat/300151836",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300151836"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent the event of a person's death."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Cessation of life processes of all living organisms."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "death"
+  }, {
+    "@language" : "it",
+    "@value" : "morte"
+  } ]
+}, {
   "@id" : "http://vocab.getty.edu/aat/300155365",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
@@ -1942,6 +2023,60 @@
   }, {
     "@language" : "it",
     "@value" : "serie di dipinti"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300189557",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300189557"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent female-identifying individuals."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The sex that normally produces eggs or female germ cells."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "female"
+  }, {
+    "@language" : "it",
+    "@value" : "femmina"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300189559",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300189559"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent male-identifying individuals."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The sex that in reproduction normally produces sperm cells or male gametes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "male"
+  }, {
+    "@language" : "it",
+    "@value" : "maschio"
   } ]
 }, {
   "@id" : "http://vocab.getty.edu/aat/300189634",
@@ -2376,6 +2511,60 @@
     "@value" : "modellazione"
   } ]
 }, {
+  "@id" : "http://vocab.getty.edu/aat/300393213",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300393213"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent events in which a group or organization is created."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The action or condition of causing something, such as a group of people or a settlement, to exist."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "fondazione"
+  }, {
+    "@language" : "en",
+    "@value" : "foundation"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300393214",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300393214"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent events in which a group or organization is dissolved."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The action or condition of causing an organization or group of people to cease to exist."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "dissolution"
+  }, {
+    "@language" : "it",
+    "@value" : "scioglimento"
+  } ]
+}, {
   "@id" : "http://vocab.getty.edu/aat/300403970",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
@@ -2498,7 +2687,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Uniform Resource Locators used to identify a resource existing online."
+    "@value" : "A Uniform Resource Locator (URL)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://vocab.getty.edu/aat/"
@@ -2509,6 +2698,87 @@
   }, {
     "@language" : "it",
     "@value" : "url"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300404651",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300404651"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent a person's first name."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the context of personal names, particularly in western culture, a first name is the name given to a person at birth or an early period of life, historically at baptism and historically chosen to signify or honor a saint, an earlier family member, or a personal characteristic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "first name"
+  }, {
+    "@language" : "it",
+    "@value" : "nome"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300404652",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300404652"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent a person's last name."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the context of modern western personal names, the names that are hereditary and common to all members of a family, placed at the end of a string of names for an individual; used with a first name to distinguish an individual from others with the same first name. In other cultural traditions, last names may not be hereditary family names or they may not be used at all."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "cognome"
+  }, {
+    "@language" : "en",
+    "@value" : "last name"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300404688",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300404688"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent an agent's full name."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Names for people, places, or things that are the fullest version of the name."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "full name"
+  }, {
+    "@language" : "it",
+    "@value" : "nome completo"
   } ]
 }, {
   "@id" : "http://vocab.getty.edu/aat/300404704",
@@ -2808,6 +3078,60 @@
     "@value" : "spark arresters"
   } ]
 }, {
+  "@id" : "http://vocab.getty.edu/aat/300435416",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300435416"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent descriptions of some entity."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A textual description of the work or other entity, including a discussion of issues related to it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "descriptive note"
+  }, {
+    "@language" : "it",
+    "@value" : "descrizione"
+  } ]
+}, {
+  "@id" : "http://vocab.getty.edu/aat/300435433",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "300435433"
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This individual is used to represent a language used by or known to an individual."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://vocab.getty.edu/aat/Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The language of a record or another entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://vocab.getty.edu/aat/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "language"
+  }, {
+    "@language" : "it",
+    "@value" : "lingua"
+  } ]
+}, {
   "@id" : "http://vocab.getty.edu/aat/300435434",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
@@ -2828,11 +3152,11 @@
     "@id" : "http://vocab.getty.edu/aat/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "copyright/licensing statement"
-  }, {
     "@language" : "it",
     "@value" : "dichiarazione di licenza"
+  }, {
+    "@language" : "en",
+    "@value" : "licensing statement"
   } ]
 }, {
   "@id" : "http://vocab.getty.edu/aat/300440768",
@@ -2894,6 +3218,37 @@
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E12_Production",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P141_assigned -[1]-> owl:Thing\n* crm:P177_assigned_property_of_type -[1]-> crm:E55_Type\n* crm:P140_assigned_attribute_to -[1]-> owl:Thing"
+  } ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@language" : "en",
+    "@value" : "\n        ### Example of Heugene Hus having\n        ### his gender (aat:300411835) assigned\n        ### as male (aat:300189559)\n\n        :heugene-hus-gender a crm:E13_Attribute_Assignment ;\n            crm:P140_assigned_attribute_to :eugene-hus ;\n            crm:P141_assigned aat:300189559 ;\n            crm:P177_assigned_property_of_type aat:300411835 .\n            "
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. languages used by a person, an individual's gender, and so on). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The actions of making assertions about one property of an object or any single relation between two items or concepts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Attribute Assignment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E4_Period"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@id" : "http://purl.org/linked-data/registry#statusStable"
+  } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -3008,7 +3363,35 @@
   } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P2_has_type -[0..1]-> crm:E55_Type\n* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal\n"
+  } ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@language" : "en",
+    "@value" : "\n        ### Example of a descriptive note (aat:300435416)\n        ### referring to the person Heugene Hus\n        \n        :heugene-hus a crm:E39_Actor ;\n            crm:P67i_is_referred_to_by :heugene-hus-description .\n        \n        :heugene-hus-description a E33_Linguistic_Object ;\n            crm:P2_has_type aat:300435416 ;\n            crm:P190_has_symbolic_content \"Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique\" .\n\n    "
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This class is used in conjunction with crm:P2_type to represent an assertion made about some other entity (e.g. a description of that entity). This can be useful in those cases where the assertion needs to be trated as a qualified entity and not as a simple string of characters (in that case, crm:P3_has_note would be sufficient)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An identifiable expression in natural language or languages."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Linguistic Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@id" : "http://purl.org/linked-data/registry#statusStable"
+  } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E35_Title",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -3235,7 +3618,35 @@
   } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "The properties that can be used with this class are:\n\n* crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span\n* crm:P2_has_type -[0..1]-> crm:E55_Type"
+  } ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@language" : "en",
+    "@value" : "\n        ### Example of a birth event (aat:300069672),\n        ### in this case being Eugene Hus' birth\n\n        :heugene-hus-birth a crm:E5_Event ;\n            crm:P2_has_type aat:300069672 ;\n            crm:P4_has_time-span :heugene-hus-birth-timespan .\n            "
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. births, deaths, historical events). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A distinct, delimited and coherent process and interaction of a material nature, in cultural, social or physical systems, involving and affecting entities in a way characteristic of the kind of process."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E4_Period"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@id" : "http://purl.org/linked-data/registry#statusStable"
+  } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/E65_Creation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -3557,11 +3968,11 @@
   } ],
   "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
     "@language" : "en",
-    "@value" : "This property is used to represent topics of CHOs at their Expression level."
+    "@value" : "This property is used to represent entities such as topics of CHOs at their Expression level or the subjects of assertions (linguistic objects)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "This property documents that an expression has some entity as its topic."
+    "@value" : "This property documents that a propositional object has some entity as its primary subject."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"
@@ -3876,6 +4287,68 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/P138_represents"
   } ]
 }, {
+  "@id" : "http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@language" : "en",
+    "@value" : "\n        ### Example of an attribute assignment assigning some undefined characteristic\n        ### to the person Heugene Hus\n        \n        :attribute-assignment a crm:E13_Attribute_Assignment ;\n            crm:P140_assigned_attribute_to :heugene-hus .\n    "
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to represent the thing that is the target of an attribute assignment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property associates an attribute assignment with an entity about which the attribution is made."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "assigned attribute to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@id" : "http://purl.org/linked-data/registry#statusStable"
+  } ]
+}, {
+  "@id" : "http://www.cidoc-crm.org/cidoc-crm/P141_assigned",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@language" : "en",
+    "@value" : "\n        ### Example of an attribute assignment assigning to some undefined entity\n        ### the French language\n        \n        :attribute-assignment a crm:E13_Attribute_Assignment ;\n            crm:P141_assigned <http://id.loc.gov/vocabulary/iso639-2/fre> .\n    "
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to represent the thing assigned in an attribute assignment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property associates an attribute assignment with the entity used in the attribution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "assigned"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@id" : "http://purl.org/linked-data/registry#statusStable"
+  } ]
+}, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/vocab/vann/example" : [ {
@@ -4074,6 +4547,37 @@
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at"
   }, {
     "@id" : "http://www.cidoc-crm.org/cidoc-crm/P15i_influenced"
+  } ]
+}, {
+  "@id" : "http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/vocab/vann/example" : [ {
+    "@language" : "en",
+    "@value" : "\n        ### Example of an attribute assignment assigning to some undefined entity\n        ### an undefined attribute with type \"language\" (aat:300435433)\n        \n        :attribute-assignment a crm:E13_Attribute_Assignment ;\n            crm:P177_assigned_property_of_type aat:300435433 .\n    "
+  } ],
+  "http://www.linkedmodel.org/schema/vaem#rationale" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to represent the type of thing assigned in an attribute assignment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property associates an attribute assignment with the type of the entity used in the attribution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "assigned property of type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/E55_Type"
+  } ],
+  "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status" : [ {
+    "@id" : "http://purl.org/linked-data/registry#statusStable"
   } ]
 }, {
   "@id" : "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
@@ -5622,7 +6126,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-09-17"
+    "@value" : "2026-05-11"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -5652,22 +6156,29 @@
     "@value" : "The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process."
   } ],
   "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
-    "@id" : "https://w3id.org/dharc/ontology/chad-ap/2.0.3"
+    "@id" : "https://w3id.org/dharc/ontology/chad-ap/2.0.6"
   } ],
   "http://www.w3.org/2002/07/owl#incompatibleWith" : [ {
     "@id" : "https://w3id.org/dharc/ontology/chad-ap/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://w3id.org/dharc/ontology/chad-ap/2.0.3"
+    "@id" : "https://w3id.org/dharc/ontology/chad-ap/2.0.6"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/dharc/ontology/chad-ap/2.0.3"
+    "@id" : "https://w3id.org/dharc/ontology/chad-ap/2.1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "2.0.4"
+    "@value" : "2.1.0"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#status" : [ {
     "@language" : "en",
     "@value" : "work in progress"
+  } ],
+  "https://w3id.org/widoco/vocab#introduction" : [ {
+    "@language" : "en",
+    "@value" : "CHAD-AP is a OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format."
   } ]
+}, {
+  "@id" : "https://w3id.org/widoco/vocab#introduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]

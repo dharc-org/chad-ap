@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/dharc/ontology/chad-ap","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/dharc/ontology/chad-ap","name":"Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)", "headline":"A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.", "dateReleased":"2024-04-16", "dateModified":"2025-09-17", "version":"2.0.4", "license":"http://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/dharc-org/chad-ap/", "author":[{"@type":"Person","name":"Barzaghi, Sebastian"},{"@type":"Person","name":"Peroni, Silvio"}], "contributor":[{"@type":"Person","name":"Heibi, Ivan"},{"@type":"Person","name":"Moretti, Arianna"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/dharc/ontology/chad-ap","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/dharc/ontology/chad-ap","name":"Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)", "headline":"A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.", "dateReleased":"2024-04-16", "dateModified":"2026-05-11", "version":"2.1.0", "license":"http://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/dharc-org/chad-ap/", "author":[{"@type":"Person","name":"Barzaghi, Sebastian"},{"@type":"Person","name":"Peroni, Silvio"}], "contributor":[{"@type":"Person","name":"Heibi, Ivan"},{"@type":"Person","name":"Moretti, Arianna"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,15 +70,15 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2025-09-17</dt>
+<dt>Modified on: 2026-05-11</dt>
 <dt>This version:</dt>
-<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.3">https://w3id.org/dharc/ontology/chad-ap/2.0.3</a></dd>
+<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.1.0">https://w3id.org/dharc/ontology/chad-ap/2.1.0</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://w3id.org/dharc/ontology/chad-ap">https://w3id.org/dharc/ontology/chad-ap</a></dd>
 <dt>Previous version:</dt>
-<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.3">https://w3id.org/dharc/ontology/chad-ap/2.0.3</a></dd>
+<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.6">https://w3id.org/dharc/ontology/chad-ap/2.0.6</a></dd>
 <dt>Revision:</dt>
-<dd>2.0.4</dd>
+<dd>2.1.0</dd>
 <dt>Issued on:</dt>
 <dd>2024-04-16</dd>
 <dt>Authors:</dt>
@@ -97,7 +97,7 @@ $(function(){
 <dt>DOI:</dt>
 <dd><a href="http://dx.doi.org/10.1007/978-3-031-77847-6_11"><img src ="https://img.shields.io/badge/DOI-10.1007/978--3--031--77847--6--11-blue.svg" alt="10.1007/978-3-031-77847-6_11" /></a></dd>
 <dt>Compatible with:</dt>
-<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.3">https://w3id.org/dharc/ontology/chad-ap/2.0.3</a></dd>
+<dd><a href="https://w3id.org/dharc/ontology/chad-ap/2.0.6">https://w3id.org/dharc/ontology/chad-ap/2.0.6</a></dd>
 <dt>Incompatible with:</dt>
 <dd><a href="https://w3id.org/dharc/ontology/chad-ap/1.0.0">https://w3id.org/dharc/ontology/chad-ap/1.0.0</a></dd>
 <dt>Vocabulary maintained at:</dt>
@@ -117,18 +117,18 @@ A OWL 2 DL-based metadata application profile for describing cultural heritage d
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<span class="markdown">CHAD-AP is a OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.</span>
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
 <table>
 <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
 <tbody>
-<tr><td><b>aat</b></td><td>&lt;http://vocab.getty.edu/aat/&gt;</td></tr>
+<tr><td><b>aat</b></td><td>&lt;http://vocab.getty.edu/page/aat/&gt;</td></tr>
+<tr><td><b>aat1</b></td><td>&lt;http://vocab.getty.edu/aat/&gt;</td></tr>
 <tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo/&gt;</td></tr>
 <tr><td><b>chad-ap</b></td><td>&lt;https://w3id.org/dharc/ontology/chad-ap#&gt;</td></tr>
-<tr><td><b>cidoc-crm</b></td><td>&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</td></tr>
+<tr><td><b>crm</b></td><td>&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</td></tr>
 <tr><td><b>crmdig</b></td><td>&lt;http://www.cidoc-crm.org/extensions/crmdig/&gt;</td></tr>
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
 <tr><td><b>lrmoo</b></td><td>&lt;http://iflastandards.info/ns/lrm/lrmoo/&gt;</td></tr>
@@ -141,6 +141,7 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
 <tr><td><b>vaem</b></td><td>&lt;http://www.linkedmodel.org/schema/vaem#&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>widoco</b></td><td>&lt;https://w3id.org/widoco/vocab#&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
 </tbody>
@@ -169,6 +170,10 @@ This ontology has the following classes and properties.</span>
          title="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation">Appellation</a>
    </li>
    <li>
+      <a href="#http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
+         title="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">Attribute Assignment</a>
+   </li>
+   <li>
       <a href="#http://www.cidoc-crm.org/extensions/crmdig/D9_Data_Object"
          title="http://www.cidoc-crm.org/extensions/crmdig/D9_Data_Object">Data Object</a>
    </li>
@@ -182,6 +187,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://www.cidoc-crm.org/cidoc-crm/E31_Document" title="http://www.cidoc-crm.org/cidoc-crm/E31_Document">Document</a>
+   </li>
+   <li>
+      <a href="#http://www.cidoc-crm.org/cidoc-crm/E5_Event" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">Event</a>
    </li>
    <li>
       <a href="#http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"
@@ -204,6 +212,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://iflastandards.info/ns/lrm/lrmoo/F5_Item" title="http://iflastandards.info/ns/lrm/lrmoo/F5_Item">Item</a>
+   </li>
+   <li>
+      <a href="#http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"
+         title="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">Linguistic Object</a>
    </li>
    <li>
       <a href="#http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"
@@ -243,6 +255,17 @@ This ontology has the following classes and properties.</span>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
+   <li>
+      <a href="#http://www.cidoc-crm.org/cidoc-crm/P141_assigned" title="http://www.cidoc-crm.org/cidoc-crm/P141_assigned">assigned</a>
+   </li>
+   <li>
+      <a href="#http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to"
+         title="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to">assigned attribute to</a>
+   </li>
+   <li>
+      <a href="#http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type"
+         title="http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type">assigned property of type</a>
+   </li>
    <li>
       <a href="#http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"
          title="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">carried out by</a>
@@ -498,6 +521,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://vocab.getty.edu/aat/300420536" title="http://vocab.getty.edu/aat/300420536">axe weapons</a>
    </li>
    <li>
+      <a href="#http://vocab.getty.edu/aat/300069672" title="http://vocab.getty.edu/aat/300069672">birth</a>
+   </li>
+   <li>
       <a href="#http://vocab.getty.edu/aat/300445021" title="http://vocab.getty.edu/aat/300445021">book numbers</a>
    </li>
    <li>
@@ -525,9 +551,6 @@ This ontology has the following classes and properties.</span>
       <a href="#http://vocab.getty.edu/aat/300403970" title="http://vocab.getty.edu/aat/300403970">compilation manuscripts</a>
    </li>
    <li>
-      <a href="#http://vocab.getty.edu/aat/300435434" title="http://vocab.getty.edu/aat/300435434">copyright/licensing statement</a>
-   </li>
-   <li>
       <a href="#http://vocab.getty.edu/aat/300404387" title="http://vocab.getty.edu/aat/300404387">creating (artistic activity)</a>
    </li>
    <li>
@@ -540,6 +563,12 @@ This ontology has the following classes and properties.</span>
       <a href="#http://vocab.getty.edu/aat/300054636" title="http://vocab.getty.edu/aat/300054636">data processing</a>
    </li>
    <li>
+      <a href="#http://vocab.getty.edu/aat/300151836" title="http://vocab.getty.edu/aat/300151836">death</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300435416" title="http://vocab.getty.edu/aat/300435416">descriptive note</a>
+   </li>
+   <li>
       <a href="#http://vocab.getty.edu/aat/300266792" title="http://vocab.getty.edu/aat/300266792">digital cameras</a>
    </li>
    <li>
@@ -550,6 +579,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://vocab.getty.edu/aat/300404386" title="http://vocab.getty.edu/aat/300404386">discoveries</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300393214" title="http://vocab.getty.edu/aat/300393214">dissolution</a>
    </li>
    <li>
       <a href="#http://vocab.getty.edu/aat/300054638" title="http://vocab.getty.edu/aat/300054638">documentation (activity)</a>
@@ -579,7 +611,19 @@ This ontology has the following classes and properties.</span>
       <a href="#http://vocab.getty.edu/aat/300417207" title="http://vocab.getty.edu/aat/300417207">exhibition titles (work titles)</a>
    </li>
    <li>
+      <a href="#http://vocab.getty.edu/aat/300189557" title="http://vocab.getty.edu/aat/300189557">female</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300404651" title="http://vocab.getty.edu/aat/300404651">first name</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300393213" title="http://vocab.getty.edu/aat/300393213">foundation</a>
+   </li>
+   <li>
       <a href="#http://vocab.getty.edu/aat/300053357" title="http://vocab.getty.edu/aat/300053357">fresco painting (technique)</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300404688" title="http://vocab.getty.edu/aat/300404688">full name</a>
    </li>
    <li>
       <a href="#http://vocab.getty.edu/aat/300011172" title="http://vocab.getty.edu/aat/300011172">gems (worked stones)</a>
@@ -612,7 +656,19 @@ This ontology has the following classes and properties.</span>
       <a href="#http://vocab.getty.edu/aat/300037592" title="http://vocab.getty.edu/aat/300037592">lamps (lighting devices)</a>
    </li>
    <li>
+      <a href="#http://vocab.getty.edu/aat/300435433" title="http://vocab.getty.edu/aat/300435433">language</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300404652" title="http://vocab.getty.edu/aat/300404652">last name</a>
+   </li>
+   <li>
       <a href="#http://vocab.getty.edu/aat/300178926" title="http://vocab.getty.edu/aat/300178926">letterpress printing</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300435434" title="http://vocab.getty.edu/aat/300435434">licensing statement</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300189559" title="http://vocab.getty.edu/aat/300189559">male</a>
    </li>
    <li>
       <a href="#http://vocab.getty.edu/aat/300028569" title="http://vocab.getty.edu/aat/300028569">manuscripts (documents)</a>
@@ -688,6 +744,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://vocab.getty.edu/aat/300027349" title="http://vocab.getty.edu/aat/300027349">series (object groupings)</a>
+   </li>
+   <li>
+      <a href="#http://vocab.getty.edu/aat/300055146" title="http://vocab.getty.edu/aat/300055146">sex</a>
    </li>
    <li>
       <a href="#http://vocab.getty.edu/aat/300404704" title="http://vocab.getty.edu/aat/300404704">shelf marks</a>
@@ -1229,16 +1288,19 @@ This section provides details for each class and property defined by Cultural He
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E7_Activity" title="http://www.cidoc-crm.org/cidoc-crm/E7_Activity">Activity</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E39_Actor" title="http://www.cidoc-crm.org/cidoc-crm/E39_Actor">Actor</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E41_Appellation" title="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation">Appellation</a></li>
+  <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment" title="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">Attribute Assignment</a></li>
   <li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D9_Data_Object" title="http://www.cidoc-crm.org/extensions/crmdig/D9_Data_Object">Data Object</a></li>
   <li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D8_Digital_Device" title="http://www.cidoc-crm.org/extensions/crmdig/D8_Digital_Device">Digital Device</a></li>
   <li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process" title="http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process">Digitization Process</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E31_Document" title="http://www.cidoc-crm.org/cidoc-crm/E31_Document">Document</a></li>
+  <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E5_Event" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">Event</a></li>
   <li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F2_Expression" title="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression">Expression</a></li>
   <li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation" title="http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation">Expression Creation</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E74_Group" title="http://www.cidoc-crm.org/cidoc-crm/E74_Group">Group</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E42_Identifier" title="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier">Identifier</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object" title="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object">Information Object</a></li>
   <li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F5_Item" title="http://iflastandards.info/ns/lrm/lrmoo/F5_Item">Item</a></li>
+  <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object" title="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">Linguistic Object</a></li>
   <li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation" title="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation">Manifestation</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E21_Person" title="http://www.cidoc-crm.org/cidoc-crm/E21_Person">Person</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing" title="http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing">Physical Human-Made Thing</a></li>
@@ -1303,7 +1365,7 @@ This section provides details for each class and property defined by Cultural He
     has super-classes
    </dt>
    <dd>
-    <a href="http://www.cidoc-crm.org/cidoc-crm/E5_Event" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">E5 Event</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/E5_Event" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">Event</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -1467,6 +1529,70 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="#http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by" title="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by">is identified by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">
+  <h3>Attribute Assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment</p>
+  <div class="comment">
+   <span class="markdown">The actions of making assertions about one property of an object or any single relation between two items or concepts.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P141_assigned -[1]-&gt; owl:Thing * crm:P177_assigned_property_of_type -[1]-&gt; crm:E55_Type * crm:P140_assigned_attribute_to -[1]-&gt; owl:Thing</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.cidoc-crm.org/cidoc-crm/">http://www.cidoc-crm.org/cidoc-crm/</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term status
+   </dt>
+   <dd>
+    <a href="http://purl.org/linked-data/registry#statusStable">http://purl.org/linked-data/registry#statusStable</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term rationale
+   </dt>
+   <dd>
+    This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. languages used by a person, an individual's gender, and so on). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>        ### Example of Heugene Hus having
+        ### his gender (aat:300411835) assigned
+        ### as male (aat:300189559)
+
+        :heugene-hus-gender a crm:E13_Attribute_Assignment ;
+            crm:P140_assigned_attribute_to :eugene-hus ;
+            crm:P141_assigned aat:300189559 ;
+            crm:P177_assigned_property_of_type aat:300411835 .
+            </pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.cidoc-crm.org/cidoc-crm/E4_Period" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E4_Period">E4 Period</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/P141_assigned" title="http://www.cidoc-crm.org/cidoc-crm/P141_assigned">assigned</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to" title="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to">assigned attribute to</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type" title="http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type">assigned property of type</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1728,6 +1854,80 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="#http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in" title="http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in">is documented in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.cidoc-crm.org/cidoc-crm/E5_Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/E5_Event</p>
+  <div class="comment">
+   <span class="markdown">A distinct, delimited and coherent process and interaction of a material nature, in cultural, social or physical systems, involving and affecting entities in a way characteristic of the kind of process.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P4_has_time-span -[0..1]-&gt; crm:E52_Time-Span * crm:P2_has_type -[0..1]-&gt; crm:E55_Type</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.cidoc-crm.org/cidoc-crm/">http://www.cidoc-crm.org/cidoc-crm/</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term status
+   </dt>
+   <dd>
+    <a href="http://purl.org/linked-data/registry#statusStable">http://purl.org/linked-data/registry#statusStable</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term rationale
+   </dt>
+   <dd>
+    This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. births, deaths, historical events). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>        ### Example of a birth event (aat:300069672),
+        ### in this case being Eugene Hus' birth
+
+        :heugene-hus-birth a crm:E5_Event ;
+            crm:P2_has_type aat:300069672 ;
+            crm:P4_has_time-span :heugene-hus-birth-timespan .
+            </pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.cidoc-crm.org/cidoc-crm/E4_Period" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E4_Period">E4 Period</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/E7_Activity" title="http://www.cidoc-crm.org/cidoc-crm/E7_Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/P11_had_participant" title="http://www.cidoc-crm.org/cidoc-crm/P11_had_participant">had participant</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of" title="http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of">occurred in the presence of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in" title="http://www.cidoc-crm.org/cidoc-crm/P11i_participated_in">participated in</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at" title="http://www.cidoc-crm.org/cidoc-crm/P12i_was_present_at">was present at</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -2044,7 +2244,7 @@ This section provides details for each class and property defined by Cultural He
     has sub-classes
    </dt>
    <dd>
-    <a href="#http://www.cidoc-crm.org/cidoc-crm/E31_Document" title="http://www.cidoc-crm.org/cidoc-crm/E31_Document">Document</a> <sup class="type-c" title="class">c</sup>, <a href="#http://iflastandards.info/ns/lrm/lrmoo/F2_Expression" title="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression">Expression</a> <sup class="type-c" title="class">c</sup>, <a href="#http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation" title="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation">Manifestation</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/E31_Document" title="http://www.cidoc-crm.org/cidoc-crm/E31_Document">Document</a> <sup class="type-c" title="class">c</sup>, <a href="#http://iflastandards.info/ns/lrm/lrmoo/F2_Expression" title="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression">Expression</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object" title="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">Linguistic Object</a> <sup class="type-c" title="class">c</sup>, <a href="#http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation" title="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation">Manifestation</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -2121,6 +2321,72 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="#http://iflastandards.info/ns/lrm/lrmoo/R7i_is_exemplified_by" title="http://iflastandards.info/ns/lrm/lrmoo/R7i_is_exemplified_by">is exemplified by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">
+  <h3>Linguistic Object<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object</p>
+  <div class="comment">
+   <span class="markdown">An identifiable expression in natural language or languages.</span>
+  </div>
+  <div class="info">
+   <span class="markdown">The properties that can be used with this class are: * crm:P2_has_type -[0..1]-&gt; crm:E55_Type * crm:P190_has_symbolic_content -[1..N]-&gt; rdfs:Literal </span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.cidoc-crm.org/cidoc-crm/">http://www.cidoc-crm.org/cidoc-crm/</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term status
+   </dt>
+   <dd>
+    <a href="http://purl.org/linked-data/registry#statusStable">http://purl.org/linked-data/registry#statusStable</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term rationale
+   </dt>
+   <dd>
+    This class is used in conjunction with crm:P2_type to represent an assertion made about some other entity (e.g. a description of that entity). This can be useful in those cases where the assertion needs to be trated as a qualified entity and not as a simple string of characters (in that case, crm:P3_has_note would be sufficient).
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>        ### Example of a descriptive note (aat:300435416)
+        ### referring to the person Heugene Hus
+        
+        :heugene-hus a crm:E39_Actor ;
+            crm:P67i_is_referred_to_by :heugene-hus-description .
+        
+        :heugene-hus-description a E33_Linguistic_Object ;
+            crm:P2_has_type aat:300435416 ;
+            crm:P190_has_symbolic_content "Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique" .
+
+    </pre>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object" title="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object">Information Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/E35_Title" title="http://www.cidoc-crm.org/cidoc-crm/E35_Title">Title</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -2632,7 +2898,7 @@ This section provides details for each class and property defined by Cultural He
     has super-classes
    </dt>
    <dd>
-    <a href="#http://www.cidoc-crm.org/cidoc-crm/E41_Appellation" title="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation">Appellation</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">E33 Linguistic Object</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/E41_Appellation" title="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation">Appellation</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object" title="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">Linguistic Object</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -2692,7 +2958,7 @@ This section provides details for each class and property defined by Cultural He
     is in range of
    </dt>
    <dd>
-    <a href="#http://www.cidoc-crm.org/cidoc-crm/P2_has_type" title="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">has type</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique" title="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique">used general technique</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type" title="http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type">assigned property of type</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.cidoc-crm.org/cidoc-crm/P2_has_type" title="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">has type</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique" title="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique">used general technique</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -2767,6 +3033,9 @@ This section provides details for each class and property defined by Cultural He
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
+  <li><a href="#http://www.cidoc-crm.org/cidoc-crm/P141_assigned" title="http://www.cidoc-crm.org/cidoc-crm/P141_assigned">assigned</a></li>
+  <li><a href="#http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to" title="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to">assigned attribute to</a></li>
+  <li><a href="#http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type" title="http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type">assigned property of type</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by" title="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">carried out by</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/P9_consists_of" title="http://www.cidoc-crm.org/cidoc-crm/P9_consists_of">consists of</a></li>
   <li><a href="#http://iflastandards.info/ns/lrm/lrmoo/R17_created" title="http://iflastandards.info/ns/lrm/lrmoo/R17_created">created</a></li>
@@ -2823,6 +3092,186 @@ This section provides details for each class and property defined by Cultural He
   <li><a href="#http://iflastandards.info/ns/lrm/lrmoo/R19i_was_realised_through" title="http://iflastandards.info/ns/lrm/lrmoo/R19i_was_realised_through">was realised through</a></li>
   <li><a href="#http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for" title="http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for">was used for</a></li>
  </ul>
+ <div class="entity" id="http://www.cidoc-crm.org/cidoc-crm/P141_assigned">
+  <h3>assigned<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/P141_assigned</p>
+  <div class="comment">
+   <span class="markdown">This property associates an attribute assignment with the entity used in the attribution.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.cidoc-crm.org/cidoc-crm/">http://www.cidoc-crm.org/cidoc-crm/</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term status
+   </dt>
+   <dd>
+    <a href="http://purl.org/linked-data/registry#statusStable">http://purl.org/linked-data/registry#statusStable</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term rationale
+   </dt>
+   <dd>
+    This property is used to represent the thing assigned in an attribute assignment.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>        ### Example of an attribute assignment assigning to some undefined entity
+        ### the French language
+        
+        :attribute-assignment a crm:E13_Attribute_Assignment ;
+            crm:P141_assigned &lt;http://id.loc.gov/vocabulary/iso639-2/fre&gt; .
+    </pre>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment" title="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">Attribute Assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity">E1 C R M Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to">
+  <h3>assigned attribute to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to</p>
+  <div class="comment">
+   <span class="markdown">This property associates an attribute assignment with an entity about which the attribution is made.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.cidoc-crm.org/cidoc-crm/">http://www.cidoc-crm.org/cidoc-crm/</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term status
+   </dt>
+   <dd>
+    <a href="http://purl.org/linked-data/registry#statusStable">http://purl.org/linked-data/registry#statusStable</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term rationale
+   </dt>
+   <dd>
+    This property is used to represent the thing that is the target of an attribute assignment.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>        ### Example of an attribute assignment assigning some undefined characteristic
+        ### to the person Heugene Hus
+        
+        :attribute-assignment a crm:E13_Attribute_Assignment ;
+            crm:P140_assigned_attribute_to :heugene-hus .
+    </pre>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment" title="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">Attribute Assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity">E1 C R M Entity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type">
+  <h3>assigned property of type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type</p>
+  <div class="comment">
+   <span class="markdown">This property associates an attribute assignment with the type of the entity used in the attribution.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.cidoc-crm.org/cidoc-crm/">http://www.cidoc-crm.org/cidoc-crm/</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term status
+   </dt>
+   <dd>
+    <a href="http://purl.org/linked-data/registry#statusStable">http://purl.org/linked-data/registry#statusStable</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Term rationale
+   </dt>
+   <dd>
+    This property is used to represent the type of thing assigned in an attribute assignment.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>        ### Example of an attribute assignment assigning to some undefined entity
+        ### an undefined attribute with type "language" (aat:300435433)
+        
+        :attribute-assignment a crm:E13_Attribute_Assignment ;
+            crm:P177_assigned_property_of_type aat:300435433 .
+    </pre>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment" title="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">Attribute Assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.cidoc-crm.org/cidoc-crm/E55_Type" title="http://www.cidoc-crm.org/cidoc-crm/E55_Type">Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">
   <h3>carried out by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by</p>
@@ -3653,7 +4102,7 @@ This section provides details for each class and property defined by Cultural He
      has domain
     </dt>
     <dd>
-     <a href="http://www.cidoc-crm.org/cidoc-crm/E5_Event" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">E5 Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.cidoc-crm.org/cidoc-crm/E5_Event" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -4289,7 +4738,7 @@ This section provides details for each class and property defined by Cultural He
   <h3>is about<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.cidoc-crm.org/cidoc-crm/P129_is_about</p>
   <div class="comment">
-   <span class="markdown">This property documents that an expression has some entity as its topic.</span>
+   <span class="markdown">This property documents that a propositional object has some entity as its primary subject.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -4312,7 +4761,7 @@ This section provides details for each class and property defined by Cultural He
     Term rationale
    </dt>
    <dd>
-    This property is used to represent topics of CHOs at their Expression level.
+    This property is used to represent entities such as topics of CHOs at their Expression level or the subjects of assertions (linguistic objects).
    </dd>
   </dl>
   <dl>
@@ -5028,7 +5477,7 @@ This section provides details for each class and property defined by Cultural He
      has domain
     </dt>
     <dd>
-     <a href="http://www.cidoc-crm.org/cidoc-crm/E5_Event" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">E5 Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.cidoc-crm.org/cidoc-crm/E5_Event" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -5080,7 +5529,7 @@ This section provides details for each class and property defined by Cultural He
      has range
     </dt>
     <dd>
-     <a href="http://www.cidoc-crm.org/cidoc-crm/E5_Event" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">E5 Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.cidoc-crm.org/cidoc-crm/E5_Event" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -5782,7 +6231,7 @@ This section provides details for each class and property defined by Cultural He
      has range
     </dt>
     <dd>
-     <a href="http://www.cidoc-crm.org/cidoc-crm/E5_Event" target="_blank" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">E5 Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.cidoc-crm.org/cidoc-crm/E5_Event" title="http://www.cidoc-crm.org/cidoc-crm/E5_Event">Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -6215,6 +6664,7 @@ This section provides details for each class and property defined by Cultural He
   <li><a href="#http://vocab.getty.edu/aat/300053363" title="http://vocab.getty.edu/aat/300053363">aquarelle (technique)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300117127" title="http://vocab.getty.edu/aat/300117127">artifacts (object genre)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300420536" title="http://vocab.getty.edu/aat/300420536">axe weapons</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300069672" title="http://vocab.getty.edu/aat/300069672">birth</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300445021" title="http://vocab.getty.edu/aat/300445021">book numbers</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300028051" title="http://vocab.getty.edu/aat/300028051">books</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300045627" title="http://vocab.getty.edu/aat/300045627">bottles</a></li>
@@ -6224,15 +6674,17 @@ This section provides details for each class and property defined by Cultural He
   <li><a href="#http://vocab.getty.edu/aat/300417639" title="http://vocab.getty.edu/aat/300417639">commission (method of acquisition)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300022488" title="http://vocab.getty.edu/aat/300022488">compasses (drawing instruments)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300403970" title="http://vocab.getty.edu/aat/300403970">compilation manuscripts</a></li>
-  <li><a href="#http://vocab.getty.edu/aat/300435434" title="http://vocab.getty.edu/aat/300435434">copyright/licensing statement</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300404387" title="http://vocab.getty.edu/aat/300404387">creating (artistic activity)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300054277" title="http://vocab.getty.edu/aat/300054277">curating</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300386427" title="http://vocab.getty.edu/aat/300386427">data compression</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300054636" title="http://vocab.getty.edu/aat/300054636">data processing</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300151836" title="http://vocab.getty.edu/aat/300151836">death</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300435416" title="http://vocab.getty.edu/aat/300435416">descriptive note</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300266792" title="http://vocab.getty.edu/aat/300266792">digital cameras</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300391447" title="http://vocab.getty.edu/aat/300391447">digital surface modeling</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300047762" title="http://vocab.getty.edu/aat/300047762">dioramas</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300404386" title="http://vocab.getty.edu/aat/300404386">discoveries</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300393214" title="http://vocab.getty.edu/aat/300393214">dissolution</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300054638" title="http://vocab.getty.edu/aat/300054638">documentation (activity)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300054196" title="http://vocab.getty.edu/aat/300054196">drawing (image-making)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300053758" title="http://vocab.getty.edu/aat/300053758">drying</a></li>
@@ -6242,7 +6694,11 @@ This section provides details for each class and property defined by Cultural He
   <li><a href="#http://vocab.getty.edu/aat/300041340" title="http://vocab.getty.edu/aat/300041340">engravings (prints)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300122241" title="http://vocab.getty.edu/aat/300122241">equipment</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300417207" title="http://vocab.getty.edu/aat/300417207">exhibition titles (work titles)</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300189557" title="http://vocab.getty.edu/aat/300189557">female</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300404651" title="http://vocab.getty.edu/aat/300404651">first name</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300393213" title="http://vocab.getty.edu/aat/300393213">foundation</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300053357" title="http://vocab.getty.edu/aat/300053357">fresco painting (technique)</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300404688" title="http://vocab.getty.edu/aat/300404688">full name</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300011172" title="http://vocab.getty.edu/aat/300011172">gems (worked stones)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300426696" title="http://vocab.getty.edu/aat/300426696">graphics software</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300252927" title="http://vocab.getty.edu/aat/300252927">handwriting</a></li>
@@ -6253,7 +6709,11 @@ This section provides details for each class and property defined by Cultural He
   <li><a href="#http://vocab.getty.edu/aat/300055021" title="http://vocab.getty.edu/aat/300055021">incunabula (books)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300053852" title="http://vocab.getty.edu/aat/300053852">intarsia (process)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300037592" title="http://vocab.getty.edu/aat/300037592">lamps (lighting devices)</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300435433" title="http://vocab.getty.edu/aat/300435433">language</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300404652" title="http://vocab.getty.edu/aat/300404652">last name</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300178926" title="http://vocab.getty.edu/aat/300178926">letterpress printing</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300435434" title="http://vocab.getty.edu/aat/300435434">licensing statement</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300189559" title="http://vocab.getty.edu/aat/300189559">male</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300028569" title="http://vocab.getty.edu/aat/300028569">manuscripts (documents)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300028094" title="http://vocab.getty.edu/aat/300028094">maps (documents)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300138758" title="http://vocab.getty.edu/aat/300138758">masks (costume)</a></li>
@@ -6279,6 +6739,7 @@ This section provides details for each class and property defined by Cultural He
   <li><a href="#http://vocab.getty.edu/aat/300417260" title="http://vocab.getty.edu/aat/300417260">saving (information handling)</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300264383" title="http://vocab.getty.edu/aat/300264383">sculpting</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300027349" title="http://vocab.getty.edu/aat/300027349">series (object groupings)</a></li>
+  <li><a href="#http://vocab.getty.edu/aat/300055146" title="http://vocab.getty.edu/aat/300055146">sex</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300404704" title="http://vocab.getty.edu/aat/300404704">shelf marks</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300433476" title="http://vocab.getty.edu/aat/300433476">spark arresters</a></li>
   <li><a href="#http://vocab.getty.edu/aat/300235576" title="http://vocab.getty.edu/aat/300235576">specimens</a></li>
@@ -6412,6 +6873,35 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent CHOs that are axes."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300069672">
+  <h3>birth<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300069672</p>
+  <div class="comment">
+   <span class="markdown">Initiation of life processes of all living organisms.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the event of a person's birth."@en</span>
    </dd>
   </dl>
  </div>
@@ -6676,35 +7166,6 @@ This section provides details for each class and property defined by Cultural He
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://vocab.getty.edu/aat/300435434">
-  <h3>copyright/licensing statement<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300435434</p>
-  <div class="comment">
-   <span class="markdown">A formal statement of the copyright or licensing of a work, and/or any restrictions placed on it.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent licenses and copyright statements."@en</span>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300404387">
   <h3>creating (artistic activity)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300404387</p>
@@ -6821,6 +7282,64 @@ This section provides details for each class and property defined by Cultural He
    </dd>
   </dl>
  </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300151836">
+  <h3>death<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300151836</p>
+  <div class="comment">
+   <span class="markdown">Cessation of life processes of all living organisms.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the event of a person's death."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300435416">
+  <h3>descriptive note<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300435416</p>
+  <div class="comment">
+   <span class="markdown">A textual description of the work or other entity, including a discussion of issues related to it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent descriptions of some entity."@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300266792">
   <h3>digital cameras<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300266792</p>
@@ -6934,6 +7453,35 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the activities of discoverers."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300393214">
+  <h3>dissolution<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300393214</p>
+  <div class="comment">
+   <span class="markdown">The action or condition of causing an organization or group of people to cease to exist.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent events in which a group or organization is dissolved."@en</span>
    </dd>
   </dl>
  </div>
@@ -7198,6 +7746,93 @@ This section provides details for each class and property defined by Cultural He
    </dd>
   </dl>
  </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300189557">
+  <h3>female<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300189557</p>
+  <div class="comment">
+   <span class="markdown">The sex that normally produces eggs or female germ cells.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent female-identifying individuals."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300404651">
+  <h3>first name<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300404651</p>
+  <div class="comment">
+   <span class="markdown">In the context of personal names, particularly in western culture, a first name is the name given to a person at birth or an early period of life, historically at baptism and historically chosen to signify or honor a saint, an earlier family member, or a personal characteristic.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent a person's first name."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300393213">
+  <h3>foundation<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300393213</p>
+  <div class="comment">
+   <span class="markdown">The action or condition of causing something, such as a group of people or a settlement, to exist.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent events in which a group or organization is created."@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300053357">
   <h3>fresco painting (technique)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300053357</p>
@@ -7224,6 +7859,35 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of fresco paintings as a technique."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300404688">
+  <h3>full name<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300404688</p>
+  <div class="comment">
+   <span class="markdown">Names for people, places, or things that are the fullest version of the name.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent an agent's full name."@en</span>
    </dd>
   </dl>
  </div>
@@ -7517,6 +8181,64 @@ This section provides details for each class and property defined by Cultural He
    </dd>
   </dl>
  </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300435433">
+  <h3>language<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300435433</p>
+  <div class="comment">
+   <span class="markdown">The language of a record or another entity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent a language used by or known to an individual."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300404652">
+  <h3>last name<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300404652</p>
+  <div class="comment">
+   <span class="markdown">In the context of modern western personal names, the names that are hereditary and common to all members of a family, placed at the end of a string of names for an individual; used with a first name to distinguish an individual from others with the same first name. In other cultural traditions, last names may not be hereditary family names or they may not be used at all.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent a person's last name."@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300178926">
   <h3>letterpress printing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300178926</p>
@@ -7543,6 +8265,64 @@ This section provides details for each class and property defined by Cultural He
    </dt>
    <dd>
     <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the use of letterpress printing as a technique."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300435434">
+  <h3>licensing statement<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300435434</p>
+  <div class="comment">
+   <span class="markdown">A formal statement of the copyright or licensing of a work, and/or any restrictions placed on it.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent licenses and copyright statements."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300189559">
+  <h3>male<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300189559</p>
+  <div class="comment">
+   <span class="markdown">The sex that in reproduction normally produces sperm cells or male gametes.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent male-identifying individuals."@en</span>
    </dd>
   </dl>
  </div>
@@ -8271,6 +9051,35 @@ This section provides details for each class and property defined by Cultural He
    </dd>
   </dl>
  </div>
+ <div class="entity" id="http://vocab.getty.edu/aat/300055146">
+  <h3>sex<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300055146</p>
+  <div class="comment">
+   <span class="markdown">Biological characteristics and physiological traits that distinguish the males and females of a species.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/">http://vocab.getty.edu/aat/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://vocab.getty.edu/aat/Concept" target="_blank" title="http://vocab.getty.edu/aat/Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.linkedmodel.org/schema/vaem#rationale" target="_blank" title="http://www.linkedmodel.org/schema/vaem#rationale">rationale</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"This individual is used to represent the sex assigned to individuals."@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://vocab.getty.edu/aat/300404704">
   <h3>shelf marks<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300404704</p>
@@ -8536,7 +9345,7 @@ This section provides details for each class and property defined by Cultural He
   <h3>url<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://vocab.getty.edu/aat/300404630</p>
   <div class="comment">
-   <span class="markdown">Uniform Resource Locators used to identify a resource existing online.</span>
+   <span class="markdown">A Uniform Resource Locator (URL).</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -8839,432 +9648,94 @@ This section provides details for each class and property defined by Cultural He
 <h2 id="changes" class="list">Changes from last version</h2>
 <h3 id="changeClass" class="list">Classes</h3>
 <details><summary><u>Modified classes</u></summary>
-<ul><li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F1_Work">http://iflastandards.info/ns/lrm/lrmoo/F1_Work</a>
+<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object</a>
 <ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
+<li>Added: rdfs:isDefinedBy http://www.cidoc-crm.org/cidoc-crm/</li>
+<li>Added: <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> http://purl.org/linked-data/registry#statusStable</li>
+<li>Added: <http://purl.org/vocab/vann/example> "
+        # Example of a descriptive note (aat:300435416)
+        # referring to the person Heugene Hus
+        
+        :heugene-hus a crm:E39_Actor ;
+            crm:P67i_is_referred_to_by :heugene-hus-description .
+        
+        :heugene-hus-description a E33_Linguistic_Object ;
+            crm:P2_has_type aat:300435416 ;
+            crm:P190_has_symbolic_content \"Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique\" .
 
-* lrmoo:R10_has_member -[0..N]-> lrmoo:F1_Work
-* crm:P102_has_title -[0..N]-> crm:E35_Title
-* lrmoo:R3_is_realised_in -[1..N]-> lrmoo:F2_Expression"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* lrmoo:R10_has_member -[0..N]-> lrmoo:F1_Work
-* crm:P102_has_title -[0..N]-> crm:E35_Title
-* lrmoo:R3_is_realized_in -[1..N]-> lrmoo:F2_Expression"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation">http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* lrmoo:R17_created -[1]-> lrmoo:F2_Expression
-* crm:P9_consists_of -[1..N]-> crm:E7_Activity
-* crm:R32_used_general_technique -[0..N]-> crm:E55_Type
-* lrmoo:R19_created_a_realisation_of -[1]-> lrmoo:F1_Item
-* crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span
-"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* lrmoo:R17_created -[1]-> lrmoo:F2_Expression
-* crm:P9_consists_of -[1..N]-> crm:E7_Activity
-* crm:R32_used_general_technique -[0..N]-> crm:E55_Type
-* lrmoo:R19_created_a_realisation_of -[1]-> lrmoo:F1_Item
-* crm:P4_has_time-span -[1]-> crm:E52_Time-Span"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://iflastandards.info/ns/lrm/lrmoo/F5_Item">http://iflastandards.info/ns/lrm/lrmoo/F5_Item</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
-* crm:P3_has_note -[0..1]-> rdfs:Literal"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P1_is_identified_by -[1..N]-> crm:E42_Identifier
-* crm:P3_has_note -[0..1]-> rdfs:Literal"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E21_Person">http://www.cidoc-crm.org/cidoc-crm/E21_Person</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
-* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
-"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing">http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing</a>
-<ul>
+    "@en</li>
+<li>Added: <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used in conjunction with crm:P2_type to represent an assertion made about some other entity (e.g. a description of that entity). This can be useful in those cases where the assertion needs to be trated as a qualified entity and not as a simple string of characters (in that case, crm:P3_has_note would be sufficient)."@en</li>
+<li>Added: rdfs:label "Linguistic Object"@en</li>
 <li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
 
 * crm:P2_has_type -[0..1]-> crm:E55_Type
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
-* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
-"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E31_Document">http://www.cidoc-crm.org/cidoc-crm/E31_Document</a>
-<ul>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        # Example of some entity (Ulisse Aldrovandi) 
-        # being documented by an external resource 
-        # (a VIAF authority record)
-
-        :ulisse-aldrovandi a crm:E39_Actor ;
-            crm:P70i_is_documented_in <http://viaf.org/viaf/100190422> .
-    "@en</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/vocab/vann/example> "
-        # Example of some entity (Ulisse Aldrovandi) 
-        # being documented by an external resource 
-        # (a VIAF authority record)
-
-        :ulisse-aldrovandi a crm:E39_Actor ;
-            crm:P70i_is_documented_by <http://viaf.org/viaf/100190422> .
-    "@en</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E35_Title">http://www.cidoc-crm.org/cidoc-crm/E35_Title</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E39_Actor">http://www.cidoc-crm.org/cidoc-crm/E39_Actor</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
-* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
-"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E41_Appellation">http://www.cidoc-crm.org/cidoc-crm/E41_Appellation</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
 * crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal
-* crm:P2_has_type -[0..1]-> E55_Type
 "^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal"^^xsd:string</li>
+<li>Added: rdfs:comment "An identifiable expression in natural language or languages."@en</li>
+<li>Added: SubClass of http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object</li>
 </ul>
 </li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E42_Identifier">http://www.cidoc-crm.org/cidoc-crm/E42_Identifier</a>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E5_Event">http://www.cidoc-crm.org/cidoc-crm/E5_Event</a>
 <ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P190_has_symbolic_content -[1..N]-> rdfs:Literal"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P190_has_symbolic_content -[1]-> rdfs:Literal"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime
-* crm:P82a_begin_of_the_begin -[1]-> edtf:EDTF
-* crm:P82b_end_of_the_end -[1]-> xsd:dateTime
-* crm:P82b_end_of_the_end -[1]-> edtf:EDTF"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P82a_begin_of_the_begin -[1]-> xsd:dateTime
-* crm:P82b_end_of_the_end -[1]-> xsd:dateTime"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E53_Place">http://www.cidoc-crm.org/cidoc-crm/E53_Place</a>
-<ul>
+<li>Added: <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. births, deaths, historical events). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals."@en</li>
+<li>Added: SubClass of http://www.cidoc-crm.org/cidoc-crm/E4_Period</li>
 <li>Added: <http://purl.org/vocab/vann/example> "
-        # Example of a place named Bologna, documented
-        # by an external resource (an authority record on WikiData)
+        # Example of a birth event (aat:300069672),
+        # in this case being Eugene Hus' birth
 
-        :bologna a crm:E53_Place ;
-            crm:P70i_is_documented_in <https://www.wikidata.org/wiki/Q1891> .
-    "@en</li>
+        :heugene-hus-birth a crm:E5_Event ;
+            crm:P2_has_type aat:300069672 ;
+            crm:P4_has_time-span :heugene-hus-birth-timespan .
+            "@en</li>
+<li>Added: rdfs:isDefinedBy http://www.cidoc-crm.org/cidoc-crm/</li>
+<li>Added: <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> http://purl.org/linked-data/registry#statusStable</li>
+<li>Added: rdfs:comment "A distinct, delimited and coherent process and interaction of a material nature, in cultural, social or physical systems, involving and affecting entities in a way characteristic of the kind of process."@en</li>
 <li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
 
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
-* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
-"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/vocab/vann/example> "
-        # Example of a place named Bologna, documented
-        # by an external resource (an authority record on WikiData)
-
-        :bologna a crm:E53_Place ;
-            crm:P70i_is_documented_by <https://www.wikidata.org/wiki/Q1891> .
-    "@en</li>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object">http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P190_has_symbolic_content -[0..N]-> rdfs:Literal
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P67_refers_to -[0..1]-> lrmoo:F3_Manifestation
-* crm:P70i_is_documented_in -[0..1]-> crm:E31_Document
-* crm:P190_has_symbolic_content -[0..1]-> rdfs:Literal
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E74_Group">http://www.cidoc-crm.org/cidoc-crm/E74_Group</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation
-* crm:P1_is_identified_by -[0..N]-> crm:E42_Identifier
-"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P74_has_current_or_former_residence -[0..1]-> crm:E53_Place
-* crm:P70i_is_documented_in -[0..N]-> crm:E31_Document
-* crm:P1_is_identified_by -[0..N]-> crm:E41_Appellation"^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/E7_Activity">http://www.cidoc-crm.org/cidoc-crm/E7_Activity</a>
-<ul>
-<li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P14_carried_out_by -[0..N]-> crm:E39_Actor
-* crm:P16_used_specific_object -[0..N]-> lrmoo:F5_Item
-* crm:P32_used_general_technique -[0..N]-> E55_Type
 * crm:P4_has_time-span -[0..1]-> crm:E52_Time-Span
-"^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:
-
-* crm:P2_has_type -[1]-> crm:E55_Type
-* crm:P14_carried_out_by -[1..N]-> crm:E39_Actor
-* crm:P16_used_specific_object -[0..N]-> lrmoo:F5_Item
-* crm:P32_used_general_technique -[0..N]-> E55_Type"^^xsd:string</li>
+* crm:P2_has_type -[0..1]-> crm:E55_Type"^^xsd:string</li>
+<li>Added: rdfs:label "Event"@en</li>
 </ul>
 </li>
 </ul></details><details><summary><u>Added classes</u></summary>
-<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item">http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item</a>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D10_Software_Execution">http://www.cidoc-crm.org/extensions/crmdig/D10_Software_Execution</a>
+<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment</a>
 <ul>
-<li>Added: SubClass of http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
+<li>Added: SubClass of http://www.cidoc-crm.org/cidoc-crm/E4_Period</li>
 </ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D11_Digital_Measurement_Event">http://www.cidoc-crm.org/extensions/crmdig/D11_Digital_Measurement_Event</a>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D14_Software">http://www.cidoc-crm.org/extensions/crmdig/D14_Software</a>
-<ul>
-<li>Added: SubClass of http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object">http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</a>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process">http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process</a>
-<ul>
-<li>Added: SubClass of http://www.cidoc-crm.org/extensions/crmdig/D11_Digital_Measurement_Event</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event">http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</a>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D8_Digital_Device">http://www.cidoc-crm.org/extensions/crmdig/D8_Digital_Device</a>
-<ul>
-<li>Added: SubClass of http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/D9_Data_Object">http://www.cidoc-crm.org/extensions/crmdig/D9_Data_Object</a>
-<ul>
-<li>Added: SubClass of http://www.cidoc-crm.org/cidoc-crm/E54_Dimension</li>
-<li>Added: SubClass of http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
-</ul>
-</li>
-</ul></details><details><summary><u>Deleted classes</u></summary>
-<ul><li><a href="#http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution">http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event">http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D14_Software">http://www.ics.forth.gr/isl/CRMdig/D14_Software</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object">http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process">http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event">http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device">http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object">http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object</a>
 </li>
 </ul></details><h3 id="changeProp" class="list">Object Properties</h3>
-<details><summary><u>Added object properties</u></summary>
-<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/P138_represents">http://www.cidoc-crm.org/cidoc-crm/P138_represents</a>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/P129_is_about">http://www.cidoc-crm.org/cidoc-crm/P129_is_about</a>
 <ul>
+<li>Added: <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent entities such as topics of CHOs at their Expression level or the subjects of assertions (linguistic objects)."@en</li>
+<li>Added: rdfs:comment "This property documents that a propositional object has some entity as its primary subject."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "This property documents that an expression has some entity as its topic."@en</li>
+<li>Deleted: <http://www.linkedmodel.org/schema/vaem#rationale> "This property is used to represent topics of CHOs at their Expression level."@en</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to">http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to</a>
+<ul>
+<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment</li>
 <li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity</li>
-<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item</li>
-<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P67_refers_to</li>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation&gt; &lt;http://www.cidoc-crm.org/cidoc-crm/P138_represents&gt;)</li>
 </ul>
 </li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation">http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation</a>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/P141_assigned">http://www.cidoc-crm.org/cidoc-crm/P141_assigned</a>
 <ul>
-<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity</li>
-<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by</li>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation&gt; &lt;http://www.cidoc-crm.org/cidoc-crm/P138_represents&gt;)</li>
-<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item</li>
+<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment</li>
+<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity</li>
 </ul>
 </li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location">http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location</a>
+<li><a href="#http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type">http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type</a>
 <ul>
-<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing</li>
-<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E53_Place</li>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of&gt; &lt;http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location&gt;)</li>
+<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment</li>
+<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E55_Type</li>
 </ul>
 </li>
-<li><a href="#http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of">http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of</a>
-<ul>
-<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing</li>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/cidoc-crm/P53i_is_former_or_current_location_of&gt; &lt;http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location&gt;)</li>
-<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E53_Place</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L10_had_input">http://www.cidoc-crm.org/extensions/crmdig/L10_had_input</a>
-<ul>
-<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object</li>
-<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L10_had_input&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L10i_was_input_of&gt;)</li>
-<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L10i_was_input_of">http://www.cidoc-crm.org/extensions/crmdig/L10i_was_input_of</a>
-<ul>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L10_had_input&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L10i_was_input_of&gt;)</li>
-<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P16i_was_used_for</li>
-<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
-<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L11_had_output">http://www.cidoc-crm.org/extensions/crmdig/L11_had_output</a>
-<ul>
-<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P94_has_created</li>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L11i_was_output_of&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L11_had_output&gt;)</li>
-<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
-<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L11i_was_output_of">http://www.cidoc-crm.org/extensions/crmdig/L11i_was_output_of</a>
-<ul>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L11i_was_output_of&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L11_had_output&gt;)</li>
-<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
-<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by</li>
-<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D1_Digital_Object</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L1_digitized">http://www.cidoc-crm.org/extensions/crmdig/L1_digitized</a>
-<ul>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L1i_was_digitized_by&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L1_digitized&gt;)</li>
-<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process</li>
-<li>Added: Range http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing</li>
-<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P39_measured</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L1i_was_digitized_by">http://www.cidoc-crm.org/extensions/crmdig/L1i_was_digitized_by</a>
-<ul>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://www.cidoc-crm.org/extensions/crmdig/L1i_was_digitized_by&gt; &lt;http://www.cidoc-crm.org/extensions/crmdig/L1_digitized&gt;)</li>
-<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P39i_was_measured_by</li>
-<li>Added: domain http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing</li>
-<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D2_Digitization_Process</li>
-</ul>
-</li>
-<li><a href="#http://www.cidoc-crm.org/extensions/crmdig/L23_used_software_or_firmware">http://www.cidoc-crm.org/extensions/crmdig/L23_used_software_or_firmware</a>
-<ul>
-<li>Added: SubProperty of http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object</li>
-<li>Added: Range http://www.cidoc-crm.org/extensions/crmdig/D14_Software</li>
-<li>Added: domain http://www.cidoc-crm.org/extensions/crmdig/D7_Digital_Machine_Event</li>
-</ul>
-</li>
-</ul></details><details><summary><u>Deleted object properties</u></summary>
-<ul><li><a href="#http://www.ics.forth.gr/isl/CRMdig/L10_had_input">http://www.ics.forth.gr/isl/CRMdig/L10_had_input</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L10i_was_input_of">http://www.ics.forth.gr/isl/CRMdig/L10i_was_input_of</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L11_had_output">http://www.ics.forth.gr/isl/CRMdig/L11_had_output</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L11i_was_output_of">http://www.ics.forth.gr/isl/CRMdig/L11i_was_output_of</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L1_digitized">http://www.ics.forth.gr/isl/CRMdig/L1_digitized</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L1i_was_digitized_by">http://www.ics.forth.gr/isl/CRMdig/L1i_was_digitized_by</a>
-</li>
-<li><a href="#http://www.ics.forth.gr/isl/CRMdig/L23_used_software_or_firmware">http://www.ics.forth.gr/isl/CRMdig/L23_used_software_or_firmware</a>
-</li>
-</ul></details></div>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+</div>
 </div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

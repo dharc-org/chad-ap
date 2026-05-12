@@ -13,9 +13,10 @@
      xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vocab="https://w3id.org/widoco/vocab#"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/dharc/ontology/chad-ap">
-        <owl:versionIRI rdf:resource="https://w3id.org/dharc/ontology/chad-ap/2.0.3"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/dharc/ontology/chad-ap/2.1.0"/>
         <dc:abstract xml:lang="en">A OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.</dc:abstract>
         <dc:contributor>Heibi, Ivan</dc:contributor>
         <dc:contributor>Moretti, Arianna</dc:contributor>
@@ -894,7 +895,7 @@ What are the tools and their types used in processing activities?
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-16</terms:created>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-16</terms:issued>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-17</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-11</terms:modified>
         <terms:title xml:lang="en">Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP)</terms:title>
         <bibo:doi rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">10.1007/978-3-031-77847-6_11</bibo:doi>
         <vann:preferredNamespacePrefix xml:lang="en">chad-ap</vann:preferredNamespacePrefix>
@@ -902,11 +903,12 @@ What are the tools and their types used in processing activities?
         <schema:codeRepository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/dharc-org/chad-ap/</schema:codeRepository>
         <schema:funder rdf:resource="https://www.fondazionechanges.org/"/>
         <rdfs:comment xml:lang="en">The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the Object Module (OM), dedicated to describing the CH objects, and the Process Module (PM), for describing the acquisition and digitisation process.</rdfs:comment>
-        <owl:backwardCompatibleWith rdf:resource="https://w3id.org/dharc/ontology/chad-ap/2.0.3"/>
+        <owl:backwardCompatibleWith rdf:resource="https://w3id.org/dharc/ontology/chad-ap/2.0.6"/>
         <owl:incompatibleWith rdf:resource="https://w3id.org/dharc/ontology/chad-ap/1.0.0"/>
-        <owl:priorVersion rdf:resource="https://w3id.org/dharc/ontology/chad-ap/2.0.3"/>
-        <owl:versionInfo>2.0.4</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://w3id.org/dharc/ontology/chad-ap/2.0.6"/>
+        <owl:versionInfo>2.1.0</owl:versionInfo>
         <ns:status xml:lang="en">work in progress</ns:status>
+        <vocab:introduction xml:lang="en">CHAD-AP is a OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.</vocab:introduction>
     </owl:Ontology>
     
 
@@ -1074,6 +1076,13 @@ What are the tools and their types used in processing activities?
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- https://w3id.org/widoco/vocab#introduction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/widoco/vocab#introduction"/>
     
 
 
@@ -1488,8 +1497,8 @@ What are the tools and their types used in processing activities?
         :expression a lrmoo:F2_Expression ;
             crm:P129_is_about :subject .            
     </vann:example>
-        <vaem:rationale xml:lang="en">This property is used to represent topics of CHOs at their Expression level.</vaem:rationale>
-        <rdfs:comment xml:lang="en">This property documents that an expression has some entity as its topic.</rdfs:comment>
+        <vaem:rationale xml:lang="en">This property is used to represent entities such as topics of CHOs at their Expression level or the subjects of assertions (linguistic objects).</vaem:rationale>
+        <rdfs:comment xml:lang="en">This property documents that a propositional object has some entity as its primary subject.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <rdfs:label xml:lang="fr">a pour sujet</rdfs:label>
         <rdfs:label xml:lang="de">handelt über</rdfs:label>
@@ -1661,6 +1670,50 @@ What are the tools and their types used in processing activities?
     
 
 
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <vann:example xml:lang="en">
+        ### Example of an attribute assignment assigning some undefined characteristic
+        ### to the person Heugene Hus
+        
+        :attribute-assignment a crm:E13_Attribute_Assignment ;
+            crm:P140_assigned_attribute_to :heugene-hus .
+    </vann:example>
+        <vaem:rationale xml:lang="en">This property is used to represent the thing that is the target of an attribute assignment.</vaem:rationale>
+        <rdfs:comment xml:lang="en">This property associates an attribute assignment with an entity about which the attribution is made.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">assigned attribute to</rdfs:label>
+        <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P141_assigned -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P141_assigned">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"/>
+        <vann:example xml:lang="en">
+        ### Example of an attribute assignment assigning to some undefined entity
+        ### the French language
+        
+        :attribute-assignment a crm:E13_Attribute_Assignment ;
+            crm:P141_assigned &lt;http://id.loc.gov/vocabulary/iso639-2/fre&gt; .
+    </vann:example>
+        <vaem:rationale xml:lang="en">This property is used to represent the thing assigned in an attribute assignment.</vaem:rationale>
+        <rdfs:comment xml:lang="en">This property associates an attribute assignment with the entity used in the attribution.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">assigned</rdfs:label>
+        <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by -->
 
 
@@ -1787,6 +1840,28 @@ What are the tools and their types used in processing activities?
         <rdfs:label xml:lang="el">χρησιμοποιήθηκε για</rdfs:label>
         <rdfs:label xml:lang="ru">был использован для</rdfs:label>
         <rdfs:label xml:lang="zh">用于</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P177_assigned_property_of_type">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <vann:example xml:lang="en">
+        ### Example of an attribute assignment assigning to some undefined entity
+        ### an undefined attribute with type &quot;language&quot; (aat:300435433)
+        
+        :attribute-assignment a crm:E13_Attribute_Assignment ;
+            crm:P177_assigned_property_of_type aat:300435433 .
+    </vann:example>
+        <vaem:rationale xml:lang="en">This property is used to represent the type of thing assigned in an attribute assignment.</vaem:rationale>
+        <rdfs:comment xml:lang="en">This property associates an attribute assignment with the type of the entity used in the attribution.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">assigned property of type</rdfs:label>
+        <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     </owl:ObjectProperty>
     
 
@@ -2769,6 +2844,35 @@ What are the tools and their types used in processing activities?
     
 
 
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment -->
+
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E4_Period"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P141_assigned -[1]-&gt; owl:Thing
+* crm:P177_assigned_property_of_type -[1]-&gt; crm:E55_Type
+* crm:P140_assigned_attribute_to -[1]-&gt; owl:Thing</dc:description>
+        <vann:example xml:lang="en">
+        ### Example of Heugene Hus having
+        ### his gender (aat:300411835) assigned
+        ### as male (aat:300189559)
+
+        :heugene-hus-gender a crm:E13_Attribute_Assignment ;
+            crm:P140_assigned_attribute_to :eugene-hus ;
+            crm:P141_assigned aat:300189559 ;
+            crm:P177_assigned_property_of_type aat:300411835 .
+            </vann:example>
+        <vaem:rationale xml:lang="en">This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. languages used by a person, an individual&apos;s gender, and so on). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty&apos;s Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals.</vaem:rationale>
+        <rdfs:comment xml:lang="en">The actions of making assertions about one property of an object or any single relation between two items or concepts.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">Attribute Assignment</rdfs:label>
+        <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing -->
 
 
@@ -2894,7 +2998,31 @@ What are the tools and their types used in processing activities?
     <!-- http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object -->
 
 
-    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P2_has_type -[0..1]-&gt; crm:E55_Type
+* crm:P190_has_symbolic_content -[1..N]-&gt; rdfs:Literal
+</dc:description>
+        <vann:example xml:lang="en">
+        ### Example of a descriptive note (aat:300435416)
+        ### referring to the person Heugene Hus
+        
+        :heugene-hus a crm:E39_Actor ;
+            crm:P67i_is_referred_to_by :heugene-hus-description .
+        
+        :heugene-hus-description a E33_Linguistic_Object ;
+            crm:P2_has_type aat:300435416 ;
+            crm:P190_has_symbolic_content &quot;Pseudonyme de Stapleton, Pierre-Louis. - Danseur, chorégraphe, et auteur dramatique&quot; .
+
+    </vann:example>
+        <vaem:rationale xml:lang="en">This class is used in conjunction with crm:P2_type to represent an assertion made about some other entity (e.g. a description of that entity). This can be useful in those cases where the assertion needs to be trated as a qualified entity and not as a simple string of characters (in that case, crm:P3_has_note would be sufficient).</vaem:rationale>
+        <rdfs:comment xml:lang="en">An identifiable expression in natural language or languages.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">Linguistic Object</rdfs:label>
+        <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    </owl:Class>
     
 
 
@@ -3104,7 +3232,26 @@ What are the tools and their types used in processing activities?
     <!-- http://www.cidoc-crm.org/cidoc-crm/E5_Event -->
 
 
-    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E5_Event"/>
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E5_Event">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E4_Period"/>
+        <dc:description>The properties that can be used with this class are:
+
+* crm:P4_has_time-span -[0..1]-&gt; crm:E52_Time-Span
+* crm:P2_has_type -[0..1]-&gt; crm:E55_Type</dc:description>
+        <vann:example xml:lang="en">
+        ### Example of a birth event (aat:300069672),
+        ### in this case being Eugene Hus&apos; birth
+
+        :heugene-hus-birth a crm:E5_Event ;
+            crm:P2_has_type aat:300069672 ;
+            crm:P4_has_time-span :heugene-hus-birth-timespan .
+            </vann:example>
+        <vaem:rationale xml:lang="en">This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. births, deaths, historical events). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty&apos;s Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals.</vaem:rationale>
+        <rdfs:comment xml:lang="en">A distinct, delimited and coherent process and interaction of a material nature, in cultural, social or physical systems, involving and affecting entities in a way characteristic of the kind of process.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <ns:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    </owl:Class>
     
 
 
@@ -4046,6 +4193,36 @@ What are the tools and their types used in processing activities?
     
 
 
+    <!-- http://vocab.getty.edu/aat/300055146 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300055146">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300055146</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the sex assigned to individuals.</vaem:rationale>
+        <rdfs:comment xml:lang="en">Biological characteristics and physiological traits that distinguish the males and females of a species.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="it">sesso</rdfs:label>
+        <rdfs:label xml:lang="en">sex</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300069672 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300069672">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300069672</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the event of a person&apos;s birth.</vaem:rationale>
+        <rdfs:comment xml:lang="en">Initiation of life processes of all living organisms.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">birth</rdfs:label>
+        <rdfs:label xml:lang="it">nascita</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vocab.getty.edu/aat/300069831 -->
 
 
@@ -4166,6 +4343,21 @@ What are the tools and their types used in processing activities?
     
 
 
+    <!-- http://vocab.getty.edu/aat/300151836 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300151836">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300151836</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent the event of a person&apos;s death.</vaem:rationale>
+        <rdfs:comment xml:lang="en">Cessation of life processes of all living organisms.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">death</rdfs:label>
+        <rdfs:label xml:lang="it">morte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vocab.getty.edu/aat/300155365 -->
 
 
@@ -4222,6 +4414,36 @@ What are the tools and their types used in processing activities?
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">narrative cycles</rdfs:label>
         <rdfs:label xml:lang="it">serie di dipinti</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300189557 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300189557">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300189557</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent female-identifying individuals.</vaem:rationale>
+        <rdfs:comment xml:lang="en">The sex that normally produces eggs or female germ cells.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">female</rdfs:label>
+        <rdfs:label xml:lang="it">femmina</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300189559 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300189559">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300189559</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent male-identifying individuals.</vaem:rationale>
+        <rdfs:comment xml:lang="en">The sex that in reproduction normally produces sperm cells or male gametes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">male</rdfs:label>
+        <rdfs:label xml:lang="it">maschio</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4466,6 +4688,36 @@ What are the tools and their types used in processing activities?
     
 
 
+    <!-- http://vocab.getty.edu/aat/300393213 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300393213">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300393213</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent events in which a group or organization is created.</vaem:rationale>
+        <rdfs:comment xml:lang="en">The action or condition of causing something, such as a group of people or a settlement, to exist.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="it">fondazione</rdfs:label>
+        <rdfs:label xml:lang="en">foundation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300393214 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300393214">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300393214</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent events in which a group or organization is dissolved.</vaem:rationale>
+        <rdfs:comment xml:lang="en">The action or condition of causing an organization or group of people to cease to exist.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">dissolution</rdfs:label>
+        <rdfs:label xml:lang="it">scioglimento</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vocab.getty.edu/aat/300403970 -->
 
 
@@ -4533,10 +4785,55 @@ What are the tools and their types used in processing activities?
         <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
         <dc:identifier>300404630</dc:identifier>
         <vaem:rationale xml:lang="en">Unique resource locators that, in addition to identifying a resource, provide the address of the internet document according to one of a variety of protocols.</vaem:rationale>
-        <rdfs:comment xml:lang="en">Uniform Resource Locators used to identify a resource existing online.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Uniform Resource Locator (URL).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
         <rdfs:label xml:lang="en">url</rdfs:label>
         <rdfs:label xml:lang="it">url</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300404651 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404651">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300404651</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent a person&apos;s first name.</vaem:rationale>
+        <rdfs:comment xml:lang="en">In the context of personal names, particularly in western culture, a first name is the name given to a person at birth or an early period of life, historically at baptism and historically chosen to signify or honor a saint, an earlier family member, or a personal characteristic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">first name</rdfs:label>
+        <rdfs:label xml:lang="it">nome</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300404652 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404652">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300404652</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent a person&apos;s last name.</vaem:rationale>
+        <rdfs:comment xml:lang="en">In the context of modern western personal names, the names that are hereditary and common to all members of a family, placed at the end of a string of names for an individual; used with a first name to distinguish an individual from others with the same first name. In other cultural traditions, last names may not be hereditary family names or they may not be used at all.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="it">cognome</rdfs:label>
+        <rdfs:label xml:lang="en">last name</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300404688 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300404688">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300404688</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent an agent&apos;s full name.</vaem:rationale>
+        <rdfs:comment xml:lang="en">Names for people, places, or things that are the fullest version of the name.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">full name</rdfs:label>
+        <rdfs:label xml:lang="it">nome completo</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4706,6 +5003,36 @@ What are the tools and their types used in processing activities?
     
 
 
+    <!-- http://vocab.getty.edu/aat/300435416 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300435416">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300435416</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent descriptions of some entity.</vaem:rationale>
+        <rdfs:comment xml:lang="en">A textual description of the work or other entity, including a discussion of issues related to it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">descriptive note</rdfs:label>
+        <rdfs:label xml:lang="it">descrizione</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300435433 -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300435433">
+        <rdf:type rdf:resource="http://vocab.getty.edu/aat/Concept"/>
+        <dc:identifier>300435433</dc:identifier>
+        <vaem:rationale xml:lang="en">This individual is used to represent a language used by or known to an individual.</vaem:rationale>
+        <rdfs:comment xml:lang="en">The language of a record or another entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
+        <rdfs:label xml:lang="en">language</rdfs:label>
+        <rdfs:label xml:lang="it">lingua</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vocab.getty.edu/aat/300435434 -->
 
 
@@ -4715,8 +5042,8 @@ What are the tools and their types used in processing activities?
         <vaem:rationale xml:lang="en">This individual is used to represent licenses and copyright statements.</vaem:rationale>
         <rdfs:comment xml:lang="en">A formal statement of the copyright or licensing of a work, and/or any restrictions placed on it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.getty.edu/aat/"/>
-        <rdfs:label xml:lang="en">copyright/licensing statement</rdfs:label>
         <rdfs:label xml:lang="it">dichiarazione di licenza</rdfs:label>
+        <rdfs:label xml:lang="en">licensing statement</rdfs:label>
     </owl:NamedIndividual>
     
 
