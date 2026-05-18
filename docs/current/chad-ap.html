@@ -91,8 +91,7 @@ $(function(){
 <dd><a href="https://www.fondazionechanges.org/">https://www.fondazionechanges.org/</a></dd>
 
 <dt>Download serialization:</dt><dd><span><a href="chad-ap.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="chad-ap.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="chad-ap.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="chad-ap.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
-</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd>Barzaghi, S., Heibi, I., Moretti, A., Peroni, S. (2025). Developing Application Profiles for Enhancing Data and Workflows in Cultural Heritage Digitisation Processes. In: Demartini, G., et al. The Semantic Web - ISWC 2024. ISWC 2024. Lecture Notes in Computer Science, vol 15233. Springer, Cham. https://doi.org/10.1007/978-3-031-77847-6_11.</dd>
 <dt>DOI:</dt>
 <dd><a href="http://dx.doi.org/10.1007/978-3-031-77847-6_11"><img src ="https://img.shields.io/badge/DOI-10.1007/978--3--031--77847--6--11-blue.svg" alt="10.1007/978-3-031-77847-6_11" /></a></dd>
@@ -117,20 +116,20 @@ A OWL 2 DL-based metadata application profile for describing cultural heritage d
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">CHAD-AP is a OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format.</span>
+<span class="markdown">The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CHOs, and the _Process Module_ (PM), for describing the acquisition and digitisation process.</span>
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
 <table>
 <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
 <tbody>
-<tr><td><b>aat</b></td><td>&lt;http://vocab.getty.edu/page/aat/&gt;</td></tr>
-<tr><td><b>aat1</b></td><td>&lt;http://vocab.getty.edu/aat/&gt;</td></tr>
+<tr><td><b>aat</b></td><td>&lt;http://vocab.getty.edu/aat/&gt;</td></tr>
 <tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo/&gt;</td></tr>
 <tr><td><b>chad-ap</b></td><td>&lt;https://w3id.org/dharc/ontology/chad-ap#&gt;</td></tr>
-<tr><td><b>crm</b></td><td>&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</td></tr>
+<tr><td><b>cidoc-crm</b></td><td>&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</td></tr>
 <tr><td><b>crmdig</b></td><td>&lt;http://www.cidoc-crm.org/extensions/crmdig/&gt;</td></tr>
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>edtf</b></td><td>&lt;http://id.loc.gov/datatypes/edtf/&gt;</td></tr>
 <tr><td><b>lrmoo</b></td><td>&lt;http://iflastandards.info/ns/lrm/lrmoo/&gt;</td></tr>
 <tr><td><b>ns</b></td><td>&lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
@@ -805,7 +804,7 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://vocab.getty.edu/aat/300041405" title="http://vocab.getty.edu/aat/300041405">woodcuts (prints)</a>
    </li>
-</ul><iframe src="webvowl/index.html"></iframe> 
+</ul>
 </div>
   
 
@@ -9679,6 +9678,7 @@ This section provides details for each class and property defined by Cultural He
 <ul>
 <li>Added: <http://www.linkedmodel.org/schema/vaem#rationale> "This class is used in conjunction with crm:P2_has_type as a typification mechanism that can be applied to a variety of cases (e.g. births, deaths, historical events). This mechanism allows one to rely on existing and well-established external vocabularies, such as the Getty's Art and Architecture Thesaurus (AAT), to do the heavy lifting in modelling named individuals."@en</li>
 <li>Added: SubClass of http://www.cidoc-crm.org/cidoc-crm/E4_Period</li>
+<li>Added: rdfs:isDefinedBy http://www.cidoc-crm.org/cidoc-crm/</li>
 <li>Added: <http://purl.org/vocab/vann/example> "
         # Example of a birth event (aat:300069672),
         # in this case being Eugene Hus' birth
@@ -9687,7 +9687,6 @@ This section provides details for each class and property defined by Cultural He
             crm:P2_has_type aat:300069672 ;
             crm:P4_has_time-span :heugene-hus-birth-timespan .
             "@en</li>
-<li>Added: rdfs:isDefinedBy http://www.cidoc-crm.org/cidoc-crm/</li>
 <li>Added: <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> http://purl.org/linked-data/registry#statusStable</li>
 <li>Added: rdfs:comment "A distinct, delimited and coherent process and interaction of a material nature, in cultural, social or physical systems, involving and affecting entities in a way characteristic of the kind of process."@en</li>
 <li>Added: <http://purl.org/dc/elements/1.1/description> "The properties that can be used with this class are:

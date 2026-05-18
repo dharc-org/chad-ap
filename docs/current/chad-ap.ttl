@@ -40,7 +40,7 @@ The current version of the application profile reuses a subset of classes and pr
 * [CIDOC CRM](http://www.cidoc-crm.org/cidoc-crm/) is an international ISO standard that provides an ontology related to cultural heritage and museum documentation, which can be extended with additional modules for covering particular descriptions at hand;
 * [CRMdig](http://www.cidoc-crm.org/extensions/crmdig/) is an extension of CIDOC CRM for describing metadata related to the digital provenance of digitisation processes and digital representations;
 * [LRMoo](http://iflastandards.info/ns/lrm/lrmoo/) is an ontology for representing bibliographic information according to the LRM data model within the CIDOC CRM framework;
-* [AAT](http://vocab.getty.edu/page/aat/) is a structured vocabulary of terms used to describe art, architecture, decorative arts, and material culture.
+* [AAT](http://vocab.getty.edu/aat/) is a structured vocabulary of terms used to describe art, architecture, decorative arts, and material culture.
 
 
 A full version of CHAD-AP is available at [https://w3id.org/dharc/ontology/chad-ap](https://w3id.org/dharc/ontology/chad-ap).
@@ -102,7 +102,7 @@ CHAD-AP can be used for modelling  scenarios related to cultural heritage acquis
 The prefixes that are used in all the examples provided below are defined as follows:
 
 
-    @prefix aat: <http://vocab.getty.edu/page/aat/> .
+    @prefix aat: <http://vocab.getty.edu/aat/> .
     @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
     @prefix crmdig: <http://www.cidoc-crm.org/extensions/crmdig/> .
     @prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
@@ -535,7 +535,7 @@ CHAD-AP can be used for answering several questions related to the acquisition a
 The prefixes that are used in all the SPARQL queries provided below are defined as follows:
 
 
-    PREFIX aat: <http://vocab.getty.edu/page/aat/>
+    PREFIX aat: <http://vocab.getty.edu/aat/>
     PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
     PREFIX crmdig: <http://www.cidoc-crm.org/extensions/crmdig/>
     PREFIX lrmoo: <http://iflastandards.info/ns/fr/frbr/lrmoo/>
@@ -899,7 +899,8 @@ What are the tools and their types used in processing activities?
                                            owl:priorVersion <https://w3id.org/dharc/ontology/chad-ap/2.0.6> ;
                                            owl:versionInfo "2.1.0" ;
                                            <http://www.w3.org/2003/06/sw-vocab-status/ns#status> "work in progress"@en ;
-                                           <https://w3id.org/widoco/vocab#introduction> "CHAD-AP is a OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format."@en .
+                                           <https://w3id.org/widoco/vocab#introduction> "CHAD-AP is a OWL 2 DL-based metadata application profile for describing cultural heritage digitisation data and processes in a FAIR-compliant and machine-readable format."@en ,
+                                                                                        "The Cultural Heritage Acquisition and Digitisation Application Profile (CHAD-AP, https://w3id.org/dharc/ontology/chad-ap) is a CIDOC CRM application profile implemented as an OWL ontology that can be logically split into two separate abstract modules: the _Object Module_ (OM), dedicated to describing the CHOs, and the _Process Module_ (PM), for describing the acquisition and digitisation process."@en .
 
 #################################################################
 #    Annotation properties
